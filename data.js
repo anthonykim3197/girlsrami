@@ -7,6 +7,7 @@ window.GR = window.GR || {};
 
 GR.STORE_URL = 'https://smartstore.naver.com/girlsrami';
 GR.TALK_URL = 'https://smartstore.naver.com/girlsrami'; /* 스토어 홈의 톡톡 버튼으로 연결 */
+GR.CHAT_ENDPOINT = 'https://girlsrami-chat.clever-insight.vip'; /* 자동상담 AI 서버 (룰 엔진은 브라우저에서 동작, AI 폴백만 서버 호출) */
 
 GR.COLORS = {
   '라임': '#C9D96B', '라이트브라운': '#B98E6A', '베이지': '#D9C5A5', '스카이블루': '#A9C4D8', '네이비': '#2E3A55',

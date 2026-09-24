@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>전체 상품 | 걸스라미 GIRLSRAMI</title>
+<meta name="description" content="걸스라미 전체 상품. 1만 원대 베이직 라인과 4050을 위한 F/W 프리미엄 라인.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23C2603F'/%3E%3Ctext x='16' y='21' font-size='13' font-family='Arial' font-weight='700' fill='white' text-anchor='middle'%3EGR%3C/text%3E%3C/svg%3E">
+</head>
+<body data-page="shop">
+<div id="site-header"></div>
+
+<section class="sec" style="padding-top:56px">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:26px">
+      <div><div class="eyebrow">Shop</div><h1 class="h2" id="shop-title">전체 상품</h1><p id="shop-sub"></p></div>
+      <div class="line-tabs" id="line-tabs"></div>
+    </div>
+    <div class="toolbar">
+      <div class="chips" id="cat-chips"></div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <span class="count" id="shop-count"></span>
+        <select class="select" id="size-select" aria-label="사이즈"><option value="all">모든 사이즈</option><option value="FREE">FREE</option><option value="L">L (66~77)</option></select>
+        <select class="select" id="sort-select" aria-label="정렬"><option value="popular">인기순</option><option value="new">신상품순</option><option value="low">낮은 가격순</option><option value="high">높은 가격순</option><option value="sale">할인율순</option></select>
+      </div>
+    </div>
+    <div class="grid" id="shop-grid"></div>
+    <p class="small muted" style="margin-top:36px">베이직 라인은 네이버 스마트스토어 상품 페이지로 연결되어 결제됩니다. 프리미엄 라인은 입고 전 상품으로 구매 가능 수량이 0이며, 입고 알림만 받을 수 있습니다.</p>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

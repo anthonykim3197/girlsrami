@@ -41,11 +41,8 @@ export function createHandler({ repository, tokenHash, projectUrl, log }) {
       switch (body.action) {
         case "status":
           return json(await repository.status());
-        case "test-status":
-          return json(await repository.testStatus());
-        case "test-claim":
         case "claim": {
-          const job = await (body.action === "test-claim" ? repository.testClaim() : repository.claim());
+          const job = await repository.claim();
           if (!job) return json({});
           const url = productUrl(job.product_image, projectUrl);
           const personUrl = await repository.signedInput(job.input_path);

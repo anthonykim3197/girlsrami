@@ -42,13 +42,6 @@ test('GPU authentication preflight does not claim a member job or mark the engin
   assert.equal(response.status,200);
   assert.deepEqual(await response.json(),{enabled:false});
 });
-test('synthetic status and claim route separately from the production queue',async()=>{
-  const repository={testStatus:async()=>({enabled:true,photo_intake_enabled:false}),testClaim:async()=>({id:jobId,lease:leaseId,color:'Green',input_path:'owner/test.png',product_image:'https://example.supabase.co/storage/v1/object/public/catalog/test.png'}),signedInput:async()=> 'https://example.supabase.co/storage/v1/object/sign/test.png',claim(){throw new Error('Do not claim production jobs');}};
-  assert.deepEqual(await (await workerRequest(repository,{action:'test-status'})).json(),{enabled:true,photo_intake_enabled:false});
-  const response=await workerRequest(repository,{action:'test-claim'});
-  assert.equal(response.status,200);
-  assert.equal((await response.json()).id,jobId);
-});
 test('a generation failure releases the current lease without uploading an image',async()=>{
   let failure;
   const response=await workerRequest({finish:async(id,lease,path,code)=>{

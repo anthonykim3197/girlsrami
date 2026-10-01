@@ -17,12 +17,6 @@ const repository = {
   async claim() {
     return (await result(db.rpc("worker_claim")))[0] ?? null;
   },
-  async testStatus() {
-    return result(db.rpc("worker_test_status"));
-  },
-  async testClaim() {
-    return (await result(db.rpc("worker_test_claim")))[0] ?? null;
-  },
   async signedInput(path) {
     return (await result(db.storage.from("fitting-private").createSignedUrl(path, 60))).signedUrl;
   },

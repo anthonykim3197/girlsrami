@@ -24,7 +24,6 @@ async function setup({serverConsent=true}={}){
   await db.exec(await readFile(new URL('../supabase/migrations/002_fitting.sql',import.meta.url),'utf8'));
   await db.exec(await readFile(new URL('../supabase/migrations/004_color_photos.sql',import.meta.url),'utf8'));
   if(serverConsent)await db.exec(await readFile(new URL('../supabase/migrations/005_korea_gpu_consent.sql',import.meta.url),'utf8'));
-  if(serverConsent)await db.exec(await readFile(new URL('../supabase/migrations/007_synthetic_fitting.sql',import.meta.url),'utf8'));
   await db.query('insert into public.admin_users values($1)',[admin]);
   return db;
 }

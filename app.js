@@ -11,7 +11,7 @@
     const activeKey = { home: 'index.html', shop: 'shop.html', story: 'story.html', guide: 'guide.html' }[page];
     const header = $('#site-header');
     if (header) header.innerHTML = `
-      <div class="announce">걸스라미 니트 · 실제 주문, 배송비와 혜택은 스마트스토어에서 확인해 주세요</div>
+      <div class="announce">주문·배송·혜택은 스마트스토어에서 확인해 주세요.</div>
       <div class="member-links wrap"><a href="fitting.html">나의 피팅룸</a><a href="cart.html">장바구니</a><a data-account-label href="account.html">로그인 · 내 사이즈</a></div>
       <div class="header">
         <div class="wrap">
@@ -39,7 +39,7 @@
           <div><h5>BRAND</h5><ul><li><a href="story.html">공장 이야기</a></li><li><a href="story.html#principles">만드는 원칙</a></li><li><a href="guide.html#size">사이즈 가이드</a></li></ul></div>
           <div><h5>HELP</h5><ul><li><a href="guide.html#shipping">배송 · 교환 · 반품</a></li><li><a href="guide.html#faq">자주 묻는 질문</a></li><li><a href="${GR.TALK_URL}" target="_blank" rel="noopener">톡톡 상담</a></li></ul></div>
         </div>
-        <div class="legal">상호 대박이할머니 (브랜드 걸스라미) · 대표 신명숙 · 원산지 국산(경기도 광주시) · 결제와 주문 관리는 네이버 스마트스토어에서 진행됩니다.<br><a href="privacy.html">개인정보 처리 안내</a> · <a href="terms.html">회원 이용약관</a> · <a href="admin.html">상품 관리</a><br>© ${new Date().getFullYear()} GIRLSRAMI. All rights reserved.</div>
+        <div class="legal">상호 대박이할머니 (브랜드 걸스라미) · 대표 신명숙 · 원산지 국산(경기도 광주시) · 결제와 주문 관리는 네이버 스마트스토어에서 진행됩니다.<br><a href="privacy.html">개인정보 처리 안내</a> · <a href="terms.html">회원 이용약관</a> · <a href="admin.html">걸스라미 관리</a><br>© ${new Date().getFullYear()} GIRLSRAMI. All rights reserved.</div>
         <div class="disclaimer">이 사이트는 걸스라미 자사몰 <b>청사진(시연) 버전</b>입니다. "입고 예정"으로 표시된 프리미엄 라인 상품은 아직 판매하지 않으며(구매 가능 수량 0), 상품 사진은 촬영 톤 시안을 위해 제작한 이미지로 실제 상품과 다를 수 있습니다. 판매 중인 베이직 라인은 스마트스토어의 실제 상품 정보를 기준으로 합니다.</div>
       </div></div>
       <div class="toast" id="toast"></div>`;
@@ -95,7 +95,7 @@
 
   /* ---------- HOME ---------- */
   function renderHome() {
-    const best = GR.PRODUCTS.filter(p => p.line === 'basic').sort((a, b) => b.reviewCount - a.reviewCount).slice(0, 4);
+    const best = GR.CONTENT?.home ? GR.CONTENT.home.featuredIds.map(id=>GR.byId(id)).filter(Boolean) : GR.PRODUCTS.filter(p => p.line === 'basic').slice(0, 4);
     const fw = GR.PRODUCTS.filter(p => p.line === 'premium').slice(0, 8);
     $('#best-grid').innerHTML = best.map(card).join('');
     $('#fw-grid').innerHTML = fw.map(card).join('');

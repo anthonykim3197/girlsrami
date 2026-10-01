@@ -1,7 +1,7 @@
 {
   "supabaseUrl": "https://rlbffhmdonbzifiivbfl.supabase.co",
   "publishableKey": "sb_publishable_LznIdHd6ni4LLxJZsg93SA_o48kkJmC",
-  "photoProvider": "Colab FLUX.2 klein 4B",
-  "photoRegion": "GPU 실행 세션의 Google 데이터센터",
-  "consentVersion": "2026-10-01-v1"
+  "photoProvider": "대한민국의 걸스라미 전용 GPU 서버 (FLUX.2 klein 4B)",
+  "photoRegion": "대한민국",
+  "consentVersion": "2026-10-01-v2"
 }

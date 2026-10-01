@@ -1,6 +1,17 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createHandler,tokenDigest,productUrl} from '../supabase/functions/fitting-worker/handler.mjs';
+test('a revoked configured verifier denies even a matching credential before private access',async(t)=>{
+  const revoked='3f1791f0803d66d10c630d7fa6636f0ee77c3763ddf31d5c4dcd99dc3b0ae3c7';
+  const digest=t.mock.method(crypto.subtle,'digest',async()=>Uint8Array.from(revoked.match(/../g),byte=>parseInt(byte,16)).buffer);
+  let privateCalls=0;
+  const handler=createHandler({repository:{status:async()=>{privateCalls++;return {enabled:false};}},tokenHash:revoked,projectUrl:'https://example.supabase.co',log(){}});
+  const response=await handler(new Request('https://example.supabase.co/functions/v1/fitting-worker',{method:'POST',headers:{Authorization:'Bearer synthetic-credential'},body:JSON.stringify({action:'status'})}));
+  assert.equal(response.status,401);
+  assert.deepEqual(await response.json(),{error:'UNAUTHORIZED'});
+  assert.equal(privateCalls,0);
+  assert.equal(digest.mock.callCount(),0);
+});
 test('an unauthorized GPU caller never reaches private storage',async()=>{
   const handler=createHandler({repository:{claim(){throw new Error('Must not reach private data');}},tokenHash:await tokenDigest('example-private-worker-token-32-chars'),projectUrl:'https://example.supabase.co',log(){throw new Error('No error expected');}});
   const r=await handler(new Request('https://example.supabase.co/functions/v1/fitting-worker',{method:'POST',body:JSON.stringify({action:'claim'})}));

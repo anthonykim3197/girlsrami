@@ -116,7 +116,7 @@
 .notice {
   padding: 16px;
   background: var(--bg-2);
-  border-left: 3px solid var(--accent);
+  border: 1px solid var(--line);
   color: var(--ink-2);
   margin: 16px 0;
 }
@@ -341,4 +341,58 @@
 }
 .quantity-form [data-status] {
   flex-basis: 100%;
+}
+.studio-inputs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.studio-asset img {
+  width: 100%;
+  height: 360px;
+  object-fit: contain;
+  background: var(--bg-2);
+  border-radius: var(--radius-s);
+}
+.studio-asset .help {
+  margin-top: 12px;
+}
+.studio-results {
+  margin-top: 32px;
+}
+.studio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.studio-result {
+  padding: 16px;
+}
+.studio-result h3 {
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+.studio-result img,
+.studio-empty {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: contain;
+  background: var(--bg-2);
+  border-radius: var(--radius-s);
+}
+.studio-empty {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  padding: 24px;
+  color: var(--ink-2);
+  font-size: 14px;
+}
+@media (max-width: 1024px) {
+  .studio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+  .studio-grid,
+  .studio-inputs { grid-template-columns: 1fr; }
 }

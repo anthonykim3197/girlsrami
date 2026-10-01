@@ -17,16 +17,17 @@ def main():
     parser.add_argument("--cache", type=Path, required=True)
     parser.add_argument("--check", action="store_true")
     parser.add_argument("--require-enabled", action="store_true")
+    parser.add_argument("--synthetic-test", action="store_true")
     parser.add_argument("--max-seconds", type=int, default=1800)
     parser.add_argument("--max-jobs", type=int, default=10)
     args = parser.parse_args()
     if not 1 <= args.max_jobs <= 10 or not 30 <= args.max_seconds <= 1800:
         raise WorkerError("INVALID_SESSION_LIMIT")
     client = WorkerClient(args.endpoint, read_token(args.token_file))
-    state = client.call({"action": "status"})
+    state = client.call({"action": "test-status" if args.synthetic_test else "status"})
     if not isinstance(state.get("enabled"), bool):
         raise WorkerError("INVALID_WORKER_RESPONSE")
-    print(json.dumps({"authenticated": True, "photo_intake_enabled": state["enabled"]}), flush=True)
+    print(json.dumps({"authenticated": True, "photo_intake_enabled": state.get("photo_intake_enabled", state["enabled"]), "synthetic_test": args.synthetic_test, "session_enabled": state["enabled"]}), flush=True)
     if args.require_enabled and not state["enabled"]:
         raise WorkerError("ENGINE_DISABLED")
     if args.check or not state["enabled"]:
@@ -40,7 +41,10 @@ def main():
         raise WorkerError("CUDA_BF16_REQUIRED")
     if torch.cuda.get_device_properties(0).total_memory < 20 * 2**30:
         raise WorkerError("GPU_VRAM_TOO_SMALL")
-    pipe = Flux2KleinPipeline.from_pretrained(MODEL, revision=REVISION, torch_dtype=torch.bfloat16, cache_dir=str(args.cache), local_files_only=True, token=False)
+    snapshot = args.cache / "models--black-forest-labs--FLUX.2-klein-4B" / "snapshots" / REVISION
+    if not (snapshot / "model_index.json").is_file():
+        raise WorkerError("MODEL_CACHE_MISSING")
+    pipe = Flux2KleinPipeline.from_pretrained(str(snapshot), torch_dtype=torch.bfloat16, local_files_only=True, token=False)
     pipe.to("cuda:0")
     for component in pipe.components.values():
         if isinstance(component, torch.nn.Module):
@@ -59,7 +63,7 @@ def main():
     processed = 0
     try:
         while time.monotonic() < deadline and processed < args.max_jobs:
-            job = client.call({"action": "claim"})
+            job = client.call({"action": "test-claim" if args.synthetic_test else "claim"})
             if not job:
                 time.sleep(min(10, max(0, deadline - time.monotonic())))
                 continue

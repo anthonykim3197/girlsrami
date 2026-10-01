@@ -4,6 +4,8 @@ This is the bounded replacement for the Colab queue. It uses the already-tested 
 
 The current server copy is `/home/anthony/girlsrami-gpu-trial-20261001/queue-worker/gpu` on `anthony@llm-host`. The model cache and Python environment are in the parent trial folder. The Qwen service remains running. No queue process or persistent fitting service has been started.
 
+Trial update, 2026-10-01: an isolated fictional adult/fictional knit trial generated a real result in 8.27 seconds, with all three model components on `cuda:0`, no offload, and 19.553 GiB peak reserved memory. Qwen was restored and its health check passed. The observed offline Hub lookup failure is fixed by loading the exact cached revision directory; twelve Python tests passed on the server. Migration 007 and the matching Edge Function are deployed. An authentication-only `--synthetic-test --check` returned an active owner-only trial with production intake disabled. The hosted browser request, generation, display and deletion checks are pending. This standalone generation does not prove the hosted member queue, exact identity/garment fidelity, or size accuracy.
+
 ## Authentication setup
 
 `create-token.py --path PATH` creates a new token in an exclusive owner-only file and prints its SHA-256 verifier, never the token. Existing files are not replaced. The prepared token is `/home/anthony/girlsrami-gpu-trial-20261001/queue-worker/worker-token`, owned by anthony with mode 0600.

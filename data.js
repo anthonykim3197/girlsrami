@@ -131,7 +131,7 @@ GR.PRODUCTS = [
     material: '울 50% · 아크릴 40% · 나일론 10%', thickness: '두꺼움', stretch: '좋음', sheer: '없음', care: '울 전용 세제 손세탁 또는 드라이클리닝',
     measure: { '총기장': 62, '가슴': 56, '어깨': 46, '암홀': 24, '소매기장': 58, '소매통': 18, '소매밑단': 10 },
     rating: null, reviewCount: 0, badges: ['NEW','프리미엄','L사이즈'],
-    desc: '기존 꽈배기 니트에서 "기장이 짧다", "팔 둘레가 조금 작다"는 의견을 받아 다시 설계한 레귤러 버전. 팔 둘레와 가슴에 여유를 주고 엉덩이를 덮는 기장으로 만들었습니다. 경기 광주 공장에서 소량 생산합니다.',
+    desc: '기존 꽈배기 니트에서 "기장이 짧다", "팔 둘레가 조금 작다"는 의견을 받아 다시 설계한 레귤러 버전. 팔 둘레와 가슴에 여유를 주고 엉덩이를 덮는 기장으로 만들었습니다. 기획부터 생산까지 직접 관리하며 국내에서 소량 생산합니다.',
     reviews: []
   },
   {
@@ -209,7 +209,7 @@ GR.PRODUCTS = [
     material: '울 50% · 아크릴 50%', thickness: '두꺼움', stretch: '좋음', sheer: '없음', care: '손세탁',
     measure: { '길이': 180, '폭': 28 },
     rating: null, reviewCount: 0, badges: ['NEW','선물'],
-    desc: '공장 편직기로 짠 두툼한 골지 머플러. 니트와 같은 컬러로 맞춰 입을 수 있습니다.',
+    desc: '국내에서 직접 생산한 두툼한 골지 머플러. 니트와 같은 컬러로 맞춰 입을 수 있습니다.',
     reviews: []
   },
   {
@@ -232,3 +232,4 @@ GR.CATEGORIES = ['전체','니트','가디건','조끼','원피스','세트','�
 GR.fmt = n => n.toLocaleString('ko-KR') + '원';
 GR.byId = id => GR.PRODUCTS.find(p => p.id === id);
 GR.discount = p => p.listPrice ? Math.round((1 - p.price / p.listPrice) * 100) : 0;
+

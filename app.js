@@ -7,7 +7,7 @@
 
   /* ---------- Header / Footer ---------- */
   function renderChrome() {
-    const nav = [['index.html', '홈'], ['shop.html', '전체 상품'], ['shop.html?line=premium', 'F/W 프리미엄'], ['story.html', '공장 이야기'], ['guide.html', '구매 안내']];
+    const nav = [['index.html', '홈'], ['shop.html', '전체 상품'], ['shop.html?line=premium', 'F/W 프리미엄'], ['story.html', '브랜드 이야기'], ['guide.html', '구매 안내']];
     const activeKey = { home: 'index.html', shop: 'shop.html', story: 'story.html', guide: 'guide.html' }[page];
     const header = $('#site-header');
     if (header) header.innerHTML = `
@@ -33,13 +33,13 @@
         <div class="cols">
           <div>
             <a class="logo" href="index.html"><span class="mark">GR</span>걸스라미</a>
-            <p class="small muted" style="margin-top:14px;max-width:320px">경기도 광주 니트 공장에서 직접 설계하고 짜서 보내는 여성 니트. 도매로 검증한 원사와 편직을 이제 소매로 직접 전합니다.</p>
+            <p class="small muted" style="margin-top:14px;max-width:320px">기획부터 생산까지 직접 관리하는 국내 생산 여성 니트. 직접 생산하여 불필요한 유통 거품을 줄였습니다.</p>
           </div>
           <div><h5>SHOP</h5><ul><li><a href="shop.html">전체 상품</a></li><li><a href="shop.html?line=basic">베이직 라인</a></li><li><a href="shop.html?line=premium">F/W 프리미엄 라인</a></li><li><a href="${GR.STORE_URL}" target="_blank" rel="noopener">네이버 스마트스토어</a></li></ul></div>
-          <div><h5>BRAND</h5><ul><li><a href="story.html">공장 이야기</a></li><li><a href="story.html#principles">만드는 원칙</a></li><li><a href="guide.html#size">사이즈 가이드</a></li></ul></div>
+          <div><h5>BRAND</h5><ul><li><a href="story.html">브랜드 이야기</a></li><li><a href="story.html#principles">만드는 원칙</a></li><li><a href="guide.html#size">사이즈 가이드</a></li></ul></div>
           <div><h5>HELP</h5><ul><li><a href="guide.html#shipping">배송 · 교환 · 반품</a></li><li><a href="guide.html#faq">자주 묻는 질문</a></li><li><a href="${GR.TALK_URL}" target="_blank" rel="noopener">톡톡 상담</a></li></ul></div>
         </div>
-        <div class="legal">상호 대박이할머니 (브랜드 걸스라미) · 대표 신명숙 · 원산지 국산(경기도 광주시) · 결제와 주문 관리는 네이버 스마트스토어에서 진행됩니다.<br><a href="privacy.html">개인정보 처리 안내</a> · <a href="terms.html">회원 이용약관</a> · <a href="admin.html">걸스라미 관리</a><br>© ${new Date().getFullYear()} GIRLSRAMI. All rights reserved.</div>
+        <div class="legal">상호 대박이할머니 (브랜드 걸스라미) · 대표 신명숙 · 원산지 국산 · 결제와 주문 관리는 네이버 스마트스토어에서 진행됩니다.<br><a href="privacy.html">개인정보 처리 안내</a> · <a href="terms.html">회원 이용약관</a> · <a href="admin.html">걸스라미 관리</a><br>© ${new Date().getFullYear()} GIRLSRAMI. All rights reserved.</div>
         <div class="disclaimer">이 사이트는 걸스라미 자사몰 <b>청사진(시연) 버전</b>입니다. "입고 예정"으로 표시된 프리미엄 라인 상품은 아직 판매하지 않으며(구매 가능 수량 0), 상품 사진은 촬영 톤 시안을 위해 제작한 이미지로 실제 상품과 다를 수 있습니다. 판매 중인 베이직 라인은 스마트스토어의 실제 상품 정보를 기준으로 합니다.</div>
       </div></div>
       <div class="toast" id="toast"></div>`;

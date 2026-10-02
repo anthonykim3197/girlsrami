@@ -3,6 +3,7 @@ import {createHash} from 'node:crypto';
 const out=new URL('../dist/',import.meta.url);
 await rm(out,{recursive:true,force:true}); await mkdir(out,{recursive:true});
 for(const name of await readdir(new URL('../',import.meta.url))) {
+  if(['story-machine.jpg','story-yarn.jpg','story-hands.jpg'].includes(name)) continue;
   if(/\.(html|css|jpg|png|js)$/.test(name) || ['config.json','_headers','_redirects'].includes(name)) await copyFile(new URL('../'+name,import.meta.url),new URL(name,out));
 }
 const versions = new Map();
@@ -16,3 +17,4 @@ for (const name of await readdir(out)) {
   await writeFile(path,html.replace(/(src|href)="([^"?]+\.(?:js|css))(?:\?v=[a-f0-9]+)?"/g,(match,attribute,asset)=>versions.has(asset)?`${attribute}="${asset}?v=${versions.get(asset)}"`:match));
 }
 console.log('Static storefront built; private backend and GPU code excluded.');
+

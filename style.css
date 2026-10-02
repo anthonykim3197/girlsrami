@@ -400,3 +400,34 @@ ul{list-style:none}
   .gr-chat-panel{position:fixed;inset:auto 0 0 0;width:100%;max-width:none;height:min(80vh,640px);max-height:none;border-radius:18px 18px 0 0;bottom:0}
   #gr-chat.open .gr-chat-fab{display:none}
 }
+
+/* AI media follows the storefront material and shared color options. */
+.ai-marker{position:absolute;left:12px;bottom:12px;z-index:2;background:var(--surface);color:var(--ink-2);padding:4px 8px;border-radius:var(--radius-s);font-size:12px;font-weight:700}
+.ai-swatches{position:absolute;right:12px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px;padding:8px;background:var(--surface);border-radius:var(--radius)}
+.ai-swatch{width:16px;height:16px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(30,26,22,.16)}
+.ai-swatch.selected{outline:1px solid var(--ink);outline-offset:3px}
+.ai-representative{position:relative;overflow:hidden;border-radius:var(--radius);background:var(--bg-2)}
+.pd-media-ai .ai-representative img{aspect-ratio:1;object-fit:contain}
+.card .thumb.ai-thumb img{object-fit:contain}
+.ai-gallery-nav{display:flex;flex-wrap:wrap;gap:12px;margin:12px 0 24px;font-weight:700}
+.ai-gallery-nav a{min-height:44px;display:inline-flex;align-items:center;text-decoration:underline;text-underline-offset:4px}
+.pd-media-ai .ai-full-body{aspect-ratio:2/3;object-fit:contain;background:var(--bg-2)}
+.ai-model-caption{padding:16px;background:var(--surface);border-radius:0 0 var(--radius) var(--radius);color:var(--ink-2)}
+.ai-model-caption b,.ai-model-caption span,.ai-model-caption small{display:block}.ai-model-caption span{margin:8px 0}.ai-model-caption small{font-size:13px}
+.ai-room{margin:40px 0;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;scroll-margin-top:24px}
+.ai-room-heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:24px}.ai-room-heading h2{font-family:var(--serif);font-size:28px}.ai-room-heading>span{font-size:14px;color:var(--ink-2)}
+.ai-room-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,.65fr);gap:32px;align-items:center}
+.ai-room-stage{position:relative;isolation:isolate;overflow:hidden;aspect-ratio:2/3;max-height:640px;background:radial-gradient(ellipse at 50% 25%,var(--surface) 0%,var(--bg-2) 75%);border-radius:var(--radius);touch-action:pan-y;cursor:grab;--ai-zoom:1}
+.ai-room-stage:active{cursor:grabbing}.ai-room-stage.warm{background:radial-gradient(ellipse at 50% 25%,var(--surface) 0%,var(--accent-soft) 85%)}
+.ai-room-floor{position:absolute;bottom:3%;left:8%;width:84%;height:14%;border-radius:50%;background:radial-gradient(ellipse,rgba(30,26,22,.18),rgba(30,26,22,.03) 65%,transparent 70%);box-shadow:0 1px 0 var(--line)}
+.ai-room-frame{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity 120ms ease;transform:scale(var(--ai-zoom));transform-origin:50% 35%;user-select:none;pointer-events:none}.ai-room-frame.visible{opacity:1}
+.ai-room-angle{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px 16px;font-size:13px}
+.ai-room-controls{display:grid;gap:20px;color:var(--ink-2)}.ai-room-controls>p:first-child{font-size:17px;color:var(--ink)}.ai-room-color,.ai-room-disclosure{font-size:13px}
+.ai-direction-buttons{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.ai-room button{min-height:44px;border:1px solid var(--line);border-radius:var(--radius-s);padding:8px;font-size:14px}.ai-room button:hover{background:var(--bg)}.ai-room button[aria-pressed=true]{background:var(--bg-2);color:var(--ink);font-weight:700}
+.ai-room-actions{display:grid;grid-template-columns:44px 1fr 44px;gap:8px}.ai-zoom{display:flex;align-items:center;gap:16px}.ai-zoom input{min-width:0;min-height:44px;flex:1;accent-color:var(--ink)}.ai-light-controls{display:flex;gap:8px}.ai-light-controls button{flex:1}.ai-room-status{font-size:14px;min-height:24px}.ai-room-disclosure{border-top:1px solid var(--line);padding-top:16px}
+.ai-room :focus-visible,.ai-gallery-nav a:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+@media(max-width:720px){.ai-room{padding:16px}.ai-room-layout{grid-template-columns:minmax(0,1fr);gap:24px}.ai-room-stage{max-height:none}.ai-room-heading h2{font-size:24px}.ai-swatches{right:8px;padding:8px;gap:8px}.ai-swatch{width:12px;height:12px}}
+@media(prefers-reduced-motion:reduce){.ai-room-frame{transition:none}.ai-room{scroll-behavior:auto}}
+.ai-care{padding:32px 0;width:100%}.ai-care h3{font-size:20px;margin-bottom:16px}.ai-care>div{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.ai-care dl{padding:16px 8px;text-align:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-s)}.ai-care svg{display:block;width:32px;height:32px;margin:0 auto 8px}.ai-care dd{min-height:24px;font-size:13px;margin-top:8px}
+.card .ai-marker{top:12px;right:12px;bottom:auto;left:auto}
+.ai-room-frame{inset:3% 6%;width:88%;height:94%}

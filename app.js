@@ -56,11 +56,13 @@
   function swatchColor(color) { return GR.COLORS[color] || GR.COLORS[{ '스카이': '스카이블루', '회색': '그레이' }[color]] || '#ccc'; }
   function card(p) {
     const soon = p.stock === 0 || p.status === 'coming';
+    const ai = window.GR_AI?.presentation(p), aiColor = ai && GR_AI.colorFor(p), aiMedia = ai && GR_AI.mediaFor(p, aiColor);
     const sw = p.colors.slice(0, 6).map(c => `<span class="swatch" title="${esc(c)}" style="background:${swatchColor(c)}"></span>`).join('') + (p.colors.length > 6 ? `<span class="more">+${p.colors.length - 6}</span>` : '');
     return `<a class="card reveal" href="product.html?id=${p.id}">
-      <div class="thumb ${soon ? 'soon' : ''}">
+      <div class="thumb ${soon ? 'soon' : ''}${aiMedia ? ' ai-thumb' : ''}">
         <div class="badges">${p.badges.slice(0, 2).map(b => `<span class="badge ${badgeClass(b)}">${esc(p.newRelease && b === 'NEW' ? '신상' : b)}</span>`).join('')}</div>
-        <img src="${esc(p.catalogImage || p.image+'.jpg')}" alt="${esc(p.name)}" loading="lazy">
+        <img src="${esc(aiMedia?.image || p.catalogImage || p.image+'.jpg')}" alt="${esc(p.name)}${aiMedia ? ' '+esc(aiColor)+' AI 코디' : ''}" loading="lazy">
+        ${aiMedia ? (ai.cropHasAiLabel ? '' : GR_AI.marker) + GR_AI.swatches(p, aiColor) : ''}
         ${soon ? `<div class="soon-tag">${p.newRelease ? '판매 예정' : '입고 예정'} <span>${esc(p.eta || '판매 일정 확인 중')}</span></div>` : ''}
       </div>
       <div class="card-body">
@@ -141,12 +143,15 @@
     document.title = `걸스라미 ${p.name} | GIRLSRAMI`;
     const soon = p.stock === 0 || p.status === 'coming';
     const detailImages = Array.isArray(p.detailImages) ? p.detailImages : [];
-    let color = p.newRelease && p.colors.includes(p.photoColor) ? p.photoColor : p.colors[0] || null, size = p.sizePending ? null : p.sizes[0];
+    const ai = window.GR_AI?.presentation(p);
+    let color = ai ? GR_AI.colorFor(p) : p.newRelease && p.colors.includes(p.photoColor) ? p.photoColor : p.colors[0] || null, size = p.sizePending ? null : p.sizes[0];
     const root = $('#pd');
     root.innerHTML = `
-      <div class="pd-media${p.newRelease ? ' pd-media-catalog' : ''}">
+      <div class="pd-media${ai ? ' pd-media-ai' : p.newRelease ? ' pd-media-catalog' : ''}">
+        ${ai ? GR_AI.gallery(p, color) : `
         <img src="${esc(p.catalogImage || p.image+'.jpg')}" alt="걸스라미 ${esc(p.name)}" id="pd-img">
         ${detailImages.length ? '' : `<div class="thumbs"><div>정면 착용</div><div>원단 클로즈업<br><small>(촬영 예정)</small></div><div>키 155 / 160 / 167<br>착용 비교<small> (촬영 예정)</small></div><div>15초 숏클립<br><small>(촬영 예정)</small></div></div>`}
+        `}
       </div>
       <div class="pd-info">
         <div class="crumb"><a href="index.html">홈</a> › <a href="shop.html">전체 상품</a> › <a href="shop.html?cat=${encodeURIComponent(p.category)}">${esc(p.category)}</a></div>
@@ -155,7 +160,7 @@
         <div class="sub">${esc(p.sub)}${p.newRelease ? '' : ` · 품번 ${esc(p.sku)}`}</div>
         ${p.rating ? `<div class="rating" style="margin-top:10px"><span class="star">${stars(p.rating)}</span> <b>${p.rating}</b> <a class="muted" href="#reviews">리뷰 ${p.reviewCount}건</a></div>` : ''}
         ${p.pricePending ? '' : `<div class="pd-price"><span class="now">${GR.fmt(p.price)}</span>${p.listPrice ? `<span class="was">${GR.fmt(p.listPrice)}</span><span class="off">${GR.discount(p)}% 즉시할인</span>` : ''}</div>`}
-        <div class="pd-ship"><span>배송 일정·배송비·교환 조건은 스마트스토어의 현재 상품 안내를 확인해 주세요.</span><span>${p.photoVerified ? '실제 상품 사진' : '촬영 콘셉트 시안 이미지 · 실제 상품과 다를 수 있어요.'}</span></div>
+        <div class="pd-ship"><span>배송 일정·배송비·교환 조건은 스마트스토어의 현재 상품 안내를 확인해 주세요.</span><span>${ai ? 'AI 코디 연출 · 실제 상품의 색상과 형태는 상세 실물 사진을 참고해 주세요.' : p.photoVerified ? '실제 상품 사진' : '촬영 콘셉트 시안 이미지 · 실제 상품과 다를 수 있어요.'}</span></div>
         ${soon ? `<div class="stock-note">${p.newRelease ? '판매 예정' : '입고 예정'} · ${esc(p.eta || '판매 일정 확인 중')} · 현재 구매 가능 수량 0 · 판매 일정은 스마트스토어에서 확인해 주세요.</div>` : `<div class="stock-note ok">✓ 스마트스토어에서 바로 구매할 수 있습니다. 옵션 선택과 결제는 네이버페이로 진행됩니다.</div>`}
         ${p.colors.length ? `<div class="opt"><div class="opt-label">색상 <span id="color-name">${esc(color)}</span></div><div class="color-opts" id="color-opts">${p.colors.map(c => `<button class="color-opt ${c === color ? 'active' : ''}" data-c="${esc(c)}"><span class="swatch" style="background:${swatchColor(c)}"></span>${esc(c)}</button>`).join('')}</div></div>` : `<div class="opt"><div class="opt-label">색상 <span>스마트스토어 옵션에서 선택</span></div></div>`}
         <div class="opt"><div class="opt-label">사이즈 <a href="guide.html#size" class="muted">사이즈 가이드</a></div><div class="size-opts" id="size-opts">${(p.sizePending ? [] : p.sizes).map(s => `<button class="size-opt ${s === size ? 'active' : ''}" data-s="${esc(s)}">${esc(s)}</button>`).join('')}</div></div>
@@ -173,9 +178,11 @@
           <dl><dt>제조</dt><dd>제조국과 제조자 정보는 스마트스토어 상품 고시에서 확인해 주세요.</dd></dl>
         </div>
       </div>`;
-    $('#color-opts')?.addEventListener('click', e => { const b = e.target.closest('.color-opt'); if (!b) return; color = b.dataset.c; $$('#color-opts .color-opt').forEach(x => x.classList.toggle('active', x === b)); $('#color-name').textContent = color; });
+    $('#color-opts')?.addEventListener('click', e => { const b = e.target.closest('.color-opt'); if (!b) return; color = b.dataset.c; $$('#color-opts .color-opt').forEach(x => x.classList.toggle('active', x === b)); $('#color-name').textContent = color; if(ai && GR_AI.mediaFor(p,color)) $('.pd-media').innerHTML = GR_AI.gallery(p,color); });
     $('#size-opts').addEventListener('click', e => { const b = e.target.closest('.size-opt'); if (!b) return; size = b.dataset.s; $$('#size-opts .size-opt').forEach(x => x.classList.toggle('active', x === b)); });
     $('#share-btn')?.addEventListener('click', async () => { try { await navigator.clipboard.writeText(location.href); toast('링크를 복사했습니다'); } catch { toast(location.href); } });
+
+    if(ai) { root.insertAdjacentHTML('afterend', GR_AI.room(p)); GR_AI.bindRoom(p); }
 
     /* lower tabs */
     $('#pd-desc').classList.toggle('pd-detail-gallery', detailImages.length > 0);
@@ -187,8 +194,10 @@
       <div class="table-scroll"><table class="size-table"><thead><tr><th>사이즈</th><th>가슴 단면</th><th>총장</th><th>확인 상태</th></tr></thead><tbody>${(p.catalogSizes||[]).map(s => `<tr><td>${esc(s.label)}</td><td>${s.verified?s.chestHalf:'확인 중'}</td><td>${s.verified?s.length:'확인 중'}</td><td>${s.verified?'실측 확인':'미확인 · 추천 제외'}</td></tr>`).join('')}</tbody></table></div>
       <p class="small muted" style="margin-top:8px">확인된 실측만 표시합니다. 측정 방법에 따라 1~3cm 차이가 있을 수 있어요. 색상은 화면과 조명에 따라 달라질 수 있어요.</p>
       <h4>착용 참고</h4><p>사진과 아바타는 코디 참고용이에요. 확인된 실제 상품 사진과 실측이 등록되면 상세페이지에 표시합니다.</p>`;
+    if(ai && !detailImages.length) $('#pd-desc').insertAdjacentHTML('beforeend', GR_AI.care(p));
     $('#pd-reviews').innerHTML = p.reviews.length
       ? `<div class="reviews">${p.reviews.map(r => `<div class="review"><div class="star">${'★'.repeat(r.stars)}${'☆'.repeat(5 - r.stars)}</div><p>"${esc(r.text)}"</p><div class="who">${esc(r.who)}${r.body ? ' · ' + esc(r.body) : ''} · 스마트스토어 구매 리뷰</div>${r.reply ? `<div class="reply"><b>걸스라미 답글</b>${esc(r.reply)}</div>` : ''}</div>`).join('')}</div><p class="small muted" style="margin-top:16px">전체 리뷰 ${p.reviewCount}건은 <a href="${p.smartstore || GR.STORE_URL}" target="_blank" rel="noopener" style="text-decoration:underline">스마트스토어 상품 페이지</a>에서 볼 수 있습니다. 저평점 리뷰에는 원인과 조치를 답글로 남깁니다.</p>`
+      : ai ? `<div class="notice-box">${soon ? '출시 후 스마트스토어에서 실제 구매 후기를 확인해 주세요.' : '아직 등록된 리뷰 인용이 없습니다.'} <a href="${esc(p.smartstore || GR.STORE_URL)}" target="_blank" rel="noopener">스마트스토어 리뷰 확인</a></div>`
       : `<div class="notice-box">${soon ? '입고 전 상품입니다. 판매 시작 후 스마트스토어에서 실제 구매 후기를 확인해 주세요.' : '아직 등록된 리뷰 인용이 없습니다. 스마트스토어 리뷰를 확인해 주세요.'}</div>`;
     $('#pd-notice').innerHTML = `<div class="notice-box"><b>배송 · 교환 · 반품</b><p style="margin-top:10px">배송비, 출고 예정일과 교환·반품 조건은 주문하는 스마트스토어 상품 페이지의 현재 안내를 확인해 주세요. 주문 후 문의는 네이버 주문 내역과 톡톡으로 접수할 수 있어요.</p><a href="${p.smartstore || GR.STORE_URL}" target="_blank" rel="noopener">스마트스토어 상품 안내 확인</a></div>`;
     $$('.pd-tabs button').forEach(b => b.addEventListener('click', () => { $$('.pd-tabs button').forEach(x => x.classList.toggle('active', x === b)); $$('.pd-panel').forEach(pn => pn.hidden = pn.id !== b.dataset.tab); }));

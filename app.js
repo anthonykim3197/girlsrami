@@ -40,7 +40,7 @@
           <div><h5>HELP</h5><ul><li><a href="guide.html#shipping">배송 · 교환 · 반품</a></li><li><a href="guide.html#faq">자주 묻는 질문</a></li><li><a href="${GR.TALK_URL}" target="_blank" rel="noopener">톡톡 상담</a></li></ul></div>
         </div>
         <div class="legal">상호 대박이할머니 (브랜드 걸스라미) · 대표 신명숙 · 원산지 국산 · 결제와 주문 관리는 네이버 스마트스토어에서 진행됩니다.<br><a href="privacy.html">개인정보 처리 안내</a> · <a href="terms.html">회원 이용약관</a> · <a href="admin.html">걸스라미 관리</a><br>© ${new Date().getFullYear()} GIRLSRAMI. All rights reserved.</div>
-        <div class="disclaimer">이 사이트는 걸스라미 자사몰 <b>청사진(시연) 버전</b>입니다. "입고 예정"으로 표시된 프리미엄 라인 상품은 아직 판매하지 않으며(구매 가능 수량 0), 상품 사진은 촬영 톤 시안을 위해 제작한 이미지로 실제 상품과 다를 수 있습니다. 판매 중인 베이직 라인은 스마트스토어의 실제 상품 정보를 기준으로 합니다.</div>
+        <div class="disclaimer">이 사이트는 걸스라미 자사몰 <b>청사진(시연) 버전</b>입니다. "입고 예정" 또는 "판매 예정" 상품은 아직 판매하지 않습니다(구매 가능 수량 0). 촬영 콘셉트 시안으로 안내된 이미지는 실제 상품과 다를 수 있습니다. 판매 중인 베이직 라인은 스마트스토어의 실제 상품 정보를 기준으로 합니다.</div>
       </div></div>
       <div class="toast" id="toast"></div>`;
   }
@@ -53,19 +53,20 @@
   /* ---------- Card ---------- */
   function stars(r) { const full = Math.round(r); return '★'.repeat(full) + '☆'.repeat(5 - full); }
   function badgeClass(b) { if (['NEW', '베스트', '주간 1위'].includes(b)) return 'accent'; if (['프리미엄', 'L사이즈', '자사몰 단독'].includes(b)) return 'navy'; if (b === '오늘출발') return 'sage'; return 'outline'; }
+  function swatchColor(color) { return GR.COLORS[color] || GR.COLORS[{ '스카이': '스카이블루', '회색': '그레이' }[color]] || '#ccc'; }
   function card(p) {
     const soon = p.stock === 0 || p.status === 'coming';
-    const sw = p.colors.slice(0, 6).map(c => `<span class="swatch" title="${esc(c)}" style="background:${GR.COLORS[c] || '#ccc'}"></span>`).join('') + (p.colors.length > 6 ? `<span class="more">+${p.colors.length - 6}</span>` : '');
+    const sw = p.colors.slice(0, 6).map(c => `<span class="swatch" title="${esc(c)}" style="background:${swatchColor(c)}"></span>`).join('') + (p.colors.length > 6 ? `<span class="more">+${p.colors.length - 6}</span>` : '');
     return `<a class="card reveal" href="product.html?id=${p.id}">
       <div class="thumb ${soon ? 'soon' : ''}">
-        <div class="badges">${p.badges.slice(0, 2).map(b => `<span class="badge ${badgeClass(b)}">${esc(b)}</span>`).join('')}</div>
+        <div class="badges">${p.badges.slice(0, 2).map(b => `<span class="badge ${badgeClass(b)}">${esc(p.newRelease && b === 'NEW' ? '신상' : b)}</span>`).join('')}</div>
         <img src="${esc(p.catalogImage || p.image+'.jpg')}" alt="${esc(p.name)}" loading="lazy">
-        ${soon ? `<div class="soon-tag">입고 예정 <span>${esc(p.eta || '판매 일정 확인 중')}</span></div>` : ''}
+        ${soon ? `<div class="soon-tag">${p.newRelease ? '판매 예정' : '입고 예정'} <span>${esc(p.eta || '판매 일정 확인 중')}</span></div>` : ''}
       </div>
       <div class="card-body">
         <div class="cat">${esc(p.category)} · ${p.line === 'premium' ? '프리미엄 라인' : '베이직 라인'}</div>
         <div class="name">걸스라미 ${esc(p.name)}<small>${esc(p.sub)}</small></div>
-        <div class="price"><span class="now">${GR.fmt(p.price)}</span>${p.listPrice ? `<span class="was">${GR.fmt(p.listPrice)}</span><span class="off">${GR.discount(p)}%</span>` : ''}</div>
+        ${p.pricePending ? '' : `<div class="price"><span class="now">${GR.fmt(p.price)}</span>${p.listPrice ? `<span class="was">${GR.fmt(p.listPrice)}</span><span class="off">${GR.discount(p)}%</span>` : ''}</div>`}
         ${p.colors.length ? `<div class="swatches">${sw}</div>` : ''}
         ${p.rating ? `<div class="rating"><span class="star">${stars(p.rating)}</span> ${p.rating} <span class="muted">(${p.reviewCount})</span></div>` : `<div class="rating muted">${soon ? '스마트스토어 입고 후 판매' : ''}</div>`}
       </div></a>`;
@@ -95,7 +96,9 @@
 
   /* ---------- HOME ---------- */
   function renderHome() {
-    const best = GR.CONTENT?.home ? GR.CONTENT.home.featuredIds.map(id=>GR.byId(id)).filter(Boolean) : GR.PRODUCTS.filter(p => p.line === 'basic').slice(0, 4);
+    const featured = GR.CONTENT?.home ? GR.CONTENT.home.featuredIds.map(id=>GR.byId(id)).filter(Boolean) : GR.PRODUCTS.filter(p => p.line === 'basic').slice(0, 4);
+    const newProducts = GR.PRODUCTS.filter(p => p.newRelease);
+    const best = newProducts.length ? [...newProducts, ...featured.filter(p => !p.newRelease)].slice(0, Math.max(4, featured.length)) : featured;
     const fw = GR.PRODUCTS.filter(p => p.line === 'premium').slice(0, 8);
     $('#best-grid').innerHTML = best.map(card).join('');
     $('#fw-grid').innerHTML = fw.map(card).join('');
@@ -112,7 +115,7 @@
     cats.innerHTML = GR.CATEGORIES.map(c => `<button class="chip ${state.cat === c ? 'active' : ''}" data-cat="${c}">${c}</button>`).join('');
     function draw() {
       let list = GR.PRODUCTS.filter(p => (state.line === 'all' || p.line === state.line) && (state.cat === '전체' || p.category === state.cat) && (state.size === 'all' || p.sizes.some(s => s.startsWith(state.size))));
-      const sorters = { popular: (a, b) => (b.reviewCount - a.reviewCount) || (b.price - a.price), new: (a, b) => (a.line === 'premium' ? -1 : 1) - (b.line === 'premium' ? -1 : 1), low: (a, b) => a.price - b.price, high: (a, b) => b.price - a.price, sale: (a, b) => GR.discount(b) - GR.discount(a) };
+      const sorters = { popular: (a, b) => Number(!!b.newRelease) - Number(!!a.newRelease) || (b.reviewCount - a.reviewCount) || (b.price - a.price), new: (a, b) => Number(!!b.newRelease) - Number(!!a.newRelease) || (b.releasedAt || '').localeCompare(a.releasedAt || '') || (a.line === 'premium' ? -1 : 1) - (b.line === 'premium' ? -1 : 1), low: (a, b) => Number(!!a.pricePending) - Number(!!b.pricePending) || a.price - b.price, high: (a, b) => Number(!!a.pricePending) - Number(!!b.pricePending) || b.price - a.price, sale: (a, b) => GR.discount(b) - GR.discount(a) };
       list = [...list].sort(sorters[state.sort]);
       grid.innerHTML = list.length ? list.map(card).join('') : `<p class="muted" style="grid-column:1/-1;padding:40px 0">조건에 맞는 상품이 없습니다.</p>`;
       count.textContent = `${list.length}개 상품`;
@@ -137,34 +140,35 @@
     if (!p) { $('#pd').innerHTML='<div class="notice-box">상품을 찾을 수 없어요. <a href="shop.html">전체 상품 보기</a></div>'; return; }
     document.title = `걸스라미 ${p.name} | GIRLSRAMI`;
     const soon = p.stock === 0 || p.status === 'coming';
-    let color = p.colors[0] || null, size = p.sizes[0];
+    const detailImages = Array.isArray(p.detailImages) ? p.detailImages : [];
+    let color = p.newRelease && p.colors.includes(p.photoColor) ? p.photoColor : p.colors[0] || null, size = p.sizePending ? null : p.sizes[0];
     const root = $('#pd');
     root.innerHTML = `
-      <div class="pd-media">
+      <div class="pd-media${p.newRelease ? ' pd-media-catalog' : ''}">
         <img src="${esc(p.catalogImage || p.image+'.jpg')}" alt="걸스라미 ${esc(p.name)}" id="pd-img">
-        <div class="thumbs"><div>정면 착용</div><div>원단 클로즈업<br><small>(촬영 예정)</small></div><div>키 155 / 160 / 167<br>착용 비교<small> (촬영 예정)</small></div><div>15초 숏클립<br><small>(촬영 예정)</small></div></div>
+        ${detailImages.length ? '' : `<div class="thumbs"><div>정면 착용</div><div>원단 클로즈업<br><small>(촬영 예정)</small></div><div>키 155 / 160 / 167<br>착용 비교<small> (촬영 예정)</small></div><div>15초 숏클립<br><small>(촬영 예정)</small></div></div>`}
       </div>
       <div class="pd-info">
         <div class="crumb"><a href="index.html">홈</a> › <a href="shop.html">전체 상품</a> › <a href="shop.html?cat=${encodeURIComponent(p.category)}">${esc(p.category)}</a></div>
-        <div class="badges" style="position:static;flex-direction:row;margin-bottom:12px">${p.badges.map(b => `<span class="badge ${badgeClass(b)}">${esc(b)}</span>`).join('')}</div>
+        <div class="badges" style="position:static;flex-direction:row;margin-bottom:12px">${p.badges.map(b => `<span class="badge ${badgeClass(b)}">${esc(p.newRelease && b === 'NEW' ? '신상' : b)}</span>`).join('')}</div>
         <h1 class="name">걸스라미 ${esc(p.name)}</h1>
-        <div class="sub">${esc(p.sub)} · 품번 ${esc(p.sku)}</div>
+        <div class="sub">${esc(p.sub)}${p.newRelease ? '' : ` · 품번 ${esc(p.sku)}`}</div>
         ${p.rating ? `<div class="rating" style="margin-top:10px"><span class="star">${stars(p.rating)}</span> <b>${p.rating}</b> <a class="muted" href="#reviews">리뷰 ${p.reviewCount}건</a></div>` : ''}
-        <div class="pd-price"><span class="now">${GR.fmt(p.price)}</span>${p.listPrice ? `<span class="was">${GR.fmt(p.listPrice)}</span><span class="off">${GR.discount(p)}% 즉시할인</span>` : ''}</div>
+        ${p.pricePending ? '' : `<div class="pd-price"><span class="now">${GR.fmt(p.price)}</span>${p.listPrice ? `<span class="was">${GR.fmt(p.listPrice)}</span><span class="off">${GR.discount(p)}% 즉시할인</span>` : ''}</div>`}
         <div class="pd-ship"><span>배송 일정·배송비·교환 조건은 스마트스토어의 현재 상품 안내를 확인해 주세요.</span><span>${p.photoVerified ? '실제 상품 사진' : '촬영 콘셉트 시안 이미지 · 실제 상품과 다를 수 있어요.'}</span></div>
-        ${soon ? `<div class="stock-note">⏳ ${esc(p.eta)} · 현재 구매 가능 수량 0 · 판매 일정은 스마트스토어에서 확인해 주세요.</div>` : `<div class="stock-note ok">✓ 스마트스토어에서 바로 구매할 수 있습니다. 옵션 선택과 결제는 네이버페이로 진행됩니다.</div>`}
-        ${p.colors.length ? `<div class="opt"><div class="opt-label">색상 <span id="color-name">${esc(color)}</span></div><div class="color-opts" id="color-opts">${p.colors.map(c => `<button class="color-opt ${c === color ? 'active' : ''}" data-c="${esc(c)}"><span class="swatch" style="background:${GR.COLORS[c] || '#ccc'}"></span>${esc(c)}</button>`).join('')}</div></div>` : `<div class="opt"><div class="opt-label">색상 <span>스마트스토어 옵션에서 선택</span></div></div>`}
-        <div class="opt"><div class="opt-label">사이즈 <a href="guide.html#size" class="muted">사이즈 가이드</a></div><div class="size-opts" id="size-opts">${p.sizes.map(s => `<button class="size-opt ${s === size ? 'active' : ''}" data-s="${esc(s)}">${esc(s)}</button>`).join('')}</div></div>
+        ${soon ? `<div class="stock-note">${p.newRelease ? '판매 예정' : '입고 예정'} · ${esc(p.eta || '판매 일정 확인 중')} · 현재 구매 가능 수량 0 · 판매 일정은 스마트스토어에서 확인해 주세요.</div>` : `<div class="stock-note ok">✓ 스마트스토어에서 바로 구매할 수 있습니다. 옵션 선택과 결제는 네이버페이로 진행됩니다.</div>`}
+        ${p.colors.length ? `<div class="opt"><div class="opt-label">색상 <span id="color-name">${esc(color)}</span></div><div class="color-opts" id="color-opts">${p.colors.map(c => `<button class="color-opt ${c === color ? 'active' : ''}" data-c="${esc(c)}"><span class="swatch" style="background:${swatchColor(c)}"></span>${esc(c)}</button>`).join('')}</div></div>` : `<div class="opt"><div class="opt-label">색상 <span>스마트스토어 옵션에서 선택</span></div></div>`}
+        <div class="opt"><div class="opt-label">사이즈 <a href="guide.html#size" class="muted">사이즈 가이드</a></div><div class="size-opts" id="size-opts">${(p.sizePending ? [] : p.sizes).map(s => `<button class="size-opt ${s === size ? 'active' : ''}" data-s="${esc(s)}">${esc(s)}</button>`).join('')}</div></div>
         <div class="pd-cta">
           ${soon
-            ? `<a class="btn btn-light btn-block" href="${GR.STORE_URL}" target="_blank" rel="noopener">스마트스토어에서 판매 일정 확인</a><button class="btn btn-lg btn-block is-disabled" disabled>품절 · 입고 예정 (구매 가능 수량 0)</button>`
+            ? `<a class="btn btn-light btn-block" href="${GR.STORE_URL}" target="_blank" rel="noopener">스마트스토어에서 판매 일정 확인</a><button class="btn btn-lg btn-block is-disabled" disabled>${p.newRelease ? '판매 예정' : '품절 · 입고 예정'} (구매 가능 수량 0)</button>`
             : `<a class="btn btn-accent btn-lg btn-block" href="${p.smartstore}" target="_blank" rel="noopener">스마트스토어에서 구매하기 →</a><div class="row"><a class="btn btn-ghost" href="${GR.TALK_URL}" target="_blank" rel="noopener">톡톡 문의</a><button class="btn btn-ghost" id="share-btn">링크 공유</button></div>`}
         </div>
         <div class="gift"><b>혜택 확인</b>현재 쿠폰·사은품 조건은 스마트스토어의 상품 안내와 결제 화면에서 확인해 주세요.</div>
         <div class="spec">
-          <dl><dt>핏 · 기장</dt><dd>${esc(p.fit)} · ${esc(p.length)}</dd></dl>
+          <dl><dt>핏 · 기장</dt><dd>${esc([p.fit, p.length].filter(Boolean).join(' · '))}</dd></dl>
           <dl><dt>소재</dt><dd>${esc(p.material)}</dd></dl>
-          <dl><dt>두께 · 신축 · 비침</dt><dd>${esc(p.thickness)} · ${esc(p.stretch)} · ${esc(p.sheer)}</dd></dl>
+          <dl><dt>두께 · 신축 · 비침</dt><dd>${esc([p.thickness, p.stretch, p.sheer].filter(Boolean).join(' · '))}</dd></dl>
           <dl><dt>세탁</dt><dd>${esc(p.care)}</dd></dl>
           <dl><dt>제조</dt><dd>제조국과 제조자 정보는 스마트스토어 상품 고시에서 확인해 주세요.</dd></dl>
         </div>
@@ -174,7 +178,10 @@
     $('#share-btn')?.addEventListener('click', async () => { try { await navigator.clipboard.writeText(location.href); toast('링크를 복사했습니다'); } catch { toast(location.href); } });
 
     /* lower tabs */
-    $('#pd-desc').innerHTML = `
+    $('#pd-desc').classList.toggle('pd-detail-gallery', detailImages.length > 0);
+    $('#pd-desc').innerHTML = detailImages.length
+      ? detailImages.map((image, i) => `<img src="${esc(typeof image === 'string' ? image : image.url)}" alt="${esc(image.alt || `${p.name} 상세 안내 ${i + 1}`)}"${Number.isFinite(image.width) && Number.isFinite(image.height) && image.width > 0 && image.height > 0 ? ` width="${image.width}" height="${image.height}"` : ''} loading="lazy" decoding="async">`).join('')
+      : `
       <h4>이 옷을 만든 이유</h4><p>${esc(p.desc)}</p>
       <h4>실측 사이즈 (cm, 단면 기준)</h4>
       <div class="table-scroll"><table class="size-table"><thead><tr><th>사이즈</th><th>가슴 단면</th><th>총장</th><th>확인 상태</th></tr></thead><tbody>${(p.catalogSizes||[]).map(s => `<tr><td>${esc(s.label)}</td><td>${s.verified?s.chestHalf:'확인 중'}</td><td>${s.verified?s.length:'확인 중'}</td><td>${s.verified?'실측 확인':'미확인 · 추천 제외'}</td></tr>`).join('')}</tbody></table></div>

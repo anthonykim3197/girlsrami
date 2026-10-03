@@ -12,7 +12,7 @@
     const header = $('#site-header');
     if (header) header.innerHTML = `
       <div class="announce">주문·배송·혜택은 스마트스토어에서 확인해 주세요.</div>
-      <div class="member-links wrap"><a href="fitting.html">나의 피팅룸</a><a href="cart.html">장바구니</a><a data-account-label href="account.html">로그인 · 내 사이즈</a></div>
+      <div class="member-links wrap"><a href="cart.html">장바구니</a><a data-account-label href="account.html">로그인</a></div>
       <div class="header">
         <div class="wrap">
           <a class="logo" href="index.html"><span class="mark">GR</span>걸스라미<small>GIRLSRAMI</small></a>
@@ -169,7 +169,7 @@
         <div class="pd-cta">
           ${soon
             ? `<a class="btn btn-light btn-block" href="${GR.STORE_URL}" target="_blank" rel="noopener">스마트스토어에서 판매 일정 확인</a><button class="btn btn-lg btn-block is-disabled" disabled>${p.newRelease ? '판매 예정' : '품절 · 입고 예정'} (구매 가능 수량 0)</button>`
-            : `<a class="btn btn-accent btn-lg btn-block" href="${p.smartstore}" target="_blank" rel="noopener">스마트스토어에서 구매하기 →</a><div class="row"><a class="btn btn-ghost" href="${GR.TALK_URL}" target="_blank" rel="noopener">톡톡 문의</a><button class="btn btn-ghost" id="share-btn">링크 공유</button></div>`}
+            : `<a class="btn btn-accent btn-lg btn-block" href="${p.smartstore}" target="_blank" rel="noopener">스마트스토어에서 구매하기 →</a><div class="row"><button class="btn btn-ghost" id="add-cart"${!p.colors.length || p.sizePending || !p.sizes.length ? ' disabled' : ''}>장바구니에 담기</button><a class="btn btn-ghost" href="${GR.TALK_URL}" target="_blank" rel="noopener">톡톡 문의</a><button class="btn btn-ghost" id="share-btn">링크 공유</button></div><p id="product-cart-status" role="status"></p>`}
         </div>
         <div class="gift"><b>혜택 확인</b>현재 쿠폰·사은품 조건은 스마트스토어의 상품 안내와 결제 화면에서 확인해 주세요.</div>
         <div class="spec">

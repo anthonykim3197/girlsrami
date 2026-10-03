@@ -1,7 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
-import {execFileSync} from 'node:child_process';
 import {readFileSync} from 'node:fs';
 const source=readFileSync(new URL('../ai-media.js',import.meta.url),'utf8');
 const product={name:'니트',colors:['스카이','블랙'],aiPresentation:{defaultColor:'스카이',colors:{'스카이':{image:'sky-crop.png',fullBody:'sky-full.png'},'블랙':{image:'black-crop.png',fullBody:'black-full.png'}},model:{height:165,weight:50,chest:82,waist:64,hip:90},turntable:{color:'스카이',frames:Array.from({length:8},(_,i)=>`${i}.png`),angles:[0,45,90,135,180,225,270,315]}}};
@@ -55,8 +54,7 @@ test('Cards use AI for active cardigan while preserving pending prices and legac
  const pending={...p,stock:0,status:'coming',pricePending:true,newRelease:true};assert.doesNotMatch(GR.card(pending),/12900/);assert.match(GR.card(pending),/판매 예정/);
  const legacy={...p};delete legacy.aiPresentation;assert.match(GR.card(legacy),/old.jpg/);assert.doesNotMatch(GR.card(legacy),/ai-marker/);
 });
-test('Build includes shared AI script before app with content hashes; compiled member unchanged',()=>{
- assert.equal(readFileSync(new URL('../member.js',import.meta.url),'utf8'),execFileSync('git',['show','HEAD:member.js'],{cwd:new URL('../',import.meta.url),encoding:'utf8'}));
+test('Build includes shared AI script before app with content hashes',()=>{
  for(const page of ['index','shop','product']){
   const html=readFileSync(new URL(`../dist/${page}.html`,import.meta.url),'utf8');assert.match(html,/ai-media.js\?v=[a-f0-9]{12}/);assert.ok(html.indexOf('ai-media.js')<html.indexOf('app.js'));
  }

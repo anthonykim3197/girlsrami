@@ -21,6 +21,7 @@ outfit-stage, color-story, proof-grid and model-disclosure. Selected controls
 use ink wash; image loading retains the stage size and exposes adjacent status.
 The beui tabs mechanism uses a controlled shared value and roving keyboard focus;
 adapted to vanilla buttons with 120ms opacity, no new runtime or scroll hijack.
+Room drag follows the horizontal pointer direction (right advances, left reverses); the stage angle is the single persistent readout, status is empty after loading, and lighting controls are absent.
 Room direction and zoom persist through color changes, autoplay pauses on edits,
 reduced motion and offscreen/hidden state. Every color needs its own eight frames.
 Synthetic body settings are a native disclosure, never fit guarantees. Missing
@@ -120,8 +121,8 @@ mechanism: eight actual generated viewpoints crossfade in a stable lit studio;
 there is no CSS rotation of a single image. Drag threshold 32px, crossfade 120ms,
 user-started autoplay 1800ms, zoom 1–1.5. Reduced motion removes transitions and
 autoplay; document-hidden and offscreen pauses prevent background work. Floor is
-a static ellipse with neutral ink shadow and studio radial light; warm/daylight
-lighting changes the room only, not garment color. Stage 2:3, max height 640px.
+a static ellipse with neutral ink shadow and fixed studio radial light.
+Stage 2:3, max height 640px.
 Final representative assets are square with an AI label inside the bitmap: use
 square contain on the product page and contain within existing 3:4 cards to avoid
 cutting sleeves or the embedded label. Optional aiPresentation.cropHasAiLabel=true

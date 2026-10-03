@@ -8,7 +8,7 @@ const product={name:'니트',colors:['스카이','블랙'],aiPresentation:{defau
 function node(dataset={}){return {dataset,attrs:{},listeners:{},style:{setProperty(k,v){this[k]=v;}},classList:{add(){},remove(){},toggle(){}},setAttribute(k,v){this.attrs[k]=v;},removeAttribute(k){delete this.attrs[k];},addEventListener(k,v){this.listeners[k]=v;},setPointerCapture(){},fire(k,e={}){this.listeners[k]?.(e);}};}
 function setup(){
  const stage=node(), images=[node(),node()], status=node(),play=node(),prev=node(),next=node(),input=node(),angles=Array.from({length:8},(_,i)=>node({angle:String(i)})),lights=['day','warm'].map(light=>node({light})),angle=node(),reduced={matches:false,addEventListener(){}};
- const map={'.ai-room-stage':stage,'.ai-room-status':status,'[data-play]':play,'[data-prev]':prev,'[data-next]':next,'input':input,'.ai-room-angle':angle};
+ const map={'.ai-room-stage':stage,'.ai-room-status':status,'[data-play]':play,'[data-prev]':prev,'[data-next]':next,'input':input,'.ai-room-angle':angle,'.ai-room-heading>span':node(),'.ai-room-color':node()};
  const root={querySelector:s=>map[s],querySelectorAll:s=>({'.ai-room-frame':images,'[data-angle]':angles,'[data-light]':lights}[s])};
  const document={querySelector:()=>root,addEventListener(){}};let interval=null;
  const context={window:{},GR:{COLORS:{}},document,matchMedia:()=>reduced,setInterval:f=>(interval=f,1),clearInterval:()=>{interval=null;}};
@@ -51,4 +51,20 @@ test('Build includes shared AI script before app with content hashes; compiled m
  for(const page of ['index','shop','product']){
   const html=readFileSync(new URL(`../dist/${page}.html`,import.meta.url),'utf8');assert.match(html,/ai-media.js\?v=[a-f0-9]{12}/);assert.ok(html.indexOf('ai-media.js')<html.indexOf('app.js'));
  }
+});
+
+test('Editorial products use natural hero and only one outfit stage; color-specific rotation never falls back',()=>{
+ const {api}=setup(),p=structuredClone(product);
+ p.aiPresentation.editorial={heroByColor:{'스카이':'natural-sky.png','블랙':'natural-black.png'},colorStory:'styled-colors.png',looks:[{id:'weekend',label:'주말 산책',occasion:'Coffee walk',note:'가벼운 데님과 스니커즈',items:['라이트 데님','스니커즈'],images:{'스카이':'walk-sky.png','블랙':'walk-black.png'}},{id:'dinner',label:'저녁 약속',images:{'스카이':'dinner-sky.png','블랙':'dinner-black.png'}}],turntables:{'스카이':{frames:Array.from({length:8},(_,i)=>`sky-${i}.png`),angles:[0,45,90,135,180,225,270,315]},'블랙':{frames:Array.from({length:8},(_,i)=>`black-${i}.png`),angles:[0,45,90,135,180,225,270,315]}},details:[{image:'real-macro.png',caption:'실물 짜임'}],measurements:[{label:'총기장',value:50}],measurementUnit:''};
+ assert.match(api.gallery(p,'블랙'),/natural-black.png/);assert.doesNotMatch(api.gallery(p,'블랙'),/ai-full-body/);
+ assert.equal(api.turntableFor(p,'블랙').frames[7],'black-7.png');assert.equal(api.turntableFor(p,'missing'),null);
+ const html=api.editorial(p,'스카이');assert.equal((html.match(/id="editorial-look-image"/g)||[]).length,1);assert.match(html,/styled-colors.png/);assert.doesNotMatch(html,/dinner-sky.png/);assert.match(html,/data-look="dinner"/);
+ const proof=api.proof(p);assert.match(proof,/real-macro.png/);assert.match(proof,/<dd>50<\/dd>/);assert.doesNotMatch(proof,/cm/);
+});
+
+test('Global color update preserves room angle and pauses autoplay before loading matching frames',()=>{
+ const h=setup(),p=structuredClone(product);
+ p.aiPresentation.editorial={turntables:Object.fromEntries(p.colors.map(color=>[color,{frames:Array.from({length:8},(_,i)=>`${color}-${i}.png`),angles:[0,45,90,135,180,225,270,315]}]))};
+ const controller=h.api.bindRoom(p);h.angles[3].fire('click');h.images[1].onload();h.play.fire('click');
+ controller.setColor('블랙');assert.equal(h.play.attrs['aria-pressed'],'false');assert.equal(h.images[0].src,'블랙-3.png');h.images[0].onload();assert.equal(h.status.textContent,'블랙 · 135°');assert.equal(h.angles[3].attrs['aria-pressed'],'true');
 });

@@ -1,5 +1,35 @@
 # Girlsrami member, fitting and administration design
 
+## Editorial product revision (2026-10-03, supersedes AI media extension)
+Three editorial products share one selected color across the natural hero,
+styling look and eight-direction room. A look selection survives color changes.
+Content jobs: natural neck-down hero hooks; purchase information converts;
+one interactive outfit editor inspires; one styled color story compares;
+real textile macros and native measurements prove. Repeated all-color model
+grids, mannequin body shots and exported long-form detail composites do not
+appear on these product pages. Other catalog products retain their layout.
+The warm cream/ink palette and serif headings stay. Editorial media uses square
+corners, asymmetrical 1.2:1 image/control columns, 64/48px section separation,
+32px section titles, 12px letter-spaced index labels, 13/14px supporting captions,
+15/16px body, 20px measurement values and 24/28px subordinate/mobile titles.
+Controls are at least 44px tall (48px for color and view controls); outfit choices
+are 96px tall, 88px on mobile. Full-body images cap at 780px height with contain;
+the room caps at 720px, preserving heads and shoes. Mobile stacks controls
+before the outfit image and uses a compact square hero above purchase details.
+Reusable primitives: editorial-section, look-selector, shared-color-selector,
+outfit-stage, color-story, proof-grid and model-disclosure. Selected controls
+use ink wash; image loading retains the stage size and exposes adjacent status.
+The beui tabs mechanism uses a controlled shared value and roving keyboard focus;
+adapted to vanilla buttons with 120ms opacity, no new runtime or scroll hijack.
+Room direction and zoom persist through color changes, autoplay pauses on edits,
+reduced motion and offscreen/hidden state. Every color needs its own eight frames.
+Synthetic body settings are a native disclosure, never fit guarantees. Missing
+measurement units and care values remain blank. No fabricated reviews or prices.
+Personas: mobile shopper comparing colors; keyboard shopper exploring outfits;
+motion-sensitive shopper choosing directions manually. Required checks include
+color/preset continuity, image failures, keyboard paths and 375/768/1280 layouts.
+Real fashion reference research and production asset QA are owned by root.
+
 Extend the existing storefront and ../preparation/DESIGN.md. Cream surfaces,
 dark brown text and terracotta primary actions remain the brand contract.
 
@@ -65,7 +95,10 @@ and https://github.com/changeroa/StyleGallery/blob/main/patterns/media-fit/frame
 Interaction reference: https://beui.dev/r/range-slider/raw (stepped range control;
 adapted to accessible native input, without adding React or an animation runtime).
 
-## AI product media extension (2026-10-03)
+## Historical AI media extension (legacy products without editorial metadata only)
+The editorial product revision at the beginning of this document takes precedence
+for products with aiPresentation.editorial. The following rules remain only for
+legacy AI metadata without that field; they do not describe the three revised pages.
 The owner authorizes labelled AI styling imagery for three products. The existing
 storefront tokens, document scroll, and reusable card remain the visual contract.
 Representative media is a neck-down garment composition; full-body AI imagery is

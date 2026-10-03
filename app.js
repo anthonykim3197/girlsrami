@@ -144,8 +144,10 @@
     const soon = p.stock === 0 || p.status === 'coming';
     const detailImages = Array.isArray(p.detailImages) ? p.detailImages : [];
     const ai = window.GR_AI?.presentation(p);
+    const editorial = ai && GR_AI.editorialFor(p);
     let color = ai ? GR_AI.colorFor(p) : p.newRelease && p.colors.includes(p.photoColor) ? p.photoColor : p.colors[0] || null, size = p.sizePending ? null : p.sizes[0];
     const root = $('#pd');
+    root.classList.toggle('pd-editorial', Boolean(editorial));
     root.innerHTML = `
       <div class="pd-media${ai ? ' pd-media-ai' : p.newRelease ? ' pd-media-catalog' : ''}">
         ${ai ? GR_AI.gallery(p, color) : `
@@ -178,15 +180,18 @@
           <dl><dt>제조</dt><dd>제조국과 제조자 정보는 스마트스토어 상품 고시에서 확인해 주세요.</dd></dl>
         </div>
       </div>`;
-    $('#color-opts')?.addEventListener('click', e => { const b = e.target.closest('.color-opt'); if (!b) return; color = b.dataset.c; $$('#color-opts .color-opt').forEach(x => x.classList.toggle('active', x === b)); $('#color-name').textContent = color; if(ai && GR_AI.mediaFor(p,color)) $('.pd-media').innerHTML = GR_AI.gallery(p,color); });
+    let editorialControl;
+    function selectColor(next) { color=next; $$('#color-opts .color-opt').forEach(x=>{x.classList.toggle('active',x.dataset.c===color);x.setAttribute('aria-pressed',String(x.dataset.c===color));}); $('#color-name').textContent=color; if(ai && GR_AI.mediaFor(p,color)) $('.pd-media').innerHTML=GR_AI.gallery(p,color); editorialControl?.setColor(color); }
+    $('#color-opts')?.addEventListener('click', e => { const b=e.target.closest('.color-opt');if(b)selectColor(b.dataset.c); });
     $('#size-opts').addEventListener('click', e => { const b = e.target.closest('.size-opt'); if (!b) return; size = b.dataset.s; $$('#size-opts .size-opt').forEach(x => x.classList.toggle('active', x === b)); });
     $('#share-btn')?.addEventListener('click', async () => { try { await navigator.clipboard.writeText(location.href); toast('링크를 복사했습니다'); } catch { toast(location.href); } });
 
-    if(ai) { root.insertAdjacentHTML('afterend', GR_AI.room(p)); GR_AI.bindRoom(p); }
+    if(editorial) { root.insertAdjacentHTML('afterend',GR_AI.editorial(p,color)); editorialControl=GR_AI.bindEditorial(p,selectColor); }
+    else if(ai) { root.insertAdjacentHTML('afterend', GR_AI.room(p)); GR_AI.bindRoom(p); }
 
     /* lower tabs */
-    $('#pd-desc').classList.toggle('pd-detail-gallery', detailImages.length > 0);
-    $('#pd-desc').innerHTML = detailImages.length
+    $('#pd-desc').classList.toggle('pd-detail-gallery', !editorial && detailImages.length > 0);
+    $('#pd-desc').innerHTML = editorial ? GR_AI.proof(p) : detailImages.length
       ? detailImages.map((image, i) => `<img src="${esc(typeof image === 'string' ? image : image.url)}" alt="${esc(image.alt || `${p.name} 상세 안내 ${i + 1}`)}"${Number.isFinite(image.width) && Number.isFinite(image.height) && image.width > 0 && image.height > 0 ? ` width="${image.width}" height="${image.height}"` : ''} loading="lazy" decoding="async">`).join('')
       : `
       <h4>이 옷을 만든 이유</h4><p>${esc(p.desc)}</p>
@@ -194,7 +199,12 @@
       <div class="table-scroll"><table class="size-table"><thead><tr><th>사이즈</th><th>가슴 단면</th><th>총장</th><th>확인 상태</th></tr></thead><tbody>${(p.catalogSizes||[]).map(s => `<tr><td>${esc(s.label)}</td><td>${s.verified?s.chestHalf:'확인 중'}</td><td>${s.verified?s.length:'확인 중'}</td><td>${s.verified?'실측 확인':'미확인 · 추천 제외'}</td></tr>`).join('')}</tbody></table></div>
       <p class="small muted" style="margin-top:8px">확인된 실측만 표시합니다. 측정 방법에 따라 1~3cm 차이가 있을 수 있어요. 색상은 화면과 조명에 따라 달라질 수 있어요.</p>
       <h4>착용 참고</h4><p>사진과 아바타는 코디 참고용이에요. 확인된 실제 상품 사진과 실측이 등록되면 상세페이지에 표시합니다.</p>`;
-    if(ai && !detailImages.length) $('#pd-desc').insertAdjacentHTML('beforeend', GR_AI.care(p));
+    if(editorial) {
+      const facts=document.createElement('details');facts.className='editorial-facts';
+      const summary=document.createElement('summary');summary.textContent='소재 · 상품 정보';facts.append(summary,$('.pd-info .spec'));
+      $('#pd-desc .ai-care').before(facts);$('.pd-info .gift').remove();
+    }
+    if(ai && !editorial && !detailImages.length) $('#pd-desc').insertAdjacentHTML('beforeend', GR_AI.care(p));
     $('#pd-reviews').innerHTML = p.reviews.length
       ? `<div class="reviews">${p.reviews.map(r => `<div class="review"><div class="star">${'★'.repeat(r.stars)}${'☆'.repeat(5 - r.stars)}</div><p>"${esc(r.text)}"</p><div class="who">${esc(r.who)}${r.body ? ' · ' + esc(r.body) : ''} · 스마트스토어 구매 리뷰</div>${r.reply ? `<div class="reply"><b>걸스라미 답글</b>${esc(r.reply)}</div>` : ''}</div>`).join('')}</div><p class="small muted" style="margin-top:16px">전체 리뷰 ${p.reviewCount}건은 <a href="${p.smartstore || GR.STORE_URL}" target="_blank" rel="noopener" style="text-decoration:underline">스마트스토어 상품 페이지</a>에서 볼 수 있습니다. 저평점 리뷰에는 원인과 조치를 답글로 남깁니다.</p>`
       : ai ? `<div class="notice-box">${soon ? '출시 후 스마트스토어에서 실제 구매 후기를 확인해 주세요.' : '아직 등록된 리뷰 인용이 없습니다.'} <a href="${esc(p.smartstore || GR.STORE_URL)}" target="_blank" rel="noopener">스마트스토어 리뷰 확인</a></div>`

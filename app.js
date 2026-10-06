@@ -127,7 +127,7 @@
     return `<a class="card reveal" href="product.html?id=${p.id}">
       <div class="thumb ${soon ? 'soon' : ''}${aiMedia ? ' ai-thumb' : ''}">
         <div class="badges">${p.badges.slice(0, 2).map(b => `<span class="badge ${badgeClass(b)}">${esc(p.newRelease && b === 'NEW' ? '신상' : b)}</span>`).join('')}</div>
-        <img src="${esc(aiMedia?.image || p.catalogImage || p.image+'.jpg')}" alt="${esc(p.name)}${aiMedia ? ' '+esc(aiColor)+' AI 코디' : ''}" loading="lazy">
+        <img src="${esc(aiMedia?.image || p.catalogImage || p.image+'.jpg')}" alt="${esc(p.name)}${aiMedia ? ' '+esc(aiColor)+' AI 코디' : ''}" loading="lazy"${ai?.portraitCrop ? ' style="object-position:center bottom"' : ''}>
         ${aiMedia ? (ai.cropHasAiLabel ? '' : GR_AI.marker) + GR_AI.swatches(p, aiColor) : ''}
         ${soon ? `<div class="soon-tag">${p.newRelease ? '판매 예정' : '입고 예정'} <span>${esc(p.eta || '판매 일정 확인 중')}</span></div>` : ''}
       </div>

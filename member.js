@@ -80,3 +80,25 @@ ${m}`}var M=class extends Error{constructor({message:e,code:r,cause:s,name:n}){v
     }
   };
 }
+
+if(typeof cn!=="undefined" && document.body.dataset.page==="admin"){
+  let inventoryEditorReady=import('./admin-product-editor.js').then(({createProductInventoryAdmin})=>{
+    cn=createProductInventoryAdmin({
+      getClient:()=>S,
+      getUser:()=>B,
+      Q,
+      query:$,
+      requireUser:be,
+      escape:w,
+      priceLabel:xt,
+      input:D,
+      select:te,
+      find:f,
+      runForm:Z,
+      setStatus:N,
+      formValues:le,
+      validateProduct:Zt
+    });
+  });
+  GR.bootPromise=Promise.all([GR.bootPromise,inventoryEditorReady]).then(([boot])=>boot);
+}

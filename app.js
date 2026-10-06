@@ -5,6 +5,69 @@
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const page = document.body.dataset.page || '';
 
+  /* ---------- Catalog presentation contract ---------- */
+  function nameFor(p) {
+    return String(p?.name || '').trim().replace(/\s*\(\s*RM\d+\s*\)\s*$/i, '');
+  }
+  function styleCodeFor(p) {
+    const explicit = String(p?.styleCode || '').trim();
+    const legacy = String(p?.sku || '').trim();
+    const code = explicit || (/^RM\d+$/i.test(legacy) ? legacy : '');
+    return /^RM\d+$/i.test(code) ? code.toUpperCase() : code;
+  }
+  function moneyValue(value) {
+    const amount = Number(value);
+    return Number.isFinite(amount) && amount > 0 ? amount : null;
+  }
+  function channelPriceFor(p) {
+    const value = p?.channelPrice;
+    if (value && typeof value === 'object') return moneyValue(value.naver ?? value.smartstore ?? value.price);
+    return moneyValue(value);
+  }
+  function hasComparisonPrice(p) {
+    const price = moneyValue(p?.price), listPrice = moneyValue(p?.listPrice);
+    return Boolean(price && listPrice && listPrice > price);
+  }
+  function priceFor(p, detail = false) {
+    const price = moneyValue(p?.price);
+    if (!price) return '';
+    const channelPrice = channelPriceFor(p);
+    const showChannel = Boolean(channelPrice && channelPrice !== price);
+    const comparison = hasComparisonPrice(p);
+    const discount = comparison ? Math.round((1 - price / Number(p.listPrice)) * 100) : 0;
+    if (detail) return `<div class="pd-price${showChannel ? ' has-channel-price' : ''}"><div class="pd-price-primary">${showChannel ? '<small>자사몰 판매가</small>' : ''}<span class="now">${GR.fmt(price)}</span>${comparison ? `<span class="was">${GR.fmt(p.listPrice)}</span><span class="off">${discount}% 즉시할인</span>` : ''}</div>${showChannel ? `<div class="channel-price"><small>네이버 결제가</small><strong>${GR.fmt(channelPrice)}</strong><span>스마트스토어 결제 기준</span></div>` : ''}</div>`;
+    return `<div class="price${showChannel ? ' price-channels' : ''}">${showChannel ? '<span class="price-label">자사몰 판매가</span>' : ''}<span class="now">${GR.fmt(price)}</span>${comparison ? `<span class="was">${GR.fmt(p.listPrice)}</span><span class="off">${discount}%</span>` : ''}${showChannel ? `<span class="channel-price"><span>네이버 결제가</span><b>${GR.fmt(channelPrice)}</b></span>` : ''}</div>`;
+  }
+  function factsFor(p) {
+    const rows = [
+      ['핏 · 기장', [p.fit, p.length].filter(Boolean).join(' · ')],
+      ['소재', p.material],
+      ['품번', styleCodeFor(p)],
+      ['두께 · 신축 · 비침', [p.thickness, p.stretch, p.sheer].filter(Boolean).join(' · ')],
+      ['세탁', p.care],
+      ['제조국', p.origin],
+      ['제조자', p.manufacturer]
+    ].filter(([, value]) => String(value || '').trim());
+    return `<div class="spec">${rows.map(([label, value]) => `<dl${label === '품번' ? ' class="spec-code"' : ''}><dt>${label}</dt><dd>${esc(value)}</dd></dl>`).join('')}</div>`;
+  }
+  function factsDisclosureFor(p) {
+    return `<details class="editorial-facts"><summary>소재 · 상품 정보</summary>${factsFor(p)}</details>`;
+  }
+  function usesStandardEditorial(p) {
+    return Boolean(p?.editorialStyle === 'standard' || p?.smartstore || p?.storeUrl || p?.newRelease || (Array.isArray(p?.detailImages) && p.detailImages.length));
+  }
+  function sourceEditorialFor(p) {
+    const images = Array.isArray(p.detailImages) ? p.detailImages : [];
+    const gallery = images.length ? `<div class="source-editorial-gallery">${images.map((image, i) => {
+      const source = typeof image === 'string' ? image : image.url;
+      const alt = typeof image === 'string' ? `${nameFor(p)} 상세 이미지 ${i + 1}` : image.alt || `${nameFor(p)} 상세 이미지 ${i + 1}`;
+      const dimensions = typeof image === 'object' && Number.isFinite(image.width) && Number.isFinite(image.height) && image.width > 0 && image.height > 0 ? ` width="${image.width}" height="${image.height}"` : '';
+      return `<figure><img src="${esc(source)}" alt="${esc(alt)}"${dimensions} loading="lazy" decoding="async">${typeof image === 'object' && image.alt ? `<figcaption>${esc(image.alt)}</figcaption>` : ''}</figure>`;
+    }).join('')}</div>` : '';
+    return `<section class="source-editorial" aria-labelledby="source-editorial-title"><header class="editorial-heading"><span class="editorial-index">01 / THE PRODUCT EDIT</span><h2 id="source-editorial-title">${esc(p.sub || nameFor(p))}</h2>${p.desc ? `<p>${esc(p.desc)}</p>` : ''}</header>${gallery}${factsDisclosureFor(p)}</section>`;
+  }
+  window.GR.catalogPresentation = Object.freeze({ nameFor, styleCodeFor, channelPriceFor, usesStandardEditorial, sourceEditorialFor, factsFor });
+
   /* ---------- Header / Footer ---------- */
   function renderChrome() {
     const nav = [['index.html', '홈'], ['shop.html', '전체 상품'], ['shop.html?line=premium', 'F/W 프리미엄'], ['story.html', '브랜드 이야기'], ['guide.html', '구매 안내']];
@@ -53,11 +116,12 @@
   /* ---------- Card ---------- */
   function stars(r) { const full = Math.round(r); return '★'.repeat(full) + '☆'.repeat(5 - full); }
   function badgeClass(b) { if (['NEW', '베스트', '주간 1위'].includes(b)) return 'accent'; if (['프리미엄', 'L사이즈', '자사몰 단독'].includes(b)) return 'navy'; if (b === '오늘출발') return 'sage'; return 'outline'; }
-  function swatchColor(color) { return GR.COLORS[color] || GR.COLORS[{ '스카이': '스카이블루', '회색': '그레이' }[color]] || '#ccc'; }
+  function swatchColor(color, p) { return p?.colorHex?.[color] || GR.COLORS[color] || GR.COLORS[{ '스카이': '스카이블루', '회색': '그레이' }[color]] || '#ccc'; }
   function card(p) {
+    p = { ...p, name: nameFor(p) };
     const soon = p.stock === 0 || p.status === 'coming';
     const ai = window.GR_AI?.presentation(p), aiColor = ai && GR_AI.colorFor(p), aiMedia = ai && GR_AI.mediaFor(p, aiColor);
-    const sw = p.colors.slice(0, 6).map(c => `<span class="swatch" title="${esc(c)}" style="background:${swatchColor(c)}"></span>`).join('') + (p.colors.length > 6 ? `<span class="more">+${p.colors.length - 6}</span>` : '');
+    const sw = p.colors.slice(0, 6).map(c => `<span class="swatch" title="${esc(c)}" style="background:${swatchColor(c,p)}"></span>`).join('') + (p.colors.length > 6 ? `<span class="more">+${p.colors.length - 6}</span>` : '');
     return `<a class="card reveal" href="product.html?id=${p.id}">
       <div class="thumb ${soon ? 'soon' : ''}${aiMedia ? ' ai-thumb' : ''}">
         <div class="badges">${p.badges.slice(0, 2).map(b => `<span class="badge ${badgeClass(b)}">${esc(p.newRelease && b === 'NEW' ? '신상' : b)}</span>`).join('')}</div>
@@ -68,7 +132,7 @@
       <div class="card-body">
         <div class="cat">${esc(p.category)} · ${p.line === 'premium' ? '프리미엄 라인' : '베이직 라인'}</div>
         <div class="name">걸스라미 ${esc(p.name)}<small>${esc(p.sub)}</small></div>
-        ${p.pricePending ? '' : `<div class="price"><span class="now">${GR.fmt(p.price)}</span>${p.listPrice ? `<span class="was">${GR.fmt(p.listPrice)}</span><span class="off">${GR.discount(p)}%</span>` : ''}</div>`}
+        ${p.pricePending ? '' : priceFor(p)}
         ${p.colors.length ? `<div class="swatches">${sw}</div>` : ''}
         ${p.rating ? `<div class="rating"><span class="star">${stars(p.rating)}</span> ${p.rating} <span class="muted">(${p.reviewCount})</span></div>` : `<div class="rating muted">${soon ? '스마트스토어 입고 후 판매' : ''}</div>`}
       </div></a>`;
@@ -104,7 +168,7 @@
     const fw = GR.PRODUCTS.filter(p => p.line === 'premium').slice(0, 8);
     $('#best-grid').innerHTML = best.map(card).join('');
     $('#fw-grid').innerHTML = fw.map(card).join('');
-    const rv = GR.PRODUCTS.flatMap(p => p.reviews.filter(r => r.stars >= 4).map(r => ({ ...r, product: p.name }))).slice(0, 3);
+    const rv = GR.PRODUCTS.flatMap(p => p.reviews.filter(r => r.stars >= 4).map(r => ({ ...r, product: nameFor(p) }))).slice(0, 3);
     $('#home-reviews').innerHTML = rv.map(r => `<div class="review reveal"><div class="star">${'★'.repeat(r.stars)}</div><p>"${esc(r.text)}"</p><div class="who">${esc(r.who)} · ${esc(r.product)}${r.body ? ' · ' + esc(r.body) : ''}</div>${r.reply ? `<div class="reply"><b>걸스라미 답글</b>${esc(r.reply)}</div>` : ''}</div>`).join('');
   }
 
@@ -138,16 +202,19 @@
   /* ---------- PRODUCT ---------- */
   function renderProduct() {
     const id = new URLSearchParams(location.search).get('id');
-    const p = GR.byId(id);
-    if (!p) { $('#pd').innerHTML='<div class="notice-box">상품을 찾을 수 없어요. <a href="shop.html">전체 상품 보기</a></div>'; return; }
+    const sourceProduct = GR.byId(id);
+    if (!sourceProduct) { $('#pd').innerHTML='<div class="notice-box">상품을 찾을 수 없어요. <a href="shop.html">전체 상품 보기</a></div>'; return; }
+    const p = { ...sourceProduct, name: nameFor(sourceProduct) };
     document.title = `걸스라미 ${p.name} | GIRLSRAMI`;
     const soon = p.stock === 0 || p.status === 'coming';
     const detailImages = Array.isArray(p.detailImages) ? p.detailImages : [];
     const ai = window.GR_AI?.presentation(p);
     const editorial = ai && GR_AI.editorialFor(p);
+    const standardEditorial = !editorial && usesStandardEditorial(p);
     let color = ai ? GR_AI.colorFor(p) : p.newRelease && p.colors.includes(p.photoColor) ? p.photoColor : p.colors[0] || null, size = p.sizePending ? null : p.sizes[0];
     const root = $('#pd');
-    root.classList.toggle('pd-editorial', Boolean(editorial));
+    root.classList.toggle('pd-editorial', Boolean(editorial || standardEditorial));
+    root.classList.toggle('pd-source-editorial', Boolean(standardEditorial));
     root.innerHTML = `
       <div class="pd-media${ai ? ' pd-media-ai' : p.newRelease ? ' pd-media-catalog' : ''}">
         ${ai ? GR_AI.gallery(p, color) : `
@@ -159,12 +226,12 @@
         <div class="crumb"><a href="index.html">홈</a> › <a href="shop.html">전체 상품</a> › <a href="shop.html?cat=${encodeURIComponent(p.category)}">${esc(p.category)}</a></div>
         <div class="badges" style="position:static;flex-direction:row;margin-bottom:12px">${p.badges.map(b => `<span class="badge ${badgeClass(b)}">${esc(p.newRelease && b === 'NEW' ? '신상' : b)}</span>`).join('')}</div>
         <h1 class="name">걸스라미 ${esc(p.name)}</h1>
-        <div class="sub">${esc(p.sub)}${p.newRelease ? '' : ` · 품번 ${esc(p.sku)}`}</div>
+        <div class="sub">${esc(p.sub)}</div>
         ${p.rating ? `<div class="rating" style="margin-top:10px"><span class="star">${stars(p.rating)}</span> <b>${p.rating}</b> <a class="muted" href="#reviews">리뷰 ${p.reviewCount}건</a></div>` : ''}
-        ${p.pricePending ? '' : `<div class="pd-price"><span class="now">${GR.fmt(p.price)}</span>${p.listPrice ? `<span class="was">${GR.fmt(p.listPrice)}</span><span class="off">${GR.discount(p)}% 즉시할인</span>` : ''}</div>`}
+        ${p.pricePending ? '' : priceFor(p, true)}
         <div class="pd-ship"><span>배송 일정·배송비·교환 조건은 스마트스토어의 현재 상품 안내를 확인해 주세요.</span><span>${ai ? 'AI 코디 연출 · 실제 상품의 색상과 형태는 상세 실물 사진을 참고해 주세요.' : p.photoVerified ? '실제 상품 사진' : '촬영 콘셉트 시안 이미지 · 실제 상품과 다를 수 있어요.'}</span></div>
         ${soon ? `<div class="stock-note">${p.newRelease ? '판매 예정' : '입고 예정'} · ${esc(p.eta || '판매 일정 확인 중')} · 현재 구매 가능 수량 0 · 판매 일정은 스마트스토어에서 확인해 주세요.</div>` : `<div class="stock-note ok">✓ 스마트스토어에서 바로 구매할 수 있습니다. 옵션 선택과 결제는 네이버페이로 진행됩니다.</div>`}
-        ${p.colors.length ? `<div class="opt"><div class="opt-label">색상 <span id="color-name">${esc(color)}</span></div><div class="color-opts" id="color-opts">${p.colors.map(c => `<button class="color-opt ${c === color ? 'active' : ''}" data-c="${esc(c)}"><span class="swatch" style="background:${swatchColor(c)}"></span>${esc(c)}</button>`).join('')}</div></div>` : `<div class="opt"><div class="opt-label">색상 <span>스마트스토어 옵션에서 선택</span></div></div>`}
+        ${p.colors.length ? `<div class="opt"><div class="opt-label">색상 <span id="color-name">${esc(color)}</span></div><div class="color-opts" id="color-opts">${p.colors.map(c => `<button class="color-opt ${c === color ? 'active' : ''}" data-c="${esc(c)}"><span class="swatch" style="background:${swatchColor(c,p)}"></span>${esc(c)}</button>`).join('')}</div></div>` : `<div class="opt"><div class="opt-label">색상 <span>스마트스토어 옵션에서 선택</span></div></div>`}
         <div class="opt"><div class="opt-label">사이즈 <a href="guide.html#size" class="muted">사이즈 가이드</a></div><div class="size-opts" id="size-opts">${(p.sizePending ? [] : p.sizes).map(s => `<button class="size-opt ${s === size ? 'active' : ''}" data-s="${esc(s)}">${esc(s)}</button>`).join('')}</div></div>
         <div class="pd-cta">
           ${soon
@@ -172,14 +239,7 @@
             : `<a class="btn btn-accent btn-lg btn-block" href="${p.smartstore}" target="_blank" rel="noopener">스마트스토어에서 구매하기 →</a><div class="row"><button class="btn btn-ghost" id="add-cart"${!p.colors.length || p.sizePending || !p.sizes.length ? ' disabled' : ''}>장바구니에 담기</button><a class="btn btn-ghost" href="${GR.TALK_URL}" target="_blank" rel="noopener">톡톡 문의</a><button class="btn btn-ghost" id="share-btn">링크 공유</button></div><p id="product-cart-status" role="status"></p>`}
         </div>
         <div class="gift"><b>혜택 확인</b>현재 쿠폰·사은품 조건은 스마트스토어의 상품 안내와 결제 화면에서 확인해 주세요.</div>
-        <div class="spec">
-          <dl><dt>핏 · 기장</dt><dd>${esc([p.fit, p.length].filter(Boolean).join(' · '))}</dd></dl>
-          <dl><dt>소재</dt><dd>${esc(p.material)}</dd></dl>
-          <dl><dt>두께 · 신축 · 비침</dt><dd>${esc([p.thickness, p.stretch, p.sheer].filter(Boolean).join(' · '))}</dd></dl>
-          <dl><dt>세탁</dt><dd>${esc(p.care)}</dd></dl>
-          <dl><dt>제조국</dt><dd>${esc(p.origin || '')}</dd></dl>
-          <dl><dt>제조자</dt><dd>${esc(p.manufacturer || '')}</dd></dl>
-        </div>
+        ${editorial || standardEditorial ? '' : factsFor(p)}
       </div>`;
     let editorialControl;
     function selectColor(next) { color=next; $$('#color-opts .color-opt').forEach(x=>{x.classList.toggle('active',x.dataset.c===color);x.setAttribute('aria-pressed',String(x.dataset.c===color));}); $('#color-name').textContent=color; if(ai && GR_AI.mediaFor(p,color)) $('.pd-media').innerHTML=GR_AI.gallery(p,color); editorialControl?.setColor(color); }
@@ -191,8 +251,9 @@
     else if(ai) { root.insertAdjacentHTML('afterend', GR_AI.room(p)); GR_AI.bindRoom(p); }
 
     /* lower tabs */
-    $('#pd-desc').classList.toggle('pd-detail-gallery', !editorial && detailImages.length > 0);
-    $('#pd-desc').innerHTML = editorial ? GR_AI.proof(p) : detailImages.length
+    $('#pd-desc').classList.toggle('pd-detail-gallery', !editorial && !standardEditorial && detailImages.length > 0);
+    $('#pd-desc').classList.toggle('pd-editorial-detail', Boolean(editorial || standardEditorial));
+    $('#pd-desc').innerHTML = editorial ? GR_AI.proof(p) + factsDisclosureFor(p) : standardEditorial ? sourceEditorialFor(p) : detailImages.length
       ? detailImages.map((image, i) => `<img src="${esc(typeof image === 'string' ? image : image.url)}" alt="${esc(image.alt || `${p.name} 상세 안내 ${i + 1}`)}"${Number.isFinite(image.width) && Number.isFinite(image.height) && image.width > 0 && image.height > 0 ? ` width="${image.width}" height="${image.height}"` : ''} loading="lazy" decoding="async">`).join('')
       : `
       <h4>이 옷을 만든 이유</h4><p>${esc(p.desc)}</p>
@@ -200,11 +261,7 @@
       <div class="table-scroll"><table class="size-table"><thead><tr><th>사이즈</th><th>가슴 단면</th><th>총장</th><th>확인 상태</th></tr></thead><tbody>${(p.catalogSizes||[]).map(s => `<tr><td>${esc(s.label)}</td><td>${s.verified?s.chestHalf:'확인 중'}</td><td>${s.verified?s.length:'확인 중'}</td><td>${s.verified?'실측 확인':'미확인 · 추천 제외'}</td></tr>`).join('')}</tbody></table></div>
       <p class="small muted" style="margin-top:8px">확인된 실측만 표시합니다. 측정 방법에 따라 1~3cm 차이가 있을 수 있어요. 색상은 화면과 조명에 따라 달라질 수 있어요.</p>
       <h4>착용 참고</h4><p>사진과 아바타는 코디 참고용이에요. 확인된 실제 상품 사진과 실측이 등록되면 상세페이지에 표시합니다.</p>`;
-    if(editorial) {
-      const facts=document.createElement('details');facts.className='editorial-facts';
-      const summary=document.createElement('summary');summary.textContent='소재 · 상품 정보';facts.append(summary,$('.pd-info .spec'));
-      $('#pd-desc .ai-care').before(facts);$('.pd-info .gift').remove();
-    }
+    if(editorial || standardEditorial) $('.pd-info .gift')?.remove();
     if(ai && !editorial && !detailImages.length) $('#pd-desc').insertAdjacentHTML('beforeend', GR_AI.care(p));
     $('#pd-reviews').innerHTML = p.reviews.length
       ? `<div class="reviews">${p.reviews.map(r => `<div class="review"><div class="star">${'★'.repeat(r.stars)}${'☆'.repeat(5 - r.stars)}</div><p>"${esc(r.text)}"</p><div class="who">${esc(r.who)}${r.body ? ' · ' + esc(r.body) : ''} · 스마트스토어 구매 리뷰</div>${r.reply ? `<div class="reply"><b>걸스라미 답글</b>${esc(r.reply)}</div>` : ''}</div>`).join('')}</div><p class="small muted" style="margin-top:16px">전체 리뷰 ${p.reviewCount}건은 <a href="${p.smartstore || GR.STORE_URL}" target="_blank" rel="noopener" style="text-decoration:underline">스마트스토어 상품 페이지</a>에서 볼 수 있습니다. 저평점 리뷰에는 원인과 조치를 답글로 남깁니다.</p>`

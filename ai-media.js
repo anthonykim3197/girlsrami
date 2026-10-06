@@ -12,7 +12,7 @@
     const turn = editorialFor(p) ? editorialFor(p).turntables?.[color] : presentation(p)?.turntable;
     return turn && Array.isArray(turn.frames) && turn.frames.length === 8 && turn.frames.every(x => typeof x === 'string' && x.trim()) && Array.isArray(turn.angles) && turn.angles.every((x, i) => x === i * 45) && turn.angles.length === 8 ? {...turn,color:turn.color || color} : null;
   };
-  const swatches = (p, color) => `<div class="ai-swatches" aria-label="선택 가능한 색상">${p.colors.map(c => `<span title="${esc(c)}" aria-label="${esc(c)}${c === color ? ' 선택됨' : ''}" class="ai-swatch${c === color ? ' selected' : ''}" style="background:${esc(GR.COLORS[c] || GR.COLORS[{'스카이':'스카이블루','회색':'그레이'}[c]] || '#ccc')}"></span>`).join('')}</div>`;
+  const swatches = (p, color) => `<div class="ai-swatches" aria-label="선택 가능한 색상">${p.colors.map(c => `<span title="${esc(c)}" aria-label="${esc(c)}${c === color ? ' 선택됨' : ''}" class="ai-swatch${c === color ? ' selected' : ''}" style="background:${esc(p.colorHex?.[c] || GR.COLORS[c] || GR.COLORS[{'스카이':'스카이블루','회색':'그레이'}[c]] || '#ccc')}"></span>`).join('')}</div>`;
   const marker = '<span class="ai-marker">AI 코디</span>';
   function modelCaption(p) {
     const m = presentation(p)?.model;
@@ -80,7 +80,7 @@
     return {setColor(color) { const next = turntableFor(p,color); if (!next) return; stop(); turn = {...next,color}; show(index); root.querySelector('.ai-room-heading>span').textContent = `선택 색상 · ${color}`; root.querySelector('.ai-room-color').textContent = `${color} · 기본 코디의 앞·옆·뒤를 둘러보세요.`; },stop};
   }
   function colorControls(p, color) {
-    return `<div class="editorial-colors" aria-label="코디 색상">${p.colors.map(c=>`<button type="button" data-editorial-color="${esc(c)}" aria-pressed="${c===color}"><span style="background:${esc(GR.COLORS[c] || GR.COLORS[{'스카이':'스카이블루','회색':'그레이'}[c]] || '#ccc')}"></span>${esc(c)}</button>`).join('')}</div>`;
+    return `<div class="editorial-colors" aria-label="코디 색상">${p.colors.map(c=>`<button type="button" data-editorial-color="${esc(c)}" aria-pressed="${c===color}"><span style="background:${esc(p.colorHex?.[c] || GR.COLORS[c] || GR.COLORS[{'스카이':'스카이블루','회색':'그레이'}[c]] || '#ccc')}"></span>${esc(c)}</button>`).join('')}</div>`;
   }
   function editorial(p,color) {
     const e=editorialFor(p); if(!e?.looks?.length) return '';

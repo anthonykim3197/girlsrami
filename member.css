@@ -452,3 +452,105 @@
   .studio-grid,
   .studio-inputs { grid-template-columns: 1fr; }
 }
+
+/* Product identity and inventory stay together in the owner editor. */
+.admin-list-heading {
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.admin-list-heading h2,
+.admin-list-heading p {
+  margin-bottom: 4px;
+}
+.admin-search {
+  margin-bottom: 12px;
+}
+.admin-product-list .item-row strong {
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: .03em;
+}
+.admin-editor-panel > .help {
+  margin-top: -12px;
+  margin-bottom: 24px;
+}
+.admin-name-help {
+  display: block;
+  margin: -12px 0 24px;
+}
+.inventory-editor {
+  margin: 8px 0 32px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg);
+}
+.inventory-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.inventory-heading h3 {
+  margin: 4px 0 0;
+  font-size: 20px;
+}
+#inventory-total {
+  flex: 0 0 auto;
+  padding: 9px 12px;
+  border-radius: var(--radius-s);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-size: 14px;
+  font-weight: 700;
+}
+.inventory-editor .notice {
+  margin: 0 0 16px;
+  background: var(--surface);
+}
+.inventory-row {
+  display: grid;
+  grid-template-columns: minmax(96px,.55fr) minmax(220px,1.6fr) minmax(120px,.55fr);
+  gap: 16px;
+  align-items: end;
+  padding: 16px 0;
+  border-top: 1px solid var(--line);
+}
+.inventory-color {
+  align-self: center;
+  overflow-wrap: anywhere;
+}
+.inventory-row .field {
+  margin: 0;
+}
+.inventory-stock input {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (min-width: 1025px) {
+  .admin-catalog-panel {
+    position: sticky;
+    top: 24px;
+    align-self: start;
+  }
+}
+@media (max-width: 720px) {
+  .inventory-editor {
+    margin-inline: -4px;
+    padding: 20px 16px;
+  }
+  .inventory-heading,
+  .inventory-row {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  #inventory-total {
+    justify-self: start;
+  }
+  .inventory-color {
+    padding-top: 4px;
+  }
+}

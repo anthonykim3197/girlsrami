@@ -191,7 +191,7 @@ export function createProductInventoryAdmin(deps) {
             return {label,chestHalf:chestHalf ? Number(chestHalf) : null,length:length ? Number(length) : null,verified:verified === '확인'};
           });
           const inventoryProduct = validateInventoryProduct({
-            ...product,...values,id:nextId,name:values.name,styleCode:values.styleCode,colors:colors(),variants:currentVariantRows(),price:Number(values.price),sizes,photoVerified:values.photoVerified === 'on'
+            ...product,id:nextId,name:values.name,desc:values.desc,line:values.line,category:values.category,status:values.status,storeUrl:values.storeUrl,styleCode:values.styleCode,colors:colors(),variants:currentVariantRows(),price:Number(values.price),sizes,photoVerified:values.photoVerified === 'on'
           },mergedProducts());
 
           const colorPhotos = Object.fromEntries((await Promise.all([...colorPhotoContainer.querySelectorAll('[data-photo-color]')].map(async row => {

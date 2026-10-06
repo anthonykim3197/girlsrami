@@ -177,7 +177,8 @@
           <dl><dt>소재</dt><dd>${esc(p.material)}</dd></dl>
           <dl><dt>두께 · 신축 · 비침</dt><dd>${esc([p.thickness, p.stretch, p.sheer].filter(Boolean).join(' · '))}</dd></dl>
           <dl><dt>세탁</dt><dd>${esc(p.care)}</dd></dl>
-          <dl><dt>제조</dt><dd>제조국과 제조자 정보는 스마트스토어 상품 고시에서 확인해 주세요.</dd></dl>
+          <dl><dt>제조국</dt><dd>${esc(p.origin || '')}</dd></dl>
+          <dl><dt>제조자</dt><dd>${esc(p.manufacturer || '')}</dd></dl>
         </div>
       </div>`;
     let editorialControl;

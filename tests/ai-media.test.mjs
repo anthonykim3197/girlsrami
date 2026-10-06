@@ -75,3 +75,11 @@ test('Global color update preserves room angle and pauses autoplay before loadin
  const controller=h.api.bindRoom(p);h.angles[3].fire('click');h.images[1].onload();h.play.fire('click');
  controller.setColor('블랙');assert.equal(h.play.attrs['aria-pressed'],'false');assert.equal(h.images[0].src,'블랙-3.png');h.images[0].onload();assert.equal(h.status.textContent,'');assert.equal(h.angle.textContent,'135° / 360°');assert.equal(h.angles[3].attrs['aria-pressed'],'true');
 });
+
+test('Verified source-color photographs are not mislabelled as AI or duplicated as a full-body look',()=>{
+ const {api}=setup(),p=structuredClone(product);
+ p.aiPresentation.colors['블랙']={image:'actual-black.jpg',kind:'photo'};
+ const html=api.gallery(p,'블랙');
+ assert.match(html,/actual-black.jpg/);assert.match(html,/실물 사진/);
+ assert.doesNotMatch(html,/AI 코디|가상 모델|ai-full-body/);
+});

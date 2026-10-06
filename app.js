@@ -58,13 +58,15 @@
   }
   function sourceEditorialFor(p) {
     const images = Array.isArray(p.detailImages) ? p.detailImages : [];
+    const measurements = Object.entries(p.measure || {}).filter(([,value]) => value !== null && value !== undefined && value !== '');
+    const measureTable = measurements.length ? `<details class="editorial-facts" open><summary>실측 사이즈 · cm</summary><dl>${measurements.map(([label,value]) => `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl><p>단면 기준이며 측정 방법에 따라 1~3cm 차이가 있을 수 있습니다.</p></details>` : '';
     const gallery = images.length ? `<div class="source-editorial-gallery">${images.map((image, i) => {
       const source = typeof image === 'string' ? image : image.url;
       const alt = typeof image === 'string' ? `${nameFor(p)} 상세 이미지 ${i + 1}` : image.alt || `${nameFor(p)} 상세 이미지 ${i + 1}`;
       const dimensions = typeof image === 'object' && Number.isFinite(image.width) && Number.isFinite(image.height) && image.width > 0 && image.height > 0 ? ` width="${image.width}" height="${image.height}"` : '';
       return `<figure><img src="${esc(source)}" alt="${esc(alt)}"${dimensions} loading="lazy" decoding="async">${typeof image === 'object' && image.alt ? `<figcaption>${esc(image.alt)}</figcaption>` : ''}</figure>`;
     }).join('')}</div>` : '';
-    return `<section class="source-editorial" aria-labelledby="source-editorial-title"><header class="editorial-heading"><span class="editorial-index">01 / THE PRODUCT EDIT</span><h2 id="source-editorial-title">${esc(p.sub || nameFor(p))}</h2>${p.desc ? `<p>${esc(p.desc)}</p>` : ''}</header>${gallery}${factsDisclosureFor(p)}</section>`;
+    return `<section class="source-editorial" aria-labelledby="source-editorial-title"><header class="editorial-heading"><span class="editorial-index">01 / THE PRODUCT EDIT</span><h2 id="source-editorial-title">${esc(p.sub || nameFor(p))}</h2>${p.desc ? `<p>${esc(p.desc)}</p>` : ''}</header>${gallery}${measureTable}${factsDisclosureFor(p)}</section>`;
   }
   window.GR.catalogPresentation = Object.freeze({ nameFor, styleCodeFor, channelPriceFor, usesStandardEditorial, sourceEditorialFor, factsFor });
 

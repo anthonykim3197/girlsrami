@@ -46,7 +46,8 @@
       ['두께 · 신축 · 비침', [p.thickness, p.stretch, p.sheer].filter(Boolean).join(' · ')],
       ['세탁', p.care],
       ['제조국', p.origin],
-      ['제조자', p.manufacturer]
+      ['제조자', p.manufacturer],
+      ['제조연월', p.manufactureDate]
     ].filter(([, value]) => String(value || '').trim());
     return `<div class="spec">${rows.map(([label, value]) => `<dl${label === '품번' ? ' class="spec-code"' : ''}><dt>${label}</dt><dd>${esc(value)}</dd></dl>`).join('')}</div>`;
   }

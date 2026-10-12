@@ -15,6 +15,155 @@
     const code = explicit || (/^RM\d+$/i.test(legacy) ? legacy : '');
     return /^RM\d+$/i.test(code) ? code.toUpperCase() : code;
   }
+  const QUALITY_EDITORIALS = Object.freeze({
+    RM382: {
+      code: 'RM382', name: '허니루프 라운드 니트',
+      intro: '짜임 하나로 달라지는, 오늘.',
+      description: '벌집 모양의 짜임과 라운드넥. 여유로운 몸판과 손등을 덮는 긴 소매의 니트예요.',
+      hero: { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/exports/hero-cream-67661bfc.webp', width: 1000, height: 1000, alt: '크림 허니루프 라운드 니트 AI 코디', caption: 'AI 코디 · 크림' },
+      colorLead: '크림부터 스카이까지, 취향에 맞춰 고르는 네 가지 색.',
+      colorBoard: { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/board-8fd34a81.webp', width: 1536, height: 1024, alt: '허니루프 라운드 니트 네 가지 컬러 AI 연출', caption: 'AI 컬러 연출 · 화면과 조명에 따라 실제 색상과 차이가 있을 수 있습니다.' },
+      colors: [['크림','#e9e0cf'],['카멜','#aa8059'],['차콜','#494a4b'],['스카이','#acc6df']],
+      styling: [
+        {
+          title: '주말의 두 장면', lead: '스니커즈로 가볍게, 플랫으로 차분하게.',
+          notice: 'AI 코디 연출컷입니다. 니트 단품 상품이며 하의·신발·가방은 구성에 포함되지 않습니다.',
+          looks: [
+            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/city-denim/sky-51437f2b.webp', width: 1024, height: 1536, alt: '스카이 허니루프 라운드 니트 시티 데님 AI 코디', meta: 'AI 코디 · 스카이', title: '시티 데님', items: '라이트 워시 데님 · 아이보리 레트로 스니커즈 · 초콜릿 숄더백' },
+            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/soft-skirt/camel-2365159f.webp', width: 1024, height: 1536, alt: '카멜 허니루프 라운드 니트 갤러리 데이트 AI 코디', meta: 'AI 코디 · 카멜', title: '갤러리 데이트', items: '아이보리 새틴 롱스커트 · 블랙 발레리나 플랫 · 미니 토트백' }
+          ]
+        },
+        {
+          title: '약속에 맞춘 두 가지 코디', lead: '로퍼와 미니, 슬링백과 와이드 팬츠.',
+          notice: 'AI로 연출한 스타일링 제안입니다. 실제 원단의 짜임은 아래 실물 접사를 확인해 주세요.',
+          looks: [
+            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/city-mini/charcoal-2997e712.webp', width: 1024, height: 1536, alt: '차콜 허니루프 라운드 니트 시티 위켄드 AI 코디', meta: 'AI 코디 · 차콜', title: '시티 위켄드', items: '차콜 A라인 미니스커트 · 블랙 로퍼 · 블랙 숄더백' },
+            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/tailored/cream-917467b6.webp', width: 1024, height: 1536, alt: '크림 허니루프 라운드 니트 라이트 테일러링 AI 코디', meta: 'AI 코디 · 크림', title: '라이트 테일러링', items: '크림 와이드 슬랙스 · 블랙 포인티드 슬링백 · 구조적인 미니 토트' }
+          ]
+        }
+      ],
+      realDetail: { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/exports/honey-loop-crop-knit/real-macro-1-a59df53e.webp', width: 1000, height: 1000, alt: '스카이 허니루프 라운드 니트 실물 짜임 접사', caption: '실물 사진 · 스카이' },
+      detailLead: '반복되는 벌집 모양의 짜임. 소맷단과 밑단은 립 조직으로 마무리했어요.',
+      material: '리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%',
+      facts: [['품번','RM382'],['제조국','국산(대한민국)'],['제조자','걸스라미'],['제조연월','2026년 10월']],
+      measurements: [['목깊이','4'],['목넓이','22'],['소매통','18'],['총기장','50'],['가슴넓이','58'],['소매기장','51'],['어깨넓이','51']],
+      care: '세탁 전 케어라벨을 확인해 주세요. 고온 세탁·기계 건조는 피하고 세탁 방법은 전문 세탁업체와 상담해 주세요.'
+    },
+    RM495: {
+      code: 'RM495', name: '오프듀티 V넥 니트 베스트',
+      intro: '셔츠 위에 툭, 오늘의 한 겹.',
+      description: '티셔츠에도, 셔츠에도 자연스럽게. V넥과 입체적인 짜임으로 분위기를 더해요.',
+      hero: { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/exports/off-duty-vneck-knit-vest/hero-gray-979a3c86.webp', width: 1000, height: 1000, alt: '회색 오프듀티 V넥 니트 베스트 AI 코디', caption: 'AI 코디 · 회색' },
+      colorLead: '가벼운 스카이부터 차분한 회색까지, 다섯 가지 색.',
+      colorBoard: { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/boards/off-duty-vneck-knit-vest-e6d5971d.webp', width: 1536, height: 1024, alt: '오프듀티 V넥 니트 베스트 다섯 가지 컬러 AI 연출', caption: 'AI 컬러 연출 · 화면과 조명에 따라 실제 색상과 차이가 있을 수 있습니다.' },
+      colors: [['스카이','#acc6df'],['차콜','#494a4b'],['크림','#e9e0cf'],['카멜','#aa8059'],['회색','#9b9b98']],
+      styling: [
+        {
+          title: '주말의 두 장면', lead: '티셔츠로 가볍게, 셔츠로 차분하게.',
+          notice: 'AI 코디 연출컷입니다. 베스트 단품 상품이며 이너·하의·신발·가방은 구성에 포함되지 않습니다.',
+          looks: [
+            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/off-duty-vneck-knit-vest/city-denim/sky-54519f0f.webp', width: 1024, height: 1536, alt: '스카이 오프듀티 V넥 니트 베스트 시티 데님 AI 코디', meta: 'AI 코디 · 스카이', title: '시티 데님', items: '화이트 티셔츠 · 라이트 워시 데님 · 아이보리 레트로 스니커즈 · 초콜릿 숄더백' },
+            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/off-duty-vneck-knit-vest/soft-skirt/camel-9c46c383.webp', width: 1024, height: 1536, alt: '카멜 오프듀티 V넥 니트 베스트 갤러리 데이트 AI 코디', meta: 'AI 코디 · 카멜', title: '갤러리 데이트', items: '화이트 셔츠 · 아이보리 새틴 롱스커트 · 블랙 발레리나 플랫 · 미니 토트백' }
+          ]
+        },
+        {
+          title: '약속에 맞춘 두 가지 코디', lead: '미니스커트와 로퍼, 슬랙스와 슬링백.',
+          notice: 'AI로 연출한 스타일링 제안입니다. 실제 원단의 짜임은 아래 실물 접사를 확인해 주세요.',
+          looks: [
+            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/off-duty-vneck-knit-vest/city-mini/charcoal-6a7578e3.webp', width: 1024, height: 1536, alt: '차콜 오프듀티 V넥 니트 베스트 시티 위켄드 AI 코디', meta: 'AI 코디 · 차콜', title: '시티 위켄드', items: '블루 스트라이프 셔츠 · 차콜 A라인 미니스커트 · 블랙 로퍼 · 블랙 숄더백' },
+            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/off-duty-vneck-knit-vest/tailored/cream-94955b6b.webp', width: 1024, height: 1536, alt: '크림 오프듀티 V넥 니트 베스트 라이트 테일러링 AI 코디', meta: 'AI 코디 · 크림', title: '라이트 테일러링', items: '화이트 셔츠 · 크림 와이드 슬랙스 · 블랙 포인티드 슬링백 · 구조적인 미니 토트' }
+          ]
+        }
+      ],
+      realDetail: { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/exports/off-duty-vneck-knit-vest/real-macro-1-9f18d696.webp', width: 1000, height: 1000, alt: '회색 오프듀티 V넥 니트 베스트 실물 짜임 접사', caption: '실물 사진 · 회색' },
+      detailLead: '결이 느껴지는 입체적인 짜임. V넥과 밑단의 립 조직으로 마무리했어요.',
+      material: '아크릴 72% · 나일론 13% · 울 9% · 알파카 3% · 스판 3%',
+      facts: [['품번','RM495'],['제조국','국산(대한민국)'],['제조자','걸스라미'],['제조연월','2026년 10월']],
+      measurements: [['총기장','46'],['가슴넓이','55'],['어깨넓이','41'],['목넓이','25'],['앞목깊이','14']],
+      care: '세탁 전 케어라벨을 확인해 주세요. 고온 세탁·기계 건조는 피하고 전문 세탁업체와 상담해 주세요.'
+    },
+    RM429: {
+      code: 'RM429', name: '뮤트레이어 V넥 니트 베스트', eyebrow: 'GIRLSRAMI LAYER EDIT', accent: '#70445f', heavy: true,
+      intro: '조용한 색감으로 완성하는 한 겹.',
+      description: '잔잔한 보카시 결에 깊은 V넥, 넓은 밑단 립이 더해진 니트 베스트예요.',
+      hero: { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/hero-grape-a88c8a4731d9.webp', width: 1122, height: 1402, alt: '그레이프 뮤트레이어 V넥 니트 베스트 AI 코디', caption: 'AI 코디 · 그레이프' },
+      colorTitle: '여섯 가지 색 모아보기', colorLead: '그레이프부터 곤색까지, 차분한 보카시 톤으로 고르는 여섯 가지 색.',
+      colorBoard: { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/colorboard-2c7ba91de2a5.webp', width: 1122, height: 1402, alt: '뮤트레이어 V넥 니트 베스트 여섯 가지 컬러 AI 연출', caption: 'AI 컬러 연출 · 화면과 조명에 따라 실제 색상과 차이가 있을 수 있습니다.' },
+      colors: [['그레이프','#70445f'],['모카','#aa9787'],['그레이','#999996'],['브라운','#715448'],['올리브','#59604c'],['곤색','#263545']],
+      styling: [
+        {
+          title: '주말의 두 가지 레이어', lead: '그레이프는 데님과, 올리브는 롱스커트와.',
+          notice: 'AI 코디 연출컷입니다. 베스트 단품 상품이며 이너·하의·신발·가방은 구성에 포함되지 않습니다.',
+          looks: [
+            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/city-denim/grape-8ae0062b6964.webp', width: 1024, height: 1536, alt: '그레이프 뮤트레이어 V넥 니트 베스트 시티 데님 AI 코디', meta: 'AI 코디 · 그레이프', title: '시티 데님', items: '화이트 티셔츠 · 라이트 데님 · 브라운 숄더백 · 화이트 레트로 스니커즈' },
+            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/soft-skirt/olive-d8c8aa7b76df.webp', width: 1024, height: 1536, alt: '올리브 뮤트레이어 V넥 니트 베스트 갤러리 데이트 AI 코디', meta: 'AI 코디 · 올리브', title: '갤러리 데이트', items: '화이트 옥스퍼드 셔츠 · 크림 롱스커트 · 발레 플랫 · 다크 브라운 미니백' }
+          ]
+        },
+        {
+          title: '도시의 두 장면', lead: '곤색의 단정함, 모카의 부드러움.',
+          notice: 'AI로 연출한 스타일링 제안입니다. 상품의 실제 앞·뒤 모습과 조직은 아래 실물 사진을 확인해 주세요.',
+          looks: [
+            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/city-mini/navy-c57b5b37e0ae.webp', width: 1024, height: 1536, alt: '곤색 뮤트레이어 V넥 니트 베스트 시티 위켄드 AI 코디', meta: 'AI 코디 · 곤색', title: '시티 위켄드', items: '블루 스트라이프 셔츠 · 차콜 A라인 미니스커트 · 차콜 타이츠 · 블랙 로퍼 · 블랙 숄더백' },
+            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/tailored/mocha-49dbc96f1b93.webp', width: 1024, height: 1536, alt: '모카 뮤트레이어 V넥 니트 베스트 라이트 테일러링 AI 코디', meta: 'AI 코디 · 모카', title: '라이트 테일러링', items: '화이트 셔츠 · 크림 와이드 팬츠 · 슬링백 슈즈 · 미니 토트백' }
+          ]
+        }
+      ],
+      detailTitle: '실제 형태와 상품 정보', detailLead: '앞·뒤 실루엣과 V넥, 암홀 마감을 실물 사진으로 확인해 보세요.',
+      realDetails: [
+        { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/actual/detail-011-de97939ebac0.jpg', width: 860, height: 860, alt: '그레이 뮤트레이어 V넥 니트 베스트 실물 앞면', caption: '실물 사진 · 그레이 앞면' },
+        { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/actual/detail-015-621ebf9fe44a.jpg', width: 860, height: 860, alt: '그레이 뮤트레이어 V넥 니트 베스트 실물 뒷면', caption: '실물 사진 · 그레이 뒷면' },
+        { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/actual/detail-016-71cd795a0c63.jpg', width: 860, height: 860, alt: '그레이 뮤트레이어 V넥 니트 베스트 V넥 립 조직 실물 디테일', caption: '실물 사진 · V넥 립 조직' },
+        { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/actual/detail-017-16baec78ed8b.jpg', width: 860, height: 860, alt: '그레이 뮤트레이어 V넥 니트 베스트 암홀 마감 실물 디테일', caption: '실물 사진 · 암홀 마감' }
+      ],
+      material: '리싸이클 폴리 34% · 아크릴 29% · 폴리 27% · 울 8% · 스판 2%',
+      facts: [['품번','RM429'],['사이즈','ONE SIZE'],['제조자','걸스라미'],['제조국','대한민국'],['두께감','도톰'],['신축성','보통'],['비침','거의 없음']],
+      measurements: [['총기장','54'],['가슴 단면','52'],['어깨','42'],['암홀','23'],['목넓이','20'],['앞목깊이','17']],
+      measurementNote: ['ONE SIZE · 단면 기준 · 단위 cm','측정 방법에 따라 1~3cm 차이가 있을 수 있습니다.'],
+      care: '드라이클리닝을 권장합니다. 표백제와 기계 건조는 피하고, 다림질 전 케어라벨을 확인해 주세요.'
+    }
+  });
+  function qualityEditorialFor(p) {
+    const legacyCode = { 'vneck-knit-vest': 'RM429' }[String(p?.id || '').trim()];
+    return QUALITY_EDITORIALS[styleCodeFor(p)] || QUALITY_EDITORIALS[legacyCode] || null;
+  }
+  function qualityImage(image, eager = false) {
+    const loading = eager ? 'eager' : 'lazy';
+    return `<img src="${esc(image.src)}" width="${image.width}" height="${image.height}" loading="${loading}"${eager ? ' fetchpriority="high"' : ''} decoding="async" alt="${esc(image.alt)}">`;
+  }
+  function qualityEditorialHtml(p) {
+    const detail = qualityEditorialFor(p);
+    if (!detail) return '';
+    const titleId = `quality-title-${detail.code.toLowerCase()}`;
+    const looks = section => section.looks.map(look => `<figure class="quality-look">${qualityImage(look)}<figcaption><p class="quality-look-meta">${esc(look.meta)}</p><h3>${esc(look.title)}</h3><p class="quality-look-items">${esc(look.items)}</p></figcaption></figure>`).join('');
+    const actualDetails = detail.realDetails?.length
+      ? `<p class="quality-lead">${esc(detail.detailLead)}</p><div class="quality-detail-grid">${detail.realDetails.map(image => `<figure class="quality-detail">${qualityImage(image)}<figcaption>${esc(image.caption)}</figcaption></figure>`).join('')}</div>`
+      : `<figure class="quality-detail-image">${qualityImage(detail.realDetail)}<figcaption class="quality-caption">${esc(detail.realDetail.caption)}</figcaption></figure><p class="quality-lead">${esc(detail.detailLead)}</p>`;
+    const measurementNote = detail.measurementNote || ['점주 제공 수치이며 측정 단위는 확인 중입니다.'];
+    return `<article class="quality-editorial${detail.heavy ? ' quality-editorial-heavy' : ''}" aria-labelledby="${titleId}"${detail.accent ? ` style="--quality-accent:${esc(detail.accent)}"` : ''}>
+      <header class="quality-section quality-intro">
+        <p class="quality-eyebrow">${esc(detail.eyebrow || 'GIRLSRAMI KNIT EDIT')}</p>
+        <h2 class="quality-title" id="${titleId}">${esc(detail.name)}</h2>
+        <p class="quality-lead"><strong>${esc(detail.intro)}</strong><br>${esc(detail.description)}</p>
+        <figure class="quality-media">${qualityImage(detail.hero, true)}<figcaption class="quality-media-label">${esc(detail.hero.caption)}</figcaption></figure>
+      </header>
+      <section class="quality-section" aria-labelledby="${titleId}-colors">
+        <h2 id="${titleId}-colors">${esc(detail.colorTitle || '컬러 모아보기')}</h2><p class="quality-lead">${esc(detail.colorLead)}</p>
+        <figure class="quality-board">${qualityImage(detail.colorBoard)}<figcaption class="quality-caption">${esc(detail.colorBoard.caption)}</figcaption></figure>
+        <div class="quality-swatches" aria-label="상품 색상">${detail.colors.map(([name,hex]) => `<span class="quality-swatch"><i style="--quality-swatch:${esc(hex)}"></i>${esc(name)}</span>`).join('')}</div>
+      </section>
+      ${detail.styling.map((section, index) => `<section class="quality-section" aria-labelledby="${titleId}-styling-${index + 1}"><h2 id="${titleId}-styling-${index + 1}">${esc(section.title)}</h2><p class="quality-lead">${esc(section.lead)}</p><div class="quality-look-grid">${looks(section)}</div><p class="quality-notice">${esc(section.notice)}</p></section>`).join('')}
+      <section class="quality-section" aria-labelledby="${titleId}-details">
+        <h2 id="${titleId}-details">${esc(detail.detailTitle || '실제 짜임과 상품 정보')}</h2>
+        ${actualDetails}
+        <div class="quality-material"><strong>소재 · 혼용률 합계 100%</strong>${esc(detail.material)}</div>
+        <dl class="quality-facts">${detail.facts.map(([label,value]) => `<div class="quality-fact"><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl>
+        <div class="quality-subsection"><h3>상품 실측</h3><p>${measurementNote.map(esc).join('<br>')}</p><div class="quality-measure-grid">${detail.measurements.map(([label,value]) => `<div class="quality-measure"><span>${esc(label)}</span><strong>${esc(value)}</strong></div>`).join('')}</div></div>
+        <div class="quality-subsection"><h3>관리 안내</h3><p>${esc(detail.care)}</p></div>
+        <p class="quality-policy-note">배송·교환·반품은 상품 페이지의 안내를 확인해 주세요.</p>
+      </section>
+      <footer class="quality-section quality-closing">함께 연출한 코디 상품은 판매 구성에 포함되지 않습니다.</footer>
+    </article>`;
+  }
   function moneyValue(value) {
     const amount = Number(value);
     return Number.isFinite(amount) && amount > 0 ? amount : null;
@@ -69,7 +218,7 @@
     }).join('')}</div>` : '';
     return `<section class="source-editorial" aria-labelledby="source-editorial-title"><header class="editorial-heading"><span class="editorial-index">01 / THE PRODUCT EDIT</span><h2 id="source-editorial-title">${esc(p.sub || nameFor(p))}</h2>${p.desc ? `<p>${esc(p.desc)}</p>` : ''}</header>${gallery}${measureTable}${factsDisclosureFor(p)}</section>`;
   }
-  window.GR.catalogPresentation = Object.freeze({ nameFor, styleCodeFor, channelPriceFor, usesStandardEditorial, sourceEditorialFor, factsFor });
+  window.GR.catalogPresentation = Object.freeze({ nameFor, styleCodeFor, channelPriceFor, usesStandardEditorial, sourceEditorialFor, qualityEditorialFor, qualityEditorialHtml, factsFor });
 
   /* ---------- Header / Footer ---------- */
   function renderChrome() {
@@ -213,10 +362,12 @@
     const detailImages = Array.isArray(p.detailImages) ? p.detailImages : [];
     const ai = window.GR_AI?.presentation(p);
     const editorial = ai && GR_AI.editorialFor(p);
+    const qualityEditorial = qualityEditorialFor(p);
     const standardEditorial = !editorial && usesStandardEditorial(p);
+    const editorialLayout = Boolean(editorial || standardEditorial || qualityEditorial);
     let color = ai ? GR_AI.colorFor(p) : p.newRelease && p.colors.includes(p.photoColor) ? p.photoColor : p.colors[0] || null, size = p.sizePending ? null : p.sizes[0];
     const root = $('#pd');
-    root.classList.toggle('pd-editorial', Boolean(editorial || standardEditorial));
+    root.classList.toggle('pd-editorial', editorialLayout);
     root.classList.toggle('pd-source-editorial', Boolean(standardEditorial));
     root.innerHTML = `
       <div class="pd-media${ai ? ' pd-media-ai' : p.newRelease ? ' pd-media-catalog' : ''}">
@@ -242,7 +393,7 @@
             : `<a class="btn btn-accent btn-lg btn-block" href="${p.smartstore}" target="_blank" rel="noopener">스마트스토어에서 구매하기 →</a><div class="row"><button class="btn btn-ghost" id="add-cart"${!p.colors.length || p.sizePending || !p.sizes.length ? ' disabled' : ''}>장바구니에 담기</button><a class="btn btn-ghost" href="${GR.TALK_URL}" target="_blank" rel="noopener">톡톡 문의</a><button class="btn btn-ghost" id="share-btn">링크 공유</button></div><p id="product-cart-status" role="status"></p>`}
         </div>
         <div class="gift"><b>혜택 확인</b>현재 쿠폰·사은품 조건은 스마트스토어의 상품 안내와 결제 화면에서 확인해 주세요.</div>
-        ${editorial || standardEditorial ? '' : factsFor(p)}
+        ${editorialLayout ? '' : factsFor(p)}
       </div>`;
     let editorialControl;
     function selectColor(next) { color=next; $$('#color-opts .color-opt').forEach(x=>{x.classList.toggle('active',x.dataset.c===color);x.setAttribute('aria-pressed',String(x.dataset.c===color));}); $('#color-name').textContent=color; if(ai && GR_AI.mediaFor(p,color)) $('.pd-media').innerHTML=GR_AI.gallery(p,color); editorialControl?.setColor(color); }
@@ -254,9 +405,9 @@
     else if(ai) { root.insertAdjacentHTML('afterend', GR_AI.room(p)); GR_AI.bindRoom(p); }
 
     /* lower tabs */
-    $('#pd-desc').classList.toggle('pd-detail-gallery', !editorial && !standardEditorial && detailImages.length > 0);
-    $('#pd-desc').classList.toggle('pd-editorial-detail', Boolean(editorial || standardEditorial));
-    $('#pd-desc').innerHTML = editorial ? GR_AI.proof(p) + factsDisclosureFor(p) : standardEditorial ? sourceEditorialFor(p) : detailImages.length
+    $('#pd-desc').classList.toggle('pd-detail-gallery', !editorialLayout && detailImages.length > 0);
+    $('#pd-desc').classList.toggle('pd-editorial-detail', editorialLayout);
+    $('#pd-desc').innerHTML = qualityEditorial ? qualityEditorialHtml(p) : editorial ? GR_AI.proof(p) + factsDisclosureFor(p) : standardEditorial ? sourceEditorialFor(p) : detailImages.length
       ? detailImages.map((image, i) => `<img src="${esc(typeof image === 'string' ? image : image.url)}" alt="${esc(image.alt || `${p.name} 상세 안내 ${i + 1}`)}"${Number.isFinite(image.width) && Number.isFinite(image.height) && image.width > 0 && image.height > 0 ? ` width="${image.width}" height="${image.height}"` : ''} loading="lazy" decoding="async">`).join('')
       : `
       <h4>이 옷을 만든 이유</h4><p>${esc(p.desc)}</p>
@@ -264,7 +415,7 @@
       <div class="table-scroll"><table class="size-table"><thead><tr><th>사이즈</th><th>가슴 단면</th><th>총장</th><th>확인 상태</th></tr></thead><tbody>${(p.catalogSizes||[]).map(s => `<tr><td>${esc(s.label)}</td><td>${s.verified?s.chestHalf:'확인 중'}</td><td>${s.verified?s.length:'확인 중'}</td><td>${s.verified?'실측 확인':'미확인 · 추천 제외'}</td></tr>`).join('')}</tbody></table></div>
       <p class="small muted" style="margin-top:8px">확인된 실측만 표시합니다. 측정 방법에 따라 1~3cm 차이가 있을 수 있어요. 색상은 화면과 조명에 따라 달라질 수 있어요.</p>
       <h4>착용 참고</h4><p>사진과 아바타는 코디 참고용이에요. 확인된 실제 상품 사진과 실측이 등록되면 상세페이지에 표시합니다.</p>`;
-    if(editorial || standardEditorial) $('.pd-info .gift')?.remove();
+    if(editorialLayout) $('.pd-info .gift')?.remove();
     if(ai && !editorial && !detailImages.length) $('#pd-desc').insertAdjacentHTML('beforeend', GR_AI.care(p));
     $('#pd-reviews').innerHTML = p.reviews.length
       ? `<div class="reviews">${p.reviews.map(r => `<div class="review"><div class="star">${'★'.repeat(r.stars)}${'☆'.repeat(5 - r.stars)}</div><p>"${esc(r.text)}"</p><div class="who">${esc(r.who)}${r.body ? ' · ' + esc(r.body) : ''} · 스마트스토어 구매 리뷰</div>${r.reply ? `<div class="reply"><b>걸스라미 답글</b>${esc(r.reply)}</div>` : ''}</div>`).join('')}</div><p class="small muted" style="margin-top:16px">전체 리뷰 ${p.reviewCount}건은 <a href="${p.smartstore || GR.STORE_URL}" target="_blank" rel="noopener" style="text-decoration:underline">스마트스토어 상품 페이지</a>에서 볼 수 있습니다. 저평점 리뷰에는 원인과 조치를 답글로 남깁니다.</p>`

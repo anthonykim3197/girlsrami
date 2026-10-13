@@ -26,6 +26,11 @@
     return Object.values(p?.colorPhotos || {}).find(photo => photo?.verified === true && photo.image)?.image
       || (p?.photoVerified === true ? p.image : '');
   }
+  function startingColorFor(p, aiColor) {
+    if (aiColor) return aiColor;
+    if (p.photoSampleOnly) return null;
+    return p.newRelease && p.colors.includes(p.photoColor) ? p.photoColor : p.colors[0] || null;
+  }
   function setMeta(selector, attribute, value) {
     let node = document.head.querySelector(selector);
     if (!node) { node = document.createElement('meta'); document.head.append(node); }
@@ -71,7 +76,7 @@
     setCanonical(SITE_URL + 'shop.html');
     document.head.querySelector('script[data-product-json-ld]')?.remove();
   }
-  window.GR.storefront = Object.freeze({ isSaleProduct, productHref, verifiedRealImageFor, offerPriceFor, availabilityFor });
+  window.GR.storefront = Object.freeze({ isSaleProduct, productHref, verifiedRealImageFor, offerPriceFor, availabilityFor, startingColorFor });
 
   /* ---------- Catalog presentation contract ---------- */
   function nameFor(p) {
@@ -436,7 +441,7 @@
     const qualityEditorial = qualityEditorialFor(p);
     const standardEditorial = !editorial && usesStandardEditorial(p);
     const editorialLayout = Boolean(editorial || standardEditorial || qualityEditorial);
-    let color = ai ? GR_AI.colorFor(p) : p.newRelease && p.colors.includes(p.photoColor) ? p.photoColor : p.colors[0] || null, size = p.sizePending ? null : p.sizes[0];
+    let color = startingColorFor(p, ai ? GR_AI.colorFor(p) : null), size = p.sizePending ? null : p.sizes[0];
     const root = $('#pd');
     root.classList.toggle('pd-editorial', editorialLayout);
     root.classList.toggle('pd-source-editorial', Boolean(standardEditorial));
@@ -444,6 +449,7 @@
       <div class="pd-media${ai ? ' pd-media-ai' : p.newRelease ? ' pd-media-catalog' : ''}">
         ${ai ? GR_AI.gallery(p, color) : `
         <img src="${esc(p.catalogImage || p.image+'.jpg')}" alt="걸스라미 ${esc(p.name)}" id="pd-img">
+        ${p.photoSampleOnly ? '<p class="small muted" style="margin-top:10px">사진은 촬영 샘플 색상 기준입니다. 구매할 색상은 옵션명으로 선택해 주세요.</p>' : ''}
         ${detailImages.length ? '' : `<div class="thumbs"><div>정면 착용</div><div>원단 클로즈업<br><small>(촬영 예정)</small></div><div>키 155 / 160 / 167<br>착용 비교<small> (촬영 예정)</small></div><div>15초 숏클립<br><small>(촬영 예정)</small></div></div>`}
         `}
       </div>
@@ -456,7 +462,7 @@
         ${p.pricePending ? '' : priceFor(p, true)}
         <div class="pd-ship"><span>배송 일정·배송비·교환 조건은 스마트스토어의 현재 상품 안내를 확인해 주세요.</span><span>${ai ? 'AI 코디 연출 · 실제 상품의 색상과 형태는 상세 실물 사진을 참고해 주세요.' : p.photoVerified ? '실제 상품 사진' : '촬영 콘셉트 시안 이미지 · 실제 상품과 다를 수 있어요.'}</span></div>
         ${soon ? `<div class="stock-note">${p.newRelease ? '판매 예정' : '입고 예정'} · ${esc(p.eta || '판매 일정 확인 중')} · 현재 구매 가능 수량 0 · 판매 일정은 스마트스토어에서 확인해 주세요.</div>` : `<div class="stock-note ok">✓ 스마트스토어에서 바로 구매할 수 있습니다. 옵션 선택과 결제는 네이버페이로 진행됩니다.</div>`}
-        ${p.colors.length ? `<div class="opt"><div class="opt-label">색상 <span id="color-name">${esc(color)}</span></div><div class="color-opts" id="color-opts">${p.colors.map(c => `<button class="color-opt ${c === color ? 'active' : ''}" data-c="${esc(c)}"><span class="swatch" style="background:${swatchColor(c,p)}"></span>${esc(c)}</button>`).join('')}</div></div>` : `<div class="opt"><div class="opt-label">색상 <span>스마트스토어 옵션에서 선택</span></div></div>`}
+        ${p.colors.length ? `<div class="opt"><div class="opt-label">색상 <span id="color-name">${esc(color || '선택해 주세요')}</span></div><div class="color-opts" id="color-opts">${p.colors.map(c => `<button class="color-opt ${c === color ? 'active' : ''}" data-c="${esc(c)}">${p.photoSampleOnly ? '' : `<span class="swatch" style="background:${swatchColor(c,p)}"></span>`}${esc(c)}</button>`).join('')}</div></div>` : `<div class="opt"><div class="opt-label">색상 <span>스마트스토어 옵션에서 선택</span></div></div>`}
         <div class="opt"><div class="opt-label">사이즈 <a href="guide.html#size" class="muted">사이즈 가이드</a></div><div class="size-opts" id="size-opts">${(p.sizePending ? [] : p.sizes).map(s => `<button class="size-opt ${s === size ? 'active' : ''}" data-s="${esc(s)}">${esc(s)}</button>`).join('')}</div></div>
         <div class="pd-cta">
           ${soon

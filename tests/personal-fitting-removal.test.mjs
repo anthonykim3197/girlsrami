@@ -51,14 +51,21 @@ test('signed-in account exposes no body inputs or fitting entry and keeps explic
 });
 
 test('product enhancer creates no fitting panels and still binds the cart action',async()=>{
-  const cart=element(),status=element(),created=[];let added;
+  const cart=element(),status=element(),created=[];let added,activeColor=null;
   const product={id:'knit',colors:['블랙'],sizes:[{label:'FREE'}]};
-  const f=selector=>({'#add-cart':cart,'#product-cart-status':status,'#color-opts .active':{dataset:{c:'블랙'}},'#size-opts .active':{dataset:{s:'FREE'}},'.pd-info':{append(){}}}[selector]??null);
+  const f=selector=>selector==='#color-opts .active'
+    ? activeColor&&{dataset:{c:activeColor}}
+    : ({'#add-cart':cart,'#product-cart-status':status,'#size-opts .active':{dataset:{s:'FREE'}},'.pd-info':{append(){}}}[selector]??null);
   const document={body:{dataset:{}},createElement:tag=>{created.push(tag);return element();},querySelector:()=>({append(){}})};
   const subject=compileMemberFunction('Zi',null,{st:[product],location:{search:'?id=knit'},URLSearchParams,f,document,w:String,Q:String,et(){return {message:''}},tt:async()=>null,Me:async()=>({}),rt:async()=>{},er:async(...args)=>{added=args;}});
   await subject();
   assert.deepEqual(created,[]);
   assert.equal(typeof cart.onclick,'function');
+  await cart.onclick();
+  assert.equal(added,undefined);
+  assert.equal(status.textContent,'색상을 선택해 주세요.');
+
+  activeColor='블랙';
   await cart.onclick();
   assert.deepEqual(added,[product,'블랙','FREE']);
   assert.match(status.textContent,/장바구니/);

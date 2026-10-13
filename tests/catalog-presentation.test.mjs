@@ -34,6 +34,14 @@ function pageElement(classState){
   };
 }
 
+test('a sample photograph without an option match does not select or imply the first sale color',()=>{
+  const GR=loadApp();
+  const sample=product({colors:['아이보리','그레이'],photoSampleOnly:true});
+  assert.equal(GR.storefront.startingColorFor(sample,null),null);
+  assert.equal(GR.storefront.startingColorFor(product({colors:['아이보리','그레이'],photoColor:'그레이'}),null),'그레이');
+  assert.equal(GR.storefront.startingColorFor(sample,'그레이'),'그레이');
+});
+
 test('customer titles omit style codes while genuine RM codes remain available as product information',()=>{
   const GR=loadApp(),withLegacyName=product();
   assert.equal(GR.catalogPresentation.nameFor(withLegacyName),'허니루프 라운드 니트');

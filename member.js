@@ -73,10 +73,12 @@ ${m}`}var M=class extends Error{constructor({message:e,code:r,cause:s,name:n}){v
   if(!r||!s)return;
   r.onclick=async()=>{
     try{
-      await er(e,f("#color-opts .active")?.dataset.c??e.colors[0],f("#size-opts .active")?.dataset.s??e.sizes[0].label);
+      let n=f("#color-opts .active")?.dataset.c;
+      if(!n)throw new Error("색상을 선택해 주세요.");
+      await er(e,n,f("#size-opts .active")?.dataset.s??e.sizes[0].label);
       s.textContent="장바구니에 담았어요.";
-    }catch(n){
-      s.textContent=n.message;
+    }catch(i){
+      s.textContent=i.message;
     }
   };
 }

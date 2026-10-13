@@ -26,7 +26,7 @@ test('consumer chrome and product purchase area omit personal fitting while keep
   const map={'#site-header':header,'#site-footer':footer,'#menu-btn':menu,'#mobile-nav':mobile,'#pd':pd,'#pd-desc':desc,'#pd-reviews':reviews,'#pd-notice':notice,'#related-grid':related,'#color-opts':colorOpts,'#size-opts':sizeOpts,'#share-btn':share};
   let ready;
   const document={body:{dataset:{page:'product'}},querySelector:s=>map[s]??null,querySelectorAll:()=>[],addEventListener:(type,handler)=>{if(type==='DOMContentLoaded')ready=handler;},title:''};
-  const product={id:'knit',name:'니트',sub:'',sku:'K1',category:'니트',line:'basic',stock:2,status:'active',colors:['블랙'],sizes:['FREE'],catalogSizes:[{label:'FREE',chestHalf:50,length:60,verified:true}],badges:[],price:19000,listPrice:0,rating:0,reviewCount:0,reviews:[],image:'knit',catalogImage:'knit.jpg',smartstore:'https://example.com/product',storeUrl:'https://example.com/product',fit:'기본핏',length:'기본',material:'면',thickness:'보통',stretch:'보통',sheer:'없음',care:'손세탁',desc:'상품 설명'};
+  const product={id:'knit',name:'니트',sub:'',sku:'K1',category:'니트',line:'basic',stock:2,status:'active',colors:['블랙'],sizes:['FREE'],catalogSizes:[{label:'FREE',chestHalf:50,length:60,verified:true}],badges:[],price:19000,listPrice:0,rating:0,reviewCount:0,reviews:[],image:'knit',catalogImage:'knit.jpg',smartstore:'https://smartstore.naver.com/girlsrami/products/1234567890',storeUrl:'https://smartstore.naver.com/girlsrami/products/1234567890',fit:'기본핏',length:'기본',material:'면',thickness:'보통',stretch:'보통',sheer:'없음',care:'손세탁',desc:'상품 설명'};
   const GR={bootPromise:Promise.resolve(),bootError:null,PRODUCTS:[product],CONTENT:null,byId:id=>id===product.id?product:null,COLORS:{블랙:'#000'},TALK_URL:'https://example.com/talk',STORE_URL:'https://example.com/store',fmt:n=>String(n),discount:()=>0};
   const window={GR};
   vm.runInNewContext(appSource,{window,GR,document,location:{search:'?id=knit',href:'https://example.com/product.html?id=knit'},navigator:{clipboard:{writeText:async()=>{}}},URLSearchParams,encodeURIComponent,Intl,setTimeout,clearTimeout});
@@ -54,7 +54,7 @@ test('product enhancer creates no fitting panels and still binds the cart action
   const cart=element(),status=element(),created=[];let added;
   const product={id:'knit',colors:['블랙'],sizes:[{label:'FREE'}]};
   const f=selector=>({'#add-cart':cart,'#product-cart-status':status,'#color-opts .active':{dataset:{c:'블랙'}},'#size-opts .active':{dataset:{s:'FREE'}},'.pd-info':{append(){}}}[selector]??null);
-  const document={createElement:tag=>{created.push(tag);return element();},querySelector:()=>({append(){}})};
+  const document={body:{dataset:{}},createElement:tag=>{created.push(tag);return element();},querySelector:()=>({append(){}})};
   const subject=compileMemberFunction('Zi',null,{st:[product],location:{search:'?id=knit'},URLSearchParams,f,document,w:String,Q:String,et(){return {message:''}},tt:async()=>null,Me:async()=>({}),rt:async()=>{},er:async(...args)=>{added=args;}});
   await subject();
   assert.deepEqual(created,[]);

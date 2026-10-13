@@ -4,6 +4,74 @@
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const page = document.body.dataset.page || '';
+  const SITE_URL = 'https://girlslami.com/';
+
+  function storeUrlFor(p) {
+    return String(p?.storeUrl || p?.smartstore || '').trim();
+  }
+  function isSaleProduct(p) {
+    const storeUrl = storeUrlFor(p);
+    return p?.status === 'active'
+      && /^https:\/\/smartstore\.naver\.com\/girlsrami\/products\/\d+\/?$/.test(storeUrl);
+  }
+  function productHref(p) { return `product-${encodeURIComponent(p.id)}.html`; }
+  function offerPriceFor(p) {
+    const naver = Number(typeof p?.channelPrice === 'object' ? p.channelPrice?.naver : p?.channelPrice);
+    return Number.isFinite(naver) && naver > 0 ? naver : Number(p?.price);
+  }
+  function availabilityFor(p) {
+    return Number(p?.stock) > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock';
+  }
+  function verifiedRealImageFor(p) {
+    return Object.values(p?.colorPhotos || {}).find(photo => photo?.verified === true && photo.image)?.image
+      || (p?.photoVerified === true ? p.image : '');
+  }
+  function setMeta(selector, attribute, value) {
+    let node = document.head.querySelector(selector);
+    if (!node) { node = document.createElement('meta'); document.head.append(node); }
+    node.setAttribute(attribute, value);
+  }
+  function setCanonical(url) {
+    let node = document.head.querySelector('link[rel="canonical"]');
+    if (!node) { node = document.createElement('link'); node.rel = 'canonical'; document.head.append(node); }
+    node.href = url;
+  }
+  function setProductMetadata(p) {
+    const canonical = SITE_URL + productHref(p);
+    const material = String(p.material || '').trim();
+    const colors = Array.isArray(p.colors) && p.colors.length ? p.colors.join(', ') : '';
+    const description = `${nameFor(p)}. ${material}${material ? '. ' : ''}${colors ? `판매 색상 ${colors}. ` : ''}현재 구매 가능한 옵션과 배송 조건은 스마트스토어에서 확인하세요.`;
+    const image = verifiedRealImageFor(p);
+    document.title = `${nameFor(p)} | 걸스라미`;
+    if (!document.head) return;
+    setMeta('meta[name="description"]', 'name', 'description');
+    document.head.querySelector('meta[name="description"]').content = description;
+    setMeta('meta[property="og:type"]', 'property', 'og:type'); document.head.querySelector('meta[property="og:type"]').content = 'product';
+    setMeta('meta[property="og:title"]', 'property', 'og:title'); document.head.querySelector('meta[property="og:title"]').content = `${nameFor(p)} | 걸스라미`;
+    setMeta('meta[property="og:description"]', 'property', 'og:description'); document.head.querySelector('meta[property="og:description"]').content = description;
+    setMeta('meta[property="og:url"]', 'property', 'og:url'); document.head.querySelector('meta[property="og:url"]').content = canonical;
+    if (image) { setMeta('meta[property="og:image"]', 'property', 'og:image'); document.head.querySelector('meta[property="og:image"]').content = image; }
+    setCanonical(canonical);
+    document.head.querySelector('meta[name="robots"]')?.remove();
+    const jsonLd = {
+      '@context': 'https://schema.org', '@type': 'Product', name: nameFor(p), description,
+      ...(image ? { image: [image] } : {}),
+      sku: styleCodeFor(p) || String(p.sku || ''), category: p.category || undefined,
+      brand: { '@type': 'Brand', name: '걸스라미' },
+      offers: { '@type': 'Offer', url: storeUrlFor(p), priceCurrency: 'KRW', price: offerPriceFor(p), availability: availabilityFor(p), seller: { '@type': 'Organization', name: '걸스라미' } }
+    };
+    let script = document.head.querySelector('script[data-product-json-ld]');
+    if (!script) { script = document.createElement('script'); script.type = 'application/ld+json'; script.dataset.productJsonLd = ''; document.head.append(script); }
+    script.textContent = JSON.stringify(jsonLd);
+  }
+  function noindexProductShell() {
+    if (!document.head) return;
+    setMeta('meta[name="robots"]', 'name', 'robots');
+    document.head.querySelector('meta[name="robots"]').content = 'noindex,follow,noimageindex';
+    setCanonical(SITE_URL + 'shop.html');
+    document.head.querySelector('script[data-product-json-ld]')?.remove();
+  }
+  window.GR.storefront = Object.freeze({ isSaleProduct, productHref, verifiedRealImageFor, offerPriceFor, availabilityFor });
 
   /* ---------- Catalog presentation contract ---------- */
   function nameFor(p) {
@@ -18,32 +86,32 @@
   const QUALITY_EDITORIALS = Object.freeze({
     RM382: {
       code: 'RM382', name: '허니루프 라운드 니트',
-      intro: '짜임 하나로 달라지는, 오늘.',
-      description: '벌집 모양의 짜임과 라운드넥. 여유로운 몸판과 손등을 덮는 긴 소매의 니트예요.',
+      intro: '벌집 조직과 라운드넥, 총장 50cm의 여유 있는 니트.',
+      description: '벌집 조직, 라운드넥, 가슴 단면 58cm, 총장 50cm의 긴소매 니트입니다.',
       hero: { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/exports/hero-cream-67661bfc.webp', width: 1000, height: 1000, alt: '크림 허니루프 라운드 니트 AI 코디', caption: 'AI 코디 · 크림' },
-      colorLead: '크림부터 스카이까지, 취향에 맞춰 고르는 네 가지 색.',
+      colorLead: '판매 색상은 크림, 카멜, 차콜, 스카이 네 가지입니다.',
       colorBoard: { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/board-8fd34a81.webp', width: 1536, height: 1024, alt: '허니루프 라운드 니트 네 가지 컬러 AI 연출', caption: 'AI 컬러 연출 · 화면과 조명에 따라 실제 색상과 차이가 있을 수 있습니다.' },
       colors: [['크림','#e9e0cf'],['카멜','#aa8059'],['차콜','#494a4b'],['스카이','#acc6df']],
       styling: [
         {
-          title: '주말의 두 장면', lead: '스니커즈로 가볍게, 플랫으로 차분하게.',
+          title: 'AI 코디 1 · 데님과 롱스커트', lead: '스카이 색상은 데님, 카멜 색상은 롱스커트와 조합한 예시입니다.',
           notice: 'AI 코디 연출컷입니다. 니트 단품 상품이며 하의·신발·가방은 구성에 포함되지 않습니다.',
           looks: [
-            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/city-denim/sky-51437f2b.webp', width: 1024, height: 1536, alt: '스카이 허니루프 라운드 니트 시티 데님 AI 코디', meta: 'AI 코디 · 스카이', title: '시티 데님', items: '라이트 워시 데님 · 아이보리 레트로 스니커즈 · 초콜릿 숄더백' },
-            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/soft-skirt/camel-2365159f.webp', width: 1024, height: 1536, alt: '카멜 허니루프 라운드 니트 갤러리 데이트 AI 코디', meta: 'AI 코디 · 카멜', title: '갤러리 데이트', items: '아이보리 새틴 롱스커트 · 블랙 발레리나 플랫 · 미니 토트백' }
+            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/city-denim/sky-51437f2b.webp', width: 1024, height: 1536, alt: '스카이 허니루프 라운드 니트와 데님 AI 코디', meta: 'AI 코디 · 스카이', title: '스카이 · 데님', items: '라이트 워시 데님 · 아이보리 스니커즈 · 브라운 숄더백' },
+            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/soft-skirt/camel-2365159f.webp', width: 1024, height: 1536, alt: '카멜 허니루프 라운드 니트와 롱스커트 AI 코디', meta: 'AI 코디 · 카멜', title: '카멜 · 롱스커트', items: '아이보리 롱스커트 · 블랙 플랫 · 미니 토트백' }
           ]
         },
         {
-          title: '약속에 맞춘 두 가지 코디', lead: '로퍼와 미니, 슬링백과 와이드 팬츠.',
-          notice: 'AI로 연출한 스타일링 제안입니다. 실제 원단의 짜임은 아래 실물 접사를 확인해 주세요.',
+          title: 'AI 코디 2 · 미니스커트와 와이드 팬츠', lead: '차콜 색상은 미니스커트, 크림 색상은 와이드 팬츠와 조합한 예시입니다.',
+          notice: 'AI로 만든 코디 이미지입니다. 실제 원단의 짜임은 아래 실물 접사에 표시합니다.',
           looks: [
-            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/city-mini/charcoal-2997e712.webp', width: 1024, height: 1536, alt: '차콜 허니루프 라운드 니트 시티 위켄드 AI 코디', meta: 'AI 코디 · 차콜', title: '시티 위켄드', items: '차콜 A라인 미니스커트 · 블랙 로퍼 · 블랙 숄더백' },
-            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/tailored/cream-917467b6.webp', width: 1024, height: 1536, alt: '크림 허니루프 라운드 니트 라이트 테일러링 AI 코디', meta: 'AI 코디 · 크림', title: '라이트 테일러링', items: '크림 와이드 슬랙스 · 블랙 포인티드 슬링백 · 구조적인 미니 토트' }
+            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/city-mini/charcoal-2997e712.webp', width: 1024, height: 1536, alt: '차콜 허니루프 라운드 니트와 미니스커트 AI 코디', meta: 'AI 코디 · 차콜', title: '차콜 · 미니스커트', items: '차콜 A라인 미니스커트 · 블랙 로퍼 · 블랙 숄더백' },
+            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/tailored/cream-917467b6.webp', width: 1024, height: 1536, alt: '크림 허니루프 라운드 니트와 와이드 팬츠 AI 코디', meta: 'AI 코디 · 크림', title: '크림 · 와이드 팬츠', items: '크림 와이드 팬츠 · 블랙 슬링백 · 미니 토트백' }
           ]
         }
       ],
       realDetail: { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/exports/honey-loop-crop-knit/real-macro-1-a59df53e.webp', width: 1000, height: 1000, alt: '스카이 허니루프 라운드 니트 실물 짜임 접사', caption: '실물 사진 · 스카이' },
-      detailLead: '반복되는 벌집 모양의 짜임. 소맷단과 밑단은 립 조직으로 마무리했어요.',
+      detailLead: '반복되는 벌집 조직과 소맷단·밑단의 립 조직을 실물 접사로 표시했습니다.',
       material: '리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%',
       facts: [['품번','RM382'],['제조국','국산(대한민국)'],['제조자','걸스라미'],['제조연월','2026년 10월']],
       measurements: [['목깊이','4'],['목넓이','22'],['소매통','18'],['총기장','50'],['가슴넓이','58'],['소매기장','51'],['어깨넓이','51']],
@@ -51,32 +119,32 @@
     },
     RM495: {
       code: 'RM495', name: '오프듀티 V넥 니트 베스트',
-      intro: '셔츠 위에 툭, 오늘의 한 겹.',
-      description: '티셔츠에도, 셔츠에도 자연스럽게. V넥과 입체적인 짜임으로 분위기를 더해요.',
+      intro: 'V넥 입체 조직, 총장 46cm의 레이어드 니트 베스트.',
+      description: 'V넥 입체 조직, 가슴 단면 55cm, 총장 46cm의 니트 베스트입니다.',
       hero: { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/exports/off-duty-vneck-knit-vest/hero-gray-979a3c86.webp', width: 1000, height: 1000, alt: '회색 오프듀티 V넥 니트 베스트 AI 코디', caption: 'AI 코디 · 회색' },
-      colorLead: '가벼운 스카이부터 차분한 회색까지, 다섯 가지 색.',
+      colorLead: '판매 색상은 스카이, 차콜, 크림, 카멜, 회색 다섯 가지입니다.',
       colorBoard: { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/boards/off-duty-vneck-knit-vest-e6d5971d.webp', width: 1536, height: 1024, alt: '오프듀티 V넥 니트 베스트 다섯 가지 컬러 AI 연출', caption: 'AI 컬러 연출 · 화면과 조명에 따라 실제 색상과 차이가 있을 수 있습니다.' },
       colors: [['스카이','#acc6df'],['차콜','#494a4b'],['크림','#e9e0cf'],['카멜','#aa8059'],['회색','#9b9b98']],
       styling: [
         {
-          title: '주말의 두 장면', lead: '티셔츠로 가볍게, 셔츠로 차분하게.',
+          title: 'AI 코디 1 · 티셔츠와 셔츠', lead: '스카이 색상은 티셔츠, 카멜 색상은 셔츠 위에 겹친 예시입니다.',
           notice: 'AI 코디 연출컷입니다. 베스트 단품 상품이며 이너·하의·신발·가방은 구성에 포함되지 않습니다.',
           looks: [
-            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/off-duty-vneck-knit-vest/city-denim/sky-54519f0f.webp', width: 1024, height: 1536, alt: '스카이 오프듀티 V넥 니트 베스트 시티 데님 AI 코디', meta: 'AI 코디 · 스카이', title: '시티 데님', items: '화이트 티셔츠 · 라이트 워시 데님 · 아이보리 레트로 스니커즈 · 초콜릿 숄더백' },
-            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/off-duty-vneck-knit-vest/soft-skirt/camel-9c46c383.webp', width: 1024, height: 1536, alt: '카멜 오프듀티 V넥 니트 베스트 갤러리 데이트 AI 코디', meta: 'AI 코디 · 카멜', title: '갤러리 데이트', items: '화이트 셔츠 · 아이보리 새틴 롱스커트 · 블랙 발레리나 플랫 · 미니 토트백' }
+            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/off-duty-vneck-knit-vest/city-denim/sky-54519f0f.webp', width: 1024, height: 1536, alt: '스카이 오프듀티 V넥 니트 베스트와 티셔츠 AI 코디', meta: 'AI 코디 · 스카이', title: '스카이 · 티셔츠', items: '화이트 티셔츠 · 라이트 워시 데님 · 아이보리 스니커즈 · 브라운 숄더백' },
+            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/off-duty-vneck-knit-vest/soft-skirt/camel-9c46c383.webp', width: 1024, height: 1536, alt: '카멜 오프듀티 V넥 니트 베스트와 셔츠 AI 코디', meta: 'AI 코디 · 카멜', title: '카멜 · 셔츠', items: '화이트 셔츠 · 아이보리 롱스커트 · 블랙 플랫 · 미니 토트백' }
           ]
         },
         {
-          title: '약속에 맞춘 두 가지 코디', lead: '미니스커트와 로퍼, 슬랙스와 슬링백.',
-          notice: 'AI로 연출한 스타일링 제안입니다. 실제 원단의 짜임은 아래 실물 접사를 확인해 주세요.',
+          title: 'AI 코디 2 · 미니스커트와 와이드 팬츠', lead: '차콜 색상은 미니스커트, 크림 색상은 와이드 팬츠와 조합한 예시입니다.',
+          notice: 'AI로 만든 코디 이미지입니다. 실제 원단의 짜임은 아래 실물 접사에 표시합니다.',
           looks: [
-            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/off-duty-vneck-knit-vest/city-mini/charcoal-6a7578e3.webp', width: 1024, height: 1536, alt: '차콜 오프듀티 V넥 니트 베스트 시티 위켄드 AI 코디', meta: 'AI 코디 · 차콜', title: '시티 위켄드', items: '블루 스트라이프 셔츠 · 차콜 A라인 미니스커트 · 블랙 로퍼 · 블랙 숄더백' },
-            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/off-duty-vneck-knit-vest/tailored/cream-94955b6b.webp', width: 1024, height: 1536, alt: '크림 오프듀티 V넥 니트 베스트 라이트 테일러링 AI 코디', meta: 'AI 코디 · 크림', title: '라이트 테일러링', items: '화이트 셔츠 · 크림 와이드 슬랙스 · 블랙 포인티드 슬링백 · 구조적인 미니 토트' }
+            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/off-duty-vneck-knit-vest/city-mini/charcoal-6a7578e3.webp', width: 1024, height: 1536, alt: '차콜 오프듀티 V넥 니트 베스트와 미니스커트 AI 코디', meta: 'AI 코디 · 차콜', title: '차콜 · 미니스커트', items: '블루 스트라이프 셔츠 · 차콜 A라인 미니스커트 · 블랙 로퍼 · 블랙 숄더백' },
+            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/off-duty-vneck-knit-vest/tailored/cream-94955b6b.webp', width: 1024, height: 1536, alt: '크림 오프듀티 V넥 니트 베스트와 와이드 팬츠 AI 코디', meta: 'AI 코디 · 크림', title: '크림 · 와이드 팬츠', items: '화이트 셔츠 · 크림 와이드 팬츠 · 블랙 슬링백 · 미니 토트백' }
           ]
         }
       ],
       realDetail: { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/exports/off-duty-vneck-knit-vest/real-macro-1-9f18d696.webp', width: 1000, height: 1000, alt: '회색 오프듀티 V넥 니트 베스트 실물 짜임 접사', caption: '실물 사진 · 회색' },
-      detailLead: '결이 느껴지는 입체적인 짜임. V넥과 밑단의 립 조직으로 마무리했어요.',
+      detailLead: '입체 조직과 V넥·밑단의 립 조직을 실물 접사로 표시했습니다.',
       material: '아크릴 72% · 나일론 13% · 울 9% · 알파카 3% · 스판 3%',
       facts: [['품번','RM495'],['제조국','국산(대한민국)'],['제조자','걸스라미'],['제조연월','2026년 10월']],
       measurements: [['총기장','46'],['가슴넓이','55'],['어깨넓이','41'],['목넓이','25'],['앞목깊이','14']],
@@ -84,31 +152,31 @@
     },
     RM429: {
       code: 'RM429', name: '뮤트레이어 V넥 니트 베스트', eyebrow: 'GIRLSRAMI LAYER EDIT', accent: '#70445f', heavy: true,
-      intro: '조용한 색감으로 완성하는 한 겹.',
-      description: '잔잔한 보카시 결에 깊은 V넥, 넓은 밑단 립이 더해진 니트 베스트예요.',
+      intro: '보카시 조직과 깊은 V넥, 총장 54cm의 니트 베스트.',
+      description: '보카시 조직, 깊은 V넥, 가슴 단면 52cm, 총장 54cm의 니트 베스트입니다.',
       hero: { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/hero-grape-a88c8a4731d9.webp', width: 1122, height: 1402, alt: '그레이프 뮤트레이어 V넥 니트 베스트 AI 코디', caption: 'AI 코디 · 그레이프' },
-      colorTitle: '여섯 가지 색 모아보기', colorLead: '그레이프부터 곤색까지, 차분한 보카시 톤으로 고르는 여섯 가지 색.',
+      colorTitle: '여섯 가지 색상', colorLead: '판매 색상은 그레이프, 모카, 그레이, 브라운, 올리브, 곤색 여섯 가지입니다.',
       colorBoard: { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/colorboard-2c7ba91de2a5.webp', width: 1122, height: 1402, alt: '뮤트레이어 V넥 니트 베스트 여섯 가지 컬러 AI 연출', caption: 'AI 컬러 연출 · 화면과 조명에 따라 실제 색상과 차이가 있을 수 있습니다.' },
       colors: [['그레이프','#70445f'],['모카','#aa9787'],['그레이','#999996'],['브라운','#715448'],['올리브','#59604c'],['곤색','#263545']],
       styling: [
         {
-          title: '주말의 두 가지 레이어', lead: '그레이프는 데님과, 올리브는 롱스커트와.',
+          title: 'AI 코디 1 · 데님과 롱스커트', lead: '그레이프 색상은 데님, 올리브 색상은 롱스커트와 조합한 예시입니다.',
           notice: 'AI 코디 연출컷입니다. 베스트 단품 상품이며 이너·하의·신발·가방은 구성에 포함되지 않습니다.',
           looks: [
-            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/city-denim/grape-8ae0062b6964.webp', width: 1024, height: 1536, alt: '그레이프 뮤트레이어 V넥 니트 베스트 시티 데님 AI 코디', meta: 'AI 코디 · 그레이프', title: '시티 데님', items: '화이트 티셔츠 · 라이트 데님 · 브라운 숄더백 · 화이트 레트로 스니커즈' },
-            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/soft-skirt/olive-d8c8aa7b76df.webp', width: 1024, height: 1536, alt: '올리브 뮤트레이어 V넥 니트 베스트 갤러리 데이트 AI 코디', meta: 'AI 코디 · 올리브', title: '갤러리 데이트', items: '화이트 옥스퍼드 셔츠 · 크림 롱스커트 · 발레 플랫 · 다크 브라운 미니백' }
+            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/city-denim/grape-8ae0062b6964.webp', width: 1024, height: 1536, alt: '그레이프 뮤트레이어 V넥 니트 베스트와 데님 AI 코디', meta: 'AI 코디 · 그레이프', title: '그레이프 · 데님', items: '화이트 티셔츠 · 라이트 데님 · 브라운 숄더백 · 화이트 스니커즈' },
+            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/soft-skirt/olive-d8c8aa7b76df.webp', width: 1024, height: 1536, alt: '올리브 뮤트레이어 V넥 니트 베스트와 롱스커트 AI 코디', meta: 'AI 코디 · 올리브', title: '올리브 · 롱스커트', items: '화이트 셔츠 · 크림 롱스커트 · 플랫 · 브라운 미니백' }
           ]
         },
         {
-          title: '도시의 두 장면', lead: '곤색의 단정함, 모카의 부드러움.',
-          notice: 'AI로 연출한 스타일링 제안입니다. 상품의 실제 앞·뒤 모습과 조직은 아래 실물 사진을 확인해 주세요.',
+          title: 'AI 코디 2 · 미니스커트와 와이드 팬츠', lead: '곤색은 미니스커트, 모카 색상은 와이드 팬츠와 조합한 예시입니다.',
+          notice: 'AI로 만든 코디 이미지입니다. 상품의 실제 앞·뒤 모습과 조직은 아래 실물 사진에 표시합니다.',
           looks: [
-            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/city-mini/navy-c57b5b37e0ae.webp', width: 1024, height: 1536, alt: '곤색 뮤트레이어 V넥 니트 베스트 시티 위켄드 AI 코디', meta: 'AI 코디 · 곤색', title: '시티 위켄드', items: '블루 스트라이프 셔츠 · 차콜 A라인 미니스커트 · 차콜 타이츠 · 블랙 로퍼 · 블랙 숄더백' },
-            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/tailored/mocha-49dbc96f1b93.webp', width: 1024, height: 1536, alt: '모카 뮤트레이어 V넥 니트 베스트 라이트 테일러링 AI 코디', meta: 'AI 코디 · 모카', title: '라이트 테일러링', items: '화이트 셔츠 · 크림 와이드 팬츠 · 슬링백 슈즈 · 미니 토트백' }
+            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/city-mini/navy-c57b5b37e0ae.webp', width: 1024, height: 1536, alt: '곤색 뮤트레이어 V넥 니트 베스트와 미니스커트 AI 코디', meta: 'AI 코디 · 곤색', title: '곤색 · 미니스커트', items: '블루 스트라이프 셔츠 · 차콜 A라인 미니스커트 · 차콜 타이츠 · 블랙 로퍼 · 블랙 숄더백' },
+            { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/tailored/mocha-49dbc96f1b93.webp', width: 1024, height: 1536, alt: '모카 뮤트레이어 V넥 니트 베스트와 와이드 팬츠 AI 코디', meta: 'AI 코디 · 모카', title: '모카 · 와이드 팬츠', items: '화이트 셔츠 · 크림 와이드 팬츠 · 슬링백 · 미니 토트백' }
           ]
         }
       ],
-      detailTitle: '실제 형태와 상품 정보', detailLead: '앞·뒤 실루엣과 V넥, 암홀 마감을 실물 사진으로 확인해 보세요.',
+      detailTitle: '실제 형태와 상품 정보', detailLead: '실물 앞면·뒷면, V넥 립 조직과 암홀 마감 사진입니다.',
       realDetails: [
         { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/actual/detail-011-de97939ebac0.jpg', width: 860, height: 860, alt: '그레이 뮤트레이어 V넥 니트 베스트 실물 앞면', caption: '실물 사진 · 그레이 앞면' },
         { src: 'https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/actual/detail-015-621ebf9fe44a.jpg', width: 860, height: 860, alt: '그레이 뮤트레이어 V넥 니트 베스트 실물 뒷면', caption: '실물 사진 · 그레이 뒷면' },
@@ -216,13 +284,14 @@
       const dimensions = typeof image === 'object' && Number.isFinite(image.width) && Number.isFinite(image.height) && image.width > 0 && image.height > 0 ? ` width="${image.width}" height="${image.height}"` : '';
       return `<figure><img src="${esc(source)}" alt="${esc(alt)}"${dimensions} loading="lazy" decoding="async">${typeof image === 'object' && image.alt ? `<figcaption>${esc(image.alt)}</figcaption>` : ''}</figure>`;
     }).join('')}</div>` : '';
-    return `<section class="source-editorial" aria-labelledby="source-editorial-title"><header class="editorial-heading"><span class="editorial-index">01 / THE PRODUCT EDIT</span><h2 id="source-editorial-title">${esc(p.sub || nameFor(p))}</h2>${p.desc ? `<p>${esc(p.desc)}</p>` : ''}</header>${gallery}${measureTable}${factsDisclosureFor(p)}</section>`;
+    const factualSummary = [p.fit, p.length, p.colors?.length ? `판매 색상 ${p.colors.join(', ')}` : ''].filter(Boolean).join(' · ');
+    return `<section class="source-editorial" aria-labelledby="source-editorial-title"><header class="editorial-heading"><span class="editorial-index">01 / THE PRODUCT EDIT</span><h2 id="source-editorial-title">${esc(p.material || nameFor(p))}</h2>${factualSummary ? `<p>${esc(factualSummary)}</p>` : ''}</header>${gallery}${measureTable}${factsDisclosureFor(p)}</section>`;
   }
   window.GR.catalogPresentation = Object.freeze({ nameFor, styleCodeFor, channelPriceFor, usesStandardEditorial, sourceEditorialFor, qualityEditorialFor, qualityEditorialHtml, factsFor });
 
   /* ---------- Header / Footer ---------- */
   function renderChrome() {
-    const nav = [['index.html', '홈'], ['shop.html', '전체 상품'], ['shop.html?line=premium', 'F/W 프리미엄'], ['story.html', '브랜드 이야기'], ['guide.html', '구매 안내']];
+    const nav = [['index.html', '홈'], ['shop.html', '판매 상품'], ['story.html', '브랜드 이야기'], ['guide.html', '구매 안내']];
     const activeKey = { home: 'index.html', shop: 'shop.html', story: 'story.html', guide: 'guide.html' }[page];
     const header = $('#site-header');
     if (header) header.innerHTML = `
@@ -248,14 +317,14 @@
         <div class="cols">
           <div>
             <a class="logo" href="index.html"><span class="mark">GR</span>걸스라미</a>
-            <p class="small muted" style="margin-top:14px;max-width:320px">기획부터 생산까지 직접 관리하는 국내 생산 여성 니트. 직접 생산하여 불필요한 유통 거품을 줄였습니다.</p>
+            <p class="small muted" style="margin-top:14px;max-width:320px">국내에서 직접 기획·생산한 여성 니트. 판매 중인 상품의 소재와 실측 정보를 확인할 수 있습니다.</p>
           </div>
-          <div><h5>SHOP</h5><ul><li><a href="shop.html">전체 상품</a></li><li><a href="shop.html?line=basic">베이직 라인</a></li><li><a href="shop.html?line=premium">F/W 프리미엄 라인</a></li><li><a href="${GR.STORE_URL}" target="_blank" rel="noopener">네이버 스마트스토어</a></li></ul></div>
+          <div><h5>SHOP</h5><ul><li><a href="shop.html">판매 상품</a></li><li><a href="${GR.STORE_URL}" target="_blank" rel="noopener">네이버 스마트스토어</a></li></ul></div>
           <div><h5>BRAND</h5><ul><li><a href="story.html">브랜드 이야기</a></li><li><a href="story.html#principles">만드는 원칙</a></li><li><a href="guide.html#size">사이즈 가이드</a></li></ul></div>
           <div><h5>HELP</h5><ul><li><a href="guide.html#shipping">배송 · 교환 · 반품</a></li><li><a href="guide.html#faq">자주 묻는 질문</a></li><li><a href="${GR.TALK_URL}" target="_blank" rel="noopener">톡톡 상담</a></li></ul></div>
         </div>
         <div class="legal">상호 대박이할머니 (브랜드 걸스라미) · 대표 신명숙 · 원산지 국산 · 결제와 주문 관리는 네이버 스마트스토어에서 진행됩니다.<br><a href="privacy.html">개인정보 처리 안내</a> · <a href="terms.html">회원 이용약관</a> · <a href="admin.html">걸스라미 관리</a><br>© ${new Date().getFullYear()} GIRLSRAMI. All rights reserved.</div>
-        <div class="disclaimer">이 사이트는 걸스라미 자사몰 <b>청사진(시연) 버전</b>입니다. "입고 예정" 또는 "판매 예정" 상품은 아직 판매하지 않습니다(구매 가능 수량 0). 촬영 콘셉트 시안으로 안내된 이미지는 실제 상품과 다를 수 있습니다. 판매 중인 베이직 라인은 스마트스토어의 실제 상품 정보를 기준으로 합니다.</div>
+        <div class="disclaimer">상품의 현재 판매 옵션·가격·재고·배송 조건은 연결된 스마트스토어 상품 페이지에서 확인해 주세요. AI 코디 이미지는 화면에 별도로 표시하며, 실제 상품 사진과 구분합니다.</div>
       </div></div>
       <div class="toast" id="toast"></div>`;
   }
@@ -267,23 +336,22 @@
 
   /* ---------- Card ---------- */
   function stars(r) { const full = Math.round(r); return '★'.repeat(full) + '☆'.repeat(5 - full); }
-  function badgeClass(b) { if (['NEW', '베스트', '주간 1위'].includes(b)) return 'accent'; if (['프리미엄', 'L사이즈', '자사몰 단독'].includes(b)) return 'navy'; if (b === '오늘출발') return 'sage'; return 'outline'; }
+  function saleBadgesFor(p) { return p.newRelease ? ['신상'] : []; }
   function swatchColor(color, p) { return p?.colorHex?.[color] || GR.COLORS[color] || GR.COLORS[{ '스카이': '스카이블루', '회색': '그레이' }[color]] || '#ccc'; }
   function card(p) {
     p = { ...p, name: nameFor(p) };
-    const soon = p.stock === 0 || p.status === 'coming';
-    const ai = window.GR_AI?.presentation(p), aiColor = ai && GR_AI.colorFor(p), aiMedia = ai && GR_AI.mediaFor(p, aiColor);
+    const soon = !isSaleProduct(p);
+    const cardImage = verifiedRealImageFor(p) || p.catalogImage || p.image + '.jpg';
     const sw = p.colors.slice(0, 6).map(c => `<span class="swatch" title="${esc(c)}" style="background:${swatchColor(c,p)}"></span>`).join('') + (p.colors.length > 6 ? `<span class="more">+${p.colors.length - 6}</span>` : '');
-    return `<a class="card reveal" href="product.html?id=${p.id}">
-      <div class="thumb ${soon ? 'soon' : ''}${aiMedia ? ' ai-thumb' : ''}">
-        <div class="badges">${p.badges.slice(0, 2).map(b => `<span class="badge ${badgeClass(b)}">${esc(p.newRelease && b === 'NEW' ? '신상' : b)}</span>`).join('')}</div>
-        <img src="${esc(aiMedia?.image || p.catalogImage || p.image+'.jpg')}" alt="${esc(p.name)}${aiMedia ? ' '+esc(aiColor)+' AI 코디' : ''}" loading="lazy"${ai?.portraitCrop ? ' style="object-position:center bottom"' : ''}>
-        ${aiMedia ? (ai.cropHasAiLabel ? '' : GR_AI.marker) + GR_AI.swatches(p, aiColor) : ''}
+    return `<a class="card reveal" href="${productHref(p)}">
+      <div class="thumb ${soon ? 'soon' : ''}">
+        <div class="badges">${saleBadgesFor(p).map(b => `<span class="badge accent">${esc(b)}</span>`).join('')}</div>
+        <img src="${esc(cardImage)}" alt="${esc(p.name)} 실물 사진" loading="lazy">
         ${soon ? `<div class="soon-tag">${p.newRelease ? '판매 예정' : '입고 예정'} <span>${esc(p.eta || '판매 일정 확인 중')}</span></div>` : ''}
       </div>
       <div class="card-body">
-        <div class="cat">${esc(p.category)} · ${p.line === 'premium' ? '프리미엄 라인' : '베이직 라인'}</div>
-        <div class="name">걸스라미 ${esc(p.name)}<small>${esc(p.sub)}</small></div>
+        <div class="cat">${esc(p.category)} · 판매 중</div>
+        <div class="name">걸스라미 ${esc(p.name)}<small>${esc(p.material || p.sub)}</small></div>
         ${p.pricePending ? '' : priceFor(p)}
         ${p.colors.length ? `<div class="swatches">${sw}</div>` : ''}
         ${p.rating ? `<div class="rating"><span class="star">${stars(p.rating)}</span> ${p.rating} <span class="muted">(${p.reviewCount})</span></div>` : `<div class="rating muted">${soon ? '스마트스토어 입고 후 판매' : ''}</div>`}
@@ -314,37 +382,34 @@
 
   /* ---------- HOME ---------- */
   function renderHome() {
-    const featured = GR.CONTENT?.home ? GR.CONTENT.home.featuredIds.map(id=>GR.byId(id)).filter(Boolean) : GR.PRODUCTS.filter(p => p.line === 'basic').slice(0, 4);
-    const newProducts = GR.PRODUCTS.filter(p => p.newRelease);
+    const saleProducts = GR.PRODUCTS.filter(isSaleProduct);
+    const featured = GR.CONTENT?.home ? GR.CONTENT.home.featuredIds.map(id=>GR.byId(id)).filter(isSaleProduct) : saleProducts.slice(0, 4);
+    const newProducts = saleProducts.filter(p => p.newRelease);
     const best = newProducts.length ? [...newProducts, ...featured.filter(p => !p.newRelease)].slice(0, Math.max(4, featured.length)) : featured;
-    const fw = GR.PRODUCTS.filter(p => p.line === 'premium').slice(0, 8);
-    $('#best-grid').innerHTML = best.map(card).join('');
-    $('#fw-grid').innerHTML = fw.map(card).join('');
-    const rv = GR.PRODUCTS.flatMap(p => p.reviews.filter(r => r.stars >= 4).map(r => ({ ...r, product: nameFor(p) }))).slice(0, 3);
+    $('#best-grid').innerHTML = (best.length ? best : saleProducts.slice(0, 4)).map(card).join('');
+    const rv = saleProducts.flatMap(p => p.reviews.filter(r => r.stars >= 4).map(r => ({ ...r, product: nameFor(p) }))).slice(0, 3);
     $('#home-reviews').innerHTML = rv.map(r => `<div class="review reveal"><div class="star">${'★'.repeat(r.stars)}</div><p>"${esc(r.text)}"</p><div class="who">${esc(r.who)} · ${esc(r.product)}${r.body ? ' · ' + esc(r.body) : ''}</div>${r.reply ? `<div class="reply"><b>걸스라미 답글</b>${esc(r.reply)}</div>` : ''}</div>`).join('');
   }
 
   /* ---------- SHOP ---------- */
   function renderShop() {
     const params = new URLSearchParams(location.search);
-    const state = { line: params.get('line') || 'all', cat: params.get('cat') || '전체', size: 'all', sort: 'popular' };
-    const lineTabs = $('#line-tabs'), cats = $('#cat-chips'), grid = $('#shop-grid'), count = $('#shop-count'), title = $('#shop-title'), sub = $('#shop-sub');
-    lineTabs.innerHTML = [['all', '전체'], ['basic', '베이직 (1만 원대)'], ['premium', 'F/W 프리미엄']].map(([k, t]) => `<button data-line="${k}" class="${state.line === k ? 'active' : ''}">${t}</button>`).join('');
-    cats.innerHTML = GR.CATEGORIES.map(c => `<button class="chip ${state.cat === c ? 'active' : ''}" data-cat="${c}">${c}</button>`).join('');
+    const state = { cat: params.get('cat') || '전체', size: 'all', sort: 'popular' };
+    const cats = $('#cat-chips'), grid = $('#shop-grid'), count = $('#shop-count'), title = $('#shop-title'), sub = $('#shop-sub');
+    const saleProducts = GR.PRODUCTS.filter(isSaleProduct);
+    const categories = ['전체', ...new Set(saleProducts.map(p => p.category).filter(Boolean))];
+    cats.innerHTML = categories.map(c => `<button class="chip ${state.cat === c ? 'active' : ''}" data-cat="${c}">${c}</button>`).join('');
     function draw() {
-      let list = GR.PRODUCTS.filter(p => (state.line === 'all' || p.line === state.line) && (state.cat === '전체' || p.category === state.cat) && (state.size === 'all' || p.sizes.some(s => s.startsWith(state.size))));
-      const sorters = { popular: (a, b) => Number(!!b.newRelease) - Number(!!a.newRelease) || (b.reviewCount - a.reviewCount) || (b.price - a.price), new: (a, b) => Number(!!b.newRelease) - Number(!!a.newRelease) || (b.releasedAt || '').localeCompare(a.releasedAt || '') || (a.line === 'premium' ? -1 : 1) - (b.line === 'premium' ? -1 : 1), low: (a, b) => Number(!!a.pricePending) - Number(!!b.pricePending) || a.price - b.price, high: (a, b) => Number(!!a.pricePending) - Number(!!b.pricePending) || b.price - a.price, sale: (a, b) => GR.discount(b) - GR.discount(a) };
+      let list = saleProducts.filter(p => (state.cat === '전체' || p.category === state.cat) && (state.size === 'all' || p.sizes.some(s => s.startsWith(state.size))));
+      const sorters = { popular: (a, b) => (b.reviewCount - a.reviewCount) || nameFor(a).localeCompare(nameFor(b), 'ko'), new: (a, b) => (b.releasedAt || '').localeCompare(a.releasedAt || '') || nameFor(a).localeCompare(nameFor(b), 'ko'), low: (a, b) => a.price - b.price, high: (a, b) => b.price - a.price, sale: (a, b) => GR.discount(b) - GR.discount(a) };
       list = [...list].sort(sorters[state.sort]);
       grid.innerHTML = list.length ? list.map(card).join('') : `<p class="muted" style="grid-column:1/-1;padding:40px 0">조건에 맞는 상품이 없습니다.</p>`;
       count.textContent = `${list.length}개 상품`;
-      const titles = { all: '전체 상품', basic: '베이직 라인', premium: 'F/W 프리미엄 라인' };
-      const subs = { all: '판매 중인 베이직 라인과 입고 예정인 프리미엄 라인을 한곳에서.', basic: '스마트스토어에서 지금 구매할 수 있는 1만 원대 데일리 니트.', premium: '4050 고객의 목소리로 다시 설계한 F/W 라인. 레귤러 기장과 L(66~77) 사이즈까지. 입고 후 판매를 시작합니다.' };
-      title.textContent = titles[state.line]; sub.textContent = subs[state.line];
-      $$('#line-tabs button').forEach(b => b.classList.toggle('active', b.dataset.line === state.line));
+      title.textContent = state.cat === '전체' ? '현재 판매 중인 상품' : state.cat;
+      sub.textContent = '스마트스토어에서 구매할 수 있는 여성 니트·조끼·가디건입니다. 상품별 소재와 실측 정보를 확인해 보세요.';
       $$('#cat-chips .chip').forEach(b => b.classList.toggle('active', b.dataset.cat === state.cat));
       reveal();
     }
-    lineTabs.addEventListener('click', e => { const b = e.target.closest('button'); if (!b) return; state.line = b.dataset.line; history.replaceState(null, '', `shop.html?line=${state.line}`); draw(); });
     cats.addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; state.cat = b.dataset.cat; draw(); });
     $('#size-select').addEventListener('change', e => { state.size = e.target.value; draw(); });
     $('#sort-select').addEventListener('change', e => { state.sort = e.target.value; draw(); });
@@ -353,12 +418,18 @@
 
   /* ---------- PRODUCT ---------- */
   function renderProduct() {
-    const id = new URLSearchParams(location.search).get('id');
+    const id = document.body.dataset.productId || new URLSearchParams(location.search).get('id');
     const sourceProduct = GR.byId(id);
-    if (!sourceProduct) { $('#pd').innerHTML='<div class="notice-box">상품을 찾을 수 없어요. <a href="shop.html">전체 상품 보기</a></div>'; return; }
+    if (!sourceProduct || !isSaleProduct(sourceProduct)) {
+      noindexProductShell();
+      document.title = '판매 상품을 확인해 주세요 | 걸스라미';
+      $('#pd').innerHTML='<div class="notice-box">현재 판매 중인 상품이 아닙니다. <a href="shop.html">판매 상품 보기</a></div>';
+      $('.pd-tabs')?.remove(); $('.related')?.remove();
+      return;
+    }
     const p = { ...sourceProduct, name: nameFor(sourceProduct) };
-    document.title = `걸스라미 ${p.name} | GIRLSRAMI`;
-    const soon = p.stock === 0 || p.status === 'coming';
+    setProductMetadata(p);
+    const soon = !isSaleProduct(p);
     const detailImages = Array.isArray(p.detailImages) ? p.detailImages : [];
     const ai = window.GR_AI?.presentation(p);
     const editorial = ai && GR_AI.editorialFor(p);
@@ -378,9 +449,9 @@
       </div>
       <div class="pd-info">
         <div class="crumb"><a href="index.html">홈</a> › <a href="shop.html">전체 상품</a> › <a href="shop.html?cat=${encodeURIComponent(p.category)}">${esc(p.category)}</a></div>
-        <div class="badges" style="position:static;flex-direction:row;margin-bottom:12px">${p.badges.map(b => `<span class="badge ${badgeClass(b)}">${esc(p.newRelease && b === 'NEW' ? '신상' : b)}</span>`).join('')}</div>
+        <div class="badges" style="position:static;flex-direction:row;margin-bottom:12px">${saleBadgesFor(p).map(b => `<span class="badge accent">${esc(b)}</span>`).join('')}</div>
         <h1 class="name">걸스라미 ${esc(p.name)}</h1>
-        <div class="sub">${esc(p.sub)}</div>
+        <div class="sub">${esc(p.material || p.category)}</div>
         ${p.rating ? `<div class="rating" style="margin-top:10px"><span class="star">${stars(p.rating)}</span> <b>${p.rating}</b> <a class="muted" href="#reviews">리뷰 ${p.reviewCount}건</a></div>` : ''}
         ${p.pricePending ? '' : priceFor(p, true)}
         <div class="pd-ship"><span>배송 일정·배송비·교환 조건은 스마트스토어의 현재 상품 안내를 확인해 주세요.</span><span>${ai ? 'AI 코디 연출 · 실제 상품의 색상과 형태는 상세 실물 사진을 참고해 주세요.' : p.photoVerified ? '실제 상품 사진' : '촬영 콘셉트 시안 이미지 · 실제 상품과 다를 수 있어요.'}</span></div>
@@ -418,12 +489,12 @@
     if(editorialLayout) $('.pd-info .gift')?.remove();
     if(ai && !editorial && !detailImages.length) $('#pd-desc').insertAdjacentHTML('beforeend', GR_AI.care(p));
     $('#pd-reviews').innerHTML = p.reviews.length
-      ? `<div class="reviews">${p.reviews.map(r => `<div class="review"><div class="star">${'★'.repeat(r.stars)}${'☆'.repeat(5 - r.stars)}</div><p>"${esc(r.text)}"</p><div class="who">${esc(r.who)}${r.body ? ' · ' + esc(r.body) : ''} · 스마트스토어 구매 리뷰</div>${r.reply ? `<div class="reply"><b>걸스라미 답글</b>${esc(r.reply)}</div>` : ''}</div>`).join('')}</div><p class="small muted" style="margin-top:16px">전체 리뷰 ${p.reviewCount}건은 <a href="${p.smartstore || GR.STORE_URL}" target="_blank" rel="noopener" style="text-decoration:underline">스마트스토어 상품 페이지</a>에서 볼 수 있습니다. 저평점 리뷰에는 원인과 조치를 답글로 남깁니다.</p>`
+      ? `<div class="reviews">${p.reviews.map(r => `<div class="review"><div class="star">${'★'.repeat(r.stars)}${'☆'.repeat(5 - r.stars)}</div><p>"${esc(r.text)}"</p><div class="who">${esc(r.who)}${r.body ? ' · ' + esc(r.body) : ''} · 스마트스토어 구매 리뷰</div>${r.reply ? `<div class="reply"><b>걸스라미 답글</b>${esc(r.reply)}</div>` : ''}</div>`).join('')}</div><p class="small muted" style="margin-top:16px">전체 리뷰 ${p.reviewCount}건은 <a href="${p.smartstore || GR.STORE_URL}" target="_blank" rel="noopener" style="text-decoration:underline">스마트스토어 상품 페이지</a>에서 볼 수 있습니다.</p>`
       : ai ? `<div class="notice-box">${soon ? '출시 후 스마트스토어에서 실제 구매 후기를 확인해 주세요.' : '아직 등록된 리뷰 인용이 없습니다.'} <a href="${esc(p.smartstore || GR.STORE_URL)}" target="_blank" rel="noopener">스마트스토어 리뷰 확인</a></div>`
       : `<div class="notice-box">${soon ? '입고 전 상품입니다. 판매 시작 후 스마트스토어에서 실제 구매 후기를 확인해 주세요.' : '아직 등록된 리뷰 인용이 없습니다. 스마트스토어 리뷰를 확인해 주세요.'}</div>`;
     $('#pd-notice').innerHTML = `<div class="notice-box"><b>배송 · 교환 · 반품</b><p style="margin-top:10px">배송비, 출고 예정일과 교환·반품 조건은 주문하는 스마트스토어 상품 페이지의 현재 안내를 확인해 주세요. 주문 후 문의는 네이버 주문 내역과 톡톡으로 접수할 수 있어요.</p><a href="${p.smartstore || GR.STORE_URL}" target="_blank" rel="noopener">스마트스토어 상품 안내 확인</a></div>`;
     $$('.pd-tabs button').forEach(b => b.addEventListener('click', () => { $$('.pd-tabs button').forEach(x => x.classList.toggle('active', x === b)); $$('.pd-panel').forEach(pn => pn.hidden = pn.id !== b.dataset.tab); }));
-    const rel = GR.PRODUCTS.filter(x => x.id !== p.id && (x.category === p.category || x.line !== p.line)).slice(0, 4);
+    const rel = GR.PRODUCTS.filter(x => isSaleProduct(x) && x.id !== p.id && x.category === p.category).slice(0, 4);
     $('#related-grid').innerHTML = rel.map(card).join('');
     bindNotify();
   }

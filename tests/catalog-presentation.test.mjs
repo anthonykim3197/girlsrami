@@ -17,6 +17,7 @@ function product(overrides={}){
     id:'honey-loop-crop-knit',name:'허니루프 라운드 니트 (RM382)',sku:'RM382',styleCode:'',
     stock:10,status:'active',badges:[],category:'니트',line:'basic',sub:'작은 벌집 짜임',
     price:19900,channelPrice:{naver:16800},listPrice:0,pricePending:false,
+    storeUrl:'https://smartstore.naver.com/girlsrami/products/8087805239',
     colors:['크림'],sizes:['FREE'],rating:0,reviewCount:0,image:'honey',newRelease:true,
     ...overrides
   };
@@ -55,6 +56,9 @@ test('cards show an explicit Naver checkout price without inventing a discount',
   assert.match(html,/네이버 결제가/);
   assert.match(html,/16,800원/);
   assert.doesNotMatch(html,/class="off"/);
+  assert.equal(GR.storefront.offerPriceFor(product()),16800);
+  assert.equal(GR.storefront.availabilityFor(product()),'https://schema.org/InStock');
+  assert.equal(GR.storefront.availabilityFor(product({stock:0})),'https://schema.org/OutOfStock');
 
   const scalar=product({channelPrice:16800});
   assert.equal(GR.catalogPresentation.channelPriceFor(scalar),16800);
@@ -93,7 +97,7 @@ test('supported RM products receive responsive native detail with deliberate ima
   const GR=loadApp();
   const honey=GR.catalogPresentation.qualityEditorialHtml(product());
   assert.match(honey,/허니루프 라운드 니트/);
-  assert.match(honey,/짜임 하나로 달라지는, 오늘/);
+  assert.match(honey,/벌집 조직과 라운드넥, 총장 50cm/);
   assert.match(honey,/측정 단위는 확인 중/);
   assert.doesNotMatch(honey,/실측 사이즈 · cm/);
 
@@ -111,13 +115,13 @@ test('supported RM products receive responsive native detail with deliberate ima
     id:'off-duty-vneck-knit-vest',name:'오프듀티 V넥 니트 베스트',styleCode:'RM495',sku:'1020304050'
   }));
   assert.match(offDuty,/오프듀티 V넥 니트 베스트/);
-  assert.match(offDuty,/셔츠 위에 툭, 오늘의 한 겹/);
+  assert.match(offDuty,/V넥 입체 조직, 총장 46cm/);
   assert.match(offDuty,/앞목깊이<\/span><strong>14<\/strong>/);
 
   const muteLayer=GR.catalogPresentation.qualityEditorialHtml(product({
     id:'vneck-knit-vest',name:'뮤트레이어 V넥 니트 베스트',styleCode:'RM429',sku:'9721023441'
   }));
-  assert.match(muteLayer,/조용한 색감으로 완성하는 한 겹/);
+  assert.match(muteLayer,/보카시 조직과 깊은 V넥, 총장 54cm/);
   assert.match(muteLayer,/실물 사진 · 그레이 앞면/);
   assert.match(muteLayer,/ONE SIZE · 단면 기준 · 단위 cm/);
   assert.match(muteLayer,/<dt>사이즈<\/dt><dd>ONE SIZE<\/dd>.*<dt>제조자<\/dt><dd>걸스라미<\/dd>.*<dt>제조국<\/dt><dd>대한민국<\/dd>/s);
@@ -160,7 +164,7 @@ test('legacy RM429 without AI metadata still receives the native editorial layou
   };
   const legacy=product({
     id:'vneck-knit-vest',name:'뮤트레이어 V넥 니트 베스트',styleCode:'',sku:'9721023441',
-    catalogImage:'vest.jpg',newRelease:false,smartstore:null,storeUrl:null,
+    catalogImage:'vest.jpg',newRelease:false,smartstore:'https://smartstore.naver.com/girlsrami/products/9721023441',storeUrl:'https://smartstore.naver.com/girlsrami/products/9721023441',
     material:'',fit:'',length:'',thickness:'',stretch:'',sheer:'',care:'',desc:'',detailImages:[],reviews:[]
   });
   const GR={

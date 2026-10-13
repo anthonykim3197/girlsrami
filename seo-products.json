@@ -1,0 +1,328 @@
+{
+  "lastmod": "2026-10-13",
+  "source": {
+    "capturedAt": "2026-10-13",
+    "httpStatus": 200,
+    "note": "Public anonymous Supabase products snapshot; only active products with verified SmartStore URLs and verified real color photographs."
+  },
+  "products": [
+    {
+      "id": "cable-vneck-knit",
+      "name": "케이블 브이넥 꽈배기 니트",
+      "category": "니트",
+      "styleCode": "RM385",
+      "sku": "8087805239",
+      "price": 12900,
+      "priceSource": "payload.price",
+      "stock": 2546,
+      "storeUrl": "https://smartstore.naver.com/girlsrami/products/8087805239",
+      "material": "아크릴 100%",
+      "colors": [
+        "소라",
+        "회색",
+        "아이",
+        "베이지",
+        "연핑",
+        "보라",
+        "초록",
+        "곤색",
+        "검정"
+      ],
+      "realImage": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/cable-vneck-knit/source-rm385-black-71042f02cf24.jpg",
+      "sizes": [
+        {
+          "label": "FREE",
+          "chestHalf": 51,
+          "length": 57
+        }
+      ]
+    },
+    {
+      "id": "stripe-cable-half",
+      "name": "단가라 케이블 세미크롭 반팔 니트",
+      "category": "니트",
+      "styleCode": "RM401",
+      "sku": "8424655623",
+      "price": 11900,
+      "priceSource": "payload.price",
+      "stock": 1485,
+      "storeUrl": "https://smartstore.naver.com/girlsrami/products/8424655623",
+      "material": "아크릴 100%",
+      "colors": [
+        "곤색",
+        "베이지",
+        "초록",
+        "하늘",
+        "연핑"
+      ],
+      "realImage": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/stripe-cable-half/source-rm401-navy-a91f78ea5cd4.jpg",
+      "sizes": [
+        {
+          "label": "FREE",
+          "chestHalf": 46,
+          "length": 45
+        }
+      ]
+    },
+    {
+      "id": "vneck-knit-vest",
+      "name": "뮤트레이어 V넥 니트 베스트",
+      "category": "조끼",
+      "styleCode": "RM429",
+      "sku": "9721023441",
+      "price": 16800,
+      "priceSource": "payload.channelPrice.naver",
+      "displayPrice": 19900,
+      "stock": 1681,
+      "storeUrl": "https://smartstore.naver.com/girlsrami/products/9721023441",
+      "material": "리싸이클 폴리 34% · 아크릴 29% · 폴리 27% · 울 8% · 스판 2%",
+      "colors": [
+        "그레이프",
+        "모카",
+        "그레이",
+        "브라운",
+        "올리브",
+        "곤색"
+      ],
+      "realImage": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/actual/option-06--67ddcc980dea.jpg",
+      "sizes": [
+        {
+          "label": "ONE SIZE",
+          "chestHalf": 52,
+          "length": 54
+        }
+      ]
+    },
+    {
+      "id": "alpaca-round-knit",
+      "name": "알파카 혼방 루즈 라운드 니트",
+      "category": "니트",
+      "styleCode": "RM375",
+      "sku": "7594968064",
+      "price": 12900,
+      "priceSource": "payload.price",
+      "stock": 2093,
+      "storeUrl": "https://smartstore.naver.com/girlsrami/products/7594968064",
+      "material": "아크릴72 / 나일론13 / 알파카3 / 스판3",
+      "colors": [
+        "회색",
+        "차콜",
+        "파랑",
+        "크림",
+        "오렌지",
+        "네온",
+        "보라"
+      ],
+      "realImage": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/alpaca-round-knit/source-rm375-neon-7e00c704068d.jpg",
+      "sizes": [
+        {
+          "label": "FREE",
+          "chestHalf": 62,
+          "length": 53
+        }
+      ]
+    },
+    {
+      "id": "popcorn-vneck-half",
+      "name": "슬라브 팝콘 브이넥 반팔 니트",
+      "category": "니트",
+      "styleCode": "RM471",
+      "sku": "10115610353",
+      "price": 11900,
+      "priceSource": "payload.price",
+      "stock": 1197,
+      "storeUrl": "https://smartstore.naver.com/girlsrami/products/10115610353",
+      "material": "아크릴 100%",
+      "colors": [
+        "노랑",
+        "연두",
+        "베이지",
+        "검정"
+      ],
+      "realImage": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/popcorn-vneck-half/source-rm471-black-659fbdaf28c4.jpg",
+      "sizes": [
+        {
+          "label": "FREE",
+          "chestHalf": 45,
+          "length": 47
+        }
+      ]
+    },
+    {
+      "id": "recycled-round-sweater",
+      "name": "리싸이클 무지 박시 라운드 니트",
+      "category": "니트",
+      "styleCode": "RM418",
+      "sku": "9704215111",
+      "price": 13900,
+      "priceSource": "payload.price",
+      "stock": 1798,
+      "storeUrl": "https://smartstore.naver.com/girlsrami/products/9704215111",
+      "material": "리싸이클폴리 / 아크릴 / 폴리 / 울 / 스판",
+      "colors": [
+        "스카이",
+        "곤색",
+        "올리브",
+        "모카",
+        "그레이",
+        "브라운"
+      ],
+      "realImage": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/recycled-round-sweater/source-rm418-navy-8e21aeab029e.jpg",
+      "sizes": [
+        {
+          "label": "FREE",
+          "chestHalf": 53,
+          "length": 56
+        }
+      ]
+    },
+    {
+      "id": "boucle-crop-cardigan",
+      "name": "부클 라운드 크롭 니트 가디건",
+      "category": "가디건",
+      "styleCode": "RM277",
+      "sku": "6679667474",
+      "price": 12900,
+      "priceSource": "payload.price",
+      "stock": 1168,
+      "storeUrl": "https://smartstore.naver.com/girlsrami/products/6679667474",
+      "material": "아크릴 100%",
+      "colors": [
+        "연두",
+        "연밤",
+        "베이지",
+        "소라",
+        "곤색"
+      ],
+      "realImage": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/boucle-crop-cardigan/source-rm277-navy-c7852aadeb00.jpg",
+      "sizes": [
+        {
+          "label": "FREE",
+          "chestHalf": 51,
+          "length": 42
+        }
+      ]
+    },
+    {
+      "id": "fisherman-crop-bustier",
+      "name": "피셔맨 케이블 크롭 니트 뷔스티에",
+      "category": "조끼",
+      "styleCode": "RM336",
+      "sku": "6600921594",
+      "price": 10600,
+      "priceSource": "payload.price",
+      "stock": 1150,
+      "storeUrl": "https://smartstore.naver.com/girlsrami/products/6600921594",
+      "material": "아크릴 100%",
+      "colors": [
+        "베이지",
+        "연밤",
+        "소라",
+        "검정"
+      ],
+      "realImage": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/fisherman-crop-bustier/source-rm336-black-b920a9bb8e99.jpg",
+      "sizes": [
+        {
+          "label": "FREE",
+          "chestHalf": 41,
+          "length": 40
+        }
+      ]
+    },
+    {
+      "id": "boucle-round-half-cardigan",
+      "name": "부클 라운드 반팔 크롭 가디건",
+      "category": "가디건",
+      "styleCode": "RM279",
+      "sku": "5565703580",
+      "price": 11900,
+      "priceSource": "payload.price",
+      "stock": 1353,
+      "storeUrl": "https://smartstore.naver.com/girlsrami/products/5565703580",
+      "material": "아크릴 100%",
+      "colors": [
+        "라임",
+        "연두",
+        "베이지",
+        "소라",
+        "곤색"
+      ],
+      "realImage": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/boucle-round-half-cardigan/source-rm279-navy-5cc5c438adb1.jpg",
+      "sizes": [
+        {
+          "label": "FREE",
+          "chestHalf": 51,
+          "length": 42
+        }
+      ]
+    },
+    {
+      "id": "boucle-fisher-vneck-vest",
+      "name": "부클 피셔 케이블 브이넥 베스트",
+      "category": "조끼",
+      "styleCode": "RM274",
+      "sku": "5548814040",
+      "price": 9800,
+      "priceSource": "payload.price",
+      "stock": 1440,
+      "storeUrl": "https://smartstore.naver.com/girlsrami/products/5548814040",
+      "material": "아크릴 45% 폴리 55%",
+      "colors": [
+        "아이",
+        "연두",
+        "베이지",
+        "소라",
+        "연회색"
+      ],
+      "realImage": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/boucle-fisher-vneck-vest/source-rm274-sora-ab8a58836af1.jpg",
+      "sizes": [
+        {
+          "label": "FREE",
+          "chestHalf": 55,
+          "length": 46
+        }
+      ]
+    },
+    {
+      "id": "honey-loop-crop-knit",
+      "name": "허니루프 라운드 니트",
+      "category": "니트",
+      "styleCode": "RM382",
+      "sku": "RM382",
+      "price": 18700,
+      "priceSource": "payload.price",
+      "stock": 100,
+      "storeUrl": "https://smartstore.naver.com/girlsrami/products/13795042666",
+      "material": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+      "colors": [
+        "크림",
+        "카멜",
+        "차콜",
+        "스카이"
+      ],
+      "realImage": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/october-2026/honey-loop-crop-knit/front.jpg",
+      "sizes": []
+    },
+    {
+      "id": "off-duty-vneck-knit-vest",
+      "name": "오프듀티 V넥 니트 베스트",
+      "category": "조끼",
+      "styleCode": "RM495",
+      "sku": "RM495",
+      "price": 12900,
+      "priceSource": "payload.price",
+      "stock": 100,
+      "storeUrl": "https://smartstore.naver.com/girlsrami/products/13795688981",
+      "material": "아크릴 72% · 나일론 13% · 울 9% · 알파카 3% · 스판 3%",
+      "colors": [
+        "스카이",
+        "차콜",
+        "크림",
+        "카멜",
+        "회색"
+      ],
+      "realImage": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/october-2026/off-duty-vneck-knit-vest/front.jpg",
+      "sizes": []
+    }
+  ]
+}

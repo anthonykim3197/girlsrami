@@ -1,3 +1,6 @@
+@font-face{font-family:"Girlsrami Sans";src:url("fonts/GirlsramiSans-Regular.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"Girlsrami Sans";src:url("fonts/GirlsramiSans-Bold.woff2") format("woff2");font-style:normal;font-weight:700;font-display:swap}
+
 /* =====================================================
    GIRLSRAMI 자사몰 디자인 시스템
    ===================================================== */
@@ -5,14 +8,14 @@
   --bg:#F7F3EC; --bg-2:#EFE8DD; --surface:#FFFDFA; --ink:#1E1A16; --ink-2:#4A443D; --muted:#867D72; --line:#E4DCD0; --line-2:#D5CBBC;
   --accent:#C2603F; --accent-2:#A94E31; --accent-soft:#F6E3DA; --sage:#7F8B72; --sage-soft:#E8ECE2; --navy:#2E3A55;
   --ok:#3E7A5A; --ok-soft:#E3EFE7; --warn:#9A6A1C; --warn-soft:#F7EBD2;
-  --serif:"Noto Serif KR","Apple SD Gothic Neo",serif; --sans:"Pretendard","Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+  --serif:"Girlsrami Sans","Apple SD Gothic Neo",sans-serif; --sans:"Girlsrami Sans","Apple SD Gothic Neo",sans-serif;
   --max:1200px; --gutter:24px; --radius:14px; --radius-s:8px;
   --shadow:0 10px 30px rgba(50,40,30,.08); --shadow-s:0 4px 14px rgba(50,40,30,.06);
   --t:.22s cubic-bezier(.2,.7,.3,1);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{overflow-x:hidden;font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;font-size:15px;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word}
+body{overflow-x:hidden;font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;font-size:15px;letter-spacing:-.01em;word-break:keep-all;overflow-wrap:break-word;font-synthesis:none}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
@@ -455,7 +458,7 @@ ul{list-style:none}
 .source-editorial-gallery img{display:block;width:100%;height:auto;object-fit:contain}
 .source-editorial-gallery figcaption{padding:10px 0 20px;font-size:12px;line-height:1.7;color:var(--ink-2)}
 .source-editorial .editorial-facts{margin-top:32px}
-.quality-editorial{--quality-cream:#f6f0e8;--quality-paper:#fffdfa;--quality-ink:#241f1b;--quality-muted:#6e6258;--quality-accent:#9a5b43;--quality-line:#ded4c8;--quality-wash:#efe6da;width:100%;max-width:848px;margin:0 auto;background:var(--quality-paper);color:var(--quality-ink);font-family:"Pretendard Variable",Pretendard,"Apple SD Gothic Neo",sans-serif;font-size:clamp(16px,2.35vw,20px);line-height:1.75;word-break:keep-all;overflow:hidden}
+.quality-editorial{--quality-cream:#f6f0e8;--quality-paper:#fffdfa;--quality-ink:#241f1b;--quality-muted:#6e6258;--quality-accent:#9a5b43;--quality-line:#ded4c8;--quality-wash:#efe6da;width:100%;max-width:848px;margin:0 auto;background:var(--quality-paper);color:var(--quality-ink);font-family:var(--sans);font-size:clamp(16px,2.35vw,20px);line-height:1.75;word-break:keep-all;overflow:hidden}
 .quality-editorial *{box-sizing:border-box}
 .quality-editorial h2,.quality-editorial h3,.quality-editorial p,.quality-editorial figure,.quality-editorial figcaption,.quality-editorial dl,.quality-editorial dt,.quality-editorial dd{margin:0}
 .quality-editorial h2{font-family:inherit;font-size:clamp(27px,4.6vw,38px);line-height:1.3;letter-spacing:-.03em;font-weight:600;color:var(--quality-ink)}

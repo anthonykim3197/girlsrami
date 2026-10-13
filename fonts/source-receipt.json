@@ -1,0 +1,79 @@
+{
+  "retrieved_at": "2026-10-13T02:44:35Z",
+  "publisher": "Spoqa",
+  "official_site": "https://spoqa.github.io/spoqa-han-sans/ko-KR/",
+  "official_repository": "https://github.com/spoqa/spoqa-han-sans",
+  "release": {
+    "tag": "v2.1.2",
+    "published_at": "2018-05-10T10:02:18Z",
+    "url": "https://github.com/spoqa/spoqa-han-sans/releases/tag/v2.1.2",
+    "asset_url": "https://github.com/spoqa/spoqa-han-sans/releases/download/v2.1.2/SpoqaHanSans_original.zip",
+    "local_file": "SpoqaHanSans_original_v2.1.2.zip",
+    "sha256": "ed13952c25ad1b88c2a1d49b8ffc6462c79c8066dcaa8e2f1bd9169003310ac8"
+  },
+  "license": {
+    "name": "SIL Open Font License 1.1",
+    "source_url": "https://raw.githubusercontent.com/spoqa/spoqa-han-sans/v2.1.2/Original/SpoqaHanSans/LICENSE_OFL.txt",
+    "local_file": "LICENSE_OFL.txt",
+    "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+    "copyright_notice_file": "LICENSE.txt",
+    "copyright_notice_sha256": "240d8d836e78d6ca9a38876cfd492a3399de9b1c2b48f08d459b9860788eb162",
+    "summary": "폰트 자체를 단독 판매하지 않는 조건으로 사용·복사·임베드·수정·재배포 가능. 폰트 파일을 소프트웨어와 함께 배포할 때 저작권 고지와 OFL을 포함해야 하며, 수정본은 Reserved Font Name 조건을 따라야 한다."
+  },
+  "selection_note": "현재 공식 소개 페이지의 Neo가 아니라 관리표 225/226에 대응하는 원본 Spoqa Han Sans의 마지막 공식 릴리스 v2.1.2 Original TTF에서 Regular와 Bold만 추출했다.",
+  "fonts": [
+    {
+      "file": "SpoqaHanSansRegular.ttf",
+      "family": "SpoqaHanSans",
+      "full_name": "SpoqaHanSans-Regular",
+      "postscript_name": "SpoqaHanSans-Regular",
+      "style": "Regular",
+      "css_weight": 400,
+      "sha256": "1f56c8535b6592672ea7f540a67bb5792c34558d72875fc504166a3e2b28b4b1"
+    },
+    {
+      "file": "SpoqaHanSansBold.ttf",
+      "family": "SpoqaHanSans",
+      "full_name": "SpoqaHanSans-Bold",
+      "postscript_name": "SpoqaHanSans-Bold",
+      "style": "Bold",
+      "css_weight": 700,
+      "sha256": "5a6b9b258145e243dfd5f70cc869119c6af708843658e380304bdfe3d4f4eaef"
+    }
+  ],
+  "webfont_subset": {
+    "format": "WOFF2",
+    "tool": "fonttools 4.66.1 with brotli 1.2.0",
+    "unicode_ranges": "U+0000-024F,U+02B0-036F,U+1100-11FF,U+2000-206F,U+20A0-20CF,U+2100-214F,U+2150-218F,U+2190-23FF,U+2460-27BF,U+3000-303F,U+3130-318F,U+A960-A97F,U+AC00-D7A3,U+D7B0-D7FF,U+FE10-FE1F,U+FE30-FE6F,U+FF00-FFEF",
+    "layout_features": "kern,liga,clig,ccmp,locl,mark,mkmk",
+    "hinting": "removed",
+    "reserved_font_name_compliance": "The subset is a Modified Version under the OFL. Its primary, full and PostScript names were changed from the reserved name Spoqa Han Sans to Girlsrami Sans. LICENSE.txt contains the original copyright and Reserved Font Name notice.",
+    "note": "All Hangul syllables and every glyph present in the original font within the listed Korean, Latin, punctuation and symbol ranges are retained; Japanese and CJK unified ideographs are omitted.",
+    "outputs": [
+      {
+        "file": "GirlsramiSans-Regular.woff2",
+        "source_file": "SpoqaHanSansRegular.ttf",
+        "sha256": "dc99a3557523d583f15515f7e0762ec8b44341ffd1ef8adcd69fcf79ca92aeca",
+        "source_size_bytes": 29648388,
+        "output_size_bytes": 619568,
+        "source_cmap_count": 44652,
+        "subset_cmap_count": 12860,
+        "glyph_count": 12852,
+        "hangul_syllables": 11172,
+        "cjk_unified_ideographs": 0
+      },
+      {
+        "file": "GirlsramiSans-Bold.woff2",
+        "source_file": "SpoqaHanSansBold.ttf",
+        "sha256": "bc123ca6a522c523acc7845a900a90a434f7dc1448c141498979931424b47dea",
+        "source_size_bytes": 29724416,
+        "output_size_bytes": 628664,
+        "source_cmap_count": 44652,
+        "subset_cmap_count": 12860,
+        "glyph_count": 12852,
+        "hangul_syllables": 11172,
+        "cjk_unified_ideographs": 0
+      }
+    ]
+  }
+}

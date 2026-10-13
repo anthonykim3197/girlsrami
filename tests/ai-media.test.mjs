@@ -45,14 +45,14 @@ test('Horizontal drag follows next/previous direction, wraps both ends and ignor
  drag(60,1,7);assert.equal(h.angle.textContent,'315° / 360°');
  drag(140,0,0);assert.equal(h.angle.textContent,'0° / 360°');
 });
-test('Cards use AI for active cardigan while preserving pending prices and legacy imagery',()=>{
+test('Cards prefer verified real photographs and preserve pending prices and legacy imagery',()=>{
  const {api}=setup();const GR={COLORS:{},fmt:n=>String(n),discount:()=>10};
  const document={body:{dataset:{}},addEventListener(){}};const context={window:{GR,GR_AI:api},GR,GR_AI:api,document};
  vm.runInNewContext(readFileSync(new URL('../app.js',import.meta.url),'utf8'),context);
- const p={...product,id:'cardigan',stock:4,status:'active',badges:[],category:'니트',line:'basic',sub:'',price:12900,listPrice:0,rating:0,reviewCount:0,image:'old',newRelease:false};
- assert.match(GR.card(p),/sky-crop.png/);assert.match(GR.card(p),/12900/);
+ const p={...product,id:'cardigan',stock:4,status:'active',storeUrl:'https://smartstore.naver.com/girlsrami/products/1234567890',colorPhotos:{스카이:{image:'actual-sky.jpg',verified:true}},badges:[],category:'니트',line:'basic',sub:'',price:12900,listPrice:0,rating:0,reviewCount:0,image:'old',newRelease:false};
+ assert.match(GR.card(p),/actual-sky\.jpg/);assert.doesNotMatch(GR.card(p),/sky-crop\.png|ai-marker/);assert.match(GR.card(p),/12900/);
  const pending={...p,stock:0,status:'coming',pricePending:true,newRelease:true};assert.doesNotMatch(GR.card(pending),/12900/);assert.match(GR.card(pending),/판매 예정/);
- const legacy={...p};delete legacy.aiPresentation;assert.match(GR.card(legacy),/old.jpg/);assert.doesNotMatch(GR.card(legacy),/ai-marker/);
+ const legacy={...p};delete legacy.aiPresentation;delete legacy.colorPhotos;assert.match(GR.card(legacy),/old.jpg/);assert.doesNotMatch(GR.card(legacy),/ai-marker/);
 });
 test('Build includes shared AI script before app with content hashes',()=>{
  for(const page of ['index','shop','product']){
@@ -66,7 +66,10 @@ test('Editorial products use natural hero and only one outfit stage; color-speci
  assert.match(api.gallery(p,'블랙'),/natural-black.png/);assert.doesNotMatch(api.gallery(p,'블랙'),/ai-full-body/);
  assert.equal(api.turntableFor(p,'블랙').frames[7],'black-7.png');assert.equal(api.turntableFor(p,'missing'),null);
  const html=api.editorial(p,'스카이');assert.equal((html.match(/id="editorial-look-image"/g)||[]).length,1);assert.match(html,/styled-colors.png/);assert.doesNotMatch(html,/dinner-sky.png/);assert.match(html,/data-look="dinner"/);
+ assert.match(html,/AI 코디 구성/);assert.match(html,/판매 색상/);assert.match(html,/1번 코디/);
+ assert.doesNotMatch(html,/주말 산책|저녁 약속|Coffee walk|가벼운 데님과 스니커즈|취향|오늘의 약속/);
  const proof=api.proof(p);assert.match(proof,/real-macro.png/);assert.match(proof,/<dd>50<\/dd>/);assert.doesNotMatch(proof,/cm/);
+ assert.match(proof,/실물 소재와 마감/);
 });
 
 test('Global color update preserves room angle and pauses autoplay before loading matching frames',()=>{

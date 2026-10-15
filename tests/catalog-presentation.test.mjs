@@ -5,12 +5,18 @@ import {readFileSync} from 'node:fs';
 
 const appSource=readFileSync(new URL('../app.js',import.meta.url),'utf8');
 
-function loadApp(){
+function loadApp(detailCatalog={}){
   const GR={COLORS:{},fmt:n=>`${Number(n).toLocaleString('ko-KR')}원`,discount:p=>Math.round((1-p.price/p.listPrice)*100)};
   const document={body:{dataset:{}},addEventListener(){}};
-  vm.runInNewContext(appSource,{window:{GR},GR,document});
+  vm.runInNewContext(appSource,{window:{GR,GR_DETAIL:detailCatalog},GR,document});
   return GR;
 }
+
+test('verified design history overrides stale NEW flags while new designs retain the stamp',()=>{
+  const GR=loadApp({'honey-loop-crop-knit':{isNewDesign:false},'new-design':{isNewDesign:true}});
+  assert.doesNotMatch(GR.card(product({newRelease:true,badges:['NEW']})),/badge-new/);
+  assert.match(GR.card(product({id:'new-design',newRelease:false})),/badge-new[^>]*>NEW/);
+});
 
 function product(overrides={}){
   return {

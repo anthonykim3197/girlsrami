@@ -344,7 +344,8 @@
 
   /* ---------- Card ---------- */
   function stars(r) { const full = Math.round(r); return '★'.repeat(full) + '☆'.repeat(5 - full); }
-  function saleBadgesFor(p) { return p.newRelease ? ['NEW'] : []; }
+  function isNewDesign(p) { return window.GR_DETAIL?.[p.id]?.isNewDesign ?? (p.newRelease === true); }
+  function saleBadgesFor(p) { return isNewDesign(p) ? ['NEW'] : []; }
   function swatchColor(color, p) { return p?.colorHex?.[color] || GR.COLORS[color] || GR.COLORS[{ '스카이': '스카이블루', '회색': '그레이' }[color]] || '#ccc'; }
   function card(p) {
     p = { ...p, name: nameFor(p) };
@@ -394,8 +395,8 @@
   function renderHome() {
     const saleProducts = GR.PRODUCTS.filter(isSaleProduct);
     const featured = GR.CONTENT?.home ? GR.CONTENT.home.featuredIds.map(id=>GR.byId(id)).filter(isSaleProduct) : saleProducts.slice(0, 4);
-    const newProducts = saleProducts.filter(p => p.newRelease);
-    const best = newProducts.length ? [...newProducts, ...featured.filter(p => !p.newRelease)].slice(0, Math.max(4, featured.length)) : featured;
+    const newProducts = saleProducts.filter(isNewDesign);
+    const best = newProducts.length ? [...newProducts, ...featured.filter(p => !isNewDesign(p))].slice(0, Math.max(4, featured.length)) : featured;
     $('#best-grid').innerHTML = (best.length ? best : saleProducts.slice(0, 4)).map(card).join('');
     const rv = saleProducts.flatMap(p => p.reviews.filter(r => r.stars >= 4).map(r => ({ ...r, product: nameFor(p) }))).slice(0, 3);
     $('#home-reviews').innerHTML = rv.map(r => `<div class="review reveal"><div class="star">${'★'.repeat(r.stars)}</div><p>"${esc(r.text)}"</p><div class="who">${esc(r.who)} · ${esc(r.product)}${r.body ? ' · ' + esc(r.body) : ''}</div>${r.reply ? `<div class="reply"><b>걸스라미 답글</b>${esc(r.reply)}</div>` : ''}</div>`).join('');

@@ -30,7 +30,7 @@ const thumbnailFor=product=>details[product.id].thumbnail||product.realImage;
 const absoluteImage=path=>new URL(path,siteUrl).href;
 const leadFor=product=>details[product.id].lead||product.name;
 const imageAlt=product=>`${product.name}${details[product.id].thumbnailColor ? ` ${details[product.id].thumbnailColor}` : ''} 스타일링`;
-const newBadge=product=>catalogById.get(product.id)?.newRelease ? '<div class="badges"><span class="badge badge-new">NEW</span></div>' : '';
+const newBadge=product=>(details[product.id]?.isNewDesign ?? catalogById.get(product.id)?.newRelease) ? '<div class="badges"><span class="badge badge-new">NEW</span></div>' : '';
 const won=value=>`${Number(value).toLocaleString('ko-KR')}원`;
 const descriptionFor=product=>{
   const colors=product.colors?.length?`판매 색상 ${product.colors.join(', ')}. `:'';

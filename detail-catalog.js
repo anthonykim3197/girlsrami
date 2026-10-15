@@ -152,7 +152,8 @@ window.GR_DETAIL = {
       "파랑": "#2E78B0",
       "회색": "#999A97",
       "오렌지": "#C66E4B"
-    }
+    },
+    "isNewDesign": false
   },
   "boucle-crop-cardigan": {
     "lead": "데님 위에 짧게 떨어지는 가디건. 단추를 잠그면 니트 톱처럼 입을 수 있어요.",
@@ -352,7 +353,8 @@ window.GR_DETAIL = {
     "colorBoardSize": {
       "width": 1536,
       "height": 1024
-    }
+    },
+    "isNewDesign": false
   },
   "boucle-fisher-vneck-vest": {
     "lead": "티셔츠 위에도, 셔츠 위에도. 브이넥과 케이블 짜임이 심심한 조합을 채워줘요.",
@@ -480,7 +482,8 @@ window.GR_DETAIL = {
       "연두": "#B6C1A3",
       "베이지": "#C6B6A3",
       "연회색": "#B6B5B7"
-    }
+    },
+    "isNewDesign": false
   },
   "boucle-round-half-cardigan": {
     "lead": "라운드넥과 짧은 소매. 단추를 잠그고 데님과 가볍게 맞춰 입어요.",
@@ -620,7 +623,8 @@ window.GR_DETAIL = {
       "소라": "#A6BCC4",
       "연두": "#ADB88D",
       "베이지": "#D0C5B2"
-    }
+    },
+    "isNewDesign": false
   },
   "cable-vneck-knit": {
     "lead": "브이넥 아래로 이어지는 케이블. 평소 입던 데님에 클래식한 표정을 더해요.",
@@ -780,7 +784,8 @@ window.GR_DETAIL = {
       "초록": "#5F9A50",
       "회색": "#B7B6BE",
       "베이지": "#D2BC99"
-    }
+    },
+    "isNewDesign": false
   },
   "fisherman-crop-bustier": {
     "lead": "흰 티 위에 짧게 한 겹. 케이블 뷔스티에로 레이어드 비율을 바꿔보세요.",
@@ -901,7 +906,8 @@ window.GR_DETAIL = {
       "소라": "#8EA9B6",
       "연밤": "#9D8A7A",
       "베이지": "#C8B89D"
-    }
+    },
+    "isNewDesign": false
   },
   "honey-loop-crop-knit": {
     "lead": "작은 벌집 짜임과 넉넉한 몸판. 심플한 하의에 니트의 결을 더해요.",
@@ -1088,7 +1094,8 @@ window.GR_DETAIL = {
     "colorBoardSize": {
       "width": 1536,
       "height": 1024
-    }
+    },
+    "isNewDesign": false
   },
   "off-duty-vneck-knit-vest": {
     "lead": "흰 티와 데님 위에 하나만 더해도, 평소 입던 조합이 조금 달라져요.",
@@ -1355,7 +1362,8 @@ window.GR_DETAIL = {
     "colorBoardSize": {
       "width": 1536,
       "height": 1024
-    }
+    },
+    "isNewDesign": false
   },
   "popcorn-vneck-half": {
     "lead": "잔잔한 팝콘 짜임에 브이넥을 더했어요. 데님 하나로도 조합이 완성됩니다.",
@@ -1480,7 +1488,8 @@ window.GR_DETAIL = {
       "노랑": "#E4D990",
       "연두": "#B7CB9C",
       "베이지": "#C8BDA9"
-    }
+    },
+    "isNewDesign": false
   },
   "recycled-round-sweater": {
     "lead": "무늬 없이 담백한 라운드 니트. 데님이나 슬랙스에 편하게 돌려 입어요.",
@@ -1627,7 +1636,8 @@ window.GR_DETAIL = {
       "브라운": "#6F605B",
       "스카이": "#9CB7C3",
       "올리브": "#6D735D"
-    }
+    },
+    "isNewDesign": false
   },
   "stripe-cable-half": {
     "lead": "스트라이프와 케이블을 한 벌에. 단순한 팬츠에 맞춰도 밋밋하지 않아요.",
@@ -1827,7 +1837,8 @@ window.GR_DETAIL = {
       "초록": "#6FAB4E",
       "하늘": "#94B7C9",
       "베이지": "#C9B58F"
-    }
+    },
+    "isNewDesign": false
   },
   "vneck-knit-vest": {
     "lead": "티셔츠에 한 겹, 셔츠에 한 겹. 넓은 립 밑단으로 레이어드를 정리해요.",
@@ -2037,6 +2048,7 @@ window.GR_DETAIL = {
     "colorBoardSize": {
       "width": 1122,
       "height": 1402
-    }
+    },
+    "isNewDesign": false
   }
 };

@@ -298,11 +298,22 @@
   window.GR.catalogPresentation = Object.freeze({ nameFor, styleCodeFor, channelPriceFor, usesStandardEditorial, sourceEditorialFor, qualityEditorialFor, qualityEditorialHtml, factsFor });
 
   /* ---------- Header / Footer ---------- */
-  function renderChrome() {
+  function setMarkup(element, html) {
+    if (!element || element.innerHTML === html) return;
+    // Browsers normalize HTML attributes/entities while parsing the static page.
+    // Compare parsed nodes too, so hydration does not replace an identical tree.
+    if (element.childNodes?.length && document.createElement) {
+      const template = document.createElement('template');
+      template.innerHTML = html;
+      const current = [...element.childNodes], next = [...template.content.childNodes];
+      if (current.length === next.length && current.every((node, i) => node.isEqualNode(next[i]))) return;
+    }
+    element.innerHTML = html;
+  }
+  function chromeHtml(pageKey = page, year = new Date().getFullYear()) {
     const nav = [['index.html', '홈'], ['shop.html', '판매 상품'], ['story.html', '브랜드 이야기'], ['guide.html', '구매 안내']];
-    const activeKey = { home: 'index.html', shop: 'shop.html', story: 'story.html', guide: 'guide.html' }[page];
-    const header = $('#site-header');
-    if (header) header.innerHTML = `
+    const activeKey = { home: 'index.html', shop: 'shop.html', story: 'story.html', guide: 'guide.html' }[pageKey];
+    const header = `
       <div class="announce">주문·배송·혜택은 스마트스토어에서 확인해 주세요.</div>
       <div class="member-links wrap"><a href="cart.html">장바구니</a><a data-account-label href="account.html">로그인</a></div>
       <div class="header">
@@ -317,10 +328,7 @@
         </div>
         <div class="mobile-nav" id="mobile-nav">${nav.map(([h, t]) => `<a href="${h}">${t}</a>`).join('')}<a href="${GR.STORE_URL}" target="_blank" rel="noopener">스마트스토어에서 구매</a></div>
       </div>`;
-    const mb = $('#menu-btn'); if (mb) mb.addEventListener('click', () => $('#mobile-nav').classList.toggle('open'));
-
-    const footer = $('#site-footer');
-    if (footer) footer.innerHTML = `
+    const footer = `
       <div class="footer"><div class="wrap">
         <div class="cols">
           <div>
@@ -331,10 +339,17 @@
           <div><h5>BRAND</h5><ul><li><a href="story.html">브랜드 이야기</a></li><li><a href="story.html#principles">만드는 원칙</a></li><li><a href="guide.html#size">사이즈 가이드</a></li></ul></div>
           <div><h5>HELP</h5><ul><li><a href="guide.html#shipping">배송 · 교환 · 반품</a></li><li><a href="guide.html#faq">자주 묻는 질문</a></li><li><a href="${GR.TALK_URL}" target="_blank" rel="noopener">톡톡 상담</a></li></ul></div>
         </div>
-        <div class="legal">상호 대박이할머니 (브랜드 걸스라미) · 대표 신명숙 · 원산지 국산 · 결제와 주문 관리는 네이버 스마트스토어에서 진행됩니다.<br><a href="privacy.html">개인정보 처리 안내</a> · <a href="terms.html">회원 이용약관</a> · <a href="admin.html">걸스라미 관리</a><br>© ${new Date().getFullYear()} GIRLSRAMI. All rights reserved.</div>
-        <div class="disclaimer">상품의 현재 판매 옵션·가격·재고·배송 조건은 연결된 스마트스토어 상품 페이지에서 확인해 주세요.${page === 'product' && window.GR_DETAIL ? '' : ' 모델 착용 이미지는 AI로 제작한 스타일링 참고 이미지입니다. 실제 상품의 색상과 핏은 실물 사진과 상품 정보를 함께 확인해 주세요.'}</div>
+        <div class="legal">상호 대박이할머니 (브랜드 걸스라미) · 대표 신명숙 · 원산지 국산 · 결제와 주문 관리는 네이버 스마트스토어에서 진행됩니다.<br><a href="privacy.html">개인정보 처리 안내</a> · <a href="terms.html">회원 이용약관</a> · <a href="admin.html">걸스라미 관리</a><br>© ${year} GIRLSRAMI. All rights reserved.</div>
+        <div class="disclaimer">상품의 현재 판매 옵션·가격·재고·배송 조건은 연결된 스마트스토어 상품 페이지에서 확인해 주세요.${pageKey === 'product' && window.GR_DETAIL ? '' : ' 모델 착용 이미지는 AI로 제작한 스타일링 참고 이미지입니다. 실제 상품의 색상과 핏은 실물 사진과 상품 정보를 함께 확인해 주세요.'}</div>
       </div></div>
       <div class="toast" id="toast"></div>`;
+    return { header, footer };
+  }
+  function renderChrome() {
+    const html = chromeHtml();
+    setMarkup($('#site-header'), html.header);
+    setMarkup($('#site-footer'), html.footer);
+    const mb = $('#menu-btn'); if (mb) mb.addEventListener('click', () => $('#mobile-nav').classList.toggle('open'));
   }
 
   /* ---------- Toast ---------- */
@@ -347,14 +362,24 @@
   function isNewDesign(p) { return window.GR_DETAIL?.[p.id]?.isNewDesign ?? (p.newRelease === true); }
   function saleBadgesFor(p) { return isNewDesign(p) ? ['NEW'] : []; }
   function swatchColor(color, p) { return p?.colorHex?.[color] || GR.COLORS[color] || GR.COLORS[{ '스카이': '스카이블루', '회색': '그레이' }[color]] || '#ccc'; }
+  function reviewStatsFor(p) {
+    const snapshot = window.GR_SMARTSTORE_REVIEWS?.[p.id];
+    const marketplaceId = storeUrlFor(p).match(/^https:\/\/smartstore\.naver\.com\/girlsrami\/products\/(\d+)\/?$/)?.[1];
+    if (marketplaceId && snapshot?.source === 'naver-smartstore' && snapshot.productId === marketplaceId
+      && Number.isFinite(snapshot.rating) && snapshot.rating >= 0 && snapshot.rating <= 5
+      && Number.isInteger(snapshot.totalCount) && snapshot.totalCount > 0) {
+      return { rating: snapshot.rating, reviewCount: snapshot.totalCount };
+    }
+    return { rating: 0, reviewCount: 0 };
+  }
   function card(p) {
-    p = { ...p, name: nameFor(p) };
+    p = { ...p, name: nameFor(p), ...reviewStatsFor(p) };
     const soon = !isSaleProduct(p);
     const detail = window.GR_DETAIL?.[p.id];
     const cardImage = detail?.thumbnail || verifiedRealImageFor(p) || p.catalogImage || p.image + '.jpg';
     const imageLabel = detail?.thumbnail ? '스타일링' : '실물 사진';
     const sw = p.colors.slice(0, 6).map(c => `<span class="swatch" title="${esc(c)}" style="background:${swatchColor(c,p)}"></span>`).join('') + (p.colors.length > 6 ? `<span class="more">+${p.colors.length - 6}</span>` : '');
-    return `<a class="card reveal" href="${productHref(p)}">
+    return `<a class="card reveal in" href="${productHref(p)}">
       <div class="thumb ${soon ? 'soon' : ''}">
         <div class="badges">${saleBadgesFor(p).map(b => `<span class="badge badge-new">${esc(b)}</span>`).join('')}</div>
         <img src="${esc(cardImage)}" alt="${esc(p.name)} ${imageLabel}" loading="lazy" decoding="async">
@@ -372,10 +397,7 @@
 
   /* ---------- Reveal ---------- */
   function reveal() {
-    const els = $$('.reveal:not(.in)');
-    if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in')); return; }
-    const io = new IntersectionObserver(en => en.forEach(x => { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }), { rootMargin: '0px 0px -8% 0px' });
-    els.forEach(e => io.observe(e));
+    $$('.reveal:not(.in)').forEach(e => e.classList.add('in'));
   }
   window.GR.reveal = reveal;
 
@@ -392,38 +414,64 @@
   }
 
   /* ---------- HOME ---------- */
-  function renderHome() {
-    const saleProducts = GR.PRODUCTS.filter(isSaleProduct);
-    const featured = GR.CONTENT?.home ? GR.CONTENT.home.featuredIds.map(id=>GR.byId(id)).filter(isSaleProduct) : saleProducts.slice(0, 4);
-    const newProducts = saleProducts.filter(isNewDesign);
+  function homeProducts(products = GR.PRODUCTS, content = GR.CONTENT) {
+    const saleProducts = products.filter(isSaleProduct);
+    const featured = Array.isArray(content?.home?.featuredIds) ? content.home.featuredIds.map(id=>products.find(p => p.id === id)).filter(isSaleProduct) : saleProducts.slice(0, 4);
+    const newProducts = saleProducts.filter(isNewDesign).sort((a, b) => nameFor(a).localeCompare(nameFor(b), 'ko'));
     const best = newProducts.length ? [...newProducts, ...featured.filter(p => !isNewDesign(p))].slice(0, Math.max(4, featured.length)) : featured;
-    $('#best-grid').innerHTML = (best.length ? best : saleProducts.slice(0, 4)).map(card).join('');
+    return best.length ? best : saleProducts.slice(0, 4);
+  }
+  function homeReviews(products = GR.PRODUCTS) {
+    const saleProducts = products.filter(isSaleProduct);
     const rv = saleProducts.flatMap(p => p.reviews.filter(r => r.stars >= 4).map(r => ({ ...r, product: nameFor(p) }))).slice(0, 3);
-    $('#home-reviews').innerHTML = rv.map(r => `<div class="review reveal"><div class="star">${'★'.repeat(r.stars)}</div><p>"${esc(r.text)}"</p><div class="who">${esc(r.who)} · ${esc(r.product)}${r.body ? ' · ' + esc(r.body) : ''}</div>${r.reply ? `<div class="reply"><b>걸스라미 답글</b>${esc(r.reply)}</div>` : ''}</div>`).join('');
+    return rv.map(r => `<div class="review reveal in"><div class="star">${'★'.repeat(r.stars)}</div><p>"${esc(r.text)}"</p><div class="who">${esc(r.who)} · ${esc(r.product)}${r.body ? ' · ' + esc(r.body) : ''}</div>${r.reply ? `<div class="reply"><b>걸스라미 답글</b>${esc(r.reply)}</div>` : ''}</div>`).join('');
+  }
+  function renderHome() {
+    setMarkup($('#best-grid'), homeProducts().map(card).join(''));
+    setMarkup($('#home-reviews'), homeReviews());
   }
 
   /* ---------- SHOP ---------- */
+  function shopProducts(products = GR.PRODUCTS, state = {}) {
+    const {cat = '전체', size = 'all', sort = 'popular'} = state;
+    const list = products.filter(p => isSaleProduct(p) && (cat === '전체' || p.category === cat) && (size === 'all' || p.sizes.some(s => s.startsWith(size))));
+    const sorters = { popular: (a, b) => (reviewStatsFor(b).reviewCount - reviewStatsFor(a).reviewCount) || nameFor(a).localeCompare(nameFor(b), 'ko'), new: (a, b) => (b.releasedAt || '').localeCompare(a.releasedAt || '') || nameFor(a).localeCompare(nameFor(b), 'ko'), low: (a, b) => a.price - b.price, high: (a, b) => b.price - a.price, sale: (a, b) => GR.discount(b) - GR.discount(a) };
+    return list.sort(sorters[sort] || sorters.popular);
+  }
+  function categoryChips(products = GR.PRODUCTS, selected = '전체') {
+    const categories = ['전체', ...new Set(products.filter(isSaleProduct).map(p => p.category).filter(Boolean))];
+    return categories.map(c => `<button class="chip ${selected === c ? 'active' : ''}" data-cat="${esc(c)}">${esc(c)}</button>`).join('');
+  }
+  window.GR.pageMarkup = Object.freeze({ chrome: chromeHtml, homeProducts, homeReviews, shopProducts, categoryChips });
   function renderShop() {
     const params = new URLSearchParams(location.search);
-    const state = { cat: params.get('cat') || '전체', size: 'all', sort: 'popular' };
+    const sizeSelect = $('#size-select'), sortSelect = $('#sort-select');
+    const optionValue = (select, value, fallback) => [...select.options].some(option => option.value === value) ? value : fallback;
+    const state = { cat: params.get('cat') || '전체', size: optionValue(sizeSelect, params.get('size'), 'all'), sort: optionValue(sortSelect, params.get('sort'), 'popular') };
+    sizeSelect.value = state.size;
+    sortSelect.value = state.sort;
     const cats = $('#cat-chips'), grid = $('#shop-grid'), count = $('#shop-count'), title = $('#shop-title'), sub = $('#shop-sub');
-    const saleProducts = GR.PRODUCTS.filter(isSaleProduct);
-    const categories = ['전체', ...new Set(saleProducts.map(p => p.category).filter(Boolean))];
-    cats.innerHTML = categories.map(c => `<button class="chip ${state.cat === c ? 'active' : ''}" data-cat="${c}">${c}</button>`).join('');
+    setMarkup(cats, categoryChips(GR.PRODUCTS, state.cat));
+    function rememberFilters() {
+      const url = new URL(location.href);
+      for (const [key, fallback] of [['cat', '전체'], ['size', 'all'], ['sort', 'popular']]) {
+        if (state[key] === fallback) url.searchParams.delete(key);
+        else url.searchParams.set(key, state[key]);
+      }
+      window.history.replaceState(window.history.state, '', url.pathname + url.search + url.hash);
+    }
     function draw() {
-      let list = saleProducts.filter(p => (state.cat === '전체' || p.category === state.cat) && (state.size === 'all' || p.sizes.some(s => s.startsWith(state.size))));
-      const sorters = { popular: (a, b) => (b.reviewCount - a.reviewCount) || nameFor(a).localeCompare(nameFor(b), 'ko'), new: (a, b) => (b.releasedAt || '').localeCompare(a.releasedAt || '') || nameFor(a).localeCompare(nameFor(b), 'ko'), low: (a, b) => a.price - b.price, high: (a, b) => b.price - a.price, sale: (a, b) => GR.discount(b) - GR.discount(a) };
-      list = [...list].sort(sorters[state.sort]);
-      grid.innerHTML = list.length ? list.map(card).join('') : `<p class="muted" style="grid-column:1/-1;padding:40px 0">조건에 맞는 상품이 없습니다.</p>`;
+      const list = shopProducts(GR.PRODUCTS, state);
+      setMarkup(grid, list.length ? list.map(card).join('') : `<p class="muted" style="grid-column:1/-1;padding:40px 0">조건에 맞는 상품이 없습니다.</p>`);
       count.textContent = `${list.length}개 상품`;
       title.textContent = state.cat === '전체' ? '현재 판매 중인 상품' : state.cat;
       sub.textContent = '스마트스토어에서 구매할 수 있는 여성 니트·조끼·가디건입니다. 상품별 소재와 실측 정보를 확인해 보세요.';
       $$('#cat-chips .chip').forEach(b => b.classList.toggle('active', b.dataset.cat === state.cat));
       reveal();
     }
-    cats.addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; state.cat = b.dataset.cat; draw(); });
-    $('#size-select').addEventListener('change', e => { state.size = e.target.value; draw(); });
-    $('#sort-select').addEventListener('change', e => { state.sort = e.target.value; draw(); });
+    cats.addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; state.cat = b.dataset.cat; rememberFilters(); draw(); });
+    sizeSelect.addEventListener('change', e => { state.size = e.target.value; rememberFilters(); draw(); });
+    sortSelect.addEventListener('change', e => { state.sort = e.target.value; rememberFilters(); draw(); });
     draw();
   }
 
@@ -435,7 +483,11 @@
       noindexProductShell();
       document.title = '판매 상품을 확인해 주세요 | 걸스라미';
       $('#pd').innerHTML='<div class="notice-box">현재 판매 중인 상품이 아닙니다. <a href="shop.html">판매 상품 보기</a></div>';
-      $('.pd-tabs')?.remove(); $('.related')?.remove();
+      for (const selector of ['#pd-desc', '#pd-reviews', '#pd-notice']) {
+        const section = $(selector);
+        if (section) { section.innerHTML = ''; section.hidden = true; }
+      }
+      $('.pd-tabs')?.remove(); $('.grsd-section-nav')?.remove(); $('.related')?.remove();
       return;
     }
     const p = { ...sourceProduct, name: nameFor(sourceProduct) };
@@ -514,13 +566,21 @@
 
   /* ---------- Init ---------- */
   document.addEventListener('DOMContentLoaded', async () => {
-    await window.GR.bootPromise;
     renderChrome();
-    if (GR.bootError) { const target=$('#pd')||$('#shop-grid')||$('#best-grid');if(target)target.textContent='상품 데이터를 불러오지 못했어요. 잠시 후 다시 방문해 주세요.';return; }
+    bindNotify();
+    reveal();
+    await window.GR.bootPromise;
+    if (GR.bootError) {
+      const target = $('#pd') || $('#shop-grid') || $('#best-grid');
+      if (target && !target.innerHTML.trim()) target.textContent = '상품 데이터를 불러오지 못했어요. 잠시 후 다시 방문해 주세요.';
+      const cart = $('#add-cart'), status = $('#product-cart-status');
+      if (cart) cart.disabled = true;
+      if (status) status.textContent = '장바구니 연결을 확인하지 못했어요. 구매는 스마트스토어에서 진행해 주세요.';
+      return;
+    }
     if (page === 'home') renderHome();
     if (page === 'shop') renderShop();
     if (page === 'product') renderProduct();
-    bindNotify();
     reveal();
   });
 })();

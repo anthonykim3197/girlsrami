@@ -37,3 +37,13 @@ test('RM401 retains original color photographs and verified product measurements
   assert.equal(detail.measurements.find(m=>m.label==='가슴 단면').value,46);
   assert.equal(detail.measurements.find(m=>m.label==='총장').value,45);
 });
+
+test('RM401 offers four complete outfit choices across all five colors',()=>{
+  assert.equal(detail.looks.length,4);
+  const paths=detail.looks.flatMap(look=>colors.map(color=>{
+    assert.ok(look.images[color],`${look.id}: ${color} styling missing`);
+    return look.images[color];
+  }));
+  assert.equal(new Set(paths).size,20);
+  for(const path of paths){const bytes=asset(path);assert.equal(bytes.toString('ascii',8,12),'WEBP');assert.ok(bytes.length>10000);}
+});

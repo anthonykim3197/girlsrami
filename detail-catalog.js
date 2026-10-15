@@ -2707,6 +2707,56 @@ window.GR_DETAIL = {
           "하늘": "assets/detail/stripe-cable-half/v2/looks/sky.webp",
           "연핑": "assets/detail/stripe-cable-half/v2/looks/pink.webp"
         }
+      },
+      {
+        "id": "denim",
+        "label": "데님 스타일링",
+        "items": [
+          "중청 스트레이트 데님",
+          "오프화이트 스니커즈",
+          "미니 숄더백"
+        ],
+        "images": {
+          "곤색": "assets/detail/stripe-cable-half/v3/looks/denim-navy.webp",
+          "베이지": "assets/detail/stripe-cable-half/v3/looks/denim-beige.webp",
+          "초록": "assets/detail/stripe-cable-half/v3/looks/denim-green.webp",
+          "하늘": "assets/detail/stripe-cable-half/v3/looks/denim-sky.webp",
+          "연핑": "assets/detail/stripe-cable-half/v3/looks/denim-pink.webp"
+        }
+      },
+      {
+        "id": "skirt",
+        "label": "미디스커트 스타일링",
+        "items": [
+          "미디 A라인 스커트",
+          "플랫슈즈",
+          "미니백"
+        ],
+        "images": {
+          "곤색": "assets/detail/stripe-cable-half/v3/looks/skirt-navy.webp",
+          "베이지": "assets/detail/stripe-cable-half/v3/looks/skirt-beige.webp",
+          "초록": "assets/detail/stripe-cable-half/v3/looks/skirt-green.webp",
+          "하늘": "assets/detail/stripe-cable-half/v3/looks/skirt-sky.webp",
+          "연핑": "assets/detail/stripe-cable-half/v3/looks/skirt-pink.webp"
+        }
+      },
+      {
+        "id": "city-v3",
+        "label": "셔츠 · 슬랙스",
+        "items": [
+          "오프화이트 카라 셔츠",
+          "차콜 테일러드 슬랙스",
+          "블랙 로퍼",
+          "블랙 미니 토트",
+          "골드 이어링"
+        ],
+        "images": {
+          "곤색": "assets/detail/stripe-cable-half/v3/looks/city-navy.webp",
+          "베이지": "assets/detail/stripe-cable-half/v3/looks/city-beige.webp",
+          "초록": "assets/detail/stripe-cable-half/v3/looks/city-green.webp",
+          "하늘": "assets/detail/stripe-cable-half/v3/looks/city-sky.webp",
+          "연핑": "assets/detail/stripe-cable-half/v3/looks/city-pink.webp"
+        }
       }
     ],
     "model360": {

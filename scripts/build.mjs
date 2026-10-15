@@ -14,7 +14,12 @@ if (!details || JSON.stringify(Object.keys(details).sort()) !== JSON.stringify(s
 }
 const dataContext={window:{GR:{}}};dataContext.GR=dataContext.window.GR;
 vm.runInNewContext(await readFile(new URL('data.js',root),'utf8'),dataContext,{timeout:1000});
-const catalogById=new Map(dataContext.window.GR.PRODUCTS.map(product=>[product.id,product]));
+dataContext.window.GR_DETAIL=details;
+dataContext.document={body:{dataset:{}},addEventListener(){}};
+for(const file of ['smartstore-reviews.js','standard-detail.js','app.js'])vm.runInNewContext(await readFile(new URL(file,root),'utf8'),dataContext,{timeout:1000});
+const GR=dataContext.GR, presentation=dataContext.window.GRStandardDetail;
+const catalogById=new Map(GR.PRODUCTS.map(product=>[product.id,product]));
+const detailHelpers={...GR.storefront,card:GR.card};
 const maxAssetBytes=25*1024*1024;
 const draftProductImages=new Set([
   'p-wool-cable-regular.jpg','p-cashmere-turtle.jpg','p-alpaca-long-cardigan.jpg','p-knit-dress.jpg',
@@ -29,21 +34,10 @@ const productPath=product=>`product-${product.id}.html`;
 const thumbnailFor=product=>details[product.id].thumbnail||product.realImage;
 const absoluteImage=path=>new URL(path,siteUrl).href;
 const leadFor=product=>details[product.id].lead||product.name;
-const imageAlt=product=>`${product.name}${details[product.id].thumbnailColor ? ` ${details[product.id].thumbnailColor}` : ''} 스타일링`;
-const newBadge=product=>(details[product.id]?.isNewDesign ?? catalogById.get(product.id)?.newRelease) ? '<div class="badges"><span class="badge badge-new">NEW</span></div>' : '';
-const won=value=>`${Number(value).toLocaleString('ko-KR')}원`;
 const descriptionFor=product=>{
   const colors=product.colors?.length?`판매 색상 ${product.colors.join(', ')}. `:'';
   return `${product.name}. ${leadFor(product)} ${colors}현재 구매 가능한 옵션과 배송 조건은 스마트스토어에서 확인하세요.`;
 };
-const staticCard=product=>`<a class="card reveal in" href="${productPath(product)}">
-  <div class="thumb">${newBadge(product)}<img src="${htmlEscape(thumbnailFor(product))}" alt="${htmlEscape(imageAlt(product))}" loading="lazy" decoding="async"></div>
-  <div class="card-body"><div class="cat">${htmlEscape(product.category)}</div><div class="name">걸스라미 ${htmlEscape(product.name)}<small>${htmlEscape(leadFor(product))}</small></div><div class="price"><span class="price-label">스마트스토어 판매가</span><span class="now">${won(product.price)}</span></div></div>
-</a>`;
-const staticProductSummary=product=>`<div class="pd" id="pd">
-  <div class="pd-media"><img src="${htmlEscape(thumbnailFor(product))}" alt="${htmlEscape(imageAlt(product))}" fetchpriority="high"></div>
-  <div class="pd-info"><div class="crumb"><a href="index.html">홈</a> › <a href="shop.html">판매 상품</a> › ${htmlEscape(product.category)}</div><h1 class="name">걸스라미 ${htmlEscape(product.name)}</h1><p class="sub">${htmlEscape(leadFor(product))}</p><div class="price"><span class="price-label">스마트스토어 판매가</span><span class="now">${won(product.price)}</span></div><div class="pd-ship"><span>현재 옵션과 배송 조건은 스마트스토어에서 확인해 주세요.</span></div><div class="pd-cta"><a class="btn btn-accent btn-lg btn-block" href="${htmlEscape(product.storeUrl)}" target="_blank" rel="noopener">스마트스토어에서 구매하기 →</a></div></div>
-</div>`;
 const productJsonLd=product=>({
   '@context':'https://schema.org','@type':'Product',name:product.name,
   description:descriptionFor(product),image:[...new Set([absoluteImage(thumbnailFor(product)),absoluteImage(product.realImage)])],
@@ -98,19 +92,35 @@ for(const product of seo.products) {
   const description=descriptionFor(product);
   const jsonLd=JSON.stringify(productJsonLd(product)).replaceAll('<','\\u003c');
   const head=`<title>${htmlEscape(product.name)} | 걸스라미</title>\n<meta name="description" content="${htmlEscape(description)}">\n<link rel="canonical" href="${canonical}">\n<meta property="og:type" content="product">\n<meta property="og:site_name" content="걸스라미">\n<meta property="og:title" content="${htmlEscape(product.name)} | 걸스라미">\n<meta property="og:description" content="${htmlEscape(description)}">\n<meta property="og:url" content="${canonical}">\n<meta property="og:image" content="${htmlEscape(absoluteImage(thumbnailFor(product)))}">\n<script type="application/ld+json" data-product-json-ld>${jsonLd}</script>`;
+  const view=presentation.markup(catalogById.get(product.id),detailHelpers);
   const html=template
     .replace('<title>상품 | 걸스라미 GIRLSRAMI</title>\n<meta name="robots" content="noindex,follow">',head)
-    .replace('<body data-page="product">',`<body data-page="product" data-product-id="${htmlEscape(product.id)}">`)
-    .replace('<div class="pd" id="pd"></div>',staticProductSummary(product));
+    .replace('<body data-page="product">',`<body data-page="product" data-product-id="${htmlEscape(product.id)}" class="grsd-page">`)
+    .replace('<div class="pd" id="pd"></div>',`<div class="grsd" id="pd" data-render-key="${view.key}">${view.hero}</div>`)
+    .replace(/<div class="pd-tabs">[\s\S]*?<\/div>/,`<div class="grsd-section-nav">${view.nav}</div>`)
+    .replace('<div class="pd-panel pd-desc" id="pd-desc"></div>',`<div class="grsd grsd-detail" id="pd-desc">${view.detail}</div>`)
+    .replace('<div class="pd-panel" id="pd-reviews" hidden></div>',`<div class="grsd grsd-lower grsd-reviews" id="pd-reviews">${view.reviews}</div>`)
+    .replace('<div class="pd-panel" id="pd-notice" hidden></div>',`<div class="grsd grsd-lower" id="pd-notice">${view.notice}</div>`)
+    .replace('<div class="grid" id="related-grid"></div>',`<div class="grid" id="related-grid">${view.related}</div>`);
   await writeFile(new URL(productPath(product),out),html);
 }
 
-for(const [name,count] of [['index.html',4],['shop.html',seo.products.length]]) {
+for(const name of ['index.html','shop.html']) {
   const path=new URL(name,out);
-  const html=await readFile(path,'utf8');
-  const id=name==='index.html'?'best-grid':'shop-grid';
-  const cards=seo.products.slice(0,count).map(staticCard).join('\n');
-  await writeFile(path,html.replace(`<div class="grid" id="${id}"></div>`,`<div class="grid" id="${id}">\n${cards}\n</div>`));
+  let html=await readFile(path,'utf8');
+  const home=name==='index.html',id=home?'best-grid':'shop-grid';
+  const selected=home?GR.pageMarkup.homeProducts():GR.pageMarkup.shopProducts();
+  html=html.replace(`<div class="grid" id="${id}"></div>`,`<div class="grid" id="${id}">${selected.map(GR.card).join('')}</div>`);
+  if(home)html=html.replace('<div class="reviews" id="home-reviews"></div>',`<div class="reviews" id="home-reviews">${GR.pageMarkup.homeReviews()}</div>`);
+  else html=html.replace('<div class="chips" id="cat-chips"></div>',`<div class="chips" id="cat-chips">${GR.pageMarkup.categoryChips()}</div>`).replace('<span class="count" id="shop-count"></span>',`<span class="count" id="shop-count">${selected.length}개 상품</span>`);
+  await writeFile(path,html);
+}
+// Navigation dimensions must exist in the first document on every public page.
+for(const name of await readdir(out)){
+  if(!name.endsWith('.html'))continue;
+  const path=new URL(name,out),html=await readFile(path,'utf8'),page=html.match(/data-page="([^"]+)"/)?.[1]||'';
+  const chrome=GR.pageMarkup.chrome(page);
+  await writeFile(path,html.replace('<div id="site-header"></div>',`<div id="site-header">${chrome.header}</div>`).replace('<div id="site-footer"></div>',`<div id="site-footer">${chrome.footer}</div>`));
 }
 
 const sitemapPages=['','shop.html','story.html','guide.html',...seo.products.map(productPath)];

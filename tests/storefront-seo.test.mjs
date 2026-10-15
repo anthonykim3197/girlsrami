@@ -29,10 +29,10 @@ test('the sitemap and static product pages expose only the verified sale catalog
     const path=`product-${product.id}.html`;
     const html=readDist(path);
     assert.match(sitemap,new RegExp(`<loc>https://girlslami\\.com/${path}</loc>`));
-    assert.match(html,new RegExp(`<body data-page="product" data-product-id="${product.id}">`));
+    assert.match(html,new RegExp(`<body data-page="product" data-product-id="${product.id}" class="grsd-page">`));
     assert.match(html,new RegExp(`<link rel="canonical" href="https://girlslami\\.com/${path}">`));
-    assert.match(html,new RegExp(`<h1 class="name">걸스라미 ${product.name}</h1>`));
-    assert.match(html,new RegExp(`<span class="now">${Number(product.price).toLocaleString('ko-KR')}원</span>`));
+    assert.match(html,new RegExp(`<h1>${product.name}</h1>`));
+    assert.match(html,new RegExp(`<p class="grsd-price">${Number(product.price).toLocaleString('ko-KR')}<span>원</span></p>`));
     assert.doesNotMatch(html,/name="robots" content="noindex/i);
     const raw=html.match(/<script type="application\/ld\+json" data-product-json-ld>(.*?)<\/script>/s)?.[1];
     assert.ok(raw,`${product.id} Product JSON-LD`);

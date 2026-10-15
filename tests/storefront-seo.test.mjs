@@ -1,12 +1,15 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import vm from 'node:vm';
-import {readFileSync} from 'node:fs';
+import {readFileSync,readdirSync,statSync,existsSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 
 const root=new URL('../',import.meta.url);
 const manifest=JSON.parse(readFileSync(new URL('seo-products.json',root),'utf8'));
 const readDist=name=>readFileSync(new URL(`dist/${name}`,root),'utf8');
+const detailContext={window:{}};
+vm.runInNewContext(readFileSync(new URL('detail-catalog.js',root),'utf8'),detailContext);
+const details=detailContext.window.GR_DETAIL;
 
 test('the public fallback catalog contains the same twelve sale products and no draft concepts',()=>{
   const context={window:{GR:{}}};context.GR=context.window.GR;
@@ -35,7 +38,11 @@ test('the sitemap and static product pages expose only the verified sale catalog
     assert.ok(raw,`${product.id} Product JSON-LD`);
     const json=JSON.parse(raw);
     assert.equal(json['@type'],'Product');
-    assert.deepEqual(json.image,[product.realImage]);
+    const hero=new URL(details[product.id].thumbnail,'https://girlslami.com/').href;
+    assert.deepEqual(json.image,[...new Set([hero,product.realImage])]);
+    assert.ok(html.includes(`<meta property="og:image" content="${hero}">`));
+    assert.ok(html.includes(details[product.id].lead));
+    assert.ok(html.includes(`src="${details[product.id].thumbnail}"`));
     assert.equal(json.offers.price,product.price);
     assert.equal(json.offers.url,product.storeUrl);
     assert.equal(json.offers.availability,product.stock>0?'https://schema.org/InStock':'https://schema.org/OutOfStock');
@@ -46,6 +53,13 @@ test('the sitemap and static product pages expose only the verified sale catalog
   }
   assert.equal((readDist('shop.html').match(/<a class="card reveal in" href="product-/g)||[]).length,manifest.products.length);
   assert.equal((readDist('index.html').match(/<a class="card reveal in" href="product-/g)||[]).length,4);
+  assert.equal(manifest.lastmod,'2026-10-15');
+  assert.deepEqual(Object.keys(details).sort(),manifest.products.map(product=>product.id).sort());
+  for(const name of ['index.html','shop.html','product.html']){
+    const html=readDist(name);
+    assert.ok(html.indexOf('detail-catalog.js')<html.indexOf('src="app.js'),`${name} loads presentation before app`);
+    assert.match(html,/href="catalog\.css\?v=/);
+  }
 });
 
 test('the generic product shell stays out of search and crawl controls are real files',()=>{
@@ -53,6 +67,52 @@ test('the generic product shell stays out of search and crawl controls are real 
   assert.match(readDist('_headers'),/\/product\.html\n\s+X-Robots-Tag: noindex, follow, noimageindex/);
   assert.match(readDist('robots.txt'),/^User-agent: \*\nAllow: \/\nSitemap: https:\/\/girlslami\.com\/sitemap\.xml\n$/);
   assert.match(readDist('sitemap.xml'),/^<\?xml version="1\.0" encoding="UTF-8"\?>/);
+  assert.match(readDist('404.html'),/name="robots" content="noindex,follow,noimageindex"/);
+  assert.match(readDist('404.html'),/href="\/shop"/);
+  assert.doesNotMatch(readDist('sitemap.xml'),/404\.html/);
+});
+
+test('detail media is packaged without private working folders or oversized uploads',()=>{
+  const files=[];
+  function walk(relative){
+    for(const entry of readdirSync(new URL(`dist/${relative}`,root),{withFileTypes:true})){
+      const child=relative+entry.name;
+      if(entry.isDirectory()) walk(child+'/');
+      else files.push(child);
+    }
+  }
+  walk('assets/');
+  assert.ok(files.length>0);
+  assert.ok(files.every(file=>file.startsWith('assets/detail/')));
+  for(const file of files){
+    assert.match(file,/\.(?:jpe?g|png|webp|avif|gif|svg)$/i);
+    assert.ok(statSync(new URL(`dist/${file}`,root)).size<=25*1024*1024,file);
+  }
+  function checkReferences(value){
+    if(typeof value==='string'&&value.startsWith('assets/detail/')) assert.ok(existsSync(new URL(`dist/${value}`,root)),value);
+    else if(value&&typeof value==='object') Object.values(value).forEach(checkReferences);
+  }
+  checkReferences(details);
+  for(const privateFolder of ['supabase','node_modules','model-character-sheet','new_goods','audit']){
+    assert.equal(existsSync(new URL(`dist/${privateFolder}/`,root)),false);
+  }
+  assert.equal(existsSync(new URL('dist/standard-detail-review-mobile.html',root)),false);
+});
+
+test('runtime cards use the approved hero and copy while preserving prices and real-photo fallback',()=>{
+  const GR={COLORS:{},fmt:n=>`${n}원`,discount:()=>0};
+  const document={body:{dataset:{}},addEventListener(){}};
+  const presentation={thumbnail:'assets/detail/example/hero-reference-v1.webp',lead:'흰 티와 데님 위에 가볍게.'};
+  vm.runInNewContext(readFileSync(new URL('app.js',root),'utf8'),{window:{GR,GR_DETAIL:{example:presentation}},GR,document});
+  const product={id:'example',name:'베스트',category:'조끼',newRelease:true,status:'active',storeUrl:'https://smartstore.naver.com/girlsrami/products/1234',colors:[],price:12900,listPrice:0,rating:0,image:'actual',photoVerified:true};
+  const html=GR.card(product);
+  assert.ok(html.includes(presentation.thumbnail));
+  assert.ok(html.includes(presentation.lead));
+  assert.match(html,/badge-new">NEW/);
+  assert.doesNotMatch(html,/신상|AI 코디|실물 사진/);
+  assert.match(html,/12900원/);
+  assert.match(GR.card({...product,id:'other'}),/src="actual"[^>]+실물 사진/);
+  assert.match(readDist('data.js'),/https:\/\/talk\.naver\.com\/ct\/w4j7l2#nafullscreen/);
 });
 
 test('the storefront self-hosts the licensed Korean webfont subset and uses a static GR favicon',()=>{

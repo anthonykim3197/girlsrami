@@ -6,7 +6,7 @@
 window.GR = window.GR || {};
 
 GR.STORE_URL = 'https://smartstore.naver.com/girlsrami';
-GR.TALK_URL = 'https://smartstore.naver.com/girlsrami'; /* 스토어 홈의 톡톡 버튼으로 연결 */
+GR.TALK_URL = 'https://talk.naver.com/ct/w4j7l2#nafullscreen'; /* 걸스라미 톡톡 상담 */
 GR.CHAT_ENDPOINT = 'https://girlsrami-chat.clever-insight.vip'; /* 자동상담 AI 서버 (룰 엔진은 브라우저에서 동작, AI 폴백만 서버 호출) */
 
 GR.COLORS = {

@@ -1,0 +1,12 @@
+/* Shared sale cards: editorial image, concise product copy, familiar color chips. */
+.card .thumb{aspect-ratio:3/4;border-radius:0;background:#efeee8}
+.card .thumb img{width:100%;height:100%;object-fit:cover;object-position:center top;transform-origin:center top}
+.card .badges{top:14px;left:14px}
+.card .badge-new{border-radius:0;background:#252720;color:#fff;padding:7px 11px;font-size:10px;font-weight:700;line-height:1.2;letter-spacing:.16em;box-shadow:none}
+.card .card-body{padding-top:19px}
+.card .cat{font-size:11px;font-weight:400;letter-spacing:.08em;color:#73786a}
+.card .name{margin-top:7px;font-size:17px;line-height:1.55}
+.card .name small{display:block;margin-top:7px;font-size:13px;font-weight:400;line-height:1.7;color:#76796e}
+.card .swatches{gap:8px}
+.card .swatch{width:12px;height:12px}
+@media(max-width:600px){.card .badges{top:10px;left:10px}.card .badge-new{padding:6px 8px;font-size:9px}.card .name{font-size:15px}.card .name small{font-size:12px}.card .card-body{padding-top:14px}}

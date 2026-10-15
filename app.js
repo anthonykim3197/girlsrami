@@ -44,9 +44,12 @@
   function setProductMetadata(p) {
     const canonical = SITE_URL + productHref(p);
     const material = String(p.material || '').trim();
+    const detail = window.GR_DETAIL?.[p.id];
     const colors = Array.isArray(p.colors) && p.colors.length ? p.colors.join(', ') : '';
-    const description = `${nameFor(p)}. ${material}${material ? '. ' : ''}${colors ? `판매 색상 ${colors}. ` : ''}현재 구매 가능한 옵션과 배송 조건은 스마트스토어에서 확인하세요.`;
-    const image = verifiedRealImageFor(p);
+    const description = `${nameFor(p)}. ${detail?.lead || material}${detail?.lead ? ' ' : material ? '. ' : ''}${colors ? `판매 색상 ${colors}. ` : ''}현재 구매 가능한 옵션과 배송 조건은 스마트스토어에서 확인하세요.`;
+    const absoluteImage = value => /^https?:\/\//i.test(value) ? value : SITE_URL + value.replace(/^\//, '');
+    const realImage = verifiedRealImageFor(p);
+    const image = detail?.thumbnail || realImage;
     document.title = `${nameFor(p)} | 걸스라미`;
     if (!document.head) return;
     setMeta('meta[name="description"]', 'name', 'description');
@@ -55,12 +58,12 @@
     setMeta('meta[property="og:title"]', 'property', 'og:title'); document.head.querySelector('meta[property="og:title"]').content = `${nameFor(p)} | 걸스라미`;
     setMeta('meta[property="og:description"]', 'property', 'og:description'); document.head.querySelector('meta[property="og:description"]').content = description;
     setMeta('meta[property="og:url"]', 'property', 'og:url'); document.head.querySelector('meta[property="og:url"]').content = canonical;
-    if (image) { setMeta('meta[property="og:image"]', 'property', 'og:image'); document.head.querySelector('meta[property="og:image"]').content = image; }
+    if (image) { setMeta('meta[property="og:image"]', 'property', 'og:image'); document.head.querySelector('meta[property="og:image"]').content = absoluteImage(image); }
     setCanonical(canonical);
     document.head.querySelector('meta[name="robots"]')?.remove();
     const jsonLd = {
       '@context': 'https://schema.org', '@type': 'Product', name: nameFor(p), description,
-      ...(image ? { image: [image] } : {}),
+      ...(image ? { image: [...new Set([image, realImage].filter(Boolean).map(absoluteImage))] } : {}),
       sku: styleCodeFor(p) || String(p.sku || ''), category: p.category || undefined,
       brand: { '@type': 'Brand', name: '걸스라미' },
       offers: { '@type': 'Offer', url: storeUrlFor(p), priceCurrency: 'KRW', price: offerPriceFor(p), availability: availabilityFor(p), seller: { '@type': 'Organization', name: '걸스라미' } }
@@ -329,7 +332,7 @@
           <div><h5>HELP</h5><ul><li><a href="guide.html#shipping">배송 · 교환 · 반품</a></li><li><a href="guide.html#faq">자주 묻는 질문</a></li><li><a href="${GR.TALK_URL}" target="_blank" rel="noopener">톡톡 상담</a></li></ul></div>
         </div>
         <div class="legal">상호 대박이할머니 (브랜드 걸스라미) · 대표 신명숙 · 원산지 국산 · 결제와 주문 관리는 네이버 스마트스토어에서 진행됩니다.<br><a href="privacy.html">개인정보 처리 안내</a> · <a href="terms.html">회원 이용약관</a> · <a href="admin.html">걸스라미 관리</a><br>© ${new Date().getFullYear()} GIRLSRAMI. All rights reserved.</div>
-        <div class="disclaimer">상품의 현재 판매 옵션·가격·재고·배송 조건은 연결된 스마트스토어 상품 페이지에서 확인해 주세요. AI 코디 이미지는 화면에 별도로 표시하며, 실제 상품 사진과 구분합니다.</div>
+        <div class="disclaimer">상품의 현재 판매 옵션·가격·재고·배송 조건은 연결된 스마트스토어 상품 페이지에서 확인해 주세요.${page === 'product' && window.GR_DETAIL ? '' : ' 모델 착용 이미지는 AI로 제작한 스타일링 참고 이미지입니다. 실제 상품의 색상과 핏은 실물 사진과 상품 정보를 함께 확인해 주세요.'}</div>
       </div></div>
       <div class="toast" id="toast"></div>`;
   }
@@ -341,22 +344,24 @@
 
   /* ---------- Card ---------- */
   function stars(r) { const full = Math.round(r); return '★'.repeat(full) + '☆'.repeat(5 - full); }
-  function saleBadgesFor(p) { return p.newRelease ? ['신상'] : []; }
+  function saleBadgesFor(p) { return p.newRelease ? ['NEW'] : []; }
   function swatchColor(color, p) { return p?.colorHex?.[color] || GR.COLORS[color] || GR.COLORS[{ '스카이': '스카이블루', '회색': '그레이' }[color]] || '#ccc'; }
   function card(p) {
     p = { ...p, name: nameFor(p) };
     const soon = !isSaleProduct(p);
-    const cardImage = verifiedRealImageFor(p) || p.catalogImage || p.image + '.jpg';
+    const detail = window.GR_DETAIL?.[p.id];
+    const cardImage = detail?.thumbnail || verifiedRealImageFor(p) || p.catalogImage || p.image + '.jpg';
+    const imageLabel = detail?.thumbnail ? '스타일링' : '실물 사진';
     const sw = p.colors.slice(0, 6).map(c => `<span class="swatch" title="${esc(c)}" style="background:${swatchColor(c,p)}"></span>`).join('') + (p.colors.length > 6 ? `<span class="more">+${p.colors.length - 6}</span>` : '');
     return `<a class="card reveal" href="${productHref(p)}">
       <div class="thumb ${soon ? 'soon' : ''}">
-        <div class="badges">${saleBadgesFor(p).map(b => `<span class="badge accent">${esc(b)}</span>`).join('')}</div>
-        <img src="${esc(cardImage)}" alt="${esc(p.name)} 실물 사진" loading="lazy">
+        <div class="badges">${saleBadgesFor(p).map(b => `<span class="badge badge-new">${esc(b)}</span>`).join('')}</div>
+        <img src="${esc(cardImage)}" alt="${esc(p.name)} ${imageLabel}" loading="lazy" decoding="async">
         ${soon ? `<div class="soon-tag">${p.newRelease ? '판매 예정' : '입고 예정'} <span>${esc(p.eta || '판매 일정 확인 중')}</span></div>` : ''}
       </div>
       <div class="card-body">
-        <div class="cat">${esc(p.category)} · 판매 중</div>
-        <div class="name">걸스라미 ${esc(p.name)}<small>${esc(p.material || p.sub)}</small></div>
+        <div class="cat">${esc(p.category)}</div>
+        <div class="name">걸스라미 ${esc(p.name)}<small>${esc(detail?.lead || p.sub || p.material)}</small></div>
         ${p.pricePending ? '' : priceFor(p)}
         ${p.colors.length ? `<div class="swatches">${sw}</div>` : ''}
         ${p.rating ? `<div class="rating"><span class="star">${stars(p.rating)}</span> ${p.rating} <span class="muted">(${p.reviewCount})</span></div>` : `<div class="rating muted">${soon ? '스마트스토어 입고 후 판매' : ''}</div>`}
@@ -434,6 +439,7 @@
     }
     const p = { ...sourceProduct, name: nameFor(sourceProduct) };
     setProductMetadata(p);
+    if (window.GRStandardDetail?.render(p, { card, isSaleProduct, productHref, offerPriceFor })) return;
     const soon = !isSaleProduct(p);
     const detailImages = Array.isArray(p.detailImages) ? p.detailImages : [];
     const ai = window.GR_AI?.presentation(p);

@@ -1,68 +1,107 @@
-# Storefront detail coverage — 2026-10-15
+# 자사몰 상세 미디어 범위 — 2026-10-15
 
-This release uses one storefront detail renderer and `detail-catalog.js` for the twelve real products whose public catalog status was `active` on 2026-10-15. New-product drafts and F/W demonstration items are excluded from the production detail content manifest.
+## 현재 제작·통합 범위
 
-## Current sale products
+기존 공개 판매 **12종, 판매 옵션 65색**에 공통 상세페이지를 적용했다. 각 판매색마다 얼굴이 보이는 착장 화보, 모델 착용 8방향, 제품 단독 8방향을 연결했다. 새 WebP 320개와 추가 코디를 `detail-catalog.js`에 모두 통합했고 자동 검사 65개가 통과했다. **최종 운영 배포는 대기 중**이며, 제작·통합 완료를 배포 성공으로 간주하지 않는다.
 
-| Code | Product | Outfit images | Model 360° | Product-only 360° | Actual eight-angle photos |
-|---|---|---|---|---|---|
-| RM375 | 알파카 혼방 루즈 라운드 니트 | One reference color / one generated styling | — | — | — |
-| RM277 | 부클 라운드 크롭 니트 가디건 | 4 outfits × 5 colors | — | — | — |
-| RM274 | 부클 피셔 케이블 브이넥 베스트 | One reference color / one generated styling | — | — | — |
-| RM279 | 부클 라운드 반팔 크롭 가디건 | One reference color / one generated styling | — | — | — |
-| RM385 | 케이블 브이넥 꽈배기 니트 | One reference color / one generated styling | — | — | — |
-| RM336 | 피셔맨 케이블 크롭 니트 뷔스티에 | One reference color / one generated styling | — | — | — |
-| RM382 | 허니루프 라운드 니트 | 4 outfits × 4 colors | 4 colors × 8 frames | — | Local originals exist; production manifest uses public front photo |
-| RM495 | 오프듀티 V넥 니트 베스트 | 4 outfits × 5 colors | 5 colors × 8 frames | 5 colors × 8 frames | Gray sample, 8 originals |
-| RM471 | 슬라브 팝콘 브이넥 반팔 니트 | One reference color / one generated styling | — | — | — |
-| RM418 | 리싸이클 무지 박시 라운드 니트 | One reference color / one generated styling | — | — | — |
-| RM401 | 단가라 케이블 세미크롭 반팔 니트 | 1 outfit × all 5 colors | 5 colors × 8 views | 5 colors × 8 views | Separate actual front photos for all 5 colors |
-| RM429 | 뮤트레이어 V넥 니트 베스트 | 4 outfits × 6 colors | — | — | — |
+| 품번 | 상품 | 판매색 | 색상별 착장 화보 | 모델 360° | 제품 단독 360° | 보존한 실물 사진 |
+|---|---|---:|---|---|---|---|
+| RM375 | 알파카 혼방 루즈 라운드 니트 | 7 | 7색 완료 | 7색 × 8방향 | 7색 × 8방향 | 판매 7색 실제 사진 |
+| RM277 | 부클 라운드 크롭 니트 가디건 | 5 | 4코디 × 5색 완료 | 5색 × 8방향 | 5색 × 8방향 | 판매 5색 실제 사진 |
+| RM274 | 부클 피셔 케이블 브이넥 베스트 | 5 | 5색 완료 | 5색 × 8방향 | 5색 × 8방향 | 판매 5색 실제 사진 |
+| RM279 | 부클 라운드 반팔 크롭 가디건 | 5 | 5색 완료 | 5색 × 8방향 | 5색 × 8방향 | 판매 5색 실제 사진 |
+| RM385 | 케이블 브이넥 꽈배기 니트 | 9 | 9색 완료 | 9색 × 8방향 | 9색 × 8방향 | 판매 9색 실제 사진 |
+| RM336 | 피셔맨 케이블 크롭 니트 뷔스티에 | 4 | 4색 완료 | 4색 × 8방향 | 4색 × 8방향 | 판매 4색 실제 사진 |
+| RM382 | 허니루프 라운드 니트 | 4 | 4코디 × 4색 완료 | 4색 × 8방향 | 4색 × 8방향 | 스카이 실물 정면; 별도 로컬 촬영 원본 보존 |
+| RM495 | 오프듀티 V넥 니트 베스트 | 5 | 기존 4코디 × 5색 유지 | 기존 5색 × 8방향 | 5색 × 8방향 | 회색 실물 8방향 원본 |
+| RM471 | 슬라브 팝콘 브이넥 반팔 니트 | 4 | 4색 완료 | 4색 × 8방향 | 4색 × 8방향 | 판매 4색 실제 사진 |
+| RM418 | 리싸이클 무지 박시 라운드 니트 | 6 | 6색 완료 | 6색 × 8방향 | 6색 × 8방향 | 판매 6색 실제 사진 |
+| RM401 | 단가라 케이블 세미크롭 반팔 니트 | 5 | 앞서 완성한 5색 유지 | 5색 × 8방향 | 5색 × 8방향 | 판매 5색 실제 정면 사진 |
+| RM429 | 뮤트레이어 V넥 니트 베스트 | 6 | 4코디 × 6색 완료 | 6색 × 8방향 | 6색 × 8방향 | 판매 6색 실제 사진 |
+| **합계** | **12종** | **65** | **65색 모두** | **520개 표시 각도** | **520개 표시 각도** | 실물과 생성 컷 구분 유지 |
 
-Every product has real-photo references and detail photographs, but these do not cover every sale color: RM382 has a public Sky front photo, and RM495 has the Gray eight-angle set. A source photo collection is not automatically a complete eight-angle set. Do not create a false rotation by repeating stills or mirroring opposite sides. Show controls only when the actual corresponding assets are available.
+최종 `v3` 제작·통합 완료 수량은 **기본 275개 + 추가 코디 45개 = WebP 320개**다. 기본분은 10종 55색에 색마다 화보 1개와 모델·제품 회전용 앞/뒤 시트 4개를 합한 수량이다. RM401은 앞서 완성한 `v2` 25개를 재사용하며, RM495는 승인된 기존 화보와 회전 자료를 유지한다. 두 상품의 재사용 자료는 새 `v3` 320개에 포함하지 않는다.
 
-The RM495 product-only sheets are generated studio references based on actual photographs. Each sheet is 1254 × 1254 pixels containing four 627 × 627 cells. Front sheet order: 0°, 45°, 90°, 135°. Back sheet order: 180°, 225°, 270°, 315°. They are not pixel-preserving manual cutouts or a verified color calibration.
+RM277·RM382·RM429는 대표 코디에 세 코디를 더해 **기존 네 가지 코디 선택을 유지**한다. 각 코디에 해당 상품의 모든 판매색을 연결했다. 과거 모든 상품의 네 가지 코디를 전부 다시 제작했다는 의미는 아니다. 모델 회전은 해당 색의 대표 코디 한 세트를 유지한다.
 
-## Selected hero images for this release
+| 추가 코디 상품 | 새 화보 수량 | 제작·검수 상태 | 공통 manifest 통합 |
+|---|---:|---|---|
+| RM277 | 3코디 × 5색 = 15장 | 완료 | 완료 |
+| RM382 | 3코디 × 4색 = 12장 | 완료 | 완료 |
+| RM429 | 3코디 × 6색 = 18장 | 완료 | 완료 |
+| **합계** | **45장** | **완료** | **완료** |
 
-### RM401 completion, 2026-10-15
+RM277 베이지 대표 화보와 모델 회전 앞·뒤 시트의 교정본 3개도 최종 세트에 반영했다. 이 파일들은 기본분을 대체한 교정본으로, 320개에 별도 추가 집계하지 않는다.
 
-The first rollout connected a Sky hero only and left four colors without model styling and all five colors without rotation media. This correction adds complete coverage for 곤색 / 베이지 / 초록 / 하늘 / 연핑: five standalone styling images, ten model rotation sheets and ten floating product rotation sheets. The existing Sky hero is retained; four matching color heroes and all twenty rotation sheets are newly generated from the actual product photographs and approved adult model reference.
+새 화보는 상품과 색상에 어울리는 코디를 적용하되, 모든 색에서 착장 조합이 반드시 다른 것은 아니다. RM274는 티셔츠·인디고 데님·로퍼, RM279는 아이보리 미디 스커트·브라운 플랫, RM336은 긴팔 티셔츠·중청 데님·스니커즈를 각 상품의 전색 공통 코디로 사용한다. 색마다 조합이 다른 상품은 `labelsByColor`와 `itemsByColor`로 선택한 색의 코디명·소품을 표시한다. 회전은 해당 색의 대표 착장 한 세트다. RM495의 모델 회전은 기존 셔츠·팬츠 세트이며, 네 가지 화보가 각각 회전한다고 표시하지 않는다.
 
-Each rotation uses two 2×2 sheets, ordered 0° / 45° / 90° / 135° and 180° / 225° / 270° / 315°. The renderer measures actual sheet dimensions, preserves portrait model proportions, and limits zoom to native cell size. No frames are produced by mirroring. The real source collection has front and oblique photographs, not a photographed eight-angle set: generated back/side views are visual reconstructions, not new physical measurements or pixel-preserving cutouts. Actual source photos remain separately available via “실물 사진 보기”. The existing image notice covers generated model and studio images.
+## 실제 촬영과 생성 이미지의 구분
 
-Runtime assets are versioned under `assets/detail/stripe-cable-half/v2/`. Full local prompts, source files and manifests are under `rm401-complete-20261015/`; the selected-file inventory is `docs/RM401-MEDIA-20261015.json`. Completing RM401 does not change the remaining gaps in other product rows above.
+실물 사진은 `originals`와 Fabric Detail에 계속 연결한다. 새 모델 착용과 공중에 떠 있는 제품 단독 컷은 실물 사진·제품별 색상 사진·모델 캐릭터시트를 참고한 **AI 재구성**이다. 손으로 누끼를 딴 픽셀 보존 원본, 실제 인체 치수 측정, 모든 색상의 실제 8방향 촬영으로 설명하지 않는다.
 
-### Initial rollout selection
+RM274·RM279의 실제 뒤판은 케이블 없는 부클 조직이고, RM336은 실제 뒤판 사진 `sources/6600921594/images/detail-023.jpg`에서 앞판과 같은 중앙 케이블과 스쿱백을 확인했다. 뒤판 사진을 확인한 경우 해당 구조를 참조했으며, 촬영되지 않은 시점의 공간 형태는 생성으로 보완한다. RM401 원본은 정면·사선 사진이며 생성된 뒤·옆모습은 실사 촬영본이 아니다.
 
-The approved selection is **eight newly generated hero images and four preserved existing hero images**. This count applies to the representative thumbnail/hero only; it does not mean every outfit, color or rotation frame was regenerated with one face.
+원본은 판매색 전체의 실제 사진이 없는 RM382·RM495에서 임의로 복제하거나 색만 바꾸어 늘리지 않는다. 다른 색을 고른 상태에서 원본을 열 때도 실제 촬영색을 명시한다. RM495 회색 8개 JPEG는 배포 폴더에서 원본 파일 해시까지 보존한다.
 
-- New reference-based hero: RM375, RM277, RM274, RM279, RM385, RM336, RM471, RM401 (`hero-reference-v1.webp`).
-- Preserved garment-faithful hero: RM382, RM495, RM418, RM429 (`hero-preserved-v1.webp`). Their attempted new generations introduced unwanted garment texture and were not selected for public use.
-- Existing outfit matrices and model rotation frames remain in use. The approved character sheet guided the new hero work; full identity replacement across all existing media is not claimed.
+참조 인물은 `model-character-sheet/girlsrami-model-reference-01-v1.png`의 성인 가상 모델이다. 새 제작분의 얼굴·헤어·안색 일관성을 이 시트로 맞췄다. RM495 등 재사용한 모든 과거 이미지의 얼굴을 새로 바꿨다고 주장하지 않는다. 피부톤을 건강하게 표현하는 과정에서 제품 색·짜임·핏을 바꾸지 않는다. 좌우 시점은 단순 반전하지 않고 별도 생성했으며, 반복된 사선·옆모습과 헤어 위치 오류는 시각 검수 후 수정했다.
 
-Selection evidence is the local `rollout-20261015/hero-generation-record.json`; the deployed selection is declared in `detail-catalog.js`.
+고객 화면의 AI 안내는 상세 하단에 한 번 유지한다. 상세 갤러리 안의 **실물 사진 보기**는 유지하되, 구매 판단과 무관하게 반복되던 **원문 보기 카드 링크**는 제거한다. SmartStore 구매 링크와 실제 구매후기의 **출처·원문 확인 링크**는 별도 기능이므로 유지한다.
 
-## New nine products: local drafts
+## 파일·해상도와 검사
 
-JO23, JO24, JO31, JO32, RM542, RM543, RM567, RM576 and RM582 have three model outfit images, an actual eight-angle set, a studio mannequin eight-angle set and a WebP rotation animation. These are sample-color images; they do not yet cover all eleven production colors or model/product-only 360° in every color.
+- 회전은 앞 시트의 0°·45°·90°·135°, 뒤 시트의 180°·225°·270°·315° 순서다. 두 시트는 각각 2열 × 2행이며 한 시트의 실제 크기를 2로 나눈 값이 셀 크기다.
+- 새 파일은 생성된 원본 크기를 유지하고 WebP로 저장했다. 정사각 1254 × 1254 시트는 셀 627 × 627, 세로형 1024 × 1536 시트는 셀 512 × 768이다. 상품별 실제 파일과 선언된 `cellWidth`·`cellHeight`가 일치해야 한다. 자동 측정 방식인 RM401은 실제 이미지 크기에서 읽는다. 생성 요청 해상도가 실제 결과 해상도라는 식으로 기록하지 않는다.
+- RM495 예외: 기존 4코디 × 5색 화보와 모델 4색 32프레임은 Supabase 공개 URL이다. 회색 모델 8프레임은 로컬 WebP, 제품 회전 10시트는 로컬 PNG다. 색상별 8프레임의 각도 순서·색상 경로·고유 경로를 검사하고, 로컬 프레임은 파일 구조·실제 치수도 검사한다. 이 예외를 다른 상품의 미완성 자료에 확대 적용하지 않는다.
+- `tests/catalog-media-coverage.test.mjs`는 공개 판매 등록부 12종·65색, 각 색의 화보와 두 회전 세트, 파일 존재, WebP RIFF/비트스트림 헤더 및 실제 치수, PNG 치수, 시트 순서·셀 치수, 경로/파일 내용 중복, 원본 참조 보존, RM495 원본 JPEG 해시를 검사한다. RM382를 포함해 미완성 상품을 건너뛰는 예외는 없다.
+- 자동 검사는 **프레임 안의 인물이 올바른 방향을 보는지, 옷의 색이 실제와 일치하는지**를 판단하지 않는다. 이는 생성 후 시각 검수와 PC·모바일 갤러리 검수로 확인한다. 로컬 검사만으로 원격 파일의 현재 HTTP 응답이나 픽셀 크기를 검증했다고 주장하지 않는다.
+- 최종 통합 후 `npm run test:storefront` **65/65 통과**. 그중 `tests/catalog-media-coverage.test.mjs`의 미디어 범위 검사 **27개**가 포함되며, 선택 가능한 모든 코디의 판매색·파일·고유성도 검사했다. 이 결과는 해당 프론트엔드 검사 범위에 한하며 운영 배포나 별도 DB 통합 검사를 대신하지 않는다.
+- 브라우저에서 기본 65색 전환과 추가 RM277·RM382·RM429의 60개 색상/코디 조합을 모두 확인했다. 색상·코디 선택과 모델/제품 보기 전환 시 선택 상태가 유지되는 것을 확인했다.
+- 업로드된 새 WebP 320개와 로컬 최종 파일의 해시가 모두 일치한다. 자산 업로드 검증과 운영 사이트 최종 배포 상태는 구분한다.
+- 현재 선택한 화보와 선택한 색·보기의 회전 자료만 불러온다. 모든 색의 원본·시트를 한꺼번에 다운로드하지 않는다. 자동 회전은 사용자 재생 동작으로 시작하며, 확대는 실제 셀 해상도를 기준으로 제한한다.
 
-Their approved prices are JO23/JO24/JO32 23,900 KRW, JO31 22,900 KRW, RM542 19,900 KRW, RM543 20,900 KRW, RM567 17,900 KRW, RM576 21,900 KRW and RM582 23,900 KRW. The user confirmed FREE and cm for these nine products.
+생성 원본·정확한 프롬프트·참조 사진·선택 기록은 운영 저장소 밖 작업 폴더 `catalog-renewal-20261015/<품번>/`의 `generation-receipts.json`, `integration.json` 및 상품별 생성 기록에 보존한다. RM401 기록은 `rm401-complete-20261015/`와 저장소의 `docs/RM401-MEDIA-20261015.json`을 따른다. 최초 감사 목록 `catalog-renewal-20261015/inventory.json`은 리뉴얼 이전의 누락을 기록한 기준 스냅샷이므로 현재 완성 상태와 혼동하지 않는다.
 
-JO23 has SmartStore product ID 13808633770, but the registration was withdrawn to stopped/hidden status on 2026-10-13. The other eight have no verified purchase URLs. All nine remain **local-only and unavailable for purchase in this rollout**. They are excluded from the production detail manifest, static product pages and sitemap. JO23 is not a completed new sale listing; the other eight have not been registered with verified purchase URLs. Adding them later requires actual registration and approval of their sale-ready detail content.
+## NEW 분류 근거 등록부
 
-## Data boundaries
+`NEW`는 사진을 새로 만들었거나 자사몰에 새로 연결했다는 이유로 붙이지 않는다. 기존 SmartStore 판매 디자인 12종은 `isNewDesign: false`다. 아래 ID와 판매색은 저장소의 `seo-products.json`, 2026-10-15 공개 카탈로그 감사 목록과 대조했다.
 
-- RM495: FREE / cm confirmed by the user. The approved local detail data takes the confirmed value.
-- RM382: FREE / cm separately confirmed by the user on 2026-10-15. The detail manifest now uses `size: "FREE"`, `sizeUnit: "cm"`, and `measurementVerified: true`; existing numeric measurements are unchanged. This confirmation supersedes the earlier pending note.
-- The initial live-catalog snapshot had pending-size data for RM382/RM495. Display confirmation and a backend option update are separate: the cart stays disabled whenever the current backend size list does not contain the displayed size. Do not claim a backend update from the document or manifest alone.
-- RM375: the source material text totals 91%. Preserve it; do not infer the missing 9% from another garment.
-- RM418: fiber names are known, composition percentages are not. Do not claim a 100% verified blend.
-- RM429: own-site catalog price is 19,900 KRW; its separately recorded Naver price is 16,800 KRW. Preserve channel-specific pricing.
-- Production capacity is not independently verified physical inventory. This rollout does not change stock or register new products.
+| 품번 | 기존 SmartStore 상품 ID | NEW |
+|---|---|---|
+| RM375 | 7594968064 | 제외 |
+| RM277 | 6679667474 | 제외 |
+| RM274 | 5548814040 | 제외 |
+| RM279 | 5565703580 | 제외 |
+| RM385 | 8087805239 | 제외 |
+| RM336 | 6600921594 | 제외 |
+| RM382 | 13795042666 | 제외 |
+| RM495 | 13795688981 | 제외 |
+| RM471 | 10115610353 | 제외 |
+| RM418 | 9704215111 | 제외 |
+| RM401 | 8424655623 | 제외 |
+| RM429 | 9721023441 | 제외 |
 
-## Media and loading
+신규 9종은 점주가 `new_goods`에 제공한 새 디자인이라는 지시와 기존 판매 12종 대조를 기준으로 구분한다. 현재 `NEW` 분류는 **구매 불가 로컬 초안에만** 적용한다. 공개 판매 등록이 완료된 상품으로 취급하거나 운영 목록에 노출하지 않는다. 실제 등록·공개 준비가 끝났을 때 판매용 신규 디자인 배지를 적용할 수 있다.
 
-The current local RM495 package contains 28 files, 77,339,442 bytes in total, including the selected preserved hero. This is the 2026-10-15 pre-deployment packaging snapshot, not a fixed future size limit. The actual eight-angle originals account for about 50.56 MiB and must load only when the customer explicitly opens a real-photo view. Product rotation sheets must load only for the selected product/color; no eager fetch of all colors. Existing public outfit/rotation photographs are reused.
+| 신규 품번 | 승인 판매가 | 등록·공개 상태 |
+|---|---:|---|
+| JO23 | 23,900원 | 시험 등록 ID 13808633770 존재; 2026-10-13 판매·전시 중지, 공개 판매 미완료 |
+| JO24 | 23,900원 | 등록 체크포인트에서 미생성·미저장 |
+| JO31 | 22,900원 | 등록 체크포인트에서 미생성·미저장 |
+| JO32 | 23,900원 | 등록 체크포인트에서 미생성·미저장 |
+| RM542 | 19,900원 | 등록 체크포인트에서 미생성·미저장 |
+| RM543 | 20,900원 | 등록 체크포인트에서 미생성·미저장 |
+| RM567 | 17,900원 | 등록 체크포인트에서 미생성·미저장; RM577 오기 수정 |
+| RM576 | 21,900원 | 등록 체크포인트에서 미생성·미저장 |
+| RM582 | 23,900원 | 등록 체크포인트에서 미생성·미저장 |
 
-New and future model imagery should use the approved model reference sheet as identity guidance, keeping hairstyle and left/right anatomy consistent. Use natural skin color and healthy-looking lighting without changing the actual garment's fit, texture or color. Generated model photographs remain styling references and are disclosed once in the page's image notice.
+등록 근거는 원본 작업 폴더 `catalog-release-20261013/REGISTRATION-CHECKPOINT.md`, `DETAIL-PUBLICATION-WITHDRAWAL.json`, `naver-new-verified-registrations.json`, `new-product-draft-receipt.json`에 있다. URL이 비어 있다는 사실만으로 미등록을 단정한 것이 아니다. JO23은 시험 등록 이력을 지우거나 ‘등록된 적 없음’으로 쓰지 않으며, 공개 판매가 완료되지 않은 신규 디자인으로 분류한다.
+
+신규 9종은 각 11개 생산 가능 색상 정보와 점주가 확인한 FREE/cm를 가진다. 현재 시안의 화보 3코디, 실물 8방향, 스튜디오 마네킹 8방향 및 회전 WebP는 **촬영 샘플색** 기준이다. 99개 생산색 전체에 모델·공중 제품 360°를 완성한 상태가 아니다. `rollout-20261015/new9-preview/`에 공통 렌더러를 적용한 로컬 시안을 보존하며, 운영 상세 manifest·판매 목록·사이트맵에 섞지 않는다. 공개 판매에는 실제 등록과 판매 준비가 완료된 콘텐츠의 확인이 필요하다.
+
+## 상품 정보의 경계
+
+- RM495 FREE/cm와 실측 가슴 단면 55·총장 46, RM382 FREE/cm와 가슴 단면 58·총장 50은 점주 확인을 반영했다. 정상 관리자 UI로 게시한 뒤 익명 공개 payload에서 `sizes`, `sizePending`, `measurementUnit` 외 값이 바뀌지 않았음을 별도로 확인했다. 문서나 표시용 manifest만 수정해 DB 저장까지 완료했다고 추정하지 않는다.
+- RM375 소재 원문 혼용률은 합계 91%다. 남은 9%를 임의로 채우지 않는다.
+- RM418은 섬유 이름은 확인됐지만 혼용률은 미확인이다. 합계 100% 검증을 주장하지 않는다.
+- RM429의 자사몰 가격 19,900원과 별도 네이버 결제가 16,800원은 채널별로 구분한다.
+- 생산 가능 수량과 현재 물리적 재고는 다르다. 이번 이미지 리뉴얼은 재고·가격·판매상태를 임의로 변경하거나 신규 상품을 등록하는 작업이 아니다.

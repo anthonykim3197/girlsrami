@@ -1,4 +1,4 @@
-/* Approved product presentation, 2026-10-15. */
+/* Approved own-store detail content. Updated from verified product sources. */
 window.GR_DETAIL = {
   "alpaca-round-knit": {
     "lead": "넓은 라운드넥, 여유 있는 품. 데님부터 롱스커트까지 담백하게 입어요.",
@@ -23,16 +23,182 @@ window.GR_DETAIL = {
     ],
     "looks": [
       {
-        "id": "signature",
-        "label": "데일리 스타일링",
+        "id": "signature-v3",
+        "label": "컬러별 스타일링",
         "items": [],
         "images": {
-          "회색": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/alpaca-round-knit/ai-rm375-gray-fullbody-webp-d1c53b1f50d1.webp"
+          "회색": "assets/detail/alpaca-round-knit/v3/looks/gray.webp",
+          "차콜": "assets/detail/alpaca-round-knit/v3/looks/charcoal.webp",
+          "파랑": "assets/detail/alpaca-round-knit/v3/looks/blue.webp",
+          "크림": "assets/detail/alpaca-round-knit/v3/looks/cream.webp",
+          "오렌지": "assets/detail/alpaca-round-knit/v3/looks/orange.webp",
+          "네온": "assets/detail/alpaca-round-knit/v3/looks/neon.webp",
+          "보라": "assets/detail/alpaca-round-knit/v3/looks/purple.webp"
+        },
+        "labelsByColor": {
+          "회색": "인디고 데님 & 로퍼",
+          "차콜": "아이보리 팬츠 & 플랫",
+          "파랑": "베이지 팬츠 & 스니커즈",
+          "크림": "새틴 스커트 & 슬링백",
+          "오렌지": "네이비 데님 & 로퍼",
+          "네온": "그레이 데님 & 스니커즈",
+          "보라": "블랙 팬츠 & 로퍼"
+        },
+        "itemsByColor": {
+          "회색": [
+            "인디고 데님",
+            "초콜릿 로퍼",
+            "버건디 숄더백"
+          ],
+          "차콜": [
+            "아이보리 슬랙스",
+            "블랙 플랫",
+            "버건디 숄더백"
+          ],
+          "파랑": [
+            "스톤 베이지 팬츠",
+            "화이트 스니커즈",
+            "캔버스 토트백"
+          ],
+          "크림": [
+            "종아리 중간 길이 초콜릿 스커트",
+            "브라운 슬링백",
+            "세이지 백"
+          ],
+          "오렌지": [
+            "네이비 데님",
+            "탠 로퍼",
+            "초콜릿 숄더백"
+          ],
+          "네온": [
+            "워시드 그레이 데님",
+            "크림 스니커즈",
+            "그라파이트 백"
+          ],
+          "보라": [
+            "블랙 슬랙스",
+            "블랙 로퍼",
+            "토프 백"
+          ]
         }
       }
     ],
-    "model360": {},
-    "product360": {},
+    "model360": {
+      "회색": {
+        "sheets": [
+          "assets/detail/alpaca-round-knit/v3/model360/gray-front.webp",
+          "assets/detail/alpaca-round-knit/v3/model360/gray-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "차콜": {
+        "sheets": [
+          "assets/detail/alpaca-round-knit/v3/model360/charcoal-front.webp",
+          "assets/detail/alpaca-round-knit/v3/model360/charcoal-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "파랑": {
+        "sheets": [
+          "assets/detail/alpaca-round-knit/v3/model360/blue-front.webp",
+          "assets/detail/alpaca-round-knit/v3/model360/blue-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "크림": {
+        "sheets": [
+          "assets/detail/alpaca-round-knit/v3/model360/cream-front.webp",
+          "assets/detail/alpaca-round-knit/v3/model360/cream-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "오렌지": {
+        "sheets": [
+          "assets/detail/alpaca-round-knit/v3/model360/orange-front.webp",
+          "assets/detail/alpaca-round-knit/v3/model360/orange-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "네온": {
+        "sheets": [
+          "assets/detail/alpaca-round-knit/v3/model360/neon-front.webp",
+          "assets/detail/alpaca-round-knit/v3/model360/neon-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "보라": {
+        "sheets": [
+          "assets/detail/alpaca-round-knit/v3/model360/purple-front.webp",
+          "assets/detail/alpaca-round-knit/v3/model360/purple-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      }
+    },
+    "product360": {
+      "회색": {
+        "sheets": [
+          "assets/detail/alpaca-round-knit/v3/product360/gray-front.webp",
+          "assets/detail/alpaca-round-knit/v3/product360/gray-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "차콜": {
+        "sheets": [
+          "assets/detail/alpaca-round-knit/v3/product360/charcoal-front.webp",
+          "assets/detail/alpaca-round-knit/v3/product360/charcoal-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "파랑": {
+        "sheets": [
+          "assets/detail/alpaca-round-knit/v3/product360/blue-front.webp",
+          "assets/detail/alpaca-round-knit/v3/product360/blue-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "크림": {
+        "sheets": [
+          "assets/detail/alpaca-round-knit/v3/product360/cream-front.webp",
+          "assets/detail/alpaca-round-knit/v3/product360/cream-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "오렌지": {
+        "sheets": [
+          "assets/detail/alpaca-round-knit/v3/product360/orange-front.webp",
+          "assets/detail/alpaca-round-knit/v3/product360/orange-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "네온": {
+        "sheets": [
+          "assets/detail/alpaca-round-knit/v3/product360/neon-front.webp",
+          "assets/detail/alpaca-round-knit/v3/product360/neon-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "보라": {
+        "sheets": [
+          "assets/detail/alpaca-round-knit/v3/product360/purple-front.webp",
+          "assets/detail/alpaca-round-knit/v3/product360/purple-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      }
+    },
     "originals": {
       "네온": [
         {
@@ -139,7 +305,7 @@ window.GR_DETAIL = {
     "size": "FREE",
     "sizeUnit": "cm",
     "measurementVerified": true,
-    "thumbnail": "assets/detail/alpaca-round-knit/hero-reference-v1.webp",
+    "thumbnail": "assets/detail/alpaca-round-knit/v3/looks/gray.webp",
     "thumbnailColor": "회색",
     "materialRaw": "아크릴72 / 나일론13 / 알파카3 / 스판3",
     "materialComplete": false,
@@ -178,72 +344,184 @@ window.GR_DETAIL = {
     ],
     "looks": [
       {
-        "id": "city-denim",
-        "label": "라이트 데님 · 레트로 스니커즈",
-        "items": [
-          "라이트 워시 데님",
-          "아이보리 레트로 스니커즈",
-          "초콜릿 숄더백"
-        ],
+        "id": "signature-v3",
+        "label": "Signature Styling",
+        "items": [],
         "images": {
-          "곤색": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/boucle-crop-cardigan/city-denim/navy-03d60de0.webp",
-          "소라": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/boucle-crop-cardigan/city-denim/sky-blue-5c243d76.webp",
-          "연두": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/boucle-crop-cardigan/city-denim/light-green-ab501383.webp",
-          "연밤": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/boucle-crop-cardigan/city-denim/warm-taupe-0ca757dc.webp",
-          "베이지": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/boucle-crop-cardigan/city-denim/beige-16670535.webp"
+          "연두": "assets/detail/boucle-crop-cardigan/v3/looks/light-green.webp",
+          "연밤": "assets/detail/boucle-crop-cardigan/v3/looks/warm-taupe.webp",
+          "소라": "assets/detail/boucle-crop-cardigan/v3/looks/sora.webp",
+          "베이지": "assets/detail/boucle-crop-cardigan/v3/looks/beige.webp",
+          "곤색": "assets/detail/boucle-crop-cardigan/v3/looks/navy.webp"
+        },
+        "labelsByColor": {
+          "연두": "라이트 데님 & 플랫",
+          "연밤": "아이보리 팬츠 & 로퍼",
+          "베이지": "인디고 데님 & 플랫",
+          "소라": "네이비 스커트 & 플랫",
+          "곤색": "토프 팬츠 & 로퍼"
+        },
+        "itemsByColor": {
+          "연두": [
+            "라이트 워시 데님",
+            "아이보리 플랫",
+            "브라운 숄더백"
+          ],
+          "연밤": [
+            "아이보리 슬랙스",
+            "초콜릿 로퍼",
+            "탠 핸드백"
+          ],
+          "베이지": [
+            "인디고 데님",
+            "블랙 플랫",
+            "블랙 숄더백"
+          ],
+          "소라": [
+            "종아리 중간 길이 네이비 스커트",
+            "크림 플랫",
+            "크림 숄더백"
+          ],
+          "곤색": [
+            "라이트 토프 슬랙스",
+            "아이보리 로퍼",
+            "버건디 숄더백"
+          ]
         }
       },
       {
-        "id": "soft-skirt",
-        "label": "새틴 롱스커트 · 발레리나 플랫",
+        "id": "skirt",
+        "label": "Soft Skirt",
         "items": [
-          "아이보리 새틴 롱스커트",
-          "블랙 발레리나 플랫",
-          "미니 토트백"
+          "아이보리 미디스커트",
+          "브라운 플랫",
+          "미니백"
         ],
         "images": {
-          "곤색": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/boucle-crop-cardigan/soft-skirt/navy-10598db9.webp",
-          "소라": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/boucle-crop-cardigan/soft-skirt/sky-blue-b1a50dca.webp",
-          "연두": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/boucle-crop-cardigan/soft-skirt/light-green-c0491570.webp",
-          "연밤": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/boucle-crop-cardigan/soft-skirt/warm-taupe-bea1643b.webp",
-          "베이지": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/boucle-crop-cardigan/soft-skirt/beige-bb2ff7ae.webp"
-        }
-      },
-      {
-        "id": "city-mini",
-        "label": "차콜 미니스커트 · 블랙 로퍼",
-        "items": [
-          "차콜 A라인 미니스커트",
-          "블랙 로퍼",
-          "블랙 숄더백"
-        ],
-        "images": {
-          "곤색": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/boucle-crop-cardigan/city-mini/navy-93e3436f.webp",
-          "소라": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/boucle-crop-cardigan/city-mini/sky-blue-e7cb40cc.webp",
-          "연두": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/boucle-crop-cardigan/city-mini/light-green-ebbc83e7.webp",
-          "연밤": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/boucle-crop-cardigan/city-mini/warm-taupe-93258d6f.webp",
-          "베이지": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/boucle-crop-cardigan/city-mini/beige-543366f0.webp"
+          "연두": "assets/detail/boucle-crop-cardigan/v3/looks/skirt-light-green.webp",
+          "연밤": "assets/detail/boucle-crop-cardigan/v3/looks/skirt-warm-taupe.webp",
+          "베이지": "assets/detail/boucle-crop-cardigan/v3/looks/skirt-beige.webp",
+          "소라": "assets/detail/boucle-crop-cardigan/v3/looks/skirt-sora.webp",
+          "곤색": "assets/detail/boucle-crop-cardigan/v3/looks/skirt-navy.webp"
         }
       },
       {
         "id": "tailored",
-        "label": "크림 와이드 슬랙스 · 슬링백",
+        "label": "Tailored",
         "items": [
-          "크림 와이드 슬랙스",
-          "블랙 포인티드 슬링백",
-          "구조적인 미니 토트"
+          "그레이 슬랙스",
+          "블랙 로퍼",
+          "미니백"
         ],
         "images": {
-          "곤색": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/boucle-crop-cardigan/tailored/navy-cc8388b7.webp",
-          "소라": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/boucle-crop-cardigan/tailored/sky-blue-40354f1e.webp",
-          "연두": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/boucle-crop-cardigan/tailored/light-green-f4950a99.webp",
-          "연밤": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/boucle-crop-cardigan/tailored/warm-taupe-68422291.webp",
-          "베이지": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/looks/boucle-crop-cardigan/tailored/beige-c296d79c.webp"
+          "연두": "assets/detail/boucle-crop-cardigan/v3/looks/tailored-light-green.webp",
+          "연밤": "assets/detail/boucle-crop-cardigan/v3/looks/tailored-warm-taupe.webp",
+          "베이지": "assets/detail/boucle-crop-cardigan/v3/looks/tailored-beige.webp",
+          "소라": "assets/detail/boucle-crop-cardigan/v3/looks/tailored-sora.webp",
+          "곤색": "assets/detail/boucle-crop-cardigan/v3/looks/tailored-navy.webp"
+        }
+      },
+      {
+        "id": "layered",
+        "label": "Shirt & Denim",
+        "items": [
+          "화이트 셔츠",
+          "인디고 데님",
+          "로퍼"
+        ],
+        "images": {
+          "연두": "assets/detail/boucle-crop-cardigan/v3/looks/layered-light-green.webp",
+          "연밤": "assets/detail/boucle-crop-cardigan/v3/looks/layered-warm-taupe.webp",
+          "베이지": "assets/detail/boucle-crop-cardigan/v3/looks/layered-beige.webp",
+          "소라": "assets/detail/boucle-crop-cardigan/v3/looks/layered-sora.webp",
+          "곤색": "assets/detail/boucle-crop-cardigan/v3/looks/layered-navy.webp"
         }
       }
     ],
-    "model360": {},
-    "product360": {},
+    "model360": {
+      "연두": {
+        "sheets": [
+          "assets/detail/boucle-crop-cardigan/v3/model360/light-green-front.webp",
+          "assets/detail/boucle-crop-cardigan/v3/model360/light-green-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "연밤": {
+        "sheets": [
+          "assets/detail/boucle-crop-cardigan/v3/model360/warm-taupe-front.webp",
+          "assets/detail/boucle-crop-cardigan/v3/model360/warm-taupe-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "베이지": {
+        "sheets": [
+          "assets/detail/boucle-crop-cardigan/v3/model360/beige-front.webp",
+          "assets/detail/boucle-crop-cardigan/v3/model360/beige-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "소라": {
+        "sheets": [
+          "assets/detail/boucle-crop-cardigan/v3/model360/sora-front.webp",
+          "assets/detail/boucle-crop-cardigan/v3/model360/sora-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/boucle-crop-cardigan/v3/model360/navy-front.webp",
+          "assets/detail/boucle-crop-cardigan/v3/model360/navy-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      }
+    },
+    "product360": {
+      "연두": {
+        "sheets": [
+          "assets/detail/boucle-crop-cardigan/v3/product360/light-green-front.webp",
+          "assets/detail/boucle-crop-cardigan/v3/product360/light-green-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연밤": {
+        "sheets": [
+          "assets/detail/boucle-crop-cardigan/v3/product360/warm-taupe-front.webp",
+          "assets/detail/boucle-crop-cardigan/v3/product360/warm-taupe-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "베이지": {
+        "sheets": [
+          "assets/detail/boucle-crop-cardigan/v3/product360/beige-front.webp",
+          "assets/detail/boucle-crop-cardigan/v3/product360/beige-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "소라": {
+        "sheets": [
+          "assets/detail/boucle-crop-cardigan/v3/product360/sora-front.webp",
+          "assets/detail/boucle-crop-cardigan/v3/product360/sora-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/boucle-crop-cardigan/v3/product360/navy-front.webp",
+          "assets/detail/boucle-crop-cardigan/v3/product360/navy-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      }
+    },
     "originals": {
       "곤색": [
         {
@@ -338,8 +616,8 @@ window.GR_DETAIL = {
     "size": "FREE",
     "sizeUnit": "cm",
     "measurementVerified": true,
-    "thumbnail": "assets/detail/boucle-crop-cardigan/hero-reference-v1.webp",
-    "thumbnailColor": "베이지",
+    "thumbnail": "assets/detail/boucle-crop-cardigan/v3/looks/light-green.webp",
+    "thumbnailColor": "연두",
     "materialRaw": "아크릴 100%",
     "materialComplete": true,
     "materialNote": "",
@@ -379,16 +657,106 @@ window.GR_DETAIL = {
     ],
     "looks": [
       {
-        "id": "signature",
-        "label": "데일리 스타일링",
-        "items": [],
+        "id": "renewal",
+        "label": "티셔츠와 데님",
+        "items": [
+          "화이트 티셔츠",
+          "인디고 데님",
+          "브라운 로퍼"
+        ],
         "images": {
-          "연회색": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/boucle-fisher-vneck-vest/ai-rm274-light-gray-fullbody-webp-51de4ec27b62.webp"
+          "아이": "assets/detail/boucle-fisher-vneck-vest/v3/looks/ivory.webp",
+          "연두": "assets/detail/boucle-fisher-vneck-vest/v3/looks/light-green.webp",
+          "베이지": "assets/detail/boucle-fisher-vneck-vest/v3/looks/beige.webp",
+          "소라": "assets/detail/boucle-fisher-vneck-vest/v3/looks/sora.webp",
+          "연회색": "assets/detail/boucle-fisher-vneck-vest/v3/looks/light-gray.webp"
         }
       }
     ],
-    "model360": {},
-    "product360": {},
+    "model360": {
+      "아이": {
+        "sheets": [
+          "assets/detail/boucle-fisher-vneck-vest/v3/model360/ivory-front.webp",
+          "assets/detail/boucle-fisher-vneck-vest/v3/model360/ivory-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연두": {
+        "sheets": [
+          "assets/detail/boucle-fisher-vneck-vest/v3/model360/light-green-front.webp",
+          "assets/detail/boucle-fisher-vneck-vest/v3/model360/light-green-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "베이지": {
+        "sheets": [
+          "assets/detail/boucle-fisher-vneck-vest/v3/model360/beige-front.webp",
+          "assets/detail/boucle-fisher-vneck-vest/v3/model360/beige-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "소라": {
+        "sheets": [
+          "assets/detail/boucle-fisher-vneck-vest/v3/model360/sora-front.webp",
+          "assets/detail/boucle-fisher-vneck-vest/v3/model360/sora-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연회색": {
+        "sheets": [
+          "assets/detail/boucle-fisher-vneck-vest/v3/model360/light-gray-front.webp",
+          "assets/detail/boucle-fisher-vneck-vest/v3/model360/light-gray-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      }
+    },
+    "product360": {
+      "아이": {
+        "sheets": [
+          "assets/detail/boucle-fisher-vneck-vest/v3/product360/ivory-front.webp",
+          "assets/detail/boucle-fisher-vneck-vest/v3/product360/ivory-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연두": {
+        "sheets": [
+          "assets/detail/boucle-fisher-vneck-vest/v3/product360/light-green-front.webp",
+          "assets/detail/boucle-fisher-vneck-vest/v3/product360/light-green-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "베이지": {
+        "sheets": [
+          "assets/detail/boucle-fisher-vneck-vest/v3/product360/beige-front.webp",
+          "assets/detail/boucle-fisher-vneck-vest/v3/product360/beige-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "소라": {
+        "sheets": [
+          "assets/detail/boucle-fisher-vneck-vest/v3/product360/sora-front.webp",
+          "assets/detail/boucle-fisher-vneck-vest/v3/product360/sora-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연회색": {
+        "sheets": [
+          "assets/detail/boucle-fisher-vneck-vest/v3/product360/light-gray-front.webp",
+          "assets/detail/boucle-fisher-vneck-vest/v3/product360/light-gray-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      }
+    },
     "originals": {
       "소라": [
         {
@@ -471,7 +839,7 @@ window.GR_DETAIL = {
     "size": "FREE",
     "sizeUnit": "cm",
     "measurementVerified": true,
-    "thumbnail": "assets/detail/boucle-fisher-vneck-vest/hero-reference-v1.webp",
+    "thumbnail": "assets/detail/boucle-fisher-vneck-vest/v3/looks/light-gray.webp",
     "thumbnailColor": "연회색",
     "materialRaw": "아크릴 45% 폴리 55%",
     "materialComplete": true,
@@ -508,16 +876,105 @@ window.GR_DETAIL = {
     ],
     "looks": [
       {
-        "id": "signature",
-        "label": "데일리 스타일링",
-        "items": [],
+        "id": "renewal",
+        "label": "가디건과 미디 스커트",
+        "items": [
+          "아이보리 미디 스커트",
+          "브라운 플랫"
+        ],
         "images": {
-          "연두": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/boucle-round-half-cardigan/ai-rm279-light-green-fullbody-webp-d4e69b1e1a9e.webp"
+          "연두": "assets/detail/boucle-round-half-cardigan/v3/looks/light-green.webp",
+          "라임": "assets/detail/boucle-round-half-cardigan/v3/looks/lime.webp",
+          "베이지": "assets/detail/boucle-round-half-cardigan/v3/looks/beige.webp",
+          "소라": "assets/detail/boucle-round-half-cardigan/v3/looks/sora.webp",
+          "곤색": "assets/detail/boucle-round-half-cardigan/v3/looks/navy.webp"
         }
       }
     ],
-    "model360": {},
-    "product360": {},
+    "model360": {
+      "연두": {
+        "sheets": [
+          "assets/detail/boucle-round-half-cardigan/v3/model360/light-green-front.webp",
+          "assets/detail/boucle-round-half-cardigan/v3/model360/light-green-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "라임": {
+        "sheets": [
+          "assets/detail/boucle-round-half-cardigan/v3/model360/lime-front.webp",
+          "assets/detail/boucle-round-half-cardigan/v3/model360/lime-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "베이지": {
+        "sheets": [
+          "assets/detail/boucle-round-half-cardigan/v3/model360/beige-front.webp",
+          "assets/detail/boucle-round-half-cardigan/v3/model360/beige-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "소라": {
+        "sheets": [
+          "assets/detail/boucle-round-half-cardigan/v3/model360/sora-front.webp",
+          "assets/detail/boucle-round-half-cardigan/v3/model360/sora-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/boucle-round-half-cardigan/v3/model360/navy-front.webp",
+          "assets/detail/boucle-round-half-cardigan/v3/model360/navy-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      }
+    },
+    "product360": {
+      "연두": {
+        "sheets": [
+          "assets/detail/boucle-round-half-cardigan/v3/product360/light-green-front.webp",
+          "assets/detail/boucle-round-half-cardigan/v3/product360/light-green-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "라임": {
+        "sheets": [
+          "assets/detail/boucle-round-half-cardigan/v3/product360/lime-front.webp",
+          "assets/detail/boucle-round-half-cardigan/v3/product360/lime-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "베이지": {
+        "sheets": [
+          "assets/detail/boucle-round-half-cardigan/v3/product360/beige-front.webp",
+          "assets/detail/boucle-round-half-cardigan/v3/product360/beige-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "소라": {
+        "sheets": [
+          "assets/detail/boucle-round-half-cardigan/v3/product360/sora-front.webp",
+          "assets/detail/boucle-round-half-cardigan/v3/product360/sora-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/boucle-round-half-cardigan/v3/product360/navy-front.webp",
+          "assets/detail/boucle-round-half-cardigan/v3/product360/navy-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      }
+    },
     "originals": {
       "곤색": [
         {
@@ -612,7 +1069,7 @@ window.GR_DETAIL = {
     "size": "FREE",
     "sizeUnit": "cm",
     "measurementVerified": true,
-    "thumbnail": "assets/detail/boucle-round-half-cardigan/hero-reference-v1.webp",
+    "thumbnail": "assets/detail/boucle-round-half-cardigan/v3/looks/light-green.webp",
     "thumbnailColor": "연두",
     "materialRaw": "아크릴 100%",
     "materialComplete": true,
@@ -649,16 +1106,228 @@ window.GR_DETAIL = {
     ],
     "looks": [
       {
-        "id": "signature",
-        "label": "데일리 스타일링",
+        "id": "signature-v3",
+        "label": "컬러별 스타일링",
         "items": [],
         "images": {
-          "베이지": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/cable-vneck-knit/ai-rm385-beige-fullbody-webp-554fa8d8abab.webp"
+          "소라": "assets/detail/cable-vneck-knit/v3/looks/sky.webp",
+          "회색": "assets/detail/cable-vneck-knit/v3/looks/gray.webp",
+          "아이": "assets/detail/cable-vneck-knit/v3/looks/ivory.webp",
+          "베이지": "assets/detail/cable-vneck-knit/v3/looks/beige.webp",
+          "연핑": "assets/detail/cable-vneck-knit/v3/looks/pink.webp",
+          "보라": "assets/detail/cable-vneck-knit/v3/looks/purple.webp",
+          "초록": "assets/detail/cable-vneck-knit/v3/looks/green.webp",
+          "곤색": "assets/detail/cable-vneck-knit/v3/looks/navy.webp",
+          "검정": "assets/detail/cable-vneck-knit/v3/looks/black.webp"
+        },
+        "labelsByColor": {
+          "소라": "인디고 데님 & 로퍼",
+          "회색": "새틴 스커트 & 플랫",
+          "아이": "차콜 팬츠 & 로퍼",
+          "베이지": "와이드 데님 & 로퍼",
+          "연핑": "그레이 데님 & 스니커즈",
+          "보라": "그레이 팬츠 & 플랫",
+          "초록": "블루 데님 & 로퍼",
+          "곤색": "베이지 스커트 & 로퍼",
+          "검정": "차콜 팬츠 & 플랫"
+        },
+        "itemsByColor": {
+          "소라": [
+            "인디고 데님",
+            "에스프레소 로퍼",
+            "작은 실버 펜던트"
+          ],
+          "회색": [
+            "종아리 중간 길이 블랙 스커트",
+            "블랙 플랫",
+            "가는 실버 목걸이"
+          ],
+          "아이": [
+            "차콜 슬랙스",
+            "블랙 로퍼",
+            "작은 골드 귀걸이"
+          ],
+          "베이지": [
+            "인디고 와이드 데님",
+            "버건디 로퍼",
+            "골드 펜던트"
+          ],
+          "연핑": [
+            "차콜 데님",
+            "아이보리 스니커즈",
+            "작은 실버 귀걸이"
+          ],
+          "보라": [
+            "라이트 그레이 슬랙스",
+            "블랙 플랫",
+            "실버 펜던트"
+          ],
+          "초록": [
+            "인디고 데님",
+            "브라운 로퍼",
+            "작은 골드 귀걸이"
+          ],
+          "곤색": [
+            "종아리 중간 길이 베이지 스커트",
+            "블랙 로퍼",
+            "실버 펜던트"
+          ],
+          "검정": [
+            "차콜 슬랙스",
+            "블랙 플랫",
+            "가는 실버 목걸이"
+          ]
         }
       }
     ],
-    "model360": {},
-    "product360": {},
+    "model360": {
+      "소라": {
+        "sheets": [
+          "assets/detail/cable-vneck-knit/v3/model360/sky-front.webp",
+          "assets/detail/cable-vneck-knit/v3/model360/sky-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "회색": {
+        "sheets": [
+          "assets/detail/cable-vneck-knit/v3/model360/gray-front.webp",
+          "assets/detail/cable-vneck-knit/v3/model360/gray-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "아이": {
+        "sheets": [
+          "assets/detail/cable-vneck-knit/v3/model360/ivory-front.webp",
+          "assets/detail/cable-vneck-knit/v3/model360/ivory-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "베이지": {
+        "sheets": [
+          "assets/detail/cable-vneck-knit/v3/model360/beige-front.webp",
+          "assets/detail/cable-vneck-knit/v3/model360/beige-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "연핑": {
+        "sheets": [
+          "assets/detail/cable-vneck-knit/v3/model360/pink-front.webp",
+          "assets/detail/cable-vneck-knit/v3/model360/pink-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "보라": {
+        "sheets": [
+          "assets/detail/cable-vneck-knit/v3/model360/purple-front.webp",
+          "assets/detail/cable-vneck-knit/v3/model360/purple-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "초록": {
+        "sheets": [
+          "assets/detail/cable-vneck-knit/v3/model360/green-front.webp",
+          "assets/detail/cable-vneck-knit/v3/model360/green-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/cable-vneck-knit/v3/model360/navy-front.webp",
+          "assets/detail/cable-vneck-knit/v3/model360/navy-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "검정": {
+        "sheets": [
+          "assets/detail/cable-vneck-knit/v3/model360/black-front.webp",
+          "assets/detail/cable-vneck-knit/v3/model360/black-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      }
+    },
+    "product360": {
+      "소라": {
+        "sheets": [
+          "assets/detail/cable-vneck-knit/v3/product360/sky-front.webp",
+          "assets/detail/cable-vneck-knit/v3/product360/sky-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "회색": {
+        "sheets": [
+          "assets/detail/cable-vneck-knit/v3/product360/gray-front.webp",
+          "assets/detail/cable-vneck-knit/v3/product360/gray-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "아이": {
+        "sheets": [
+          "assets/detail/cable-vneck-knit/v3/product360/ivory-front.webp",
+          "assets/detail/cable-vneck-knit/v3/product360/ivory-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "베이지": {
+        "sheets": [
+          "assets/detail/cable-vneck-knit/v3/product360/beige-front.webp",
+          "assets/detail/cable-vneck-knit/v3/product360/beige-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "연핑": {
+        "sheets": [
+          "assets/detail/cable-vneck-knit/v3/product360/pink-front.webp",
+          "assets/detail/cable-vneck-knit/v3/product360/pink-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "보라": {
+        "sheets": [
+          "assets/detail/cable-vneck-knit/v3/product360/purple-front.webp",
+          "assets/detail/cable-vneck-knit/v3/product360/purple-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "초록": {
+        "sheets": [
+          "assets/detail/cable-vneck-knit/v3/product360/green-front.webp",
+          "assets/detail/cable-vneck-knit/v3/product360/green-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/cable-vneck-knit/v3/product360/navy-front.webp",
+          "assets/detail/cable-vneck-knit/v3/product360/navy-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "검정": {
+        "sheets": [
+          "assets/detail/cable-vneck-knit/v3/product360/black-front.webp",
+          "assets/detail/cable-vneck-knit/v3/product360/black-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      }
+    },
     "originals": {
       "검정": [
         {
@@ -769,7 +1438,7 @@ window.GR_DETAIL = {
     "size": "FREE",
     "sizeUnit": "cm",
     "measurementVerified": true,
-    "thumbnail": "assets/detail/cable-vneck-knit/hero-reference-v1.webp",
+    "thumbnail": "assets/detail/cable-vneck-knit/v3/looks/beige.webp",
     "thumbnailColor": "베이지",
     "materialRaw": "아크릴 100%",
     "materialComplete": true,
@@ -810,16 +1479,89 @@ window.GR_DETAIL = {
     ],
     "looks": [
       {
-        "id": "signature",
-        "label": "데일리 스타일링",
-        "items": [],
+        "id": "renewal",
+        "label": "니트 레이어드와 데님",
+        "items": [
+          "화이트 긴팔 티셔츠",
+          "스트레이트 데님",
+          "아이보리 스니커즈"
+        ],
         "images": {
-          "베이지": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/fisherman-crop-bustier/ai-rm336-beige-fullbody-webp-82f977560bb2.webp"
+          "베이지": "assets/detail/fisherman-crop-bustier/v3/looks/beige.webp",
+          "연밤": "assets/detail/fisherman-crop-bustier/v3/looks/light-brown.webp",
+          "소라": "assets/detail/fisherman-crop-bustier/v3/looks/sora.webp",
+          "검정": "assets/detail/fisherman-crop-bustier/v3/looks/black.webp"
         }
       }
     ],
-    "model360": {},
-    "product360": {},
+    "model360": {
+      "베이지": {
+        "sheets": [
+          "assets/detail/fisherman-crop-bustier/v3/model360/beige-front.webp",
+          "assets/detail/fisherman-crop-bustier/v3/model360/beige-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연밤": {
+        "sheets": [
+          "assets/detail/fisherman-crop-bustier/v3/model360/light-brown-front.webp",
+          "assets/detail/fisherman-crop-bustier/v3/model360/light-brown-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "소라": {
+        "sheets": [
+          "assets/detail/fisherman-crop-bustier/v3/model360/sora-front.webp",
+          "assets/detail/fisherman-crop-bustier/v3/model360/sora-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "검정": {
+        "sheets": [
+          "assets/detail/fisherman-crop-bustier/v3/model360/black-front.webp",
+          "assets/detail/fisherman-crop-bustier/v3/model360/black-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      }
+    },
+    "product360": {
+      "베이지": {
+        "sheets": [
+          "assets/detail/fisherman-crop-bustier/v3/product360/beige-front.webp",
+          "assets/detail/fisherman-crop-bustier/v3/product360/beige-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연밤": {
+        "sheets": [
+          "assets/detail/fisherman-crop-bustier/v3/product360/light-brown-front.webp",
+          "assets/detail/fisherman-crop-bustier/v3/product360/light-brown-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "소라": {
+        "sheets": [
+          "assets/detail/fisherman-crop-bustier/v3/product360/sora-front.webp",
+          "assets/detail/fisherman-crop-bustier/v3/product360/sora-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "검정": {
+        "sheets": [
+          "assets/detail/fisherman-crop-bustier/v3/product360/black-front.webp",
+          "assets/detail/fisherman-crop-bustier/v3/product360/black-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      }
+    },
     "originals": {
       "검정": [
         {
@@ -896,7 +1638,7 @@ window.GR_DETAIL = {
     "size": "FREE",
     "sizeUnit": "cm",
     "measurementVerified": true,
-    "thumbnail": "assets/detail/fisherman-crop-bustier/hero-reference-v1.webp",
+    "thumbnail": "assets/detail/fisherman-crop-bustier/v3/looks/beige.webp",
     "thumbnailColor": "베이지",
     "materialRaw": "아크릴 100%",
     "materialComplete": true,
@@ -932,109 +1674,159 @@ window.GR_DETAIL = {
     ],
     "looks": [
       {
-        "id": "city-denim",
-        "label": "라이트 데님 · 레트로 스니커즈",
-        "items": [
-          "라이트 워시 데님",
-          "아이보리 레트로 스니커즈",
-          "초콜릿 숄더백"
-        ],
+        "id": "signature-v3",
+        "label": "Signature Styling",
+        "items": [],
         "images": {
-          "차콜": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/city-denim/charcoal-84bd9bfd.webp",
-          "카멜": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/city-denim/camel-68fccfd1.webp",
-          "크림": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/city-denim/cream-91abc219.webp",
-          "스카이": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/city-denim/sky-51437f2b.webp"
+          "스카이": "assets/detail/honey-loop-crop-knit/v3/looks/sky.webp",
+          "크림": "assets/detail/honey-loop-crop-knit/v3/looks/cream.webp",
+          "카멜": "assets/detail/honey-loop-crop-knit/v3/looks/camel.webp",
+          "차콜": "assets/detail/honey-loop-crop-knit/v3/looks/charcoal.webp"
+        },
+        "labelsByColor": {
+          "스카이": "블루 데님 & 스니커즈",
+          "크림": "인디고 데님 & 로퍼",
+          "카멜": "아이보리 스커트 & 플랫",
+          "차콜": "베이지 팬츠 & 플랫"
+        },
+        "itemsByColor": {
+          "스카이": [
+            "블루 데님",
+            "아이보리 스니커즈",
+            "초콜릿 숄더백"
+          ],
+          "크림": [
+            "인디고 와이드 데님",
+            "블랙 로퍼",
+            "블랙 핸드백"
+          ],
+          "카멜": [
+            "종아리 중간 길이 아이보리 스커트",
+            "초콜릿 플랫",
+            "다크 브라운 백"
+          ],
+          "차콜": [
+            "샌드 베이지 와이드 슬랙스",
+            "블랙 플랫",
+            "블랙 핸드백"
+          ]
         }
       },
       {
-        "id": "soft-skirt",
-        "label": "새틴 롱스커트 · 발레리나 플랫",
+        "id": "skirt-v3",
+        "label": "니트와 미디 스커트",
         "items": [
-          "아이보리 새틴 롱스커트",
-          "블랙 발레리나 플랫",
-          "미니 토트백"
+          "아이보리 미디 A라인 스커트",
+          "초콜릿 플랫 슈즈",
+          "작은 브라운 백"
         ],
         "images": {
-          "차콜": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/soft-skirt/charcoal-7bd3938f.webp",
-          "카멜": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/soft-skirt/camel-2365159f.webp",
-          "크림": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/soft-skirt/cream-465adde9.webp",
-          "스카이": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/soft-skirt/sky-b4df00ec.webp"
+          "스카이": "assets/detail/honey-loop-crop-knit/v3/looks/skirt-sky.webp",
+          "크림": "assets/detail/honey-loop-crop-knit/v3/looks/skirt-cream.webp",
+          "카멜": "assets/detail/honey-loop-crop-knit/v3/looks/skirt-camel.webp",
+          "차콜": "assets/detail/honey-loop-crop-knit/v3/looks/skirt-charcoal.webp"
         }
       },
       {
-        "id": "city-mini",
-        "label": "차콜 미니스커트 · 블랙 로퍼",
+        "id": "tailored-v3",
+        "label": "니트와 테일러드 팬츠",
         "items": [
-          "차콜 A라인 미니스커트",
+          "차콜 테일러드 팬츠",
           "블랙 로퍼",
-          "블랙 숄더백"
+          "작은 블랙 백"
         ],
         "images": {
-          "차콜": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/city-mini/charcoal-2997e712.webp",
-          "카멜": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/city-mini/camel-86325221.webp",
-          "크림": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/city-mini/cream-82feae41.webp",
-          "스카이": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/city-mini/sky-3f6f046b.webp"
+          "스카이": "assets/detail/honey-loop-crop-knit/v3/looks/tailored-sky.webp",
+          "크림": "assets/detail/honey-loop-crop-knit/v3/looks/tailored-cream.webp",
+          "카멜": "assets/detail/honey-loop-crop-knit/v3/looks/tailored-camel.webp",
+          "차콜": "assets/detail/honey-loop-crop-knit/v3/looks/tailored-charcoal.webp"
         }
       },
       {
-        "id": "tailored",
-        "label": "크림 와이드 슬랙스 · 슬링백",
+        "id": "layered-v3",
+        "label": "셔츠와 데님 레이어드",
         "items": [
-          "크림 와이드 슬랙스",
-          "블랙 포인티드 슬링백",
-          "구조적인 미니 토트"
+          "화이트 카라 셔츠",
+          "중청 스트레이트 데님",
+          "아이보리 스니커즈",
+          "작은 아이보리 백"
         ],
         "images": {
-          "차콜": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/tailored/charcoal-2849ada0.webp",
-          "카멜": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/tailored/camel-221b6c3c.webp",
-          "크림": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/tailored/cream-917467b6.webp",
-          "스카이": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/looks/tailored/sky-fa2d0514.webp"
+          "스카이": "assets/detail/honey-loop-crop-knit/v3/looks/layered-sky.webp",
+          "크림": "assets/detail/honey-loop-crop-knit/v3/looks/layered-cream.webp",
+          "카멜": "assets/detail/honey-loop-crop-knit/v3/looks/layered-camel.webp",
+          "차콜": "assets/detail/honey-loop-crop-knit/v3/looks/layered-charcoal.webp"
         }
       }
     ],
     "model360": {
-      "차콜": [
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/charcoal/000-8eca2fd8.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/charcoal/045-312298c1.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/charcoal/090-fff899d4.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/charcoal/135-bad8ef41.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/charcoal/180-70663c23.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/charcoal/225-068564d1.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/charcoal/270-4304321f.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/charcoal/315-94459d80.webp"
-      ],
-      "카멜": [
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/camel/000-26afca88.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/camel/045-10a11af6.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/camel/090-825d5f12.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/camel/135-629e6f8a.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/camel/180-d996f273.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/camel/225-942a54da.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/camel/270-192eec63.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/camel/315-65de27f8.webp"
-      ],
-      "크림": [
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/cream/000-464a7ec1.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/cream/045-5f3f6d03.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/cream/090-7a7eddb9.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/cream/135-2d280e01.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/cream/180-8760fc8a.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/cream/225-3e019a67.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/cream/270-dfccf6c5.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/cream/315-7349ba51.webp"
-      ],
-      "스카이": [
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/sky/000-4efe3ce4.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/sky/045-657f4e2b.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/sky/090-890013dc.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/sky/135-9d9310a2.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/sky/180-e45b29de.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/sky/225-e7c0b623.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/sky/270-55d86e1d.webp",
-        "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/turntable/sky/315-fff49875.webp"
-      ]
+      "스카이": {
+        "sheets": [
+          "assets/detail/honey-loop-crop-knit/v3/model360/sky-front.webp",
+          "assets/detail/honey-loop-crop-knit/v3/model360/sky-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "크림": {
+        "sheets": [
+          "assets/detail/honey-loop-crop-knit/v3/model360/cream-front.webp",
+          "assets/detail/honey-loop-crop-knit/v3/model360/cream-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "카멜": {
+        "sheets": [
+          "assets/detail/honey-loop-crop-knit/v3/model360/camel-front.webp",
+          "assets/detail/honey-loop-crop-knit/v3/model360/camel-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "차콜": {
+        "sheets": [
+          "assets/detail/honey-loop-crop-knit/v3/model360/charcoal-front.webp",
+          "assets/detail/honey-loop-crop-knit/v3/model360/charcoal-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      }
     },
-    "product360": {},
+    "product360": {
+      "스카이": {
+        "sheets": [
+          "assets/detail/honey-loop-crop-knit/v3/product360/sky-front.webp",
+          "assets/detail/honey-loop-crop-knit/v3/product360/sky-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "크림": {
+        "sheets": [
+          "assets/detail/honey-loop-crop-knit/v3/product360/cream-front.webp",
+          "assets/detail/honey-loop-crop-knit/v3/product360/cream-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "카멜": {
+        "sheets": [
+          "assets/detail/honey-loop-crop-knit/v3/product360/camel-front.webp",
+          "assets/detail/honey-loop-crop-knit/v3/product360/camel-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "차콜": {
+        "sheets": [
+          "assets/detail/honey-loop-crop-knit/v3/product360/charcoal-front.webp",
+          "assets/detail/honey-loop-crop-knit/v3/product360/charcoal-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      }
+    },
     "originals": {
       "스카이": [
         {
@@ -1085,7 +1877,7 @@ window.GR_DETAIL = {
     "size": "FREE",
     "sizeUnit": "cm",
     "measurementVerified": true,
-    "thumbnail": "assets/detail/honey-loop-crop-knit/hero-preserved-v1.webp",
+    "thumbnail": "assets/detail/honey-loop-crop-knit/v3/looks/sky.webp",
     "thumbnailColor": "스카이",
     "materialRaw": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
     "materialComplete": true,
@@ -1363,7 +2155,8 @@ window.GR_DETAIL = {
       "width": 1536,
       "height": 1024
     },
-    "isNewDesign": false
+    "isNewDesign": false,
+    "model360Label": "셔츠·팬츠"
   },
   "popcorn-vneck-half": {
     "lead": "잔잔한 팝콘 짜임에 브이넥을 더했어요. 데님 하나로도 조합이 완성됩니다.",
@@ -1388,16 +2181,113 @@ window.GR_DETAIL = {
     ],
     "looks": [
       {
-        "id": "signature",
-        "label": "데일리 스타일링",
+        "id": "signature-v3",
+        "label": "컬러별 스타일링",
         "items": [],
         "images": {
-          "연두": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/popcorn-vneck-half/ai-rm471-light-green-fullbody-webp-c3cee42515ea.webp"
+          "노랑": "assets/detail/popcorn-vneck-half/v3/looks/yellow.webp",
+          "연두": "assets/detail/popcorn-vneck-half/v3/looks/light-green.webp",
+          "베이지": "assets/detail/popcorn-vneck-half/v3/looks/beige.webp",
+          "검정": "assets/detail/popcorn-vneck-half/v3/looks/black.webp"
+        },
+        "labelsByColor": {
+          "노랑": "데님 & 실버 샌들",
+          "연두": "차콜 팬츠 & 스니커즈",
+          "베이지": "새틴 스커트 & 슬링백",
+          "검정": "아이보리 데님 & 로퍼"
+        },
+        "itemsByColor": {
+          "노랑": [
+            "워시드 데님",
+            "실버 플랫 샌들",
+            "크림 우븐백"
+          ],
+          "연두": [
+            "와이드 슬랙스",
+            "크림 스니커즈",
+            "초콜릿 숄더백"
+          ],
+          "베이지": [
+            "종아리 중간 길이 네이비 스커트",
+            "탠 슬링백",
+            "버건디 백"
+          ],
+          "검정": [
+            "아이보리 데님",
+            "블랙 로퍼",
+            "와인 숄더백"
+          ]
         }
       }
     ],
-    "model360": {},
-    "product360": {},
+    "model360": {
+      "노랑": {
+        "sheets": [
+          "assets/detail/popcorn-vneck-half/v3/model360/yellow-front.webp",
+          "assets/detail/popcorn-vneck-half/v3/model360/yellow-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "연두": {
+        "sheets": [
+          "assets/detail/popcorn-vneck-half/v3/model360/light-green-front.webp",
+          "assets/detail/popcorn-vneck-half/v3/model360/light-green-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "베이지": {
+        "sheets": [
+          "assets/detail/popcorn-vneck-half/v3/model360/beige-front.webp",
+          "assets/detail/popcorn-vneck-half/v3/model360/beige-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "검정": {
+        "sheets": [
+          "assets/detail/popcorn-vneck-half/v3/model360/black-front.webp",
+          "assets/detail/popcorn-vneck-half/v3/model360/black-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      }
+    },
+    "product360": {
+      "노랑": {
+        "sheets": [
+          "assets/detail/popcorn-vneck-half/v3/product360/yellow-front.webp",
+          "assets/detail/popcorn-vneck-half/v3/product360/yellow-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연두": {
+        "sheets": [
+          "assets/detail/popcorn-vneck-half/v3/product360/light-green-front.webp",
+          "assets/detail/popcorn-vneck-half/v3/product360/light-green-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "베이지": {
+        "sheets": [
+          "assets/detail/popcorn-vneck-half/v3/product360/beige-front.webp",
+          "assets/detail/popcorn-vneck-half/v3/product360/beige-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "검정": {
+        "sheets": [
+          "assets/detail/popcorn-vneck-half/v3/product360/black-front.webp",
+          "assets/detail/popcorn-vneck-half/v3/product360/black-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      }
+    },
     "originals": {
       "검정": [
         {
@@ -1478,8 +2368,8 @@ window.GR_DETAIL = {
     "size": "FREE",
     "sizeUnit": "cm",
     "measurementVerified": true,
-    "thumbnail": "assets/detail/popcorn-vneck-half/hero-reference-v1.webp",
-    "thumbnailColor": "연두",
+    "thumbnail": "assets/detail/popcorn-vneck-half/v3/looks/yellow.webp",
+    "thumbnailColor": "노랑",
     "materialRaw": "아크릴 100%",
     "materialComplete": true,
     "materialNote": "",
@@ -1514,16 +2404,159 @@ window.GR_DETAIL = {
     ],
     "looks": [
       {
-        "id": "signature",
-        "label": "데일리 스타일링",
+        "id": "signature-v3",
+        "label": "컬러별 스타일링",
         "items": [],
         "images": {
-          "올리브": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/recycled-round-sweater/ai-rm418-olive-fullbody-webp-70ec88a33b1d.webp"
+          "스카이": "assets/detail/recycled-round-sweater/v3/looks/sky.webp",
+          "곤색": "assets/detail/recycled-round-sweater/v3/looks/navy.webp",
+          "올리브": "assets/detail/recycled-round-sweater/v3/looks/olive.webp",
+          "모카": "assets/detail/recycled-round-sweater/v3/looks/mocha.webp",
+          "그레이": "assets/detail/recycled-round-sweater/v3/looks/gray.webp",
+          "브라운": "assets/detail/recycled-round-sweater/v3/looks/brown.webp"
+        },
+        "labelsByColor": {
+          "스카이": "차콜 팬츠 & 스니커즈",
+          "곤색": "블루 데님 & 로퍼",
+          "올리브": "차콜 데님 & 로퍼",
+          "모카": "블랙 스커트 & 플랫",
+          "그레이": "인디고 데님 & 스니커즈",
+          "브라운": "베이지 팬츠 & 로퍼"
+        },
+        "itemsByColor": {
+          "스카이": [
+            "차콜 와이드 슬랙스",
+            "아이보리 스니커즈",
+            "실버 귀걸이"
+          ],
+          "곤색": [
+            "블루 데님",
+            "버건디 로퍼",
+            "골드 펜던트"
+          ],
+          "올리브": [
+            "스톤 워시 차콜 데님",
+            "다크 브라운 로퍼",
+            "작은 골드 귀걸이"
+          ],
+          "모카": [
+            "종아리 중간 길이 블랙 스커트",
+            "블랙 플랫",
+            "골드 귀걸이"
+          ],
+          "그레이": [
+            "인디고 데님",
+            "아이보리 스니커즈",
+            "실버 펜던트"
+          ],
+          "브라운": [
+            "스톤 베이지 슬랙스",
+            "초콜릿 로퍼",
+            "골드 펜던트"
+          ]
         }
       }
     ],
-    "model360": {},
-    "product360": {},
+    "model360": {
+      "스카이": {
+        "sheets": [
+          "assets/detail/recycled-round-sweater/v3/model360/sky-front.webp",
+          "assets/detail/recycled-round-sweater/v3/model360/sky-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/recycled-round-sweater/v3/model360/navy-front.webp",
+          "assets/detail/recycled-round-sweater/v3/model360/navy-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "올리브": {
+        "sheets": [
+          "assets/detail/recycled-round-sweater/v3/model360/olive-front.webp",
+          "assets/detail/recycled-round-sweater/v3/model360/olive-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "모카": {
+        "sheets": [
+          "assets/detail/recycled-round-sweater/v3/model360/mocha-front.webp",
+          "assets/detail/recycled-round-sweater/v3/model360/mocha-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "그레이": {
+        "sheets": [
+          "assets/detail/recycled-round-sweater/v3/model360/gray-front.webp",
+          "assets/detail/recycled-round-sweater/v3/model360/gray-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "브라운": {
+        "sheets": [
+          "assets/detail/recycled-round-sweater/v3/model360/brown-front.webp",
+          "assets/detail/recycled-round-sweater/v3/model360/brown-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      }
+    },
+    "product360": {
+      "스카이": {
+        "sheets": [
+          "assets/detail/recycled-round-sweater/v3/product360/sky-front.webp",
+          "assets/detail/recycled-round-sweater/v3/product360/sky-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/recycled-round-sweater/v3/product360/navy-front.webp",
+          "assets/detail/recycled-round-sweater/v3/product360/navy-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "올리브": {
+        "sheets": [
+          "assets/detail/recycled-round-sweater/v3/product360/olive-front.webp",
+          "assets/detail/recycled-round-sweater/v3/product360/olive-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "모카": {
+        "sheets": [
+          "assets/detail/recycled-round-sweater/v3/product360/mocha-front.webp",
+          "assets/detail/recycled-round-sweater/v3/product360/mocha-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "그레이": {
+        "sheets": [
+          "assets/detail/recycled-round-sweater/v3/product360/gray-front.webp",
+          "assets/detail/recycled-round-sweater/v3/product360/gray-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "브라운": {
+        "sheets": [
+          "assets/detail/recycled-round-sweater/v3/product360/brown-front.webp",
+          "assets/detail/recycled-round-sweater/v3/product360/brown-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      }
+    },
     "originals": {
       "곤색": [
         {
@@ -1624,7 +2657,7 @@ window.GR_DETAIL = {
     "size": "FREE",
     "sizeUnit": "cm",
     "measurementVerified": true,
-    "thumbnail": "assets/detail/recycled-round-sweater/hero-preserved-v1.webp",
+    "thumbnail": "assets/detail/recycled-round-sweater/v3/looks/olive.webp",
     "thumbnailColor": "올리브",
     "materialRaw": "리싸이클폴리 / 아크릴 / 폴리 / 울 / 스판",
     "materialComplete": false,
@@ -1863,81 +2896,213 @@ window.GR_DETAIL = {
     ],
     "looks": [
       {
-        "id": "city-denim",
-        "label": "화이트 티 · 라이트 데님",
-        "items": [
-          "화이트 티셔츠",
-          "라이트 데님",
-          "브라운 숄더백",
-          "화이트 레트로 스니커즈"
-        ],
+        "id": "signature-v3",
+        "label": "Signature Styling",
+        "items": [],
         "images": {
-          "곤색": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/city-denim/navy-d045ebf5f3a2.webp",
-          "모카": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/city-denim/mocha-d2819a244e18.webp",
-          "그레이": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/city-denim/gray-fa1e11638337.webp",
-          "브라운": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/city-denim/brown-b1c873e9d1a2.webp",
-          "올리브": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/city-denim/olive-be53dffaf95b.webp",
-          "그레이프": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/city-denim/grape-8ae0062b6964.webp"
+          "그레이프": "assets/detail/vneck-knit-vest/v3/looks/grape.webp",
+          "모카": "assets/detail/vneck-knit-vest/v3/looks/mocha.webp",
+          "그레이": "assets/detail/vneck-knit-vest/v3/looks/gray.webp",
+          "브라운": "assets/detail/vneck-knit-vest/v3/looks/brown.webp",
+          "올리브": "assets/detail/vneck-knit-vest/v3/looks/olive.webp",
+          "곤색": "assets/detail/vneck-knit-vest/v3/looks/navy.webp"
+        },
+        "labelsByColor": {
+          "그레이프": "셔츠 & 차콜 슬랙스",
+          "모카": "라운드 티 & 데님",
+          "그레이": "티셔츠 & 네이비 팬츠",
+          "브라운": "셔츠 & 아이보리 스커트",
+          "올리브": "셔츠 & 베이지 팬츠",
+          "곤색": "블루 셔츠 & 그레이 스커트"
+        },
+        "itemsByColor": {
+          "그레이프": [
+            "화이트 셔츠",
+            "차콜 와이드 슬랙스",
+            "블랙 로퍼"
+          ],
+          "모카": [
+            "아이보리 긴팔 티",
+            "블루 데님",
+            "브라운 로퍼"
+          ],
+          "그레이": [
+            "화이트 티셔츠",
+            "네이비 와이드 팬츠",
+            "아이보리 스니커즈"
+          ],
+          "브라운": [
+            "아이보리 셔츠",
+            "종아리 중간 길이 스커트",
+            "버건디 플랫"
+          ],
+          "올리브": [
+            "화이트 셔츠",
+            "베이지 팬츠",
+            "초콜릿 로퍼"
+          ],
+          "곤색": [
+            "페일 블루 셔츠",
+            "종아리 중간 길이 그레이 스커트",
+            "블랙 플랫"
+          ]
         }
       },
       {
-        "id": "soft-skirt",
-        "label": "화이트 셔츠 · 크림 롱스커트",
+        "id": "tailored-v3",
+        "label": "셔츠와 네이비 슬랙스",
         "items": [
-          "화이트 옥스퍼드 셔츠",
-          "크림 롱스커트",
-          "발레 플랫",
-          "다크 브라운 구조적 미니백"
-        ],
-        "images": {
-          "곤색": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/soft-skirt/navy-202fc02094bf.webp",
-          "모카": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/soft-skirt/mocha-aedfca47b8fa.webp",
-          "그레이": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/soft-skirt/gray-538ad73e55e3.webp",
-          "브라운": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/soft-skirt/brown-b71d8bec9886.webp",
-          "올리브": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/soft-skirt/olive-d8c8aa7b76df.webp",
-          "그레이프": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/soft-skirt/grape-bc96bd74fbad.webp"
-        }
-      },
-      {
-        "id": "city-mini",
-        "label": "스트라이프 셔츠 · 미니스커트",
-        "items": [
-          "블루 스트라이프 셔츠",
-          "차콜 A라인 미니스커트",
-          "차콜 타이츠",
+          "화이트 카라 셔츠",
+          "네이비 슬랙스",
           "블랙 로퍼",
-          "블랙 숄더백"
+          "작은 블랙 핸드백"
         ],
         "images": {
-          "곤색": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/city-mini/navy-c57b5b37e0ae.webp",
-          "모카": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/city-mini/mocha-cc13f4a08df0.webp",
-          "그레이": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/city-mini/gray-1a22678dff2c.webp",
-          "브라운": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/city-mini/brown-17fd3f835034.webp",
-          "올리브": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/city-mini/olive-7816c5270edb.webp",
-          "그레이프": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/city-mini/grape-404016980629.webp"
+          "그레이프": "assets/detail/vneck-knit-vest/v3/looks/tailored-grape.webp",
+          "모카": "assets/detail/vneck-knit-vest/v3/looks/tailored-mocha.webp",
+          "그레이": "assets/detail/vneck-knit-vest/v3/looks/tailored-gray.webp",
+          "브라운": "assets/detail/vneck-knit-vest/v3/looks/tailored-brown.webp",
+          "올리브": "assets/detail/vneck-knit-vest/v3/looks/tailored-olive.webp",
+          "곤색": "assets/detail/vneck-knit-vest/v3/looks/tailored-navy.webp"
         }
       },
       {
-        "id": "tailored",
-        "label": "화이트 셔츠 · 크림 와이드 팬츠",
+        "id": "denim-v3",
+        "label": "티셔츠와 블루 데님",
         "items": [
-          "화이트 셔츠",
-          "크림 와이드 팬츠",
-          "슬링백 슈즈",
-          "미니 토트백"
+          "아이보리 라운드 티셔츠",
+          "미드 블루 데님",
+          "크림 레트로 스니커즈",
+          "작은 브라운 숄더백"
         ],
         "images": {
-          "곤색": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/tailored/navy-dad73bffcd9a.webp",
-          "모카": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/tailored/mocha-49dbc96f1b93.webp",
-          "그레이": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/tailored/gray-eb28e37db062.webp",
-          "브라운": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/tailored/brown-25a152161e85.webp",
-          "올리브": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/tailored/olive-8778803d1147.webp",
-          "그레이프": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/looks/tailored/grape-4ba1740a7803.webp"
+          "그레이프": "assets/detail/vneck-knit-vest/v3/looks/denim-grape.webp",
+          "모카": "assets/detail/vneck-knit-vest/v3/looks/denim-mocha.webp",
+          "그레이": "assets/detail/vneck-knit-vest/v3/looks/denim-gray.webp",
+          "브라운": "assets/detail/vneck-knit-vest/v3/looks/denim-brown.webp",
+          "올리브": "assets/detail/vneck-knit-vest/v3/looks/denim-olive.webp",
+          "곤색": "assets/detail/vneck-knit-vest/v3/looks/denim-navy.webp"
+        }
+      },
+      {
+        "id": "skirt-v3",
+        "label": "셔츠와 아이보리 미디스커트",
+        "items": [
+          "화이트 카라 셔츠",
+          "종아리 중간 길이 아이보리 A라인 스커트",
+          "브라운 플랫",
+          "작은 브라운 핸드백"
+        ],
+        "images": {
+          "그레이프": "assets/detail/vneck-knit-vest/v3/looks/skirt-grape.webp",
+          "모카": "assets/detail/vneck-knit-vest/v3/looks/skirt-mocha.webp",
+          "그레이": "assets/detail/vneck-knit-vest/v3/looks/skirt-gray.webp",
+          "브라운": "assets/detail/vneck-knit-vest/v3/looks/skirt-brown.webp",
+          "올리브": "assets/detail/vneck-knit-vest/v3/looks/skirt-olive.webp",
+          "곤색": "assets/detail/vneck-knit-vest/v3/looks/skirt-navy.webp"
         }
       }
     ],
-    "model360": {},
-    "product360": {},
+    "model360": {
+      "그레이프": {
+        "sheets": [
+          "assets/detail/vneck-knit-vest/v3/model360/grape-front.webp",
+          "assets/detail/vneck-knit-vest/v3/model360/grape-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "모카": {
+        "sheets": [
+          "assets/detail/vneck-knit-vest/v3/model360/mocha-front.webp",
+          "assets/detail/vneck-knit-vest/v3/model360/mocha-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "그레이": {
+        "sheets": [
+          "assets/detail/vneck-knit-vest/v3/model360/gray-front.webp",
+          "assets/detail/vneck-knit-vest/v3/model360/gray-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "브라운": {
+        "sheets": [
+          "assets/detail/vneck-knit-vest/v3/model360/brown-front.webp",
+          "assets/detail/vneck-knit-vest/v3/model360/brown-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "올리브": {
+        "sheets": [
+          "assets/detail/vneck-knit-vest/v3/model360/olive-front.webp",
+          "assets/detail/vneck-knit-vest/v3/model360/olive-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/vneck-knit-vest/v3/model360/navy-front.webp",
+          "assets/detail/vneck-knit-vest/v3/model360/navy-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      }
+    },
+    "product360": {
+      "그레이프": {
+        "sheets": [
+          "assets/detail/vneck-knit-vest/v3/product360/grape-front.webp",
+          "assets/detail/vneck-knit-vest/v3/product360/grape-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "모카": {
+        "sheets": [
+          "assets/detail/vneck-knit-vest/v3/product360/mocha-front.webp",
+          "assets/detail/vneck-knit-vest/v3/product360/mocha-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "그레이": {
+        "sheets": [
+          "assets/detail/vneck-knit-vest/v3/product360/gray-front.webp",
+          "assets/detail/vneck-knit-vest/v3/product360/gray-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "브라운": {
+        "sheets": [
+          "assets/detail/vneck-knit-vest/v3/product360/brown-front.webp",
+          "assets/detail/vneck-knit-vest/v3/product360/brown-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "올리브": {
+        "sheets": [
+          "assets/detail/vneck-knit-vest/v3/product360/olive-front.webp",
+          "assets/detail/vneck-knit-vest/v3/product360/olive-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/vneck-knit-vest/v3/product360/navy-front.webp",
+          "assets/detail/vneck-knit-vest/v3/product360/navy-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      }
+    },
     "originals": {
       "곤색": [
         {
@@ -2032,7 +3197,7 @@ window.GR_DETAIL = {
     "size": "ONE SIZE",
     "sizeUnit": "cm",
     "measurementVerified": true,
-    "thumbnail": "assets/detail/vneck-knit-vest/hero-preserved-v1.webp",
+    "thumbnail": "assets/detail/vneck-knit-vest/v3/looks/grape.webp",
     "thumbnailColor": "그레이프",
     "materialRaw": "리싸이클 폴리 34% · 아크릴 29% · 폴리 27% · 울 8% · 스판 2%",
     "materialComplete": true,

@@ -46,3 +46,9 @@ test('omitted or invalid dimensions remain automatic and undeclared colors are n
   const d=normalize(product,{model360:{곤색:{sheets:['front.webp','back.webp'],cellWidth:-1,cellHeight:0},미판매:{sheets:['other.webp','other-back.webp']}}});
   assert.deepEqual(d.model360,{곤색:{sheets:['front.webp','back.webp']}});
 });
+
+test('color-specific outfit labels and item lists survive normalization',()=>{
+  const d=normalize(product,{looks:[{id:'daily',label:'스타일링',images:{곤색:'navy.webp',보라:'purple.webp'},labelsByColor:{곤색:'셔츠와 스커트',보라:'데님과 로퍼'},itemsByColor:{곤색:['화이트 셔츠','미디 스커트'],보라:['인디고 데님','로퍼']}}]});
+  assert.equal(d.looks[0].labelsByColor.곤색,'셔츠와 스커트');
+  assert.deepEqual(d.looks[0].itemsByColor.보라,['인디고 데님','로퍼']);
+});

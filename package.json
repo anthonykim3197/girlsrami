@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build.mjs"
+    "build": "node scripts/build.mjs",
+    "test:storefront": "node --test --test-concurrency=1 tests/catalog-media-coverage.test.mjs tests/catalog-presentation.test.mjs tests/personal-fitting-removal.test.mjs tests/rm401-media-coverage.test.mjs tests/smartstore-review-data.test.mjs tests/standard-detail-image-layout.test.mjs tests/standard-detail-reviews.test.mjs tests/standard-detail-sprites.test.mjs tests/storefront-seo.test.mjs"
   }
 }

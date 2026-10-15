@@ -80,15 +80,21 @@ window.GR_DETAIL = {
     "fabric": [
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/alpaca-round-knit/detail-1-ad1fe57b0706.jpg",
-        "caption": "오렌지 · 전체 실루엣 · 실물"
+        "caption": "오렌지 · 전체 실루엣 · 실물",
+        "width": 860,
+        "height": 860
       },
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/alpaca-round-knit/detail-2-ab8480397dec.jpg",
-        "caption": "네온 · 전체 실루엣 · 실물"
+        "caption": "네온 · 전체 실루엣 · 실물",
+        "width": 860,
+        "height": 860
       },
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/alpaca-round-knit/detail-3-a7ecd85638e7.jpg",
-        "caption": "보라 · 전체 실루엣 · 실물"
+        "caption": "보라 · 전체 실루엣 · 실물",
+        "width": 860,
+        "height": 860
       }
     ],
     "colorBoard": "",
@@ -272,15 +278,21 @@ window.GR_DETAIL = {
     "fabric": [
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/smartstore-v1/assets/original/detail-32-a6dba2df.webp",
-        "caption": "연두 · 넥과 버튼 · 실물"
+        "caption": "연두 · 넥과 버튼 · 실물",
+        "width": 860,
+        "height": 860
       },
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/smartstore-v1/assets/original/detail-33-fc333a2e.webp",
-        "caption": "연두 · 부클 짜임 · 실물"
+        "caption": "연두 · 부클 짜임 · 실물",
+        "width": 860,
+        "height": 860
       },
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/smartstore-v1/assets/original/detail-34-4e0e2b67.webp",
-        "caption": "연두 · 소매 디테일 · 실물"
+        "caption": "연두 · 소매 디테일 · 실물",
+        "width": 860,
+        "height": 860
       }
     ],
     "colorBoard": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/boards/boucle-crop-cardigan-99e8f075.webp",
@@ -336,6 +348,10 @@ window.GR_DETAIL = {
       "연두": "#A6B58D",
       "연밤": "#A39183",
       "베이지": "#D1C3A8"
+    },
+    "colorBoardSize": {
+      "width": 1536,
+      "height": 1024
     }
   },
   "boucle-fisher-vneck-vest": {
@@ -406,15 +422,21 @@ window.GR_DETAIL = {
     "fabric": [
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/boucle-fisher-vneck-vest/detail-1-bc3b3bf9fcb3.jpg",
-        "caption": "부클 피셔 케이블 브이넥 베스트 브이넥과 케이블 근접 실물 상세"
+        "caption": "부클 피셔 케이블 브이넥 베스트 브이넥과 케이블 근접 실물 상세",
+        "width": 860,
+        "height": 860
       },
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/boucle-fisher-vneck-vest/detail-2-55f51a9ffbbe.jpg",
-        "caption": "부클 피셔 케이블 브이넥 베스트 마네킹 옆면 케이블 실물 상세"
+        "caption": "부클 피셔 케이블 브이넥 베스트 마네킹 옆면 케이블 실물 상세",
+        "width": 860,
+        "height": 860
       },
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/boucle-fisher-vneck-vest/detail-3-12ef2d6dff3a.jpg",
-        "caption": "부클 피셔 케이블 브이넥 베스트 마네킹 뒷면 핏 실물 상세"
+        "caption": "부클 피셔 케이블 브이넥 베스트 마네킹 뒷면 핏 실물 상세",
+        "width": 860,
+        "height": 860
       }
     ],
     "colorBoard": "",
@@ -528,15 +550,21 @@ window.GR_DETAIL = {
     "fabric": [
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/boucle-round-half-cardigan/detail-1-faf9e5c8ff50.jpg",
-        "caption": "부클 라운드 반팔 크롭 가디건 마네킹 정면 핏 실물 상세"
+        "caption": "부클 라운드 반팔 크롭 가디건 마네킹 정면 핏 실물 상세",
+        "width": 860,
+        "height": 860
       },
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/boucle-round-half-cardigan/detail-2-5173c24e3bf8.jpg",
-        "caption": "부클 라운드 반팔 크롭 가디건 버튼 여밈과 몸판 실물 상세"
+        "caption": "부클 라운드 반팔 크롭 가디건 버튼 여밈과 몸판 실물 상세",
+        "width": 860,
+        "height": 860
       },
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/boucle-round-half-cardigan/detail-3-391efa7c3751.jpg",
-        "caption": "부클 라운드 반팔 크롭 가디건 마네킹 뒷면 핏 실물 상세"
+        "caption": "부클 라운드 반팔 크롭 가디건 마네킹 뒷면 핏 실물 상세",
+        "width": 860,
+        "height": 860
       }
     ],
     "colorBoard": "",
@@ -686,15 +714,21 @@ window.GR_DETAIL = {
     "fabric": [
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/cable-vneck-knit/detail-1-6307f1910e0d.jpg",
-        "caption": "케이블 브이넥 꽈배기 니트 브이넥 케이블 근접 실물 상세"
+        "caption": "케이블 브이넥 꽈배기 니트 브이넥 케이블 근접 실물 상세",
+        "width": 860,
+        "height": 860
       },
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/cable-vneck-knit/detail-2-99c5f8232ca5.jpg",
-        "caption": "케이블 브이넥 꽈배기 니트 소매와 시보리 근접 실물 상세"
+        "caption": "케이블 브이넥 꽈배기 니트 소매와 시보리 근접 실물 상세",
+        "width": 860,
+        "height": 860
       },
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/cable-vneck-knit/detail-3-abf723882a95.jpg",
-        "caption": "케이블 브이넥 꽈배기 니트 몸판 케이블 조직 근접 실물 상세"
+        "caption": "케이블 브이넥 꽈배기 니트 몸판 케이블 조직 근접 실물 상세",
+        "width": 860,
+        "height": 860
       }
     ],
     "colorBoard": "",
@@ -810,15 +844,21 @@ window.GR_DETAIL = {
     "fabric": [
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/fisherman-crop-bustier/detail-1-3ac38651bed1.jpg",
-        "caption": "피셔맨 케이블 크롭 니트 뷔스티에 스퀘어 네크라인과 케이블 근접 실물 상세"
+        "caption": "피셔맨 케이블 크롭 니트 뷔스티에 스퀘어 네크라인과 케이블 근접 실물 상세",
+        "width": 860,
+        "height": 860
       },
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/fisherman-crop-bustier/detail-2-d5a0e84d8f33.jpg",
-        "caption": "피셔맨 케이블 크롭 니트 뷔스티에 몸판 케이블 조직 근접 실물 상세"
+        "caption": "피셔맨 케이블 크롭 니트 뷔스티에 몸판 케이블 조직 근접 실물 상세",
+        "width": 860,
+        "height": 860
       },
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/fisherman-crop-bustier/detail-3-59e76ca05412.jpg",
-        "caption": "피셔맨 케이블 크롭 니트 뷔스티에 마네킹 옆면 핏 실물 상세"
+        "caption": "피셔맨 케이블 크롭 니트 뷔스티에 마네킹 옆면 핏 실물 상세",
+        "width": 860,
+        "height": 860
       }
     ],
     "colorBoard": "",
@@ -1000,7 +1040,9 @@ window.GR_DETAIL = {
     "fabric": [
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/exports/honey-loop-crop-knit/real-macro-1-a59df53e.webp",
-        "caption": "스카이 · 실물 짜임"
+        "caption": "스카이 · 실물 짜임",
+        "width": 1000,
+        "height": 1000
       }
     ],
     "colorBoard": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/board-8fd34a81.webp",
@@ -1042,7 +1084,11 @@ window.GR_DETAIL = {
     "materialRaw": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
     "materialComplete": true,
     "materialNote": "",
-    "colorHex": {}
+    "colorHex": {},
+    "colorBoardSize": {
+      "width": 1536,
+      "height": 1024
+    }
   },
   "off-duty-vneck-knit-vest": {
     "lead": "흰 티와 데님 위에 하나만 더해도, 평소 입던 조합이 조금 달라져요.",
@@ -1263,7 +1309,9 @@ window.GR_DETAIL = {
     "fabric": [
       {
         "src": "/assets/detail/off-duty-vneck-knit-vest/fabric.webp",
-        "caption": "회색 · V넥과 몸판의 입체 짜임"
+        "caption": "회색 · V넥과 몸판의 입체 짜임",
+        "width": 1000,
+        "height": 1000
       }
     ],
     "colorBoard": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/boards/off-duty-vneck-knit-vest-e6d5971d.webp",
@@ -1303,6 +1351,10 @@ window.GR_DETAIL = {
       "차콜": "#363b45",
       "크림": "#f1eee5",
       "카멜": "#aa8059"
+    },
+    "colorBoardSize": {
+      "width": 1536,
+      "height": 1024
     }
   },
   "popcorn-vneck-half": {
@@ -1367,15 +1419,21 @@ window.GR_DETAIL = {
     "fabric": [
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/popcorn-vneck-half/detail-1-ed231724c0e2.jpg",
-        "caption": "슬라브 팝콘 브이넥 반팔 니트 브이넥과 팝콘 조직 근접 실물 상세"
+        "caption": "슬라브 팝콘 브이넥 반팔 니트 브이넥과 팝콘 조직 근접 실물 상세",
+        "width": 860,
+        "height": 860
       },
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/popcorn-vneck-half/detail-2-548b12377b27.jpg",
-        "caption": "슬라브 팝콘 브이넥 반팔 니트 소매와 옆선 근접 실물 상세"
+        "caption": "슬라브 팝콘 브이넥 반팔 니트 소매와 옆선 근접 실물 상세",
+        "width": 860,
+        "height": 860
       },
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/popcorn-vneck-half/detail-3-e90e070c2a80.jpg",
-        "caption": "슬라브 팝콘 브이넥 반팔 니트 밑단과 조직 근접 실물 상세"
+        "caption": "슬라브 팝콘 브이넥 반팔 니트 밑단과 조직 근접 실물 상세",
+        "width": 860,
+        "height": 860
       }
     ],
     "colorBoard": "",
@@ -1498,15 +1556,21 @@ window.GR_DETAIL = {
     "fabric": [
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/recycled-round-sweater/detail-1-019d42c9d00e.jpg",
-        "caption": "리싸이클 무지 박시 라운드 니트 소매와 시보리 근접 실물 상세"
+        "caption": "리싸이클 무지 박시 라운드 니트 소매와 시보리 근접 실물 상세",
+        "width": 860,
+        "height": 860
       },
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/recycled-round-sweater/detail-2-d46934b5f01b.jpg",
-        "caption": "리싸이클 무지 박시 라운드 니트 몸판과 밑단 근접 실물 상세"
+        "caption": "리싸이클 무지 박시 라운드 니트 몸판과 밑단 근접 실물 상세",
+        "width": 860,
+        "height": 860
       },
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/recycled-round-sweater/detail-3-c70870754760.jpg",
-        "caption": "리싸이클 무지 박시 라운드 니트 라운드넥 근접 실물 상세"
+        "caption": "리싸이클 무지 박시 라운드 니트 라운드넥 근접 실물 상세",
+        "width": 860,
+        "height": 860
       }
     ],
     "colorBoard": "",
@@ -1701,15 +1765,21 @@ window.GR_DETAIL = {
     "fabric": [
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/stripe-cable-half/detail-1-5cc150a037da.jpg",
-        "caption": "단가라 케이블 세미크롭 반팔 니트 라운드넥 케이블 근접 실물 상세"
+        "caption": "단가라 케이블 세미크롭 반팔 니트 라운드넥 케이블 근접 실물 상세",
+        "width": 860,
+        "height": 860
       },
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/stripe-cable-half/detail-2-484eb666b3b9.jpg",
-        "caption": "단가라 케이블 세미크롭 반팔 니트 밑단 케이블과 시보리 실물 상세"
+        "caption": "단가라 케이블 세미크롭 반팔 니트 밑단 케이블과 시보리 실물 상세",
+        "width": 860,
+        "height": 860
       },
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/stripe-cable-half/detail-3-6b22168928e2.jpg",
-        "caption": "단가라 케이블 세미크롭 반팔 니트 반소매 끝단 근접 실물 상세"
+        "caption": "단가라 케이블 세미크롭 반팔 니트 반소매 끝단 근접 실물 상세",
+        "width": 860,
+        "height": 860
       }
     ],
     "colorBoard": "",
@@ -1898,19 +1968,27 @@ window.GR_DETAIL = {
     "fabric": [
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/actual/detail-011-de97939ebac0.jpg",
-        "caption": "그레이 · 실물 앞면"
+        "caption": "그레이 · 실물 앞면",
+        "width": 860,
+        "height": 860
       },
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/actual/detail-015-621ebf9fe44a.jpg",
-        "caption": "그레이 · 실물 뒷면"
+        "caption": "그레이 · 실물 뒷면",
+        "width": 860,
+        "height": 860
       },
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/actual/detail-016-71cd795a0c63.jpg",
-        "caption": "그레이 · V넥 립 조직"
+        "caption": "그레이 · V넥 립 조직",
+        "width": 860,
+        "height": 860
       },
       {
         "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/actual/detail-017-16baec78ed8b.jpg",
-        "caption": "그레이 · 암홀 마감"
+        "caption": "그레이 · 암홀 마감",
+        "width": 860,
+        "height": 860
       }
     ],
     "colorBoard": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/colorboard-2c7ba91de2a5.webp",
@@ -1955,6 +2033,10 @@ window.GR_DETAIL = {
       "브라운": "#715448",
       "올리브": "#59604c",
       "그레이프": "#70445f"
+    },
+    "colorBoardSize": {
+      "width": 1122,
+      "height": 1402
     }
   }
 };

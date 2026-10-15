@@ -88,7 +88,7 @@
       storyParagraphs:d.storyParagraphs || [p.desc].filter(Boolean),points:d.points || []};
   }
   function measurementDiagram(p, d) {
-    const vest = /베스트|조끼|뷔스티에/.test(p.name + ' ' + p.category), bustier = /뷔스티에/.test(p.name), short = /반팔/.test(p.name), vneck = /브이|V넥|VNECK/i.test(p.name);
+    const vest = /베스트|조끼|뷔스티에/.test(p.name + ' ' + p.category), bustier = /뷔스티에/.test(p.name), short = /반팔|캡소매/.test(p.name), vneck = /브이|V넥|VNECK/i.test(p.name);
     let garment = bustier ? 'M155 85L125 90L120 157Q120 195 114 210L105 352H315L306 210Q300 195 300 157L295 90L265 85L265 151Q210 174 155 151Z' : vest ? 'M155 85L116 100L98 155Q121 182 111 226L105 352L315 352L309 226Q299 182 322 155L304 100L265 85L210 162Z' : short ? 'M165 85L120 99L56 173L96 209L119 178L112 352H308L301 178L324 209L364 173L300 99L255 85Q210 120 165 85Z' : 'M165 85L120 99L61 174L35 311L83 323L118 201L112 352H308L302 201L337 323L385 311L359 174L300 99L255 85Q210 120 165 85Z';
     if (vneck && !vest) garment=garment.replace('Q210 120 165 85','L210 162L165 85');
     const locations = {

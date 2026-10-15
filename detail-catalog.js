@@ -4043,5 +4043,3975 @@ window.GR_DETAIL = {
       "올리브",
       "곤색"
     ]
+  },
+  "jo23-oversized-vneck-knit": {
+    "lead": "티셔츠 위에는 편안하게, 셔츠 위에는 단정하게. 이너에 따라 분위기가 달라지는 여유로운 V넥 니트.",
+    "storyTitle": "익숙한 옷 위에 더하는 V넥",
+    "storyParagraphs": [
+      "흰 티와 데님 위에 툭 걸치면, 익숙한 옷차림에도 니트의 포근한 분위기가 더해져요.",
+      "여유 있게 내려오는 어깨선과 넓은 V넥. 셔츠 깃을 살짝 꺼내 단정하게 입거나, 미디 스커트와 함께 편안한 주말 코디로 즐겨보세요."
+    ],
+    "points": [
+      {
+        "title": "Wide V-neck",
+        "text": "이너가 드러나는 넓은 V넥"
+      },
+      {
+        "title": "Drop shoulder",
+        "text": "넓은 몸판과 내려온 어깨선"
+      },
+      {
+        "title": "Rib finish",
+        "text": "목둘레·소맷단·밑단 골지 마감"
+      }
+    ],
+    "looks": [
+      {
+        "id": "A",
+        "label": "흰 티셔츠와 라이트 워시 데님",
+        "items": [
+          "흰 라운드 티",
+          "라이트 워시 스트레이트 데님",
+          "아이보리 스니커즈"
+        ],
+        "images": {
+          "아이보리": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/ivory-A.webp",
+          "검정": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/black-A.webp",
+          "브라운": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/brown-A.webp",
+          "연핑크": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/lightpink-A.webp",
+          "카키": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/khaki-A.webp",
+          "차콜": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/charcoal-A.webp",
+          "곤색": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/navy-A.webp",
+          "보라": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/purple-A.webp",
+          "연밤": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/lightbrown-A.webp",
+          "그레이": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/gray-A.webp"
+        }
+      },
+      {
+        "id": "B",
+        "label": "화이트 셔츠와 차콜 와이드 팬츠",
+        "items": [
+          "화이트 카라 셔츠",
+          "차콜 와이드 팬츠",
+          "블랙 포인티드 슬링백",
+          "작은 블랙 핸드백",
+          "골드 스터드 이어링"
+        ],
+        "images": {
+          "아이보리": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/ivory-B.webp",
+          "검정": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/black-B.webp",
+          "브라운": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/brown-B.webp",
+          "연핑크": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/lightpink-B.webp",
+          "카키": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/khaki-B.webp",
+          "차콜": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/charcoal-B.webp",
+          "곤색": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/navy-B.webp",
+          "보라": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/purple-B.webp",
+          "연밤": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/lightbrown-B.webp",
+          "그레이": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/gray-B.webp"
+        }
+      },
+      {
+        "id": "C",
+        "label": "목티와 더스티 로즈 플리츠",
+        "items": [
+          "아이보리 얇은 목티",
+          "더스티 로즈 종아리 중간 플리츠 스커트",
+          "브라운 앵클부츠",
+          "브라운 숄더백",
+          "골드 후프 이어링"
+        ],
+        "images": {
+          "아이보리": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/ivory-C.webp",
+          "검정": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/black-C.webp",
+          "브라운": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/brown-C.webp",
+          "연핑크": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/lightpink-C.webp",
+          "카키": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/khaki-C.webp",
+          "차콜": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/charcoal-C.webp",
+          "곤색": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/navy-C.webp",
+          "보라": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/purple-C.webp",
+          "연밤": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/lightbrown-C.webp",
+          "그레이": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/gray-C.webp"
+        }
+      },
+      {
+        "id": "D",
+        "label": "아이보리 일자 미디와 코인 펜던트",
+        "items": [
+          "아이보리 종아리 중간 일자 스커트",
+          "블랙 발레 플랫",
+          "골드 코인 펜던트"
+        ],
+        "images": {
+          "아이보리": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/ivory-D.webp",
+          "검정": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/black-D.webp",
+          "브라운": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/brown-D.webp",
+          "연핑크": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/lightpink-D.webp",
+          "카키": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/khaki-D.webp",
+          "차콜": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/charcoal-D.webp",
+          "곤색": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/navy-D.webp",
+          "보라": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/purple-D.webp",
+          "연밤": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/lightbrown-D.webp",
+          "그레이": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/gray-D.webp"
+        }
+      }
+    ],
+    "model360": {
+      "아이보리": {
+        "sheets": [
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/model360/ivory-front.webp",
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/model360/ivory-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "검정": {
+        "sheets": [
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/model360/black-front.webp",
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/model360/black-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "브라운": {
+        "sheets": [
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/model360/brown-front.webp",
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/model360/brown-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "연핑크": {
+        "sheets": [
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/model360/lightpink-front.webp",
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/model360/lightpink-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "카키": {
+        "sheets": [
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/model360/khaki-front.webp",
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/model360/khaki-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "차콜": {
+        "sheets": [
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/model360/charcoal-front.webp",
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/model360/charcoal-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/model360/navy-front.webp",
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/model360/navy-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "보라": {
+        "sheets": [
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/model360/purple-front.webp",
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/model360/purple-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "연밤": {
+        "sheets": [
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/model360/lightbrown-front.webp",
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/model360/lightbrown-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "그레이": {
+        "sheets": [
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/model360/gray-front.webp",
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/model360/gray-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      }
+    },
+    "product360": {
+      "아이보리": {
+        "sheets": [
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/product360/ivory-front.webp",
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/product360/ivory-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "검정": {
+        "sheets": [
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/product360/black-front.webp",
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/product360/black-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "브라운": {
+        "sheets": [
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/product360/brown-front.webp",
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/product360/brown-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연핑크": {
+        "sheets": [
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/product360/lightpink-front.webp",
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/product360/lightpink-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "카키": {
+        "sheets": [
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/product360/khaki-front.webp",
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/product360/khaki-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "차콜": {
+        "sheets": [
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/product360/charcoal-front.webp",
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/product360/charcoal-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/product360/navy-front.webp",
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/product360/navy-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "보라": {
+        "sheets": [
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/product360/purple-front.webp",
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/product360/purple-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연밤": {
+        "sheets": [
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/product360/lightbrown-front.webp",
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/product360/lightbrown-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "그레이": {
+        "sheets": [
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/product360/gray-front.webp",
+          "assets/detail/jo23-oversized-vneck-knit/launch-20261016/product360/gray-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      }
+    },
+    "originals": {
+      "그레이": [
+        {
+          "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/000.jpg",
+          "angle": 0
+        },
+        {
+          "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/045.jpg",
+          "angle": 45
+        },
+        {
+          "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/090.jpg",
+          "angle": 90
+        },
+        {
+          "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/135.jpg",
+          "angle": 135
+        },
+        {
+          "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/180.jpg",
+          "angle": 180
+        },
+        {
+          "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/225.jpg",
+          "angle": 225
+        },
+        {
+          "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/270.jpg",
+          "angle": 270
+        },
+        {
+          "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/315.jpg",
+          "angle": 315
+        }
+      ]
+    },
+    "fabric": [
+      {
+        "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/fabric-1.webp",
+        "width": 1254,
+        "height": 1254,
+        "caption": "V넥과 여유 있는 드롭 숄더",
+        "mediaKind": "studio-edit"
+      },
+      {
+        "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/fabric-2.webp",
+        "width": 1254,
+        "height": 1254,
+        "caption": "고운 니트 조직과 골지 네크라인",
+        "mediaKind": "studio-edit"
+      }
+    ],
+    "fabricOriginals": [
+      {
+        "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/000.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 0°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/045.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 45°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/090.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 90°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/135.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 135°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/180.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 180°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/225.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 225°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/270.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 270°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/315.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 315°",
+        "mediaKind": "photo"
+      }
+    ],
+    "colorBoard": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/color-palette.webp",
+    "colorBoardSize": {
+      "width": 1024,
+      "height": 1536
+    },
+    "colorOrder": [
+      "검정",
+      "아이보리",
+      "브라운",
+      "연핑크",
+      "카키",
+      "차콜",
+      "곤색",
+      "보라",
+      "연밤",
+      "그레이"
+    ],
+    "measurements": [
+      {
+        "label": "총장",
+        "value": 56
+      },
+      {
+        "label": "가슴 단면",
+        "value": 68
+      },
+      {
+        "label": "어깨너비",
+        "value": 70
+      },
+      {
+        "label": "암홀",
+        "value": 23
+      },
+      {
+        "label": "소매길이",
+        "value": 54
+      },
+      {
+        "label": "소매통",
+        "value": 22
+      },
+      {
+        "label": "목너비",
+        "value": 21
+      },
+      {
+        "label": "목깊이",
+        "value": 12
+      }
+    ],
+    "size": "FREE",
+    "sizeUnit": "cm",
+    "measurementVerified": true,
+    "thumbnail": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/gray-A.webp",
+    "thumbnailColor": "그레이",
+    "materialRaw": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+    "materialComplete": true,
+    "materialNote": "",
+    "colorHex": {
+      "아이보리": "#eee8df",
+      "검정": "#202124",
+      "브라운": "#433a36",
+      "연핑크": "#e7cfd9",
+      "카키": "#434838",
+      "차콜": "#383b40",
+      "곤색": "#26334d",
+      "보라": "#b59bc1",
+      "연밤": "#a39a94",
+      "그레이": "#6b6d72"
+    },
+    "isNewDesign": true,
+    "model360Label": "흰 티셔츠와 라이트 워시 데님"
+  },
+  "jo24-oversized-boatneck-knit": {
+    "lead": "넓게 열린 보트넥과 볼륨 소매가 한눈에 들어오는 니트. 밝은 데님에는 가볍게, 네이비 슬랙스에는 차분하게 이어 보세요.",
+    "storyTitle": "보트넥과 넓은 실루엣",
+    "storyParagraphs": [
+      "보트넥이 목선을 넓게 보여 주고, 여유 있게 내려오는 소매가 전체 실루엣을 완성해요.",
+      "아이보리 데님과 스니커즈로 산뜻하게 입거나, 네이비 슬랙스와 로퍼를 더해 출근 코디로 이어 보세요."
+    ],
+    "points": [
+      {
+        "title": "Boat neck",
+        "text": "얕고 가로로 넓은 보트넥"
+      },
+      {
+        "title": "Volume sleeve",
+        "text": "넓은 소매통과 골지 소맷단"
+      },
+      {
+        "title": "Drop shoulder",
+        "text": "넓은 몸판과 내려온 어깨선"
+      }
+    ],
+    "looks": [
+      {
+        "id": "A",
+        "label": "아이보리 와이드 팬츠",
+        "items": [
+          "아이보리 와이드 팬츠",
+          "아이보리 로퍼",
+          "얇은 펜던트 목걸이"
+        ],
+        "images": {
+          "아이보리": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/ivory-A.webp",
+          "검정": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/black-A.webp",
+          "브라운": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/brown-A.webp",
+          "연핑크": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/lightpink-A.webp",
+          "카키": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/khaki-A.webp",
+          "차콜": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/charcoal-A.webp",
+          "곤색": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/navy-A.webp",
+          "보라": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/purple-A.webp",
+          "연밤": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/lightbrown-A.webp",
+          "그레이": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/gray-A.webp"
+        }
+      },
+      {
+        "id": "B",
+        "label": "네이비 테일러드 팬츠",
+        "items": [
+          "네이비 와이드 테일러드 팬츠",
+          "블랙 로퍼",
+          "얇은 펜던트 목걸이"
+        ],
+        "images": {
+          "아이보리": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/ivory-B.webp",
+          "검정": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/black-B.webp",
+          "브라운": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/brown-B.webp",
+          "연핑크": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/lightpink-B.webp",
+          "카키": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/khaki-B.webp",
+          "차콜": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/charcoal-B.webp",
+          "곤색": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/navy-B.webp",
+          "보라": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/purple-B.webp",
+          "연밤": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/lightbrown-B.webp",
+          "그레이": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/gray-B.webp"
+        }
+      },
+      {
+        "id": "C",
+        "label": "토프 플리츠 미디",
+        "items": [
+          "토프 브라운 종아리 아래 플리츠 스커트",
+          "브라운 앵클부츠",
+          "작은 브라운 숄더백",
+          "얇은 펜던트 목걸이"
+        ],
+        "images": {
+          "아이보리": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/ivory-C.webp",
+          "검정": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/black-C.webp",
+          "브라운": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/brown-C.webp",
+          "연핑크": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/lightpink-C.webp",
+          "카키": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/khaki-C.webp",
+          "차콜": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/charcoal-C.webp",
+          "곤색": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/navy-C.webp",
+          "보라": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/purple-C.webp",
+          "연밤": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/lightbrown-C.webp",
+          "그레이": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/gray-C.webp"
+        }
+      },
+      {
+        "id": "D",
+        "label": "아이보리 새틴 미디",
+        "items": [
+          "아이보리 새틴 A라인 종아리 아래 스커트",
+          "블랙 발레 플랫",
+          "얇은 펜던트 목걸이"
+        ],
+        "images": {
+          "아이보리": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/ivory-D.webp",
+          "검정": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/black-D.webp",
+          "브라운": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/brown-D.webp",
+          "연핑크": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/lightpink-D.webp",
+          "카키": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/khaki-D.webp",
+          "차콜": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/charcoal-D.webp",
+          "곤색": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/navy-D.webp",
+          "보라": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/purple-D.webp",
+          "연밤": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/lightbrown-D.webp",
+          "그레이": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/gray-D.webp"
+        }
+      }
+    ],
+    "model360": {
+      "아이보리": {
+        "sheets": [
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/model360/ivory-front.webp",
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/model360/ivory-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "검정": {
+        "sheets": [
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/model360/black-front.webp",
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/model360/black-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "브라운": {
+        "sheets": [
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/model360/brown-front.webp",
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/model360/brown-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "연핑크": {
+        "sheets": [
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/model360/lightpink-front.webp",
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/model360/lightpink-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "카키": {
+        "sheets": [
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/model360/khaki-front.webp",
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/model360/khaki-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "차콜": {
+        "sheets": [
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/model360/charcoal-front.webp",
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/model360/charcoal-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/model360/navy-front.webp",
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/model360/navy-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "보라": {
+        "sheets": [
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/model360/purple-front.webp",
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/model360/purple-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "연밤": {
+        "sheets": [
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/model360/lightbrown-front.webp",
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/model360/lightbrown-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "그레이": {
+        "sheets": [
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/model360/gray-front.webp",
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/model360/gray-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      }
+    },
+    "product360": {
+      "아이보리": {
+        "sheets": [
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/product360/ivory-front.webp",
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/product360/ivory-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "검정": {
+        "sheets": [
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/product360/black-front.webp",
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/product360/black-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "브라운": {
+        "sheets": [
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/product360/brown-front.webp",
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/product360/brown-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연핑크": {
+        "sheets": [
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/product360/lightpink-front.webp",
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/product360/lightpink-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "카키": {
+        "sheets": [
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/product360/khaki-front.webp",
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/product360/khaki-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "차콜": {
+        "sheets": [
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/product360/charcoal-front.webp",
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/product360/charcoal-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/product360/navy-front.webp",
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/product360/navy-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "보라": {
+        "sheets": [
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/product360/purple-front.webp",
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/product360/purple-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연밤": {
+        "sheets": [
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/product360/lightbrown-front.webp",
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/product360/lightbrown-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "그레이": {
+        "sheets": [
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/product360/gray-front.webp",
+          "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/product360/gray-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      }
+    },
+    "originals": {
+      "보라": [
+        {
+          "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/000.jpg",
+          "angle": 0
+        },
+        {
+          "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/045.jpg",
+          "angle": 45
+        },
+        {
+          "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/090.jpg",
+          "angle": 90
+        },
+        {
+          "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/135.jpg",
+          "angle": 135
+        },
+        {
+          "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/180.jpg",
+          "angle": 180
+        },
+        {
+          "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/225.jpg",
+          "angle": 225
+        },
+        {
+          "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/270.jpg",
+          "angle": 270
+        },
+        {
+          "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/315.jpg",
+          "angle": 315
+        }
+      ]
+    },
+    "fabric": [
+      {
+        "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/fabric-1.webp",
+        "width": 1254,
+        "height": 1254,
+        "caption": "보트넥과 여유 있는 드롭 숄더",
+        "mediaKind": "studio-edit"
+      },
+      {
+        "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/fabric-2.webp",
+        "width": 1254,
+        "height": 1254,
+        "caption": "고운 평편 니트 조직과 멜란지 원사",
+        "mediaKind": "studio-edit"
+      }
+    ],
+    "fabricOriginals": [
+      {
+        "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/000.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 0°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/045.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 45°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/090.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 90°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/135.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 135°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/180.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 180°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/225.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 225°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/270.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 270°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/315.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 315°",
+        "mediaKind": "photo"
+      }
+    ],
+    "colorBoard": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/color-palette.webp",
+    "colorBoardSize": {
+      "width": 1024,
+      "height": 1536
+    },
+    "colorOrder": [
+      "검정",
+      "아이보리",
+      "브라운",
+      "연핑크",
+      "카키",
+      "차콜",
+      "곤색",
+      "보라",
+      "연밤",
+      "그레이"
+    ],
+    "measurements": [
+      {
+        "label": "총장",
+        "value": 57
+      },
+      {
+        "label": "가슴 단면",
+        "value": 66
+      },
+      {
+        "label": "어깨너비",
+        "value": 70
+      },
+      {
+        "label": "암홀",
+        "value": 23
+      },
+      {
+        "label": "소매길이",
+        "value": 51
+      },
+      {
+        "label": "소매통",
+        "value": 23
+      },
+      {
+        "label": "목너비",
+        "value": 28
+      },
+      {
+        "label": "목깊이",
+        "value": 3
+      }
+    ],
+    "size": "FREE",
+    "sizeUnit": "cm",
+    "measurementVerified": true,
+    "thumbnail": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/purple-A.webp",
+    "thumbnailColor": "보라",
+    "materialRaw": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+    "materialComplete": true,
+    "materialNote": "",
+    "colorHex": {
+      "아이보리": "#eee8df",
+      "검정": "#202124",
+      "브라운": "#433a36",
+      "연핑크": "#e7cfd9",
+      "카키": "#434838",
+      "차콜": "#383b40",
+      "곤색": "#26334d",
+      "보라": "#b59bc1",
+      "연밤": "#a39a94",
+      "그레이": "#6b6d72"
+    },
+    "isNewDesign": true,
+    "model360Label": "아이보리 와이드 팬츠"
+  },
+  "jo31-raglan-roundneck-knit": {
+    "lead": "라운드 티와 데님 위에 편하게 더하고, 슬랙스와는 차분하게 맞추는 래글런 니트. 긴 기장과 사선 소매선이 자연스럽게 이어집니다.",
+    "storyTitle": "사선 소매로 완성한 라운드 니트",
+    "storyParagraphs": [
+      "라운드넥에서 소매로 이어지는 래글런 선이 단정한 인상을 만들어요.",
+      "데님에는 스니커즈를, 슬랙스나 미디스커트에는 플랫을 더해 평일과 주말 코디를 오갈 수 있어요."
+    ],
+    "points": [
+      {
+        "title": "Raglan line",
+        "text": "목선에서 이어지는 사선 소매 연결"
+      },
+      {
+        "title": "Round neck",
+        "text": "골지로 마감한 라운드넥"
+      },
+      {
+        "title": "Long line",
+        "text": "총기장 62cm와 긴 소매"
+      }
+    ],
+    "looks": [
+      {
+        "id": "A",
+        "label": "흰 티셔츠와 라이트 워시 데님",
+        "items": [
+          "흰 라운드 티",
+          "라이트 워시 스트레이트 데님",
+          "아이보리 스니커즈"
+        ],
+        "images": {
+          "아이보리": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/ivory-A.webp",
+          "검정": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/black-A.webp",
+          "브라운": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/brown-A.webp",
+          "연핑크": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/lightpink-A.webp",
+          "카키": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/khaki-A.webp",
+          "차콜": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/charcoal-A.webp",
+          "곤색": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/navy-A.webp",
+          "보라": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/purple-A.webp",
+          "연밤": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/lightbrown-A.webp",
+          "그레이": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/gray-A.webp"
+        }
+      },
+      {
+        "id": "B",
+        "label": "네이비 테일러드 팬츠",
+        "items": [
+          "네이비 와이드 테일러드 팬츠",
+          "블랙 로퍼",
+          "얇은 펜던트 목걸이"
+        ],
+        "images": {
+          "아이보리": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/ivory-B.webp",
+          "검정": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/black-B.webp",
+          "브라운": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/brown-B.webp",
+          "연핑크": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/lightpink-B.webp",
+          "카키": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/khaki-B.webp",
+          "차콜": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/charcoal-B.webp",
+          "곤색": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/navy-B.webp",
+          "보라": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/purple-B.webp",
+          "연밤": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/lightbrown-B.webp",
+          "그레이": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/gray-B.webp"
+        }
+      },
+      {
+        "id": "C",
+        "label": "더스티 로즈 플리츠 미디",
+        "items": [
+          "더스티 로즈 토프 종아리 아래 플리츠 스커트",
+          "블랙 앵클부츠",
+          "작은 블랙 숄더백",
+          "얇은 펜던트 목걸이"
+        ],
+        "images": {
+          "아이보리": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/ivory-C.webp",
+          "검정": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/black-C.webp",
+          "브라운": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/brown-C.webp",
+          "연핑크": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/lightpink-C.webp",
+          "카키": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/khaki-C.webp",
+          "차콜": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/charcoal-C.webp",
+          "곤색": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/navy-C.webp",
+          "보라": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/purple-C.webp",
+          "연밤": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/lightbrown-C.webp",
+          "그레이": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/gray-C.webp"
+        }
+      },
+      {
+        "id": "D",
+        "label": "다크 브라운 A라인 미디",
+        "items": [
+          "다크 브라운 종아리 아래 A라인 스커트",
+          "다크 브라운 발레 플랫",
+          "얇은 펜던트 목걸이"
+        ],
+        "images": {
+          "아이보리": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/ivory-D.webp",
+          "검정": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/black-D.webp",
+          "브라운": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/brown-D.webp",
+          "연핑크": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/lightpink-D.webp",
+          "카키": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/khaki-D.webp",
+          "차콜": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/charcoal-D.webp",
+          "곤색": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/navy-D.webp",
+          "보라": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/purple-D.webp",
+          "연밤": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/lightbrown-D.webp",
+          "그레이": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/gray-D.webp"
+        }
+      }
+    ],
+    "model360": {
+      "아이보리": {
+        "sheets": [
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/model360/ivory-front.webp",
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/model360/ivory-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "검정": {
+        "sheets": [
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/model360/black-front.webp",
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/model360/black-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "브라운": {
+        "sheets": [
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/model360/brown-front.webp",
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/model360/brown-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "연핑크": {
+        "sheets": [
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/model360/lightpink-front.webp",
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/model360/lightpink-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "카키": {
+        "sheets": [
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/model360/khaki-front.webp",
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/model360/khaki-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "차콜": {
+        "sheets": [
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/model360/charcoal-front.webp",
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/model360/charcoal-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/model360/navy-front.webp",
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/model360/navy-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "보라": {
+        "sheets": [
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/model360/purple-front.webp",
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/model360/purple-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "연밤": {
+        "sheets": [
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/model360/lightbrown-front.webp",
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/model360/lightbrown-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "그레이": {
+        "sheets": [
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/model360/gray-front.webp",
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/model360/gray-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      }
+    },
+    "product360": {
+      "아이보리": {
+        "sheets": [
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/product360/ivory-front.webp",
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/product360/ivory-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "검정": {
+        "sheets": [
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/product360/black-front.webp",
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/product360/black-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "브라운": {
+        "sheets": [
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/product360/brown-front.webp",
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/product360/brown-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연핑크": {
+        "sheets": [
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/product360/lightpink-front.webp",
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/product360/lightpink-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "카키": {
+        "sheets": [
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/product360/khaki-front.webp",
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/product360/khaki-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "차콜": {
+        "sheets": [
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/product360/charcoal-front.webp",
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/product360/charcoal-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/product360/navy-front.webp",
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/product360/navy-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "보라": {
+        "sheets": [
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/product360/purple-front.webp",
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/product360/purple-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연밤": {
+        "sheets": [
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/product360/lightbrown-front.webp",
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/product360/lightbrown-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "그레이": {
+        "sheets": [
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/product360/gray-front.webp",
+          "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/product360/gray-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      }
+    },
+    "originals": {
+      "그레이": [
+        {
+          "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/000.jpg",
+          "angle": 0
+        },
+        {
+          "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/045.jpg",
+          "angle": 45
+        },
+        {
+          "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/090.jpg",
+          "angle": 90
+        },
+        {
+          "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/135.jpg",
+          "angle": 135
+        },
+        {
+          "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/180.jpg",
+          "angle": 180
+        },
+        {
+          "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/225.jpg",
+          "angle": 225
+        },
+        {
+          "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/270.jpg",
+          "angle": 270
+        },
+        {
+          "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/315.jpg",
+          "angle": 315
+        }
+      ]
+    },
+    "fabric": [
+      {
+        "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/fabric-1.webp",
+        "width": 1254,
+        "height": 1254,
+        "caption": "라글란 소매와 여유 있는 롱 실루엣",
+        "mediaKind": "studio-edit"
+      },
+      {
+        "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/fabric-2.webp",
+        "width": 1254,
+        "height": 1254,
+        "caption": "고운 평편 니트 조직과 골지 라운드넥",
+        "mediaKind": "studio-edit"
+      }
+    ],
+    "fabricOriginals": [
+      {
+        "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/000.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 0°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/045.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 45°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/090.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 90°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/135.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 135°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/180.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 180°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/225.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 225°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/270.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 270°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/315.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 315°",
+        "mediaKind": "photo"
+      }
+    ],
+    "colorBoard": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/color-palette.webp",
+    "colorBoardSize": {
+      "width": 1024,
+      "height": 1536
+    },
+    "colorOrder": [
+      "검정",
+      "아이보리",
+      "브라운",
+      "연핑크",
+      "카키",
+      "차콜",
+      "곤색",
+      "보라",
+      "연밤",
+      "그레이"
+    ],
+    "measurements": [
+      {
+        "label": "총장",
+        "value": 62
+      },
+      {
+        "label": "가슴 단면",
+        "value": 56
+      },
+      {
+        "label": "암홀",
+        "value": 28
+      },
+      {
+        "label": "소매길이",
+        "value": 69
+      },
+      {
+        "label": "소매통",
+        "value": 21
+      },
+      {
+        "label": "목너비",
+        "value": 17
+      },
+      {
+        "label": "목깊이",
+        "value": 11
+      }
+    ],
+    "size": "FREE",
+    "sizeUnit": "cm",
+    "measurementVerified": true,
+    "thumbnail": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/gray-A.webp",
+    "thumbnailColor": "그레이",
+    "materialRaw": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+    "materialComplete": true,
+    "materialNote": "",
+    "colorHex": {
+      "아이보리": "#eee8df",
+      "검정": "#202124",
+      "브라운": "#433a36",
+      "연핑크": "#e7cfd9",
+      "카키": "#434838",
+      "차콜": "#383b40",
+      "곤색": "#26334d",
+      "보라": "#b59bc1",
+      "연밤": "#a39a94",
+      "그레이": "#6b6d72"
+    },
+    "isNewDesign": true,
+    "model360Label": "모델 착용 360°"
+  },
+  "jo32-raglan-vneck-knit": {
+    "lead": "얇은 목티가 살짝 보이게 입거나, 셔츠 깃을 꺼내 단정하게. 깊은 V넥 덕분에 이너를 바꾸는 재미가 있는 래글런 니트.",
+    "storyTitle": "이너가 보이는 래글런 V넥",
+    "storyParagraphs": [
+      "깊은 V넥 사이로 목티와 셔츠, 스트라이프 이너가 각기 다른 분위기를 보여 줘요.",
+      "라이트 워시 데님에는 가볍게, 블랙 슬랙스나 미디스커트에는 차분하게 맞춰 보세요."
+    ],
+    "points": [
+      {
+        "title": "Deep V-neck",
+        "text": "목깊이 21cm의 V넥"
+      },
+      {
+        "title": "Raglan line",
+        "text": "V넥에서 이어지는 사선 소매 연결"
+      },
+      {
+        "title": "Long sleeve",
+        "text": "원문 기준 소매기장 73cm"
+      }
+    ],
+    "looks": [
+      {
+        "id": "A",
+        "label": "얇은 목티와 라이트 데님",
+        "items": [
+          "래글런 V넥 니트",
+          "아이보리 얇은 목티",
+          "라이트워시 스트레이트 데님",
+          "오프화이트 스니커즈",
+          "실버 스터드 이어링"
+        ],
+        "images": {
+          "아이보리": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/ivory-A.webp",
+          "검정": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/black-A.webp",
+          "브라운": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/brown-A.webp",
+          "연핑크": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/lightpink-A.webp",
+          "카키": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/khaki-A.webp",
+          "차콜": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/charcoal-A.webp",
+          "곤색": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/navy-A.webp",
+          "보라": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/purple-A.webp",
+          "연밤": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/lightbrown-A.webp",
+          "그레이": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/gray-A.webp"
+        }
+      },
+      {
+        "id": "B",
+        "label": "화이트 셔츠와 블랙 슬랙스",
+        "items": [
+          "래글런 V넥 니트",
+          "화이트 카라 셔츠",
+          "블랙 스트레이트 슬랙스",
+          "블랙 로퍼",
+          "블랙 토트백",
+          "미니멀 워치"
+        ],
+        "images": {
+          "아이보리": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/ivory-B.webp",
+          "검정": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/black-B.webp",
+          "브라운": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/brown-B.webp",
+          "연핑크": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/lightpink-B.webp",
+          "카키": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/khaki-B.webp",
+          "차콜": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/charcoal-B.webp",
+          "곤색": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/navy-B.webp",
+          "보라": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/purple-B.webp",
+          "연밤": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/lightbrown-B.webp",
+          "그레이": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/gray-B.webp"
+        }
+      },
+      {
+        "id": "C",
+        "label": "스트라이프 이너와 카키 팬츠",
+        "items": [
+          "래글런 V넥 니트",
+          "아이보리·네이비 스트라이프 크루넥",
+          "카키 스트레이트 코튼 팬츠",
+          "네이비 스니커즈",
+          "네이비 스카프"
+        ],
+        "images": {
+          "아이보리": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/ivory-C.webp",
+          "검정": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/black-C.webp",
+          "브라운": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/brown-C.webp",
+          "연핑크": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/lightpink-C.webp",
+          "카키": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/khaki-C.webp",
+          "차콜": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/charcoal-C.webp",
+          "곤색": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/navy-C.webp",
+          "보라": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/purple-C.webp",
+          "연밤": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/lightbrown-C.webp",
+          "그레이": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/gray-C.webp"
+        }
+      },
+      {
+        "id": "D",
+        "label": "아이보리 H라인 미디",
+        "items": [
+          "래글런 V넥 니트",
+          "아이보리 H라인 미디스커트",
+          "다크브라운 플랫",
+          "실버 펜던트 목걸이",
+          "다크브라운 숄더백"
+        ],
+        "images": {
+          "아이보리": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/ivory-D.webp",
+          "검정": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/black-D.webp",
+          "브라운": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/brown-D.webp",
+          "연핑크": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/lightpink-D.webp",
+          "카키": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/khaki-D.webp",
+          "차콜": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/charcoal-D.webp",
+          "곤색": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/navy-D.webp",
+          "보라": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/purple-D.webp",
+          "연밤": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/lightbrown-D.webp",
+          "그레이": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/gray-D.webp"
+        }
+      }
+    ],
+    "model360": {
+      "아이보리": {
+        "sheets": [
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/model360/ivory-front.webp",
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/model360/ivory-back.webp"
+        ],
+        "cellWidth": 1024,
+        "cellHeight": 1536
+      },
+      "검정": {
+        "sheets": [
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/model360/black-front.webp",
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/model360/black-back.webp"
+        ],
+        "cellWidth": 1024,
+        "cellHeight": 1536
+      },
+      "브라운": {
+        "sheets": [
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/model360/brown-front.webp",
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/model360/brown-back.webp"
+        ],
+        "cellWidth": 1024,
+        "cellHeight": 1536
+      },
+      "연핑크": {
+        "sheets": [
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/model360/lightpink-front.webp",
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/model360/lightpink-back.webp"
+        ],
+        "cellWidth": 1024,
+        "cellHeight": 1536
+      },
+      "카키": {
+        "sheets": [
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/model360/khaki-front.webp",
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/model360/khaki-back.webp"
+        ],
+        "cellWidth": 1024,
+        "cellHeight": 1536
+      },
+      "차콜": {
+        "sheets": [
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/model360/charcoal-front.webp",
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/model360/charcoal-back.webp"
+        ],
+        "cellWidth": 1024,
+        "cellHeight": 1536
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/model360/navy-front.webp",
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/model360/navy-back.webp"
+        ],
+        "cellWidth": 1024,
+        "cellHeight": 1536
+      },
+      "보라": {
+        "sheets": [
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/model360/purple-front.webp",
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/model360/purple-back.webp"
+        ],
+        "cellWidth": 1024,
+        "cellHeight": 1536
+      },
+      "연밤": {
+        "sheets": [
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/model360/lightbrown-front.webp",
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/model360/lightbrown-back.webp"
+        ],
+        "cellWidth": 1024,
+        "cellHeight": 1536
+      },
+      "그레이": {
+        "sheets": [
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/model360/gray-front.webp",
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/model360/gray-back.webp"
+        ],
+        "cellWidth": 1024,
+        "cellHeight": 1536
+      }
+    },
+    "product360": {
+      "아이보리": {
+        "sheets": [
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/product360/ivory-front.webp",
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/product360/ivory-back.webp"
+        ],
+        "cellWidth": 1024,
+        "cellHeight": 1536
+      },
+      "검정": {
+        "sheets": [
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/product360/black-front.webp",
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/product360/black-back.webp"
+        ],
+        "cellWidth": 1024,
+        "cellHeight": 1536
+      },
+      "브라운": {
+        "sheets": [
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/product360/brown-front.webp",
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/product360/brown-back.webp"
+        ],
+        "cellWidth": 1024,
+        "cellHeight": 1536
+      },
+      "연핑크": {
+        "sheets": [
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/product360/lightpink-front.webp",
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/product360/lightpink-back.webp"
+        ],
+        "cellWidth": 1024,
+        "cellHeight": 1536
+      },
+      "카키": {
+        "sheets": [
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/product360/khaki-front.webp",
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/product360/khaki-back.webp"
+        ],
+        "cellWidth": 1024,
+        "cellHeight": 1536
+      },
+      "차콜": {
+        "sheets": [
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/product360/charcoal-front.webp",
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/product360/charcoal-back.webp"
+        ],
+        "cellWidth": 1024,
+        "cellHeight": 1536
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/product360/navy-front.webp",
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/product360/navy-back.webp"
+        ],
+        "cellWidth": 1024,
+        "cellHeight": 1536
+      },
+      "보라": {
+        "sheets": [
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/product360/purple-front.webp",
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/product360/purple-back.webp"
+        ],
+        "cellWidth": 1024,
+        "cellHeight": 1536
+      },
+      "연밤": {
+        "sheets": [
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/product360/lightbrown-front.webp",
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/product360/lightbrown-back.webp"
+        ],
+        "cellWidth": 1024,
+        "cellHeight": 1536
+      },
+      "그레이": {
+        "sheets": [
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/product360/gray-front.webp",
+          "assets/detail/jo32-raglan-vneck-knit/launch-20261016/product360/gray-back.webp"
+        ],
+        "cellWidth": 1024,
+        "cellHeight": 1536
+      }
+    },
+    "originals": {},
+    "fabric": [
+      {
+        "src": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/fabric-1.webp",
+        "width": 1024,
+        "height": 1536,
+        "caption": "깊은 V넥과 래글런 소매",
+        "mediaKind": "studio-edit"
+      },
+      {
+        "src": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/fabric-2.webp",
+        "width": 1536,
+        "height": 1024,
+        "caption": "진회색 멜란지 루프사와 골지 V넥",
+        "mediaKind": "studio-edit"
+      }
+    ],
+    "fabricOriginals": [
+      {
+        "src": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/000.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 0°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/045.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 45°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/090.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 90°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/135.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 135°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/180.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 180°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/225.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 225°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/270.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 270°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/315.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 315°",
+        "mediaKind": "photo"
+      }
+    ],
+    "colorBoard": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/color-palette.webp",
+    "colorBoardSize": {
+      "width": 2560,
+      "height": 1536
+    },
+    "colorOrder": [
+      "아이보리",
+      "검정",
+      "브라운",
+      "연핑크",
+      "카키",
+      "차콜",
+      "곤색",
+      "보라",
+      "연밤",
+      "그레이"
+    ],
+    "measurements": [
+      {
+        "label": "총장",
+        "value": 62
+      },
+      {
+        "label": "가슴 단면",
+        "value": 59
+      },
+      {
+        "label": "암홀",
+        "value": 29
+      },
+      {
+        "label": "소매길이",
+        "value": 73
+      },
+      {
+        "label": "소매통",
+        "value": 19
+      },
+      {
+        "label": "목너비",
+        "value": 21
+      },
+      {
+        "label": "목깊이",
+        "value": 21
+      }
+    ],
+    "size": "FREE",
+    "sizeUnit": "cm",
+    "measurementVerified": true,
+    "thumbnail": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/charcoal-A.webp",
+    "thumbnailColor": "차콜",
+    "materialRaw": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+    "materialComplete": true,
+    "materialNote": "",
+    "colorHex": {
+      "아이보리": "#eee8df",
+      "검정": "#202124",
+      "브라운": "#433a36",
+      "연핑크": "#e7cfd9",
+      "카키": "#434838",
+      "차콜": "#383b40",
+      "곤색": "#26334d",
+      "보라": "#b59bc1",
+      "연밤": "#a39a94",
+      "그레이": "#6b6d72"
+    },
+    "isNewDesign": true,
+    "model360Label": "얇은 목티와 라이트 데님"
+  },
+  "rm542-cable-vneck-vest": {
+    "lead": "흰 티와 데님 위에 한 겹 더하면 중앙 다이아 짜임이 코디의 중심이 되는 V넥 베스트. 셔츠와 슬랙스에도 자연스럽게 이어집니다.",
+    "storyTitle": "짜임을 더하는 V넥 베스트",
+    "storyParagraphs": [
+      "두 개의 중앙 다이아와 양옆 케이블 짜임이 단순한 이너 위에서도 또렷하게 보여요.",
+      "라운드 티에는 데님을, 셔츠에는 슬랙스나 코듀로이 팬츠를 맞춰 서로 다른 분위기로 입어 보세요."
+    ],
+    "points": [
+      {
+        "title": "Cable panel",
+        "text": "중앙 다이아와 양옆 케이블 조직"
+      },
+      {
+        "title": "V-neck vest",
+        "text": "셔츠와 티셔츠를 겹치기 쉬운 민소매 구조"
+      },
+      {
+        "title": "Rib edge",
+        "text": "V넥·암홀·밑단 골지 마감"
+      }
+    ],
+    "looks": [
+      {
+        "id": "A",
+        "label": "데일리 데님 레이어",
+        "items": [
+          "케이블 V넥 베스트",
+          "화이트 라운드 긴팔 티셔츠",
+          "중청 스트레이트 데님",
+          "아이보리 스니커즈",
+          "웜브라운 크로스백"
+        ],
+        "images": {
+          "아이보리": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/ivory-A.webp",
+          "검정": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/black-A.webp",
+          "브라운": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/brown-A.webp",
+          "연핑크": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/lightpink-A.webp",
+          "카키": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/khaki-A.webp",
+          "차콜": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/charcoal-A.webp",
+          "곤색": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/navy-A.webp",
+          "보라": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/purple-A.webp",
+          "연밤": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/lightbrown-A.webp",
+          "그레이": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/gray-A.webp"
+        }
+      },
+      {
+        "id": "B",
+        "label": "셔츠 오피스 레이어",
+        "items": [
+          "케이블 V넥 베스트",
+          "화이트 카라 셔츠",
+          "차콜 스트레이트 슬랙스",
+          "블랙 로퍼",
+          "차콜 슬림 폴더",
+          "미니멀 워치"
+        ],
+        "images": {
+          "아이보리": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/ivory-B.webp",
+          "검정": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/black-B.webp",
+          "브라운": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/brown-B.webp",
+          "연핑크": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/lightpink-B.webp",
+          "카키": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/khaki-B.webp",
+          "차콜": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/charcoal-B.webp",
+          "곤색": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/navy-B.webp",
+          "보라": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/purple-B.webp",
+          "연밤": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/lightbrown-B.webp",
+          "그레이": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/gray-B.webp"
+        }
+      },
+      {
+        "id": "C",
+        "label": "옥스퍼드 셔츠와 코듀로이",
+        "items": [
+          "케이블 V넥 베스트",
+          "라이트블루 옥스퍼드 셔츠",
+          "웜브라운 스트레이트 코듀로이 팬츠",
+          "다크브라운 로퍼",
+          "다크브라운 벨트"
+        ],
+        "images": {
+          "아이보리": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/ivory-C.webp",
+          "검정": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/black-C.webp",
+          "브라운": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/brown-C.webp",
+          "연핑크": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/lightpink-C.webp",
+          "카키": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/khaki-C.webp",
+          "차콜": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/charcoal-C.webp",
+          "곤색": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/navy-C.webp",
+          "보라": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/purple-C.webp",
+          "연밤": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/lightbrown-C.webp",
+          "그레이": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/gray-C.webp"
+        }
+      },
+      {
+        "id": "D",
+        "label": "아이보리와 블랙 미디",
+        "items": [
+          "케이블 V넥 베스트",
+          "아이보리 얇은 목티",
+          "블랙 종아리중간 일자 미디스커트",
+          "블랙 플랫",
+          "블랙 숄더백",
+          "실버 이어링"
+        ],
+        "images": {
+          "아이보리": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/ivory-D.webp",
+          "검정": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/black-D.webp",
+          "브라운": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/brown-D.webp",
+          "연핑크": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/lightpink-D.webp",
+          "카키": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/khaki-D.webp",
+          "차콜": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/charcoal-D.webp",
+          "곤색": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/navy-D.webp",
+          "보라": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/purple-D.webp",
+          "연밤": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/lightbrown-D.webp",
+          "그레이": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/gray-D.webp"
+        }
+      }
+    ],
+    "model360": {
+      "아이보리": {
+        "sheets": [
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/model360/ivory-front.webp",
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/model360/ivory-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "검정": {
+        "sheets": [
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/model360/black-front.webp",
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/model360/black-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "브라운": {
+        "sheets": [
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/model360/brown-front.webp",
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/model360/brown-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연핑크": {
+        "sheets": [
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/model360/lightpink-front.webp",
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/model360/lightpink-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "카키": {
+        "sheets": [
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/model360/khaki-front.webp",
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/model360/khaki-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "차콜": {
+        "sheets": [
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/model360/charcoal-front.webp",
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/model360/charcoal-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/model360/navy-front.webp",
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/model360/navy-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "보라": {
+        "sheets": [
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/model360/purple-front.webp",
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/model360/purple-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연밤": {
+        "sheets": [
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/model360/lightbrown-front.webp",
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/model360/lightbrown-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "그레이": {
+        "sheets": [
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/model360/gray-front.webp",
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/model360/gray-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      }
+    },
+    "product360": {
+      "아이보리": {
+        "sheets": [
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/product360/ivory-front.webp",
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/product360/ivory-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "검정": {
+        "sheets": [
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/product360/black-front.webp",
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/product360/black-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "브라운": {
+        "sheets": [
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/product360/brown-front.webp",
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/product360/brown-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연핑크": {
+        "sheets": [
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/product360/lightpink-front.webp",
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/product360/lightpink-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "카키": {
+        "sheets": [
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/product360/khaki-front.webp",
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/product360/khaki-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "차콜": {
+        "sheets": [
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/product360/charcoal-front.webp",
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/product360/charcoal-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/product360/navy-front.webp",
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/product360/navy-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "보라": {
+        "sheets": [
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/product360/purple-front.webp",
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/product360/purple-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연밤": {
+        "sheets": [
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/product360/lightbrown-front.webp",
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/product360/lightbrown-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "그레이": {
+        "sheets": [
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/product360/gray-front.webp",
+          "assets/detail/rm542-cable-vneck-vest/launch-20261016/product360/gray-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      }
+    },
+    "originals": {},
+    "fabric": [
+      {
+        "src": "assets/detail/rm542-cable-vneck-vest/launch-20261016/fabric-1.webp",
+        "width": 1024,
+        "height": 1536,
+        "caption": "중앙 다이아 두 개와 측면 케이블",
+        "mediaKind": "studio-edit"
+      },
+      {
+        "src": "assets/detail/rm542-cable-vneck-vest/launch-20261016/fabric-2.webp",
+        "width": 1024,
+        "height": 1536,
+        "caption": "다이아·케이블 짜임과 골지 마감",
+        "mediaKind": "studio-edit"
+      }
+    ],
+    "fabricOriginals": [
+      {
+        "src": "assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/000.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 0°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/045.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 45°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/090.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 90°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/135.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 135°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/180.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 180°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/225.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 225°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/270.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 270°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/315.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 315°",
+        "mediaKind": "photo"
+      }
+    ],
+    "colorBoard": "assets/detail/rm542-cable-vneck-vest/launch-20261016/color-palette.webp",
+    "colorBoardSize": {
+      "width": 2560,
+      "height": 1536
+    },
+    "colorOrder": [
+      "아이보리",
+      "검정",
+      "브라운",
+      "연핑크",
+      "카키",
+      "차콜",
+      "곤색",
+      "보라",
+      "연밤",
+      "그레이"
+    ],
+    "measurements": [
+      {
+        "label": "총장",
+        "value": 50
+      },
+      {
+        "label": "가슴 단면",
+        "value": 52
+      },
+      {
+        "label": "어깨너비",
+        "value": 44
+      },
+      {
+        "label": "암홀",
+        "value": 22
+      },
+      {
+        "label": "목너비",
+        "value": 17
+      },
+      {
+        "label": "목깊이",
+        "value": 15
+      }
+    ],
+    "size": "FREE",
+    "sizeUnit": "cm",
+    "measurementVerified": true,
+    "thumbnail": "assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/lightbrown-A.webp",
+    "thumbnailColor": "연밤",
+    "materialRaw": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+    "materialComplete": true,
+    "materialNote": "",
+    "colorHex": {
+      "아이보리": "#eee8df",
+      "검정": "#202124",
+      "브라운": "#433a36",
+      "연핑크": "#e7cfd9",
+      "카키": "#434838",
+      "차콜": "#383b40",
+      "곤색": "#26334d",
+      "보라": "#b59bc1",
+      "연밤": "#a39a94",
+      "그레이": "#6b6d72"
+    },
+    "isNewDesign": true,
+    "model360Label": "데일리 데님 레이어"
+  },
+  "rm543-basic-vneck-knit": {
+    "lead": "흰 티와 데님에는 편안하게, 셔츠와 슬랙스에는 단정하게. 익숙한 하의에 바로 이어 입기 좋은 V넥 니트.",
+    "storyTitle": "여러 하의에 이어지는 기본 V넥",
+    "storyParagraphs": [
+      "군더더기 없는 V넥 몸판과 골지 마감이 이너와 하의를 자연스럽게 이어 줘요.",
+      "데님과 스니커즈로 가볍게 입거나, 차콜 슬랙스와 미디스커트에 플랫을 더해 차분하게 즐겨 보세요."
+    ],
+    "points": [
+      {
+        "title": "V-neck",
+        "text": "골지로 마감한 V넥"
+      },
+      {
+        "title": "Long sleeve",
+        "text": "원문 기준 소매기장 69cm"
+      },
+      {
+        "title": "Rib finish",
+        "text": "소맷단과 밑단 골지 마감"
+      }
+    ],
+    "looks": [
+      {
+        "id": "A",
+        "label": "화이트 티와 데님",
+        "items": [
+          "기본 V넥 니트",
+          "화이트 라운드 티셔츠",
+          "중청 스트레이트 데님",
+          "아이보리 스니커즈",
+          "실버 스터드 이어링"
+        ],
+        "images": {
+          "아이보리": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/ivory-A.webp",
+          "검정": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/black-A.webp",
+          "브라운": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/brown-A.webp",
+          "연핑크": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/lightpink-A.webp",
+          "카키": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/khaki-A.webp",
+          "차콜": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/charcoal-A.webp",
+          "곤색": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/navy-A.webp",
+          "보라": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/purple-A.webp",
+          "연밤": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/lightbrown-A.webp",
+          "그레이": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/gray-A.webp"
+        }
+      },
+      {
+        "id": "B",
+        "label": "셔츠와 차콜 슬랙스",
+        "items": [
+          "기본 V넥 니트",
+          "화이트 카라 셔츠",
+          "차콜 스트레이트 슬랙스",
+          "블랙 로퍼",
+          "블랙 토트백",
+          "미니멀 워치"
+        ],
+        "images": {
+          "아이보리": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/ivory-B.webp",
+          "검정": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/black-B.webp",
+          "브라운": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/brown-B.webp",
+          "연핑크": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/lightpink-B.webp",
+          "카키": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/khaki-B.webp",
+          "차콜": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/charcoal-B.webp",
+          "곤색": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/navy-B.webp",
+          "보라": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/purple-B.webp",
+          "연밤": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/lightbrown-B.webp",
+          "그레이": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/gray-B.webp"
+        }
+      },
+      {
+        "id": "C",
+        "label": "스트라이프 이너와 올리브 팬츠",
+        "items": [
+          "기본 V넥 니트",
+          "아이보리·브라운 스트라이프 티",
+          "올리브 스트레이트 팬츠",
+          "오프화이트 캔버스 슈즈",
+          "아이보리 스카프"
+        ],
+        "images": {
+          "아이보리": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/ivory-C.webp",
+          "검정": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/black-C.webp",
+          "브라운": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/brown-C.webp",
+          "연핑크": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/lightpink-C.webp",
+          "카키": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/khaki-C.webp",
+          "차콜": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/charcoal-C.webp",
+          "곤색": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/navy-C.webp",
+          "보라": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/purple-C.webp",
+          "연밤": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/lightbrown-C.webp",
+          "그레이": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/gray-C.webp"
+        }
+      },
+      {
+        "id": "D",
+        "label": "아이보리 미디 스커트",
+        "items": [
+          "기본 V넥 니트",
+          "아이보리 종아리중간 일자 미디스커트",
+          "블랙 플랫",
+          "실버 펜던트 목걸이",
+          "블랙 숄더백"
+        ],
+        "images": {
+          "아이보리": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/ivory-D.webp",
+          "검정": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/black-D.webp",
+          "브라운": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/brown-D.webp",
+          "연핑크": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/lightpink-D.webp",
+          "카키": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/khaki-D.webp",
+          "차콜": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/charcoal-D.webp",
+          "곤색": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/navy-D.webp",
+          "보라": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/purple-D.webp",
+          "연밤": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/lightbrown-D.webp",
+          "그레이": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/gray-D.webp"
+        }
+      }
+    ],
+    "model360": {
+      "아이보리": {
+        "sheets": [
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/model360/ivory-front.webp",
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/model360/ivory-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "검정": {
+        "sheets": [
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/model360/black-front.webp",
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/model360/black-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "브라운": {
+        "sheets": [
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/model360/brown-front.webp",
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/model360/brown-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연핑크": {
+        "sheets": [
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/model360/lightpink-front.webp",
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/model360/lightpink-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "카키": {
+        "sheets": [
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/model360/khaki-front.webp",
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/model360/khaki-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "차콜": {
+        "sheets": [
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/model360/charcoal-front.webp",
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/model360/charcoal-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/model360/navy-front.webp",
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/model360/navy-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "보라": {
+        "sheets": [
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/model360/purple-front.webp",
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/model360/purple-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연밤": {
+        "sheets": [
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/model360/lightbrown-front.webp",
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/model360/lightbrown-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "그레이": {
+        "sheets": [
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/model360/gray-front.webp",
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/model360/gray-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      }
+    },
+    "product360": {
+      "아이보리": {
+        "sheets": [
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/product360/ivory-front.webp",
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/product360/ivory-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "검정": {
+        "sheets": [
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/product360/black-front.webp",
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/product360/black-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "브라운": {
+        "sheets": [
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/product360/brown-front.webp",
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/product360/brown-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연핑크": {
+        "sheets": [
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/product360/lightpink-front.webp",
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/product360/lightpink-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "카키": {
+        "sheets": [
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/product360/khaki-front.webp",
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/product360/khaki-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "차콜": {
+        "sheets": [
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/product360/charcoal-front.webp",
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/product360/charcoal-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/product360/navy-front.webp",
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/product360/navy-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "보라": {
+        "sheets": [
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/product360/purple-front.webp",
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/product360/purple-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연밤": {
+        "sheets": [
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/product360/lightbrown-front.webp",
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/product360/lightbrown-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "그레이": {
+        "sheets": [
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/product360/gray-front.webp",
+          "assets/detail/rm543-basic-vneck-knit/launch-20261016/product360/gray-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      }
+    },
+    "originals": {},
+    "fabric": [
+      {
+        "src": "assets/detail/rm543-basic-vneck-knit/launch-20261016/fabric-1.webp",
+        "width": 1024,
+        "height": 1536,
+        "caption": "V넥과 여유 있는 긴소매",
+        "mediaKind": "studio-edit"
+      },
+      {
+        "src": "assets/detail/rm543-basic-vneck-knit/launch-20261016/fabric-2.webp",
+        "width": 1536,
+        "height": 1024,
+        "caption": "평편 니트 조직과 좁은 골지 V넥",
+        "mediaKind": "studio-edit"
+      }
+    ],
+    "fabricOriginals": [
+      {
+        "src": "assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/000.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 0°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/045.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 45°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/090.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 90°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/135.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 135°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/180.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 180°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/225.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 225°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/270.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 270°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/315.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 315°",
+        "mediaKind": "photo"
+      }
+    ],
+    "colorBoard": "assets/detail/rm543-basic-vneck-knit/launch-20261016/color-palette.webp",
+    "colorBoardSize": {
+      "width": 3135,
+      "height": 1254
+    },
+    "colorOrder": [
+      "아이보리",
+      "검정",
+      "브라운",
+      "연핑크",
+      "카키",
+      "차콜",
+      "곤색",
+      "보라",
+      "연밤",
+      "그레이"
+    ],
+    "measurements": [
+      {
+        "label": "총장",
+        "value": 58
+      },
+      {
+        "label": "가슴 단면",
+        "value": 53
+      },
+      {
+        "label": "암홀",
+        "value": 26
+      },
+      {
+        "label": "소매길이",
+        "value": 69
+      },
+      {
+        "label": "소매통",
+        "value": 19
+      },
+      {
+        "label": "목너비",
+        "value": 18
+      },
+      {
+        "label": "목깊이",
+        "value": 16
+      }
+    ],
+    "size": "FREE",
+    "sizeUnit": "cm",
+    "measurementVerified": true,
+    "thumbnail": "assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/brown-A.webp",
+    "thumbnailColor": "브라운",
+    "materialRaw": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+    "materialComplete": true,
+    "materialNote": "",
+    "colorHex": {
+      "아이보리": "#eee8df",
+      "검정": "#202124",
+      "브라운": "#433a36",
+      "연핑크": "#e7cfd9",
+      "카키": "#434838",
+      "차콜": "#383b40",
+      "곤색": "#26334d",
+      "보라": "#b59bc1",
+      "연밤": "#a39a94",
+      "그레이": "#6b6d72"
+    },
+    "isNewDesign": true,
+    "model360Label": "화이트 티와 데님"
+  },
+  "rm567-round-cap-sleeve-knit": {
+    "lead": "라운드넥과 캡소매가 간결한 인상을 만드는 짧은 니트. 데님부터 슬랙스, 미디스커트까지 하의가 잘 보이는 비율로 이어집니다.",
+    "storyTitle": "캡소매로 만든 짧은 니트",
+    "storyParagraphs": [
+      "어깨를 살짝 덮는 캡소매와 짧은 몸판이 코디를 간결하게 정리해 줘요.",
+      "스트레이트 데님에는 스니커즈를, 슬랙스나 미디스커트에는 로퍼와 플랫을 더해 보세요."
+    ],
+    "points": [
+      {
+        "title": "Cap sleeve",
+        "text": "어깨를 덮는 소매기장 18cm"
+      },
+      {
+        "title": "Round neck",
+        "text": "골지로 마감한 라운드넥"
+      },
+      {
+        "title": "Short length",
+        "text": "원문 기준 총기장 48cm"
+      }
+    ],
+    "looks": [
+      {
+        "id": "A",
+        "label": "Casual denim",
+        "items": [
+          "mid-blue straight-leg jeans",
+          "ivory low-top sneakers",
+          "small stud earrings"
+        ],
+        "images": {
+          "아이보리": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/ivory-A.webp",
+          "검정": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/black-A.webp",
+          "브라운": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/brown-A.webp",
+          "연핑크": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/lightpink-A.webp",
+          "카키": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/khaki-A.webp",
+          "차콜": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/charcoal-A.webp",
+          "곤색": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/navy-A.webp",
+          "보라": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/purple-A.webp",
+          "연밤": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/lightbrown-A.webp",
+          "그레이": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/gray-A.webp"
+        }
+      },
+      {
+        "id": "B",
+        "label": "Tailored trousers",
+        "items": [
+          "charcoal tailored wide-leg trousers",
+          "black low slingback shoes",
+          "slim black watch"
+        ],
+        "images": {
+          "아이보리": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/ivory-B.webp",
+          "검정": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/black-B.webp",
+          "브라운": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/brown-B.webp",
+          "연핑크": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/lightpink-B.webp",
+          "카키": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/khaki-B.webp",
+          "차콜": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/charcoal-B.webp",
+          "곤색": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/navy-B.webp",
+          "보라": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/purple-B.webp",
+          "연밤": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/lightbrown-B.webp",
+          "그레이": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/gray-B.webp"
+        }
+      },
+      {
+        "id": "C",
+        "label": "Navy midi skirt",
+        "items": [
+          "deep navy A-line midi skirt ending mid-calf",
+          "brown slingback low heels",
+          "slim brown watch",
+          "stud earrings"
+        ],
+        "images": {
+          "아이보리": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/ivory-C.webp",
+          "검정": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/black-C.webp",
+          "브라운": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/brown-C.webp",
+          "연핑크": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/lightpink-C.webp",
+          "카키": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/khaki-C.webp",
+          "차콜": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/charcoal-C.webp",
+          "곤색": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/navy-C.webp",
+          "보라": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/purple-C.webp",
+          "연밤": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/lightbrown-C.webp",
+          "그레이": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/gray-C.webp"
+        }
+      },
+      {
+        "id": "D",
+        "label": "Ivory midi skirt",
+        "items": [
+          "ivory straight midi skirt ending mid-calf",
+          "simple black ballet flats",
+          "tiny earrings"
+        ],
+        "images": {
+          "아이보리": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/ivory-D.webp",
+          "검정": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/black-D.webp",
+          "브라운": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/brown-D.webp",
+          "연핑크": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/lightpink-D.webp",
+          "카키": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/khaki-D.webp",
+          "차콜": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/charcoal-D.webp",
+          "곤색": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/navy-D.webp",
+          "보라": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/purple-D.webp",
+          "연밤": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/lightbrown-D.webp",
+          "그레이": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/gray-D.webp"
+        }
+      }
+    ],
+    "model360": {
+      "아이보리": {
+        "sheets": [
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/model360/ivory-front.webp",
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/model360/ivory-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "검정": {
+        "sheets": [
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/model360/black-front.webp",
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/model360/black-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "브라운": {
+        "sheets": [
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/model360/brown-front.webp",
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/model360/brown-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "연핑크": {
+        "sheets": [
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/model360/lightpink-front.webp",
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/model360/lightpink-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "카키": {
+        "sheets": [
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/model360/khaki-front.webp",
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/model360/khaki-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "차콜": {
+        "sheets": [
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/model360/charcoal-front.webp",
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/model360/charcoal-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/model360/navy-front.webp",
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/model360/navy-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "보라": {
+        "sheets": [
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/model360/purple-front.webp",
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/model360/purple-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "연밤": {
+        "sheets": [
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/model360/lightbrown-front.webp",
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/model360/lightbrown-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "그레이": {
+        "sheets": [
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/model360/gray-front.webp",
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/model360/gray-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      }
+    },
+    "product360": {
+      "아이보리": {
+        "sheets": [
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/product360/ivory-front.webp",
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/product360/ivory-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "검정": {
+        "sheets": [
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/product360/black-front.webp",
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/product360/black-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "브라운": {
+        "sheets": [
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/product360/brown-front.webp",
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/product360/brown-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연핑크": {
+        "sheets": [
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/product360/lightpink-front.webp",
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/product360/lightpink-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "카키": {
+        "sheets": [
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/product360/khaki-front.webp",
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/product360/khaki-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "차콜": {
+        "sheets": [
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/product360/charcoal-front.webp",
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/product360/charcoal-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/product360/navy-front.webp",
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/product360/navy-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "보라": {
+        "sheets": [
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/product360/purple-front.webp",
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/product360/purple-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연밤": {
+        "sheets": [
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/product360/lightbrown-front.webp",
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/product360/lightbrown-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "그레이": {
+        "sheets": [
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/product360/gray-front.webp",
+          "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/product360/gray-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      }
+    },
+    "originals": {
+      "연핑크": [
+        {
+          "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/000.jpg",
+          "angle": 0
+        },
+        {
+          "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/045.jpg",
+          "angle": 45
+        },
+        {
+          "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/090.jpg",
+          "angle": 90
+        },
+        {
+          "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/135.jpg",
+          "angle": 135
+        },
+        {
+          "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/180.jpg",
+          "angle": 180
+        },
+        {
+          "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/225.jpg",
+          "angle": 225
+        },
+        {
+          "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/270.jpg",
+          "angle": 270
+        },
+        {
+          "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/315.jpg",
+          "angle": 315
+        }
+      ]
+    },
+    "fabric": [
+      {
+        "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/fabric-1.webp",
+        "width": 1024,
+        "height": 1536,
+        "caption": "라운드넥과 래글런 숏슬리브 전체 실루엣",
+        "mediaKind": "studio-edit"
+      },
+      {
+        "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/fabric-2.webp",
+        "width": 1024,
+        "height": 1536,
+        "caption": "고운 평편직 V 스티치와 네크라인 접사",
+        "mediaKind": "studio-edit"
+      }
+    ],
+    "fabricOriginals": [
+      {
+        "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/000.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 0°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/045.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 45°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/090.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 90°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/135.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 135°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/180.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 180°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/225.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 225°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/270.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 270°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/315.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 315°",
+        "mediaKind": "photo"
+      }
+    ],
+    "colorBoard": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/color-palette.webp",
+    "colorBoardSize": {
+      "width": 1254,
+      "height": 3135
+    },
+    "colorOrder": [
+      "아이보리",
+      "검정",
+      "브라운",
+      "연핑크",
+      "카키",
+      "차콜",
+      "곤색",
+      "보라",
+      "연밤",
+      "그레이"
+    ],
+    "measurements": [
+      {
+        "label": "총장",
+        "value": 48
+      },
+      {
+        "label": "가슴 단면",
+        "value": 45
+      },
+      {
+        "label": "어깨너비",
+        "value": 44
+      },
+      {
+        "label": "암홀",
+        "value": 17
+      },
+      {
+        "label": "소매길이",
+        "value": 18
+      },
+      {
+        "label": "소매통",
+        "value": 15
+      },
+      {
+        "label": "목너비",
+        "value": 20
+      },
+      {
+        "label": "목깊이",
+        "value": 7
+      }
+    ],
+    "size": "FREE",
+    "sizeUnit": "cm",
+    "measurementVerified": true,
+    "thumbnail": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/lightpink-A.webp",
+    "thumbnailColor": "연핑크",
+    "materialRaw": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+    "materialComplete": true,
+    "materialNote": "",
+    "colorHex": {
+      "아이보리": "#eee8df",
+      "검정": "#202124",
+      "브라운": "#433a36",
+      "연핑크": "#e7cfd9",
+      "카키": "#434838",
+      "차콜": "#383b40",
+      "곤색": "#26334d",
+      "보라": "#b59bc1",
+      "연밤": "#a39a94",
+      "그레이": "#6b6d72"
+    },
+    "isNewDesign": true,
+    "model360Label": "티셔츠처럼 가볍게 · 데님"
+  },
+  "rm576-ribbed-vneck-knit": {
+    "lead": "흰 티와 팬츠 위에 툭 더하면 하찌 짜임이 또렷하게 살아나는 V넥 니트. 슬랙스와 미디스커트에는 차분하게 이어집니다.",
+    "storyTitle": "하찌 조직이 드러나는 V넥",
+    "storyParagraphs": [
+      "V넥부터 소매와 몸판까지 이어지는 하찌 조직이 코디의 중심이 돼요.",
+      "아이보리 팬츠로 밝게 대비하거나, 차콜 슬랙스와 미디스커트로 색을 낮춰 입어 보세요."
+    ],
+    "points": [
+      {
+        "title": "Hacci texture",
+        "text": "몸판과 소매에 이어지는 하찌 조직"
+      },
+      {
+        "title": "V-neck",
+        "text": "골지로 마감한 V넥"
+      },
+      {
+        "title": "Drop shoulder",
+        "text": "어깨넓이 59cm의 내려온 어깨선"
+      }
+    ],
+    "looks": [
+      {
+        "id": "A",
+        "label": "데일리 데님",
+        "items": [
+          "mid-blue straight-leg jeans",
+          "ivory low-top sneakers",
+          "tiny silver stud earrings"
+        ],
+        "images": {
+          "아이보리": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/ivory-A.webp",
+          "검정": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/black-A.webp",
+          "브라운": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/brown-A.webp",
+          "연핑크": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/lightpink-A.webp",
+          "카키": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/khaki-A.webp",
+          "차콜": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/charcoal-A.webp",
+          "곤색": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/navy-A.webp",
+          "보라": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/purple-A.webp",
+          "연밤": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/lightbrown-A.webp",
+          "그레이": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/gray-A.webp"
+        }
+      },
+      {
+        "id": "B",
+        "label": "차콜 테일러드",
+        "items": [
+          "charcoal tailored wide-leg trousers",
+          "polished black loafers",
+          "small structured black handbag"
+        ],
+        "images": {
+          "아이보리": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/ivory-B.webp",
+          "검정": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/black-B.webp",
+          "브라운": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/brown-B.webp",
+          "연핑크": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/lightpink-B.webp",
+          "카키": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/khaki-B.webp",
+          "차콜": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/charcoal-B.webp",
+          "곤색": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/navy-B.webp",
+          "보라": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/purple-B.webp",
+          "연밤": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/lightbrown-B.webp",
+          "그레이": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/gray-B.webp"
+        }
+      },
+      {
+        "id": "C",
+        "label": "카멜 미디",
+        "items": [
+          "camel-beige straight midi skirt",
+          "brown slingback low heels",
+          "slim brown leather watch"
+        ],
+        "images": {
+          "아이보리": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/ivory-C.webp",
+          "검정": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/black-C.webp",
+          "브라운": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/brown-C.webp",
+          "연핑크": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/lightpink-C.webp",
+          "카키": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/khaki-C.webp",
+          "차콜": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/charcoal-C.webp",
+          "곤색": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/navy-C.webp",
+          "보라": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/purple-C.webp",
+          "연밤": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/lightbrown-C.webp",
+          "그레이": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/gray-C.webp"
+        }
+      },
+      {
+        "id": "D",
+        "label": "차콜 A라인",
+        "items": [
+          "charcoal A-line midi skirt",
+          "clean black ankle boots",
+          "tiny silver earrings"
+        ],
+        "images": {
+          "아이보리": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/ivory-D.webp",
+          "검정": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/black-D.webp",
+          "브라운": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/brown-D.webp",
+          "연핑크": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/lightpink-D.webp",
+          "카키": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/khaki-D.webp",
+          "차콜": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/charcoal-D.webp",
+          "곤색": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/navy-D.webp",
+          "보라": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/purple-D.webp",
+          "연밤": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/lightbrown-D.webp",
+          "그레이": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/gray-D.webp"
+        }
+      }
+    ],
+    "model360": {
+      "아이보리": {
+        "sheets": [
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/model360/ivory-front.webp",
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/model360/ivory-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "검정": {
+        "sheets": [
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/model360/black-front.webp",
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/model360/black-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "브라운": {
+        "sheets": [
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/model360/brown-front.webp",
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/model360/brown-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "연핑크": {
+        "sheets": [
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/model360/lightpink-front.webp",
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/model360/lightpink-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "카키": {
+        "sheets": [
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/model360/khaki-front.webp",
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/model360/khaki-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "차콜": {
+        "sheets": [
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/model360/charcoal-front.webp",
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/model360/charcoal-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/model360/navy-front.webp",
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/model360/navy-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "보라": {
+        "sheets": [
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/model360/purple-front.webp",
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/model360/purple-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "연밤": {
+        "sheets": [
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/model360/lightbrown-front.webp",
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/model360/lightbrown-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "그레이": {
+        "sheets": [
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/model360/gray-front.webp",
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/model360/gray-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      }
+    },
+    "product360": {
+      "아이보리": {
+        "sheets": [
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/product360/ivory-front.webp",
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/product360/ivory-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "검정": {
+        "sheets": [
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/product360/black-front.webp",
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/product360/black-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "브라운": {
+        "sheets": [
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/product360/brown-front.webp",
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/product360/brown-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연핑크": {
+        "sheets": [
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/product360/lightpink-front.webp",
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/product360/lightpink-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "카키": {
+        "sheets": [
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/product360/khaki-front.webp",
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/product360/khaki-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "차콜": {
+        "sheets": [
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/product360/charcoal-front.webp",
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/product360/charcoal-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/product360/navy-front.webp",
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/product360/navy-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "보라": {
+        "sheets": [
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/product360/purple-front.webp",
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/product360/purple-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연밤": {
+        "sheets": [
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/product360/lightbrown-front.webp",
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/product360/lightbrown-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "그레이": {
+        "sheets": [
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/product360/gray-front.webp",
+          "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/product360/gray-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      }
+    },
+    "originals": {
+      "곤색": [
+        {
+          "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/000.jpg",
+          "angle": 0
+        },
+        {
+          "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/045.jpg",
+          "angle": 45
+        },
+        {
+          "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/090.jpg",
+          "angle": 90
+        },
+        {
+          "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/135.jpg",
+          "angle": 135
+        },
+        {
+          "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/180.jpg",
+          "angle": 180
+        },
+        {
+          "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/225.jpg",
+          "angle": 225
+        },
+        {
+          "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/270.jpg",
+          "angle": 270
+        },
+        {
+          "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/315.jpg",
+          "angle": 315
+        }
+      ]
+    },
+    "fabric": [
+      {
+        "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/fabric-1.webp",
+        "width": 1254,
+        "height": 1254,
+        "caption": "마네킹 없이 펼친 곤색 전체 실루엣과 미세 핫찌 조직",
+        "mediaKind": "studio-edit"
+      },
+      {
+        "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/fabric-2.webp",
+        "width": 1254,
+        "height": 1254,
+        "caption": "V넥과 미세 균일 핫찌/턱 조직 접사",
+        "mediaKind": "studio-edit"
+      }
+    ],
+    "fabricOriginals": [
+      {
+        "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/000.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 0°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/045.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 45°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/090.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 90°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/135.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 135°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/180.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 180°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/225.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 225°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/270.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 270°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/315.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 315°",
+        "mediaKind": "photo"
+      }
+    ],
+    "colorBoard": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/color-palette.webp",
+    "colorBoardSize": {
+      "width": 1254,
+      "height": 3135
+    },
+    "colorOrder": [
+      "아이보리",
+      "검정",
+      "브라운",
+      "연핑크",
+      "카키",
+      "차콜",
+      "곤색",
+      "보라",
+      "연밤",
+      "그레이"
+    ],
+    "measurements": [
+      {
+        "label": "총장",
+        "value": 56
+      },
+      {
+        "label": "가슴 단면",
+        "value": 57
+      },
+      {
+        "label": "어깨너비",
+        "value": 59
+      },
+      {
+        "label": "암홀",
+        "value": 20
+      },
+      {
+        "label": "소매길이",
+        "value": 44
+      },
+      {
+        "label": "소매통",
+        "value": 19
+      },
+      {
+        "label": "목너비",
+        "value": 18
+      },
+      {
+        "label": "목깊이",
+        "value": 18
+      }
+    ],
+    "size": "FREE",
+    "sizeUnit": "cm",
+    "measurementVerified": true,
+    "thumbnail": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/navy-A.webp",
+    "thumbnailColor": "곤색",
+    "materialRaw": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+    "materialComplete": true,
+    "materialNote": "",
+    "colorHex": {
+      "아이보리": "#eee8df",
+      "검정": "#202124",
+      "브라운": "#433a36",
+      "연핑크": "#e7cfd9",
+      "카키": "#434838",
+      "차콜": "#383b40",
+      "곤색": "#26334d",
+      "보라": "#b59bc1",
+      "연밤": "#a39a94",
+      "그레이": "#6b6d72"
+    },
+    "isNewDesign": true,
+    "model360Label": "0°/45°/90°/135° and 180°/225°/270°/315°; identical axis; no mirroring"
+  },
+  "rm582-front-back-vneck-oversized-knit": {
+    "lead": "크루넥 이너가 앞뒤 V넥 사이로 보이는 오버핏 니트. 데님에는 편안하게, 블랙 슬랙스와 미디스커트에는 차분하게 이어 보세요.",
+    "storyTitle": "앞뒤 V넥이 만드는 두 방향",
+    "storyParagraphs": [
+      "앞과 뒤에 깊게 놓인 V넥이 크루넥 이너를 자연스럽게 드러내요.",
+      "진청 데님과 스니커즈로 가볍게 입거나, 블랙 슬랙스와 차콜 미디스커트에 플랫을 맞춰 보세요."
+    ],
+    "points": [
+      {
+        "title": "Front & back V",
+        "text": "앞과 뒤에 이어지는 깊은 V넥"
+      },
+      {
+        "title": "Oversized line",
+        "text": "총기장 62cm와 가슴넓이 57cm"
+      },
+      {
+        "title": "Long rib",
+        "text": "긴 소맷단과 밑단 골지 마감"
+      }
+    ],
+    "looks": [
+      {
+        "id": "A",
+        "label": "워시드 차콜 데님",
+        "items": [
+          "washed charcoal straight-leg jeans",
+          "ivory low-top sneakers",
+          "small stud earrings"
+        ],
+        "images": {
+          "아이보리": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/ivory-A.webp",
+          "검정": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/black-A.webp",
+          "브라운": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/brown-A.webp",
+          "연핑크": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/lightpink-A.webp",
+          "카키": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/khaki-A.webp",
+          "차콜": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/charcoal-A.webp",
+          "곤색": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/navy-A.webp",
+          "보라": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/purple-A.webp",
+          "연밤": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/lightbrown-A.webp",
+          "그레이": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/gray-A.webp"
+        }
+      },
+      {
+        "id": "B",
+        "label": "블랙 테일러드",
+        "items": [
+          "black tailored wide-leg trousers",
+          "black loafers",
+          "small structured black handbag"
+        ],
+        "images": {
+          "아이보리": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/ivory-B.webp",
+          "검정": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/black-B.webp",
+          "브라운": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/brown-B.webp",
+          "연핑크": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/lightpink-B.webp",
+          "카키": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/khaki-B.webp",
+          "차콜": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/charcoal-B.webp",
+          "곤색": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/navy-B.webp",
+          "보라": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/purple-B.webp",
+          "연밤": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/lightbrown-B.webp",
+          "그레이": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/gray-B.webp"
+        }
+      },
+      {
+        "id": "C",
+        "label": "브라운 미디",
+        "items": [
+          "deep chocolate-brown straight midi skirt",
+          "taupe slingback low heels",
+          "slim watch"
+        ],
+        "images": {
+          "아이보리": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/ivory-C.webp",
+          "검정": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/black-C.webp",
+          "브라운": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/brown-C.webp",
+          "연핑크": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/lightpink-C.webp",
+          "카키": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/khaki-C.webp",
+          "차콜": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/charcoal-C.webp",
+          "곤색": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/navy-C.webp",
+          "보라": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/purple-C.webp",
+          "연밤": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/lightbrown-C.webp",
+          "그레이": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/gray-C.webp"
+        }
+      },
+      {
+        "id": "D",
+        "label": "차콜 A라인",
+        "items": [
+          "charcoal A-line midi skirt",
+          "black ankle boots",
+          "tiny stud earrings"
+        ],
+        "images": {
+          "아이보리": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/ivory-D.webp",
+          "검정": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/black-D.webp",
+          "브라운": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/brown-D.webp",
+          "연핑크": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/lightpink-D.webp",
+          "카키": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/khaki-D.webp",
+          "차콜": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/charcoal-D.webp",
+          "곤색": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/navy-D.webp",
+          "보라": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/purple-D.webp",
+          "연밤": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/lightbrown-D.webp",
+          "그레이": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/gray-D.webp"
+        }
+      }
+    ],
+    "model360": {
+      "아이보리": {
+        "sheets": [
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/model360/ivory-front.webp",
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/model360/ivory-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "검정": {
+        "sheets": [
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/model360/black-front.webp",
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/model360/black-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "브라운": {
+        "sheets": [
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/model360/brown-front.webp",
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/model360/brown-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "연핑크": {
+        "sheets": [
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/model360/lightpink-front.webp",
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/model360/lightpink-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "카키": {
+        "sheets": [
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/model360/khaki-front.webp",
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/model360/khaki-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "차콜": {
+        "sheets": [
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/model360/charcoal-front.webp",
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/model360/charcoal-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/model360/navy-front.webp",
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/model360/navy-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "보라": {
+        "sheets": [
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/model360/purple-front.webp",
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/model360/purple-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "연밤": {
+        "sheets": [
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/model360/lightbrown-front.webp",
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/model360/lightbrown-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      },
+      "그레이": {
+        "sheets": [
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/model360/gray-front.webp",
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/model360/gray-back.webp"
+        ],
+        "cellWidth": 512,
+        "cellHeight": 768
+      }
+    },
+    "product360": {
+      "아이보리": {
+        "sheets": [
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/product360/ivory-front.webp",
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/product360/ivory-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "검정": {
+        "sheets": [
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/product360/black-front.webp",
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/product360/black-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "브라운": {
+        "sheets": [
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/product360/brown-front.webp",
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/product360/brown-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연핑크": {
+        "sheets": [
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/product360/lightpink-front.webp",
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/product360/lightpink-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "카키": {
+        "sheets": [
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/product360/khaki-front.webp",
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/product360/khaki-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "차콜": {
+        "sheets": [
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/product360/charcoal-front.webp",
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/product360/charcoal-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "곤색": {
+        "sheets": [
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/product360/navy-front.webp",
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/product360/navy-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "보라": {
+        "sheets": [
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/product360/purple-front.webp",
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/product360/purple-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "연밤": {
+        "sheets": [
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/product360/lightbrown-front.webp",
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/product360/lightbrown-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      },
+      "그레이": {
+        "sheets": [
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/product360/gray-front.webp",
+          "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/product360/gray-back.webp"
+        ],
+        "cellWidth": 627,
+        "cellHeight": 627
+      }
+    },
+    "originals": {},
+    "fabric": [
+      {
+        "src": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/fabric-1.webp",
+        "width": 1254,
+        "height": 1254,
+        "caption": "앞뒤로 깊게 내려오는 V넥과 여유로운 실루엣",
+        "mediaKind": "studio-edit"
+      },
+      {
+        "src": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/fabric-2.webp",
+        "width": 1254,
+        "height": 1254,
+        "caption": "가까이서 보는 니트의 짜임과 넥라인",
+        "mediaKind": "studio-edit"
+      }
+    ],
+    "fabricOriginals": [
+      {
+        "src": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/000.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 0°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/045.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 45°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/090.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 90°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/135.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 135°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/180.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 180°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/225.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 225°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/270.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 270°",
+        "mediaKind": "photo"
+      },
+      {
+        "src": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/315.jpg",
+        "width": 2992,
+        "height": 2992,
+        "caption": "촬영 샘플 · 315°",
+        "mediaKind": "photo"
+      }
+    ],
+    "colorBoard": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/color-palette.webp",
+    "colorBoardSize": {
+      "width": 1254,
+      "height": 3135
+    },
+    "colorOrder": [
+      "아이보리",
+      "검정",
+      "브라운",
+      "연핑크",
+      "카키",
+      "차콜",
+      "곤색",
+      "보라",
+      "연밤",
+      "그레이"
+    ],
+    "measurements": [
+      {
+        "label": "총장",
+        "value": 62
+      },
+      {
+        "label": "가슴 단면",
+        "value": 57
+      },
+      {
+        "label": "어깨너비",
+        "value": 57
+      },
+      {
+        "label": "암홀",
+        "value": 22
+      },
+      {
+        "label": "소매길이",
+        "value": 49
+      },
+      {
+        "label": "소매통",
+        "value": 21
+      },
+      {
+        "label": "목너비",
+        "value": 24
+      },
+      {
+        "label": "목깊이",
+        "value": 30
+      }
+    ],
+    "size": "FREE",
+    "sizeUnit": "cm",
+    "measurementVerified": true,
+    "thumbnail": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/ivory-A.webp",
+    "thumbnailColor": "아이보리",
+    "materialRaw": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+    "materialComplete": true,
+    "materialNote": "",
+    "colorHex": {
+      "아이보리": "#eee8df",
+      "검정": "#202124",
+      "브라운": "#433a36",
+      "연핑크": "#e7cfd9",
+      "카키": "#434838",
+      "차콜": "#383b40",
+      "곤색": "#26334d",
+      "보라": "#b59bc1",
+      "연밤": "#a39a94",
+      "그레이": "#6b6d72"
+    },
+    "isNewDesign": true,
+    "model360Label": "화이트 티셔츠 · 차콜 데님"
   }
 };

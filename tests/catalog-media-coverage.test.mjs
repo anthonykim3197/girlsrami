@@ -231,6 +231,8 @@ const PUBLIC_ORIGIN = 'https://rlbffhmdonbzifiivbfl.supabase.co';
 const LEGACY_COLORS = {'스카이':'sky','차콜':'charcoal','크림':'cream','카멜':'camel','회색':'gray'};
 const LEGACY_PREFIX = '/storage/v1/object/public/catalog/editorial-20261003-v3/assets/';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const NEW9_LAUNCH = JSON.parse(readFileSync(resolve(root,'tests/fixtures/new9-launch-20261016.json'),'utf8'));
+SALE_REGISTRY.push(...NEW9_LAUNCH.registry);
 const context = {window:{}};
 vm.runInNewContext(readFileSync(resolve(root,'detail-catalog.js'),'utf8'), context);
 const details = JSON.parse(JSON.stringify(context.window.GR_DETAIL));
@@ -354,16 +356,16 @@ function rotation(entry, mode, product, color) {
 }
 
 const references=[];
-test('release registry contains exactly the twelve existing sale designs and 65 sale colors',()=>{
-  assert.equal(SALE_REGISTRY.length,12);
-  assert.equal(SALE_REGISTRY.reduce((sum,p)=>sum+p.colors.length,0),65);
+test('release registry contains the twelve existing and nine new sale designs with 155 sale colors',()=>{
+  assert.equal(SALE_REGISTRY.length,21);
+  assert.equal(SALE_REGISTRY.reduce((sum,p)=>sum+p.colors.length,0),155);
   assert.deepEqual(sorted(Object.keys(details)),sorted(SALE_REGISTRY.map(p=>p.id)));
   assert.deepEqual(sorted(seo.map(p=>p.id)),sorted(SALE_REGISTRY.map(p=>p.id)));
   for(const product of SALE_REGISTRY) {
     const live=seo.find(p=>p.id===product.id);
     assert.deepEqual(sorted(live.colors),sorted(product.colors),product.code);
     assert.equal(live.storeUrl,`https://smartstore.naver.com/girlsrami/products/${product.storeId}`,product.code);
-    assert.equal(details[product.id].isNewDesign,['RM382','RM495'].includes(product.code),`${product.code}: NEW must follow the owner-confirmed launch classification`);
+    assert.equal(details[product.id].isNewDesign,['RM382','RM495',...NEW9_LAUNCH.registry.map(p=>p.code)].includes(product.code),`${product.code}: NEW must follow the owner-confirmed launch classification`);
   }
 });
 
@@ -433,10 +435,10 @@ test('sale colors and views do not reuse the same path or identical local file b
       hashes.set(image.hash,image.owner);
     }
   }
-  // 60 colors use one local hero + four sheets. RM495 adds 5 remote heroes,
+  // 150 colors use one local hero + four sheets. RM495 adds 5 remote heroes,
   // 32 remote model frames, 8 local Gray model frames and 10 local PNG product sheets.
-  assert.equal(references.length,355);
-  assert.equal(references.filter(image=>image.hash).length,318);
+  assert.equal(references.length,805);
+  assert.equal(references.filter(image=>image.hash).length,768);
 });
 
 test('RM495 keeps all eight photographed Gray originals byte-for-byte',()=>{
@@ -445,5 +447,18 @@ test('RM495 keeps all eight photographed Gray originals byte-for-byte',()=>{
     const {bytes}=localFile(photo.src);
     assert.equal(bytes.subarray(0,3).toString('hex'),'ffd8ff',photo.src);
     assert.equal(hash(bytes),photo.sha256,`${photo.src}: photographed original was modified`);
+  }
+});
+
+test('new launch preserves 72 source photographs independently from generated media',()=>{
+  assert.equal(NEW9_LAUNCH.registry.length,9);
+  assert.equal(NEW9_LAUNCH.originals.length,72);
+  for(const product of NEW9_LAUNCH.registry){
+    assert.equal(product.colors.length,10);
+    assert.ok(!product.colors.includes('오트밀'));
+    const photographs=NEW9_LAUNCH.originals.filter(p=>p.code===product.code);
+    assert.deepEqual(photographs.map(p=>Number(p.angle)),ANGLES);
+    assert.deepEqual(details[product.id].fabricOriginals.map(p=>p.src),photographs.map(p=>p.src));
+    for(const photo of photographs)assert.equal(hash(localFile(photo.src).bytes),photo.sha256,photo.src);
   }
 });

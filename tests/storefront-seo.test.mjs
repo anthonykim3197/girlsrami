@@ -11,7 +11,7 @@ const detailContext={window:{}};
 vm.runInNewContext(readFileSync(new URL('detail-catalog.js',root),'utf8'),detailContext);
 const details=detailContext.window.GR_DETAIL;
 
-test('the public fallback catalog contains the same twelve sale products and no draft concepts',()=>{
+test('the public fallback catalog contains the same twenty-one sale products and no draft concepts',()=>{
   const context={window:{GR:{}}};context.GR=context.window.GR;
   vm.runInNewContext(readFileSync(new URL('data.js',root),'utf8'),context);
   const products=context.window.GR.PRODUCTS;
@@ -23,7 +23,7 @@ test('the public fallback catalog contains the same twelve sale products and no 
 
 test('the sitemap and static product pages expose only the verified sale catalog',()=>{
   const sitemap=readDist('sitemap.xml');
-  assert.equal(manifest.products.length,12);
+  assert.equal(manifest.products.length,21);
   assert.equal((sitemap.match(/<loc>https:\/\/girlslami\.com\/product-/g)||[]).length,manifest.products.length);
   for(const product of manifest.products){
     const path=`product-${product.id}.html`;
@@ -53,7 +53,7 @@ test('the sitemap and static product pages expose only the verified sale catalog
   }
   assert.equal((readDist('shop.html').match(/<a class="card reveal in" href="product-/g)||[]).length,manifest.products.length);
   assert.equal((readDist('index.html').match(/<a class="card reveal in" href="product-/g)||[]).length,4);
-  assert.equal(manifest.lastmod,'2026-10-15');
+  assert.equal(manifest.lastmod,'2026-10-16');
   assert.deepEqual(Object.keys(details).sort(),manifest.products.map(product=>product.id).sort());
   for(const name of ['index.html','shop.html','product.html']){
     const html=readDist(name);

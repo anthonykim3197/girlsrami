@@ -1,0 +1,609 @@
+{
+  "registry": [
+    {
+      "code": "JO23",
+      "id": "jo23-oversized-vneck-knit",
+      "colors": [
+        "아이보리",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "storeId": "13808633770",
+      "originalHash": "2650632ca1131d708272c6fe6eca5f13fd461f35cdc2727e389c17424f25e831",
+      "originalCount": 8
+    },
+    {
+      "code": "JO24",
+      "id": "jo24-oversized-boatneck-knit",
+      "colors": [
+        "아이보리",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "storeId": "13813543898",
+      "originalHash": "0d140913d6ef646cc21beac3badcaddebca19910917122987f006f35d0aa6dd4",
+      "originalCount": 8
+    },
+    {
+      "code": "JO31",
+      "id": "jo31-raglan-roundneck-knit",
+      "colors": [
+        "아이보리",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "storeId": "13813532958",
+      "originalHash": "43ae9b7efd4133392c4ecc2f8f0bf5beb16b0c917afbe20c564918793043006f",
+      "originalCount": 8
+    },
+    {
+      "code": "JO32",
+      "id": "jo32-raglan-vneck-knit",
+      "colors": [
+        "아이보리",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "storeId": "13813546644",
+      "originalHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "originalCount": 0
+    },
+    {
+      "code": "RM542",
+      "id": "rm542-cable-vneck-vest",
+      "colors": [
+        "아이보리",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "storeId": "13813573435",
+      "originalHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "originalCount": 0
+    },
+    {
+      "code": "RM543",
+      "id": "rm543-basic-vneck-knit",
+      "colors": [
+        "아이보리",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "storeId": "13813667088",
+      "originalHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "originalCount": 0
+    },
+    {
+      "code": "RM567",
+      "id": "rm567-round-cap-sleeve-knit",
+      "colors": [
+        "아이보리",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "storeId": "13813555465",
+      "originalHash": "c8d4758c42b07b8f71ccb6ae75ebb73a108c2e65cbad5d52d37878c3a7a4d45e",
+      "originalCount": 8
+    },
+    {
+      "code": "RM576",
+      "id": "rm576-ribbed-vneck-knit",
+      "colors": [
+        "아이보리",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "storeId": "13813559268",
+      "originalHash": "d67bd592c3d875c6049f4bd00b57913c9ae2e04fb13ee9f479818c93eef9dbff",
+      "originalCount": 8
+    },
+    {
+      "code": "RM582",
+      "id": "rm582-front-back-vneck-oversized-knit",
+      "colors": [
+        "아이보리",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "storeId": "13813676604",
+      "originalHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "originalCount": 0
+    }
+  ],
+  "originals": [
+    {
+      "code": "JO23",
+      "angle": 0,
+      "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/000.jpg",
+      "sha256": "b682b2d9ef9729e837b7a97e4d56d898cfa060fcf4a9c6e15104dbd95affd30d"
+    },
+    {
+      "code": "JO23",
+      "angle": 45,
+      "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/045.jpg",
+      "sha256": "7cdcb8703b8d2c51990a1afe94154dc4d0b30d32367da45f76953ecd0deab775"
+    },
+    {
+      "code": "JO23",
+      "angle": 90,
+      "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/090.jpg",
+      "sha256": "39963874df668f4d6560b21c49555f268de24ecbe6a8877c527b3e804ffa5942"
+    },
+    {
+      "code": "JO23",
+      "angle": 135,
+      "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/135.jpg",
+      "sha256": "884b394bd383964d856752d0d1026b84febeb8198d93ecafdbea245cc67d8736"
+    },
+    {
+      "code": "JO23",
+      "angle": 180,
+      "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/180.jpg",
+      "sha256": "13015cdbc5ebf3446c9d751382ee8d876c5a2a3bc62e45bc332fd409d0851e73"
+    },
+    {
+      "code": "JO23",
+      "angle": 225,
+      "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/225.jpg",
+      "sha256": "7ac0df74345df7c978fa8d2421c94056a883878de68e8374790f2b874d429248"
+    },
+    {
+      "code": "JO23",
+      "angle": 270,
+      "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/270.jpg",
+      "sha256": "3f8156254465b37a3da9ace41b6106cae9a4837ff247e4dabc9572d188f09559"
+    },
+    {
+      "code": "JO23",
+      "angle": 315,
+      "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/315.jpg",
+      "sha256": "328557f419b7f7ce62e70423e87458e2b8b305b48f67fe3d9fd8884b33bd2dbb"
+    },
+    {
+      "code": "JO24",
+      "angle": 0,
+      "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/000.jpg",
+      "sha256": "ca430150e38319f830335a9ff66f9ba2196fb4df05fdcfc31a84f6567b3fbf94"
+    },
+    {
+      "code": "JO24",
+      "angle": 45,
+      "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/045.jpg",
+      "sha256": "58dff8d12f1e93c5c9de21d93e3200487bc19e66c5730885bb88479f34d5ca7d"
+    },
+    {
+      "code": "JO24",
+      "angle": 90,
+      "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/090.jpg",
+      "sha256": "218619b8b25e0fe2a8b38e4ddb8d42f06e6126f31ebd6be21b13f5fe4247a29c"
+    },
+    {
+      "code": "JO24",
+      "angle": 135,
+      "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/135.jpg",
+      "sha256": "58bb5f92f0e14051d5be00d91996047973f44ee4f9d56a7e33ccdeab7c41b310"
+    },
+    {
+      "code": "JO24",
+      "angle": 180,
+      "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/180.jpg",
+      "sha256": "ee9beda92e9e4a9ed20add09c02a3db67759f8c2bd51f208138902e3c2d6b177"
+    },
+    {
+      "code": "JO24",
+      "angle": 225,
+      "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/225.jpg",
+      "sha256": "5778070af97f7b632f93a71d44df507f3b05c241ae4c40e83d679ea683018aba"
+    },
+    {
+      "code": "JO24",
+      "angle": 270,
+      "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/270.jpg",
+      "sha256": "518c8b47ace7be5b52d1df2edff63a0ca82a0e3392bef0229efb30913bd2598d"
+    },
+    {
+      "code": "JO24",
+      "angle": 315,
+      "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/315.jpg",
+      "sha256": "bdff63677915a68a24dfbc9c78fbc746b023548c332b3dde1860b376de905cfe"
+    },
+    {
+      "code": "JO31",
+      "angle": 0,
+      "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/000.jpg",
+      "sha256": "0f7bfa0821855aa920bcdfb79c6dd7c0f9f5236e7149c8f0442a90a61eb95c54"
+    },
+    {
+      "code": "JO31",
+      "angle": 45,
+      "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/045.jpg",
+      "sha256": "da343c6a8055088c20f390ff930a8ad7aa8411a10fa63d7c6398470aef588f66"
+    },
+    {
+      "code": "JO31",
+      "angle": 90,
+      "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/090.jpg",
+      "sha256": "3c373fc60aa4720c519015f9dcea3afbc7be49139704f5392ba47ac2335f54d9"
+    },
+    {
+      "code": "JO31",
+      "angle": 135,
+      "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/135.jpg",
+      "sha256": "3721fb92441218aceb13a923fb742164a2f1b6007aa32d70bde8279670342e5f"
+    },
+    {
+      "code": "JO31",
+      "angle": 180,
+      "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/180.jpg",
+      "sha256": "006b40d9c200d3a1741f06e8e5904fac62a1d92de81ed90ddd1e92a59b24b2f9"
+    },
+    {
+      "code": "JO31",
+      "angle": 225,
+      "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/225.jpg",
+      "sha256": "60c6b85646f01cf20884878845b7d3db7dd8d195db0b1948ee6ca7d089c524b7"
+    },
+    {
+      "code": "JO31",
+      "angle": 270,
+      "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/270.jpg",
+      "sha256": "eb537d63b3d307ca0a87e4b23589ea97cec704c874626bd32d7871bd61515f39"
+    },
+    {
+      "code": "JO31",
+      "angle": 315,
+      "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/315.jpg",
+      "sha256": "328557f419b7f7ce62e70423e87458e2b8b305b48f67fe3d9fd8884b33bd2dbb"
+    },
+    {
+      "code": "JO32",
+      "angle": 0,
+      "src": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/000.jpg",
+      "sha256": "15c5ec19b93d00f9f71eb30e2e0ddbd1e88d001ac29b1644e4215dfa6aeffb9f"
+    },
+    {
+      "code": "JO32",
+      "angle": 45,
+      "src": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/045.jpg",
+      "sha256": "345fc2e2921bc21931f93506c803cad118ee8c09439ebf9015945ea4e014b72d"
+    },
+    {
+      "code": "JO32",
+      "angle": 90,
+      "src": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/090.jpg",
+      "sha256": "520f9dca5faea04c70ae3cf2f4e23c048ebf70d6873a80303cde14211acb0279"
+    },
+    {
+      "code": "JO32",
+      "angle": 135,
+      "src": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/135.jpg",
+      "sha256": "5d5e99c75a75d15baed26662c0cf63753d31fabe5434d977a996362fc03c2b80"
+    },
+    {
+      "code": "JO32",
+      "angle": 180,
+      "src": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/180.jpg",
+      "sha256": "1a128008b5ab2e71da9c265d919279cbb855a1e5db8c4f589d2f8a0b569d4e75"
+    },
+    {
+      "code": "JO32",
+      "angle": 225,
+      "src": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/225.jpg",
+      "sha256": "980995ab0378c5462038ce013ad994cdd97d1c1307f0add8881bddd6213ca046"
+    },
+    {
+      "code": "JO32",
+      "angle": 270,
+      "src": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/270.jpg",
+      "sha256": "4a625d7c244e257bd3dc6974f594f14579e4964ca09b9f9da0ded9e918a65930"
+    },
+    {
+      "code": "JO32",
+      "angle": 315,
+      "src": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/315.jpg",
+      "sha256": "74d1bfdb931fc216edbbc23403f1b3d9df3e0a7845bd0b473d140c865f230aba"
+    },
+    {
+      "code": "RM542",
+      "angle": 0,
+      "src": "assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/000.jpg",
+      "sha256": "a379951f7e44aa6ccd271b552eef4a00d4924f0805edd27bc22e84ab83f1bcd9"
+    },
+    {
+      "code": "RM542",
+      "angle": 45,
+      "src": "assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/045.jpg",
+      "sha256": "e1b32607b6f13ce700fbdfd21baf988a77211226d87f4ecc6b1cdd08f62aeb62"
+    },
+    {
+      "code": "RM542",
+      "angle": 90,
+      "src": "assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/090.jpg",
+      "sha256": "8eaa7a0fc33cc922d2b09b6fcf12feb1ed637cf1e0fb72cddfbed7870b605edc"
+    },
+    {
+      "code": "RM542",
+      "angle": 135,
+      "src": "assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/135.jpg",
+      "sha256": "c9ee417ff90740fd9dac0fad4f36c2eec4a30798a4b420983733282b4ac9f1f5"
+    },
+    {
+      "code": "RM542",
+      "angle": 180,
+      "src": "assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/180.jpg",
+      "sha256": "b5c2105ba649ce8ff3fd43798cf2867615f74ca6a1399e71e906605c26b4b621"
+    },
+    {
+      "code": "RM542",
+      "angle": 225,
+      "src": "assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/225.jpg",
+      "sha256": "ce528d41a16770fa3f6eb4b44032f6a56d1d3705b1cb12147f0684f5f5ec0e5f"
+    },
+    {
+      "code": "RM542",
+      "angle": 270,
+      "src": "assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/270.jpg",
+      "sha256": "36046587fd58a11226da74cccc828cd2052eb8a3aa57e0299d5e26143d1f7cf8"
+    },
+    {
+      "code": "RM542",
+      "angle": 315,
+      "src": "assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/315.jpg",
+      "sha256": "53df4ea8feff1d8e190600d2c7e302aa8c2027767fc2b4681e9107b3a1052f20"
+    },
+    {
+      "code": "RM543",
+      "angle": 0,
+      "src": "assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/000.jpg",
+      "sha256": "d997bc324afd917f1cc4b405978ddfd916c64f935c9da7649b913a8f9f157587"
+    },
+    {
+      "code": "RM543",
+      "angle": 45,
+      "src": "assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/045.jpg",
+      "sha256": "65cb62c6510d7cf227ce6791cd3f4acfdef3fea255e1a1a6ba5a0d2c477a2f6f"
+    },
+    {
+      "code": "RM543",
+      "angle": 90,
+      "src": "assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/090.jpg",
+      "sha256": "7b014f161ea95385290d7c0a21393dd4eb69e9324cbf72a1a1c872cf37740204"
+    },
+    {
+      "code": "RM543",
+      "angle": 135,
+      "src": "assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/135.jpg",
+      "sha256": "a2ed63062d042efa55c6ab2e87151dcbe5fb4e8a57087e61ef7136336214bc71"
+    },
+    {
+      "code": "RM543",
+      "angle": 180,
+      "src": "assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/180.jpg",
+      "sha256": "2d1a976679b7eb147bebbfa4ff9148c2da99c0dadd6bc901ad3c391b42693f6e"
+    },
+    {
+      "code": "RM543",
+      "angle": 225,
+      "src": "assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/225.jpg",
+      "sha256": "9cdad6d69ce962cc7f4a01a220fb6e18c5897cf2e6f669e2c2c5aa0d4bda55dd"
+    },
+    {
+      "code": "RM543",
+      "angle": 270,
+      "src": "assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/270.jpg",
+      "sha256": "c13f84d64e8a16040890530fd5703ddd4935927704980e6080b8df29b2f64fbf"
+    },
+    {
+      "code": "RM543",
+      "angle": 315,
+      "src": "assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/315.jpg",
+      "sha256": "bc834c981d1b78da24a45a085232e0f5e95889919c9eeccf3e4446e5b5754223"
+    },
+    {
+      "code": "RM567",
+      "angle": 0,
+      "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/000.jpg",
+      "sha256": "5417f8ca70039e8254dcdd633bec46b890e2ebf0abed02a1959b03e7e91a0c1e"
+    },
+    {
+      "code": "RM567",
+      "angle": 45,
+      "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/045.jpg",
+      "sha256": "8a28ccf43994cf246cc97a96d9916e490ed0bdc4d6c644adcf205236bd717f85"
+    },
+    {
+      "code": "RM567",
+      "angle": 90,
+      "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/090.jpg",
+      "sha256": "c72365153be9442699041c42f08a33943d0ec044497aec1d69e8d15979cc9a99"
+    },
+    {
+      "code": "RM567",
+      "angle": 135,
+      "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/135.jpg",
+      "sha256": "3167c20806cd1d94f82c9b8ad4686169871473ce7cf6ed75dd81a6dcaa9e9862"
+    },
+    {
+      "code": "RM567",
+      "angle": 180,
+      "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/180.jpg",
+      "sha256": "f8566ce2477937d6166563fc76bbc60aa456a0bf42cf87908132f1e4e1dad47c"
+    },
+    {
+      "code": "RM567",
+      "angle": 225,
+      "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/225.jpg",
+      "sha256": "07c9deba193cd6f412de3413f9698719f57520e98aa0743cd3822f04df163432"
+    },
+    {
+      "code": "RM567",
+      "angle": 270,
+      "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/270.jpg",
+      "sha256": "3648560e0ee8d3ce350e0a24f0a1526a170c182524ea9342c8c6402a894dab43"
+    },
+    {
+      "code": "RM567",
+      "angle": 315,
+      "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/315.jpg",
+      "sha256": "a1c267d223ee230a312d853401fef7394f26fcdf215c6b476a3841baf7711c66"
+    },
+    {
+      "code": "RM576",
+      "angle": 0,
+      "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/000.jpg",
+      "sha256": "fb98292aedb59de492b082742065fe32cc22ad9ad37f7f7e23f747e12176f0b7"
+    },
+    {
+      "code": "RM576",
+      "angle": 45,
+      "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/045.jpg",
+      "sha256": "1cad546eb54e03e2b0a25ed194b60b5ba9e943069abbd05ca87b3c4fe533caac"
+    },
+    {
+      "code": "RM576",
+      "angle": 90,
+      "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/090.jpg",
+      "sha256": "762c1a5108eb1cea033b4b2d12df38e58e24368869309cfceae372b80b04d057"
+    },
+    {
+      "code": "RM576",
+      "angle": 135,
+      "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/135.jpg",
+      "sha256": "c1710af1c9c38564ec10750f10903869f6e47b05e4aa94d42a15575d2a76a9fc"
+    },
+    {
+      "code": "RM576",
+      "angle": 180,
+      "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/180.jpg",
+      "sha256": "e71c012a505b8645e99f4dc35de38c8a8512c3f53140eab8c6c4e566d60d6508"
+    },
+    {
+      "code": "RM576",
+      "angle": 225,
+      "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/225.jpg",
+      "sha256": "5d61758ec84be549976c0b057aba681ede4480478e3731d8f60b8038c0b5389e"
+    },
+    {
+      "code": "RM576",
+      "angle": 270,
+      "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/270.jpg",
+      "sha256": "560af1ae2dc9c7cc8c069e56638f77f094eccc261ac95fea4ffbc867e23fedb3"
+    },
+    {
+      "code": "RM576",
+      "angle": 315,
+      "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/315.jpg",
+      "sha256": "9551db252316514622cde550a01e99185f5136d53239a6b2869d59b2a7ad79c0"
+    },
+    {
+      "code": "RM582",
+      "angle": 0,
+      "src": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/000.jpg",
+      "sha256": "b97691e6138c9fb893e1c35c98899faa2114fee4df85f74bfb1feeccee6a819a"
+    },
+    {
+      "code": "RM582",
+      "angle": 45,
+      "src": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/045.jpg",
+      "sha256": "48cb6a436aa4c244d85ae5f269935ec03bb6bfea0aeb9f983749132b0d0a00fa"
+    },
+    {
+      "code": "RM582",
+      "angle": 90,
+      "src": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/090.jpg",
+      "sha256": "46292776f62738ed9e1de61ed82169899a304129527b7ff4111303b094e925d3"
+    },
+    {
+      "code": "RM582",
+      "angle": 135,
+      "src": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/135.jpg",
+      "sha256": "78a8c586310ddce190dc5296002f8cd200d8cb65b81d7947d7384d073d831649"
+    },
+    {
+      "code": "RM582",
+      "angle": 180,
+      "src": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/180.jpg",
+      "sha256": "7b344596ae71c3cb4d114e3ea67de9a1bdbafd5689029d1f03fa0474bb502a41"
+    },
+    {
+      "code": "RM582",
+      "angle": 225,
+      "src": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/225.jpg",
+      "sha256": "c9ccd0128801a0260fc62e688bf7e45243ca0d3fe17def9159fdade79f09da46"
+    },
+    {
+      "code": "RM582",
+      "angle": 270,
+      "src": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/270.jpg",
+      "sha256": "21a0fbb080c45942c23d7b6cfbd67e910d455e3b131dadcd7fc176de2894abb1"
+    },
+    {
+      "code": "RM582",
+      "angle": 315,
+      "src": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/315.jpg",
+      "sha256": "89fd2c8e4f76846256e7e282c5c1c77b08c54b8d96ceacbd4c9e50382eb237e8"
+    }
+  ]
+}

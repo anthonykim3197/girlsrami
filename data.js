@@ -3344,6 +3344,3157 @@ GR.PRODUCTS = [
     },
     "manufactureDate": "2026년 10월",
     "measurementUnit": ""
+  },
+  {
+    "id": "jo23-oversized-vneck-knit",
+    "sku": "JO23",
+    "sub": "티셔츠 위에는 편안하게, 셔츠 위에는 단정하게. 이너에 따라 분위기가 달라지는 여유로운 V넥 니트.",
+    "desc": "흰 티와 데님 위에 툭 걸치면, 익숙한 옷차림에도 니트의 포근한 분위기가 더해져요. 여유 있게 내려오는 어깨선과 넓은 V넥. 셔츠 깃을 살짝 꺼내 단정하게 입거나, 미디 스커트와 함께 편안한 주말 코디로 즐겨보세요.",
+    "line": "basic",
+    "name": "오버핏 V넥 니트",
+    "image": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/gray-A.webp",
+    "price": 23900,
+    "sizes": [
+      {
+        "label": "FREE",
+        "length": 56,
+        "verified": true,
+        "chestHalf": 68
+      }
+    ],
+    "stock": 10000,
+    "colors": [
+      "아이보리",
+      "검정",
+      "브라운",
+      "연핑크",
+      "카키",
+      "차콜",
+      "곤색",
+      "보라",
+      "연밤",
+      "그레이"
+    ],
+    "origin": "대한민국",
+    "status": "active",
+    "measure": {
+      "암홀": 23,
+      "목깊이": 12,
+      "목넓이": 21,
+      "소매통": 22,
+      "총기장": 56,
+      "가슴넓이": 68,
+      "소매기장": 54,
+      "어깨넓이": 70
+    },
+    "category": "니트",
+    "material": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+    "storeUrl": "https://smartstore.naver.com/girlsrami/products/13808633770",
+    "variants": [
+      {
+        "sku": "JO23-IVORY",
+        "color": "아이보리",
+        "stock": 1000
+      },
+      {
+        "sku": "JO23-BLACK",
+        "color": "검정",
+        "stock": 1000
+      },
+      {
+        "sku": "JO23-BROWN",
+        "color": "브라운",
+        "stock": 1000
+      },
+      {
+        "sku": "JO23-LIGHTPINK",
+        "color": "연핑크",
+        "stock": 1000
+      },
+      {
+        "sku": "JO23-KHAKI",
+        "color": "카키",
+        "stock": 1000
+      },
+      {
+        "sku": "JO23-CHARCOAL",
+        "color": "차콜",
+        "stock": 1000
+      },
+      {
+        "sku": "JO23-NAVY",
+        "color": "곤색",
+        "stock": 1000
+      },
+      {
+        "sku": "JO23-PURPLE",
+        "color": "보라",
+        "stock": 1000
+      },
+      {
+        "sku": "JO23-LIGHTBROWN",
+        "color": "연밤",
+        "stock": 1000
+      },
+      {
+        "sku": "JO23-GRAY",
+        "color": "그레이",
+        "stock": 1000
+      }
+    ],
+    "styleCode": "JO23",
+    "newRelease": true,
+    "releasedAt": "2026-10-16",
+    "catalogImage": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/gray-A.webp",
+    "detailImages": [
+      {
+        "url": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/000.jpg",
+        "angle": 0,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "오버핏 V넥 니트 촬영 샘플 0도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/045.jpg",
+        "angle": 45,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "오버핏 V넥 니트 촬영 샘플 45도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/090.jpg",
+        "angle": 90,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "오버핏 V넥 니트 촬영 샘플 90도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/135.jpg",
+        "angle": 135,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "오버핏 V넥 니트 촬영 샘플 135도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/180.jpg",
+        "angle": 180,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "오버핏 V넥 니트 촬영 샘플 180도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/225.jpg",
+        "angle": 225,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "오버핏 V넥 니트 촬영 샘플 225도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/270.jpg",
+        "angle": 270,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "오버핏 V넥 니트 촬영 샘플 270도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/315.jpg",
+        "angle": 315,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "오버핏 V넥 니트 촬영 샘플 315도"
+      }
+    ],
+    "manufacturer": "걸스라미",
+    "photoVerified": false,
+    "measurementUnit": "cm",
+    "badges": [
+      "NEW"
+    ],
+    "sizePending": false,
+    "pricePending": false,
+    "reviewCount": 0,
+    "rating": 0,
+    "reviews": [],
+    "aiPresentation": {
+      "defaultColor": "그레이",
+      "colors": {
+        "아이보리": {
+          "image": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/ivory-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/ivory-A.webp"
+        },
+        "검정": {
+          "image": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/black-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/black-A.webp"
+        },
+        "브라운": {
+          "image": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/brown-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/brown-A.webp"
+        },
+        "연핑크": {
+          "image": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/lightpink-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/lightpink-A.webp"
+        },
+        "카키": {
+          "image": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/khaki-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/khaki-A.webp"
+        },
+        "차콜": {
+          "image": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/charcoal-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/charcoal-A.webp"
+        },
+        "곤색": {
+          "image": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/navy-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/navy-A.webp"
+        },
+        "보라": {
+          "image": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/purple-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/purple-A.webp"
+        },
+        "연밤": {
+          "image": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/lightbrown-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/lightbrown-A.webp"
+        },
+        "그레이": {
+          "image": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/gray-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/gray-A.webp"
+        }
+      },
+      "editorial": {
+        "looks": [
+          {
+            "id": "A",
+            "label": "흰 티셔츠와 라이트 워시 데님",
+            "items": [
+              "흰 라운드 티",
+              "라이트 워시 스트레이트 데님",
+              "아이보리 스니커즈"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/ivory-A.webp",
+              "검정": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/black-A.webp",
+              "브라운": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/brown-A.webp",
+              "연핑크": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/lightpink-A.webp",
+              "카키": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/khaki-A.webp",
+              "차콜": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/charcoal-A.webp",
+              "곤색": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/navy-A.webp",
+              "보라": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/purple-A.webp",
+              "연밤": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/lightbrown-A.webp",
+              "그레이": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/gray-A.webp"
+            }
+          },
+          {
+            "id": "B",
+            "label": "화이트 셔츠와 차콜 와이드 팬츠",
+            "items": [
+              "화이트 카라 셔츠",
+              "차콜 와이드 팬츠",
+              "블랙 포인티드 슬링백",
+              "작은 블랙 핸드백",
+              "골드 스터드 이어링"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/ivory-B.webp",
+              "검정": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/black-B.webp",
+              "브라운": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/brown-B.webp",
+              "연핑크": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/lightpink-B.webp",
+              "카키": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/khaki-B.webp",
+              "차콜": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/charcoal-B.webp",
+              "곤색": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/navy-B.webp",
+              "보라": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/purple-B.webp",
+              "연밤": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/lightbrown-B.webp",
+              "그레이": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/gray-B.webp"
+            }
+          },
+          {
+            "id": "C",
+            "label": "목티와 더스티 로즈 플리츠",
+            "items": [
+              "아이보리 얇은 목티",
+              "더스티 로즈 종아리 중간 플리츠 스커트",
+              "브라운 앵클부츠",
+              "브라운 숄더백",
+              "골드 후프 이어링"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/ivory-C.webp",
+              "검정": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/black-C.webp",
+              "브라운": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/brown-C.webp",
+              "연핑크": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/lightpink-C.webp",
+              "카키": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/khaki-C.webp",
+              "차콜": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/charcoal-C.webp",
+              "곤색": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/navy-C.webp",
+              "보라": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/purple-C.webp",
+              "연밤": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/lightbrown-C.webp",
+              "그레이": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/gray-C.webp"
+            }
+          },
+          {
+            "id": "D",
+            "label": "아이보리 일자 미디와 코인 펜던트",
+            "items": [
+              "아이보리 종아리 중간 일자 스커트",
+              "블랙 발레 플랫",
+              "골드 코인 펜던트"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/ivory-D.webp",
+              "검정": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/black-D.webp",
+              "브라운": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/brown-D.webp",
+              "연핑크": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/lightpink-D.webp",
+              "카키": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/khaki-D.webp",
+              "차콜": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/charcoal-D.webp",
+              "곤색": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/navy-D.webp",
+              "보라": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/purple-D.webp",
+              "연밤": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/lightbrown-D.webp",
+              "그레이": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/looks/gray-D.webp"
+            }
+          }
+        ],
+        "colorStory": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/color-palette.webp",
+        "measurements": [
+          {
+            "label": "총장",
+            "value": 56
+          },
+          {
+            "label": "가슴 단면",
+            "value": 68
+          },
+          {
+            "label": "어깨너비",
+            "value": 70
+          },
+          {
+            "label": "암홀",
+            "value": 23
+          },
+          {
+            "label": "소매길이",
+            "value": 54
+          },
+          {
+            "label": "소매통",
+            "value": 22
+          },
+          {
+            "label": "목너비",
+            "value": 21
+          },
+          {
+            "label": "목깊이",
+            "value": 12
+          }
+        ],
+        "measurementUnit": "cm"
+      }
+    },
+    "smartstore": "https://smartstore.naver.com/girlsrami/products/13808633770"
+  },
+  {
+    "id": "jo24-oversized-boatneck-knit",
+    "sku": "JO24",
+    "sub": "넓게 열린 보트넥과 볼륨 소매가 한눈에 들어오는 니트. 밝은 데님에는 가볍게, 네이비 슬랙스에는 차분하게 이어 보세요.",
+    "desc": "보트넥이 목선을 넓게 보여 주고, 여유 있게 내려오는 소매가 전체 실루엣을 완성해요. 아이보리 데님과 스니커즈로 산뜻하게 입거나, 네이비 슬랙스와 로퍼를 더해 출근 코디로 이어 보세요.",
+    "line": "basic",
+    "name": "오버핏 보트넥 니트",
+    "image": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/purple-A.webp",
+    "price": 23900,
+    "sizes": [
+      {
+        "label": "FREE",
+        "length": 57,
+        "verified": true,
+        "chestHalf": 66
+      }
+    ],
+    "stock": 10000,
+    "colors": [
+      "아이보리",
+      "검정",
+      "브라운",
+      "연핑크",
+      "카키",
+      "차콜",
+      "곤색",
+      "보라",
+      "연밤",
+      "그레이"
+    ],
+    "origin": "대한민국",
+    "status": "active",
+    "measure": {
+      "암홀": 23,
+      "목깊이": 3,
+      "목넓이": 28,
+      "소매통": 23,
+      "총기장": 57,
+      "가슴넓이": 66,
+      "소매기장": 51,
+      "어깨넓이": 70
+    },
+    "category": "니트",
+    "material": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+    "storeUrl": "https://smartstore.naver.com/girlsrami/products/13813543898",
+    "variants": [
+      {
+        "sku": "JO24-IVORY",
+        "color": "아이보리",
+        "stock": 1000
+      },
+      {
+        "sku": "JO24-BLACK",
+        "color": "검정",
+        "stock": 1000
+      },
+      {
+        "sku": "JO24-BROWN",
+        "color": "브라운",
+        "stock": 1000
+      },
+      {
+        "sku": "JO24-LIGHTPINK",
+        "color": "연핑크",
+        "stock": 1000
+      },
+      {
+        "sku": "JO24-KHAKI",
+        "color": "카키",
+        "stock": 1000
+      },
+      {
+        "sku": "JO24-CHARCOAL",
+        "color": "차콜",
+        "stock": 1000
+      },
+      {
+        "sku": "JO24-NAVY",
+        "color": "곤색",
+        "stock": 1000
+      },
+      {
+        "sku": "JO24-PURPLE",
+        "color": "보라",
+        "stock": 1000
+      },
+      {
+        "sku": "JO24-LIGHTBROWN",
+        "color": "연밤",
+        "stock": 1000
+      },
+      {
+        "sku": "JO24-GRAY",
+        "color": "그레이",
+        "stock": 1000
+      }
+    ],
+    "styleCode": "JO24",
+    "newRelease": true,
+    "releasedAt": "2026-10-16",
+    "catalogImage": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/purple-A.webp",
+    "detailImages": [
+      {
+        "url": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/000.jpg",
+        "angle": 0,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "오버핏 보트넥 니트 촬영 샘플 0도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/045.jpg",
+        "angle": 45,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "오버핏 보트넥 니트 촬영 샘플 45도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/090.jpg",
+        "angle": 90,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "오버핏 보트넥 니트 촬영 샘플 90도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/135.jpg",
+        "angle": 135,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "오버핏 보트넥 니트 촬영 샘플 135도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/180.jpg",
+        "angle": 180,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "오버핏 보트넥 니트 촬영 샘플 180도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/225.jpg",
+        "angle": 225,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "오버핏 보트넥 니트 촬영 샘플 225도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/270.jpg",
+        "angle": 270,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "오버핏 보트넥 니트 촬영 샘플 270도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/315.jpg",
+        "angle": 315,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "오버핏 보트넥 니트 촬영 샘플 315도"
+      }
+    ],
+    "manufacturer": "걸스라미",
+    "photoVerified": false,
+    "measurementUnit": "cm",
+    "badges": [
+      "NEW"
+    ],
+    "sizePending": false,
+    "pricePending": false,
+    "reviewCount": 0,
+    "rating": 0,
+    "reviews": [],
+    "aiPresentation": {
+      "defaultColor": "보라",
+      "colors": {
+        "아이보리": {
+          "image": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/ivory-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/ivory-A.webp"
+        },
+        "검정": {
+          "image": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/black-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/black-A.webp"
+        },
+        "브라운": {
+          "image": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/brown-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/brown-A.webp"
+        },
+        "연핑크": {
+          "image": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/lightpink-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/lightpink-A.webp"
+        },
+        "카키": {
+          "image": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/khaki-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/khaki-A.webp"
+        },
+        "차콜": {
+          "image": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/charcoal-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/charcoal-A.webp"
+        },
+        "곤색": {
+          "image": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/navy-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/navy-A.webp"
+        },
+        "보라": {
+          "image": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/purple-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/purple-A.webp"
+        },
+        "연밤": {
+          "image": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/lightbrown-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/lightbrown-A.webp"
+        },
+        "그레이": {
+          "image": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/gray-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/gray-A.webp"
+        }
+      },
+      "editorial": {
+        "looks": [
+          {
+            "id": "A",
+            "label": "아이보리 와이드 팬츠",
+            "items": [
+              "아이보리 와이드 팬츠",
+              "아이보리 로퍼",
+              "얇은 펜던트 목걸이"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/ivory-A.webp",
+              "검정": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/black-A.webp",
+              "브라운": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/brown-A.webp",
+              "연핑크": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/lightpink-A.webp",
+              "카키": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/khaki-A.webp",
+              "차콜": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/charcoal-A.webp",
+              "곤색": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/navy-A.webp",
+              "보라": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/purple-A.webp",
+              "연밤": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/lightbrown-A.webp",
+              "그레이": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/gray-A.webp"
+            }
+          },
+          {
+            "id": "B",
+            "label": "네이비 테일러드 팬츠",
+            "items": [
+              "네이비 와이드 테일러드 팬츠",
+              "블랙 로퍼",
+              "얇은 펜던트 목걸이"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/ivory-B.webp",
+              "검정": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/black-B.webp",
+              "브라운": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/brown-B.webp",
+              "연핑크": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/lightpink-B.webp",
+              "카키": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/khaki-B.webp",
+              "차콜": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/charcoal-B.webp",
+              "곤색": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/navy-B.webp",
+              "보라": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/purple-B.webp",
+              "연밤": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/lightbrown-B.webp",
+              "그레이": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/gray-B.webp"
+            }
+          },
+          {
+            "id": "C",
+            "label": "토프 플리츠 미디",
+            "items": [
+              "토프 브라운 종아리 아래 플리츠 스커트",
+              "브라운 앵클부츠",
+              "작은 브라운 숄더백",
+              "얇은 펜던트 목걸이"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/ivory-C.webp",
+              "검정": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/black-C.webp",
+              "브라운": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/brown-C.webp",
+              "연핑크": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/lightpink-C.webp",
+              "카키": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/khaki-C.webp",
+              "차콜": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/charcoal-C.webp",
+              "곤색": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/navy-C.webp",
+              "보라": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/purple-C.webp",
+              "연밤": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/lightbrown-C.webp",
+              "그레이": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/gray-C.webp"
+            }
+          },
+          {
+            "id": "D",
+            "label": "아이보리 새틴 미디",
+            "items": [
+              "아이보리 새틴 A라인 종아리 아래 스커트",
+              "블랙 발레 플랫",
+              "얇은 펜던트 목걸이"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/ivory-D.webp",
+              "검정": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/black-D.webp",
+              "브라운": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/brown-D.webp",
+              "연핑크": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/lightpink-D.webp",
+              "카키": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/khaki-D.webp",
+              "차콜": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/charcoal-D.webp",
+              "곤색": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/navy-D.webp",
+              "보라": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/purple-D.webp",
+              "연밤": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/lightbrown-D.webp",
+              "그레이": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/looks/gray-D.webp"
+            }
+          }
+        ],
+        "colorStory": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/color-palette.webp",
+        "measurements": [
+          {
+            "label": "총장",
+            "value": 57
+          },
+          {
+            "label": "가슴 단면",
+            "value": 66
+          },
+          {
+            "label": "어깨너비",
+            "value": 70
+          },
+          {
+            "label": "암홀",
+            "value": 23
+          },
+          {
+            "label": "소매길이",
+            "value": 51
+          },
+          {
+            "label": "소매통",
+            "value": 23
+          },
+          {
+            "label": "목너비",
+            "value": 28
+          },
+          {
+            "label": "목깊이",
+            "value": 3
+          }
+        ],
+        "measurementUnit": "cm"
+      }
+    },
+    "smartstore": "https://smartstore.naver.com/girlsrami/products/13813543898"
+  },
+  {
+    "id": "jo31-raglan-roundneck-knit",
+    "sku": "JO31",
+    "sub": "라운드 티와 데님 위에 편하게 더하고, 슬랙스와는 차분하게 맞추는 래글런 니트. 긴 기장과 사선 소매선이 자연스럽게 이어집니다.",
+    "desc": "라운드넥에서 소매로 이어지는 래글런 선이 단정한 인상을 만들어요. 데님에는 스니커즈를, 슬랙스나 미디스커트에는 플랫을 더해 평일과 주말 코디를 오갈 수 있어요.",
+    "line": "basic",
+    "name": "래글런 라운드 니트",
+    "image": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/gray-A.webp",
+    "price": 22900,
+    "sizes": [
+      {
+        "label": "FREE",
+        "length": 62,
+        "verified": true,
+        "chestHalf": 56
+      }
+    ],
+    "stock": 10000,
+    "colors": [
+      "아이보리",
+      "검정",
+      "브라운",
+      "연핑크",
+      "카키",
+      "차콜",
+      "곤색",
+      "보라",
+      "연밤",
+      "그레이"
+    ],
+    "origin": "대한민국",
+    "status": "active",
+    "measure": {
+      "암홀": 28,
+      "목깊이": 11,
+      "목넓이": 17,
+      "소매통": 21,
+      "총기장": 62,
+      "가슴넓이": 56,
+      "소매기장": 69
+    },
+    "category": "니트",
+    "material": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+    "storeUrl": "https://smartstore.naver.com/girlsrami/products/13813532958",
+    "variants": [
+      {
+        "sku": "JO31-IVORY",
+        "color": "아이보리",
+        "stock": 1000
+      },
+      {
+        "sku": "JO31-BLACK",
+        "color": "검정",
+        "stock": 1000
+      },
+      {
+        "sku": "JO31-BROWN",
+        "color": "브라운",
+        "stock": 1000
+      },
+      {
+        "sku": "JO31-LIGHTPINK",
+        "color": "연핑크",
+        "stock": 1000
+      },
+      {
+        "sku": "JO31-KHAKI",
+        "color": "카키",
+        "stock": 1000
+      },
+      {
+        "sku": "JO31-CHARCOAL",
+        "color": "차콜",
+        "stock": 1000
+      },
+      {
+        "sku": "JO31-NAVY",
+        "color": "곤색",
+        "stock": 1000
+      },
+      {
+        "sku": "JO31-PURPLE",
+        "color": "보라",
+        "stock": 1000
+      },
+      {
+        "sku": "JO31-LIGHTBROWN",
+        "color": "연밤",
+        "stock": 1000
+      },
+      {
+        "sku": "JO31-GRAY",
+        "color": "그레이",
+        "stock": 1000
+      }
+    ],
+    "styleCode": "JO31",
+    "newRelease": true,
+    "releasedAt": "2026-10-16",
+    "catalogImage": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/gray-A.webp",
+    "detailImages": [
+      {
+        "url": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/000.jpg",
+        "angle": 0,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "래글런 라운드 니트 촬영 샘플 0도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/045.jpg",
+        "angle": 45,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "래글런 라운드 니트 촬영 샘플 45도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/090.jpg",
+        "angle": 90,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "래글런 라운드 니트 촬영 샘플 90도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/135.jpg",
+        "angle": 135,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "래글런 라운드 니트 촬영 샘플 135도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/180.jpg",
+        "angle": 180,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "래글런 라운드 니트 촬영 샘플 180도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/225.jpg",
+        "angle": 225,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "래글런 라운드 니트 촬영 샘플 225도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/270.jpg",
+        "angle": 270,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "래글런 라운드 니트 촬영 샘플 270도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/315.jpg",
+        "angle": 315,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "래글런 라운드 니트 촬영 샘플 315도"
+      }
+    ],
+    "manufacturer": "걸스라미",
+    "photoVerified": false,
+    "measurementUnit": "cm",
+    "badges": [
+      "NEW"
+    ],
+    "sizePending": false,
+    "pricePending": false,
+    "reviewCount": 0,
+    "rating": 0,
+    "reviews": [],
+    "aiPresentation": {
+      "defaultColor": "그레이",
+      "colors": {
+        "아이보리": {
+          "image": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/ivory-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/ivory-A.webp"
+        },
+        "검정": {
+          "image": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/black-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/black-A.webp"
+        },
+        "브라운": {
+          "image": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/brown-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/brown-A.webp"
+        },
+        "연핑크": {
+          "image": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/lightpink-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/lightpink-A.webp"
+        },
+        "카키": {
+          "image": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/khaki-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/khaki-A.webp"
+        },
+        "차콜": {
+          "image": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/charcoal-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/charcoal-A.webp"
+        },
+        "곤색": {
+          "image": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/navy-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/navy-A.webp"
+        },
+        "보라": {
+          "image": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/purple-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/purple-A.webp"
+        },
+        "연밤": {
+          "image": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/lightbrown-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/lightbrown-A.webp"
+        },
+        "그레이": {
+          "image": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/gray-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/gray-A.webp"
+        }
+      },
+      "editorial": {
+        "looks": [
+          {
+            "id": "A",
+            "label": "흰 티셔츠와 라이트 워시 데님",
+            "items": [
+              "흰 라운드 티",
+              "라이트 워시 스트레이트 데님",
+              "아이보리 스니커즈"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/ivory-A.webp",
+              "검정": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/black-A.webp",
+              "브라운": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/brown-A.webp",
+              "연핑크": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/lightpink-A.webp",
+              "카키": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/khaki-A.webp",
+              "차콜": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/charcoal-A.webp",
+              "곤색": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/navy-A.webp",
+              "보라": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/purple-A.webp",
+              "연밤": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/lightbrown-A.webp",
+              "그레이": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/gray-A.webp"
+            }
+          },
+          {
+            "id": "B",
+            "label": "네이비 테일러드 팬츠",
+            "items": [
+              "네이비 와이드 테일러드 팬츠",
+              "블랙 로퍼",
+              "얇은 펜던트 목걸이"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/ivory-B.webp",
+              "검정": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/black-B.webp",
+              "브라운": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/brown-B.webp",
+              "연핑크": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/lightpink-B.webp",
+              "카키": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/khaki-B.webp",
+              "차콜": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/charcoal-B.webp",
+              "곤색": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/navy-B.webp",
+              "보라": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/purple-B.webp",
+              "연밤": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/lightbrown-B.webp",
+              "그레이": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/gray-B.webp"
+            }
+          },
+          {
+            "id": "C",
+            "label": "더스티 로즈 플리츠 미디",
+            "items": [
+              "더스티 로즈 토프 종아리 아래 플리츠 스커트",
+              "블랙 앵클부츠",
+              "작은 블랙 숄더백",
+              "얇은 펜던트 목걸이"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/ivory-C.webp",
+              "검정": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/black-C.webp",
+              "브라운": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/brown-C.webp",
+              "연핑크": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/lightpink-C.webp",
+              "카키": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/khaki-C.webp",
+              "차콜": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/charcoal-C.webp",
+              "곤색": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/navy-C.webp",
+              "보라": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/purple-C.webp",
+              "연밤": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/lightbrown-C.webp",
+              "그레이": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/gray-C.webp"
+            }
+          },
+          {
+            "id": "D",
+            "label": "다크 브라운 A라인 미디",
+            "items": [
+              "다크 브라운 종아리 아래 A라인 스커트",
+              "다크 브라운 발레 플랫",
+              "얇은 펜던트 목걸이"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/ivory-D.webp",
+              "검정": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/black-D.webp",
+              "브라운": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/brown-D.webp",
+              "연핑크": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/lightpink-D.webp",
+              "카키": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/khaki-D.webp",
+              "차콜": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/charcoal-D.webp",
+              "곤색": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/navy-D.webp",
+              "보라": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/purple-D.webp",
+              "연밤": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/lightbrown-D.webp",
+              "그레이": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/looks/gray-D.webp"
+            }
+          }
+        ],
+        "colorStory": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/color-palette.webp",
+        "measurements": [
+          {
+            "label": "총장",
+            "value": 62
+          },
+          {
+            "label": "가슴 단면",
+            "value": 56
+          },
+          {
+            "label": "암홀",
+            "value": 28
+          },
+          {
+            "label": "소매길이",
+            "value": 69
+          },
+          {
+            "label": "소매통",
+            "value": 21
+          },
+          {
+            "label": "목너비",
+            "value": 17
+          },
+          {
+            "label": "목깊이",
+            "value": 11
+          }
+        ],
+        "measurementUnit": "cm"
+      }
+    },
+    "smartstore": "https://smartstore.naver.com/girlsrami/products/13813532958"
+  },
+  {
+    "id": "jo32-raglan-vneck-knit",
+    "sku": "JO32",
+    "sub": "얇은 목티가 살짝 보이게 입거나, 셔츠 깃을 꺼내 단정하게. 깊은 V넥 덕분에 이너를 바꾸는 재미가 있는 래글런 니트.",
+    "desc": "깊은 V넥 사이로 목티와 셔츠, 스트라이프 이너가 각기 다른 분위기를 보여 줘요. 라이트 워시 데님에는 가볍게, 블랙 슬랙스나 미디스커트에는 차분하게 맞춰 보세요.",
+    "line": "basic",
+    "name": "래글런 V넥 니트",
+    "image": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/charcoal-A.webp",
+    "price": 23900,
+    "sizes": [
+      {
+        "label": "FREE",
+        "length": 62,
+        "verified": true,
+        "chestHalf": 59
+      }
+    ],
+    "stock": 10000,
+    "colors": [
+      "아이보리",
+      "검정",
+      "브라운",
+      "연핑크",
+      "카키",
+      "차콜",
+      "곤색",
+      "보라",
+      "연밤",
+      "그레이"
+    ],
+    "origin": "대한민국",
+    "status": "active",
+    "measure": {
+      "암홀": 29,
+      "목깊이": 21,
+      "목넓이": 21,
+      "소매통": 19,
+      "총기장": 62,
+      "가슴넓이": 59,
+      "소매기장": 73
+    },
+    "category": "니트",
+    "material": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+    "storeUrl": "https://smartstore.naver.com/girlsrami/products/13813546644",
+    "variants": [
+      {
+        "sku": "JO32-IVORY",
+        "color": "아이보리",
+        "stock": 1000
+      },
+      {
+        "sku": "JO32-BLACK",
+        "color": "검정",
+        "stock": 1000
+      },
+      {
+        "sku": "JO32-BROWN",
+        "color": "브라운",
+        "stock": 1000
+      },
+      {
+        "sku": "JO32-LIGHTPINK",
+        "color": "연핑크",
+        "stock": 1000
+      },
+      {
+        "sku": "JO32-KHAKI",
+        "color": "카키",
+        "stock": 1000
+      },
+      {
+        "sku": "JO32-CHARCOAL",
+        "color": "차콜",
+        "stock": 1000
+      },
+      {
+        "sku": "JO32-NAVY",
+        "color": "곤색",
+        "stock": 1000
+      },
+      {
+        "sku": "JO32-PURPLE",
+        "color": "보라",
+        "stock": 1000
+      },
+      {
+        "sku": "JO32-LIGHTBROWN",
+        "color": "연밤",
+        "stock": 1000
+      },
+      {
+        "sku": "JO32-GRAY",
+        "color": "그레이",
+        "stock": 1000
+      }
+    ],
+    "styleCode": "JO32",
+    "newRelease": true,
+    "releasedAt": "2026-10-16",
+    "catalogImage": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/charcoal-A.webp",
+    "detailImages": [
+      {
+        "url": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/000.jpg",
+        "angle": 0,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "래글런 V넥 니트 촬영 샘플 0도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/045.jpg",
+        "angle": 45,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "래글런 V넥 니트 촬영 샘플 45도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/090.jpg",
+        "angle": 90,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "래글런 V넥 니트 촬영 샘플 90도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/135.jpg",
+        "angle": 135,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "래글런 V넥 니트 촬영 샘플 135도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/180.jpg",
+        "angle": 180,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "래글런 V넥 니트 촬영 샘플 180도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/225.jpg",
+        "angle": 225,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "래글런 V넥 니트 촬영 샘플 225도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/270.jpg",
+        "angle": 270,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "래글런 V넥 니트 촬영 샘플 270도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/315.jpg",
+        "angle": 315,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "래글런 V넥 니트 촬영 샘플 315도"
+      }
+    ],
+    "manufacturer": "걸스라미",
+    "photoVerified": false,
+    "measurementUnit": "cm",
+    "badges": [
+      "NEW"
+    ],
+    "sizePending": false,
+    "pricePending": false,
+    "reviewCount": 0,
+    "rating": 0,
+    "reviews": [],
+    "aiPresentation": {
+      "defaultColor": "차콜",
+      "colors": {
+        "아이보리": {
+          "image": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/ivory-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/ivory-A.webp"
+        },
+        "검정": {
+          "image": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/black-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/black-A.webp"
+        },
+        "브라운": {
+          "image": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/brown-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/brown-A.webp"
+        },
+        "연핑크": {
+          "image": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/lightpink-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/lightpink-A.webp"
+        },
+        "카키": {
+          "image": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/khaki-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/khaki-A.webp"
+        },
+        "차콜": {
+          "image": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/charcoal-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/charcoal-A.webp"
+        },
+        "곤색": {
+          "image": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/navy-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/navy-A.webp"
+        },
+        "보라": {
+          "image": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/purple-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/purple-A.webp"
+        },
+        "연밤": {
+          "image": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/lightbrown-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/lightbrown-A.webp"
+        },
+        "그레이": {
+          "image": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/gray-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/gray-A.webp"
+        }
+      },
+      "editorial": {
+        "looks": [
+          {
+            "id": "A",
+            "label": "얇은 목티와 라이트 데님",
+            "items": [
+              "래글런 V넥 니트",
+              "아이보리 얇은 목티",
+              "라이트워시 스트레이트 데님",
+              "오프화이트 스니커즈",
+              "실버 스터드 이어링"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/ivory-A.webp",
+              "검정": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/black-A.webp",
+              "브라운": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/brown-A.webp",
+              "연핑크": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/lightpink-A.webp",
+              "카키": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/khaki-A.webp",
+              "차콜": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/charcoal-A.webp",
+              "곤색": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/navy-A.webp",
+              "보라": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/purple-A.webp",
+              "연밤": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/lightbrown-A.webp",
+              "그레이": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/gray-A.webp"
+            }
+          },
+          {
+            "id": "B",
+            "label": "화이트 셔츠와 블랙 슬랙스",
+            "items": [
+              "래글런 V넥 니트",
+              "화이트 카라 셔츠",
+              "블랙 스트레이트 슬랙스",
+              "블랙 로퍼",
+              "블랙 토트백",
+              "미니멀 워치"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/ivory-B.webp",
+              "검정": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/black-B.webp",
+              "브라운": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/brown-B.webp",
+              "연핑크": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/lightpink-B.webp",
+              "카키": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/khaki-B.webp",
+              "차콜": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/charcoal-B.webp",
+              "곤색": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/navy-B.webp",
+              "보라": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/purple-B.webp",
+              "연밤": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/lightbrown-B.webp",
+              "그레이": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/gray-B.webp"
+            }
+          },
+          {
+            "id": "C",
+            "label": "스트라이프 이너와 카키 팬츠",
+            "items": [
+              "래글런 V넥 니트",
+              "아이보리·네이비 스트라이프 크루넥",
+              "카키 스트레이트 코튼 팬츠",
+              "네이비 스니커즈",
+              "네이비 스카프"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/ivory-C.webp",
+              "검정": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/black-C.webp",
+              "브라운": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/brown-C.webp",
+              "연핑크": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/lightpink-C.webp",
+              "카키": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/khaki-C.webp",
+              "차콜": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/charcoal-C.webp",
+              "곤색": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/navy-C.webp",
+              "보라": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/purple-C.webp",
+              "연밤": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/lightbrown-C.webp",
+              "그레이": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/gray-C.webp"
+            }
+          },
+          {
+            "id": "D",
+            "label": "아이보리 H라인 미디",
+            "items": [
+              "래글런 V넥 니트",
+              "아이보리 H라인 미디스커트",
+              "다크브라운 플랫",
+              "실버 펜던트 목걸이",
+              "다크브라운 숄더백"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/ivory-D.webp",
+              "검정": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/black-D.webp",
+              "브라운": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/brown-D.webp",
+              "연핑크": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/lightpink-D.webp",
+              "카키": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/khaki-D.webp",
+              "차콜": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/charcoal-D.webp",
+              "곤색": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/navy-D.webp",
+              "보라": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/purple-D.webp",
+              "연밤": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/lightbrown-D.webp",
+              "그레이": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/looks/gray-D.webp"
+            }
+          }
+        ],
+        "colorStory": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/color-palette.webp",
+        "measurements": [
+          {
+            "label": "총장",
+            "value": 62
+          },
+          {
+            "label": "가슴 단면",
+            "value": 59
+          },
+          {
+            "label": "암홀",
+            "value": 29
+          },
+          {
+            "label": "소매길이",
+            "value": 73
+          },
+          {
+            "label": "소매통",
+            "value": 19
+          },
+          {
+            "label": "목너비",
+            "value": 21
+          },
+          {
+            "label": "목깊이",
+            "value": 21
+          }
+        ],
+        "measurementUnit": "cm"
+      }
+    },
+    "smartstore": "https://smartstore.naver.com/girlsrami/products/13813546644"
+  },
+  {
+    "id": "rm542-cable-vneck-vest",
+    "sku": "RM542",
+    "sub": "흰 티와 데님 위에 한 겹 더하면 중앙 다이아 짜임이 코디의 중심이 되는 V넥 베스트. 셔츠와 슬랙스에도 자연스럽게 이어집니다.",
+    "desc": "두 개의 중앙 다이아와 양옆 케이블 짜임이 단순한 이너 위에서도 또렷하게 보여요. 라운드 티에는 데님을, 셔츠에는 슬랙스나 코듀로이 팬츠를 맞춰 서로 다른 분위기로 입어 보세요.",
+    "line": "basic",
+    "name": "케이블 V넥 베스트",
+    "image": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/lightbrown-A.webp",
+    "price": 19900,
+    "sizes": [
+      {
+        "label": "FREE",
+        "length": 50,
+        "verified": true,
+        "chestHalf": 52
+      }
+    ],
+    "stock": 10000,
+    "colors": [
+      "아이보리",
+      "검정",
+      "브라운",
+      "연핑크",
+      "카키",
+      "차콜",
+      "곤색",
+      "보라",
+      "연밤",
+      "그레이"
+    ],
+    "origin": "대한민국",
+    "status": "active",
+    "measure": {
+      "암홀": 22,
+      "목깊이": 15,
+      "목넓이": 17,
+      "총기장": 50,
+      "가슴넓이": 52,
+      "어깨넓이": 44
+    },
+    "category": "조끼",
+    "material": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+    "storeUrl": "https://smartstore.naver.com/girlsrami/products/13813573435",
+    "variants": [
+      {
+        "sku": "RM542-IVORY",
+        "color": "아이보리",
+        "stock": 1000
+      },
+      {
+        "sku": "RM542-BLACK",
+        "color": "검정",
+        "stock": 1000
+      },
+      {
+        "sku": "RM542-BROWN",
+        "color": "브라운",
+        "stock": 1000
+      },
+      {
+        "sku": "RM542-LIGHTPINK",
+        "color": "연핑크",
+        "stock": 1000
+      },
+      {
+        "sku": "RM542-KHAKI",
+        "color": "카키",
+        "stock": 1000
+      },
+      {
+        "sku": "RM542-CHARCOAL",
+        "color": "차콜",
+        "stock": 1000
+      },
+      {
+        "sku": "RM542-NAVY",
+        "color": "곤색",
+        "stock": 1000
+      },
+      {
+        "sku": "RM542-PURPLE",
+        "color": "보라",
+        "stock": 1000
+      },
+      {
+        "sku": "RM542-LIGHTBROWN",
+        "color": "연밤",
+        "stock": 1000
+      },
+      {
+        "sku": "RM542-GRAY",
+        "color": "그레이",
+        "stock": 1000
+      }
+    ],
+    "styleCode": "RM542",
+    "newRelease": true,
+    "releasedAt": "2026-10-16",
+    "catalogImage": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/lightbrown-A.webp",
+    "detailImages": [
+      {
+        "url": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/000.jpg",
+        "angle": 0,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "케이블 V넥 베스트 촬영 샘플 0도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/045.jpg",
+        "angle": 45,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "케이블 V넥 베스트 촬영 샘플 45도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/090.jpg",
+        "angle": 90,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "케이블 V넥 베스트 촬영 샘플 90도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/135.jpg",
+        "angle": 135,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "케이블 V넥 베스트 촬영 샘플 135도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/180.jpg",
+        "angle": 180,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "케이블 V넥 베스트 촬영 샘플 180도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/225.jpg",
+        "angle": 225,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "케이블 V넥 베스트 촬영 샘플 225도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/270.jpg",
+        "angle": 270,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "케이블 V넥 베스트 촬영 샘플 270도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/315.jpg",
+        "angle": 315,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "케이블 V넥 베스트 촬영 샘플 315도"
+      }
+    ],
+    "manufacturer": "걸스라미",
+    "photoVerified": false,
+    "measurementUnit": "cm",
+    "badges": [
+      "NEW"
+    ],
+    "sizePending": false,
+    "pricePending": false,
+    "reviewCount": 0,
+    "rating": 0,
+    "reviews": [],
+    "aiPresentation": {
+      "defaultColor": "연밤",
+      "colors": {
+        "아이보리": {
+          "image": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/ivory-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/ivory-A.webp"
+        },
+        "검정": {
+          "image": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/black-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/black-A.webp"
+        },
+        "브라운": {
+          "image": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/brown-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/brown-A.webp"
+        },
+        "연핑크": {
+          "image": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/lightpink-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/lightpink-A.webp"
+        },
+        "카키": {
+          "image": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/khaki-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/khaki-A.webp"
+        },
+        "차콜": {
+          "image": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/charcoal-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/charcoal-A.webp"
+        },
+        "곤색": {
+          "image": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/navy-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/navy-A.webp"
+        },
+        "보라": {
+          "image": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/purple-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/purple-A.webp"
+        },
+        "연밤": {
+          "image": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/lightbrown-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/lightbrown-A.webp"
+        },
+        "그레이": {
+          "image": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/gray-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/gray-A.webp"
+        }
+      },
+      "editorial": {
+        "looks": [
+          {
+            "id": "A",
+            "label": "데일리 데님 레이어",
+            "items": [
+              "케이블 V넥 베스트",
+              "화이트 라운드 긴팔 티셔츠",
+              "중청 스트레이트 데님",
+              "아이보리 스니커즈",
+              "웜브라운 크로스백"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/ivory-A.webp",
+              "검정": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/black-A.webp",
+              "브라운": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/brown-A.webp",
+              "연핑크": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/lightpink-A.webp",
+              "카키": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/khaki-A.webp",
+              "차콜": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/charcoal-A.webp",
+              "곤색": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/navy-A.webp",
+              "보라": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/purple-A.webp",
+              "연밤": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/lightbrown-A.webp",
+              "그레이": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/gray-A.webp"
+            }
+          },
+          {
+            "id": "B",
+            "label": "셔츠 오피스 레이어",
+            "items": [
+              "케이블 V넥 베스트",
+              "화이트 카라 셔츠",
+              "차콜 스트레이트 슬랙스",
+              "블랙 로퍼",
+              "차콜 슬림 폴더",
+              "미니멀 워치"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/ivory-B.webp",
+              "검정": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/black-B.webp",
+              "브라운": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/brown-B.webp",
+              "연핑크": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/lightpink-B.webp",
+              "카키": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/khaki-B.webp",
+              "차콜": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/charcoal-B.webp",
+              "곤색": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/navy-B.webp",
+              "보라": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/purple-B.webp",
+              "연밤": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/lightbrown-B.webp",
+              "그레이": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/gray-B.webp"
+            }
+          },
+          {
+            "id": "C",
+            "label": "옥스퍼드 셔츠와 코듀로이",
+            "items": [
+              "케이블 V넥 베스트",
+              "라이트블루 옥스퍼드 셔츠",
+              "웜브라운 스트레이트 코듀로이 팬츠",
+              "다크브라운 로퍼",
+              "다크브라운 벨트"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/ivory-C.webp",
+              "검정": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/black-C.webp",
+              "브라운": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/brown-C.webp",
+              "연핑크": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/lightpink-C.webp",
+              "카키": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/khaki-C.webp",
+              "차콜": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/charcoal-C.webp",
+              "곤색": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/navy-C.webp",
+              "보라": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/purple-C.webp",
+              "연밤": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/lightbrown-C.webp",
+              "그레이": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/gray-C.webp"
+            }
+          },
+          {
+            "id": "D",
+            "label": "아이보리와 블랙 미디",
+            "items": [
+              "케이블 V넥 베스트",
+              "아이보리 얇은 목티",
+              "블랙 종아리중간 일자 미디스커트",
+              "블랙 플랫",
+              "블랙 숄더백",
+              "실버 이어링"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/ivory-D.webp",
+              "검정": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/black-D.webp",
+              "브라운": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/brown-D.webp",
+              "연핑크": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/lightpink-D.webp",
+              "카키": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/khaki-D.webp",
+              "차콜": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/charcoal-D.webp",
+              "곤색": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/navy-D.webp",
+              "보라": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/purple-D.webp",
+              "연밤": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/lightbrown-D.webp",
+              "그레이": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/looks/gray-D.webp"
+            }
+          }
+        ],
+        "colorStory": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/color-palette.webp",
+        "measurements": [
+          {
+            "label": "총장",
+            "value": 50
+          },
+          {
+            "label": "가슴 단면",
+            "value": 52
+          },
+          {
+            "label": "어깨너비",
+            "value": 44
+          },
+          {
+            "label": "암홀",
+            "value": 22
+          },
+          {
+            "label": "목너비",
+            "value": 17
+          },
+          {
+            "label": "목깊이",
+            "value": 15
+          }
+        ],
+        "measurementUnit": "cm"
+      }
+    },
+    "smartstore": "https://smartstore.naver.com/girlsrami/products/13813573435"
+  },
+  {
+    "id": "rm543-basic-vneck-knit",
+    "sku": "RM543",
+    "sub": "흰 티와 데님에는 편안하게, 셔츠와 슬랙스에는 단정하게. 익숙한 하의에 바로 이어 입기 좋은 V넥 니트.",
+    "desc": "군더더기 없는 V넥 몸판과 골지 마감이 이너와 하의를 자연스럽게 이어 줘요. 데님과 스니커즈로 가볍게 입거나, 차콜 슬랙스와 미디스커트에 플랫을 더해 차분하게 즐겨 보세요.",
+    "line": "basic",
+    "name": "기본 V넥 니트",
+    "image": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/brown-A.webp",
+    "price": 20900,
+    "sizes": [
+      {
+        "label": "FREE",
+        "length": 58,
+        "verified": true,
+        "chestHalf": 53
+      }
+    ],
+    "stock": 10000,
+    "colors": [
+      "아이보리",
+      "검정",
+      "브라운",
+      "연핑크",
+      "카키",
+      "차콜",
+      "곤색",
+      "보라",
+      "연밤",
+      "그레이"
+    ],
+    "origin": "대한민국",
+    "status": "active",
+    "measure": {
+      "암홀": 26,
+      "목깊이": 16,
+      "목넓이": 18,
+      "소매통": 19,
+      "총기장": 58,
+      "가슴넓이": 53,
+      "소매기장": 69
+    },
+    "category": "니트",
+    "material": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+    "storeUrl": "https://smartstore.naver.com/girlsrami/products/13813667088",
+    "variants": [
+      {
+        "sku": "RM543-IVORY",
+        "color": "아이보리",
+        "stock": 1000
+      },
+      {
+        "sku": "RM543-BLACK",
+        "color": "검정",
+        "stock": 1000
+      },
+      {
+        "sku": "RM543-BROWN",
+        "color": "브라운",
+        "stock": 1000
+      },
+      {
+        "sku": "RM543-LIGHTPINK",
+        "color": "연핑크",
+        "stock": 1000
+      },
+      {
+        "sku": "RM543-KHAKI",
+        "color": "카키",
+        "stock": 1000
+      },
+      {
+        "sku": "RM543-CHARCOAL",
+        "color": "차콜",
+        "stock": 1000
+      },
+      {
+        "sku": "RM543-NAVY",
+        "color": "곤색",
+        "stock": 1000
+      },
+      {
+        "sku": "RM543-PURPLE",
+        "color": "보라",
+        "stock": 1000
+      },
+      {
+        "sku": "RM543-LIGHTBROWN",
+        "color": "연밤",
+        "stock": 1000
+      },
+      {
+        "sku": "RM543-GRAY",
+        "color": "그레이",
+        "stock": 1000
+      }
+    ],
+    "styleCode": "RM543",
+    "newRelease": true,
+    "releasedAt": "2026-10-16",
+    "catalogImage": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/brown-A.webp",
+    "detailImages": [
+      {
+        "url": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/000.jpg",
+        "angle": 0,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "기본 V넥 니트 촬영 샘플 0도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/045.jpg",
+        "angle": 45,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "기본 V넥 니트 촬영 샘플 45도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/090.jpg",
+        "angle": 90,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "기본 V넥 니트 촬영 샘플 90도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/135.jpg",
+        "angle": 135,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "기본 V넥 니트 촬영 샘플 135도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/180.jpg",
+        "angle": 180,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "기본 V넥 니트 촬영 샘플 180도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/225.jpg",
+        "angle": 225,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "기본 V넥 니트 촬영 샘플 225도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/270.jpg",
+        "angle": 270,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "기본 V넥 니트 촬영 샘플 270도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/315.jpg",
+        "angle": 315,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "기본 V넥 니트 촬영 샘플 315도"
+      }
+    ],
+    "manufacturer": "걸스라미",
+    "photoVerified": false,
+    "measurementUnit": "cm",
+    "badges": [
+      "NEW"
+    ],
+    "sizePending": false,
+    "pricePending": false,
+    "reviewCount": 0,
+    "rating": 0,
+    "reviews": [],
+    "aiPresentation": {
+      "defaultColor": "브라운",
+      "colors": {
+        "아이보리": {
+          "image": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/ivory-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/ivory-A.webp"
+        },
+        "검정": {
+          "image": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/black-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/black-A.webp"
+        },
+        "브라운": {
+          "image": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/brown-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/brown-A.webp"
+        },
+        "연핑크": {
+          "image": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/lightpink-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/lightpink-A.webp"
+        },
+        "카키": {
+          "image": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/khaki-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/khaki-A.webp"
+        },
+        "차콜": {
+          "image": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/charcoal-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/charcoal-A.webp"
+        },
+        "곤색": {
+          "image": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/navy-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/navy-A.webp"
+        },
+        "보라": {
+          "image": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/purple-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/purple-A.webp"
+        },
+        "연밤": {
+          "image": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/lightbrown-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/lightbrown-A.webp"
+        },
+        "그레이": {
+          "image": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/gray-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/gray-A.webp"
+        }
+      },
+      "editorial": {
+        "looks": [
+          {
+            "id": "A",
+            "label": "화이트 티와 데님",
+            "items": [
+              "기본 V넥 니트",
+              "화이트 라운드 티셔츠",
+              "중청 스트레이트 데님",
+              "아이보리 스니커즈",
+              "실버 스터드 이어링"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/ivory-A.webp",
+              "검정": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/black-A.webp",
+              "브라운": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/brown-A.webp",
+              "연핑크": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/lightpink-A.webp",
+              "카키": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/khaki-A.webp",
+              "차콜": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/charcoal-A.webp",
+              "곤색": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/navy-A.webp",
+              "보라": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/purple-A.webp",
+              "연밤": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/lightbrown-A.webp",
+              "그레이": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/gray-A.webp"
+            }
+          },
+          {
+            "id": "B",
+            "label": "셔츠와 차콜 슬랙스",
+            "items": [
+              "기본 V넥 니트",
+              "화이트 카라 셔츠",
+              "차콜 스트레이트 슬랙스",
+              "블랙 로퍼",
+              "블랙 토트백",
+              "미니멀 워치"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/ivory-B.webp",
+              "검정": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/black-B.webp",
+              "브라운": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/brown-B.webp",
+              "연핑크": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/lightpink-B.webp",
+              "카키": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/khaki-B.webp",
+              "차콜": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/charcoal-B.webp",
+              "곤색": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/navy-B.webp",
+              "보라": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/purple-B.webp",
+              "연밤": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/lightbrown-B.webp",
+              "그레이": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/gray-B.webp"
+            }
+          },
+          {
+            "id": "C",
+            "label": "스트라이프 이너와 올리브 팬츠",
+            "items": [
+              "기본 V넥 니트",
+              "아이보리·브라운 스트라이프 티",
+              "올리브 스트레이트 팬츠",
+              "오프화이트 캔버스 슈즈",
+              "아이보리 스카프"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/ivory-C.webp",
+              "검정": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/black-C.webp",
+              "브라운": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/brown-C.webp",
+              "연핑크": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/lightpink-C.webp",
+              "카키": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/khaki-C.webp",
+              "차콜": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/charcoal-C.webp",
+              "곤색": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/navy-C.webp",
+              "보라": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/purple-C.webp",
+              "연밤": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/lightbrown-C.webp",
+              "그레이": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/gray-C.webp"
+            }
+          },
+          {
+            "id": "D",
+            "label": "아이보리 미디 스커트",
+            "items": [
+              "기본 V넥 니트",
+              "아이보리 종아리중간 일자 미디스커트",
+              "블랙 플랫",
+              "실버 펜던트 목걸이",
+              "블랙 숄더백"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/ivory-D.webp",
+              "검정": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/black-D.webp",
+              "브라운": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/brown-D.webp",
+              "연핑크": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/lightpink-D.webp",
+              "카키": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/khaki-D.webp",
+              "차콜": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/charcoal-D.webp",
+              "곤색": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/navy-D.webp",
+              "보라": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/purple-D.webp",
+              "연밤": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/lightbrown-D.webp",
+              "그레이": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/looks/gray-D.webp"
+            }
+          }
+        ],
+        "colorStory": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/color-palette.webp",
+        "measurements": [
+          {
+            "label": "총장",
+            "value": 58
+          },
+          {
+            "label": "가슴 단면",
+            "value": 53
+          },
+          {
+            "label": "암홀",
+            "value": 26
+          },
+          {
+            "label": "소매길이",
+            "value": 69
+          },
+          {
+            "label": "소매통",
+            "value": 19
+          },
+          {
+            "label": "목너비",
+            "value": 18
+          },
+          {
+            "label": "목깊이",
+            "value": 16
+          }
+        ],
+        "measurementUnit": "cm"
+      }
+    },
+    "smartstore": "https://smartstore.naver.com/girlsrami/products/13813667088"
+  },
+  {
+    "id": "rm567-round-cap-sleeve-knit",
+    "sku": "RM567",
+    "sub": "라운드넥과 캡소매가 간결한 인상을 만드는 짧은 니트. 데님부터 슬랙스, 미디스커트까지 하의가 잘 보이는 비율로 이어집니다.",
+    "desc": "어깨를 살짝 덮는 캡소매와 짧은 몸판이 코디를 간결하게 정리해 줘요. 스트레이트 데님에는 스니커즈를, 슬랙스나 미디스커트에는 로퍼와 플랫을 더해 보세요.",
+    "line": "basic",
+    "name": "라운드 캡소매 니트",
+    "image": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/lightpink-A.webp",
+    "price": 17900,
+    "sizes": [
+      {
+        "label": "FREE",
+        "length": 48,
+        "verified": true,
+        "chestHalf": 45
+      }
+    ],
+    "stock": 10000,
+    "colors": [
+      "아이보리",
+      "검정",
+      "브라운",
+      "연핑크",
+      "카키",
+      "차콜",
+      "곤색",
+      "보라",
+      "연밤",
+      "그레이"
+    ],
+    "origin": "대한민국",
+    "status": "active",
+    "measure": {
+      "암홀": 17,
+      "목깊이": 7,
+      "목넓이": 20,
+      "소매통": 15,
+      "총기장": 48,
+      "가슴넓이": 45,
+      "소매기장": 18,
+      "어깨넓이": 44
+    },
+    "category": "니트",
+    "material": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+    "storeUrl": "https://smartstore.naver.com/girlsrami/products/13813555465",
+    "variants": [
+      {
+        "sku": "RM567-IVORY",
+        "color": "아이보리",
+        "stock": 1000
+      },
+      {
+        "sku": "RM567-BLACK",
+        "color": "검정",
+        "stock": 1000
+      },
+      {
+        "sku": "RM567-BROWN",
+        "color": "브라운",
+        "stock": 1000
+      },
+      {
+        "sku": "RM567-LIGHTPINK",
+        "color": "연핑크",
+        "stock": 1000
+      },
+      {
+        "sku": "RM567-KHAKI",
+        "color": "카키",
+        "stock": 1000
+      },
+      {
+        "sku": "RM567-CHARCOAL",
+        "color": "차콜",
+        "stock": 1000
+      },
+      {
+        "sku": "RM567-NAVY",
+        "color": "곤색",
+        "stock": 1000
+      },
+      {
+        "sku": "RM567-PURPLE",
+        "color": "보라",
+        "stock": 1000
+      },
+      {
+        "sku": "RM567-LIGHTBROWN",
+        "color": "연밤",
+        "stock": 1000
+      },
+      {
+        "sku": "RM567-GRAY",
+        "color": "그레이",
+        "stock": 1000
+      }
+    ],
+    "styleCode": "RM567",
+    "newRelease": true,
+    "releasedAt": "2026-10-16",
+    "catalogImage": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/lightpink-A.webp",
+    "detailImages": [
+      {
+        "url": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/000.jpg",
+        "angle": 0,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "라운드 캡소매 니트 촬영 샘플 0도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/045.jpg",
+        "angle": 45,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "라운드 캡소매 니트 촬영 샘플 45도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/090.jpg",
+        "angle": 90,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "라운드 캡소매 니트 촬영 샘플 90도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/135.jpg",
+        "angle": 135,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "라운드 캡소매 니트 촬영 샘플 135도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/180.jpg",
+        "angle": 180,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "라운드 캡소매 니트 촬영 샘플 180도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/225.jpg",
+        "angle": 225,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "라운드 캡소매 니트 촬영 샘플 225도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/270.jpg",
+        "angle": 270,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "라운드 캡소매 니트 촬영 샘플 270도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/315.jpg",
+        "angle": 315,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "라운드 캡소매 니트 촬영 샘플 315도"
+      }
+    ],
+    "manufacturer": "걸스라미",
+    "photoVerified": false,
+    "measurementUnit": "cm",
+    "badges": [
+      "NEW"
+    ],
+    "sizePending": false,
+    "pricePending": false,
+    "reviewCount": 0,
+    "rating": 0,
+    "reviews": [],
+    "aiPresentation": {
+      "defaultColor": "연핑크",
+      "colors": {
+        "아이보리": {
+          "image": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/ivory-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/ivory-A.webp"
+        },
+        "검정": {
+          "image": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/black-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/black-A.webp"
+        },
+        "브라운": {
+          "image": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/brown-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/brown-A.webp"
+        },
+        "연핑크": {
+          "image": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/lightpink-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/lightpink-A.webp"
+        },
+        "카키": {
+          "image": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/khaki-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/khaki-A.webp"
+        },
+        "차콜": {
+          "image": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/charcoal-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/charcoal-A.webp"
+        },
+        "곤색": {
+          "image": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/navy-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/navy-A.webp"
+        },
+        "보라": {
+          "image": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/purple-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/purple-A.webp"
+        },
+        "연밤": {
+          "image": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/lightbrown-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/lightbrown-A.webp"
+        },
+        "그레이": {
+          "image": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/gray-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/gray-A.webp"
+        }
+      },
+      "editorial": {
+        "looks": [
+          {
+            "id": "A",
+            "label": "Casual denim",
+            "items": [
+              "mid-blue straight-leg jeans",
+              "ivory low-top sneakers",
+              "small stud earrings"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/ivory-A.webp",
+              "검정": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/black-A.webp",
+              "브라운": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/brown-A.webp",
+              "연핑크": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/lightpink-A.webp",
+              "카키": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/khaki-A.webp",
+              "차콜": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/charcoal-A.webp",
+              "곤색": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/navy-A.webp",
+              "보라": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/purple-A.webp",
+              "연밤": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/lightbrown-A.webp",
+              "그레이": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/gray-A.webp"
+            }
+          },
+          {
+            "id": "B",
+            "label": "Tailored trousers",
+            "items": [
+              "charcoal tailored wide-leg trousers",
+              "black low slingback shoes",
+              "slim black watch"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/ivory-B.webp",
+              "검정": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/black-B.webp",
+              "브라운": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/brown-B.webp",
+              "연핑크": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/lightpink-B.webp",
+              "카키": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/khaki-B.webp",
+              "차콜": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/charcoal-B.webp",
+              "곤색": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/navy-B.webp",
+              "보라": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/purple-B.webp",
+              "연밤": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/lightbrown-B.webp",
+              "그레이": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/gray-B.webp"
+            }
+          },
+          {
+            "id": "C",
+            "label": "Navy midi skirt",
+            "items": [
+              "deep navy A-line midi skirt ending mid-calf",
+              "brown slingback low heels",
+              "slim brown watch",
+              "stud earrings"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/ivory-C.webp",
+              "검정": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/black-C.webp",
+              "브라운": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/brown-C.webp",
+              "연핑크": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/lightpink-C.webp",
+              "카키": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/khaki-C.webp",
+              "차콜": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/charcoal-C.webp",
+              "곤색": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/navy-C.webp",
+              "보라": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/purple-C.webp",
+              "연밤": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/lightbrown-C.webp",
+              "그레이": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/gray-C.webp"
+            }
+          },
+          {
+            "id": "D",
+            "label": "Ivory midi skirt",
+            "items": [
+              "ivory straight midi skirt ending mid-calf",
+              "simple black ballet flats",
+              "tiny earrings"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/ivory-D.webp",
+              "검정": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/black-D.webp",
+              "브라운": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/brown-D.webp",
+              "연핑크": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/lightpink-D.webp",
+              "카키": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/khaki-D.webp",
+              "차콜": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/charcoal-D.webp",
+              "곤색": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/navy-D.webp",
+              "보라": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/purple-D.webp",
+              "연밤": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/lightbrown-D.webp",
+              "그레이": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/looks/gray-D.webp"
+            }
+          }
+        ],
+        "colorStory": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/color-palette.webp",
+        "measurements": [
+          {
+            "label": "총장",
+            "value": 48
+          },
+          {
+            "label": "가슴 단면",
+            "value": 45
+          },
+          {
+            "label": "어깨너비",
+            "value": 44
+          },
+          {
+            "label": "암홀",
+            "value": 17
+          },
+          {
+            "label": "소매길이",
+            "value": 18
+          },
+          {
+            "label": "소매통",
+            "value": 15
+          },
+          {
+            "label": "목너비",
+            "value": 20
+          },
+          {
+            "label": "목깊이",
+            "value": 7
+          }
+        ],
+        "measurementUnit": "cm"
+      }
+    },
+    "smartstore": "https://smartstore.naver.com/girlsrami/products/13813555465"
+  },
+  {
+    "id": "rm576-ribbed-vneck-knit",
+    "sku": "RM576",
+    "sub": "흰 티와 팬츠 위에 툭 더하면 하찌 짜임이 또렷하게 살아나는 V넥 니트. 슬랙스와 미디스커트에는 차분하게 이어집니다.",
+    "desc": "V넥부터 소매와 몸판까지 이어지는 하찌 조직이 코디의 중심이 돼요. 아이보리 팬츠로 밝게 대비하거나, 차콜 슬랙스와 미디스커트로 색을 낮춰 입어 보세요.",
+    "line": "basic",
+    "name": "하찌 V넥 니트",
+    "image": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/navy-A.webp",
+    "price": 21900,
+    "sizes": [
+      {
+        "label": "FREE",
+        "length": 56,
+        "verified": true,
+        "chestHalf": 57
+      }
+    ],
+    "stock": 10000,
+    "colors": [
+      "아이보리",
+      "검정",
+      "브라운",
+      "연핑크",
+      "카키",
+      "차콜",
+      "곤색",
+      "보라",
+      "연밤",
+      "그레이"
+    ],
+    "origin": "대한민국",
+    "status": "active",
+    "measure": {
+      "암홀": 20,
+      "목깊이": 18,
+      "목넓이": 18,
+      "소매통": 19,
+      "총기장": 56,
+      "가슴넓이": 57,
+      "소매기장": 44,
+      "어깨넓이": 59
+    },
+    "category": "니트",
+    "material": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+    "storeUrl": "https://smartstore.naver.com/girlsrami/products/13813559268",
+    "variants": [
+      {
+        "sku": "RM576-IVORY",
+        "color": "아이보리",
+        "stock": 1000
+      },
+      {
+        "sku": "RM576-BLACK",
+        "color": "검정",
+        "stock": 1000
+      },
+      {
+        "sku": "RM576-BROWN",
+        "color": "브라운",
+        "stock": 1000
+      },
+      {
+        "sku": "RM576-LIGHTPINK",
+        "color": "연핑크",
+        "stock": 1000
+      },
+      {
+        "sku": "RM576-KHAKI",
+        "color": "카키",
+        "stock": 1000
+      },
+      {
+        "sku": "RM576-CHARCOAL",
+        "color": "차콜",
+        "stock": 1000
+      },
+      {
+        "sku": "RM576-NAVY",
+        "color": "곤색",
+        "stock": 1000
+      },
+      {
+        "sku": "RM576-PURPLE",
+        "color": "보라",
+        "stock": 1000
+      },
+      {
+        "sku": "RM576-LIGHTBROWN",
+        "color": "연밤",
+        "stock": 1000
+      },
+      {
+        "sku": "RM576-GRAY",
+        "color": "그레이",
+        "stock": 1000
+      }
+    ],
+    "styleCode": "RM576",
+    "newRelease": true,
+    "releasedAt": "2026-10-16",
+    "catalogImage": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/navy-A.webp",
+    "detailImages": [
+      {
+        "url": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/000.jpg",
+        "angle": 0,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "하찌 V넥 니트 촬영 샘플 0도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/045.jpg",
+        "angle": 45,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "하찌 V넥 니트 촬영 샘플 45도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/090.jpg",
+        "angle": 90,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "하찌 V넥 니트 촬영 샘플 90도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/135.jpg",
+        "angle": 135,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "하찌 V넥 니트 촬영 샘플 135도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/180.jpg",
+        "angle": 180,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "하찌 V넥 니트 촬영 샘플 180도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/225.jpg",
+        "angle": 225,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "하찌 V넥 니트 촬영 샘플 225도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/270.jpg",
+        "angle": 270,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "하찌 V넥 니트 촬영 샘플 270도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/315.jpg",
+        "angle": 315,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "하찌 V넥 니트 촬영 샘플 315도"
+      }
+    ],
+    "manufacturer": "걸스라미",
+    "photoVerified": false,
+    "measurementUnit": "cm",
+    "badges": [
+      "NEW"
+    ],
+    "sizePending": false,
+    "pricePending": false,
+    "reviewCount": 0,
+    "rating": 0,
+    "reviews": [],
+    "aiPresentation": {
+      "defaultColor": "곤색",
+      "colors": {
+        "아이보리": {
+          "image": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/ivory-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/ivory-A.webp"
+        },
+        "검정": {
+          "image": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/black-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/black-A.webp"
+        },
+        "브라운": {
+          "image": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/brown-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/brown-A.webp"
+        },
+        "연핑크": {
+          "image": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/lightpink-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/lightpink-A.webp"
+        },
+        "카키": {
+          "image": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/khaki-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/khaki-A.webp"
+        },
+        "차콜": {
+          "image": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/charcoal-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/charcoal-A.webp"
+        },
+        "곤색": {
+          "image": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/navy-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/navy-A.webp"
+        },
+        "보라": {
+          "image": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/purple-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/purple-A.webp"
+        },
+        "연밤": {
+          "image": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/lightbrown-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/lightbrown-A.webp"
+        },
+        "그레이": {
+          "image": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/gray-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/gray-A.webp"
+        }
+      },
+      "editorial": {
+        "looks": [
+          {
+            "id": "A",
+            "label": "데일리 데님",
+            "items": [
+              "mid-blue straight-leg jeans",
+              "ivory low-top sneakers",
+              "tiny silver stud earrings"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/ivory-A.webp",
+              "검정": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/black-A.webp",
+              "브라운": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/brown-A.webp",
+              "연핑크": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/lightpink-A.webp",
+              "카키": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/khaki-A.webp",
+              "차콜": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/charcoal-A.webp",
+              "곤색": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/navy-A.webp",
+              "보라": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/purple-A.webp",
+              "연밤": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/lightbrown-A.webp",
+              "그레이": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/gray-A.webp"
+            }
+          },
+          {
+            "id": "B",
+            "label": "차콜 테일러드",
+            "items": [
+              "charcoal tailored wide-leg trousers",
+              "polished black loafers",
+              "small structured black handbag"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/ivory-B.webp",
+              "검정": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/black-B.webp",
+              "브라운": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/brown-B.webp",
+              "연핑크": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/lightpink-B.webp",
+              "카키": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/khaki-B.webp",
+              "차콜": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/charcoal-B.webp",
+              "곤색": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/navy-B.webp",
+              "보라": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/purple-B.webp",
+              "연밤": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/lightbrown-B.webp",
+              "그레이": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/gray-B.webp"
+            }
+          },
+          {
+            "id": "C",
+            "label": "카멜 미디",
+            "items": [
+              "camel-beige straight midi skirt",
+              "brown slingback low heels",
+              "slim brown leather watch"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/ivory-C.webp",
+              "검정": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/black-C.webp",
+              "브라운": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/brown-C.webp",
+              "연핑크": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/lightpink-C.webp",
+              "카키": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/khaki-C.webp",
+              "차콜": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/charcoal-C.webp",
+              "곤색": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/navy-C.webp",
+              "보라": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/purple-C.webp",
+              "연밤": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/lightbrown-C.webp",
+              "그레이": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/gray-C.webp"
+            }
+          },
+          {
+            "id": "D",
+            "label": "차콜 A라인",
+            "items": [
+              "charcoal A-line midi skirt",
+              "clean black ankle boots",
+              "tiny silver earrings"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/ivory-D.webp",
+              "검정": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/black-D.webp",
+              "브라운": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/brown-D.webp",
+              "연핑크": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/lightpink-D.webp",
+              "카키": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/khaki-D.webp",
+              "차콜": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/charcoal-D.webp",
+              "곤색": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/navy-D.webp",
+              "보라": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/purple-D.webp",
+              "연밤": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/lightbrown-D.webp",
+              "그레이": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/looks/gray-D.webp"
+            }
+          }
+        ],
+        "colorStory": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/color-palette.webp",
+        "measurements": [
+          {
+            "label": "총장",
+            "value": 56
+          },
+          {
+            "label": "가슴 단면",
+            "value": 57
+          },
+          {
+            "label": "어깨너비",
+            "value": 59
+          },
+          {
+            "label": "암홀",
+            "value": 20
+          },
+          {
+            "label": "소매길이",
+            "value": 44
+          },
+          {
+            "label": "소매통",
+            "value": 19
+          },
+          {
+            "label": "목너비",
+            "value": 18
+          },
+          {
+            "label": "목깊이",
+            "value": 18
+          }
+        ],
+        "measurementUnit": "cm"
+      }
+    },
+    "smartstore": "https://smartstore.naver.com/girlsrami/products/13813559268"
+  },
+  {
+    "id": "rm582-front-back-vneck-oversized-knit",
+    "sku": "RM582",
+    "sub": "크루넥 이너가 앞뒤 V넥 사이로 보이는 오버핏 니트. 데님에는 편안하게, 블랙 슬랙스와 미디스커트에는 차분하게 이어 보세요.",
+    "desc": "앞과 뒤에 깊게 놓인 V넥이 크루넥 이너를 자연스럽게 드러내요. 진청 데님과 스니커즈로 가볍게 입거나, 블랙 슬랙스와 차콜 미디스커트에 플랫을 맞춰 보세요.",
+    "line": "basic",
+    "name": "앞뒤 V넥 오버핏 니트",
+    "image": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/ivory-A.webp",
+    "price": 23900,
+    "sizes": [
+      {
+        "label": "FREE",
+        "length": 62,
+        "verified": true,
+        "chestHalf": 57
+      }
+    ],
+    "stock": 10000,
+    "colors": [
+      "아이보리",
+      "검정",
+      "브라운",
+      "연핑크",
+      "카키",
+      "차콜",
+      "곤색",
+      "보라",
+      "연밤",
+      "그레이"
+    ],
+    "origin": "대한민국",
+    "status": "active",
+    "measure": {
+      "암홀": 22,
+      "목깊이": 30,
+      "목넓이": 24,
+      "소매통": 21,
+      "총기장": 62,
+      "가슴넓이": 57,
+      "소매기장": 49,
+      "어깨넓이": 57
+    },
+    "category": "니트",
+    "material": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+    "storeUrl": "https://smartstore.naver.com/girlsrami/products/13813676604",
+    "variants": [
+      {
+        "sku": "RM582-IVORY",
+        "color": "아이보리",
+        "stock": 1000
+      },
+      {
+        "sku": "RM582-BLACK",
+        "color": "검정",
+        "stock": 1000
+      },
+      {
+        "sku": "RM582-BROWN",
+        "color": "브라운",
+        "stock": 1000
+      },
+      {
+        "sku": "RM582-LIGHTPINK",
+        "color": "연핑크",
+        "stock": 1000
+      },
+      {
+        "sku": "RM582-KHAKI",
+        "color": "카키",
+        "stock": 1000
+      },
+      {
+        "sku": "RM582-CHARCOAL",
+        "color": "차콜",
+        "stock": 1000
+      },
+      {
+        "sku": "RM582-NAVY",
+        "color": "곤색",
+        "stock": 1000
+      },
+      {
+        "sku": "RM582-PURPLE",
+        "color": "보라",
+        "stock": 1000
+      },
+      {
+        "sku": "RM582-LIGHTBROWN",
+        "color": "연밤",
+        "stock": 1000
+      },
+      {
+        "sku": "RM582-GRAY",
+        "color": "그레이",
+        "stock": 1000
+      }
+    ],
+    "styleCode": "RM582",
+    "newRelease": true,
+    "releasedAt": "2026-10-16",
+    "catalogImage": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/ivory-A.webp",
+    "detailImages": [
+      {
+        "url": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/000.jpg",
+        "angle": 0,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "앞뒤 V넥 오버핏 니트 촬영 샘플 0도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/045.jpg",
+        "angle": 45,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "앞뒤 V넥 오버핏 니트 촬영 샘플 45도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/090.jpg",
+        "angle": 90,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "앞뒤 V넥 오버핏 니트 촬영 샘플 90도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/135.jpg",
+        "angle": 135,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "앞뒤 V넥 오버핏 니트 촬영 샘플 135도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/180.jpg",
+        "angle": 180,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "앞뒤 V넥 오버핏 니트 촬영 샘플 180도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/225.jpg",
+        "angle": 225,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "앞뒤 V넥 오버핏 니트 촬영 샘플 225도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/270.jpg",
+        "angle": 270,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "앞뒤 V넥 오버핏 니트 촬영 샘플 270도"
+      },
+      {
+        "url": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/315.jpg",
+        "angle": 315,
+        "width": 2992,
+        "height": 2992,
+        "verified": true,
+        "alt": "앞뒤 V넥 오버핏 니트 촬영 샘플 315도"
+      }
+    ],
+    "manufacturer": "걸스라미",
+    "photoVerified": false,
+    "measurementUnit": "cm",
+    "badges": [
+      "NEW"
+    ],
+    "sizePending": false,
+    "pricePending": false,
+    "reviewCount": 0,
+    "rating": 0,
+    "reviews": [],
+    "aiPresentation": {
+      "defaultColor": "아이보리",
+      "colors": {
+        "아이보리": {
+          "image": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/ivory-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/ivory-A.webp"
+        },
+        "검정": {
+          "image": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/black-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/black-A.webp"
+        },
+        "브라운": {
+          "image": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/brown-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/brown-A.webp"
+        },
+        "연핑크": {
+          "image": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/lightpink-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/lightpink-A.webp"
+        },
+        "카키": {
+          "image": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/khaki-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/khaki-A.webp"
+        },
+        "차콜": {
+          "image": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/charcoal-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/charcoal-A.webp"
+        },
+        "곤색": {
+          "image": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/navy-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/navy-A.webp"
+        },
+        "보라": {
+          "image": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/purple-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/purple-A.webp"
+        },
+        "연밤": {
+          "image": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/lightbrown-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/lightbrown-A.webp"
+        },
+        "그레이": {
+          "image": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/gray-A.webp",
+          "fullBody": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/gray-A.webp"
+        }
+      },
+      "editorial": {
+        "looks": [
+          {
+            "id": "A",
+            "label": "워시드 차콜 데님",
+            "items": [
+              "washed charcoal straight-leg jeans",
+              "ivory low-top sneakers",
+              "small stud earrings"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/ivory-A.webp",
+              "검정": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/black-A.webp",
+              "브라운": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/brown-A.webp",
+              "연핑크": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/lightpink-A.webp",
+              "카키": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/khaki-A.webp",
+              "차콜": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/charcoal-A.webp",
+              "곤색": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/navy-A.webp",
+              "보라": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/purple-A.webp",
+              "연밤": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/lightbrown-A.webp",
+              "그레이": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/gray-A.webp"
+            }
+          },
+          {
+            "id": "B",
+            "label": "블랙 테일러드",
+            "items": [
+              "black tailored wide-leg trousers",
+              "black loafers",
+              "small structured black handbag"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/ivory-B.webp",
+              "검정": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/black-B.webp",
+              "브라운": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/brown-B.webp",
+              "연핑크": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/lightpink-B.webp",
+              "카키": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/khaki-B.webp",
+              "차콜": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/charcoal-B.webp",
+              "곤색": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/navy-B.webp",
+              "보라": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/purple-B.webp",
+              "연밤": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/lightbrown-B.webp",
+              "그레이": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/gray-B.webp"
+            }
+          },
+          {
+            "id": "C",
+            "label": "브라운 미디",
+            "items": [
+              "deep chocolate-brown straight midi skirt",
+              "taupe slingback low heels",
+              "slim watch"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/ivory-C.webp",
+              "검정": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/black-C.webp",
+              "브라운": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/brown-C.webp",
+              "연핑크": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/lightpink-C.webp",
+              "카키": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/khaki-C.webp",
+              "차콜": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/charcoal-C.webp",
+              "곤색": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/navy-C.webp",
+              "보라": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/purple-C.webp",
+              "연밤": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/lightbrown-C.webp",
+              "그레이": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/gray-C.webp"
+            }
+          },
+          {
+            "id": "D",
+            "label": "차콜 A라인",
+            "items": [
+              "charcoal A-line midi skirt",
+              "black ankle boots",
+              "tiny stud earrings"
+            ],
+            "images": {
+              "아이보리": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/ivory-D.webp",
+              "검정": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/black-D.webp",
+              "브라운": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/brown-D.webp",
+              "연핑크": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/lightpink-D.webp",
+              "카키": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/khaki-D.webp",
+              "차콜": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/charcoal-D.webp",
+              "곤색": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/navy-D.webp",
+              "보라": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/purple-D.webp",
+              "연밤": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/lightbrown-D.webp",
+              "그레이": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/looks/gray-D.webp"
+            }
+          }
+        ],
+        "colorStory": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/color-palette.webp",
+        "measurements": [
+          {
+            "label": "총장",
+            "value": 62
+          },
+          {
+            "label": "가슴 단면",
+            "value": 57
+          },
+          {
+            "label": "어깨너비",
+            "value": 57
+          },
+          {
+            "label": "암홀",
+            "value": 22
+          },
+          {
+            "label": "소매길이",
+            "value": 49
+          },
+          {
+            "label": "소매통",
+            "value": 21
+          },
+          {
+            "label": "목너비",
+            "value": 24
+          },
+          {
+            "label": "목깊이",
+            "value": 30
+          }
+        ],
+        "measurementUnit": "cm"
+      }
+    },
+    "smartstore": "https://smartstore.naver.com/girlsrami/products/13813676604"
   }
 ];
 

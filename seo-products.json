@@ -1,5 +1,5 @@
 {
-  "lastmod": "2026-10-15",
+  "lastmod": "2026-10-16",
   "source": {
     "capturedAt": "2026-10-13",
     "httpStatus": 200,
@@ -323,6 +323,303 @@
       ],
       "realImage": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/october-2026/off-duty-vneck-knit-vest/front.jpg",
       "sizes": []
+    },
+    {
+      "id": "jo23-oversized-vneck-knit",
+      "name": "오버핏 V넥 니트",
+      "category": "니트",
+      "styleCode": "JO23",
+      "sku": "JO23",
+      "price": 23900,
+      "priceSource": "payload.price",
+      "stock": 10000,
+      "storeUrl": "https://smartstore.naver.com/girlsrami/products/13808633770",
+      "material": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+      "colors": [
+        "아이보리",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "realImage": "https://girlslami.com/assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/000.jpg",
+      "sizes": [
+        {
+          "label": "FREE",
+          "length": 56,
+          "verified": true,
+          "chestHalf": 68
+        }
+      ]
+    },
+    {
+      "id": "jo24-oversized-boatneck-knit",
+      "name": "오버핏 보트넥 니트",
+      "category": "니트",
+      "styleCode": "JO24",
+      "sku": "JO24",
+      "price": 23900,
+      "priceSource": "payload.price",
+      "stock": 10000,
+      "storeUrl": "https://smartstore.naver.com/girlsrami/products/13813543898",
+      "material": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+      "colors": [
+        "아이보리",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "realImage": "https://girlslami.com/assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/000.jpg",
+      "sizes": [
+        {
+          "label": "FREE",
+          "length": 57,
+          "verified": true,
+          "chestHalf": 66
+        }
+      ]
+    },
+    {
+      "id": "jo31-raglan-roundneck-knit",
+      "name": "래글런 라운드 니트",
+      "category": "니트",
+      "styleCode": "JO31",
+      "sku": "JO31",
+      "price": 22900,
+      "priceSource": "payload.price",
+      "stock": 10000,
+      "storeUrl": "https://smartstore.naver.com/girlsrami/products/13813532958",
+      "material": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+      "colors": [
+        "아이보리",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "realImage": "https://girlslami.com/assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/000.jpg",
+      "sizes": [
+        {
+          "label": "FREE",
+          "length": 62,
+          "verified": true,
+          "chestHalf": 56
+        }
+      ]
+    },
+    {
+      "id": "jo32-raglan-vneck-knit",
+      "name": "래글런 V넥 니트",
+      "category": "니트",
+      "styleCode": "JO32",
+      "sku": "JO32",
+      "price": 23900,
+      "priceSource": "payload.price",
+      "stock": 10000,
+      "storeUrl": "https://smartstore.naver.com/girlsrami/products/13813546644",
+      "material": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+      "colors": [
+        "아이보리",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "realImage": "https://girlslami.com/assets/detail/jo32-raglan-vneck-knit/launch-20261016/originals/000.jpg",
+      "sizes": [
+        {
+          "label": "FREE",
+          "length": 62,
+          "verified": true,
+          "chestHalf": 59
+        }
+      ]
+    },
+    {
+      "id": "rm542-cable-vneck-vest",
+      "name": "케이블 V넥 베스트",
+      "category": "조끼",
+      "styleCode": "RM542",
+      "sku": "RM542",
+      "price": 19900,
+      "priceSource": "payload.price",
+      "stock": 10000,
+      "storeUrl": "https://smartstore.naver.com/girlsrami/products/13813573435",
+      "material": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+      "colors": [
+        "아이보리",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "realImage": "https://girlslami.com/assets/detail/rm542-cable-vneck-vest/launch-20261016/originals/000.jpg",
+      "sizes": [
+        {
+          "label": "FREE",
+          "length": 50,
+          "verified": true,
+          "chestHalf": 52
+        }
+      ]
+    },
+    {
+      "id": "rm543-basic-vneck-knit",
+      "name": "기본 V넥 니트",
+      "category": "니트",
+      "styleCode": "RM543",
+      "sku": "RM543",
+      "price": 20900,
+      "priceSource": "payload.price",
+      "stock": 10000,
+      "storeUrl": "https://smartstore.naver.com/girlsrami/products/13813667088",
+      "material": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+      "colors": [
+        "아이보리",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "realImage": "https://girlslami.com/assets/detail/rm543-basic-vneck-knit/launch-20261016/originals/000.jpg",
+      "sizes": [
+        {
+          "label": "FREE",
+          "length": 58,
+          "verified": true,
+          "chestHalf": 53
+        }
+      ]
+    },
+    {
+      "id": "rm567-round-cap-sleeve-knit",
+      "name": "라운드 캡소매 니트",
+      "category": "니트",
+      "styleCode": "RM567",
+      "sku": "RM567",
+      "price": 17900,
+      "priceSource": "payload.price",
+      "stock": 10000,
+      "storeUrl": "https://smartstore.naver.com/girlsrami/products/13813555465",
+      "material": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+      "colors": [
+        "아이보리",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "realImage": "https://girlslami.com/assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/000.jpg",
+      "sizes": [
+        {
+          "label": "FREE",
+          "length": 48,
+          "verified": true,
+          "chestHalf": 45
+        }
+      ]
+    },
+    {
+      "id": "rm576-ribbed-vneck-knit",
+      "name": "하찌 V넥 니트",
+      "category": "니트",
+      "styleCode": "RM576",
+      "sku": "RM576",
+      "price": 21900,
+      "priceSource": "payload.price",
+      "stock": 10000,
+      "storeUrl": "https://smartstore.naver.com/girlsrami/products/13813559268",
+      "material": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+      "colors": [
+        "아이보리",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "realImage": "https://girlslami.com/assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/000.jpg",
+      "sizes": [
+        {
+          "label": "FREE",
+          "length": 56,
+          "verified": true,
+          "chestHalf": 57
+        }
+      ]
+    },
+    {
+      "id": "rm582-front-back-vneck-oversized-knit",
+      "name": "앞뒤 V넥 오버핏 니트",
+      "category": "니트",
+      "styleCode": "RM582",
+      "sku": "RM582",
+      "price": 23900,
+      "priceSource": "payload.price",
+      "stock": 10000,
+      "storeUrl": "https://smartstore.naver.com/girlsrami/products/13813676604",
+      "material": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+      "colors": [
+        "아이보리",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "realImage": "https://girlslami.com/assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/originals/000.jpg",
+      "sizes": [
+        {
+          "label": "FREE",
+          "length": 62,
+          "verified": true,
+          "chestHalf": 57
+        }
+      ]
     }
   ]
 }

@@ -11,7 +11,7 @@ const details = JSON.parse(JSON.stringify(c.window.GR_DETAIL));
 const products = JSON.parse(readFileSync(new URL('seo-products.json',root),'utf8')).products;
 
 test('all sale products have the same complete editorial, styling, palette, fabric and size content',()=>{
-  assert.deepEqual(validateDetailContent(products,details),{products:12,colors:65,looks:260});
+  assert.deepEqual(validateDetailContent(products,details),{products:21,colors:155,looks:620});
 });
 
 test('the build gate detects missing palettes, unavailable color looks and misleading photo captions',()=>{
@@ -44,7 +44,7 @@ test('all local editorial media exist and new studio image dimensions match thei
     const images=[...d.looks.flatMap(l=>Object.values(l.images)),d.colorBoard,...d.fabric.map(f=>f.src)];
     for(const src of images) if(!/^https?:/.test(src)) assert.ok(existsSync(new URL(src.replace(/^\//,''),root)),src);
     for(const f of [...d.fabric,{src:d.colorBoard,...d.colorBoardSize}]){
-      if(!f.src.includes('/v4/'))continue;
+      if(!/\/(?:v4|launch-20261016)\//.test(f.src))continue;
       const bytes=readFileSync(new URL(f.src.replace(/^\//,''),root));
       assert.equal(bytes.toString('ascii',0,4),'RIFF',f.src);
       assert.equal(bytes.toString('ascii',8,12),'WEBP',f.src);
@@ -53,6 +53,7 @@ test('all local editorial media exist and new studio image dimensions match thei
         const chunk=bytes.toString('ascii',n,n+4),len=bytes.readUInt32LE(n+4),pos=n+8;
         if(chunk==='VP8X')size={width:bytes.readUIntLE(pos+4,3)+1,height:bytes.readUIntLE(pos+7,3)+1};
         if(chunk==='VP8 ')size ||= {width:bytes.readUInt16LE(pos+6)&0x3fff,height:bytes.readUInt16LE(pos+8)&0x3fff};
+        if(chunk==='VP8L'){assert.equal(bytes[pos],0x2f);const bits=bytes.readUInt32LE(pos+1);size ||= {width:(bits&0x3fff)+1,height:((bits>>>14)&0x3fff)+1};}
         n=pos+len+(len&1);
       }
       assert.deepEqual(size,{width:f.width,height:f.height},f.src);

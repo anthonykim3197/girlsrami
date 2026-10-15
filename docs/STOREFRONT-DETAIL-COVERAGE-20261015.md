@@ -16,7 +16,7 @@ This release uses one storefront detail renderer and `detail-catalog.js` for the
 | RM495 | 오프듀티 V넥 니트 베스트 | 4 outfits × 5 colors | 5 colors × 8 frames | 5 colors × 8 frames | Gray sample, 8 originals |
 | RM471 | 슬라브 팝콘 브이넥 반팔 니트 | One reference color / one generated styling | — | — | — |
 | RM418 | 리싸이클 무지 박시 라운드 니트 | One reference color / one generated styling | — | — | — |
-| RM401 | 단가라 케이블 세미크롭 반팔 니트 | One reference color / one generated styling | — | — | — |
+| RM401 | 단가라 케이블 세미크롭 반팔 니트 | 1 outfit × all 5 colors | 5 colors × 8 views | 5 colors × 8 views | Separate actual front photos for all 5 colors |
 | RM429 | 뮤트레이어 V넥 니트 베스트 | 4 outfits × 6 colors | — | — | — |
 
 Every product has real-photo references and detail photographs, but these do not cover every sale color: RM382 has a public Sky front photo, and RM495 has the Gray eight-angle set. A source photo collection is not automatically a complete eight-angle set. Do not create a false rotation by repeating stills or mirroring opposite sides. Show controls only when the actual corresponding assets are available.
@@ -24,6 +24,16 @@ Every product has real-photo references and detail photographs, but these do not
 The RM495 product-only sheets are generated studio references based on actual photographs. Each sheet is 1254 × 1254 pixels containing four 627 × 627 cells. Front sheet order: 0°, 45°, 90°, 135°. Back sheet order: 180°, 225°, 270°, 315°. They are not pixel-preserving manual cutouts or a verified color calibration.
 
 ## Selected hero images for this release
+
+### RM401 completion, 2026-10-15
+
+The first rollout connected a Sky hero only and left four colors without model styling and all five colors without rotation media. This correction adds complete coverage for 곤색 / 베이지 / 초록 / 하늘 / 연핑: five standalone styling images, ten model rotation sheets and ten floating product rotation sheets. The existing Sky hero is retained; four matching color heroes and all twenty rotation sheets are newly generated from the actual product photographs and approved adult model reference.
+
+Each rotation uses two 2×2 sheets, ordered 0° / 45° / 90° / 135° and 180° / 225° / 270° / 315°. The renderer measures actual sheet dimensions, preserves portrait model proportions, and limits zoom to native cell size. No frames are produced by mirroring. The real source collection has front and oblique photographs, not a photographed eight-angle set: generated back/side views are visual reconstructions, not new physical measurements or pixel-preserving cutouts. Actual source photos remain separately available via “실물 사진 보기”. The existing image notice covers generated model and studio images.
+
+Runtime assets are versioned under `assets/detail/stripe-cable-half/v2/`. Full local prompts, source files and manifests are under `rm401-complete-20261015/`; the selected-file inventory is `docs/RM401-MEDIA-20261015.json`. Completing RM401 does not change the remaining gaps in other product rows above.
+
+### Initial rollout selection
 
 The approved selection is **eight newly generated hero images and four preserved existing hero images**. This count applies to the representative thumbnail/hero only; it does not mean every outfit, color or rotation frame was regenerated with one face.
 

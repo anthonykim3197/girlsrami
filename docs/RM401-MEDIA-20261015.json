@@ -1,0 +1,417 @@
+{
+  "date": "2026-10-15",
+  "product": "RM401",
+  "productId": "stripe-cable-half",
+  "saleColors": [
+    "곤색",
+    "베이지",
+    "초록",
+    "하늘",
+    "연핑"
+  ],
+  "coverage": {
+    "stylingColors": 5,
+    "model360Colors": 5,
+    "product360Colors": 5,
+    "viewsPerRotation": 8
+  },
+  "sources": {
+    "actualColorPhotos": "catalog-refresh-20261006/sources/8424655623/images/option-01 through option-05",
+    "identity": "detail-quality-20261014-collection-draft/model-character-sheet/girlsrami-model-reference-01-v1.png",
+    "promptsAndOriginals": "rm401-complete-20261015/{heroes,model360,product360}"
+  },
+  "method": "Built-in imagegen. Four new standalone color heroes; existing Sky hero retained. All twenty rotation sheets newly generated. WebP q92/m6 encoding without resizing. Separate left/right directions, no mirror-copy frames.",
+  "limits": [
+    "Generated back/side views are approximate reconstructions from available front/oblique photos, not a physical 3D scan.",
+    "Color visually referenced to source photographs; no verified gray-card calibration.",
+    "Native model rotation cell 512×768 and product cell 627×627; dedicated heroes and original photographs provide the separate close-up view."
+  ],
+  "totalBytes": 4218234,
+  "assets": [
+    {
+      "path": "assets/detail/stripe-cable-half/v2/looks/navy.webp",
+      "color": "곤색",
+      "kind": "looks",
+      "bytes": 133926,
+      "width": 1086,
+      "height": 1448,
+      "sha256": "c116da5885da868c373f9e6e33fd039d8c8c2cddc25a48ba61f6ec8b2217193a"
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v2/model360/navy-front.webp",
+      "color": "곤색",
+      "kind": "model360",
+      "bytes": 81182,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "e384e65defc583d814cf4618fa039395456936130891845a9db9bd5205399cad",
+      "cellWidth": 512,
+      "cellHeight": 768,
+      "angles": [
+        0,
+        45,
+        90,
+        135
+      ]
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v2/model360/navy-back.webp",
+      "color": "곤색",
+      "kind": "model360",
+      "bytes": 74302,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "398a8460a28f9a48cacf40cc43d1797b7a67a4c3724cbaa0751e031a3b8238a2",
+      "cellWidth": 512,
+      "cellHeight": 768,
+      "angles": [
+        180,
+        225,
+        270,
+        315
+      ]
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v2/product360/navy-front.webp",
+      "color": "곤색",
+      "kind": "product360",
+      "bytes": 250958,
+      "width": 1254,
+      "height": 1254,
+      "sha256": "32042c5a7b05ed3b05cadb75ed5876f5f11361dcb05bd789a295d118ec35d8f9",
+      "cellWidth": 627,
+      "cellHeight": 627,
+      "angles": [
+        0,
+        45,
+        90,
+        135
+      ]
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v2/product360/navy-back.webp",
+      "color": "곤색",
+      "kind": "product360",
+      "bytes": 210988,
+      "width": 1254,
+      "height": 1254,
+      "sha256": "8b1daa64adb22de36930f83d69d13cac41ebb729fb692c96e38cc70a956f313c",
+      "cellWidth": 627,
+      "cellHeight": 627,
+      "angles": [
+        180,
+        225,
+        270,
+        315
+      ]
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v2/looks/beige.webp",
+      "color": "베이지",
+      "kind": "looks",
+      "bytes": 147730,
+      "width": 1086,
+      "height": 1448,
+      "sha256": "ac439d2b5c689c680edc5f6709c9e2b08f4f72103ba95e1d3c224b9c2407ac2c"
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v2/model360/beige-front.webp",
+      "color": "베이지",
+      "kind": "model360",
+      "bytes": 80648,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "35e0d05385c3c2db8f8f705abc5077c6291678bdc65edc7ad0acdd78a22ad16f",
+      "cellWidth": 512,
+      "cellHeight": 768,
+      "angles": [
+        0,
+        45,
+        90,
+        135
+      ]
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v2/model360/beige-back.webp",
+      "color": "베이지",
+      "kind": "model360",
+      "bytes": 75526,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "aeeb69dd253f295615bfe54229c6345a7f6fcce3d9fedc5b85cc49869c65e019",
+      "cellWidth": 512,
+      "cellHeight": 768,
+      "angles": [
+        180,
+        225,
+        270,
+        315
+      ]
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v2/product360/beige-front.webp",
+      "color": "베이지",
+      "kind": "product360",
+      "bytes": 293122,
+      "width": 1254,
+      "height": 1254,
+      "sha256": "cc759f86cbf25ef0d00993298b128fdaa009a181c577670c63e21d4730ed3307",
+      "cellWidth": 627,
+      "cellHeight": 627,
+      "angles": [
+        0,
+        45,
+        90,
+        135
+      ]
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v2/product360/beige-back.webp",
+      "color": "베이지",
+      "kind": "product360",
+      "bytes": 282210,
+      "width": 1254,
+      "height": 1254,
+      "sha256": "12dcf3486835f62ba65ad6de0da19a599c67ea431174b78ab2fa09a6ca52215b",
+      "cellWidth": 627,
+      "cellHeight": 627,
+      "angles": [
+        180,
+        225,
+        270,
+        315
+      ]
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v2/looks/green.webp",
+      "color": "초록",
+      "kind": "looks",
+      "bytes": 152384,
+      "width": 1086,
+      "height": 1448,
+      "sha256": "9f0bffac88d2097fc84c6eadf2822383cc2f5f80c0bd073e23acd90965867c98"
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v2/model360/green-front.webp",
+      "color": "초록",
+      "kind": "model360",
+      "bytes": 83786,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "70da9c6a3d067415e4765f523bd09435d5475766a198e4e7962664ff2ede48be",
+      "cellWidth": 512,
+      "cellHeight": 768,
+      "angles": [
+        0,
+        45,
+        90,
+        135
+      ]
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v2/model360/green-back.webp",
+      "color": "초록",
+      "kind": "model360",
+      "bytes": 80062,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "a39b8cfb099a54092ff6781cfed439deba3e0f16f50eefa66cbcccea7e754352",
+      "cellWidth": 512,
+      "cellHeight": 768,
+      "angles": [
+        180,
+        225,
+        270,
+        315
+      ]
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v2/product360/green-front.webp",
+      "color": "초록",
+      "kind": "product360",
+      "bytes": 293774,
+      "width": 1254,
+      "height": 1254,
+      "sha256": "33855f36e37c189ead9dacf4fcfb82836ed460f52feae3e2c59f56dca8ba9830",
+      "cellWidth": 627,
+      "cellHeight": 627,
+      "angles": [
+        0,
+        45,
+        90,
+        135
+      ]
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v2/product360/green-back.webp",
+      "color": "초록",
+      "kind": "product360",
+      "bytes": 270746,
+      "width": 1254,
+      "height": 1254,
+      "sha256": "e496c8ae28e70fed1ea17ad11f1bf53744eace772026342b83e793c1363238d4",
+      "cellWidth": 627,
+      "cellHeight": 627,
+      "angles": [
+        180,
+        225,
+        270,
+        315
+      ]
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v2/looks/sky.webp",
+      "color": "하늘",
+      "kind": "looks",
+      "bytes": 146530,
+      "width": 1086,
+      "height": 1448,
+      "sha256": "07aaa02722d3d87cb0df7f247cd7e05c0e67c0452de485a47e30dd22dc061f1a"
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v2/model360/sky-front.webp",
+      "color": "하늘",
+      "kind": "model360",
+      "bytes": 78800,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "b851151f4d81688e8011e469b2b8dbcbb273005f08873bd7634f4d20308e0483",
+      "cellWidth": 512,
+      "cellHeight": 768,
+      "angles": [
+        0,
+        45,
+        90,
+        135
+      ]
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v2/model360/sky-back.webp",
+      "color": "하늘",
+      "kind": "model360",
+      "bytes": 74118,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "634c3079ecaa439b04b8a3706036c3f6b08e1ea5b2546a101b8dbc91a6e39c64",
+      "cellWidth": 512,
+      "cellHeight": 768,
+      "angles": [
+        180,
+        225,
+        270,
+        315
+      ]
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v2/product360/sky-front.webp",
+      "color": "하늘",
+      "kind": "product360",
+      "bytes": 298220,
+      "width": 1254,
+      "height": 1254,
+      "sha256": "b0e6e7338562c7260b5c2ddcc810456075fdec4f6c94bd0a6bee0fd2b67a75a9",
+      "cellWidth": 627,
+      "cellHeight": 627,
+      "angles": [
+        0,
+        45,
+        90,
+        135
+      ]
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v2/product360/sky-back.webp",
+      "color": "하늘",
+      "kind": "product360",
+      "bytes": 283978,
+      "width": 1254,
+      "height": 1254,
+      "sha256": "479d3adfbfbcb9369cffec4c19cdfc4e1a5da2348edad284fdf156b50f6f42bd",
+      "cellWidth": 627,
+      "cellHeight": 627,
+      "angles": [
+        180,
+        225,
+        270,
+        315
+      ]
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v2/looks/pink.webp",
+      "color": "연핑",
+      "kind": "looks",
+      "bytes": 139588,
+      "width": 1086,
+      "height": 1448,
+      "sha256": "a18773ffc0ceab08ae301ecae4d2a5624b6284f9f3b27697a9033f308e16d66b"
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v2/model360/pink-front.webp",
+      "color": "연핑",
+      "kind": "model360",
+      "bytes": 75456,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "8048a13b43f7bbca7310e34c77a557dfcd89d8bcb2244d1e6768d2e12d1cca53",
+      "cellWidth": 512,
+      "cellHeight": 768,
+      "angles": [
+        0,
+        45,
+        90,
+        135
+      ]
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v2/model360/pink-back.webp",
+      "color": "연핑",
+      "kind": "model360",
+      "bytes": 78068,
+      "width": 1024,
+      "height": 1536,
+      "sha256": "6665eb63050faf300c983512bdf9ec74e20c765d7bf024a7550061573464943f",
+      "cellWidth": 512,
+      "cellHeight": 768,
+      "angles": [
+        180,
+        225,
+        270,
+        315
+      ]
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v2/product360/pink-front.webp",
+      "color": "연핑",
+      "kind": "product360",
+      "bytes": 268800,
+      "width": 1254,
+      "height": 1254,
+      "sha256": "faa886e8affa7ad73bf46df3a22c78a7e5d97397feadc36e82884ca27bb611b2",
+      "cellWidth": 627,
+      "cellHeight": 627,
+      "angles": [
+        0,
+        45,
+        90,
+        135
+      ]
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v2/product360/pink-back.webp",
+      "color": "연핑",
+      "kind": "product360",
+      "bytes": 263332,
+      "width": 1254,
+      "height": 1254,
+      "sha256": "a08dcf3caeb652485f840412e7323d1886b54e96293abef5b42bf6e8e688ed94",
+      "cellWidth": 627,
+      "cellHeight": 627,
+      "angles": [
+        180,
+        225,
+        270,
+        315
+      ]
+    }
+  ]
+}

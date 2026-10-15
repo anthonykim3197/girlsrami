@@ -5,6 +5,18 @@
   const own = (obj, key) => obj && Object.prototype.hasOwnProperty.call(obj, key) ? obj[key] : undefined;
   const url = value => typeof value === 'string' && /^(?:https?:\/\/|\.?\.?\/|[a-zA-Z0-9_-])/.test(value) && !/^[^/]*:/.test(value.replace(/^https?:/, '')) ? value : '';
   const eight = list => Array.isArray(list) && list.length === 8 && list.every(x => url(x));
+  const positive = value => Number.isFinite(Number(value)) && Number(value) > 0 ? Number(value) : 0;
+  function rotation(value) {
+    if (eight(value)) return {frames:value};
+    if (eight(value?.frames)) return {frames:value.frames};
+    if (!Array.isArray(value?.sheets) || value.sheets.length !== 2 || !value.sheets.every(x => url(x))) return null;
+    const result = {sheets:value.sheets};
+    // Omitted dimensions are measured from the loaded sheet; legacy square cells remain supported.
+    const cellWidth = positive(value.cellWidth) || positive(value.cellSize), cellHeight = positive(value.cellHeight) || positive(value.cellSize);
+    if (cellWidth) result.cellWidth = cellWidth;
+    if (cellHeight) result.cellHeight = cellHeight;
+    return result;
+  }
   const iconPaths = {
     plus:'<path d="M12 5v14M5 12h14"/>',close:'<path d="m6 6 12 12M6 18 18 6"/>',
     chat:'<path d="M21 11a8 8 0 0 1-8 8H7l-5 3 1.5-6A8 8 0 1 1 21 11Z"/><path d="M7 9h8M7 13h5"/>',
@@ -31,11 +43,10 @@
     }
     const model360 = {}, product360 = {}, originals = {};
     colors.forEach(c => {
-      const frames = own(d.model360,c) || own(editorial.turntables,c)?.frames || (ai.turntable?.color === c ? ai.turntable.frames : null);
-      if (eight(frames)) model360[c] = frames;
-      const product = own(d.product360,c);
-      if (eight(product?.frames)) product360[c] = {frames:product.frames};
-      else if (product?.sheets?.length === 2 && product.sheets.every(x => url(x))) product360[c] = {sheets:product.sheets,cellSize:Number(product.cellSize) || 627};
+      const model = own(d.model360,c) || own(editorial.turntables,c) || (ai.turntable?.color === c ? ai.turntable : null), modelRotation = rotation(model);
+      if (modelRotation) model360[c] = eight(model) ? model : modelRotation;
+      const productRotation = rotation(own(d.product360,c));
+      if (productRotation) product360[c] = productRotation;
       const photos = own(d.originals,c);
       if (Array.isArray(photos)) originals[c] = photos.filter(f => url(f.src)).map(f => ({src:f.src,angle:Number.isFinite(Number(f.angle)) ? Number(f.angle) : null}));
       const verified = own(p.colorPhotos,c);
@@ -84,7 +95,7 @@
     // The cart validates the database catalog, independently from display-only size corrections.
     const backendSizes = (p.catalogSizes || p.sizes || []).map(s => typeof s === 'string' ? s : s.label);
     const cartReady = d.colors.length > 0 && d.sizes.length > 0 && !p.sizePending && d.sizes.every(s => backendSizes.includes(s));
-    root.innerHTML = `<div class="grsd-breadcrumb"><a href="shop.html">SHOP</a> / ${esc(p.category)}${code?' / '+esc(code):''}</div><div class="grsd-hero"><div class="grsd-media"><div class="grsd-mode" role="group" aria-label="상품 보기 방식">${hasModels?'<button type="button" data-mode="model">모델 착용</button>':''}${hasProducts?'<button type="button" data-mode="product">제품만 보기</button>':''}</div><div class="grsd-gallery-colors" aria-label="사진 색상 선택">${chips(true)}</div><figure class="grsd-stage" tabindex="0" aria-label="상품 이미지. 360도 보기에서 방향키로 회전할 수 있습니다."><img id="pd-img" alt="${esc(name)}" draggable="false" fetchpriority="high"><div class="grsd-sprite" role="img" hidden></div><span class="grsd-stage-label"></span><span class="grsd-loading" role="status" hidden>사진 불러오는 중</span><button type="button" class="grsd-zoom" aria-label="현재 상품 이미지 확대">${icon('plus')}</button></figure><div class="grsd-image-meta"><span class="grsd-caption" aria-live="polite"></span><span class="grsd-angle"></span></div><p class="grsd-media-note" role="status"></p><div class="grsd-gallery-tools"><div class="grsd-views" role="group" aria-label="모델 이미지 종류"><button type="button" data-view="look">코디 화보</button><button type="button" data-view="spin">${icon('rotate')}360° 착용</button></div><button class="grsd-original" type="button" hidden>실물 사진 보기</button></div><div class="grsd-looks" role="group" aria-label="코디 선택"></div><div class="grsd-spin" hidden><div class="grsd-rotation-toolbar"><button type="button" data-step="-1" aria-label="이전 각도">${icon('left')}</button><button type="button" class="grsd-play" aria-pressed="false">${icon('play')}<span>자동 회전</span></button><button type="button" data-step="1" aria-label="다음 각도">${icon('right')}</button></div><div class="grsd-angles" aria-label="사진 각도"></div><p class="grsd-rotation-hint">사진을 좌우로 밀어 돌려보세요.</p></div></div><div class="grsd-info"><div class="grsd-eyebrow">${p.newRelease||p.badges?.some(b=>/신상|new/i.test(b))?'<span class="grsd-new">NEW</span>':''}<span>GIRLSRAMI KNIT EDIT</span></div><h1>${esc(name)}</h1>${d.lead?`<p class="grsd-lead">${esc(d.lead)}</p>`:''}${Number.isFinite(price)?`<p class="grsd-price">${price.toLocaleString('ko-KR')}<span>원</span></p>`:''}<div class="grsd-options"><div class="grsd-color-heading"><span>COLOR</span><strong id="color-name">${esc(state.color)}</strong><small>${d.colors.length} COLORS</small></div><div class="grsd-swatches" id="color-opts" role="group" aria-label="판매 색상">${chips(false)}</div><div class="grsd-size-row"><span>SIZE</span><div id="size-opts">${d.sizes.length?d.sizes.map(s=>`<button type="button" class="size-opt${s===selectedSize?' active':''}" data-s="${esc(s)}" aria-pressed="${s===selectedSize}">${esc(s)}</button>`).join(''):'<span>스마트스토어에서 확인</span>'}</div>${d.measurements.length?'<a href="#size">실측 확인</a>':''}</div></div><a class="grsd-purchase" href="${esc(store)}" target="_blank" rel="noopener">${icon('bag')}<span>스마트스토어에서 구매하기</span>${icon('arrow')}</a><div class="grsd-utility"><a href="${TALK}" target="_blank" rel="noopener">${icon('chat')}톡톡 문의</a><button type="button" id="share-btn">${icon('share')}링크 공유</button></div><button type="button" class="grsd-cart" id="add-cart"${!cartReady?' disabled':''}>${icon('bag')}장바구니에 담기</button><p id="product-cart-status" role="status">${!cartReady?'구매는 스마트스토어에서 바로 진행할 수 있어요.':''}</p><p class="grsd-shipping-note">색상 선택과 결제는 스마트스토어에서 진행됩니다.<br>배송 및 교환 조건은 구매 페이지에서 확인해 주세요.</p></div></div><dialog class="grsd-lightbox" aria-label="상품 이미지 확대"><button type="button" class="grsd-lightbox-close" aria-label="확대 이미지 닫기">${icon('close')}</button><img alt="확대 상품 이미지"><div class="grsd-lightbox-sprite" hidden></div></dialog>`;
+    root.innerHTML = `<div class="grsd-breadcrumb"><a href="shop.html">SHOP</a> / ${esc(p.category)}${code?' / '+esc(code):''}</div><div class="grsd-hero"><div class="grsd-media"><div class="grsd-mode" role="group" aria-label="상품 보기 방식">${hasModels?'<button type="button" data-mode="model">모델 착용</button>':''}${hasProducts?'<button type="button" data-mode="product">제품만 보기</button>':''}</div><div class="grsd-gallery-colors" aria-label="사진 색상 선택">${chips(true)}</div><figure class="grsd-stage" tabindex="0" aria-label="상품 이미지. 360도 보기에서 방향키로 회전할 수 있습니다."><img id="pd-img" alt="${esc(name)}" draggable="false" fetchpriority="high"><div class="grsd-sprite" role="img" hidden></div><span class="grsd-stage-label"></span><span class="grsd-loading" role="status" hidden>사진 불러오는 중</span><button type="button" class="grsd-zoom" aria-label="현재 상품 이미지 확대">${icon('plus')}</button></figure><div class="grsd-image-meta"><span class="grsd-caption" aria-live="polite"></span><span class="grsd-angle"></span></div><p class="grsd-media-note" role="status"></p><div class="grsd-gallery-tools"><div class="grsd-views" role="group" aria-label="모델 이미지 종류"><button type="button" data-view="look">코디 화보</button><button type="button" data-view="spin">${icon('rotate')}360° 착용</button></div><button class="grsd-original" type="button" hidden>실물 사진 보기</button></div><div class="grsd-looks" role="group" aria-label="코디 선택"></div><div class="grsd-spin" hidden><div class="grsd-rotation-toolbar"><button type="button" data-step="-1" aria-label="이전 각도">${icon('left')}</button><button type="button" class="grsd-play" aria-pressed="false">${icon('play')}<span>자동 회전</span></button><button type="button" data-step="1" aria-label="다음 각도">${icon('right')}</button></div><div class="grsd-angles" aria-label="사진 각도"></div><p class="grsd-rotation-hint">사진을 좌우로 밀어 돌려보세요.</p></div></div><div class="grsd-info"><div class="grsd-eyebrow">${p.newRelease||p.badges?.some(b=>/신상|new/i.test(b))?'<span class="grsd-new">NEW</span>':''}<span>GIRLSRAMI KNIT EDIT</span></div><h1>${esc(name)}</h1>${d.lead?`<p class="grsd-lead">${esc(d.lead)}</p>`:''}${Number.isFinite(price)?`<p class="grsd-price">${price.toLocaleString('ko-KR')}<span>원</span></p>`:''}<div class="grsd-options"><div class="grsd-color-heading"><span>COLOR</span><strong id="color-name">${esc(state.color)}</strong><small>${d.colors.length} COLORS</small></div><div class="grsd-swatches" id="color-opts" role="group" aria-label="판매 색상">${chips(false)}</div><div class="grsd-size-row"><span>SIZE</span><div id="size-opts">${d.sizes.length?d.sizes.map(s=>`<button type="button" class="size-opt${s===selectedSize?' active':''}" data-s="${esc(s)}" aria-pressed="${s===selectedSize}">${esc(s)}</button>`).join(''):'<span>스마트스토어에서 확인</span>'}</div>${d.measurements.length?'<a href="#size">실측 확인</a>':''}</div></div><a class="grsd-purchase" href="${esc(store)}" target="_blank" rel="noopener">${icon('bag')}<span>스마트스토어에서 구매하기</span>${icon('arrow')}</a><div class="grsd-utility"><a href="${TALK}" target="_blank" rel="noopener">${icon('chat')}톡톡 문의</a><button type="button" id="share-btn">${icon('share')}링크 공유</button></div><button type="button" class="grsd-cart" id="add-cart"${!cartReady?' disabled':''}>${icon('bag')}장바구니에 담기</button><p id="product-cart-status" role="status">${!cartReady?'구매는 스마트스토어에서 바로 진행할 수 있어요.':''}</p><p class="grsd-shipping-note">색상 선택과 결제는 스마트스토어에서 진행됩니다.<br>배송 및 교환 조건은 구매 페이지에서 확인해 주세요.</p></div></div><dialog class="grsd-lightbox" aria-label="상품 이미지 확대"><button type="button" class="grsd-lightbox-close" aria-label="확대 이미지 닫기">${icon('close')}</button><img alt="확대 상품 이미지"><div class="grsd-lightbox-sprite" hidden></div><span class="grsd-loading grsd-lightbox-status" role="status" hidden></span></dialog>`;
     const sectionHead = (title, index, desc='')=>`<div class="grsd-section-heading"><div><h2>${title}</h2>${desc?`<p>${esc(desc)}</p>`:''}</div><span>${index}</span></div>`;
     const desc = document.querySelector('#pd-desc'); desc.className='grsd grsd-detail';
     desc.innerHTML = `<section class="grsd-story"><span class="grsd-eyebrow">GIRLSRAMI KNIT EDIT</span><h2>${esc(d.storyTitle)}</h2>${d.storyParagraphs.map(t=>`<p>${esc(t)}</p>`).join('')}${d.points.length?`<div class="grsd-points">${d.points.map(x=>`<article><b>${esc(x.title)}</b><p>${esc(x.text)}</p></article>`).join('')}</div>`:''}</section>${d.looks.some(l=>l.items.length)?`<section class="grsd-section" id="styling">${sectionHead('Styling','01 / HOW TO WEAR')}<div class="grsd-style-notes">${d.looks.filter(l=>l.items.length).map((l,i)=>`<article><small>LOOK ${String(i+1).padStart(2,'0')}</small><h3>${esc(l.label)}</h3><p>${l.items.map(esc).join(' · ')}</p></article>`).join('')}</div></section>`:''}${d.colorBoard?`<section class="grsd-section" id="colors">${sectionHead('Color Palette','02 / COLORS')}<figure><button class="grsd-image-button" type="button" data-full-image="${esc(d.colorBoard)}" aria-label="색상 이미지 확대"><img src="${esc(d.colorBoard)}" alt="${esc(name)} 판매 색상 ${esc(d.colors.join(', '))}" loading="lazy"></button><figcaption>${esc(d.colors.join(' · '))}</figcaption></figure></section>`:''}<section class="grsd-section" id="fabric">${sectionHead('Fabric Detail','03 / TEXTURE')}<div class="grsd-fabric-layout"><div class="grsd-fabric-photos">${d.fabric.map(f=>`<figure><button class="grsd-image-button" type="button" data-full-image="${esc(f.src)}" aria-label="원단 디테일 확대"><img src="${esc(f.src)}" alt="${esc(f.caption || name+' 원단 디테일')}" loading="lazy"></button>${f.caption?`<figcaption>${esc(f.caption)}</figcaption>`:''}</figure>`).join('')}</div><div class="grsd-fabric-copy"><span class="grsd-eyebrow">FABRIC & CARE</span><h3>${esc(d.materialRaw || p.material || '소재와 관리')}</h3>${d.materialNote?`<p>${esc(d.materialNote)}</p>`:''}${p.care?`<p>${esc(p.care)}</p>`:''}</div></div></section>${d.measurements.length?`<section class="grsd-section" id="size">${sectionHead('Size Guide','04 / FIT & SIZE','잘 맞는 옷을 옆에 두고, 같은 위치를 비교해 보세요.')}<div class="grsd-size-layout"><figure class="grsd-measurement-art">${measurementDiagram(p,d)}<figcaption>측정 위치를 안내하는 도식입니다.</figcaption></figure><div><div class="grsd-size-kicker"><strong>${esc(d.sizes.join(' / ') || '사이즈 확인 중')}</strong><span>단면 기준${d.unit?' · '+esc(d.unit):' · 단위 확인 중'}</span></div><table class="grsd-measure-table"><caption class="grsd-sr-only">${esc(name)} 실측</caption><thead><tr><th scope="col">측정 위치</th><th scope="col">실측${d.unit?' ('+esc(d.unit)+')':''}</th></tr></thead><tbody>${d.measurements.map((m,i)=>`<tr><td><span class="grsd-number">${i+1}</span>${esc(m.label)}</td><td><b>${esc(m.value)}</b></td></tr>`).join('')}</tbody></table><p class="grsd-size-note">상품을 평평하게 놓고 잰 단면 수치입니다.<br>측정 위치와 방법에 따라 차이가 있을 수 있습니다.${!d.measurementVerified?'<br>측정 단위 확인 전에는 수치만으로 사이즈를 결정하지 마세요.':''}</p></div></div></section>`:''}<dl class="grsd-product-info">${[['STYLE NO.',code],['SIZE',d.sizes.join(' / ')],['MADE IN',p.origin],['MANUFACTURER',p.manufacturer]].filter(([,v])=>v).map(([k,v])=>`<div><dt>${k}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl><p class="grsd-disclosure">모델 착용 및 일부 연출 이미지는 AI로 제작되어 실제 상품과 차이가 있을 수 있습니다. 색상과 짜임은 실물 사진을, 크기는 실측표를 함께 참고해 주세요. 함께 코디한 의류와 소품은 판매 구성에 포함되지 않습니다.</p>`;
@@ -100,13 +111,14 @@
     bindGallery();
     function bindGallery() {
       const stage=q('.grsd-stage'), image=q('#pd-img'), sprite=q('.grsd-sprite'), loading=q('.grsd-loading'), caption=q('.grsd-caption'), note=q('.grsd-media-note'), angles=q('.grsd-angles'), box=q('.grsd-lightbox');
-      let serial=0, timer=null, generation=0, displayed=null, pointer=null, opener=null, lookKey=null, angleKey=null;
+      let serial=0, zoomSerial=0, timer=null, generation=0, displayed=null, pointer=null, opener=null, lookKey=null, angleKey=null;
       const loaded=new Map();
-      function load(src) { if(!loaded.has(src))loaded.set(src,new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>resolve(src);img.onerror=()=>{loaded.delete(src);reject(new Error('image'));};img.src=src;}));return loaded.get(src); }
+      function load(src) { if(!loaded.has(src))loaded.set(src,new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>resolve({src,width:img.naturalWidth,height:img.naturalHeight});img.onerror=()=>{loaded.delete(src);reject(new Error('image'));};img.src=src;}));return loaded.get(src); }
       const selectedLook=()=>d.looks.find(l=>l.id===state.look) || d.looks[0];
       function source() {
         if(state.mode==='model') {
-          if(state.view==='spin'&&eight(own(d.model360,state.color)))return {frames:d.model360[state.color],color:state.color,kind:'model',spin:true};
+          const model = rotation(own(d.model360,state.color));
+          if(state.view==='spin'&&model)return {...model,color:state.color,kind:'model',spin:true};
           const look=selectedLook(),exact=url(own(look?.images,state.color));
           if(exact)return {frames:[exact],color:state.color,kind:'model',look};
           const real = own(d.originals,state.color);
@@ -114,7 +126,7 @@
           const available=Object.keys(look?.images||{})[0];
           if(available)return {frames:[look.images[available]],color:available,kind:'model',look,sample:true};
           const turnColor=Object.keys(d.model360)[0];
-          if(turnColor)return {frames:d.model360[turnColor],color:turnColor,kind:'model',spin:true,sample:turnColor!==state.color};
+          if(turnColor)return {...rotation(d.model360[turnColor]),color:turnColor,kind:'model',spin:true,sample:turnColor!==state.color};
         }
         const product=own(d.product360,state.color);
         if(product)return {...product,color:state.color,kind:'product',spin:true};
@@ -131,7 +143,7 @@
         qq('[data-c],[data-gallery-color]').forEach(b=>{const on=(b.dataset.c||b.dataset.galleryColor)===state.color;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});
         q('#color-name').textContent=state.color;
         q('.grsd-views').hidden=state.mode!=='model';
-        qq('[data-view]').forEach(b=>{b.hidden=b.dataset.view==='spin'?!eight(own(d.model360,state.color)):!d.looks.length;b.setAttribute('aria-pressed',String(b.dataset.view===state.view));});
+        qq('[data-view]').forEach(b=>{b.hidden=b.dataset.view==='spin'?!rotation(own(d.model360,state.color)):!d.looks.length;b.setAttribute('aria-pressed',String(b.dataset.view===state.view));});
         q('.grsd-looks').hidden=state.mode!=='model'||state.view!=='look';
         const nextLookKey = `${state.color}|${state.look}`;
         if (nextLookKey !== lookKey) { lookKey = nextLookKey; q('.grsd-looks').innerHTML=d.looks.map(l=>{const exact=url(own(l.images,state.color)),src=exact||Object.values(l.images)[0];return `<button type="button" data-look="${esc(l.id)}" aria-pressed="${l.id===state.look}"${!exact?' disabled':''}><img src="${esc(src)}" alt="" width="90" height="112" loading="lazy"><span>${esc(l.label)}</span>${!exact?'<small>선택 색상 화보 없음</small>':''}</button>`;}).join(''); }
@@ -149,22 +161,23 @@
         if(!current){image.hidden=true;sprite.hidden=true;note.textContent='현재 등록된 사진이 없습니다. 스마트스토어에서 상품 사진을 확인해 주세요.';q('.grsd-zoom').disabled=true;return false;}
         const frame=state.frame,src=current.sheets?current.sheets[frame<4?0:1]:current.frames[frame];
         loading.hidden=false;q('.grsd-zoom').disabled=true;
-        try { await load(src);if(token!==serial)return false;
+        try { const loadedImage=await load(src);if(token!==serial)return false;
           image.hidden=Boolean(current.sheets);sprite.hidden=!current.sheets;
           const position=`${frame%2*100}% ${Math.floor(frame%4/2)*100}%`;
-          if(current.sheets){sprite.style.backgroundImage=`url(${JSON.stringify(src)})`;sprite.style.backgroundPosition=position;sprite.setAttribute('aria-label',`${name} ${current.color} 제품 ${frame*45}도`);}
-          else {image.src=src;image.alt=`${name} ${current.color} ${current.spin?frame*45+'도':current.look?.label||'실물 사진'}`;}
-          displayed={src,position,sprite:Boolean(current.sheets),cellSize:current.cellSize};
-          stage.classList.toggle('is-product',current.kind!=='model');stage.classList.toggle('is-spin',Boolean(current.spin));
+          const cellWidth=current.sheets?(positive(current.cellWidth)||loadedImage.width/2):0,cellHeight=current.sheets?(positive(current.cellHeight)||loadedImage.height/2):0;
+          if(current.sheets){sprite.style.backgroundImage=`url(${JSON.stringify(src)})`;sprite.style.backgroundPosition=position;stage.style.setProperty('--grsd-frame-aspect',`${cellWidth} / ${cellHeight}`);sprite.setAttribute('aria-label',`${name} ${current.color} ${current.kind==='model'?'모델 착용':'제품'} ${frame*45}도`);}
+          else {image.src=src;image.alt=`${name} ${current.color} ${current.spin?frame*45+'도':current.look?.label||'실물 사진'}`;stage.style.removeProperty('--grsd-frame-aspect');}
+          displayed={src,position,sprite:Boolean(current.sheets),cellWidth,cellHeight};
+          stage.classList.toggle('is-product',current.kind!=='model');stage.classList.toggle('is-spin',Boolean(current.spin));stage.classList.toggle('has-sprite',Boolean(current.sheets));
           q('.grsd-stage-label').textContent=current.kind==='model'?(current.spin?'360° STYLING':'STYLING'):current.kind==='original'?'PRODUCT PHOTO':'PRODUCT VIEW';
           caption.textContent=`${current.color} · ${current.spin?'8방향':current.look?.label||'실물 사진'}`;
           q('.grsd-angle').textContent=current.spin?frame*45+'° / 360°':code;
           note.textContent=current.modelUnavailable?'선택 색상은 착용 화보 대신 실제 상품 사진으로 보여드립니다.':current.sample?`선택 옵션은 ${state.color}입니다. 현재 사진은 ${current.color} 촬영 샘플로, 선택 색상 사진과 다릅니다.`:'';
           q('.grsd-zoom').disabled=false;
           return true;
-        }catch{if(token===serial){stop();note.textContent='사진을 불러오지 못했어요. 색상이나 각도를 다시 선택해 주세요.';}return false;}finally{if(token===serial)loading.hidden=true;}
+        }catch{if(token===serial){stop();image.hidden=true;sprite.hidden=true;displayed=null;caption.textContent='';q('.grsd-stage-label').textContent='';q('.grsd-angle').textContent='';note.textContent='사진을 불러오지 못했어요. 색상이나 각도를 다시 선택해 주세요.';}return false;}finally{if(token===serial)loading.hidden=true;}
       }
-      function change(values){stop();Object.assign(state,values);if(state.mode==='model'&&state.view==='spin'&&!eight(own(d.model360,state.color))&&d.looks.length)state.view='look';show();}
+      function change(values){stop();Object.assign(state,values);if(state.mode==='model'&&state.view==='spin'&&!rotation(own(d.model360,state.color))&&d.looks.length)state.view='look';show();}
       root.addEventListener('click',e=>{
         const b=e.target.closest('button');if(!b)return;
         if(b.matches('[data-c],[data-gallery-color]'))change({color:b.dataset.c||b.dataset.galleryColor});
@@ -182,11 +195,36 @@
       const release=()=>{pointer=null;};stage.addEventListener('pointerup',release);stage.addEventListener('pointercancel',release);
       document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
       if('IntersectionObserver'in window)new IntersectionObserver(entries=>{if(!entries[0].isIntersecting)stop();}).observe(stage);
-      function zoom(data,button){if(!data)return;stop();opener=button;const img=box.querySelector('img'),sp=box.querySelector('.grsd-lightbox-sprite');img.hidden=data.sprite;sp.hidden=!data.sprite;if(data.sprite){sp.style.backgroundImage=`url(${JSON.stringify(data.src)})`;sp.style.backgroundPosition=data.position;sp.style.setProperty('--grsd-cell',`${data.cellSize||627}px`);}else img.src=data.src;box.showModal();}
+      async function zoom(data,button){
+        if(!data)return;
+        stop();opener=button;const token=++zoomSerial;
+        const img=box.querySelector('img'),sp=box.querySelector('.grsd-lightbox-sprite'),status=box.querySelector('.grsd-lightbox-status');
+        img.hidden=true;sp.hidden=true;img.removeAttribute('src');
+        status.textContent='사진 불러오는 중';status.hidden=Boolean(data.sprite);
+        if(!box.open)box.showModal();
+        if(data.sprite){
+          sp.style.backgroundImage=`url(${JSON.stringify(data.src)})`;sp.style.backgroundPosition=data.position;
+          sp.style.setProperty('--grsd-cell-width',`${data.cellWidth}px`);sp.style.setProperty('--grsd-cell-height',`${data.cellHeight}px`);
+          sp.style.setProperty('--grsd-cell-ratio',String(data.cellWidth/data.cellHeight));sp.hidden=false;
+          return;
+        }
+        try{
+          await load(data.src);
+          if(token!==zoomSerial||!box.open)return;
+          img.src=data.src;
+          if(img.decode)await img.decode();
+          if(token!==zoomSerial||!box.open)return;
+          img.hidden=false;status.hidden=true;
+        }catch{
+          if(token!==zoomSerial||!box.open)return;
+          img.hidden=true;img.removeAttribute('src');status.hidden=false;
+          status.textContent='사진을 불러오지 못했어요. 창을 닫고 다시 시도해 주세요.';
+        }
+      }
       q('.grsd-zoom').onclick=e=>zoom(displayed,e.currentTarget);
       q('.grsd-original').onclick=e=>{const current=source(),originals=own(d.originals,current?.color);if(originals?.length)zoom({src:(originals.find(x=>x.angle===state.frame*45)||originals[0]).src,sprite:false},e.currentTarget);};
       desc.querySelectorAll('[data-full-image]').forEach(b=>b.onclick=()=>zoom({src:b.dataset.fullImage,sprite:false},b));
-      box.querySelector('button').onclick=()=>box.close();box.addEventListener('close',()=>opener?.focus());box.addEventListener('click',e=>{if(e.target===box)box.close();});
+      box.querySelector('button').onclick=()=>box.close();box.addEventListener('close',()=>{zoomSerial++;box.querySelector('img').hidden=true;box.querySelector('.grsd-lightbox-sprite').hidden=true;box.querySelector('.grsd-lightbox-status').hidden=true;opener?.focus();});box.addEventListener('click',e=>{if(e.target===box)box.close();});
       q('#share-btn').onclick=async()=>{const canonical=new URL(helpers.productHref(p),'https://girlslami.com/').href;try{await navigator.clipboard.writeText(canonical);GR.toast?.('상품 링크를 복사했습니다.');}catch{window.prompt('상품 링크를 복사해 주세요.',canonical);}};
       show();
     }

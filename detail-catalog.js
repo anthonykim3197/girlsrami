@@ -1589,15 +1589,83 @@ window.GR_DETAIL = {
     "looks": [
       {
         "id": "signature",
-        "label": "데일리 스타일링",
-        "items": [],
+        "label": "화이트 팬츠 스타일링",
+        "items": [
+          "화이트 스트레이트 팬츠"
+        ],
         "images": {
-          "하늘": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/stripe-cable-half/ai-rm401-sky-blue-fullbody-webp-1778a3ad675a.webp"
+          "곤색": "assets/detail/stripe-cable-half/v2/looks/navy.webp",
+          "베이지": "assets/detail/stripe-cable-half/v2/looks/beige.webp",
+          "초록": "assets/detail/stripe-cable-half/v2/looks/green.webp",
+          "하늘": "assets/detail/stripe-cable-half/v2/looks/sky.webp",
+          "연핑": "assets/detail/stripe-cable-half/v2/looks/pink.webp"
         }
       }
     ],
-    "model360": {},
-    "product360": {},
+    "model360": {
+      "곤색": {
+        "sheets": [
+          "assets/detail/stripe-cable-half/v2/model360/navy-front.webp",
+          "assets/detail/stripe-cable-half/v2/model360/navy-back.webp"
+        ]
+      },
+      "베이지": {
+        "sheets": [
+          "assets/detail/stripe-cable-half/v2/model360/beige-front.webp",
+          "assets/detail/stripe-cable-half/v2/model360/beige-back.webp"
+        ]
+      },
+      "초록": {
+        "sheets": [
+          "assets/detail/stripe-cable-half/v2/model360/green-front.webp",
+          "assets/detail/stripe-cable-half/v2/model360/green-back.webp"
+        ]
+      },
+      "하늘": {
+        "sheets": [
+          "assets/detail/stripe-cable-half/v2/model360/sky-front.webp",
+          "assets/detail/stripe-cable-half/v2/model360/sky-back.webp"
+        ]
+      },
+      "연핑": {
+        "sheets": [
+          "assets/detail/stripe-cable-half/v2/model360/pink-front.webp",
+          "assets/detail/stripe-cable-half/v2/model360/pink-back.webp"
+        ]
+      }
+    },
+    "product360": {
+      "곤색": {
+        "sheets": [
+          "assets/detail/stripe-cable-half/v2/product360/navy-front.webp",
+          "assets/detail/stripe-cable-half/v2/product360/navy-back.webp"
+        ]
+      },
+      "베이지": {
+        "sheets": [
+          "assets/detail/stripe-cable-half/v2/product360/beige-front.webp",
+          "assets/detail/stripe-cable-half/v2/product360/beige-back.webp"
+        ]
+      },
+      "초록": {
+        "sheets": [
+          "assets/detail/stripe-cable-half/v2/product360/green-front.webp",
+          "assets/detail/stripe-cable-half/v2/product360/green-back.webp"
+        ]
+      },
+      "하늘": {
+        "sheets": [
+          "assets/detail/stripe-cable-half/v2/product360/sky-front.webp",
+          "assets/detail/stripe-cable-half/v2/product360/sky-back.webp"
+        ]
+      },
+      "연핑": {
+        "sheets": [
+          "assets/detail/stripe-cable-half/v2/product360/pink-front.webp",
+          "assets/detail/stripe-cable-half/v2/product360/pink-back.webp"
+        ]
+      }
+    },
     "originals": {
       "곤색": [
         {
@@ -1678,7 +1746,7 @@ window.GR_DETAIL = {
     "size": "FREE",
     "sizeUnit": "cm",
     "measurementVerified": true,
-    "thumbnail": "assets/detail/stripe-cable-half/hero-reference-v1.webp",
+    "thumbnail": "assets/detail/stripe-cable-half/v2/looks/sky.webp",
     "thumbnailColor": "하늘",
     "materialRaw": "아크릴 100%",
     "materialComplete": true,

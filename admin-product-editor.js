@@ -4,6 +4,19 @@ import {
   validateInventoryProduct
 } from './admin-inventory.js';
 
+export function serializeProductSizeFields(value) {
+  const sizes = String(value ?? '').split('\n').filter(line => line.trim()).map(line => {
+    const [label,chestHalf,length,verified] = line.split(',').map(value => value.trim());
+    return {label,chestHalf:chestHalf ? Number(chestHalf) : null,length:length ? Number(length) : null,verified:verified === '확인'};
+  });
+  // This form explicitly accepts measurements in cm. Clear pending only when every row is confirmed.
+  const confirmed = sizes.length > 0 && sizes.every(size =>
+    size.label && !/미정|미확정|확인|예정|unknown|pending|tbd/i.test(size.label) && size.verified &&
+    Number.isFinite(size.chestHalf) && size.chestHalf > 0 && Number.isFinite(size.length) && size.length > 0
+  );
+  return {sizes,...(confirmed ? {sizePending:false,measurementUnit:'cm'} : {})};
+}
+
 export function createProductInventoryAdmin(deps) {
   const {getClient,getUser,Q,query,requireUser,escape,priceLabel,input,select,find,runForm,setStatus,formValues,validateProduct} = deps;
 
@@ -186,12 +199,9 @@ export function createProductInventoryAdmin(deps) {
         runBusy(async () => {
           const values = formValues(form);
           const nextId = initialProduct && version === 0 ? values.productId : productId;
-          const sizes = values.sizes.split('\n').filter(line => line.trim()).map(line => {
-            const [label,chestHalf,length,verified] = line.split(',').map(value => value.trim());
-            return {label,chestHalf:chestHalf ? Number(chestHalf) : null,length:length ? Number(length) : null,verified:verified === '확인'};
-          });
+          const sizeFields = serializeProductSizeFields(values.sizes);
           const inventoryProduct = validateInventoryProduct({
-            ...product,id:nextId,name:values.name,desc:values.desc,line:values.line,category:values.category,status:values.status,storeUrl:values.storeUrl,styleCode:values.styleCode,colors:colors(),variants:currentVariantRows(),price:Number(values.price),sizes,photoVerified:values.photoVerified === 'on'
+            ...product,id:nextId,name:values.name,desc:values.desc,line:values.line,category:values.category,status:values.status,storeUrl:values.storeUrl,styleCode:values.styleCode,colors:colors(),variants:currentVariantRows(),price:Number(values.price),...sizeFields,photoVerified:values.photoVerified === 'on'
           },mergedProducts());
 
           const colorPhotos = Object.fromEntries((await Promise.all([...colorPhotoContainer.querySelectorAll('[data-photo-color]')].map(async row => {

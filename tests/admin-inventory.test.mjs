@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {serializeProductSizeFields} from '../admin-product-editor.js';
 
 import {
   inventoryRowsForColors,
@@ -110,4 +111,22 @@ test('admin search finds name, style code and color SKU without case sensitivity
   assert.equal(productMatchesAdminSearch(product, 'rm382'), true);
   assert.equal(productMatchesAdminSearch(product, 'cream'), true);
   assert.equal(productMatchesAdminSearch(product, 'rm495'), false);
+});
+
+test('confirmed size measurements clear pending and record the form unit without changing other product fields', () => {
+  const before = {price:12900,stock:100,status:'active',variants:[{color:'크림',sku:'NVR-RM495-CREAM',stock:25}],sizePending:true,measurementUnit:''};
+  const after = {...before,...serializeProductSizeFields(' FREE, 55, 46, 확인 ')};
+  assert.deepEqual(after,{...before,sizePending:false,measurementUnit:'cm',sizes:[{label:'FREE',chestHalf:55,length:46,verified:true}]});
+  assert.deepEqual(serializeProductSizeFields('M, 52, 54, 확인\nL, 55, 56, 확인'),{
+    sizes:[{label:'M',chestHalf:52,length:54,verified:true},{label:'L',chestHalf:55,length:56,verified:true}],sizePending:false,measurementUnit:'cm'
+  });
+});
+
+test('unknown, incomplete, unverified or invalid size rows never clear the existing pending state', () => {
+  for (const input of ['', '미정, 55, 46, 확인', ', 55, 46, 확인', 'FREE, , 46, 확인', 'FREE, 55, 46,', 'FREE, 0, 46, 확인', 'FREE, -5, 46, 확인', 'FREE, NaN, 46, 확인', 'FREE, 55, Infinity, 확인', 'M, 52, 54, 확인\nL, 55, 56, 미확인']) {
+    const fields = serializeProductSizeFields(input);
+    assert.equal(Object.hasOwn(fields,'sizePending'),false,input);
+    assert.equal(Object.hasOwn(fields,'measurementUnit'),false,input);
+    assert.equal({...{sizePending:true},...fields}.sizePending,true,input);
+  }
 });

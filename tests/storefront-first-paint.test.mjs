@@ -13,6 +13,11 @@ test('all sale pages ship the finished gallery, size guide, reviews and navigati
     assert.match(html,/<img id="pd-img" src="[^"]+"/,p.id);
     assert.ok(html.includes('aria-label="판매 색상"'),p.id);
     assert.ok(html.includes('id="size"'),p.id);
+    const sections=['id="styling"','id="colors"','id="fabric"','id="size"','id="pd-reviews"','id="related-grid"'];
+    const positions=sections.map(section=>html.indexOf(section));
+    assert.ok(positions.every((position,i)=>position>=0 && (!i || position>positions[i-1])),`${p.id}: detail section order`);
+    assert.match(html,/<details class="grsd-source-photos"><summary>촬영 원본 확인<\/summary>/,p.id);
+    assert.equal((html.match(/data-look="/g)||[]).length,4,`${p.id}: initial four styling choices`);
     assert.ok(html.includes('grsd-review-guide'),p.id);
     assert.ok(html.includes('<nav class="nav">'),p.id);
     assert.doesNotMatch(html,/<div class="pd" id="pd">/,p.id);

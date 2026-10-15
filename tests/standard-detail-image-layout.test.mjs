@@ -26,3 +26,17 @@ test('every current fabric image and color board has measured size metadata befo
     }
   }
 });
+
+test('source photos and palette arrangement survive normalization without mixing generated files into originals',()=>{
+  const normalized=context.window.GRStandardDetail.normalize({id:'fixture',name:'니트',colors:['크림','차콜']},{
+    colorOrder:['차콜','크림'],
+    fabric:[{src:'/studio.webp',caption:'스튜디오 디테일',width:1254,height:1254,mediaKind:'studio-edit'}],
+    fabricOriginals:[{src:'/original.jpg',width:860,height:860,mediaKind:'photo'},{src:'/generated.webp',mediaKind:'studio-edit'}]
+  });
+  assert.equal(normalized.fabric[0].mediaKind,'studio-edit');
+  assert.equal(normalized.fabricOriginals.length,1);
+  assert.equal(normalized.fabricOriginals[0].src,'/original.jpg');
+  assert.deepEqual(Array.from(normalized.colorOrder),['차콜','크림']);
+  const invalid=context.window.GRStandardDetail.normalize({id:'fixture',name:'니트',colors:['크림','차콜']},{colorOrder:['크림','크림']});
+  assert.deepEqual(Array.from(invalid.colorOrder),['크림','차콜']);
+});

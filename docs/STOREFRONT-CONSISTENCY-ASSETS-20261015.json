@@ -1,0 +1,1548 @@
+{
+  "date": "2026-10-15",
+  "products": [
+    {
+      "code": "RM385",
+      "id": "cable-vneck-knit",
+      "name": "케이블 브이넥 꽈배기 니트",
+      "colors": 9,
+      "looks": 4,
+      "combinations": 36,
+      "palette": 1,
+      "fabric": 2,
+      "originals": 3
+    },
+    {
+      "code": "RM401",
+      "id": "stripe-cable-half",
+      "name": "단가라 케이블 세미크롭 반팔 니트",
+      "colors": 5,
+      "looks": 4,
+      "combinations": 20,
+      "palette": 1,
+      "fabric": 2,
+      "originals": 3
+    },
+    {
+      "code": "RM429",
+      "id": "vneck-knit-vest",
+      "name": "뮤트레이어 V넥 니트 베스트",
+      "colors": 6,
+      "looks": 4,
+      "combinations": 24,
+      "palette": 1,
+      "fabric": 2,
+      "originals": 4
+    },
+    {
+      "code": "RM375",
+      "id": "alpaca-round-knit",
+      "name": "알파카 혼방 루즈 라운드 니트",
+      "colors": 7,
+      "looks": 4,
+      "combinations": 28,
+      "palette": 1,
+      "fabric": 2,
+      "originals": 3
+    },
+    {
+      "code": "RM471",
+      "id": "popcorn-vneck-half",
+      "name": "슬라브 팝콘 브이넥 반팔 니트",
+      "colors": 4,
+      "looks": 4,
+      "combinations": 16,
+      "palette": 1,
+      "fabric": 2,
+      "originals": 3
+    },
+    {
+      "code": "RM418",
+      "id": "recycled-round-sweater",
+      "name": "리싸이클 무지 박시 라운드 니트",
+      "colors": 6,
+      "looks": 4,
+      "combinations": 24,
+      "palette": 1,
+      "fabric": 2,
+      "originals": 3
+    },
+    {
+      "code": "RM277",
+      "id": "boucle-crop-cardigan",
+      "name": "부클 라운드 크롭 니트 가디건",
+      "colors": 5,
+      "looks": 4,
+      "combinations": 20,
+      "palette": 1,
+      "fabric": 2,
+      "originals": 3
+    },
+    {
+      "code": "RM336",
+      "id": "fisherman-crop-bustier",
+      "name": "피셔맨 케이블 크롭 니트 뷔스티에",
+      "colors": 4,
+      "looks": 4,
+      "combinations": 16,
+      "palette": 1,
+      "fabric": 2,
+      "originals": 3
+    },
+    {
+      "code": "RM279",
+      "id": "boucle-round-half-cardigan",
+      "name": "부클 라운드 반팔 크롭 가디건",
+      "colors": 5,
+      "looks": 4,
+      "combinations": 20,
+      "palette": 1,
+      "fabric": 2,
+      "originals": 3
+    },
+    {
+      "code": "RM274",
+      "id": "boucle-fisher-vneck-vest",
+      "name": "부클 피셔 케이블 브이넥 베스트",
+      "colors": 5,
+      "looks": 4,
+      "combinations": 20,
+      "palette": 1,
+      "fabric": 2,
+      "originals": 3
+    },
+    {
+      "code": "RM382",
+      "id": "honey-loop-crop-knit",
+      "name": "허니루프 라운드 니트",
+      "colors": 4,
+      "looks": 4,
+      "combinations": 16,
+      "palette": 1,
+      "fabric": 2,
+      "originals": 1
+    },
+    {
+      "code": "RM495",
+      "id": "off-duty-vneck-knit-vest",
+      "name": "오프듀티 V넥 니트 베스트",
+      "colors": 5,
+      "looks": 4,
+      "combinations": 20,
+      "palette": 1,
+      "fabric": 2,
+      "originals": 1
+    }
+  ],
+  "assetCount": 152,
+  "assetBytes": 43697318,
+  "newAssetsByKind": {
+    "styling": 120,
+    "palette": 10,
+    "fabric": 22
+  },
+  "files": [
+    {
+      "path": "assets/detail/alpaca-round-knit/v4/color-palette.webp",
+      "bytes": 470232,
+      "sha256": "e1c5c21cce014b3db69d47d41b21298ce6eeabab11bfdcc3556395ecfb1ec8e8",
+      "kind": "palette",
+      "product": "alpaca-round-knit",
+      "colorOrder": [
+        "회색",
+        "차콜",
+        "파랑",
+        "크림",
+        "오렌지",
+        "네온",
+        "보라"
+      ]
+    },
+    {
+      "path": "assets/detail/alpaca-round-knit/v4/fabric-cuff.webp",
+      "bytes": 524156,
+      "sha256": "b2186db347e1d003ce1e4ba4b84b9de49cfe15405492487f99efab87ec2abe8f",
+      "kind": "fabric",
+      "product": "alpaca-round-knit",
+      "mediaKind": "studio-edit"
+    },
+    {
+      "path": "assets/detail/alpaca-round-knit/v4/fabric-neck.webp",
+      "bytes": 603836,
+      "sha256": "855a2215ea253f8829d02f6fba85114527156bfea8115f196538b7c94afa3cd7",
+      "kind": "fabric",
+      "product": "alpaca-round-knit",
+      "mediaKind": "studio-edit"
+    },
+    {
+      "path": "assets/detail/alpaca-round-knit/v4/looks/layered-blue.webp",
+      "bytes": 230366,
+      "sha256": "e182cb7dbb5d19492b5834a3245c644b8b52afdc849f0e82edf4a3f304c8da83",
+      "kind": "styling",
+      "product": "alpaca-round-knit",
+      "look": "layered-v4",
+      "color": "파랑"
+    },
+    {
+      "path": "assets/detail/alpaca-round-knit/v4/looks/layered-charcoal.webp",
+      "bytes": 213756,
+      "sha256": "abcbf49d522eb90ca00f739b4b362bc258de6e8ab30e9e7303282799e752de2d",
+      "kind": "styling",
+      "product": "alpaca-round-knit",
+      "look": "layered-v4",
+      "color": "차콜"
+    },
+    {
+      "path": "assets/detail/alpaca-round-knit/v4/looks/layered-cream.webp",
+      "bytes": 250364,
+      "sha256": "2af03c217148280b6da059294df265b6f8e52c91d6d842b0c5ce4cae82d5d21d",
+      "kind": "styling",
+      "product": "alpaca-round-knit",
+      "look": "layered-v4",
+      "color": "크림"
+    },
+    {
+      "path": "assets/detail/alpaca-round-knit/v4/looks/layered-gray.webp",
+      "bytes": 231606,
+      "sha256": "2fe703129abd9d347cf0bd33c9cf497ef763dc92307953bfc0f046d7e05e5d04",
+      "kind": "styling",
+      "product": "alpaca-round-knit",
+      "look": "layered-v4",
+      "color": "회색"
+    },
+    {
+      "path": "assets/detail/alpaca-round-knit/v4/looks/layered-neon.webp",
+      "bytes": 256148,
+      "sha256": "1768253fddb62c273967ae25a0327697f4302facacf48262cf78d3ace7019c0f",
+      "kind": "styling",
+      "product": "alpaca-round-knit",
+      "look": "layered-v4",
+      "color": "네온"
+    },
+    {
+      "path": "assets/detail/alpaca-round-knit/v4/looks/layered-orange.webp",
+      "bytes": 217042,
+      "sha256": "d5b4dc837fd36cbd8416a1bd56566a74ea5b5736a748a196cde71e8510318379",
+      "kind": "styling",
+      "product": "alpaca-round-knit",
+      "look": "layered-v4",
+      "color": "오렌지"
+    },
+    {
+      "path": "assets/detail/alpaca-round-knit/v4/looks/layered-purple.webp",
+      "bytes": 236560,
+      "sha256": "7f78b6d3da57cd264e981c77884b55f56bbb84331c5ecbe09436225010c71a85",
+      "kind": "styling",
+      "product": "alpaca-round-knit",
+      "look": "layered-v4",
+      "color": "보라"
+    },
+    {
+      "path": "assets/detail/alpaca-round-knit/v4/looks/skirt-blue.webp",
+      "bytes": 236536,
+      "sha256": "1fe7b73ba06d7af6f5e24572b412c86ba1ec365603b75a386222260a9bdc981e",
+      "kind": "styling",
+      "product": "alpaca-round-knit",
+      "look": "skirt-v4",
+      "color": "파랑"
+    },
+    {
+      "path": "assets/detail/alpaca-round-knit/v4/looks/skirt-charcoal.webp",
+      "bytes": 261586,
+      "sha256": "3aac2f24150248501d5b8bf5c2659315310b39964058d8c3fcd7f541a993c7bb",
+      "kind": "styling",
+      "product": "alpaca-round-knit",
+      "look": "skirt-v4",
+      "color": "차콜"
+    },
+    {
+      "path": "assets/detail/alpaca-round-knit/v4/looks/skirt-cream.webp",
+      "bytes": 225340,
+      "sha256": "6d7296727205fbc5c33b2db55f628191011f25af58fcf6b9a57b458e8585196b",
+      "kind": "styling",
+      "product": "alpaca-round-knit",
+      "look": "skirt-v4",
+      "color": "크림"
+    },
+    {
+      "path": "assets/detail/alpaca-round-knit/v4/looks/skirt-gray.webp",
+      "bytes": 218720,
+      "sha256": "cf4f54a0438614a80a6cdd55028ed695d01f360c855604fa05710a4e497c5c00",
+      "kind": "styling",
+      "product": "alpaca-round-knit",
+      "look": "skirt-v4",
+      "color": "회색"
+    },
+    {
+      "path": "assets/detail/alpaca-round-knit/v4/looks/skirt-neon.webp",
+      "bytes": 189554,
+      "sha256": "a07a67cfd4c465a6f7f463c029b503b88dab0a197cfe7bc2f4d7b23419d456f6",
+      "kind": "styling",
+      "product": "alpaca-round-knit",
+      "look": "skirt-v4",
+      "color": "네온"
+    },
+    {
+      "path": "assets/detail/alpaca-round-knit/v4/looks/skirt-orange.webp",
+      "bytes": 202118,
+      "sha256": "82e5e3fbb408b5bcd73bc8c68a174fbf7bfe9422407625b6a58cad3d06c8e305",
+      "kind": "styling",
+      "product": "alpaca-round-knit",
+      "look": "skirt-v4",
+      "color": "오렌지"
+    },
+    {
+      "path": "assets/detail/alpaca-round-knit/v4/looks/skirt-purple.webp",
+      "bytes": 242624,
+      "sha256": "9a4a695d99c2807427160c552928ec1f6b55ea0749dbb3f53b3d060767bcf6e7",
+      "kind": "styling",
+      "product": "alpaca-round-knit",
+      "look": "skirt-v4",
+      "color": "보라"
+    },
+    {
+      "path": "assets/detail/alpaca-round-knit/v4/looks/tailored-blue.webp",
+      "bytes": 224096,
+      "sha256": "aa226f724afea84795c43961e1c29873c215eded99acf8ece372eb67214147b7",
+      "kind": "styling",
+      "product": "alpaca-round-knit",
+      "look": "tailored-v4",
+      "color": "파랑"
+    },
+    {
+      "path": "assets/detail/alpaca-round-knit/v4/looks/tailored-charcoal.webp",
+      "bytes": 234570,
+      "sha256": "2c8311c2feeee43788b9489d388a3a6cf5547c1e005bf5bf19c5f47e270ffd59",
+      "kind": "styling",
+      "product": "alpaca-round-knit",
+      "look": "tailored-v4",
+      "color": "차콜"
+    },
+    {
+      "path": "assets/detail/alpaca-round-knit/v4/looks/tailored-cream.webp",
+      "bytes": 191352,
+      "sha256": "ed82f0a08f9b681e85987b19acff2717129be9791c1195a6ea5dfecf8edfb089",
+      "kind": "styling",
+      "product": "alpaca-round-knit",
+      "look": "tailored-v4",
+      "color": "크림"
+    },
+    {
+      "path": "assets/detail/alpaca-round-knit/v4/looks/tailored-gray.webp",
+      "bytes": 181232,
+      "sha256": "22ae4e89ed002259d21385c008079acb56e45e66b531155479f94a2d65519414",
+      "kind": "styling",
+      "product": "alpaca-round-knit",
+      "look": "tailored-v4",
+      "color": "회색"
+    },
+    {
+      "path": "assets/detail/alpaca-round-knit/v4/looks/tailored-neon.webp",
+      "bytes": 207484,
+      "sha256": "76bc2275e4742b3cb7b97c9f8de5dd907b3d2b70a5294bc7cbf87749ca2a6a95",
+      "kind": "styling",
+      "product": "alpaca-round-knit",
+      "look": "tailored-v4",
+      "color": "네온"
+    },
+    {
+      "path": "assets/detail/alpaca-round-knit/v4/looks/tailored-orange.webp",
+      "bytes": 218590,
+      "sha256": "f8544fa6df14725f21ac7e3f4402078e1085a7d3b0e128e53f82820179b42a34",
+      "kind": "styling",
+      "product": "alpaca-round-knit",
+      "look": "tailored-v4",
+      "color": "오렌지"
+    },
+    {
+      "path": "assets/detail/alpaca-round-knit/v4/looks/tailored-purple.webp",
+      "bytes": 198640,
+      "sha256": "80290e3a336e0659969c9c7eacc8d3bd8029310d8af315b5362eca5bf06cdf21",
+      "kind": "styling",
+      "product": "alpaca-round-knit",
+      "look": "tailored-v4",
+      "color": "보라"
+    },
+    {
+      "path": "assets/detail/boucle-crop-cardigan/v4/color-palette.webp",
+      "bytes": 454156,
+      "sha256": "db276c5fa2b5d572a7b53b1ea1de0fced109143c92bc43bb104234dee67d4ddc",
+      "kind": "palette",
+      "product": "boucle-crop-cardigan",
+      "colorOrder": [
+        "연두",
+        "연밤",
+        "베이지",
+        "소라",
+        "곤색"
+      ]
+    },
+    {
+      "path": "assets/detail/boucle-crop-cardigan/v4/fabric-closeup.webp",
+      "bytes": 687926,
+      "sha256": "9b12663b05cd1dabdd90ef3485ac0c224616d486df9a05bb58bdbe06ee19623a",
+      "kind": "fabric",
+      "product": "boucle-crop-cardigan",
+      "mediaKind": "studio-edit"
+    },
+    {
+      "path": "assets/detail/boucle-crop-cardigan/v4/fabric-flatlay.webp",
+      "bytes": 458402,
+      "sha256": "f603329d67236e20a2cd2ff317f462e1ecd7c1c4a9c3463292ab05f64a75a060",
+      "kind": "fabric",
+      "product": "boucle-crop-cardigan",
+      "mediaKind": "studio-edit"
+    },
+    {
+      "path": "assets/detail/boucle-fisher-vneck-vest/v4/color-palette.webp",
+      "bytes": 541696,
+      "sha256": "9e77f90c0b9753131e29e84f3e0454a38af0bc965b30e30820f26a8f4812aba7",
+      "kind": "palette",
+      "product": "boucle-fisher-vneck-vest",
+      "colorOrder": [
+        "아이",
+        "연두",
+        "베이지",
+        "소라",
+        "연회색"
+      ]
+    },
+    {
+      "path": "assets/detail/boucle-fisher-vneck-vest/v4/fabric-closeup.webp",
+      "bytes": 664552,
+      "sha256": "59cf53cffefa9d0fa2cf0416fb663901681ea6cb53d544246cff0c3adda3c672",
+      "kind": "fabric",
+      "product": "boucle-fisher-vneck-vest",
+      "mediaKind": "studio-edit"
+    },
+    {
+      "path": "assets/detail/boucle-fisher-vneck-vest/v4/fabric-flatlay.webp",
+      "bytes": 524008,
+      "sha256": "9270c82b0a5369b992411beb89585c941c8d4a560ffb6ec2884d424ff4b8f913",
+      "kind": "fabric",
+      "product": "boucle-fisher-vneck-vest",
+      "mediaKind": "studio-edit"
+    },
+    {
+      "path": "assets/detail/boucle-fisher-vneck-vest/v4/looks/blue-shirt-beige.webp",
+      "bytes": 232612,
+      "sha256": "e5e18cf21f2a41437e4e51d246f5849fbb00af141d1366617d80f2a90f6e2c6a",
+      "kind": "styling",
+      "product": "boucle-fisher-vneck-vest",
+      "look": "blue-shirt",
+      "color": "베이지"
+    },
+    {
+      "path": "assets/detail/boucle-fisher-vneck-vest/v4/looks/blue-shirt-ivory.webp",
+      "bytes": 221798,
+      "sha256": "52ec9331b857e149304c31044648963b9c71d16f3b6de4db1336b4fdbca3a83f",
+      "kind": "styling",
+      "product": "boucle-fisher-vneck-vest",
+      "look": "blue-shirt",
+      "color": "아이"
+    },
+    {
+      "path": "assets/detail/boucle-fisher-vneck-vest/v4/looks/blue-shirt-light-gray.webp",
+      "bytes": 241200,
+      "sha256": "ab53e0c7c89bf552302223ba4d9817967642503e75d49c91d804ec84dfdaaed2",
+      "kind": "styling",
+      "product": "boucle-fisher-vneck-vest",
+      "look": "blue-shirt",
+      "color": "연회색"
+    },
+    {
+      "path": "assets/detail/boucle-fisher-vneck-vest/v4/looks/blue-shirt-light-green.webp",
+      "bytes": 251526,
+      "sha256": "4640ba4668226ef519f5825cc58e7f1a4bd5ecff82f9687fe4c1c9c714e7a5ff",
+      "kind": "styling",
+      "product": "boucle-fisher-vneck-vest",
+      "look": "blue-shirt",
+      "color": "연두"
+    },
+    {
+      "path": "assets/detail/boucle-fisher-vneck-vest/v4/looks/blue-shirt-sora.webp",
+      "bytes": 242762,
+      "sha256": "186ce1ca49c3cf90f1c531e48839987dbe2834d497ee3054064db7f6647c1693",
+      "kind": "styling",
+      "product": "boucle-fisher-vneck-vest",
+      "look": "blue-shirt",
+      "color": "소라"
+    },
+    {
+      "path": "assets/detail/boucle-fisher-vneck-vest/v4/looks/midi-beige.webp",
+      "bytes": 276402,
+      "sha256": "c2ddc2aa452eee50aef792181ca52874770dc6e2060e89fce1f14688b0eab702",
+      "kind": "styling",
+      "product": "boucle-fisher-vneck-vest",
+      "look": "midi",
+      "color": "베이지"
+    },
+    {
+      "path": "assets/detail/boucle-fisher-vneck-vest/v4/looks/midi-ivory.webp",
+      "bytes": 269018,
+      "sha256": "1bae56a0655c3ac9dc79e70f895ebcf8dea5f714afc965e9d9cbadd6040bceba",
+      "kind": "styling",
+      "product": "boucle-fisher-vneck-vest",
+      "look": "midi",
+      "color": "아이"
+    },
+    {
+      "path": "assets/detail/boucle-fisher-vneck-vest/v4/looks/midi-light-gray.webp",
+      "bytes": 266132,
+      "sha256": "cca60c54ce984fbe380c75c71ae62ae193b6729bf23f9a6846df6889445c7f28",
+      "kind": "styling",
+      "product": "boucle-fisher-vneck-vest",
+      "look": "midi",
+      "color": "연회색"
+    },
+    {
+      "path": "assets/detail/boucle-fisher-vneck-vest/v4/looks/midi-light-green.webp",
+      "bytes": 255678,
+      "sha256": "e899b55a8ea9fcf37cc47f40e33029a3cfa8d276c0cbd625d1e29e51be9dd489",
+      "kind": "styling",
+      "product": "boucle-fisher-vneck-vest",
+      "look": "midi",
+      "color": "연두"
+    },
+    {
+      "path": "assets/detail/boucle-fisher-vneck-vest/v4/looks/midi-sora.webp",
+      "bytes": 277078,
+      "sha256": "8a0f4088ae40310073432073f7c08efcc053a4d7dd6d0a882cd43ec508220899",
+      "kind": "styling",
+      "product": "boucle-fisher-vneck-vest",
+      "look": "midi",
+      "color": "소라"
+    },
+    {
+      "path": "assets/detail/boucle-fisher-vneck-vest/v4/looks/shirt-tailored-beige.webp",
+      "bytes": 298928,
+      "sha256": "1873e16f680636ac2ba51d7131f01465d06db74752b853f5ecdec16fc643b100",
+      "kind": "styling",
+      "product": "boucle-fisher-vneck-vest",
+      "look": "shirt-tailored",
+      "color": "베이지"
+    },
+    {
+      "path": "assets/detail/boucle-fisher-vneck-vest/v4/looks/shirt-tailored-ivory.webp",
+      "bytes": 277562,
+      "sha256": "3f4cc37deee567157daf6618d4f5ede952b9ec474d36fdd53d5b130e0a3d6b57",
+      "kind": "styling",
+      "product": "boucle-fisher-vneck-vest",
+      "look": "shirt-tailored",
+      "color": "아이"
+    },
+    {
+      "path": "assets/detail/boucle-fisher-vneck-vest/v4/looks/shirt-tailored-light-gray.webp",
+      "bytes": 270718,
+      "sha256": "d921d7240e6a89b5461cbb16c7fd531a8ba458d8a41a7daf1f3eb51c1cd9907a",
+      "kind": "styling",
+      "product": "boucle-fisher-vneck-vest",
+      "look": "shirt-tailored",
+      "color": "연회색"
+    },
+    {
+      "path": "assets/detail/boucle-fisher-vneck-vest/v4/looks/shirt-tailored-light-green.webp",
+      "bytes": 281830,
+      "sha256": "7130ca88bc24e67f15c0d304379041eb2079f5863906dd29d45ebc12b1554cc7",
+      "kind": "styling",
+      "product": "boucle-fisher-vneck-vest",
+      "look": "shirt-tailored",
+      "color": "연두"
+    },
+    {
+      "path": "assets/detail/boucle-fisher-vneck-vest/v4/looks/shirt-tailored-sora.webp",
+      "bytes": 306920,
+      "sha256": "60c265bd3e9ee942a5ff80209992b9164d313cfc00ca3276eabea71cea2d204e",
+      "kind": "styling",
+      "product": "boucle-fisher-vneck-vest",
+      "look": "shirt-tailored",
+      "color": "소라"
+    },
+    {
+      "path": "assets/detail/boucle-round-half-cardigan/v4/color-palette.webp",
+      "bytes": 438664,
+      "sha256": "ab7fe4eaeb8f6cf240b517d3ce7fe9bfb233ba19558146b7cdd47a0ffbfa7b06",
+      "kind": "palette",
+      "product": "boucle-round-half-cardigan",
+      "colorOrder": [
+        "라임",
+        "연두",
+        "베이지",
+        "소라",
+        "곤색"
+      ]
+    },
+    {
+      "path": "assets/detail/boucle-round-half-cardigan/v4/fabric-closeup.webp",
+      "bytes": 603672,
+      "sha256": "c799f8ea4173beb1c410aecf0e889f968c5b8ebc327159ae59df53b2d435673f",
+      "kind": "fabric",
+      "product": "boucle-round-half-cardigan",
+      "mediaKind": "studio-edit"
+    },
+    {
+      "path": "assets/detail/boucle-round-half-cardigan/v4/fabric-flatlay.webp",
+      "bytes": 398920,
+      "sha256": "6534ad4e67840165e583bdc0e0b8a34704febaa935ed341d36633fe6a6d76e1a",
+      "kind": "fabric",
+      "product": "boucle-round-half-cardigan",
+      "mediaKind": "studio-edit"
+    },
+    {
+      "path": "assets/detail/boucle-round-half-cardigan/v4/looks/denim-beige.webp",
+      "bytes": 274528,
+      "sha256": "09c2d308c081374f7e12f45370928672685cd3514954df915316333349c0ba6a",
+      "kind": "styling",
+      "product": "boucle-round-half-cardigan",
+      "look": "denim",
+      "color": "베이지"
+    },
+    {
+      "path": "assets/detail/boucle-round-half-cardigan/v4/looks/denim-light-green.webp",
+      "bytes": 294830,
+      "sha256": "02aff6450e86adfbb35ee552d8b9ca097fb9b4fc4b73e79537f90a2b8f7704b4",
+      "kind": "styling",
+      "product": "boucle-round-half-cardigan",
+      "look": "denim",
+      "color": "연두"
+    },
+    {
+      "path": "assets/detail/boucle-round-half-cardigan/v4/looks/denim-lime.webp",
+      "bytes": 279396,
+      "sha256": "d9eac9ce6a01a4edc510fbeafa8228c45c8a3fa9a915faa645552a575a429c0b",
+      "kind": "styling",
+      "product": "boucle-round-half-cardigan",
+      "look": "denim",
+      "color": "라임"
+    },
+    {
+      "path": "assets/detail/boucle-round-half-cardigan/v4/looks/denim-navy.webp",
+      "bytes": 286240,
+      "sha256": "5e048dbc8b915327d07b07784868deee4541f1578651cda1359618f436786107",
+      "kind": "styling",
+      "product": "boucle-round-half-cardigan",
+      "look": "denim",
+      "color": "곤색"
+    },
+    {
+      "path": "assets/detail/boucle-round-half-cardigan/v4/looks/denim-sora.webp",
+      "bytes": 298478,
+      "sha256": "1047a9d7ac51bffae1e04e46d4068d6c17c4f7b27ae2120129a8ac7a75f2f54d",
+      "kind": "styling",
+      "product": "boucle-round-half-cardigan",
+      "look": "denim",
+      "color": "소라"
+    },
+    {
+      "path": "assets/detail/boucle-round-half-cardigan/v4/looks/layered-beige.webp",
+      "bytes": 190632,
+      "sha256": "cfa46e02fa32f9136f845c7c5c669f3fb4220995a9b5129d195b3668cd922ae7",
+      "kind": "styling",
+      "product": "boucle-round-half-cardigan",
+      "look": "layered",
+      "color": "베이지"
+    },
+    {
+      "path": "assets/detail/boucle-round-half-cardigan/v4/looks/layered-light-green.webp",
+      "bytes": 229426,
+      "sha256": "6461b71be667e80d6adcce5938a094e7e4d2b801f71dc222594072a10de8e556",
+      "kind": "styling",
+      "product": "boucle-round-half-cardigan",
+      "look": "layered",
+      "color": "연두"
+    },
+    {
+      "path": "assets/detail/boucle-round-half-cardigan/v4/looks/layered-lime.webp",
+      "bytes": 202220,
+      "sha256": "c23a1decd49bd7e0d6dbd981672227585c759a73dfffaa0e0dd3f7f09b469525",
+      "kind": "styling",
+      "product": "boucle-round-half-cardigan",
+      "look": "layered",
+      "color": "라임"
+    },
+    {
+      "path": "assets/detail/boucle-round-half-cardigan/v4/looks/layered-navy.webp",
+      "bytes": 208360,
+      "sha256": "06e31d99155622015e42a3b803c187d96adada39e6f863f47202c3151b92e0f0",
+      "kind": "styling",
+      "product": "boucle-round-half-cardigan",
+      "look": "layered",
+      "color": "곤색"
+    },
+    {
+      "path": "assets/detail/boucle-round-half-cardigan/v4/looks/layered-sora.webp",
+      "bytes": 232648,
+      "sha256": "ec43ee4a1fdc5474d58373ea1a7843e708c81de82d78e3ebdfab9a61b1db522f",
+      "kind": "styling",
+      "product": "boucle-round-half-cardigan",
+      "look": "layered",
+      "color": "소라"
+    },
+    {
+      "path": "assets/detail/boucle-round-half-cardigan/v4/looks/tailored-beige.webp",
+      "bytes": 205140,
+      "sha256": "3f81ea4e798723cdb6f7f9a4aae0c7d9ffb889901d7836ab75861582cb3fe738",
+      "kind": "styling",
+      "product": "boucle-round-half-cardigan",
+      "look": "tailored",
+      "color": "베이지"
+    },
+    {
+      "path": "assets/detail/boucle-round-half-cardigan/v4/looks/tailored-light-green.webp",
+      "bytes": 234984,
+      "sha256": "38358ab54c56fafe315dc6c56332f177d84ff24d96f9cb04e881c31812ccc979",
+      "kind": "styling",
+      "product": "boucle-round-half-cardigan",
+      "look": "tailored",
+      "color": "연두"
+    },
+    {
+      "path": "assets/detail/boucle-round-half-cardigan/v4/looks/tailored-lime.webp",
+      "bytes": 231296,
+      "sha256": "c3dcf8a6cfc9f8fa58a1200ba84ace92c336357ea34b5996d74ee312bee31417",
+      "kind": "styling",
+      "product": "boucle-round-half-cardigan",
+      "look": "tailored",
+      "color": "라임"
+    },
+    {
+      "path": "assets/detail/boucle-round-half-cardigan/v4/looks/tailored-navy.webp",
+      "bytes": 266942,
+      "sha256": "3ea4060438e0512e68f7dd11685d5398c68da94baf86f24fafc33e679556d8f3",
+      "kind": "styling",
+      "product": "boucle-round-half-cardigan",
+      "look": "tailored",
+      "color": "곤색"
+    },
+    {
+      "path": "assets/detail/boucle-round-half-cardigan/v4/looks/tailored-sora.webp",
+      "bytes": 227056,
+      "sha256": "8ce4317fd8226a9910bf7fcaf039cf407e1538755314f6ed2b5f89070a444433",
+      "kind": "styling",
+      "product": "boucle-round-half-cardigan",
+      "look": "tailored",
+      "color": "소라"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/color-palette.webp",
+      "bytes": 471516,
+      "sha256": "4c7b97016fea8eabfecf8e88f172516c4710c4a27d0aa48d68fb9cdf7c754803",
+      "kind": "palette",
+      "product": "cable-vneck-knit",
+      "colorOrder": [
+        "소라",
+        "회색",
+        "아이",
+        "베이지",
+        "연핑",
+        "보라",
+        "초록",
+        "곤색",
+        "검정"
+      ]
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/fabric-1.webp",
+      "bytes": 528944,
+      "sha256": "a2ac068efd2fb3de50231cede666f3d08e1a67bd593b0549e4420915796b1836",
+      "kind": "fabric",
+      "product": "cable-vneck-knit",
+      "mediaKind": "studio-edit"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/fabric-2.webp",
+      "bytes": 680534,
+      "sha256": "f7af2c32f3ebc0f4b90a3256768f3083b1122c3496e2175480e5ffd76f9f10d6",
+      "kind": "fabric",
+      "product": "cable-vneck-knit",
+      "mediaKind": "studio-edit"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/pleated-beige.webp",
+      "bytes": 177752,
+      "sha256": "e7846361676d906e94e8bd5df473d7fd18b4da423d4e5f895bebb90238b7591a",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "pleated-v4",
+      "color": "베이지"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/pleated-black.webp",
+      "bytes": 151466,
+      "sha256": "8026d11a3425aa2c1c9d4f6dc556991d0c73aa6a44cc29e216c8fd7b1d5c7f98",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "pleated-v4",
+      "color": "검정"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/pleated-gray.webp",
+      "bytes": 169556,
+      "sha256": "76c333dcf031106615898428986900e4ea6b56338dcff494e0279d3bffc9ad6e",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "pleated-v4",
+      "color": "회색"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/pleated-green.webp",
+      "bytes": 177156,
+      "sha256": "8bb0f2b2638d4e0a40ea6f328ef8cc30a2f62cacfbba04617bef21ac59248881",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "pleated-v4",
+      "color": "초록"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/pleated-ivory.webp",
+      "bytes": 135036,
+      "sha256": "5cb5d7291f8c8088abd9bb2147d851a882433728484fcde106799a29ef89a55d",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "pleated-v4",
+      "color": "아이"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/pleated-navy.webp",
+      "bytes": 176526,
+      "sha256": "26cdc2b16007dd2b4a4f6476f41aa2619b41ff44415c64647a49724d79a8aa9a",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "pleated-v4",
+      "color": "곤색"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/pleated-pink.webp",
+      "bytes": 170110,
+      "sha256": "2825c73ac3f2d2e093890321decccbe917769d43e433e614a5762de3301814e7",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "pleated-v4",
+      "color": "연핑"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/pleated-purple.webp",
+      "bytes": 168212,
+      "sha256": "aa47872a2d7d814cec77425f60cb883d82596b59de3b0fea027c035b4df58505",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "pleated-v4",
+      "color": "보라"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/pleated-sky.webp",
+      "bytes": 155998,
+      "sha256": "5499ff7e33fa0a37614dd13c2c2d906eab2cdfd91a9eb6c2b3bc754d36824600",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "pleated-v4",
+      "color": "소라"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/shirt-beige.webp",
+      "bytes": 232386,
+      "sha256": "d29b49bd20931138392a8bda9322c451d8f247b349845767a8dc099f7c81f6a0",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "shirt-v4",
+      "color": "베이지"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/shirt-black.webp",
+      "bytes": 227742,
+      "sha256": "7390b65658849c8682fd6ad54a4736caca96024b4085527533880efe90d7e7aa",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "shirt-v4",
+      "color": "검정"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/shirt-gray.webp",
+      "bytes": 226628,
+      "sha256": "121a99fdc81576b413382b1d9c11f6788f28bd7f1c08cd60902e2dfd517b1ea4",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "shirt-v4",
+      "color": "회색"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/shirt-green.webp",
+      "bytes": 224756,
+      "sha256": "ca2d29311812e7fbadc3f1400de4525bafc3028b1cf1e95d99e06d8279a703c7",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "shirt-v4",
+      "color": "초록"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/shirt-ivory.webp",
+      "bytes": 207910,
+      "sha256": "46fde1e88211b7ca7475d75ae8fefec999006df123c4f107cbbf86c2972e6391",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "shirt-v4",
+      "color": "아이"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/shirt-navy.webp",
+      "bytes": 204616,
+      "sha256": "2028154897953d94df77a98bc0ee52ef00823a6f1f14bf435d01e4341be0bee6",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "shirt-v4",
+      "color": "곤색"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/shirt-pink.webp",
+      "bytes": 213148,
+      "sha256": "a16cae7185a2adc7ccb141cf9ad3732709c3d8b24e045617545f89b7fe0206a5",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "shirt-v4",
+      "color": "연핑"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/shirt-purple.webp",
+      "bytes": 213844,
+      "sha256": "aa64b2a6ec8e61b1b8eae8701b81774da38a8a4b39525ee773f8e9a23e9a6301",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "shirt-v4",
+      "color": "보라"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/shirt-sky.webp",
+      "bytes": 224774,
+      "sha256": "37be2483ca951be81f8978f7cd1dd2fb78ef860a257c6274489070304ce5f947",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "shirt-v4",
+      "color": "소라"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/white-denim-beige.webp",
+      "bytes": 169158,
+      "sha256": "31b3c4f34ed8cf15e5f2793635a1a1525803499083185079574b22d5515cb93a",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "white-denim-v4",
+      "color": "베이지"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/white-denim-black.webp",
+      "bytes": 158040,
+      "sha256": "9bab7f84529e0447588c12be5eb8d4ac66fd45d174cc21d3f72b95ba75b24a1f",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "white-denim-v4",
+      "color": "검정"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/white-denim-gray.webp",
+      "bytes": 192908,
+      "sha256": "3b91f4826eee3df9c9181b30af9f4de7f9335534fe906c800587287556f93ae7",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "white-denim-v4",
+      "color": "회색"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/white-denim-green.webp",
+      "bytes": 199412,
+      "sha256": "923a549c535565f12b7251165a0529014e2525f556284dbc5eccb81d214bc096",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "white-denim-v4",
+      "color": "초록"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/white-denim-ivory.webp",
+      "bytes": 186298,
+      "sha256": "e8c3f3c6ca2bd744aabe081570de016a682c0975ce1b4ee12c1c6d497207cafb",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "white-denim-v4",
+      "color": "아이"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/white-denim-navy.webp",
+      "bytes": 164822,
+      "sha256": "102a85277f03b4c385fd6647518c36c853343285a605ba0a8b6311be30fbcc6d",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "white-denim-v4",
+      "color": "곤색"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/white-denim-pink.webp",
+      "bytes": 146542,
+      "sha256": "a76fafdf1e07d3dad0d4d4906d2ef6212891c7097af028f50f476ddde68b0f4d",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "white-denim-v4",
+      "color": "연핑"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/white-denim-purple.webp",
+      "bytes": 169468,
+      "sha256": "1bee518f9c0ce0af12c80535c909c3acdc2eebe734f0e6c2b8da0db5d95cdb0a",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "white-denim-v4",
+      "color": "보라"
+    },
+    {
+      "path": "assets/detail/cable-vneck-knit/v4/looks/white-denim-sky.webp",
+      "bytes": 172412,
+      "sha256": "4d939acb9a84f9108ae09f482522f2fa892b5e4f5ae18563e3a523efd323ffa5",
+      "kind": "styling",
+      "product": "cable-vneck-knit",
+      "look": "white-denim-v4",
+      "color": "소라"
+    },
+    {
+      "path": "assets/detail/fisherman-crop-bustier/v4/color-palette.webp",
+      "bytes": 308204,
+      "sha256": "d2b7524a52dc7031542d095fec732625ff443f01bc2c65e73b823190d1dedcfe",
+      "kind": "palette",
+      "product": "fisherman-crop-bustier",
+      "colorOrder": [
+        "베이지",
+        "연밤",
+        "소라",
+        "검정"
+      ]
+    },
+    {
+      "path": "assets/detail/fisherman-crop-bustier/v4/fabric-closeup.webp",
+      "bytes": 529440,
+      "sha256": "dcf09b7df77c1f478290cf63935354628c62568302024ba1a8fec99d66c2eb86",
+      "kind": "fabric",
+      "product": "fisherman-crop-bustier",
+      "mediaKind": "studio-edit"
+    },
+    {
+      "path": "assets/detail/fisherman-crop-bustier/v4/fabric-flatlay.webp",
+      "bytes": 390748,
+      "sha256": "35e741200da1521754bb31437dd1921604f3bf1eadbe061b89297677ba3dbd31",
+      "kind": "fabric",
+      "product": "fisherman-crop-bustier",
+      "mediaKind": "studio-edit"
+    },
+    {
+      "path": "assets/detail/fisherman-crop-bustier/v4/looks/ecru-beige.webp",
+      "bytes": 246840,
+      "sha256": "000d5004950d16f36d7c570dba6b8a1d5fca9bcec53c2c5801bef168225383be",
+      "kind": "styling",
+      "product": "fisherman-crop-bustier",
+      "look": "ecru",
+      "color": "베이지"
+    },
+    {
+      "path": "assets/detail/fisherman-crop-bustier/v4/looks/ecru-black.webp",
+      "bytes": 245914,
+      "sha256": "171a7abb500580d46289d6011991c3743ad27d3eb922aa9ab8cd52afe130bbed",
+      "kind": "styling",
+      "product": "fisherman-crop-bustier",
+      "look": "ecru",
+      "color": "검정"
+    },
+    {
+      "path": "assets/detail/fisherman-crop-bustier/v4/looks/ecru-light-brown.webp",
+      "bytes": 230258,
+      "sha256": "1f1c1d8373ffc4717dac4750f59848580c0cb7a78d562ec5b684f4cc020fef0f",
+      "kind": "styling",
+      "product": "fisherman-crop-bustier",
+      "look": "ecru",
+      "color": "연밤"
+    },
+    {
+      "path": "assets/detail/fisherman-crop-bustier/v4/looks/ecru-sora.webp",
+      "bytes": 267654,
+      "sha256": "756c305a77c6d456bb353bedb31368e916b13df1ce0b6f55ee58e92610705ddd",
+      "kind": "styling",
+      "product": "fisherman-crop-bustier",
+      "look": "ecru",
+      "color": "소라"
+    },
+    {
+      "path": "assets/detail/fisherman-crop-bustier/v4/looks/midi-beige.webp",
+      "bytes": 266498,
+      "sha256": "c23d3fbce7217a24249aecd98d0d4fd75b98f5f4f26ea31447d30fa3223c9c9c",
+      "kind": "styling",
+      "product": "fisherman-crop-bustier",
+      "look": "midi",
+      "color": "베이지"
+    },
+    {
+      "path": "assets/detail/fisherman-crop-bustier/v4/looks/midi-black.webp",
+      "bytes": 257140,
+      "sha256": "ff2373733c1d95dec43160be336cf5626b0ba6e675366e59abeb18971994f1ba",
+      "kind": "styling",
+      "product": "fisherman-crop-bustier",
+      "look": "midi",
+      "color": "검정"
+    },
+    {
+      "path": "assets/detail/fisherman-crop-bustier/v4/looks/midi-light-brown.webp",
+      "bytes": 273812,
+      "sha256": "306ad54c5100fe54f8b42a68427f6338839bbcfd534221373805a235c8cdc46c",
+      "kind": "styling",
+      "product": "fisherman-crop-bustier",
+      "look": "midi",
+      "color": "연밤"
+    },
+    {
+      "path": "assets/detail/fisherman-crop-bustier/v4/looks/midi-sora.webp",
+      "bytes": 285280,
+      "sha256": "b7c036307b39ab55425c0f0bf9ca9d707301b6a61c7ad002ae2eb21e3b30466c",
+      "kind": "styling",
+      "product": "fisherman-crop-bustier",
+      "look": "midi",
+      "color": "소라"
+    },
+    {
+      "path": "assets/detail/fisherman-crop-bustier/v4/looks/shirt-tailored-beige.webp",
+      "bytes": 307622,
+      "sha256": "495ad2581df7390815b4289bfaec1d713a14ef3925b59a11a571f0a0fa4da522",
+      "kind": "styling",
+      "product": "fisherman-crop-bustier",
+      "look": "shirt-tailored",
+      "color": "베이지"
+    },
+    {
+      "path": "assets/detail/fisherman-crop-bustier/v4/looks/shirt-tailored-black.webp",
+      "bytes": 291972,
+      "sha256": "42bd4726cf2340da6d9823fe872ec987e8f39c23944e14313aaed2775a5a72c6",
+      "kind": "styling",
+      "product": "fisherman-crop-bustier",
+      "look": "shirt-tailored",
+      "color": "검정"
+    },
+    {
+      "path": "assets/detail/fisherman-crop-bustier/v4/looks/shirt-tailored-light-brown.webp",
+      "bytes": 288102,
+      "sha256": "5a8f7b64ffc1980e94f22098422892c47ee20387521012cef09c9a9944c8dd99",
+      "kind": "styling",
+      "product": "fisherman-crop-bustier",
+      "look": "shirt-tailored",
+      "color": "연밤"
+    },
+    {
+      "path": "assets/detail/fisherman-crop-bustier/v4/looks/shirt-tailored-sora.webp",
+      "bytes": 299886,
+      "sha256": "352e90f36c88b4203164928a5d9126df8feaf21326dedb3db2550e1faf28973a",
+      "kind": "styling",
+      "product": "fisherman-crop-bustier",
+      "look": "shirt-tailored",
+      "color": "소라"
+    },
+    {
+      "path": "assets/detail/honey-loop-crop-knit/v4/fabric-flatlay.webp",
+      "bytes": 410770,
+      "sha256": "9f74c12614bcd1dca700f66a49c8b169d022565beb8dbca37ffcee13bd4076c2",
+      "kind": "fabric",
+      "product": "honey-loop-crop-knit",
+      "mediaKind": "studio-edit"
+    },
+    {
+      "path": "assets/detail/off-duty-vneck-knit-vest/v4/fabric-flatlay.webp",
+      "bytes": 473238,
+      "sha256": "2a30f5a71a72600112e7c06306d9eecb3578b3f7f2277e35759e5d07a9416e60",
+      "kind": "fabric",
+      "product": "off-duty-vneck-knit-vest",
+      "mediaKind": "studio-edit"
+    },
+    {
+      "path": "assets/detail/popcorn-vneck-half/v4/color-palette.webp",
+      "bytes": 511282,
+      "sha256": "3c2cba9f5203b949782238947a0b190e4bfb597dc6441f938d872c418d7a8999",
+      "kind": "palette",
+      "product": "popcorn-vneck-half",
+      "colorOrder": [
+        "노랑",
+        "연두",
+        "베이지",
+        "검정"
+      ]
+    },
+    {
+      "path": "assets/detail/popcorn-vneck-half/v4/fabric-1.webp",
+      "bytes": 559230,
+      "sha256": "6adf80c8c9f4034bdd016623f1c4dd81330af325fe0a3d35f1bc7db7dc6ab143",
+      "kind": "fabric",
+      "product": "popcorn-vneck-half",
+      "mediaKind": "studio-edit"
+    },
+    {
+      "path": "assets/detail/popcorn-vneck-half/v4/fabric-2.webp",
+      "bytes": 607758,
+      "sha256": "8ddb0e217964cacd54b52a14bde711b806a51ac8662878ee8d2b02e888396b69",
+      "kind": "fabric",
+      "product": "popcorn-vneck-half",
+      "mediaKind": "studio-edit"
+    },
+    {
+      "path": "assets/detail/popcorn-vneck-half/v4/looks/indigo-beige.webp",
+      "bytes": 163060,
+      "sha256": "5be03c45542dcf34547336ae9175d8a472e833a3c90713fcaa572439f43f392e",
+      "kind": "styling",
+      "product": "popcorn-vneck-half",
+      "look": "indigo-v4",
+      "color": "베이지"
+    },
+    {
+      "path": "assets/detail/popcorn-vneck-half/v4/looks/indigo-black.webp",
+      "bytes": 144186,
+      "sha256": "8284a379b49d2c9a208ff624007e5799c3f59227ea01aa702ca6b14b829666d8",
+      "kind": "styling",
+      "product": "popcorn-vneck-half",
+      "look": "indigo-v4",
+      "color": "검정"
+    },
+    {
+      "path": "assets/detail/popcorn-vneck-half/v4/looks/indigo-light-green.webp",
+      "bytes": 162066,
+      "sha256": "ea267f8dcf4168565fd6ee18897134e9f827a4ec9d0918e489e32b1a94f3bf16",
+      "kind": "styling",
+      "product": "popcorn-vneck-half",
+      "look": "indigo-v4",
+      "color": "연두"
+    },
+    {
+      "path": "assets/detail/popcorn-vneck-half/v4/looks/indigo-yellow.webp",
+      "bytes": 147716,
+      "sha256": "d82eabc886583f9bfc5264a86c6b8e7cd3130b343ea0208db98cbe4c81cebec8",
+      "kind": "styling",
+      "product": "popcorn-vneck-half",
+      "look": "indigo-v4",
+      "color": "노랑"
+    },
+    {
+      "path": "assets/detail/popcorn-vneck-half/v4/looks/linen-beige.webp",
+      "bytes": 249308,
+      "sha256": "da83e57ff19d2cc853bbe5e419415435771cbc178b94919059dce64453b98321",
+      "kind": "styling",
+      "product": "popcorn-vneck-half",
+      "look": "linen-v4",
+      "color": "베이지"
+    },
+    {
+      "path": "assets/detail/popcorn-vneck-half/v4/looks/linen-black.webp",
+      "bytes": 237434,
+      "sha256": "c8923bb815b4e39b67ba4794ad72b3fd8e89afc4e55fa94cb3541f23bb98798d",
+      "kind": "styling",
+      "product": "popcorn-vneck-half",
+      "look": "linen-v4",
+      "color": "검정"
+    },
+    {
+      "path": "assets/detail/popcorn-vneck-half/v4/looks/linen-light-green.webp",
+      "bytes": 223364,
+      "sha256": "4a31e161840354da1da447d411b6dda21aeadcc8022a1c49fc68e4fcc71483be",
+      "kind": "styling",
+      "product": "popcorn-vneck-half",
+      "look": "linen-v4",
+      "color": "연두"
+    },
+    {
+      "path": "assets/detail/popcorn-vneck-half/v4/looks/linen-yellow.webp",
+      "bytes": 224618,
+      "sha256": "ca940c6c47254039edc643c4ac99fe373ff3bc2b4ccd8127ae31faef5cf1df76",
+      "kind": "styling",
+      "product": "popcorn-vneck-half",
+      "look": "linen-v4",
+      "color": "노랑"
+    },
+    {
+      "path": "assets/detail/popcorn-vneck-half/v4/looks/pleated-beige.webp",
+      "bytes": 218796,
+      "sha256": "ac0b449182ce8c473867e90f3768d2246c80328bf17237590aae308e207bfeb6",
+      "kind": "styling",
+      "product": "popcorn-vneck-half",
+      "look": "pleated-v4",
+      "color": "베이지"
+    },
+    {
+      "path": "assets/detail/popcorn-vneck-half/v4/looks/pleated-black.webp",
+      "bytes": 209070,
+      "sha256": "88e423502615cddce709c62ab1e3e61f7d9feac801eeae56c3977b59b755fd30",
+      "kind": "styling",
+      "product": "popcorn-vneck-half",
+      "look": "pleated-v4",
+      "color": "검정"
+    },
+    {
+      "path": "assets/detail/popcorn-vneck-half/v4/looks/pleated-light-green.webp",
+      "bytes": 245516,
+      "sha256": "2d0d3053cfc850d72207a1538ac77fd4292013fc46334902ebe9f135e8b390eb",
+      "kind": "styling",
+      "product": "popcorn-vneck-half",
+      "look": "pleated-v4",
+      "color": "연두"
+    },
+    {
+      "path": "assets/detail/popcorn-vneck-half/v4/looks/pleated-yellow.webp",
+      "bytes": 196964,
+      "sha256": "651980595167696b5f4fb613660b5d8669001c0608b7a35e7b526c55ab11a3a7",
+      "kind": "styling",
+      "product": "popcorn-vneck-half",
+      "look": "pleated-v4",
+      "color": "노랑"
+    },
+    {
+      "path": "assets/detail/recycled-round-sweater/v4/color-palette.webp",
+      "bytes": 488296,
+      "sha256": "65e7e9103b5903b61417bf47c14f729c1ab311a2a38a1b2c4bc2639dc0b5bbf5",
+      "kind": "palette",
+      "product": "recycled-round-sweater",
+      "colorOrder": [
+        "스카이",
+        "곤색",
+        "올리브",
+        "모카",
+        "그레이",
+        "브라운"
+      ]
+    },
+    {
+      "path": "assets/detail/recycled-round-sweater/v4/fabric-cuff.webp",
+      "bytes": 668144,
+      "sha256": "7820cb87cbc15d260302f2030d08340a5fa44ac46d20b52f5a97adc16682421a",
+      "kind": "fabric",
+      "product": "recycled-round-sweater",
+      "mediaKind": "studio-edit"
+    },
+    {
+      "path": "assets/detail/recycled-round-sweater/v4/fabric-neck.webp",
+      "bytes": 715376,
+      "sha256": "b852cc4c66ea063f6bb8a8f0ff847415693e2efc0b2f6a98137e9deb86535e90",
+      "kind": "fabric",
+      "product": "recycled-round-sweater",
+      "mediaKind": "studio-edit"
+    },
+    {
+      "path": "assets/detail/recycled-round-sweater/v4/looks/layered-brown.webp",
+      "bytes": 239808,
+      "sha256": "d0d7361e97bb35236ef747f4d05f43dad368c8802486b0814bf4c09b9d31752c",
+      "kind": "styling",
+      "product": "recycled-round-sweater",
+      "look": "layered-v4",
+      "color": "브라운"
+    },
+    {
+      "path": "assets/detail/recycled-round-sweater/v4/looks/layered-gray.webp",
+      "bytes": 250448,
+      "sha256": "2915d7b620f55e2cd3526d7da0abe1fc68714390ab622a2b65dd9e9de1296fcc",
+      "kind": "styling",
+      "product": "recycled-round-sweater",
+      "look": "layered-v4",
+      "color": "그레이"
+    },
+    {
+      "path": "assets/detail/recycled-round-sweater/v4/looks/layered-mocha.webp",
+      "bytes": 260796,
+      "sha256": "bcdfbb16b9a7e98609bcc7bab205568facfc2b47c07260efe053b36e2060fb36",
+      "kind": "styling",
+      "product": "recycled-round-sweater",
+      "look": "layered-v4",
+      "color": "모카"
+    },
+    {
+      "path": "assets/detail/recycled-round-sweater/v4/looks/layered-navy.webp",
+      "bytes": 230060,
+      "sha256": "7d951e0dd1892e41b0d085dd66e46a2c3143dad7ea9aa9f289ff1f64e0b3522a",
+      "kind": "styling",
+      "product": "recycled-round-sweater",
+      "look": "layered-v4",
+      "color": "곤색"
+    },
+    {
+      "path": "assets/detail/recycled-round-sweater/v4/looks/layered-olive.webp",
+      "bytes": 255028,
+      "sha256": "66566eff3e1a1f87f5dee7b42b83b8e246e28a7cf76059f1a971daff71eee1e6",
+      "kind": "styling",
+      "product": "recycled-round-sweater",
+      "look": "layered-v4",
+      "color": "올리브"
+    },
+    {
+      "path": "assets/detail/recycled-round-sweater/v4/looks/layered-sky.webp",
+      "bytes": 222298,
+      "sha256": "f1b3ef78c0236dc69ba1a776310923e6aff2ff273b3bcd2fd3b7c8947a6956a6",
+      "kind": "styling",
+      "product": "recycled-round-sweater",
+      "look": "layered-v4",
+      "color": "스카이"
+    },
+    {
+      "path": "assets/detail/recycled-round-sweater/v4/looks/skirt-brown.webp",
+      "bytes": 228104,
+      "sha256": "9ee97a1f174564ad5844579d6d6737331b046c4e4fd5f7268b99a0f4fcb263c7",
+      "kind": "styling",
+      "product": "recycled-round-sweater",
+      "look": "skirt-v4",
+      "color": "브라운"
+    },
+    {
+      "path": "assets/detail/recycled-round-sweater/v4/looks/skirt-gray.webp",
+      "bytes": 177556,
+      "sha256": "f71932281d987a19e6acf6355af50157c877007a4a48f997e6367910b14c2b4b",
+      "kind": "styling",
+      "product": "recycled-round-sweater",
+      "look": "skirt-v4",
+      "color": "그레이"
+    },
+    {
+      "path": "assets/detail/recycled-round-sweater/v4/looks/skirt-mocha.webp",
+      "bytes": 206094,
+      "sha256": "cd3c54be2e51717d412a5bf647584c704bc3ddd867268e9c88ca9cb4fd8471de",
+      "kind": "styling",
+      "product": "recycled-round-sweater",
+      "look": "skirt-v4",
+      "color": "모카"
+    },
+    {
+      "path": "assets/detail/recycled-round-sweater/v4/looks/skirt-navy.webp",
+      "bytes": 203682,
+      "sha256": "979cddee21f8b21a4c7616ec6ad8986508cc70d589b5ad9e729013e151a3da69",
+      "kind": "styling",
+      "product": "recycled-round-sweater",
+      "look": "skirt-v4",
+      "color": "곤색"
+    },
+    {
+      "path": "assets/detail/recycled-round-sweater/v4/looks/skirt-olive.webp",
+      "bytes": 196096,
+      "sha256": "600792eac82a73aeb0941914cc6ec5316df452d53882459eeb0e9589b1c65f79",
+      "kind": "styling",
+      "product": "recycled-round-sweater",
+      "look": "skirt-v4",
+      "color": "올리브"
+    },
+    {
+      "path": "assets/detail/recycled-round-sweater/v4/looks/skirt-sky.webp",
+      "bytes": 175968,
+      "sha256": "15b0ce33d8d26cebac9e687ff08141a0ab387965a351d14c42fbba8fee16477a",
+      "kind": "styling",
+      "product": "recycled-round-sweater",
+      "look": "skirt-v4",
+      "color": "스카이"
+    },
+    {
+      "path": "assets/detail/recycled-round-sweater/v4/looks/tailored-brown.webp",
+      "bytes": 198578,
+      "sha256": "b747f4e2ed6c6fab3bb8a7120ad39f4df670854342aea8d86cf82822d7ea8213",
+      "kind": "styling",
+      "product": "recycled-round-sweater",
+      "look": "tailored-v4",
+      "color": "브라운"
+    },
+    {
+      "path": "assets/detail/recycled-round-sweater/v4/looks/tailored-gray.webp",
+      "bytes": 203920,
+      "sha256": "e17195e84172989aa9cf6ac38c480e5f85bdbce3fef3d307f7b26459b0bfddf8",
+      "kind": "styling",
+      "product": "recycled-round-sweater",
+      "look": "tailored-v4",
+      "color": "그레이"
+    },
+    {
+      "path": "assets/detail/recycled-round-sweater/v4/looks/tailored-mocha.webp",
+      "bytes": 189096,
+      "sha256": "e627ca9d101c9491e754af9cf9608e64eb83b2c24fef8a484d6a5ea0ae7964e4",
+      "kind": "styling",
+      "product": "recycled-round-sweater",
+      "look": "tailored-v4",
+      "color": "모카"
+    },
+    {
+      "path": "assets/detail/recycled-round-sweater/v4/looks/tailored-navy.webp",
+      "bytes": 194992,
+      "sha256": "43ffc2f71e544290c908f8614bcee1088bc71d60f5f7b879bbb8b60b9a915980",
+      "kind": "styling",
+      "product": "recycled-round-sweater",
+      "look": "tailored-v4",
+      "color": "곤색"
+    },
+    {
+      "path": "assets/detail/recycled-round-sweater/v4/looks/tailored-olive.webp",
+      "bytes": 188358,
+      "sha256": "3e9ed3b81c53821d12c5ec6ef05e69be8aae0699dd10efd75bea79767aebe6cb",
+      "kind": "styling",
+      "product": "recycled-round-sweater",
+      "look": "tailored-v4",
+      "color": "올리브"
+    },
+    {
+      "path": "assets/detail/recycled-round-sweater/v4/looks/tailored-sky.webp",
+      "bytes": 200012,
+      "sha256": "da5f21d98ffcae805fc8684460d6bce596fbab1a914fa613bf7fe255e7880b8e",
+      "kind": "styling",
+      "product": "recycled-round-sweater",
+      "look": "tailored-v4",
+      "color": "스카이"
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v4/color-palette.webp",
+      "bytes": 361606,
+      "sha256": "d79cb436b60a0b8bcfba099675cc15bda2e6f5864a9d6eba56dfa02e70d652eb",
+      "kind": "palette",
+      "product": "stripe-cable-half",
+      "colorOrder": [
+        "곤색",
+        "베이지",
+        "초록",
+        "하늘",
+        "연핑"
+      ]
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v4/fabric-hem.webp",
+      "bytes": 541658,
+      "sha256": "5aa642f350ad60dca4c4af8597c893b233a871020cadcb7ff3a030fa31516b6b",
+      "kind": "fabric",
+      "product": "stripe-cable-half",
+      "mediaKind": "studio-edit"
+    },
+    {
+      "path": "assets/detail/stripe-cable-half/v4/fabric-neck.webp",
+      "bytes": 620406,
+      "sha256": "25430c15af97b698c0b6ddd4f0106b07bbe2efdb393521431c88d6f02e969e12",
+      "kind": "fabric",
+      "product": "stripe-cable-half",
+      "mediaKind": "studio-edit"
+    },
+    {
+      "path": "assets/detail/vneck-knit-vest/v4/color-palette.webp",
+      "bytes": 488156,
+      "sha256": "a6699b75dabc4e761c300003335f2277a39e9a9688b71cc42e3f6d188c1f3e4c",
+      "kind": "palette",
+      "product": "vneck-knit-vest",
+      "colorOrder": [
+        "그레이프",
+        "모카",
+        "그레이",
+        "브라운",
+        "올리브",
+        "곤색"
+      ]
+    },
+    {
+      "path": "assets/detail/vneck-knit-vest/v4/fabric-closeup.webp",
+      "bytes": 707152,
+      "sha256": "f407e1240d79d50631ca61b89a8a1d2cfdf4ff29bb590031c2e8e6050b969973",
+      "kind": "fabric",
+      "product": "vneck-knit-vest",
+      "mediaKind": "studio-edit"
+    },
+    {
+      "path": "assets/detail/vneck-knit-vest/v4/fabric-flatlay.webp",
+      "bytes": 443370,
+      "sha256": "c07d63a4621ddcb8d5fc2f26ac36c4a46945c91501ff90ffc9aefd52dd99eeb5",
+      "kind": "fabric",
+      "product": "vneck-knit-vest",
+      "mediaKind": "studio-edit"
+    }
+  ]
+}

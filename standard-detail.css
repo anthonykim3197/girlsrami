@@ -26,3 +26,7 @@ body.grsd-page{background:#fcfbf7;color:#252722;font-family:"Girlsrami Sans","Sp
 .grsd-review-guide ol{margin:16px 0;padding-left:22px;font-size:13px;color:var(--grsd-muted);line-height:2}.grsd-review-guide strong{font-weight:500;color:var(--grsd-ink)}.grsd-review-guide a{margin-top:14px}
 .grsd-lightbox.is-review-photo>img{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:auto;height:auto;max-width:calc(100vw - 40px);max-height:calc(100vh - 100px);object-fit:contain}
 @media(max-width:640px){.grsd-lower.grsd-reviews{padding-top:32px!important}.grsd-reviews-heading{align-items:flex-start;gap:14px}.grsd-reviews-heading h2{font-size:26px}.grsd-reviews-heading .grsd-eyebrow{font-size:9px}.grsd-review-score strong{font-size:30px}.grsd-review-score small{font-size:10px}.grsd-lower .grsd-reviews-heading p{font-size:11px;max-width:180px}.grsd-review-grid{grid-template-columns:minmax(0,1fr);gap:12px}.grsd-review-card{padding:20px}.grsd-review-summary{font-size:11px;gap:8px}}
+
+/* Keep source photographs available without interrupting the studio presentation. */
+.grsd-source-photos{border-top:1px solid var(--grsd-line);margin-top:32px;padding-top:18px}.grsd-source-photos summary{font-size:13px;color:var(--grsd-muted);cursor:pointer;padding:8px 0}.grsd-source-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;padding-top:22px}.grsd-source-grid img{aspect-ratio:1;object-fit:contain;background:var(--grsd-soft)}
+@media(max-width:640px){.grsd-source-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}

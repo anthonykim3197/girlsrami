@@ -1,6 +1,7 @@
 import {mkdir,copyFile,readdir,rm,readFile,writeFile,stat} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import vm from 'node:vm';
+import {validateDetailContent} from './validate-detail-content.mjs';
 
 const root=new URL('../',import.meta.url);
 const out=new URL('../dist/',import.meta.url);
@@ -12,6 +13,7 @@ const details=detailContext.window.GR_DETAIL;
 if (!details || JSON.stringify(Object.keys(details).sort()) !== JSON.stringify(seo.products.map(product=>product.id).sort())) {
   throw new Error('Detail manifest must contain exactly the approved sale catalog.');
 }
+validateDetailContent(seo.products,details);
 const dataContext={window:{GR:{}}};dataContext.GR=dataContext.window.GR;
 vm.runInNewContext(await readFile(new URL('data.js',root),'utf8'),dataContext,{timeout:1000});
 dataContext.window.GR_DETAIL=details;

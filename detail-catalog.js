@@ -1887,7 +1887,7 @@ window.GR_DETAIL = {
       "width": 1536,
       "height": 1024
     },
-    "isNewDesign": false
+    "isNewDesign": true
   },
   "off-duty-vneck-knit-vest": {
     "lead": "흰 티와 데님 위에 하나만 더해도, 평소 입던 조합이 조금 달라져요.",
@@ -2155,7 +2155,7 @@ window.GR_DETAIL = {
       "width": 1536,
       "height": 1024
     },
-    "isNewDesign": false,
+    "isNewDesign": true,
     "model360Label": "셔츠·팬츠"
   },
   "popcorn-vneck-half": {

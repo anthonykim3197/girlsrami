@@ -363,7 +363,7 @@ test('release registry contains exactly the twelve existing sale designs and 65 
     const live=seo.find(p=>p.id===product.id);
     assert.deepEqual(sorted(live.colors),sorted(product.colors),product.code);
     assert.equal(live.storeUrl,`https://smartstore.naver.com/girlsrami/products/${product.storeId}`,product.code);
-    assert.equal(details[product.id].isNewDesign,false,`${product.code}: an existing design must not regain NEW`);
+    assert.equal(details[product.id].isNewDesign,['RM382','RM495'].includes(product.code),`${product.code}: NEW must follow the owner-confirmed launch classification`);
   }
 });
 

@@ -130,7 +130,7 @@ const sitemap=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www
 await writeFile(new URL('sitemap.xml',out),sitemap);
 
 // Version dynamically imported admin modules from the leaves upward.
-for (const [name, dependency] of [['admin-product-editor.js','admin-inventory.js'],['member.js','admin-product-editor.js']]) {
+for (const [name, dependency] of [['admin-product-editor.js','admin-inventory.js'],['admin-product-editor.js','admin-catalog.js'],['member.js','admin-product-editor.js']]) {
   const depHash = createHash('sha256').update(await readFile(new URL(dependency,out))).digest('hex').slice(0,12);
   const path = new URL(name,out);
   const source = await readFile(path,'utf8');

@@ -3,6 +3,12 @@ import {
   productMatchesAdminSearch,
   validateInventoryProduct
 } from './admin-inventory.js';
+import {
+  catalogInfo,
+  sortAdminProducts,
+  catalogSummary,
+  serializeCatalogFields
+} from './admin-catalog.js';
 
 export function serializeProductSizeFields(value) {
   const sizes = String(value ?? '').split('\n').filter(line => line.trim()).map(line => {
@@ -33,50 +39,125 @@ export function createProductInventoryAdmin(deps) {
       return;
     }
 
-    let drafts = await query(client.from('product_drafts').select('*').order('id'));
+    const [publishedRows, draftRows] = await Promise.all([
+      query(client.from('products').select('id,payload,version').order('id')),
+      query(client.from('product_drafts').select('*').order('id'))
+    ]);
+    const publishedById = new Map(publishedRows.map(row => [row.id,row.payload]));
+    let drafts = draftRows;
     let selectedId = null;
-    root.innerHTML += '<div class="admin-layout"><section class="panel admin-catalog-panel"><div class="cluster admin-list-heading"><div><h2>상품 목록</h2><p class="help">상품명, 품번, 색상 SKU로 찾을 수 있어요.</p></div><button class="btn btn-light" id="new-product">새 상품 초안</button></div><label class="field admin-search">상품 찾기<input id="admin-search" type="search" placeholder="예: RM382, 허니루프, NVR-RM382-CREAM" autocomplete="off"></label><div id="admin-list" class="admin-product-list"></div></section><section class="panel admin-editor-panel" id="admin-edit"></section></div>';
+    let currentView = 'real';
+    let canLeaveEditor = () => true;
+    root.innerHTML += `
+      <div id="admin-catalog-summary" class="admin-catalog-summary" aria-label="상품 현황"></div>
+      <div class="admin-layout admin-inventory-layout">
+        <section class="panel admin-catalog-panel">
+          <div class="cluster admin-list-heading"><div><h2>상품 목록</h2><p class="help">입고일은 이 상품의 작업을 처음 요청한 날이에요.</p></div><button class="btn btn-light" id="new-product">새 상품 초안</button></div>
+          <div id="admin-catalog-views" class="admin-catalog-views" aria-label="상품 구분"></div>
+          <div class="admin-catalog-tools">
+            <label class="field admin-search">상품 찾기<input id="admin-search" type="search" placeholder="상품명, 품번, 색상 SKU" autocomplete="off"></label>
+            <label class="field admin-sort">정렬<select id="admin-sort"><option value="newest">최신 입고순</option><option value="oldest">오래된 입고순</option><option value="name">상품명순</option></select></label>
+          </div>
+          <p id="admin-result-count" class="help" role="status"></p>
+          <div id="admin-list" class="admin-product-list"></div>
+          <p class="help admin-quantity-help">판매 가능 수량은 사이트에 설정된 수량이며 실제 창고 재고와 다를 수 있어요. 스마트스토어와 자동으로 맞춰지지 않아요.</p>
+        </section>
+        <section class="panel admin-editor-panel" id="admin-edit" hidden></section>
+      </div>`;
 
     const mergedProducts = () => {
-      const products = new Map(publicProducts.map(product => [product.id,product]));
+      const products = new Map(publishedById);
       drafts.forEach(draft => products.set(draft.id,draft.payload));
       return [...products.values()];
     };
 
     function inventorySummary(product) {
       const variants = Array.isArray(product.variants) ? product.variants : [];
-      if ((product.colors?.length ?? 0) && variants.length !== product.colors.length) return '색상별 재고 미설정';
-      return `총 재고 ${Number.isInteger(product.stock) ? product.stock.toLocaleString('ko-KR') : 0}개`;
+      if ((product.colors?.length ?? 0) && variants.length !== product.colors.length) return '미설정';
+      return Number.isInteger(product.stock) ? `${product.stock.toLocaleString('ko-KR')}개` : '미설정';
     }
 
     function renderList() {
       const search = find('#admin-search',root).value;
-      const products = mergedProducts().filter(product => productMatchesAdminSearch(product,search));
-      find('#admin-list',root).innerHTML = products.map(product => `
-        <button class="item-row ${selectedId === product.id ? 'selected' : ''}" data-product="${escape(product.id)}">
-          <img src="${escape(product.image ?? '')}" alt="">
-          <span><b>${escape(product.name)}</b><small>${product.styleCode ? `<strong>${escape(product.styleCode)}</strong> · ` : ''}${escape(inventorySummary(product))}</small><small>${priceLabel(product.price)} · ${escape({active:'판매 중',coming:'입고 예정',hidden:'숨김'}[product.status] ?? product.status)}</small></span>
-        </button>`).join('') || '<p class="help">일치하는 상품이 없어요.</p>';
-      root.querySelectorAll('[data-product]').forEach(button => {
+      const summary = catalogSummary(mergedProducts());
+      const saleCount = summary.real.filter(product => publishedById.get(product.id)?.status === 'active').length;
+      const cards = [
+        {label:'판매 중',count:saleCount,note:`실제 상품 총 ${summary.real.length}종`},
+        ...summary.newBatches.map(batch => ({label:'신상품',count:batch.products.length,note:batch.date ? `${batch.date} 입고` : '입고일 미확인'})),
+        {label:'기존 상품',count:summary.legacy.length,note:'기존 스마트스토어 상품'}
+      ];
+      find('#admin-catalog-summary',root).innerHTML = cards.map(card => `<div class="admin-summary-card"><span>${escape(card.label)}</span><strong>${card.count}<small>종</small></strong><p>${escape(card.note)}</p></div>`).join('');
+      const views = [
+        {id:'real',label:'실제 상품',products:summary.real},
+        {id:'samples',label:'견본 · 시험용',products:[...summary.samples,...summary.tests]},
+        ...(summary.unclassified.length ? [{id:'unclassified',label:'분류 미정',products:summary.unclassified}] : [])
+      ];
+      if (!views.some(view => view.id === currentView)) currentView = 'real';
+      find('#admin-catalog-views',root).innerHTML = views.map(view => `<button type="button" class="admin-view-button ${currentView === view.id ? 'active' : ''}" data-catalog-view="${view.id}" aria-pressed="${currentView === view.id}">${escape(view.label)} <span>${view.products.length}</span></button>`).join('');
+      find('#admin-catalog-views',root).querySelectorAll('[data-catalog-view]').forEach(button => {
+        button.onclick = () => { currentView = button.dataset.catalogView; renderList(); };
+      });
+      const view = views.find(view => view.id === currentView);
+      let products = sortAdminProducts(view.products.filter(product => productMatchesAdminSearch(product,search)));
+      const sort = find('#admin-sort',root).value;
+      if (sort === 'oldest') products.sort((a,b) => {
+        const left = catalogInfo(a).intakeDate, right = catalogInfo(b).intakeDate;
+        return left && right ? left.localeCompare(right) : left ? -1 : right ? 1 : 0;
+      });
+      if (sort === 'name') products.sort((a,b) => String(a.name ?? '').localeCompare(String(b.name ?? ''),'ko-KR'));
+      const sampleNote = currentView === 'samples' ? ` · 견본 ${summary.samples.length}종 · 시험용 ${summary.tests.length}종` : '';
+      find('#admin-result-count',root).textContent = `${view.label} ${products.length} / ${view.products.length}종${sampleNote}`;
+      const statusLabels = {active:'판매 중',coming:'입고 예정',hidden:'숨김'};
+      find('#admin-list',root).innerHTML = `
+        <div class="admin-table-scroll" role="region" aria-label="상품 목록 표" tabindex="0">
+          <table class="admin-catalog-table">
+            <thead><tr><th scope="col"${sort === 'name' ? '' : ` aria-sort="${sort === 'oldest' ? 'ascending' : 'descending'}"`}>입고일</th><th scope="col">구분</th><th scope="col"${sort === 'name' ? ' aria-sort="ascending"' : ''}>상품</th><th scope="col">공개 상태</th><th scope="col" class="admin-number">판매가</th><th scope="col" class="admin-number">색상</th><th scope="col" class="admin-number">판매 가능 수량</th><th scope="col">관리</th></tr></thead>
+            <tbody>${products.map(product => {
+              const info = catalogInfo(product);
+              const published = publishedById.get(product.id);
+              const sample = info.group === 'sample' || info.group === 'test';
+              const status = sample ? info.groupLabel : published ? statusLabels[published.status] ?? published.status : '미게시';
+              const draftStatus = !sample && published && product.status !== published.status ? `<small>초안: ${escape(statusLabels[product.status] ?? product.status)}</small>` : '';
+              const thumbnail = !sample && product.image ? `<img src="${escape(product.image)}" alt="" loading="lazy" width="48" height="60">` : `<span class="admin-product-placeholder" aria-hidden="true">${sample ? escape(info.groupLabel) : '사진'}</span>`;
+              const storeUrl = published?.storeUrl || product.storeUrl;
+              return `<tr class="${selectedId === product.id ? 'selected' : ''}">
+                <td class="admin-intake-date">${info.intakeDate ? escape(info.intakeDate) : '<span class="admin-muted">미확인</span>'}</td>
+                <td><span class="admin-group-label" data-group="${escape(info.group)}">${escape(info.groupLabel)}</span></td>
+                <td><div class="admin-product-cell">${thumbnail}<span><b>${escape(product.name)}</b><small>${escape(product.styleCode || '품번 미등록')}</small></span></div></td>
+                <td><span class="admin-product-status" data-status="${sample ? info.group : escape(published?.status || 'draft')}">${escape(status)}</span>${draftStatus}</td>
+                <td class="admin-number">${priceLabel(product.price)}</td>
+                <td class="admin-number">${product.colors?.length ?? 0}색</td>
+                <td class="admin-number">${escape(inventorySummary(product))}</td>
+                <td><div class="admin-row-actions"><button type="button" class="btn btn-light" data-product="${escape(product.id)}" aria-label="${escape(product.name)} 관리">관리</button>${!sample && /^https:\/\/smartstore\.naver\.com\//.test(storeUrl ?? '') ? `<a href="${escape(storeUrl)}" target="_blank" rel="noopener noreferrer">스마트스토어 ↗</a>` : ''}</div></td>
+              </tr>`;
+            }).join('') || '<tr><td colspan="8" class="admin-empty">일치하는 상품이 없어요.</td></tr>'}</tbody>
+          </table>
+        </div>`;
+      find('#admin-list',root).querySelectorAll('[data-product]').forEach(button => {
         button.onclick = () => editProduct(button.dataset.product);
       });
     }
 
     async function editProduct(requestedId, initialProduct = null) {
+      if (!canLeaveEditor()) return;
       let productId = requestedId;
       selectedId = productId;
       renderList();
       const draft = drafts.find(item => item.id === productId);
       let version = draft?.version ?? 0;
-      let product = initialProduct ?? draft?.payload ?? publicProducts.find(item => item.id === productId);
+      let product = initialProduct ?? draft?.payload ?? publishedById.get(productId);
+      const productCatalog = catalogInfo(product);
       const editorPanel = find('#admin-edit',root);
-      const categoryOptions = [...new Set([...publicProducts.map(item => item.category),product.category].filter(Boolean))];
+      const categoryOptions = [...new Set([...mergedProducts().map(item => item.category),product.category].filter(Boolean))];
+      editorPanel.hidden = false;
       editorPanel.innerHTML = `
-        <div class="editor-heading"><div><span class="eyebrow">초안 → 게시</span><h2>${escape(product.name || '새 상품')}</h2></div><span class="document-state">${version ? `저장된 초안 · 버전 ${version}` : '새 초안'}</span></div>
+        <div class="editor-heading"><div><span class="eyebrow">초안 → 게시</span><h2 tabindex="-1">${escape(product.name || '새 상품')}</h2></div><div class="admin-editor-actions"><span class="document-state">${version ? `저장된 초안 · 버전 ${version}` : '새 초안'}</span><button type="button" class="btn btn-light" id="close-product-editor">목록으로</button></div></div>
         <p class="help">상품 ID ${escape(productId || '저장할 때 확정')} · 품번은 상품명과 분리해 관리해요.</p>
         <form id="editor">
           ${input('productId','상품 ID (영문 소문자·숫자·하이픈)','text',productId,`pattern="[a-z0-9-]{1,80}" required ${initialProduct ? '' : 'readonly'}`)}
           <div class="form-grid">
+            ${input('intakeDate','입고일 (최초 작업 요청일)','date',productCatalog.intakeDate ?? '')}
+            ${select('catalogGroup','상품 구분',[['new','신상품'],['legacy','기존 상품'],['sample','견본'],['test','시험용'],['unclassified','분류 미정']],productCatalog.group)}
             ${input('styleCode','품번','text',product.styleCode ?? '','maxlength="40" placeholder="예: RM382"')}
             ${select('line','상품 라인',[['basic','베이직'],['premium','프리미엄']],product.line ?? 'basic')}
             ${select('category','상품 종류',categoryOptions.map(category => [category,category]),product.category ?? '가디건')}
@@ -113,6 +194,17 @@ export function createProductInventoryAdmin(deps) {
       const colorPhotoContainer = find('[data-color-photos]',form);
       let dirty = Boolean(initialProduct);
       let busy = false;
+      canLeaveEditor = () => !dirty || window.confirm('저장하지 않은 변경이 있어요. 변경 내용을 버리고 이동할까요?');
+      find('#close-product-editor',editorPanel).onclick = () => {
+        if (!canLeaveEditor()) return;
+        selectedId = null;
+        canLeaveEditor = () => true;
+        editorPanel.hidden = true;
+        editorPanel.innerHTML = '';
+        renderList();
+        find('#admin-search',root).focus();
+      };
+      find('h2',editorPanel).focus();
       const colors = () => colorsInput.value.split(',').map(color => color.trim()).filter(Boolean);
 
       function currentVariantRows() {
@@ -200,8 +292,9 @@ export function createProductInventoryAdmin(deps) {
           const values = formValues(form);
           const nextId = initialProduct && version === 0 ? values.productId : productId;
           const sizeFields = serializeProductSizeFields(values.sizes);
+          const catalogFields = serializeCatalogFields(values);
           const inventoryProduct = validateInventoryProduct({
-            ...product,id:nextId,name:values.name,desc:values.desc,line:values.line,category:values.category,status:values.status,storeUrl:values.storeUrl,styleCode:values.styleCode,colors:colors(),variants:currentVariantRows(),price:Number(values.price),...sizeFields,photoVerified:values.photoVerified === 'on'
+            ...product,id:nextId,name:values.name,desc:values.desc,line:values.line,category:values.category,status:values.status,storeUrl:values.storeUrl,styleCode:values.styleCode,colors:colors(),variants:currentVariantRows(),price:Number(values.price),...sizeFields,...catalogFields,photoVerified:values.photoVerified === 'on'
           },mergedProducts());
 
           const colorPhotos = Object.fromEntries((await Promise.all([...colorPhotoContainer.querySelectorAll('[data-photo-color]')].map(async row => {
@@ -244,6 +337,9 @@ export function createProductInventoryAdmin(deps) {
       find('#publish',root).onclick = () => runBusy(async () => {
         if (dirty) throw new Error('먼저 초안을 저장해 주세요.');
         await query(client.rpc('publish_product',{product_id:productId,expected_version:version}));
+        const published = await query(client.from('products').select('payload').eq('id',productId).single());
+        publishedById.set(productId,published.payload);
+        renderList();
         setStatus(form,'저장한 초안을 사이트에 게시했어요. 공개 상품 페이지를 새로 열어 확인해 주세요.');
       });
 
@@ -255,22 +351,30 @@ export function createProductInventoryAdmin(deps) {
       if (selectedId !== productId) return;
       find('#history-list',root).innerHTML = history.map(item => `<div class="job-row"><span>게시 ${item.version} · ${escape(new Date(item.created_at).toLocaleString('ko-KR'))}</span><button class="text-btn" data-restore="${item.id}">이 내용으로 초안 복원</button></div>`).join('') || '<p class="help">게시 이력이 없어요.</p>';
       editorPanel.querySelectorAll('[data-restore]').forEach(button => {
-        button.onclick = () => runBusy(async () => {
-          const historic = history.find(item => item.id === button.dataset.restore).payload;
-          validateInventoryProduct(historic,mergedProducts());
-          version = await query(client.rpc('save_product_draft',{product_id:productId,product_payload:historic,expected_version:version}));
-          drafts = await query(client.from('product_drafts').select('*').order('id'));
-          await editProduct(productId);
-          setStatus(find('#editor',root),'이전 게시 내용을 초안으로 복원했어요. 확인 후 게시할 수 있어요.');
-        });
+        button.onclick = () => {
+          if (!canLeaveEditor()) return;
+          runBusy(async () => {
+            const currentCatalog = catalogInfo(product);
+            const historic = {
+              ...history.find(item => item.id === button.dataset.restore).payload,
+              ...serializeCatalogFields({catalogGroup:currentCatalog.group,intakeDate:currentCatalog.intakeDate ?? ''})
+            };
+            validateInventoryProduct(historic,mergedProducts());
+            version = await query(client.rpc('save_product_draft',{product_id:productId,product_payload:historic,expected_version:version}));
+            drafts = await query(client.from('product_drafts').select('*').order('id'));
+            dirty = false;
+            await editProduct(productId);
+            setStatus(find('#editor',root),'이전 게시 내용을 초안으로 복원했어요. 입고일과 상품 구분은 유지했어요. 확인 후 게시할 수 있어요.');
+          });
+        };
       });
     }
 
     find('#new-product',root).onclick = () => editProduct('',{
-      id:'',name:'',styleCode:'',line:'basic',category:'가디건',price:0,stock:0,status:'hidden',colors:[],variants:[],sizes:[{label:'FREE',chestHalf:null,length:null,verified:false}],image:'',storeUrl:'',photoVerified:false,desc:'',badges:[]
+      id:'',name:'',styleCode:'',catalogGroup:'unclassified',intakeDate:null,line:'basic',category:'가디건',price:0,stock:0,status:'hidden',colors:[],variants:[],sizes:[{label:'FREE',chestHalf:null,length:null,verified:false}],image:'',storeUrl:'',photoVerified:false,desc:'',badges:[]
     });
     find('#admin-search',root).oninput = renderList;
+    find('#admin-sort',root).onchange = renderList;
     renderList();
-    if (publicProducts[0]) await editProduct(publicProducts[0].id);
   };
 }

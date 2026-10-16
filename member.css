@@ -556,6 +556,9 @@
 }
 
 /* The complete catalog stays above the selected product editor. */
+.studio-workspace .admin-inventory-heading {
+  display: none;
+}
 .admin-layout.admin-inventory-layout,
 .studio-workspace .admin-layout.admin-inventory-layout {
   grid-template-columns: minmax(0, 1fr);

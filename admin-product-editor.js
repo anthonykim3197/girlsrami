@@ -29,7 +29,7 @@ export function createProductInventoryAdmin(deps) {
   return async function renderProductInventoryAdmin(root, publicProducts) {
     const client = getClient();
     const user = getUser();
-    root.innerHTML = '<div class="page-heading"><div class="eyebrow">Girlsrami studio</div><h1>상품 · 재고 관리</h1><p>상품 정보와 색상별 SKU·재고를 초안으로 저장하고, 확인한 버전만 사이트에 게시해요.</p></div>';
+    root.innerHTML = '<div class="page-heading admin-inventory-heading"><div class="eyebrow">Girlsrami studio</div><h1>상품 · 재고 관리</h1><p>상품 정보와 색상별 SKU·재고를 초안으로 저장하고, 확인한 버전만 사이트에 게시해요.</p></div>';
     if (!client || !user) {
       root.innerHTML += Q('관리자로 로그인한 후 상품을 편집할 수 있어요.') + '<a class="btn btn-accent" href="account.html">로그인</a>';
       return;

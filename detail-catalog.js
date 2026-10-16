@@ -404,7 +404,8 @@ window.GR_DETAIL = {
       "오렌지",
       "네온",
       "보라"
-    ]
+    ],
+    "cardThumbnail": "assets/detail/alpaca-round-knit/shop-20261016/street-thumbnail.webp"
   },
   "boucle-crop-cardigan": {
     "lead": "데님 위에 짧게 떨어지는 가디건. 단추를 잠그면 니트 톱처럼 입을 수 있어요.",
@@ -743,7 +744,8 @@ window.GR_DETAIL = {
       "베이지",
       "소라",
       "곤색"
-    ]
+    ],
+    "cardThumbnail": "assets/detail/boucle-crop-cardigan/shop-20261016/street-thumbnail.webp"
   },
   "boucle-fisher-vneck-vest": {
     "lead": "티셔츠 위에도, 셔츠 위에도. 브이넥과 케이블 짜임이 심심한 조합을 채워줘요.",
@@ -1080,7 +1082,8 @@ window.GR_DETAIL = {
       "베이지",
       "소라",
       "연회색"
-    ]
+    ],
+    "cardThumbnail": "assets/detail/boucle-fisher-vneck-vest/shop-20261016/street-thumbnail.webp"
   },
   "boucle-round-half-cardigan": {
     "lead": "라운드넥과 짧은 소매. 단추를 잠그고 데님과 가볍게 맞춰 입어요.",
@@ -1389,7 +1392,8 @@ window.GR_DETAIL = {
       "베이지",
       "소라",
       "곤색"
-    ]
+    ],
+    "cardThumbnail": "assets/detail/boucle-round-half-cardigan/shop-20261016/street-thumbnail.webp"
   },
   "cable-vneck-knit": {
     "lead": "브이넥 아래로 이어지는 케이블. 평소 입던 데님에 클래식한 표정을 더해요.",
@@ -1857,7 +1861,8 @@ window.GR_DETAIL = {
       "초록",
       "곤색",
       "검정"
-    ]
+    ],
+    "cardThumbnail": "assets/detail/cable-vneck-knit/shop-20261016/street-thumbnail.webp"
   },
   "fisherman-crop-bustier": {
     "lead": "흰 티 위에 짧게 한 겹. 케이블 뷔스티에로 레이어드 비율을 바꿔보세요.",
@@ -2166,7 +2171,8 @@ window.GR_DETAIL = {
       "연밤",
       "소라",
       "검정"
-    ]
+    ],
+    "cardThumbnail": "assets/detail/fisherman-crop-bustier/shop-20261016/street-thumbnail.webp"
   },
   "honey-loop-crop-knit": {
     "lead": "작은 벌집 짜임과 넉넉한 몸판. 심플한 하의에 니트의 결을 더해요.",
@@ -2427,7 +2433,8 @@ window.GR_DETAIL = {
       "크림",
       "차콜",
       "스카이"
-    ]
+    ],
+    "cardThumbnail": "assets/detail/honey-loop-crop-knit/shop-20261016/street-thumbnail.webp"
   },
   "off-duty-vneck-knit-vest": {
     "lead": "흰 티와 데님 위에 하나만 더해도, 평소 입던 조합이 조금 달라져요.",
@@ -2720,7 +2727,8 @@ window.GR_DETAIL = {
       "크림",
       "차콜",
       "회색"
-    ]
+    ],
+    "cardThumbnail": "assets/detail/off-duty-vneck-knit-vest/shop-20261016/street-thumbnail.webp"
   },
   "popcorn-vneck-half": {
     "lead": "잔잔한 팝콘 짜임에 브이넥을 더했어요. 데님 하나로도 조합이 완성됩니다.",
@@ -3017,7 +3025,8 @@ window.GR_DETAIL = {
       "연두",
       "베이지",
       "검정"
-    ]
+    ],
+    "cardThumbnail": "assets/detail/popcorn-vneck-half/shop-20261016/street-thumbnail.webp"
   },
   "recycled-round-sweater": {
     "lead": "무늬 없이 담백한 라운드 니트. 데님이나 슬랙스에 편하게 돌려 입어요.",
@@ -3390,7 +3399,8 @@ window.GR_DETAIL = {
       "모카",
       "그레이",
       "브라운"
-    ]
+    ],
+    "cardThumbnail": "assets/detail/recycled-round-sweater/shop-20261016/street-thumbnail.webp"
   },
   "stripe-cable-half": {
     "lead": "스트라이프와 케이블을 한 벌에. 단순한 팬츠에 맞춰도 밋밋하지 않아요.",
@@ -3671,7 +3681,8 @@ window.GR_DETAIL = {
       "초록",
       "하늘",
       "연핑"
-    ]
+    ],
+    "cardThumbnail": "assets/detail/stripe-cable-half/shop-20261016/street-thumbnail.webp"
   },
   "vneck-knit-vest": {
     "lead": "티셔츠에 한 겹, 셔츠에 한 겹. 넓은 립 밑단으로 레이어드를 정리해요.",
@@ -4042,7 +4053,8 @@ window.GR_DETAIL = {
       "브라운",
       "올리브",
       "곤색"
-    ]
+    ],
+    "cardThumbnail": "assets/detail/vneck-knit-vest/shop-20261016/street-thumbnail.webp"
   },
   "jo23-oversized-vneck-knit": {
     "lead": "티셔츠 위에는 편안하게, 셔츠 위에는 단정하게. 이너에 따라 분위기가 달라지는 여유로운 V넥 니트.",
@@ -4501,7 +4513,8 @@ window.GR_DETAIL = {
       "그레이": "#6b6d72"
     },
     "isNewDesign": true,
-    "model360Label": "흰 티셔츠와 라이트 워시 데님"
+    "model360Label": "흰 티셔츠와 라이트 워시 데님",
+    "cardThumbnail": "assets/detail/jo23-oversized-vneck-knit/shop-20261016/street-thumbnail.webp"
   },
   "jo24-oversized-boatneck-knit": {
     "lead": "넓게 열린 보트넥과 볼륨 소매가 한눈에 들어오는 니트. 밝은 데님에는 가볍게, 네이비 슬랙스에는 차분하게 이어 보세요.",
@@ -4957,7 +4970,8 @@ window.GR_DETAIL = {
       "그레이": "#6b6d72"
     },
     "isNewDesign": true,
-    "model360Label": "아이보리 와이드 팬츠"
+    "model360Label": "아이보리 와이드 팬츠",
+    "cardThumbnail": "assets/detail/jo24-oversized-boatneck-knit/shop-20261016/street-thumbnail.webp"
   },
   "jo31-raglan-roundneck-knit": {
     "lead": "라운드 티와 데님 위에 편하게 더하고, 슬랙스와는 차분하게 맞추는 래글런 니트. 긴 기장과 사선 소매선이 자연스럽게 이어집니다.",
@@ -5409,7 +5423,8 @@ window.GR_DETAIL = {
       "그레이": "#6b6d72"
     },
     "isNewDesign": true,
-    "model360Label": "모델 착용 360°"
+    "model360Label": "모델 착용 360°",
+    "cardThumbnail": "assets/detail/jo31-raglan-roundneck-knit/shop-20261016/street-thumbnail.webp"
   },
   "jo32-raglan-vneck-knit": {
     "lead": "얇은 목티가 살짝 보이게 입거나, 셔츠 깃을 꺼내 단정하게. 깊은 V넥 덕분에 이너를 바꾸는 재미가 있는 래글런 니트.",
@@ -5834,7 +5849,8 @@ window.GR_DETAIL = {
       "그레이": "#6b6d72"
     },
     "isNewDesign": true,
-    "model360Label": "얇은 목티와 라이트 데님"
+    "model360Label": "얇은 목티와 라이트 데님",
+    "cardThumbnail": "assets/detail/jo32-raglan-vneck-knit/shop-20261016/street-thumbnail.webp"
   },
   "rm542-cable-vneck-vest": {
     "lead": "흰 티와 데님 위에 한 겹 더하면 중앙 다이아 짜임이 코디의 중심이 되는 V넥 베스트. 셔츠와 슬랙스에도 자연스럽게 이어집니다.",
@@ -6256,7 +6272,8 @@ window.GR_DETAIL = {
       "그레이": "#6b6d72"
     },
     "isNewDesign": true,
-    "model360Label": "데일리 데님 레이어"
+    "model360Label": "데일리 데님 레이어",
+    "cardThumbnail": "assets/detail/rm542-cable-vneck-vest/shop-20261016/street-thumbnail.webp"
   },
   "rm543-basic-vneck-knit": {
     "lead": "흰 티와 데님에는 편안하게, 셔츠와 슬랙스에는 단정하게. 익숙한 하의에 바로 이어 입기 좋은 V넥 니트.",
@@ -6681,7 +6698,8 @@ window.GR_DETAIL = {
       "그레이": "#6b6d72"
     },
     "isNewDesign": true,
-    "model360Label": "화이트 티와 데님"
+    "model360Label": "화이트 티와 데님",
+    "cardThumbnail": "assets/detail/rm543-basic-vneck-knit/shop-20261016/street-thumbnail.webp"
   },
   "rm567-round-cap-sleeve-knit": {
     "lead": "라운드넥과 캡소매가 간결한 인상을 만드는 짧은 니트. 데님부터 슬랙스, 미디스커트까지 하의가 잘 보이는 비율로 이어집니다.",
@@ -7137,7 +7155,8 @@ window.GR_DETAIL = {
       "그레이": "#6b6d72"
     },
     "isNewDesign": true,
-    "model360Label": "티셔츠처럼 가볍게 · 데님"
+    "model360Label": "티셔츠처럼 가볍게 · 데님",
+    "cardThumbnail": "assets/detail/rm567-round-cap-sleeve-knit/shop-20261016/street-thumbnail.webp"
   },
   "rm576-ribbed-vneck-knit": {
     "lead": "흰 티와 팬츠 위에 툭 더하면 하찌 짜임이 또렷하게 살아나는 V넥 니트. 슬랙스와 미디스커트에는 차분하게 이어집니다.",
@@ -7592,7 +7611,8 @@ window.GR_DETAIL = {
       "그레이": "#6b6d72"
     },
     "isNewDesign": true,
-    "model360Label": "0°/45°/90°/135° and 180°/225°/270°/315°; identical axis; no mirroring"
+    "model360Label": "0°/45°/90°/135° and 180°/225°/270°/315°; identical axis; no mirroring",
+    "cardThumbnail": "assets/detail/rm576-ribbed-vneck-knit/shop-20261016/street-thumbnail.webp"
   },
   "rm582-front-back-vneck-oversized-knit": {
     "lead": "크루넥 이너가 앞뒤 V넥 사이로 보이는 오버핏 니트. 데님에는 편안하게, 블랙 슬랙스와 미디스커트에는 차분하게 이어 보세요.",
@@ -8012,6 +8032,7 @@ window.GR_DETAIL = {
       "그레이": "#6b6d72"
     },
     "isNewDesign": true,
-    "model360Label": "화이트 티셔츠 · 차콜 데님"
+    "model360Label": "화이트 티셔츠 · 차콜 데님",
+    "cardThumbnail": "assets/detail/rm582-front-back-vneck-oversized-knit/shop-20261016/street-thumbnail.webp"
   }
 };

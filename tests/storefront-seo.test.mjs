@@ -38,7 +38,7 @@ test('the sitemap and static product pages expose only the verified sale catalog
     assert.ok(raw,`${product.id} Product JSON-LD`);
     const json=JSON.parse(raw);
     assert.equal(json['@type'],'Product');
-    const hero=new URL(details[product.id].thumbnail,'https://girlslami.com/').href;
+    const hero=new URL(details[product.id].cardThumbnail||details[product.id].thumbnail,'https://girlslami.com/').href;
     assert.deepEqual(json.image,[...new Set([hero,product.realImage])]);
     assert.ok(html.includes(`<meta property="og:image" content="${hero}">`));
     assert.ok(html.includes(details[product.id].lead));

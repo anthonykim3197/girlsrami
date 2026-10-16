@@ -33,7 +33,7 @@ const htmlEscape=value=>String(value??'').replace(/[&<>"']/g,char=>({
 }[char]));
 const xmlEscape=value=>htmlEscape(value);
 const productPath=product=>`product-${product.id}.html`;
-const thumbnailFor=product=>details[product.id].thumbnail||product.realImage;
+const thumbnailFor=product=>details[product.id].cardThumbnail||details[product.id].thumbnail||product.realImage;
 const absoluteImage=path=>new URL(path,siteUrl).href;
 const leadFor=product=>details[product.id].lead||product.name;
 const descriptionFor=product=>{

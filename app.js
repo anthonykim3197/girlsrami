@@ -49,7 +49,7 @@
     const description = `${nameFor(p)}. ${detail?.lead || material}${detail?.lead ? ' ' : material ? '. ' : ''}${colors ? `판매 색상 ${colors}. ` : ''}현재 구매 가능한 옵션과 배송 조건은 스마트스토어에서 확인하세요.`;
     const absoluteImage = value => /^https?:\/\//i.test(value) ? value : SITE_URL + value.replace(/^\//, '');
     const realImage = verifiedRealImageFor(p);
-    const image = detail?.thumbnail || realImage;
+    const image = detail?.cardThumbnail || detail?.thumbnail || realImage;
     document.title = `${nameFor(p)} | 걸스라미`;
     if (!document.head) return;
     setMeta('meta[name="description"]', 'name', 'description');
@@ -83,7 +83,7 @@
 
   /* ---------- Catalog presentation contract ---------- */
   function nameFor(p) {
-    return String(p?.name || '').trim().replace(/\s*\(\s*RM\d+\s*\)\s*$/i, '');
+    return String(p?.name || '').trim().replace(/^걸스라미\s*/, '').replace(/\s*\(\s*RM\d+\s*\)\s*$/i, '');
   }
   function styleCodeFor(p) {
     const explicit = String(p?.styleCode || '').trim();
@@ -376,8 +376,8 @@
     p = { ...p, name: nameFor(p), ...reviewStatsFor(p) };
     const soon = !isSaleProduct(p);
     const detail = window.GR_DETAIL?.[p.id];
-    const cardImage = detail?.thumbnail || verifiedRealImageFor(p) || p.catalogImage || p.image + '.jpg';
-    const imageLabel = detail?.thumbnail ? '스타일링' : '실물 사진';
+    const cardImage = detail?.cardThumbnail || detail?.thumbnail || verifiedRealImageFor(p) || p.catalogImage || p.image + '.jpg';
+    const imageLabel = (detail?.cardThumbnail || detail?.thumbnail) ? '스타일링' : '실물 사진';
     const sw = p.colors.slice(0, 6).map(c => `<span class="swatch" title="${esc(c)}" style="background:${swatchColor(c,p)}"></span>`).join('') + (p.colors.length > 6 ? `<span class="more">+${p.colors.length - 6}</span>` : '');
     return `<a class="card reveal in" href="${productHref(p)}">
       <div class="thumb ${soon ? 'soon' : ''}">
@@ -387,7 +387,7 @@
       </div>
       <div class="card-body">
         <div class="cat">${esc(p.category)}</div>
-        <div class="name">걸스라미 ${esc(p.name)}<small>${esc(detail?.lead || p.sub || p.material)}</small></div>
+        <div class="name">${esc(p.name)}<small>${esc(detail?.lead || p.sub || p.material)}</small></div>
         ${p.pricePending ? '' : priceFor(p)}
         ${p.colors.length ? `<div class="swatches">${sw}</div>` : ''}
         ${p.rating ? `<div class="rating"><span class="star">${stars(p.rating)}</span> ${p.rating} <span class="muted">(${p.reviewCount})</span></div>` : `<div class="rating muted">${soon ? '스마트스토어 입고 후 판매' : ''}</div>`}
@@ -507,7 +507,7 @@
     root.innerHTML = `
       <div class="pd-media${ai ? ' pd-media-ai' : p.newRelease ? ' pd-media-catalog' : ''}">
         ${ai ? GR_AI.gallery(p, color) : `
-        <img src="${esc(p.catalogImage || p.image+'.jpg')}" alt="걸스라미 ${esc(p.name)}" id="pd-img">
+        <img src="${esc(p.catalogImage || p.image+'.jpg')}" alt="${esc(p.name)}" id="pd-img">
         ${p.photoSampleOnly ? '<p class="small muted" style="margin-top:10px">사진은 촬영 샘플 색상 기준입니다. 구매할 색상은 옵션명으로 선택해 주세요.</p>' : ''}
         ${detailImages.length ? '' : `<div class="thumbs"><div>정면 착용</div><div>원단 클로즈업<br><small>(촬영 예정)</small></div><div>키 155 / 160 / 167<br>착용 비교<small> (촬영 예정)</small></div><div>15초 숏클립<br><small>(촬영 예정)</small></div></div>`}
         `}
@@ -515,7 +515,7 @@
       <div class="pd-info">
         <div class="crumb"><a href="index.html">홈</a> › <a href="shop.html">전체 상품</a> › <a href="shop.html?cat=${encodeURIComponent(p.category)}">${esc(p.category)}</a></div>
         <div class="badges" style="position:static;flex-direction:row;margin-bottom:12px">${saleBadgesFor(p).map(b => `<span class="badge accent">${esc(b)}</span>`).join('')}</div>
-        <h1 class="name">걸스라미 ${esc(p.name)}</h1>
+        <h1 class="name">${esc(p.name)}</h1>
         <div class="sub">${esc(p.material || p.category)}</div>
         ${p.rating ? `<div class="rating" style="margin-top:10px"><span class="star">${stars(p.rating)}</span> <b>${p.rating}</b> <a class="muted" href="#reviews">리뷰 ${p.reviewCount}건</a></div>` : ''}
         ${p.pricePending ? '' : priceFor(p, true)}

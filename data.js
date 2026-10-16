@@ -696,7 +696,7 @@ GR.PRODUCTS = [
     },
     "reviewCount": 0,
     "channelPrice": {
-      "naver": 16800
+      "naver": 19900
     },
     "manufacturer": "걸스라미",
     "photoVerified": false,

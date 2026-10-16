@@ -62,6 +62,17 @@ test('customer titles omit style codes while genuine RM codes remain available a
   assert.equal(GR.catalogPresentation.styleCodeFor(canonical),'RM495');
 });
 
+test('customer cards show the product name without adding or preserving a brand prefix',()=>{
+  const GR=loadApp();
+  for(const name of ['허니루프 라운드 니트','  걸스라미 허니루프 라운드 니트 (RM382)  ']){
+    const item=product({name});
+    assert.equal(GR.catalogPresentation.nameFor(item),'허니루프 라운드 니트');
+    const html=GR.card(item);
+    assert.match(html,/<div class="name">허니루프 라운드 니트<small>/);
+    assert.doesNotMatch(html,/걸스라미 허니루프/);
+  }
+});
+
 test('cards show an explicit Naver checkout price without inventing a discount',()=>{
   const GR=loadApp();
   const html=GR.card(product());
@@ -177,7 +188,7 @@ test('legacy RM429 without AI metadata still receives the native editorial layou
     '#color-opts':pageElement(),'#size-opts':pageElement(),'.pd-info .gift':gift
   };
   const legacy=product({
-    id:'vneck-knit-vest',name:'뮤트레이어 V넥 니트 베스트',styleCode:'',sku:'9721023441',
+    id:'vneck-knit-vest',name:'걸스라미 뮤트레이어 V넥 니트 베스트',styleCode:'',sku:'9721023441',
     catalogImage:'vest.jpg',newRelease:false,smartstore:'https://smartstore.naver.com/girlsrami/products/9721023441',storeUrl:'https://smartstore.naver.com/girlsrami/products/9721023441',
     material:'',fit:'',length:'',thickness:'',stretch:'',sheer:'',care:'',desc:'',detailImages:[],reviews:[]
   });
@@ -202,5 +213,21 @@ test('legacy RM429 without AI metadata still receives the native editorial layou
   assert.equal(rootClasses.get('pd-editorial'),true);
   assert.equal(detailClasses.get('pd-editorial-detail'),true);
   assert.match(detail.innerHTML,/class="quality-editorial/);
+  assert.match(pd.innerHTML,/<h1 class="name">뮤트레이어 V넥 니트 베스트<\/h1>/);
+  assert.doesNotMatch(pd.innerHTML,/걸스라미 뮤트레이어/);
+  assert.equal(document.title,'뮤트레이어 V넥 니트 베스트 | 걸스라미');
   assert.equal(giftRemoved,true);
+});
+
+
+test('listing crops are separate from full-body detail looks',()=>{
+  const presentation={thumbnail:'full-body.webp',cardThumbnail:'street-crop.webp',thumbnailColor:'크림',looks:[{id:'signature',label:'시그니처',images:{크림:'full-body.webp'}}]};
+  const GR=loadApp({'honey-loop-crop-knit':presentation});
+  const html=GR.card(product());
+  assert.match(html,/src="street-crop.webp"/);
+  assert.doesNotMatch(html,/src="full-body.webp"/);
+  const context={window:{},GR};
+  vm.runInNewContext(readFileSync(new URL('../standard-detail.js',import.meta.url),'utf8'),context);
+  const detail=context.window.GRStandardDetail.normalize(product(),presentation);
+  assert.equal(detail.looks[0].images['크림'],'full-body.webp');
 });

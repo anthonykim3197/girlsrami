@@ -187,42 +187,42 @@ const ORIGINAL_GRAY_FILES = [
   {
     "angle": 0,
     "src": "/assets/detail/off-duty-vneck-knit-vest/originals/000.jpg",
-    "sha256": "d33f76f2b468a89f01b9b3115e8cf64bd953c1ff2ae1e9e55256916ce1684036"
+    "sha256": "f6f2a8b3e6dea854fbd1ae49199a31305dce6d567986bc55f08f710855793c0c"
   },
   {
     "angle": 45,
     "src": "/assets/detail/off-duty-vneck-knit-vest/originals/045.jpg",
-    "sha256": "533ee4b6a3066c305ded8075f45db8750d1dcaa7cc7b566f928efeba5be98da3"
+    "sha256": "ef8263611346044d3b60a2c567f0d36559cdd77615e9fb2dd78c657a795efda4"
   },
   {
     "angle": 90,
     "src": "/assets/detail/off-duty-vneck-knit-vest/originals/090.jpg",
-    "sha256": "bd8bc0e9f78e7faac51d7b6962197e5f288bb8491b06df43fb969a4c39bf171e"
+    "sha256": "789f46f6415842cd5fd9591f88b13ef52cea3f384c591679981606328b7c6c40"
   },
   {
     "angle": 135,
     "src": "/assets/detail/off-duty-vneck-knit-vest/originals/135.jpg",
-    "sha256": "116b9b6d696c6eedfce1093d5828cc1115e256e49dc0510292fa8adfe4b3b69e"
+    "sha256": "4b7daef07b90a24921b5b78b4fedeae36ce8e00ed08d616d141771290eb841d9"
   },
   {
     "angle": 180,
     "src": "/assets/detail/off-duty-vneck-knit-vest/originals/180.jpg",
-    "sha256": "460d905519feda84fa9efb43c3ad05e5a2889dcc8e8db603d14ac14cbcea829c"
+    "sha256": "d2ea93b616d4e3ae91b211ae1023aefccbf5e4f9a64aa18b391e916b430b7135"
   },
   {
     "angle": 225,
     "src": "/assets/detail/off-duty-vneck-knit-vest/originals/225.jpg",
-    "sha256": "d5654bd81bd2eb8337051333db05e908a516f2868ec3bf1c37ad31d6fbca06ce"
+    "sha256": "9d8fc65395425be00b4170a172a0e0908838ecc9117bcb04f9ce6d51e36968b2"
   },
   {
     "angle": 270,
     "src": "/assets/detail/off-duty-vneck-knit-vest/originals/270.jpg",
-    "sha256": "38987e078e64fb38e42bfd1c15ef8d5a9e5913d6baf0c5e4a6bee9badfa26e3f"
+    "sha256": "72bf00935cd255b5668623e7bab273186553dbf2fbaa1573ef5143d914ff8255"
   },
   {
     "angle": 315,
     "src": "/assets/detail/off-duty-vneck-knit-vest/originals/315.jpg",
-    "sha256": "82a232211e8dcb7205262a817aad5007f84953b94341d21424a01483c57cbcf4"
+    "sha256": "e9851ae6cbe4d1708de80a30c3bead9da1b9e082cf8b25421df75f8669205b28"
   }
 ];
 const ANGLES = [0,45,90,135,180,225,270,315];
@@ -499,7 +499,7 @@ test('sale colors and views do not reuse the same path or identical local file b
   assert.equal(references.filter(image=>image.hash).length,768);
 });
 
-test('RM495 keeps all eight photographed Gray originals byte-for-byte',()=>{
+test('RM495 keeps all eight photographed Gray originals pinned after location/camera/video removal',()=>{
   assert.deepEqual(ORIGINAL_GRAY_FILES.map(photo=>photo.angle),ANGLES);
   for(const photo of ORIGINAL_GRAY_FILES) {
     const {bytes}=localFile(photo.src);

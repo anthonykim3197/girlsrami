@@ -9,6 +9,7 @@ import {
   catalogSummary,
   serializeCatalogFields
 } from './admin-catalog.js';
+import {sanitizeImageFile} from './image-privacy.js';
 
 export function serializeProductSizeFields(value) {
   const sizes = String(value ?? '').split('\n').filter(line => line.trim()).map(line => {
@@ -279,9 +280,10 @@ export function createProductInventoryAdmin(deps) {
         setStatus(form,'저장하지 않은 변경이 있어요. 초안 저장 후 게시해 주세요.');
       };
 
-      const uploadCatalogImage = async file => {
-        if (!['image/jpeg','image/png','image/webp'].includes(file.type) || file.size > 7 * 1024 * 1024) throw new Error('7MB 이하 상품 사진을 준비해 주세요.');
-        const path = `${crypto.randomUUID()}.${{'image/jpeg':'jpg','image/png':'png','image/webp':'webp'}[file.type]}`;
+      const uploadCatalogImage = async original => {
+        const file = await sanitizeImageFile(original); // 위치·기기·모션포토 정보를 지운 새 사진
+        if (file.size > 7 * 1024 * 1024) throw new Error('7MB 이하 상품 사진을 준비해 주세요.');
+        const path = `${crypto.randomUUID()}.${file.type === 'image/png' ? 'png' : 'jpg'}`;
         await query(client.storage.from('catalog').upload(path,file,{contentType:file.type}));
         return client.storage.from('catalog').getPublicUrl(path).data.publicUrl;
       };

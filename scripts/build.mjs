@@ -2,6 +2,7 @@ import {mkdir,copyFile,readdir,rm,readFile,writeFile,stat} from 'node:fs/promise
 import {createHash} from 'node:crypto';
 import vm from 'node:vm';
 import {validateDetailContent} from './validate-detail-content.mjs';
+import {privatePhotoData} from './photo-privacy.mjs';
 
 const root=new URL('../',import.meta.url);
 const out=new URL('../dist/',import.meta.url);
@@ -150,7 +151,7 @@ const sitemap=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www
 await writeFile(new URL('sitemap.xml',out),sitemap);
 
 // Version dynamically imported admin modules from the leaves upward.
-for (const [name, dependency] of [['admin-product-editor.js','admin-inventory.js'],['admin-product-editor.js','admin-catalog.js'],['member.js','admin-product-editor.js']]) {
+for (const [name, dependency] of [['admin-product-editor.js','image-privacy.js'],['member.js','image-privacy.js'],['admin-product-editor.js','admin-inventory.js'],['admin-product-editor.js','admin-catalog.js'],['member.js','admin-product-editor.js']]) {
   const depHash = createHash('sha256').update(await readFile(new URL(dependency,out))).digest('hex').slice(0,12);
   const path = new URL(name,out);
   const source = await readFile(path,'utf8');
@@ -171,6 +172,10 @@ async function validateUploadSizes(directory=out) {
     const path=new URL(entry.name+(entry.isDirectory()?'/':''),directory);
     if (entry.isDirectory()) await validateUploadSizes(path);
     else if ((await stat(path)).size>maxAssetBytes) throw new Error(`File exceeds the 25 MiB upload limit: ${path.pathname}`);
+    else if (/\.(?:jpe?g|png|webp)$/i.test(entry.name)) {
+      const reasons=privatePhotoData(await readFile(path));
+      if (reasons.length) throw new Error(`Photo carries private data (${reasons.join(', ')}): ${path.pathname}. Re-save it without location, camera or Motion Photo data.`);
+    }
   }
 }
 await validateUploadSizes();

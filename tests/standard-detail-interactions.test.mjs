@@ -60,8 +60,9 @@ function buttons(html) {
   });
 }
 
-function harness() {
+function harness(productId = 'stripe-cable-half', lookPreviews = {}) {
   const nodes = new Map();
+  const imageRequests = [];
   const get = selector => {
     if (!nodes.has(selector)) nodes.set(selector, node());
     return nodes.get(selector);
@@ -73,14 +74,19 @@ function harness() {
   class ImageDouble {
     naturalWidth = 1024;
     naturalHeight = 1536;
-    set src(value) { this.url = value; queueMicrotask(() => this.onload?.()); }
+    set src(value) {
+      this.url = value;
+      const image = this;
+      imageRequests.push({src: value, get priority() { return image.fetchPriority; }});
+      queueMicrotask(() => this.onload?.());
+    }
   }
-  const context = {window: {GR: {}}, document, Image: ImageDouble, setTimeout, clearTimeout, URL};
+  const context = {window: {GR: {}, GR_LOOK_PREVIEWS: lookPreviews}, document, Image: ImageDouble, setTimeout, clearTimeout, URL};
   context.GR = context.window.GR;
-  for (const file of ['data.js', 'detail-catalog.js', 'smartstore-reviews.js', 'standard-detail.js', 'app.js']) {
+  for (const file of ['data.js', 'detail-catalog.js', 'upcoming-catalog.js', 'smartstore-reviews.js', 'standard-detail.js', 'app.js']) {
     vm.runInNewContext(readFileSync(new URL(file, root), 'utf8'), context);
   }
-  const product = context.GR.byId('stripe-cable-half');
+  const product = context.GR.byId(productId) || context.GR.UPCOMING_PRODUCTS.find(p => p.id === productId);
   const helpers = {...context.GR.storefront, card: context.GR.card};
   const presentation = context.window.GRStandardDetail;
   const view = presentation.markup(product, helpers);
@@ -111,7 +117,7 @@ function harness() {
   for (const element of nodes.values()) element.writes = 0;
 
   return {
-    get, pd, view,
+    get, pd, view, imageRequests,
     render: () => presentation.render(product, helpers),
     control(key, value) {
       const control = controls.find(button => button.dataset[key] === value);
@@ -131,6 +137,63 @@ function harness() {
     }
   };
 }
+
+test('a scheduled product can be browsed with photos but has no checkout', async () => {
+  const app = harness('jo27-round-puff-cardigan');
+  assert.match(app.view.hero, /예정가 24,900/);
+  assert.match(app.view.hero, /aria-disabled="true">판매 예정/);
+  assert.doesNotMatch(app.view.hero, /스마트스토어에서 구매하기/);
+  assert.match(app.view.detail, /후면 참고 · AI 추정 연출/);
+  assert.match(app.view.detail, /제조연월<\/dt><dd>2026\.10/);
+  assert.equal(app.view.cartReady, false);
+  app.render();
+  await settleImages();
+  assert.equal(app.get('#add-cart').disabled, true);
+  assert.equal(app.get('#product-cart-status').textContent, '판매 시작 전입니다.');
+});
+
+test('Styling pairs each look with its pictured color and loads a lightweight preview', () => {
+  const id = 'boucle-round-half-cardigan';
+  const {view: original} = harness(id);
+  const previews = Object.fromEntries(original.d.looks.flatMap(look =>
+    Object.values(look.images).map((src, i) => [src, {
+      display: `preview/${look.id}-${i}.webp`,
+      thumb: `preview/${look.id}-${i}-thumb.webp`
+    }])
+  ));
+  const {view} = harness(id, previews);
+  const styling = view.detail.match(/<div class="grsd-style-notes">([\s\S]*?)<\/div><\/section>/)?.[1];
+  const images = [...(styling || '').matchAll(/data-full-image="([^"]+)"[^>]*><img src="([^"]+)"[^>]*alt="([^"]+)"/g)];
+  assert.equal(images.length, view.d.looks.length);
+  const colors = images.map(([, src, thumb, alt], i) => {
+    const look = view.d.looks[i];
+    const color = Object.keys(look.images).find(color => look.images[color] === src);
+    assert.ok(color, 'the enlarged photo belongs to this look');
+    assert.equal(thumb, previews[src].thumb);
+    assert.ok(alt.includes(color));
+    return color;
+  });
+  assert.equal(new Set(colors).size, 4);
+  assert.match(view.hero, /src="preview\/[^"]+-thumb\.webp"/);
+});
+
+test('the next color preview loads on intent and is reused on selection', async () => {
+  const {view} = harness();
+  const color = view.d.colors.find(color => color !== view.state.color);
+  const original = view.d.looks[0].images[color];
+  const display = 'preview/next-color.webp';
+  const app = harness('stripe-cable-half', {[original]: {display}});
+  app.render();
+  await settleImages();
+  assert.equal(app.imageRequests.some(request => request.src === display), false);
+  app.pd.dispatch('focusin', {target: app.control('galleryColor', color)});
+  assert.equal(app.imageRequests.find(request => request.src === display)?.priority, 'low');
+  app.click('galleryColor', color);
+  await settleImages();
+  assert.deepEqual(app.imageRequests.filter(request => request.src === display), [{src: display, priority: 'high'}]);
+  assert.equal(app.get('#pd-img').src, display);
+  assert.match(app.get('.grsd-caption').textContent, new RegExp(color));
+});
 
 test('render binds the finished SSR product without replacing its visible nodes', async () => {
   const app = harness();

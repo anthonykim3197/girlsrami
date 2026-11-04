@@ -7,9 +7,14 @@ import {createHash} from 'node:crypto';
 const root=new URL('../',import.meta.url);
 const manifest=JSON.parse(readFileSync(new URL('seo-products.json',root),'utf8'));
 const readDist=name=>readFileSync(new URL(`dist/${name}`,root),'utf8');
-const detailContext={window:{}};
+const detailContext={window:{GR:{}}};detailContext.GR=detailContext.window.GR;
 vm.runInNewContext(readFileSync(new URL('detail-catalog.js',root),'utf8'),detailContext);
+vm.runInNewContext(readFileSync(new URL('upcoming-catalog.js',root),'utf8'),detailContext);
+vm.runInNewContext(readFileSync(new URL('look-previews.js',root),'utf8'),detailContext);
 const details=detailContext.window.GR_DETAIL;
+const upcomingProducts=detailContext.GR.UPCOMING_PRODUCTS;
+const upcomingDetails=detailContext.window.GR_UPCOMING_DETAIL;
+const lookPreviews=detailContext.window.GR_LOOK_PREVIEWS;
 
 test('the public fallback catalog contains the same twenty-one sale products and no draft concepts',()=>{
   const context={window:{GR:{}}};context.GR=context.window.GR;
@@ -21,7 +26,7 @@ test('the public fallback catalog contains the same twenty-one sale products and
   assert.doesNotMatch(readFileSync(new URL('data.js',root),'utf8'),/GR-FW26-|wool-cable-regular|cashmere-touch-turtle/);
 });
 
-test('the sitemap and static product pages expose only the verified sale catalog',()=>{
+test('only the verified sale catalog has indexable pages and offers',()=>{
   const sitemap=readDist('sitemap.xml');
   assert.equal(manifest.products.length,21);
   assert.equal((sitemap.match(/<loc>https:\/\/girlslami\.com\/product-/g)||[]).length,manifest.products.length);
@@ -42,7 +47,9 @@ test('the sitemap and static product pages expose only the verified sale catalog
     assert.deepEqual(json.image,[...new Set([hero,product.realImage])]);
     assert.ok(html.includes(`<meta property="og:image" content="${hero}">`));
     assert.ok(html.includes(details[product.id].lead));
-    assert.ok(html.includes(`src="${details[product.id].thumbnail}"`));
+    const source=details[product.id].thumbnail;
+    const display=lookPreviews[source]?.display || source;
+    assert.ok(html.includes(`id="pd-img" src="${display}"`),`${product.id} hero uses its approved photo or its optimized copy`);
     assert.equal(json.offers.price,product.price);
     assert.equal(json.offers.url,product.storeUrl);
     assert.equal(json.offers.availability,product.stock>0?'https://schema.org/InStock':'https://schema.org/OutOfStock');
@@ -51,13 +58,30 @@ test('the sitemap and static product pages expose only the verified sale catalog
   for(const conceptId of ['wool-cable-regular','cashmere-touch-turtle','alpaca-long-cardigan','ribbed-knit-dress']){
     assert.doesNotMatch(sitemap,new RegExp(conceptId));
   }
-  assert.equal((readDist('shop.html').match(/<a class="card reveal in" href="product-/g)||[]).length,manifest.products.length);
+  const shop=readDist('shop.html');
+  assert.equal((shop.match(/<a class="card reveal in" href="product-/g)||[]).length,manifest.products.length+upcomingProducts.length);
+  assert.deepEqual(Array.from(upcomingProducts,product=>product.id).sort(),['jo27-round-puff-cardigan','rm584-saddle-vneck-knit']);
+  for(const product of upcomingProducts){
+    const path=`product-${product.id}.html`;
+    const html=readDist(path);
+    assert.ok(shop.includes(`href="${path}"`));
+    assert.ok(!sitemap.includes(path));
+    assert.ok(html.includes(`<link rel="canonical" href="https://girlslami.com/${path}">`));
+    assert.ok(html.includes(`<h1>${product.name}</h1>`));
+    assert.match(html,/name="robots" content="noindex,follow"/);
+    const raw=html.match(/<script type="application\/ld\+json" data-product-json-ld>(.*?)<\/script>/s)?.[1];
+    const json=JSON.parse(raw);
+    assert.equal(json['@type'],'Product');
+    assert.equal(json.offers,undefined);
+  }
   assert.equal((readDist('index.html').match(/<a class="card reveal in" href="product-/g)||[]).length,4);
   assert.equal(manifest.lastmod,'2026-10-16');
   assert.deepEqual(Object.keys(details).sort(),manifest.products.map(product=>product.id).sort());
   for(const name of ['index.html','shop.html','product.html']){
     const html=readDist(name);
     assert.ok(html.indexOf('detail-catalog.js')<html.indexOf('src="app.js'),`${name} loads presentation before app`);
+    assert.match(html,/src="upcoming-catalog\.js\?v=[a-f0-9]+"/);
+    assert.ok(html.indexOf('upcoming-catalog.js')<html.indexOf('src="app.js'),`${name} loads the upcoming catalog before app`);
     assert.match(html,/href="catalog\.css\?v=/);
   }
 });
@@ -89,10 +113,13 @@ test('detail media is packaged without private working folders or oversized uplo
     assert.ok(statSync(new URL(`dist/${file}`,root)).size<=25*1024*1024,file);
   }
   function checkReferences(value){
-    if(typeof value==='string'&&value.startsWith('assets/detail/')) assert.ok(existsSync(new URL(`dist/${value}`,root)),value);
+    if(typeof value==='string'){
+      const relative=value.replace(/^https:\/\/girlslami\.com\//,'');
+      if(relative.startsWith('assets/detail/')) assert.ok(existsSync(new URL(`dist/${relative}`,root)),value);
+    }
     else if(value&&typeof value==='object') Object.values(value).forEach(checkReferences);
   }
-  checkReferences(details);
+  checkReferences([details,upcomingDetails,upcomingProducts,lookPreviews]);
   for(const privateFolder of ['supabase','node_modules','model-character-sheet','new_goods','audit']){
     assert.equal(existsSync(new URL(`dist/${privateFolder}/`,root)),false);
   }

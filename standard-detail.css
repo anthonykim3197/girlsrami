@@ -30,3 +30,16 @@ body.grsd-page{background:#fcfbf7;color:#252722;font-family:"Girlsrami Sans","Sp
 /* Keep source photographs available without interrupting the studio presentation. */
 .grsd-source-photos{border-top:1px solid var(--grsd-line);margin-top:32px;padding-top:18px}.grsd-source-photos summary{font-size:13px;color:var(--grsd-muted);cursor:pointer;padding:8px 0}.grsd-source-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;padding-top:22px}.grsd-source-grid img{aspect-ratio:1;object-fit:contain;background:var(--grsd-soft)}
 @media(max-width:640px){.grsd-source-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
+
+.grsd-style-notes article{min-width:0;padding-top:14px}
+.grsd-style-image{display:block;width:100%;aspect-ratio:3/4;overflow:hidden;background:#efede6}
+.grsd-style-image img{display:block;width:100%;height:100%;object-fit:contain}
+.grsd-style-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px;margin-top:16px}
+.grsd-style-meta span{font-size:11px;color:var(--grsd-sage);padding:2px 7px;border:1px solid var(--grsd-line);border-radius:2px}
+@media(max-width:640px){
+  .grsd-style-notes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 14px}
+  .grsd-style-notes article{padding:12px 0 0}
+  .grsd-style-notes h3{font-size:16px}
+  .grsd-style-notes p{font-size:12px;line-height:1.55}
+  .grsd-style-meta{margin-top:11px}
+}

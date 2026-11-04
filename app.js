@@ -14,6 +14,15 @@
     return p?.status === 'active'
       && /^https:\/\/smartstore\.naver\.com\/girlsrami\/products\/\d+\/?$/.test(storeUrl);
   }
+  function isUpcomingProduct(p) {
+    return p?.status === 'coming' && (GR.UPCOMING_PRODUCTS || []).some(product => product.id === p.id);
+  }
+  const isBrowseProduct = p => isSaleProduct(p) || isUpcomingProduct(p);
+  const detailFor = p => window.GR_DETAIL?.[p.id] || window.GR_UPCOMING_DETAIL?.[p.id];
+  function browseCatalog(products) {
+    const ids = new Set(products.map(p => p.id));
+    return [...products, ...(GR.UPCOMING_PRODUCTS || []).filter(p => !ids.has(p.id))];
+  }
   function productHref(p) { return `product-${encodeURIComponent(p.id)}.html`; }
   function offerPriceFor(p) {
     const naver = Number(typeof p?.channelPrice === 'object' ? p.channelPrice?.naver : p?.channelPrice);
@@ -35,6 +44,7 @@
     let node = document.head.querySelector(selector);
     if (!node) { node = document.createElement('meta'); document.head.append(node); }
     node.setAttribute(attribute, value);
+    return node;
   }
   function setCanonical(url) {
     let node = document.head.querySelector('link[rel="canonical"]');
@@ -44,9 +54,10 @@
   function setProductMetadata(p) {
     const canonical = SITE_URL + productHref(p);
     const material = String(p.material || '').trim();
-    const detail = window.GR_DETAIL?.[p.id];
+    const detail = detailFor(p);
+    const upcoming = isUpcomingProduct(p);
     const colors = Array.isArray(p.colors) && p.colors.length ? p.colors.join(', ') : '';
-    const description = `${nameFor(p)}. ${detail?.lead || material}${detail?.lead ? ' ' : material ? '. ' : ''}${colors ? `판매 색상 ${colors}. ` : ''}현재 구매 가능한 옵션과 배송 조건은 스마트스토어에서 확인하세요.`;
+    const description = `${nameFor(p)}. ${detail?.lead || material}${detail?.lead ? ' ' : material ? '. ' : ''}${colors ? `${upcoming ? '색상' : '판매 색상'} ${colors}. ` : ''}${upcoming ? '판매 예정 상품입니다.' : '현재 구매 가능한 옵션과 배송 조건은 스마트스토어에서 확인하세요.'}`;
     const absoluteImage = value => /^https?:\/\//i.test(value) ? value : SITE_URL + value.replace(/^\//, '');
     const realImage = verifiedRealImageFor(p);
     const image = detail?.cardThumbnail || detail?.thumbnail || realImage;
@@ -60,13 +71,14 @@
     setMeta('meta[property="og:url"]', 'property', 'og:url'); document.head.querySelector('meta[property="og:url"]').content = canonical;
     if (image) { setMeta('meta[property="og:image"]', 'property', 'og:image'); document.head.querySelector('meta[property="og:image"]').content = absoluteImage(image); }
     setCanonical(canonical);
-    document.head.querySelector('meta[name="robots"]')?.remove();
+    if (upcoming) setMeta('meta[name="robots"]', 'name', 'robots').content = 'noindex,follow';
+    else document.head.querySelector('meta[name="robots"]')?.remove();
     const jsonLd = {
       '@context': 'https://schema.org', '@type': 'Product', name: nameFor(p), description,
       ...(image ? { image: [...new Set([image, realImage].filter(Boolean).map(absoluteImage))] } : {}),
       sku: styleCodeFor(p) || String(p.sku || ''), category: p.category || undefined,
       brand: { '@type': 'Brand', name: '걸스라미' },
-      offers: { '@type': 'Offer', url: storeUrlFor(p), priceCurrency: 'KRW', price: offerPriceFor(p), availability: availabilityFor(p), seller: { '@type': 'Organization', name: '걸스라미' } }
+      ...(upcoming ? {} : {offers: { '@type': 'Offer', url: storeUrlFor(p), priceCurrency: 'KRW', price: offerPriceFor(p), availability: availabilityFor(p), seller: { '@type': 'Organization', name: '걸스라미' } }})
     };
     let script = document.head.querySelector('script[data-product-json-ld]');
     if (!script) { script = document.createElement('script'); script.type = 'application/ld+json'; script.dataset.productJsonLd = ''; document.head.append(script); }
@@ -359,7 +371,7 @@
 
   /* ---------- Card ---------- */
   function stars(r) { const full = Math.round(r); return '★'.repeat(full) + '☆'.repeat(5 - full); }
-  function isNewDesign(p) { return window.GR_DETAIL?.[p.id]?.isNewDesign ?? (p.newRelease === true); }
+  function isNewDesign(p) { return detailFor(p)?.isNewDesign ?? (p.newRelease === true); }
   function saleBadgesFor(p) { return isNewDesign(p) ? ['NEW'] : []; }
   function swatchColor(color, p) { return p?.colorHex?.[color] || GR.COLORS[color] || GR.COLORS[{ '스카이': '스카이블루', '회색': '그레이' }[color]] || '#ccc'; }
   function reviewStatsFor(p) {
@@ -375,7 +387,7 @@
   function card(p) {
     p = { ...p, name: nameFor(p), ...reviewStatsFor(p) };
     const soon = !isSaleProduct(p);
-    const detail = window.GR_DETAIL?.[p.id];
+    const detail = detailFor(p);
     const cardImage = detail?.cardThumbnail || detail?.thumbnail || verifiedRealImageFor(p) || p.catalogImage || p.image + '.jpg';
     const imageLabel = (detail?.cardThumbnail || detail?.thumbnail) ? '스타일링' : '실물 사진';
     const sw = p.colors.slice(0, 6).map(c => `<span class="swatch" title="${esc(c)}" style="background:${swatchColor(c,p)}"></span>`).join('') + (p.colors.length > 6 ? `<span class="more">+${p.colors.length - 6}</span>` : '');
@@ -417,7 +429,8 @@
   function homeProducts(products = GR.PRODUCTS, content = GR.CONTENT) {
     const saleProducts = products.filter(isSaleProduct);
     const featured = Array.isArray(content?.home?.featuredIds) ? content.home.featuredIds.map(id=>products.find(p => p.id === id)).filter(isSaleProduct) : saleProducts.slice(0, 4);
-    const newProducts = saleProducts.filter(isNewDesign).sort((a, b) => nameFor(a).localeCompare(nameFor(b), 'ko'));
+    const newProducts = browseCatalog(products).filter(p=>isBrowseProduct(p)&&isNewDesign(p))
+      .sort((a,b)=>Number(isUpcomingProduct(b))-Number(isUpcomingProduct(a))||nameFor(a).localeCompare(nameFor(b),'ko'));
     const best = newProducts.length ? [...newProducts, ...featured.filter(p => !isNewDesign(p))].slice(0, Math.max(4, featured.length)) : featured;
     return best.length ? best : saleProducts.slice(0, 4);
   }
@@ -434,12 +447,12 @@
   /* ---------- SHOP ---------- */
   function shopProducts(products = GR.PRODUCTS, state = {}) {
     const {cat = '전체', size = 'all', sort = 'popular'} = state;
-    const list = products.filter(p => isSaleProduct(p) && (cat === '전체' || p.category === cat) && (size === 'all' || p.sizes.some(s => s.startsWith(size))));
-    const sorters = { popular: (a, b) => (reviewStatsFor(b).reviewCount - reviewStatsFor(a).reviewCount) || nameFor(a).localeCompare(nameFor(b), 'ko'), new: (a, b) => (b.releasedAt || '').localeCompare(a.releasedAt || '') || nameFor(a).localeCompare(nameFor(b), 'ko'), low: (a, b) => a.price - b.price, high: (a, b) => b.price - a.price, sale: (a, b) => GR.discount(b) - GR.discount(a) };
+    const list = browseCatalog(products).filter(p => isBrowseProduct(p) && (cat === '전체' || p.category === cat) && (size === 'all' || p.sizes.some(s => s.startsWith(size))));
+    const sorters = { popular: (a, b) => Number(isUpcomingProduct(b)) - Number(isUpcomingProduct(a)) || (reviewStatsFor(b).reviewCount - reviewStatsFor(a).reviewCount) || nameFor(a).localeCompare(nameFor(b), 'ko'), new: (a, b) => (b.releasedAt || '').localeCompare(a.releasedAt || '') || nameFor(a).localeCompare(nameFor(b), 'ko'), low: (a, b) => a.price - b.price, high: (a, b) => b.price - a.price, sale: (a, b) => GR.discount(b) - GR.discount(a) };
     return list.sort(sorters[sort] || sorters.popular);
   }
   function categoryChips(products = GR.PRODUCTS, selected = '전체') {
-    const categories = ['전체', ...new Set(products.filter(isSaleProduct).map(p => p.category).filter(Boolean))];
+    const categories = ['전체', ...new Set(browseCatalog(products).filter(isBrowseProduct).map(p => p.category).filter(Boolean))];
     return categories.map(c => `<button class="chip ${selected === c ? 'active' : ''}" data-cat="${esc(c)}">${esc(c)}</button>`).join('');
   }
   window.GR.pageMarkup = Object.freeze({ chrome: chromeHtml, homeProducts, homeReviews, shopProducts, categoryChips });
@@ -464,8 +477,9 @@
       const list = shopProducts(GR.PRODUCTS, state);
       setMarkup(grid, list.length ? list.map(card).join('') : `<p class="muted" style="grid-column:1/-1;padding:40px 0">조건에 맞는 상품이 없습니다.</p>`);
       count.textContent = `${list.length}개 상품`;
-      title.textContent = state.cat === '전체' ? '현재 판매 중인 상품' : state.cat;
-      sub.textContent = '스마트스토어에서 구매할 수 있는 여성 니트·조끼·가디건입니다. 상품별 소재와 실측 정보를 확인해 보세요.';
+      const includesUpcoming = list.some(isUpcomingProduct);
+      title.textContent = state.cat === '전체' ? (includesUpcoming ? '판매 상품과 신상품' : '현재 판매 중인 상품') : state.cat;
+      sub.textContent = includesUpcoming ? '판매 중인 상품과 판매 예정인 신상품의 소재와 실측 정보를 확인해 보세요.' : '스마트스토어에서 구매할 수 있는 여성 니트·조끼·가디건입니다. 상품별 소재와 실측 정보를 확인해 보세요.';
       $$('#cat-chips .chip').forEach(b => b.classList.toggle('active', b.dataset.cat === state.cat));
       reveal();
     }
@@ -478,8 +492,8 @@
   /* ---------- PRODUCT ---------- */
   function renderProduct() {
     const id = document.body.dataset.productId || new URLSearchParams(location.search).get('id');
-    const sourceProduct = GR.byId(id);
-    if (!sourceProduct || !isSaleProduct(sourceProduct)) {
+    const sourceProduct = GR.byId(id) || (GR.UPCOMING_PRODUCTS || []).find(p=>p.id===id);
+    if (!sourceProduct || !isBrowseProduct(sourceProduct)) {
       noindexProductShell();
       document.title = '판매 상품을 확인해 주세요 | 걸스라미';
       $('#pd').innerHTML='<div class="notice-box">현재 판매 중인 상품이 아닙니다. <a href="shop.html">판매 상품 보기</a></div>';

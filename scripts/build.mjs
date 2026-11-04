@@ -18,9 +18,22 @@ const dataContext={window:{GR:{}}};dataContext.GR=dataContext.window.GR;
 vm.runInNewContext(await readFile(new URL('data.js',root),'utf8'),dataContext,{timeout:1000});
 dataContext.window.GR_DETAIL=details;
 dataContext.document={body:{dataset:{}},addEventListener(){}};
-for(const file of ['smartstore-reviews.js','standard-detail.js','app.js'])vm.runInNewContext(await readFile(new URL(file,root),'utf8'),dataContext,{timeout:1000});
+for(const file of ['upcoming-catalog.js','look-previews.js','smartstore-reviews.js','standard-detail.js','app.js'])vm.runInNewContext(await readFile(new URL(file,root),'utf8'),dataContext,{timeout:1000});
 const GR=dataContext.GR, presentation=dataContext.window.GRStandardDetail;
+const upcomingProducts=GR.UPCOMING_PRODUCTS, upcomingDetails=dataContext.window.GR_UPCOMING_DETAIL;
 const catalogById=new Map(GR.PRODUCTS.map(product=>[product.id,product]));
+if (!Array.isArray(upcomingProducts) || !upcomingDetails || Object.keys(upcomingDetails).length!==upcomingProducts.length) {
+  throw new Error('Upcoming detail manifest must match the upcoming catalog.');
+}
+for (const product of upcomingProducts) {
+  if (!/^[a-z0-9-]{1,80}$/.test(product.id) || catalogById.has(product.id) || !Object.hasOwn(upcomingDetails,product.id)
+      || product.status!=='coming' || product.storeUrl || product.smartstore || !product.image) {
+    throw new Error(`Invalid upcoming catalog product: ${product.id}`);
+  }
+  catalogById.set(product.id,product);
+}
+validateDetailContent(upcomingProducts,upcomingDetails);
+const allDetails={...details,...upcomingDetails};
 const detailHelpers={...GR.storefront,card:GR.card};
 const maxAssetBytes=25*1024*1024;
 const draftProductImages=new Set([
@@ -33,20 +46,22 @@ const htmlEscape=value=>String(value??'').replace(/[&<>"']/g,char=>({
 }[char]));
 const xmlEscape=value=>htmlEscape(value);
 const productPath=product=>`product-${product.id}.html`;
-const thumbnailFor=product=>details[product.id].cardThumbnail||details[product.id].thumbnail||product.realImage;
+const realImageFor=product=>product.realImage||product.image;
+const thumbnailFor=product=>allDetails[product.id].cardThumbnail||allDetails[product.id].thumbnail||realImageFor(product);
 const absoluteImage=path=>new URL(path,siteUrl).href;
-const leadFor=product=>details[product.id].lead||product.name;
+const leadFor=product=>allDetails[product.id].lead||product.name;
 const descriptionFor=product=>{
   const colors=product.colors?.length?`판매 색상 ${product.colors.join(', ')}. `:'';
-  return `${product.name}. ${leadFor(product)} ${colors}현재 구매 가능한 옵션과 배송 조건은 스마트스토어에서 확인하세요.`;
+  const availability=product.status==='coming'?'출시 예정 상품입니다.':'현재 구매 가능한 옵션과 배송 조건은 스마트스토어에서 확인하세요.';
+  return `${product.name}. ${leadFor(product)} ${colors}${availability}`;
 };
 const productJsonLd=product=>({
   '@context':'https://schema.org','@type':'Product',name:product.name,
-  description:descriptionFor(product),image:[...new Set([absoluteImage(thumbnailFor(product)),absoluteImage(product.realImage)])],
+  description:descriptionFor(product),image:[...new Set([absoluteImage(thumbnailFor(product)),absoluteImage(realImageFor(product))])],
   sku:product.styleCode||product.sku,category:product.category,
   brand:{'@type':'Brand',name:'걸스라미'},
-  offers:{'@type':'Offer',url:product.storeUrl,priceCurrency:'KRW',price:product.price,
-    availability:Number(product.stock)>0?'https://schema.org/InStock':'https://schema.org/OutOfStock',seller:{'@type':'Organization',name:'걸스라미'}}
+  ...(product.status!=='coming'?{offers:{'@type':'Offer',url:product.storeUrl,priceCurrency:'KRW',price:product.price,
+    availability:Number(product.stock)>0?'https://schema.org/InStock':'https://schema.org/OutOfStock',seller:{'@type':'Organization',name:'걸스라미'}}}:{})
 });
 
 async function copyDetailAssets(relative='assets/detail/') {
@@ -64,7 +79,10 @@ async function copyDetailAssets(relative='assets/detail/') {
 }
 
 function localDetailAssets(value,result=new Set()) {
-  if (typeof value==='string' && value.startsWith('assets/detail/')) result.add(value);
+  if (typeof value==='string') {
+    const relative=value.startsWith(siteUrl)?value.slice(siteUrl.length):value;
+    if (relative.startsWith('assets/detail/')) result.add(relative);
+  }
   else if (value && typeof value==='object') for (const child of Object.values(value)) localDetailAssets(child,result);
   return result;
 }
@@ -84,16 +102,18 @@ for(const name of ['GirlsramiSans-Regular.woff2','GirlsramiSans-Bold.woff2','LIC
   await copyFile(new URL(`fonts/${name}`,root),new URL(`fonts/${name}`,out));
 }
 await copyDetailAssets();
-for (const asset of localDetailAssets(details)) {
+const referencedAssets=localDetailAssets([allDetails,upcomingProducts,dataContext.window.GR_LOOK_PREVIEWS]);
+for (const asset of referencedAssets) {
   if (!(await stat(new URL(asset,out))).isFile()) throw new Error(`Missing detail asset: ${asset}`);
 }
 
 const template=await readFile(new URL('product.html',out),'utf8');
-for(const product of seo.products) {
+for(const product of [...seo.products,...upcomingProducts]) {
   const canonical=siteUrl+productPath(product);
   const description=descriptionFor(product);
   const jsonLd=JSON.stringify(productJsonLd(product)).replaceAll('<','\\u003c');
-  const head=`<title>${htmlEscape(product.name)} | 걸스라미</title>\n<meta name="description" content="${htmlEscape(description)}">\n<link rel="canonical" href="${canonical}">\n<meta property="og:type" content="product">\n<meta property="og:site_name" content="걸스라미">\n<meta property="og:title" content="${htmlEscape(product.name)} | 걸스라미">\n<meta property="og:description" content="${htmlEscape(description)}">\n<meta property="og:url" content="${canonical}">\n<meta property="og:image" content="${htmlEscape(absoluteImage(thumbnailFor(product)))}">\n<script type="application/ld+json" data-product-json-ld>${jsonLd}</script>`;
+  const robots=product.status==='coming'?'<meta name="robots" content="noindex,follow">\n':'';
+  const head=`<title>${htmlEscape(product.name)} | 걸스라미</title>\n${robots}<meta name="description" content="${htmlEscape(description)}">\n<link rel="canonical" href="${canonical}">\n<meta property="og:type" content="product">\n<meta property="og:site_name" content="걸스라미">\n<meta property="og:title" content="${htmlEscape(product.name)} | 걸스라미">\n<meta property="og:description" content="${htmlEscape(description)}">\n<meta property="og:url" content="${canonical}">\n<meta property="og:image" content="${htmlEscape(absoluteImage(thumbnailFor(product)))}">\n<script type="application/ld+json" data-product-json-ld>${jsonLd}</script>`;
   const view=presentation.markup(catalogById.get(product.id),detailHelpers);
   const html=template
     .replace('<title>상품 | 걸스라미 GIRLSRAMI</title>\n<meta name="robots" content="noindex,follow">',head)
@@ -154,4 +174,4 @@ async function validateUploadSizes(directory=out) {
   }
 }
 await validateUploadSizes();
-console.log(`Static storefront built with ${seo.products.length} indexable sale products; private backend and GPU code excluded.`);
+console.log(`Static storefront built with ${seo.products.length} indexable sale products and ${upcomingProducts.length} non-indexable upcoming products; private backend and GPU code excluded.`);

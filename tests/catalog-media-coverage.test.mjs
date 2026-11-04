@@ -232,10 +232,14 @@ const LEGACY_COLORS = {'스카이':'sky','차콜':'charcoal','크림':'cream','�
 const LEGACY_PREFIX = '/storage/v1/object/public/catalog/editorial-20261003-v3/assets/';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const NEW9_LAUNCH = JSON.parse(readFileSync(resolve(root,'tests/fixtures/new9-launch-20261016.json'),'utf8'));
+const NEW2_LAUNCH = JSON.parse(readFileSync(resolve(root,'tests/fixtures/new2-launch-20261104.json'),'utf8'));
 SALE_REGISTRY.push(...NEW9_LAUNCH.registry);
-const context = {window:{}};
+const context = {window:{GR:{}}}; context.GR = context.window.GR;
 vm.runInNewContext(readFileSync(resolve(root,'detail-catalog.js'),'utf8'), context);
+vm.runInNewContext(readFileSync(resolve(root,'upcoming-catalog.js'),'utf8'), context);
 const details = JSON.parse(JSON.stringify(context.window.GR_DETAIL));
+const upcomingDetails = JSON.parse(JSON.stringify(context.window.GR_UPCOMING_DETAIL));
+const upcoming = JSON.parse(JSON.stringify(context.GR.UPCOMING_PRODUCTS));
 const seo = JSON.parse(readFileSync(resolve(root,'seo-products.json'),'utf8')).products;
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const sorted = values => [...values].sort();
@@ -359,8 +363,13 @@ const references=[];
 test('release registry contains the twelve existing and nine new sale designs with 155 sale colors',()=>{
   assert.equal(SALE_REGISTRY.length,21);
   assert.equal(SALE_REGISTRY.reduce((sum,p)=>sum+p.colors.length,0),155);
-  assert.deepEqual(sorted(Object.keys(details)),sorted(SALE_REGISTRY.map(p=>p.id)));
-  assert.deepEqual(sorted(seo.map(p=>p.id)),sorted(SALE_REGISTRY.map(p=>p.id)));
+  const activeNew = NEW2_LAUNCH.filter(p=>seo.some(sale=>sale.id===p.id));
+  const scheduledNew = NEW2_LAUNCH.filter(p=>!activeNew.includes(p)).map(p=>p.id);
+  const saleIds = sorted([...SALE_REGISTRY,...activeNew].map(p=>p.id));
+  assert.deepEqual(sorted(Object.keys(details)),saleIds);
+  assert.deepEqual(sorted(seo.map(p=>p.id)),saleIds);
+  assert.deepEqual(sorted(Object.keys(upcomingDetails)),sorted(scheduledNew));
+  assert.deepEqual(sorted(upcoming.map(p=>p.id)),sorted(scheduledNew));
   for(const product of SALE_REGISTRY) {
     const live=seo.find(p=>p.id===product.id);
     assert.deepEqual(sorted(live.colors),sorted(product.colors),product.code);
@@ -368,6 +377,55 @@ test('release registry contains the twelve existing and nine new sale designs wi
     assert.equal(details[product.id].isNewDesign,['RM382','RM495',...NEW9_LAUNCH.registry.map(p=>p.code)].includes(product.code),`${product.code}: NEW must follow the owner-confirmed launch classification`);
   }
 });
+
+for(const expected of NEW2_LAUNCH) {
+  test(`${expected.code}: all styling colors are present and only approved originals are marked as photos`,()=>{
+    const product=seo.find(p=>p.id===expected.id) || upcoming.find(p=>p.id===expected.id);
+    const detail=details[expected.id] || upcomingDetails[expected.id];
+    assert.ok(product && detail);
+    assert.equal(product.styleCode,expected.code);
+    assert.equal(product.price,expected.price);
+    assert.deepEqual(product.colors,expected.colors);
+    assert.deepEqual(detail.colorOrder,expected.colors);
+    assert.equal(detail.thumbnailColor,expected.sampleColor);
+    assert.notEqual(detail.cardThumbnail,detail.thumbnail);
+    localImage(detail.cardThumbnail);
+    assert.deepEqual(detail.model360,{});
+    assert.deepEqual(detail.product360,{});
+    assert.deepEqual(detail.looks.map(look=>look.id),['A','B','C','D']);
+    assert.equal(detail.thumbnail,detail.looks[0].images[expected.sampleColor]);
+    const paths=new Set(), hashes=new Set();
+    for(const look of detail.looks){
+      assert.deepEqual(sorted(Object.keys(look.images)),sorted(expected.colors));
+      for(const src of Object.values(look.images)){
+        const image=localImage(src);
+        assert.ok(!paths.has(image.path),`${src}: styling path reused`);
+        assert.ok(!hashes.has(image.hash),`${src}: identical styling bytes reused`);
+        paths.add(image.path);
+        hashes.add(image.hash);
+      }
+    }
+    assert.deepEqual(Object.keys(detail.originals),[expected.sampleColor]);
+    const originals=detail.originals[expected.sampleColor];
+    assert.deepEqual(originals.map(p=>p.angle),expected.originals.map(([angle])=>angle));
+    assert.deepEqual(detail.fabricOriginals.map(({angle,src})=>({angle,src})),originals);
+    for(const [index,photo] of originals.entries()){
+      assert.equal(detail.fabricOriginals[index].mediaKind,'photo');
+      const original=localFile(photo.src);
+      assert.equal(original.bytes.subarray(0,3).toString('hex'),'ffd8ff');
+      assert.equal(hash(original.bytes),expected.originals[index][1]);
+      assert.ok(!paths.has(original.path));
+    }
+    if(expected.code==='JO27'){
+      assert.equal(detail.supplementalMedia?.length,1);
+      const [rear]=detail.supplementalMedia;
+      assert.deepEqual([rear.angle,rear.mediaKind,rear.actualPhoto],[180,'generated-inferred',false]);
+      assert.match(rear.caption,/AI 추정 후면/);
+      assert.ok(!originals.some(photo=>photo.src===rear.src));
+      localImage(rear.src);
+    } else assert.equal(detail.supplementalMedia?.length ?? 0,0);
+  });
+}
 
 for(const product of SALE_REGISTRY) {
   test(`${product.code}: every sale color has its own styling, model 8-angle and product 8-angle set`,()=>{

@@ -60,7 +60,7 @@ function buttons(html) {
   });
 }
 
-function harness(productId = 'stripe-cable-half', lookPreviews = {}) {
+function harness(productId = 'stripe-cable-half', lookPreviews = {}, productOverrides = {}) {
   const nodes = new Map();
   const imageRequests = [];
   const get = selector => {
@@ -86,7 +86,9 @@ function harness(productId = 'stripe-cable-half', lookPreviews = {}) {
   for (const file of ['data.js', 'detail-catalog.js', 'upcoming-catalog.js', 'smartstore-reviews.js', 'standard-detail.js', 'app.js']) {
     vm.runInNewContext(readFileSync(new URL(file, root), 'utf8'), context);
   }
-  const product = context.GR.byId(productId) || context.GR.UPCOMING_PRODUCTS.find(p => p.id === productId);
+  const catalogProduct = context.GR.byId(productId) || context.GR.UPCOMING_PRODUCTS.find(p => p.id === productId);
+  assert.ok(catalogProduct, `missing product ${productId}`);
+  const product = {...catalogProduct, ...productOverrides};
   const helpers = {...context.GR.storefront, card: context.GR.card};
   const presentation = context.window.GRStandardDetail;
   const view = presentation.markup(product, helpers);
@@ -139,7 +141,7 @@ function harness(productId = 'stripe-cable-half', lookPreviews = {}) {
 }
 
 test('a scheduled product can be browsed with photos but has no checkout', async () => {
-  const app = harness('jo27-round-puff-cardigan');
+  const app = harness('jo27-round-puff-cardigan', {}, {status:'coming', storeUrl:'', smartstore:''});
   assert.match(app.view.hero, /예정가 24,900/);
   assert.match(app.view.hero, /aria-disabled="true">판매 예정/);
   assert.doesNotMatch(app.view.hero, /스마트스토어에서 구매하기/);

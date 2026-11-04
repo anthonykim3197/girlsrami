@@ -1,5 +1,5 @@
 {
-  "lastmod": "2026-10-16",
+  "lastmod": "2026-11-05",
   "source": {
     "capturedAt": "2026-10-13",
     "httpStatus": 200,
@@ -618,6 +618,66 @@
           "length": 62,
           "verified": true,
           "chestHalf": 57
+        }
+      ]
+    },
+    {
+      "id": "jo27-round-puff-cardigan",
+      "name": "라운드 퍼프 가디건",
+      "category": "가디건",
+      "styleCode": "JO27",
+      "sku": "JO27",
+      "price": 24900,
+      "priceSource": "payload.price",
+      "stock": 1100,
+      "storeUrl": "https://smartstore.naver.com/girlsrami/products/13852622642",
+      "material": "리싸이클 폴리 52% · 폴리 25% · 나일론 11% · 울 8% · 스판 4%",
+      "colors": [
+        "아이보리",
+        "오트밀",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "realImage": "https://girlslami.com/assets/detail/jo27-round-puff-cardigan/registration-20261104/angle-000.jpg",
+      "sizes": [
+        {
+          "label": "FREE",
+          "chestHalf": 65,
+          "length": 54
+        }
+      ]
+    },
+    {
+      "id": "rm584-saddle-vneck-knit",
+      "name": "새들 V넥 니트",
+      "category": "니트",
+      "styleCode": "RM584",
+      "sku": "RM584",
+      "price": 22900,
+      "priceSource": "payload.price",
+      "stock": 500,
+      "storeUrl": "https://smartstore.naver.com/girlsrami/products/13852628949",
+      "material": "폴리 65% · 나일론 13% · 아크릴 13% · 울 6% · 스판 3%",
+      "colors": [
+        "와인",
+        "브라운",
+        "차콜",
+        "그레이",
+        "오트밀"
+      ],
+      "realImage": "https://girlslami.com/assets/detail/rm584-saddle-vneck-knit/registration-20261104/angle-000.jpg",
+      "sizes": [
+        {
+          "label": "FREE",
+          "chestHalf": 56,
+          "length": 60
         }
       ]
     }

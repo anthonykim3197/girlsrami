@@ -6,6 +6,8 @@ import {createHash} from 'node:crypto';
 
 const root=new URL('../',import.meta.url);
 const manifest=JSON.parse(readFileSync(new URL('seo-products.json',root),'utf8'));
+const newLaunch=JSON.parse(readFileSync(new URL('tests/fixtures/new2-launch-20261104.json',root),'utf8'));
+const activeNew=newLaunch.filter(p=>manifest.products.some(sale=>sale.id===p.id));
 const readDist=name=>readFileSync(new URL(`dist/${name}`,root),'utf8');
 const detailContext={window:{GR:{}}};detailContext.GR=detailContext.window.GR;
 vm.runInNewContext(readFileSync(new URL('detail-catalog.js',root),'utf8'),detailContext);
@@ -16,19 +18,27 @@ const upcomingProducts=detailContext.GR.UPCOMING_PRODUCTS;
 const upcomingDetails=detailContext.window.GR_UPCOMING_DETAIL;
 const lookPreviews=detailContext.window.GR_LOOK_PREVIEWS;
 
-test('the public fallback catalog contains the same twenty-one sale products and no draft concepts',()=>{
+test('the public fallback catalog matches the verified sale products and excludes draft concepts',()=>{
   const context={window:{GR:{}}};context.GR=context.window.GR;
   vm.runInNewContext(readFileSync(new URL('data.js',root),'utf8'),context);
   const products=context.window.GR.PRODUCTS;
   assert.equal(products.length,manifest.products.length);
   assert.deepEqual([...products.map(product=>product.id)].sort(),[...manifest.products.map(product=>product.id)].sort());
   assert.ok(products.every(product=>product.status==='active'&&/^https:\/\/smartstore\.naver\.com\/girlsrami\/products\/\d+\/?$/.test(product.storeUrl||product.smartstore)));
+  for(const expected of activeNew){
+    const product=products.find(p=>p.id===expected.id);
+    const sale=manifest.products.find(p=>p.id===expected.id);
+    assert.equal(product.storeUrl,sale.storeUrl);
+    assert.equal(product.smartstore,sale.storeUrl);
+    assert.equal(product.image,sale.realImage);
+    assert.match(product.image,/^https:\/\/girlslami\.com\/assets\/detail\//);
+  }
   assert.doesNotMatch(readFileSync(new URL('data.js',root),'utf8'),/GR-FW26-|wool-cable-regular|cashmere-touch-turtle/);
 });
 
 test('only the verified sale catalog has indexable pages and offers',()=>{
   const sitemap=readDist('sitemap.xml');
-  assert.equal(manifest.products.length,21);
+  assert.equal(manifest.products.length,21+activeNew.length);
   assert.equal((sitemap.match(/<loc>https:\/\/girlslami\.com\/product-/g)||[]).length,manifest.products.length);
   for(const product of manifest.products){
     const path=`product-${product.id}.html`;
@@ -59,9 +69,12 @@ test('only the verified sale catalog has indexable pages and offers',()=>{
     assert.doesNotMatch(sitemap,new RegExp(conceptId));
   }
   const shop=readDist('shop.html');
-  assert.equal((shop.match(/<a class="card reveal in" href="product-/g)||[]).length,manifest.products.length+upcomingProducts.length);
-  assert.deepEqual(Array.from(upcomingProducts,product=>product.id).sort(),['jo27-round-puff-cardigan','rm584-saddle-vneck-knit']);
+  assert.equal((shop.match(/<a class="card reveal in" href="product-/g)||[]).length,21+newLaunch.length);
+  const scheduledIds=newLaunch.filter(p=>!activeNew.includes(p)).map(p=>p.id).sort();
+  assert.deepEqual(Array.from(upcomingProducts,product=>product.id).sort(),scheduledIds);
   for(const product of upcomingProducts){
+    assert.equal(product.status,'coming');
+    assert.ok(!product.storeUrl && !product.smartstore);
     const path=`product-${product.id}.html`;
     const html=readDist(path);
     assert.ok(shop.includes(`href="${path}"`));
@@ -69,13 +82,26 @@ test('only the verified sale catalog has indexable pages and offers',()=>{
     assert.ok(html.includes(`<link rel="canonical" href="https://girlslami.com/${path}">`));
     assert.ok(html.includes(`<h1>${product.name}</h1>`));
     assert.match(html,/name="robots" content="noindex,follow"/);
+    assert.match(html,/<span class="grsd-purchase" aria-disabled="true">판매 예정<\/span>/);
     const raw=html.match(/<script type="application\/ld\+json" data-product-json-ld>(.*?)<\/script>/s)?.[1];
     const json=JSON.parse(raw);
     assert.equal(json['@type'],'Product');
     assert.equal(json.offers,undefined);
   }
+  for(const expected of newLaunch){
+    const path=`product-${expected.id}.html`;
+    const html=readDist(path);
+    assert.ok(shop.includes(`href="${path}"`));
+    assert.match(html,/<strong>FREE<\/strong><span>단면 기준 · cm<\/span>/);
+    const rows=Array.from(html.matchAll(/<tr><td><span class="grsd-number">(\d+)<\/span>([^<]+)<\/td><td><b>(\d+)<\/b><\/td><\/tr>/g),
+      ([,number,label,value])=>[Number(number),label,Number(value)]);
+    assert.deepEqual(rows,expected.measurements.map(([label,value],i)=>[i+1,label,value]),expected.code);
+    const sale=manifest.products.find(p=>p.id===expected.id);
+    if(sale) assert.ok(html.includes(`<a class="grsd-purchase" href="${sale.storeUrl}"`),expected.code);
+  }
   assert.equal((readDist('index.html').match(/<a class="card reveal in" href="product-/g)||[]).length,4);
-  assert.equal(manifest.lastmod,'2026-10-16');
+  if(!activeNew.length) assert.equal(manifest.lastmod,'2026-10-16');
+  else assert.match(manifest.lastmod,/^\d{4}-\d{2}-\d{2}$/);
   assert.deepEqual(Object.keys(details).sort(),manifest.products.map(product=>product.id).sort());
   for(const name of ['index.html','shop.html','product.html']){
     const html=readDist(name);

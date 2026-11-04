@@ -5,13 +5,14 @@ import vm from 'node:vm';
 import {validateDetailContent} from '../scripts/validate-detail-content.mjs';
 
 const root = new URL('../',import.meta.url);
-const c = {window:{}};
+const c = {window:{GR:{}}}; c.GR = c.window.GR;
 vm.runInNewContext(readFileSync(new URL('detail-catalog.js',root),'utf8'),c);
-const details = JSON.parse(JSON.stringify(c.window.GR_DETAIL));
-const products = JSON.parse(readFileSync(new URL('seo-products.json',root),'utf8')).products;
+vm.runInNewContext(readFileSync(new URL('upcoming-catalog.js',root),'utf8'),c);
+const details = JSON.parse(JSON.stringify({...c.window.GR_DETAIL,...c.window.GR_UPCOMING_DETAIL}));
+const products = [...JSON.parse(readFileSync(new URL('seo-products.json',root),'utf8')).products,...c.GR.UPCOMING_PRODUCTS];
 
-test('all sale products have the same complete editorial, styling, palette, fabric and size content',()=>{
-  assert.deepEqual(validateDetailContent(products,details),{products:21,colors:155,looks:620});
+test('sale and scheduled products have complete editorial, styling, palette, fabric and size content',()=>{
+  assert.deepEqual(validateDetailContent(products,details),{products:23,colors:171,looks:684});
 });
 
 test('the build gate detects missing palettes, unavailable color looks and misleading photo captions',()=>{

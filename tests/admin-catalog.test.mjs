@@ -31,13 +31,17 @@ test('newest intake sorts first, unknown dates last, and ties are stable without
   assert.deepEqual(products,before);
 });
 
-test('real catalog groups have 9 latest, 2 initial and 10 established designs', async () => {
+test('real catalog groups preserve the established, initial and verified intake batches', async () => {
   const context={window:{GR:{}}}; context.GR=context.window.GR;
   vm.runInNewContext(await readFile(new URL('../data.js',import.meta.url),'utf8'),context);
   const summary=catalogSummary(JSON.parse(JSON.stringify(context.GR.PRODUCTS)));
-  assert.equal(summary.real.length,21);
+  const launch=JSON.parse(await readFile(new URL('fixtures/new2-launch-20261104.json',import.meta.url),'utf8'));
+  const activeIds=launch.map(p=>p.id).filter(id=>context.GR.PRODUCTS.some(product=>product.id===id));
+  assert.equal(summary.real.length,21+activeIds.length);
   assert.equal(summary.legacy.length,10);
-  assert.deepEqual(summary.newBatches.map(b=>[b.date,b.products.length]),[['2026-10-13',9],['2026-10-03',2]]);
+  const newBatches=activeIds.length?[['2026-11-04',activeIds.length]]:[];
+  assert.deepEqual(summary.newBatches.map(b=>[b.date,b.products.length]),[...newBatches,['2026-10-13',9],['2026-10-03',2]]);
+  if(activeIds.length) assert.deepEqual(summary.newBatches[0].products.map(p=>p.id).sort(),activeIds.sort());
   assert.equal(summary.unclassified.length,0);
 });
 

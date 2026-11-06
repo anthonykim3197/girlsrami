@@ -515,6 +515,7 @@
     const standardEditorial = !editorial && usesStandardEditorial(p);
     const editorialLayout = Boolean(editorial || standardEditorial || qualityEditorial);
     let color = startingColorFor(p, ai ? GR_AI.colorFor(p) : null), size = p.sizePending ? null : p.sizes[0];
+    window.GRAnalytics?.viewProduct(p);
     const root = $('#pd');
     root.classList.toggle('pd-editorial', editorialLayout);
     root.classList.toggle('pd-source-editorial', Boolean(standardEditorial));
@@ -540,7 +541,7 @@
         <div class="pd-cta">
           ${soon
             ? `<a class="btn btn-light btn-block" href="${GR.STORE_URL}" target="_blank" rel="noopener">스마트스토어에서 판매 일정 확인</a><button class="btn btn-lg btn-block is-disabled" disabled>${p.newRelease ? '판매 예정' : '품절 · 입고 예정'} (구매 가능 수량 0)</button>`
-            : `<a class="btn btn-accent btn-lg btn-block" href="${p.smartstore}" target="_blank" rel="noopener">스마트스토어에서 구매하기 →</a><div class="row"><button class="btn btn-ghost" id="add-cart"${!p.colors.length || p.sizePending || !p.sizes.length ? ' disabled' : ''}>장바구니에 담기</button><a class="btn btn-ghost" href="${GR.TALK_URL}" target="_blank" rel="noopener">톡톡 문의</a><button class="btn btn-ghost" id="share-btn">링크 공유</button></div><p id="product-cart-status" role="status"></p>`}
+            : `<a class="btn btn-accent btn-lg btn-block" data-gr-buy data-gr-product="${esc(p.id)}" data-gr-placement="detail" href="${p.smartstore}" target="_blank" rel="noopener">스마트스토어에서 구매하기 →</a><div class="row"><button class="btn btn-ghost" id="add-cart"${!p.colors.length || p.sizePending || !p.sizes.length ? ' disabled' : ''}>장바구니에 담기</button><a class="btn btn-ghost" href="${GR.TALK_URL}" target="_blank" rel="noopener">톡톡 문의</a><button class="btn btn-ghost" id="share-btn">링크 공유</button></div><p id="product-cart-status" role="status"></p>`}
         </div>
         <div class="gift"><b>혜택 확인</b>현재 쿠폰·사은품 조건은 스마트스토어의 상품 안내와 결제 화면에서 확인해 주세요.</div>
         ${editorialLayout ? '' : factsFor(p)}

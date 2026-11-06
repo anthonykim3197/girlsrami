@@ -24,16 +24,21 @@
 <p>이전 시험에서 저장한 본인 사진이나 결과가 있다면 내 정보 → 사진 삭제 · 동의 철회에서 삭제할 수 있습니다. 기존 비공개 사진의 접근 제한과 24시간 만료·삭제 정책은 유지합니다. 일반 상품 관리자는 회원 사진이나 신체 치수를 열람할 수 없습니다.</p>
 <h2>외부 서비스와 브라우저 저장</h2>
 <p>회원 인증·데이터 저장에는 Supabase 서울 지역, 사이트 제공에는 Cloudflare Pages를 사용합니다. 가입 확인·비밀번호 재설정 메일을 연결하기 위해 Resend의 일본 도쿄 지역(ap-northeast-1)에 인증용 발송 도메인을 등록했습니다. 인증 메일을 보낼 때 수신 이메일 주소와 인증 메일 내용이 해당 발송 서비스에 전달됩니다. 신체 치수와 사진은 메일에 포함하지 않습니다. 로그인 유지에는 인증 토큰을 브라우저에 저장합니다. 공용 기기에서는 이용 후 로그아웃해 주세요.</p>
+<h2 id="analytics">방문·상품 행동 분석</h2>
+<p>상품 개선을 위해 페이지·상품 조회, 색상·사이즈 선택, 구매 버튼 클릭과 스마트스토어 이동을 Cloudflare에 기록합니다. 탭에서 30분 동안 이어지는 임시 세션, 진입 도메인, 영문·숫자 캠페인 코드만 사용하며 이름·이메일·IP 주소·전체 유입 주소·검색어·주문·결제 정보는 분석 데이터에 저장하지 않습니다. 원시 기록은 다음 수집 시 90일보다 오래된 자료부터 삭제합니다. 관리자는 집계만 볼 수 있습니다. 세션 수는 사람 수가 아니며, 스마트스토어 이동은 주문 완료를 의미하지 않습니다.</p>
+<p>DNT 또는 Global Privacy Control이 켜져 있으면 이 행동 분석을 전송하지 않습니다. 아래 설정은 이 브라우저에 적용되며, Cloudflare의 별도 페이지뷰 집계와는 별개입니다.</p><button type="button" class="btn btn-ghost" id="analytics-optout">이 브라우저에서 행동 분석 제외</button><p id="analytics-optout-status" role="status"></p>
 <h2>정보 정정과 삭제</h2>
 <p>내 정보에서 치수를 수정·삭제하고 사진 동의를 철회할 수 있습니다. 계정 삭제와 오류로 인한 삭제 실패는 톡톡으로 요청해 주세요. 다른 회원의 정보와 사진은 상품 관리자에게 노출되지 않습니다.</p>
 </main>
 <div id="site-footer">
 </div>
+<script src="analytics.js"></script>
 <script src="data.js?v=53b35951b2fd">
 </script>
 <script src="app.js?v=d633e58d869d">
 </script>
 <script type="module" src="member.js?v=9818587a62ad">
 </script>
+<script src="analytics-privacy.js"></script>
 </body>
 </html>

@@ -1,0 +1,8 @@
+name = "girlsrami"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-09-30"
+
+[[d1_databases]]
+binding = "ANALYTICS"
+database_name = "girlsrami-shopping-signals"
+database_id = "00000000-0000-4000-8000-000000000000"

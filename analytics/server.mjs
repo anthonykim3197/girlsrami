@@ -44,7 +44,20 @@ export async function collect(request,env){
   if(/bot|crawler|spider|headless|facebookexternalhit|slurp/i.test(request.headers.get('user-agent')||''))return new Response(null,{status:204});
   if(!env.ANALYTICS)return json({error:'analytics_not_configured'},503);
   if(Number(request.headers.get('content-length'))>2048)return json({error:'payload_too_large'},413);
-  let input;try{const raw=await request.text();if(raw.length>2048)return json({error:'payload_too_large'},413);input=JSON.parse(raw)}catch{return json({error:'invalid_json'},400)}
+  let input;
+  const reader=request.body?.getReader();
+  if(!reader)return json({error:'invalid_json'},400);
+  try{
+    const decoder=new TextDecoder('utf-8',{fatal:true});let bytes=0,raw='';
+    while(true){
+      const {done,value}=await reader.read();if(done)break;
+      bytes+=value.byteLength;
+      if(bytes>2048){await reader.cancel();return json({error:'payload_too_large'},413)}
+      raw+=decoder.decode(value,{stream:true});
+    }
+    input=JSON.parse(raw+decoder.decode());
+  }catch{await reader.cancel().catch(()=>{});return json({error:'invalid_json'},400)}
+  finally{reader.releaseLock()}
   const event=validateEvent(input);if(!event)return json({error:'invalid_event'},400);
   try{await recordEvent(env.ANALYTICS,event);return new Response(null,{status:204,headers:{'cache-control':'no-store'}})}catch{return json({error:'temporarily_unavailable'},503)}
 }

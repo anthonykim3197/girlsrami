@@ -48,3 +48,17 @@ test('summary endpoint requires a server-verified administrator and hides raw ev
  assert.equal((await mod.readSummary(auth,{ANALYTICS:store},async()=>false)).status,403);
  const response=await mod.readSummary(auth,{ANALYTICS:store},async()=>true);assert.equal(response.status,200);assert.equal(response.headers.get('cache-control'),'no-store');assert.equal((await response.json()).days,30);
 });
+test('collector stops a chunked body at the byte limit without reading the remainder',async()=>{
+ let reads=0,cancelled=false;
+ const body=new ReadableStream({pull(controller){reads++;controller.enqueue(new Uint8Array(1024));if(reads===10)controller.close()},cancel(){cancelled=true}},{highWaterMark:0});
+ const request=new Request('https://girlslami.com/api/analytics',{method:'POST',headers:{origin:'https://girlslami.com'},body,duplex:'half'});
+ const response=await mod.collect(request,{ANALYTICS:db()});assert.equal(response.status,413);assert.equal(cancelled,true);assert.equal(reads,3);
+});
+test('collector enforces UTF-8 bytes rather than characters and accepts a split multibyte character',async()=>{
+ const large=new Request('https://girlslami.com/api/analytics',{method:'POST',headers:{origin:'https://girlslami.com'},body:JSON.stringify({padding:'가'.repeat(800)})});
+ assert.equal((await mod.collect(large,{ANALYTICS:db()})).status,413);
+ const bytes=new TextEncoder().encode(JSON.stringify(event()));let offset=0;
+ const body=new ReadableStream({pull(controller){if(offset===bytes.length){controller.close();return}controller.enqueue(bytes.slice(offset,++offset))}},{highWaterMark:0});
+ const request=new Request('https://girlslami.com/api/analytics',{method:'POST',headers:{origin:'https://girlslami.com'},body,duplex:'half'});
+ assert.equal((await mod.collect(request,{ANALYTICS:db()})).status,204);
+});

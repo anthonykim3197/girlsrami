@@ -28,6 +28,31 @@ test('the build gate detects missing palettes, unavailable color looks and misle
   });
 });
 
+test('sale palettes require the generated folded composition and its matching color legend',()=>{
+  const p=products.find(p=>p.id==='boucle-round-half-cardigan');
+  const d=structuredClone(details[p.id]);
+  const stem=`assets/detail/${p.id}/folded-palette-20261116/palette`;
+  d.colorBoard=stem+'.webp';
+  d.foldedPalette={fullSrc:stem+'.png',colors:[...d.colorOrder],columns:3,rows:2,mediaKind:'generated',sourceTreatment:'ai-folded-arrangement'};
+  assert.deepEqual(validateDetailContent([p],{[p.id]:d}),{products:1,colors:5,looks:20});
+  const cases=[
+    {change:x=>delete x.foldedPalette,error:/folded Color Palette required/},
+    {change:x=>x.colorBoard='assets/old-model-board.webp',error:/folded palette WebP/},
+    {change:x=>x.foldedPalette.fullSrc=stem+'.webp',error:/folded palette PNG master/},
+    {change:x=>x.foldedPalette.colors.reverse(),error:/folded palette colors must match palette order/},
+    {change:x=>x.foldedPalette.columns=4,error:/folded palette grid/},
+    {change:x=>x.foldedPalette.rows=3,error:/folded palette grid/},
+    {change:x=>x.foldedPalette.mediaKind='photo',error:/folded palette must be marked as AI generated/},
+    {change:x=>x.foldedPalette.sourceTreatment='alpha-mask-only',error:/folded palette must be marked as AI generated/}
+  ];
+  for(const {change,error} of cases){
+    const altered=structuredClone(d);change(altered);
+    assert.throws(()=>validateDetailContent([p],{[p.id]:altered}),error);
+  }
+  const scheduled=structuredClone(d);delete scheduled.foldedPalette;
+  assert.doesNotThrow(()=>validateDetailContent([{...p,status:'coming'}],{[p.id]:scheduled}));
+});
+
 test('studio detail photos keep the original photo sources separate and do not erase them',()=>{
   for(const p of products){
     const d=details[p.id];

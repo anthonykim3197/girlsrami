@@ -23,6 +23,16 @@ export function validateDetailContent(products, details) {
     if (!Array.isArray(d.colorOrder) || d.colorOrder.length !== colors.length || new Set(d.colorOrder).size !== colors.length || d.colorOrder.some(c=>!colors.includes(c))) fail('palette order must contain every sale color exactly once');
     if (!(d.fabric?.length >= 2)) fail('studio overview and fabric detail required');
     if (product.status !== 'coming') {
+      const palette = d.foldedPalette;
+      const paletteStem = `assets/detail/${product.id}/folded-palette-20261116/palette`;
+      if (!palette) fail('folded Color Palette required');
+      else {
+        if (d.colorBoard !== paletteStem+'.webp') fail('folded palette WebP required for this product');
+        if (palette.fullSrc !== paletteStem+'.png') fail('folded palette PNG master required for this product');
+        if (!Array.isArray(palette.colors) || palette.colors.length !== d.colorOrder?.length || palette.colors.some((color,index)=>color!==d.colorOrder[index])) fail('folded palette colors must match palette order');
+        if (![2,3].includes(palette.columns) || palette.rows !== Math.ceil(colors.length/palette.columns)) fail('folded palette grid must fit every sale color');
+        if (palette.mediaKind !== 'generated' || palette.sourceTreatment !== 'ai-folded-arrangement') fail('folded palette must be marked as AI generated');
+      }
       if (!d.productPhotos?.length) fail('photograph-based transparent product detail required');
       for (const photo of d.productPhotos || []) {
         if (!photo.src || !photo.fullSrc || !/\.png$/i.test(photo.fullSrc) || !photo.color || !photo.caption

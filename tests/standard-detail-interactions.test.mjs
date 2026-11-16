@@ -35,7 +35,9 @@ function node(initial = '') {
       listeners.set(type, [...(listeners.get(type) || []), callback]);
     },
     dispatch(type, event) { for (const callback of listeners.get(type) || []) callback(event); },
+    querySelector() { return null; },
     querySelectorAll() { return []; },
+    showModal() { this.open = true; },
     cloneNode() { return node(); },
     isEqualNode(other) { return html === other.innerHTML; },
     setPointerCapture() {}, focus() {}
@@ -116,11 +118,14 @@ function harness(productId = 'stripe-cable-half', lookPreviews = {}, productOver
   pd.querySelector = get;
   pd.querySelectorAll = selector => controls.filter(button => button.matches(selector));
   get('#pd-desc').querySelector = get;
+  const detailControls = buttons(view.detail);
+  get('#pd-desc').querySelectorAll = selector => detailControls.filter(button => button.matches(selector));
   get('.grsd-lightbox').querySelector = selector => get(`lightbox:${selector}`);
   for (const element of nodes.values()) element.writes = 0;
 
   return {
     get, pd, view, imageRequests,
+    detailControl: src => detailControls.find(button => button.dataset.fullImage === src),
     render: () => presentation.render(product, helpers),
     control(key, value) {
       const control = controls.find(button => button.dataset[key] === value);
@@ -277,4 +282,35 @@ test('an unconfirmed photographed sample never inherits a sale color label', asy
   assert.match(app.get('.grsd-media-note').textContent,/선택 옵션은 검정/);
   assert.match(app.get('.grsd-media-note').textContent,/형태와 짜임을 보여주는 샘플/);
   assert.doesNotMatch(app.get('.grsd-caption').textContent,/검정|아이보리/);
+});
+
+test('folded color palette enlarges its master without changing the selected model outfit', async () => {
+  const app = harness('stripe-cable-half', {}, {}, {
+    colorBoard: 'folded/palette.webp', colorBoardSize: {width: 1200, height: 1600},
+    colorOrder: ['연핑', '하늘', '초록', '베이지', '곤색'],
+    foldedPalette: {fullSrc: 'folded/palette.png', columns: 3, rows: 2}
+  });
+  const palette = app.view.detail.match(/<section class="grsd-section" id="colors">([\s\S]*?)<\/section>/)?.[1];
+  assert.ok(palette, 'the colors section is rendered');
+  assert.deepEqual([...palette.matchAll(/<img src="([^"]+)"/g)].map(match => match[1]), ['folded/palette.webp']);
+  assert.match(palette, /width="1200" height="1600"/);
+  const legend = palette.match(/<ol class="grsd-palette-legend"[^>]*>([\s\S]*?)<\/ol>/)?.[1] || '';
+  assert.deepEqual([...legend.matchAll(/<b>([^<]+)<\/b>/g)].map(match => match[1]), ['연핑', '하늘', '초록', '베이지', '곤색']);
+  assert.doesNotMatch(palette, /data-palette-color/);
+  app.render();
+  app.click('look', 'city-v3');
+  app.click('c', '곤색');
+  await settleImages();
+  const modelImage = app.get('#pd-img').src;
+  const control = app.detailControl('folded/palette.png');
+  assert.ok(control, 'palette opens the full-resolution master');
+  control.onclick();
+  await settleImages();
+  assert.equal(app.get('.grsd-lightbox').open, true);
+  assert.equal(app.get('lightbox:img').src, 'folded/palette.png');
+  assert.equal(app.get('lightbox:img').hidden, false);
+  assert.equal(app.imageRequests.find(request => request.src === 'folded/palette.png')?.priority, 'high');
+  assert.equal(app.get('#pd-img').src, modelImage);
+  assert.equal(app.control('look', 'city-v3').getAttribute('aria-pressed'), 'true');
+  assert.equal(app.control('c', '곤색').getAttribute('aria-pressed'), 'true');
 });

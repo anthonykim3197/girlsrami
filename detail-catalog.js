@@ -314,7 +314,7 @@ window.GR_DETAIL = {
         "mediaKind": "photo"
       }
     ],
-    "colorBoard": "assets/detail/alpaca-round-knit/v4/color-palette.webp",
+    "colorBoard": "assets/detail/alpaca-round-knit/folded-palette-20261116/palette.webp",
     "measurements": [
       {
         "label": "가슴 단면",
@@ -395,8 +395,8 @@ window.GR_DETAIL = {
       }
     ],
     "colorBoardSize": {
-      "width": 1448,
-      "height": 1086
+      "width": 1254,
+      "height": 1254
     },
     "colorOrder": [
       "회색",
@@ -422,7 +422,23 @@ window.GR_DETAIL = {
         "sourceTreatment": "alpha-mask-only"
       }
     ],
-    "supplementalMedia": []
+    "supplementalMedia": [],
+    "foldedPalette": {
+      "fullSrc": "assets/detail/alpaca-round-knit/folded-palette-20261116/palette.png",
+      "colors": [
+        "회색",
+        "차콜",
+        "파랑",
+        "크림",
+        "오렌지",
+        "네온",
+        "보라"
+      ],
+      "columns": 3,
+      "rows": 3,
+      "mediaKind": "generated",
+      "sourceTreatment": "ai-folded-arrangement"
+    }
   },
   "boucle-crop-cardigan": {
     "lead": "데님 위에 짧게 떨어지는 가디건. 단추를 잠그면 니트 톱처럼 입을 수 있어요.",
@@ -675,7 +691,7 @@ window.GR_DETAIL = {
         "mediaKind": "photo"
       }
     ],
-    "colorBoard": "assets/detail/boucle-crop-cardigan/v4/color-palette.webp",
+    "colorBoard": "assets/detail/boucle-crop-cardigan/folded-palette-20261116/palette.webp",
     "measurements": [
       {
         "label": "가슴 단면",
@@ -730,8 +746,8 @@ window.GR_DETAIL = {
       "베이지": "#D1C3A8"
     },
     "colorBoardSize": {
-      "width": 1536,
-      "height": 1024
+      "width": 1254,
+      "height": 1254
     },
     "isNewDesign": false,
     "fabricOriginals": [
@@ -779,7 +795,21 @@ window.GR_DETAIL = {
         "sourceTreatment": "alpha-mask-only"
       }
     ],
-    "supplementalMedia": []
+    "supplementalMedia": [],
+    "foldedPalette": {
+      "fullSrc": "assets/detail/boucle-crop-cardigan/folded-palette-20261116/palette.png",
+      "colors": [
+        "연두",
+        "연밤",
+        "베이지",
+        "소라",
+        "곤색"
+      ],
+      "columns": 3,
+      "rows": 2,
+      "mediaKind": "generated",
+      "sourceTreatment": "ai-folded-arrangement"
+    }
   },
   "boucle-fisher-vneck-vest": {
     "lead": "티셔츠 위에도, 셔츠 위에도. 브이넥과 케이블 짜임이 심심한 조합을 채워줘요.",
@@ -1002,7 +1032,7 @@ window.GR_DETAIL = {
         "mediaKind": "photo"
       }
     ],
-    "colorBoard": "assets/detail/boucle-fisher-vneck-vest/v4/color-palette.webp",
+    "colorBoard": "assets/detail/boucle-fisher-vneck-vest/folded-palette-20261116/palette.webp",
     "measurements": [
       {
         "label": "가슴 단면",
@@ -1094,7 +1124,21 @@ window.GR_DETAIL = {
         "sourceTreatment": "alpha-mask-only"
       }
     ],
-    "supplementalMedia": []
+    "supplementalMedia": [],
+    "foldedPalette": {
+      "fullSrc": "assets/detail/boucle-fisher-vneck-vest/folded-palette-20261116/palette.png",
+      "colors": [
+        "아이",
+        "연두",
+        "베이지",
+        "소라",
+        "연회색"
+      ],
+      "columns": 3,
+      "rows": 2,
+      "mediaKind": "generated",
+      "sourceTreatment": "ai-folded-arrangement"
+    }
   },
   "boucle-round-half-cardigan": {
     "lead": "라운드넥과 짧은 소매. 단추를 잠그고 데님과 가볍게 맞춰 입어요.",
@@ -1316,7 +1360,7 @@ window.GR_DETAIL = {
         "mediaKind": "photo"
       }
     ],
-    "colorBoard": "assets/detail/boucle-round-half-cardigan/v4/color-palette.webp",
+    "colorBoard": "assets/detail/boucle-round-half-cardigan/folded-palette-20261116/palette.webp",
     "measurements": [
       {
         "label": "가슴 단면",
@@ -1421,7 +1465,21 @@ window.GR_DETAIL = {
         "sourceTreatment": "alpha-mask-only"
       }
     ],
-    "supplementalMedia": []
+    "supplementalMedia": [],
+    "foldedPalette": {
+      "fullSrc": "assets/detail/boucle-round-half-cardigan/folded-palette-20261116/palette.png",
+      "colors": [
+        "라임",
+        "연두",
+        "베이지",
+        "소라",
+        "곤색"
+      ],
+      "columns": 3,
+      "rows": 2,
+      "mediaKind": "generated",
+      "sourceTreatment": "ai-folded-arrangement"
+    }
   },
   "cable-vneck-knit": {
     "lead": "브이넥 아래로 이어지는 케이블. 평소 입던 데님에 클래식한 표정을 더해요.",
@@ -1803,7 +1861,7 @@ window.GR_DETAIL = {
         "mediaKind": "photo"
       }
     ],
-    "colorBoard": "assets/detail/cable-vneck-knit/v4/color-palette.webp",
+    "colorBoard": "assets/detail/cable-vneck-knit/folded-palette-20261116/palette.webp",
     "measurements": [
       {
         "label": "가슴 단면",
@@ -1907,7 +1965,25 @@ window.GR_DETAIL = {
         "sourceTreatment": "alpha-mask-only"
       }
     ],
-    "supplementalMedia": []
+    "supplementalMedia": [],
+    "foldedPalette": {
+      "fullSrc": "assets/detail/cable-vneck-knit/folded-palette-20261116/palette.png",
+      "colors": [
+        "소라",
+        "회색",
+        "아이",
+        "베이지",
+        "연핑",
+        "보라",
+        "초록",
+        "곤색",
+        "검정"
+      ],
+      "columns": 3,
+      "rows": 3,
+      "mediaKind": "generated",
+      "sourceTreatment": "ai-folded-arrangement"
+    }
   },
   "fisherman-crop-bustier": {
     "lead": "흰 티 위에 짧게 한 겹. 케이블 뷔스티에로 레이어드 비율을 바꿔보세요.",
@@ -2104,7 +2180,7 @@ window.GR_DETAIL = {
         "mediaKind": "photo"
       }
     ],
-    "colorBoard": "assets/detail/fisherman-crop-bustier/v4/color-palette.webp",
+    "colorBoard": "assets/detail/fisherman-crop-bustier/folded-palette-20261116/palette.webp",
     "measurements": [
       {
         "label": "가슴 단면",
@@ -2170,8 +2246,8 @@ window.GR_DETAIL = {
       }
     ],
     "colorBoardSize": {
-      "width": 1536,
-      "height": 1024
+      "width": 1254,
+      "height": 1254
     },
     "colorOrder": [
       "베이지",
@@ -2194,7 +2270,20 @@ window.GR_DETAIL = {
         "sourceTreatment": "alpha-mask-only"
       }
     ],
-    "supplementalMedia": []
+    "supplementalMedia": [],
+    "foldedPalette": {
+      "fullSrc": "assets/detail/fisherman-crop-bustier/folded-palette-20261116/palette.png",
+      "colors": [
+        "베이지",
+        "연밤",
+        "소라",
+        "검정"
+      ],
+      "columns": 2,
+      "rows": 2,
+      "mediaKind": "generated",
+      "sourceTreatment": "ai-folded-arrangement"
+    }
   },
   "honey-loop-crop-knit": {
     "lead": "작은 벌집 짜임과 넉넉한 몸판. 심플한 하의에 니트의 결을 더해요.",
@@ -2398,7 +2487,7 @@ window.GR_DETAIL = {
         "mediaKind": "photo"
       }
     ],
-    "colorBoard": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/honey-correction-20261004-v4/board-8fd34a81.webp",
+    "colorBoard": "assets/detail/honey-loop-crop-knit/folded-palette-20261116/palette.webp",
     "measurements": [
       {
         "label": "목깊이",
@@ -2439,8 +2528,8 @@ window.GR_DETAIL = {
     "materialNote": "",
     "colorHex": {},
     "colorBoardSize": {
-      "width": 1536,
-      "height": 1024
+      "width": 1254,
+      "height": 1254
     },
     "isNewDesign": true,
     "fabricOriginals": [
@@ -2473,7 +2562,20 @@ window.GR_DETAIL = {
         "sourceTreatment": "alpha-mask-only"
       }
     ],
-    "supplementalMedia": []
+    "supplementalMedia": [],
+    "foldedPalette": {
+      "fullSrc": "assets/detail/honey-loop-crop-knit/folded-palette-20261116/palette.png",
+      "colors": [
+        "카멜",
+        "크림",
+        "차콜",
+        "스카이"
+      ],
+      "columns": 2,
+      "rows": 2,
+      "mediaKind": "generated",
+      "sourceTreatment": "ai-folded-arrangement"
+    }
   },
   "off-duty-vneck-knit-vest": {
     "lead": "흰 티와 데님 위에 하나만 더해도, 평소 입던 조합이 조금 달라져요.",
@@ -2709,7 +2811,7 @@ window.GR_DETAIL = {
         "mediaKind": "photo"
       }
     ],
-    "colorBoard": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/assets/boards/off-duty-vneck-knit-vest-e6d5971d.webp",
+    "colorBoard": "assets/detail/off-duty-vneck-knit-vest/folded-palette-20261116/palette.webp",
     "measurements": [
       {
         "label": "목너비",
@@ -2784,7 +2886,21 @@ window.GR_DETAIL = {
         "sourceTreatment": "alpha-mask-only"
       }
     ],
-    "supplementalMedia": []
+    "supplementalMedia": [],
+    "foldedPalette": {
+      "fullSrc": "assets/detail/off-duty-vneck-knit-vest/folded-palette-20261116/palette.png",
+      "colors": [
+        "스카이",
+        "카멜",
+        "크림",
+        "차콜",
+        "회색"
+      ],
+      "columns": 3,
+      "rows": 2,
+      "mediaKind": "generated",
+      "sourceTreatment": "ai-folded-arrangement"
+    }
   },
   "popcorn-vneck-half": {
     "lead": "잔잔한 팝콘 짜임에 브이넥을 더했어요. 데님 하나로도 조합이 완성됩니다.",
@@ -3005,7 +3121,7 @@ window.GR_DETAIL = {
         "mediaKind": "photo"
       }
     ],
-    "colorBoard": "/assets/detail/popcorn-vneck-half/v4/color-palette.webp",
+    "colorBoard": "assets/detail/popcorn-vneck-half/folded-palette-20261116/palette.webp",
     "measurements": [
       {
         "label": "가슴 단면",
@@ -3099,7 +3215,20 @@ window.GR_DETAIL = {
         "sourceTreatment": "alpha-mask-only"
       }
     ],
-    "supplementalMedia": []
+    "supplementalMedia": [],
+    "foldedPalette": {
+      "fullSrc": "assets/detail/popcorn-vneck-half/folded-palette-20261116/palette.png",
+      "colors": [
+        "노랑",
+        "연두",
+        "베이지",
+        "검정"
+      ],
+      "columns": 2,
+      "rows": 2,
+      "mediaKind": "generated",
+      "sourceTreatment": "ai-folded-arrangement"
+    }
   },
   "recycled-round-sweater": {
     "lead": "무늬 없이 담백한 라운드 니트. 데님이나 슬랙스에 편하게 돌려 입어요.",
@@ -3384,7 +3513,7 @@ window.GR_DETAIL = {
         "mediaKind": "photo"
       }
     ],
-    "colorBoard": "assets/detail/recycled-round-sweater/v4/color-palette.webp",
+    "colorBoard": "assets/detail/recycled-round-sweater/folded-palette-20261116/palette.webp",
     "measurements": [
       {
         "label": "가슴 단면",
@@ -3464,8 +3593,8 @@ window.GR_DETAIL = {
       }
     ],
     "colorBoardSize": {
-      "width": 1448,
-      "height": 1086
+      "width": 1254,
+      "height": 1254
     },
     "colorOrder": [
       "스카이",
@@ -3490,7 +3619,22 @@ window.GR_DETAIL = {
         "sourceTreatment": "alpha-mask-only"
       }
     ],
-    "supplementalMedia": []
+    "supplementalMedia": [],
+    "foldedPalette": {
+      "fullSrc": "assets/detail/recycled-round-sweater/folded-palette-20261116/palette.png",
+      "colors": [
+        "스카이",
+        "곤색",
+        "올리브",
+        "모카",
+        "그레이",
+        "브라운"
+      ],
+      "columns": 3,
+      "rows": 2,
+      "mediaKind": "generated",
+      "sourceTreatment": "ai-folded-arrangement"
+    }
   },
   "stripe-cable-half": {
     "lead": "스트라이프와 케이블을 한 벌에. 단순한 팬츠에 맞춰도 밋밋하지 않아요.",
@@ -3693,7 +3837,7 @@ window.GR_DETAIL = {
         "mediaKind": "photo"
       }
     ],
-    "colorBoard": "assets/detail/stripe-cable-half/v4/color-palette.webp",
+    "colorBoard": "assets/detail/stripe-cable-half/folded-palette-20261116/palette.webp",
     "measurements": [
       {
         "label": "가슴 단면",
@@ -3764,8 +3908,8 @@ window.GR_DETAIL = {
       }
     ],
     "colorBoardSize": {
-      "width": 1536,
-      "height": 1024
+      "width": 1254,
+      "height": 1254
     },
     "colorOrder": [
       "곤색",
@@ -3789,7 +3933,21 @@ window.GR_DETAIL = {
         "sourceTreatment": "alpha-mask-only"
       }
     ],
-    "supplementalMedia": []
+    "supplementalMedia": [],
+    "foldedPalette": {
+      "fullSrc": "assets/detail/stripe-cable-half/folded-palette-20261116/palette.png",
+      "colors": [
+        "곤색",
+        "베이지",
+        "초록",
+        "하늘",
+        "연핑"
+      ],
+      "columns": 3,
+      "rows": 2,
+      "mediaKind": "generated",
+      "sourceTreatment": "ai-folded-arrangement"
+    }
   },
   "vneck-knit-vest": {
     "lead": "티셔츠에 한 겹, 셔츠에 한 겹. 넓은 립 밑단으로 레이어드를 정리해요.",
@@ -4077,7 +4235,7 @@ window.GR_DETAIL = {
         "mediaKind": "photo"
       }
     ],
-    "colorBoard": "assets/detail/vneck-knit-vest/v4/color-palette.webp",
+    "colorBoard": "assets/detail/vneck-knit-vest/folded-palette-20261116/palette.webp",
     "measurements": [
       {
         "label": "암홀",
@@ -4121,8 +4279,8 @@ window.GR_DETAIL = {
       "그레이프": "#70445f"
     },
     "colorBoardSize": {
-      "width": 1536,
-      "height": 1024
+      "width": 1254,
+      "height": 1254
     },
     "isNewDesign": false,
     "fabricOriginals": [
@@ -4178,7 +4336,22 @@ window.GR_DETAIL = {
         "sourceTreatment": "alpha-mask-only"
       }
     ],
-    "supplementalMedia": []
+    "supplementalMedia": [],
+    "foldedPalette": {
+      "fullSrc": "assets/detail/vneck-knit-vest/folded-palette-20261116/palette.png",
+      "colors": [
+        "그레이프",
+        "모카",
+        "그레이",
+        "브라운",
+        "올리브",
+        "곤색"
+      ],
+      "columns": 2,
+      "rows": 3,
+      "mediaKind": "generated",
+      "sourceTreatment": "ai-folded-arrangement"
+    }
   },
   "jo23-oversized-vneck-knit": {
     "lead": "티셔츠 위에는 편안하게, 셔츠 위에는 단정하게. 이너에 따라 분위기가 달라지는 여유로운 V넥 니트.",
@@ -4567,10 +4740,10 @@ window.GR_DETAIL = {
         "mediaKind": "photo"
       }
     ],
-    "colorBoard": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/color-palette.webp",
+    "colorBoard": "assets/detail/jo23-oversized-vneck-knit/folded-palette-20261116/palette.webp",
     "colorBoardSize": {
-      "width": 1024,
-      "height": 1536
+      "width": 1086,
+      "height": 1448
     },
     "colorOrder": [
       "검정",
@@ -4655,7 +4828,26 @@ window.GR_DETAIL = {
         "sourceTreatment": "alpha-mask-only"
       }
     ],
-    "supplementalMedia": []
+    "supplementalMedia": [],
+    "foldedPalette": {
+      "fullSrc": "assets/detail/jo23-oversized-vneck-knit/folded-palette-20261116/palette.png",
+      "colors": [
+        "검정",
+        "아이보리",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "columns": 3,
+      "rows": 4,
+      "mediaKind": "generated",
+      "sourceTreatment": "ai-folded-arrangement"
+    }
   },
   "jo24-oversized-boatneck-knit": {
     "lead": "넓게 열린 보트넥과 볼륨 소매가 한눈에 들어오는 니트. 밝은 데님에는 가볍게, 네이비 슬랙스에는 차분하게 이어 보세요.",
@@ -5041,10 +5233,10 @@ window.GR_DETAIL = {
         "mediaKind": "photo"
       }
     ],
-    "colorBoard": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/color-palette.webp",
+    "colorBoard": "assets/detail/jo24-oversized-boatneck-knit/folded-palette-20261116/palette.webp",
     "colorBoardSize": {
-      "width": 1024,
-      "height": 1536
+      "width": 887,
+      "height": 1774
     },
     "colorOrder": [
       "검정",
@@ -5129,7 +5321,26 @@ window.GR_DETAIL = {
         "sourceTreatment": "alpha-mask-only"
       }
     ],
-    "supplementalMedia": []
+    "supplementalMedia": [],
+    "foldedPalette": {
+      "fullSrc": "assets/detail/jo24-oversized-boatneck-knit/folded-palette-20261116/palette.png",
+      "colors": [
+        "검정",
+        "아이보리",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "columns": 3,
+      "rows": 4,
+      "mediaKind": "generated",
+      "sourceTreatment": "ai-folded-arrangement"
+    }
   },
   "jo31-raglan-roundneck-knit": {
     "lead": "라운드 티와 데님 위에 편하게 더하고, 슬랙스와는 차분하게 맞추는 래글런 니트. 긴 기장과 사선 소매선이 자연스럽게 이어집니다.",
@@ -5515,10 +5726,10 @@ window.GR_DETAIL = {
         "mediaKind": "photo"
       }
     ],
-    "colorBoard": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/color-palette.webp",
+    "colorBoard": "assets/detail/jo31-raglan-roundneck-knit/folded-palette-20261116/palette.webp",
     "colorBoardSize": {
-      "width": 1024,
-      "height": 1536
+      "width": 1086,
+      "height": 1448
     },
     "colorOrder": [
       "검정",
@@ -5599,7 +5810,26 @@ window.GR_DETAIL = {
         "sourceTreatment": "alpha-mask-only"
       }
     ],
-    "supplementalMedia": []
+    "supplementalMedia": [],
+    "foldedPalette": {
+      "fullSrc": "assets/detail/jo31-raglan-roundneck-knit/folded-palette-20261116/palette.png",
+      "colors": [
+        "검정",
+        "아이보리",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "columns": 3,
+      "rows": 4,
+      "mediaKind": "generated",
+      "sourceTreatment": "ai-folded-arrangement"
+    }
   },
   "jo32-raglan-vneck-knit": {
     "lead": "얇은 목티가 살짝 보이게 입거나, 셔츠 깃을 꺼내 단정하게. 깊은 V넥 덕분에 이너를 바꾸는 재미가 있는 래글런 니트.",
@@ -5958,10 +6188,10 @@ window.GR_DETAIL = {
         "mediaKind": "photo"
       }
     ],
-    "colorBoard": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/color-palette.webp",
+    "colorBoard": "assets/detail/jo32-raglan-vneck-knit/folded-palette-20261116/palette.webp",
     "colorBoardSize": {
-      "width": 2560,
-      "height": 1536
+      "width": 1086,
+      "height": 1448
     },
     "colorOrder": [
       "아이보리",
@@ -6042,7 +6272,26 @@ window.GR_DETAIL = {
         "sourceTreatment": "alpha-mask-only"
       }
     ],
-    "supplementalMedia": []
+    "supplementalMedia": [],
+    "foldedPalette": {
+      "fullSrc": "assets/detail/jo32-raglan-vneck-knit/folded-palette-20261116/palette.png",
+      "colors": [
+        "아이보리",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "columns": 3,
+      "rows": 4,
+      "mediaKind": "generated",
+      "sourceTreatment": "ai-folded-arrangement"
+    }
   },
   "rm542-cable-vneck-vest": {
     "lead": "흰 티와 데님 위에 한 겹 더하면 중앙 다이아 짜임이 코디의 중심이 되는 V넥 베스트. 셔츠와 슬랙스에도 자연스럽게 이어집니다.",
@@ -6402,10 +6651,10 @@ window.GR_DETAIL = {
         "mediaKind": "photo"
       }
     ],
-    "colorBoard": "assets/detail/rm542-cable-vneck-vest/launch-20261016/color-palette.webp",
+    "colorBoard": "assets/detail/rm542-cable-vneck-vest/folded-palette-20261116/palette.webp",
     "colorBoardSize": {
-      "width": 2560,
-      "height": 1536
+      "width": 1086,
+      "height": 1448
     },
     "colorOrder": [
       "아이보리",
@@ -6482,7 +6731,26 @@ window.GR_DETAIL = {
         "sourceTreatment": "alpha-mask-only"
       }
     ],
-    "supplementalMedia": []
+    "supplementalMedia": [],
+    "foldedPalette": {
+      "fullSrc": "assets/detail/rm542-cable-vneck-vest/folded-palette-20261116/palette.png",
+      "colors": [
+        "아이보리",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "columns": 3,
+      "rows": 4,
+      "mediaKind": "generated",
+      "sourceTreatment": "ai-folded-arrangement"
+    }
   },
   "rm543-basic-vneck-knit": {
     "lead": "흰 티와 데님에는 편안하게, 셔츠와 슬랙스에는 단정하게. 익숙한 하의에 바로 이어 입기 좋은 V넥 니트.",
@@ -6841,10 +7109,10 @@ window.GR_DETAIL = {
         "mediaKind": "photo"
       }
     ],
-    "colorBoard": "assets/detail/rm543-basic-vneck-knit/launch-20261016/color-palette.webp",
+    "colorBoard": "assets/detail/rm543-basic-vneck-knit/folded-palette-20261116/palette.webp",
     "colorBoardSize": {
-      "width": 3135,
-      "height": 1254
+      "width": 1086,
+      "height": 1448
     },
     "colorOrder": [
       "아이보리",
@@ -6925,7 +7193,26 @@ window.GR_DETAIL = {
         "sourceTreatment": "alpha-mask-only"
       }
     ],
-    "supplementalMedia": []
+    "supplementalMedia": [],
+    "foldedPalette": {
+      "fullSrc": "assets/detail/rm543-basic-vneck-knit/folded-palette-20261116/palette.png",
+      "colors": [
+        "아이보리",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "columns": 3,
+      "rows": 4,
+      "mediaKind": "generated",
+      "sourceTreatment": "ai-folded-arrangement"
+    }
   },
   "rm567-round-cap-sleeve-knit": {
     "lead": "라운드넥과 캡소매가 간결한 인상을 만드는 짧은 니트. 데님부터 슬랙스, 미디스커트까지 하의가 잘 보이는 비율로 이어집니다.",
@@ -7311,10 +7598,10 @@ window.GR_DETAIL = {
         "mediaKind": "photo"
       }
     ],
-    "colorBoard": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/color-palette.webp",
+    "colorBoard": "assets/detail/rm567-round-cap-sleeve-knit/folded-palette-20261116/palette.webp",
     "colorBoardSize": {
-      "width": 1254,
-      "height": 3135
+      "width": 1086,
+      "height": 1448
     },
     "colorOrder": [
       "아이보리",
@@ -7399,7 +7686,26 @@ window.GR_DETAIL = {
         "sourceTreatment": "alpha-mask-only"
       }
     ],
-    "supplementalMedia": []
+    "supplementalMedia": [],
+    "foldedPalette": {
+      "fullSrc": "assets/detail/rm567-round-cap-sleeve-knit/folded-palette-20261116/palette.png",
+      "colors": [
+        "아이보리",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "columns": 3,
+      "rows": 4,
+      "mediaKind": "generated",
+      "sourceTreatment": "ai-folded-arrangement"
+    }
   },
   "rm576-ribbed-vneck-knit": {
     "lead": "흰 티와 팬츠 위에 툭 더하면 하찌 짜임이 또렷하게 살아나는 V넥 니트. 슬랙스와 미디스커트에는 차분하게 이어집니다.",
@@ -7784,10 +8090,10 @@ window.GR_DETAIL = {
         "mediaKind": "photo"
       }
     ],
-    "colorBoard": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/color-palette.webp",
+    "colorBoard": "assets/detail/rm576-ribbed-vneck-knit/folded-palette-20261116/palette.webp",
     "colorBoardSize": {
-      "width": 1254,
-      "height": 3135
+      "width": 1086,
+      "height": 1448
     },
     "colorOrder": [
       "아이보리",
@@ -7872,7 +8178,26 @@ window.GR_DETAIL = {
         "sourceTreatment": "alpha-mask-only"
       }
     ],
-    "supplementalMedia": []
+    "supplementalMedia": [],
+    "foldedPalette": {
+      "fullSrc": "assets/detail/rm576-ribbed-vneck-knit/folded-palette-20261116/palette.png",
+      "colors": [
+        "아이보리",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "columns": 3,
+      "rows": 4,
+      "mediaKind": "generated",
+      "sourceTreatment": "ai-folded-arrangement"
+    }
   },
   "rm582-front-back-vneck-oversized-knit": {
     "lead": "크루넥 이너가 앞뒤 V넥 사이로 보이는 오버핏 니트. 데님에는 편안하게, 블랙 슬랙스와 미디스커트에는 차분하게 이어 보세요.",
@@ -8222,10 +8547,10 @@ window.GR_DETAIL = {
         "mediaKind": "photo"
       }
     ],
-    "colorBoard": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/color-palette.webp",
+    "colorBoard": "assets/detail/rm582-front-back-vneck-oversized-knit/folded-palette-20261116/palette.webp",
     "colorBoardSize": {
-      "width": 1254,
-      "height": 3135
+      "width": 1086,
+      "height": 1448
     },
     "colorOrder": [
       "아이보리",
@@ -8310,7 +8635,26 @@ window.GR_DETAIL = {
         "sourceTreatment": "alpha-mask-only"
       }
     ],
-    "supplementalMedia": []
+    "supplementalMedia": [],
+    "foldedPalette": {
+      "fullSrc": "assets/detail/rm582-front-back-vneck-oversized-knit/folded-palette-20261116/palette.png",
+      "colors": [
+        "아이보리",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "columns": 3,
+      "rows": 4,
+      "mediaKind": "generated",
+      "sourceTreatment": "ai-folded-arrangement"
+    }
   },
   "jo27-round-puff-cardigan": {
     "lead": "둥근 넥, 여유 있는 품, 소매 끝에 모이는 볼륨.",
@@ -8549,10 +8893,10 @@ window.GR_DETAIL = {
     "thumbnail": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/IVORY/A.webp",
     "cardThumbnail": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/card-thumbnail.webp",
     "thumbnailColor": "아이보리",
-    "colorBoard": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated/colorboard-v1.webp",
+    "colorBoard": "assets/detail/jo27-round-puff-cardigan/folded-palette-20261116/palette.webp",
     "colorBoardSize": {
-      "width": 1536,
-      "height": 1024
+      "width": 1086,
+      "height": 1448
     },
     "supplementalMedia": [],
     "productPhotos": [
@@ -8592,7 +8936,27 @@ window.GR_DETAIL = {
         "mediaKind": "photo",
         "sourceTreatment": "alpha-mask-only"
       }
-    ]
+    ],
+    "foldedPalette": {
+      "fullSrc": "assets/detail/jo27-round-puff-cardigan/folded-palette-20261116/palette.png",
+      "colors": [
+        "아이보리",
+        "오트밀",
+        "검정",
+        "브라운",
+        "연핑크",
+        "카키",
+        "차콜",
+        "곤색",
+        "보라",
+        "연밤",
+        "그레이"
+      ],
+      "columns": 3,
+      "rows": 4,
+      "mediaKind": "generated",
+      "sourceTreatment": "ai-folded-arrangement"
+    }
   },
   "rm584-saddle-vneck-knit": {
     "lead": "티셔츠를 살짝 보이거나 셔츠 깃을 꺼내거나, 이너에 따라 달라지는 V넥.",
@@ -8848,10 +9212,10 @@ window.GR_DETAIL = {
     "thumbnail": "assets/detail/rm584-saddle-vneck-knit/registration-20261104/generated-poses-v2/looks/A.webp",
     "cardThumbnail": "assets/detail/rm584-saddle-vneck-knit/lifestyle-20261116/card-thumbnail.webp",
     "thumbnailColor": "와인",
-    "colorBoard": "assets/detail/rm584-saddle-vneck-knit/registration-20261104/generated/colorboard-v1.webp",
+    "colorBoard": "assets/detail/rm584-saddle-vneck-knit/folded-palette-20261116/palette.webp",
     "colorBoardSize": {
-      "width": 1254,
-      "height": 1254
+      "width": 1086,
+      "height": 1448
     },
     "productPhotos": [
       {
@@ -8867,6 +9231,20 @@ window.GR_DETAIL = {
         "sourceTreatment": "alpha-mask-only"
       }
     ],
-    "supplementalMedia": []
+    "supplementalMedia": [],
+    "foldedPalette": {
+      "fullSrc": "assets/detail/rm584-saddle-vneck-knit/folded-palette-20261116/palette.png",
+      "colors": [
+        "와인",
+        "브라운",
+        "차콜",
+        "그레이",
+        "오트밀"
+      ],
+      "columns": 3,
+      "rows": 2,
+      "mediaKind": "generated",
+      "sourceTreatment": "ai-folded-arrangement"
+    }
   }
 };

@@ -116,7 +116,7 @@
       used.add(color);
       const source = look.images[color], label = lookLabel(look,color), items = lookItems(look,color);
       const caption = `${name} ${color} · ${label}`;
-      return `<article><button class="grsd-image-button grsd-style-image" type="button" data-full-image="${esc(source)}" aria-label="${esc(caption)} 확대"><img src="${esc(lookPreview(source,'thumb'))}" alt="${esc(caption)}" loading="lazy" decoding="async" fetchpriority="low"></button><div class="grsd-style-meta"><small>LOOK ${String(index+1).padStart(2,'0')}</small><span>${esc(color)}</span></div><h3>${esc(label)}</h3>${items.length?`<p>${items.map(esc).join(' · ')}</p>`:''}${look.description?`<p class="grsd-style-description">${esc(look.description)}</p>`:''}</article>`;
+      return `<article><button class="grsd-image-button grsd-style-image" type="button" data-full-image="${esc(source)}" aria-label="${esc(caption)} 확대"><img src="${esc(lookPreview(source,'display'))}" alt="${esc(caption)}" loading="lazy" decoding="async" fetchpriority="low"></button><div class="grsd-style-meta"><small>LOOK ${String(index+1).padStart(2,'0')}</small><span>${esc(color)}</span></div><h3>${esc(label)}</h3>${items.length?`<p>${items.map(esc).join(' · ')}</p>`:''}${look.description?`<p class="grsd-style-description">${esc(look.description)}</p>`:''}</article>`;
     }).join('');
   }
   function markup(p, helpers) {

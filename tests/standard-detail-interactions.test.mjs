@@ -155,7 +155,7 @@ test('a scheduled product can be browsed with photos but has no checkout', async
   assert.equal(app.get('#product-cart-status').textContent, '판매 시작 전입니다.');
 });
 
-test('Styling pairs each look with its pictured color and loads a lightweight preview', () => {
+test('large Styling cards retain pictured colors and use the detailed display image', () => {
   const id = 'boucle-round-half-cardigan';
   const {view: original} = harness(id);
   const previews = Object.fromEntries(original.d.looks.flatMap(look =>
@@ -168,11 +168,11 @@ test('Styling pairs each look with its pictured color and loads a lightweight pr
   const styling = view.detail.match(/<div class="grsd-style-notes">([\s\S]*?)<\/div><\/section>/)?.[1];
   const images = [...(styling || '').matchAll(/data-full-image="([^"]+)"[^>]*><img src="([^"]+)"[^>]*alt="([^"]+)"/g)];
   assert.equal(images.length, view.d.looks.length);
-  const colors = images.map(([, src, thumb, alt], i) => {
+  const colors = images.map(([, src, display, alt], i) => {
     const look = view.d.looks[i];
     const color = Object.keys(look.images).find(color => look.images[color] === src);
     assert.ok(color, 'the enlarged photo belongs to this look');
-    assert.equal(thumb, previews[src].thumb);
+    assert.equal(display, previews[src].display);
     assert.ok(alt.includes(color));
     return color;
   });

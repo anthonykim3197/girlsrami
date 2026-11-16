@@ -726,8 +726,8 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  min-width: 230px;
-  max-width: 360px;
+  min-width: 280px;
+  max-width: 410px;
 }
 .admin-product-cell > span:last-child {
   min-width: 0;
@@ -752,6 +752,29 @@
   place-items: center;
   color: var(--ink-2);
   font-size: 11px;
+}
+.admin-product-images {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 8px;
+}
+.admin-product-images figure {
+  width: 48px;
+  margin: 0;
+}
+.admin-product-images img {
+  display: block;
+}
+.admin-product-images .admin-product-image-original {
+  object-fit: contain;
+}
+.admin-product-images figcaption {
+  margin-top: 4px;
+  color: var(--ink-2);
+  font-size: 10px;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
 }
 .admin-row-actions {
   display: grid;

@@ -119,7 +119,15 @@ export function createProductInventoryAdmin(deps) {
               const sample = info.group === 'sample' || info.group === 'test';
               const status = sample ? info.groupLabel : published ? statusLabels[published.status] ?? published.status : '미게시';
               const draftStatus = !sample && published && product.status !== published.status ? `<small>초안: ${escape(statusLabels[product.status] ?? product.status)}</small>` : '';
-              const thumbnail = !sample && product.image ? `<img src="${escape(product.image)}" alt="" loading="lazy" width="48" height="60">` : `<span class="admin-product-placeholder" aria-hidden="true">${sample ? escape(info.groupLabel) : '사진'}</span>`;
+              const displayed = published || product;
+              const detail = window.GR_DETAIL?.[displayed.id];
+              const representative = detail?.cardThumbnail || detail?.thumbnail || window.GR.storefront.verifiedRealImageFor(displayed) || displayed.catalogImage || displayed.image || '';
+              const front = displayed.detailImages?.find(photo => photo.verified && photo.angle === 0)?.url
+                || Object.values(detail?.originals || {}).flat().find(photo => photo.angle === 0)?.src
+                || (displayed.photoVerified ? displayed.image : '');
+              const thumbnail = sample
+                ? `<span class="admin-product-placeholder" aria-hidden="true">${escape(info.groupLabel)}</span>`
+                : `<div class="admin-product-images">${[[representative,'판매 대표','representative'],[front,'마네킹 정면','original']].map(([src,label,kind]) => `<figure>${src ? `<img src="${escape(src)}" alt="${escape(product.name)} ${label}" class="admin-product-image-${kind}" loading="lazy" width="48" height="60">` : '<span class="admin-product-placeholder" aria-hidden="true">사진 없음</span>'}<figcaption>${label}</figcaption></figure>`).join('')}</div>`;
               const storeUrl = published?.storeUrl || product.storeUrl;
               return `<tr class="${selectedId === product.id ? 'selected' : ''}">
                 <td class="admin-intake-date">${info.intakeDate ? escape(info.intakeDate) : '<span class="admin-muted">미확인</span>'}</td>

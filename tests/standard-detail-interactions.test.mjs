@@ -60,7 +60,7 @@ function buttons(html) {
   });
 }
 
-function harness(productId = 'stripe-cable-half', lookPreviews = {}, productOverrides = {}) {
+function harness(productId = 'stripe-cable-half', lookPreviews = {}, productOverrides = {}, detailOverrides = {}) {
   const nodes = new Map();
   const imageRequests = [];
   const get = selector => {
@@ -89,6 +89,7 @@ function harness(productId = 'stripe-cable-half', lookPreviews = {}, productOver
   const catalogProduct = context.GR.byId(productId) || context.GR.UPCOMING_PRODUCTS.find(p => p.id === productId);
   assert.ok(catalogProduct, `missing product ${productId}`);
   const product = {...catalogProduct, ...productOverrides};
+  Object.assign(context.window.GR_DETAIL[productId] || context.window.GR_UPCOMING_DETAIL[productId],detailOverrides);
   const helpers = {...context.GR.storefront, card: context.GR.card};
   const presentation = context.window.GRStandardDetail;
   const view = presentation.markup(product, helpers);
@@ -145,7 +146,7 @@ test('a scheduled product can be browsed with photos but has no checkout', async
   assert.match(app.view.hero, /예정가 24,900/);
   assert.match(app.view.hero, /aria-disabled="true">판매 예정/);
   assert.doesNotMatch(app.view.hero, /스마트스토어에서 구매하기/);
-  assert.match(app.view.detail, /후면 참고 · AI 추정 연출/);
+  assert.doesNotMatch(app.view.detail, /후면 참고 · AI 추정 연출/);
   assert.match(app.view.detail, /제조연월<\/dt><dd>2026\.10/);
   assert.equal(app.view.cartReady, false);
   app.render();
@@ -249,4 +250,31 @@ test('changing sale color keeps the chosen city outfit and displays its matching
     assert.equal(app.get('#color-name').textContent, color);
     assert.equal(app.get('.grsd-caption').textContent, `${color} · 셔츠 · 슬랙스`);
   }
+});
+
+
+test('actual cutouts take precedence over generated product rotation and retain capture color', async () => {
+  const cutouts=[{src:'clean/front.webp',fullSrc:'clean/front.png',color:'아이보리',angle:0,width:1599,height:1836},{src:'clean/side.webp',fullSrc:'clean/side.png',color:'아이보리',angle:45,width:1435,height:2036}];
+  const app=harness('jo27-round-puff-cardigan',{}, {}, {productPhotos:cutouts});
+  app.render();
+  app.click('c','검정');
+  app.click('mode','product');
+  await settleImages();
+  assert.equal(app.get('#pd-img').src,'clean/front.webp');
+  assert.match(app.get('.grsd-caption').textContent,/아이보리/);
+  assert.match(app.get('.grsd-media-note').textContent,/선택 옵션은 검정/);
+  assert.equal(app.get('.grsd-rotation-toolbar').hidden,true);
+  assert.ok(app.view.detail.includes('data-full-image="clean/front.png"'));
+  assert.ok(app.view.detail.includes('data-full-image="clean/side.png"'));
+  assert.doesNotMatch(app.view.detail,/촬영 원본 확인|제품 디테일 더 보기|후면 참고 · AI 추정 연출/);
+});
+
+test('an unconfirmed photographed sample never inherits a sale color label', async () => {
+  const app=harness('jo27-round-puff-cardigan',{}, {}, {productPhotos:[{src:'clean/sample.webp',fullSrc:'clean/sample.png',color:'제품 샘플',colorVerified:false,caption:'제품 정면',angle:0,width:1000,height:1200}]});
+  app.render();app.click('c','검정');app.click('mode','product');await settleImages();
+  assert.equal(app.get('#pd-img').src,'clean/sample.webp');
+  assert.equal(app.get('.grsd-caption').textContent,'제품 정면');
+  assert.match(app.get('.grsd-media-note').textContent,/선택 옵션은 검정/);
+  assert.match(app.get('.grsd-media-note').textContent,/형태와 짜임을 보여주는 샘플/);
+  assert.doesNotMatch(app.get('.grsd-caption').textContent,/검정|아이보리/);
 });

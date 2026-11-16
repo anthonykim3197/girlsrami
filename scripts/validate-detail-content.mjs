@@ -22,6 +22,15 @@ export function validateDetailContent(products, details) {
     if (!(d.colorBoardSize?.width > 0 && d.colorBoardSize?.height > 0)) fail('palette dimensions required');
     if (!Array.isArray(d.colorOrder) || d.colorOrder.length !== colors.length || new Set(d.colorOrder).size !== colors.length || d.colorOrder.some(c=>!colors.includes(c))) fail('palette order must contain every sale color exactly once');
     if (!(d.fabric?.length >= 2)) fail('studio overview and fabric detail required');
+    if (product.status !== 'coming') {
+      if (!d.productPhotos?.length) fail('photograph-based transparent product detail required');
+      for (const photo of d.productPhotos || []) {
+        if (!photo.src || !photo.fullSrc || !/\.png$/i.test(photo.fullSrc) || !photo.color || !photo.caption
+            || !(photo.width > 0 && photo.height > 0) || photo.mediaKind !== 'photo'
+            || photo.sourceTreatment !== 'alpha-mask-only') fail('invalid original-preserving product cutout');
+      }
+      if (d.fabric?.some(photo => photo.mediaKind !== 'photo')) fail('texture details must preserve the photographed garment');
+    }
     for (const f of d.fabric || []) {
       if (!f.src || !f.caption || !(f.width > 0 && f.height > 0)) fail('fabric photograph missing source, caption or dimensions');
       if (!['photo','studio-edit'].includes(f.mediaKind)) fail('fabric photograph provenance required');

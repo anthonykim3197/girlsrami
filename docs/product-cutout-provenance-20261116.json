@@ -1,0 +1,789 @@
+{
+  "createdAt": "2026-11-16T05:16:17.620Z",
+  "products": [
+    {
+      "id": "alpaca-round-knit",
+      "code": "RM375",
+      "photos": [
+        {
+          "source": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/alpaca-round-knit/source-rm375-gray-c493f493d29a.jpg",
+          "sourceColorVerified": true,
+          "sha256": "78d7a9c4924628dad4601490f067a8936ca686a19f046671799cbdc1d673c440",
+          "generatedOrReconstructedPixels": 0
+        }
+      ],
+      "verification": {
+        "colorProfile": "kCGColorSpaceSRGB",
+        "colorProfilePreserved": true,
+        "cropOffsetUprightOriginal": [
+          164,
+          41
+        ],
+        "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+        "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/all-products-detail-rollout-20261116/cutouts/alpaca-round-knit/front.png",
+        "generatedOrReconstructedPixels": 0,
+        "hasAlpha": true,
+        "height": 920,
+        "opaquePixels": 455640,
+        "partialAlphaPixels": 6139,
+        "sha256": "78d7a9c4924628dad4601490f067a8936ca686a19f046671799cbdc1d673c440",
+        "slug": "alpaca-round-knit",
+        "sourceOrientationCorrection": "EXIF rotation only; no scaling",
+        "transparentPixels": 226381,
+        "width": 748
+      }
+    },
+    {
+      "id": "boucle-crop-cardigan",
+      "code": "RM277",
+      "photos": [
+        {
+          "source": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/boucle-crop-cardigan/source-rm277-light-green-ce44fbdd9ec8.jpg",
+          "sourceColorVerified": true,
+          "sha256": "c3ed7e4db43b9ad36d7a26866f84e115caac4015a8234e1c90b96643aee612a6",
+          "generatedOrReconstructedPixels": 0
+        }
+      ],
+      "verification": {
+        "colorProfile": "kCGColorSpaceSRGB",
+        "colorProfilePreserved": true,
+        "cropOffsetUprightOriginal": [
+          164,
+          54
+        ],
+        "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+        "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/all-products-detail-rollout-20261116/cutouts/boucle-crop-cardigan/front.png",
+        "generatedOrReconstructedPixels": 0,
+        "hasAlpha": true,
+        "height": 946,
+        "opaquePixels": 390817,
+        "partialAlphaPixels": 5183,
+        "sha256": "c3ed7e4db43b9ad36d7a26866f84e115caac4015a8234e1c90b96643aee612a6",
+        "slug": "boucle-crop-cardigan",
+        "sourceOrientationCorrection": "EXIF rotation only; no scaling",
+        "transparentPixels": 245388,
+        "width": 678
+      }
+    },
+    {
+      "id": "boucle-fisher-vneck-vest",
+      "code": "RM274",
+      "photos": [
+        {
+          "source": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/boucle-fisher-vneck-vest/source-rm274-light-gray-7be96e5ecd95.jpg",
+          "sourceColorVerified": true,
+          "sha256": "44c05505bc3e3fd793d44815d60107c55ff47afff39805fcb3813e02b613bf02",
+          "generatedOrReconstructedPixels": 0
+        }
+      ],
+      "verification": {
+        "colorProfile": "kCGColorSpaceSRGB",
+        "colorProfilePreserved": true,
+        "cropOffsetUprightOriginal": [
+          90,
+          88
+        ],
+        "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+        "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/all-products-detail-rollout-20261116/cutouts/boucle-fisher-vneck-vest/front.png",
+        "generatedOrReconstructedPixels": 0,
+        "hasAlpha": true,
+        "height": 756,
+        "opaquePixels": 335464,
+        "partialAlphaPixels": 3695,
+        "sha256": "44c05505bc3e3fd793d44815d60107c55ff47afff39805fcb3813e02b613bf02",
+        "slug": "boucle-fisher-vneck-vest",
+        "sourceOrientationCorrection": "EXIF rotation only; no scaling",
+        "transparentPixels": 150729,
+        "width": 648
+      }
+    },
+    {
+      "id": "boucle-round-half-cardigan",
+      "code": "RM279",
+      "photos": [
+        {
+          "source": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/boucle-round-half-cardigan/source-rm279-light-green-1afd3a4af8a4.jpg",
+          "sourceColorVerified": true,
+          "sha256": "7dee9d24d6691756a46c10e6434e408199e57931f11af91ccbee6f7aad1d2858",
+          "generatedOrReconstructedPixels": 0
+        }
+      ],
+      "verification": {
+        "colorProfile": "kCGColorSpaceSRGB",
+        "colorProfilePreserved": true,
+        "cropOffsetUprightOriginal": [
+          29,
+          110
+        ],
+        "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+        "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/all-products-detail-rollout-20261116/cutouts/boucle-round-half-cardigan/front.png",
+        "generatedOrReconstructedPixels": 0,
+        "hasAlpha": true,
+        "height": 689,
+        "opaquePixels": 346520,
+        "partialAlphaPixels": 3714,
+        "sha256": "7dee9d24d6691756a46c10e6434e408199e57931f11af91ccbee6f7aad1d2858",
+        "slug": "boucle-round-half-cardigan",
+        "sourceOrientationCorrection": "EXIF rotation only; no scaling",
+        "transparentPixels": 149980,
+        "width": 726
+      }
+    },
+    {
+      "id": "cable-vneck-knit",
+      "code": "RM385",
+      "photos": [
+        {
+          "source": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/cable-vneck-knit/source-rm385-beige-74fc064fcdd4.jpg",
+          "sourceColorVerified": true,
+          "sha256": "9861a586097f7c6b7052258143264c5bebe9d35bcf464cef2a45a62e0817cc2e",
+          "generatedOrReconstructedPixels": 0
+        }
+      ],
+      "verification": {
+        "colorProfile": "kCGColorSpaceSRGB",
+        "colorProfilePreserved": true,
+        "cropOffsetUprightOriginal": [
+          110,
+          60
+        ],
+        "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+        "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/all-products-detail-rollout-20261116/cutouts/cable-vneck-knit/front.png",
+        "generatedOrReconstructedPixels": 0,
+        "hasAlpha": true,
+        "height": 795,
+        "opaquePixels": 322204,
+        "partialAlphaPixels": 4371,
+        "sha256": "9861a586097f7c6b7052258143264c5bebe9d35bcf464cef2a45a62e0817cc2e",
+        "slug": "cable-vneck-knit",
+        "sourceOrientationCorrection": "EXIF rotation only; no scaling",
+        "transparentPixels": 182225,
+        "width": 640
+      }
+    },
+    {
+      "id": "fisherman-crop-bustier",
+      "code": "RM336",
+      "photos": [
+        {
+          "source": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/fisherman-crop-bustier/source-rm336-beige-5fee0c4220b9.jpg",
+          "sourceColorVerified": true,
+          "sha256": "1441fd671e46e95ec110cb55fafffc2c6dae1b3196a364e823eb7564c495bf03",
+          "generatedOrReconstructedPixels": 0
+        }
+      ],
+      "verification": {
+        "colorProfile": "kCGColorSpaceSRGB",
+        "colorProfilePreserved": true,
+        "cropOffsetUprightOriginal": [
+          83,
+          29
+        ],
+        "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+        "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/all-products-detail-rollout-20261116/cutouts/fisherman-crop-bustier/front.png",
+        "generatedOrReconstructedPixels": 0,
+        "hasAlpha": true,
+        "height": 831,
+        "opaquePixels": 320323,
+        "partialAlphaPixels": 4183,
+        "sha256": "1441fd671e46e95ec110cb55fafffc2c6dae1b3196a364e823eb7564c495bf03",
+        "slug": "fisherman-crop-bustier",
+        "sourceOrientationCorrection": "EXIF rotation only; no scaling",
+        "transparentPixels": 241405,
+        "width": 681
+      }
+    },
+    {
+      "id": "honey-loop-crop-knit",
+      "code": "RM382",
+      "photos": [
+        {
+          "source": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/october-2026/honey-loop-crop-knit/front.jpg",
+          "sourceColorVerified": true,
+          "sha256": "27514772d23140fdff8cf3bbd0ce8823a7f6b1a457e70b60b4e4b74cb119e61b",
+          "generatedOrReconstructedPixels": 0
+        }
+      ],
+      "verification": {
+        "colorProfile": null,
+        "colorProfilePreserved": true,
+        "cropOffsetUprightOriginal": [
+          840,
+          399
+        ],
+        "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+        "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/all-products-detail-rollout-20261116/cutouts/honey-loop-crop-knit/front.png",
+        "generatedOrReconstructedPixels": 0,
+        "hasAlpha": true,
+        "height": 1986,
+        "opaquePixels": 2095146,
+        "partialAlphaPixels": 23978,
+        "sha256": "27514772d23140fdff8cf3bbd0ce8823a7f6b1a457e70b60b4e4b74cb119e61b",
+        "slug": "honey-loop-crop-knit",
+        "sourceOrientationCorrection": "EXIF rotation only; no scaling",
+        "transparentPixels": 800296,
+        "width": 1470
+      }
+    },
+    {
+      "id": "off-duty-vneck-knit-vest",
+      "code": "RM495",
+      "photos": [
+        {
+          "source": "/assets/detail/off-duty-vneck-knit-vest/originals/000.jpg",
+          "sourceColorVerified": true,
+          "sha256": "9095ae40ed8b71e878f5986ad1d53a1357af7dcef515c3e4a5979f6373fc590d",
+          "generatedOrReconstructedPixels": 0
+        }
+      ],
+      "verification": {
+        "colorProfile": null,
+        "colorProfilePreserved": true,
+        "cropOffsetUprightOriginal": [
+          910,
+          431
+        ],
+        "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+        "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/all-products-detail-rollout-20261116/cutouts/off-duty-vneck-knit-vest/front.png",
+        "generatedOrReconstructedPixels": 0,
+        "hasAlpha": true,
+        "height": 1284,
+        "opaquePixels": 902413,
+        "partialAlphaPixels": 6246,
+        "sha256": "9095ae40ed8b71e878f5986ad1d53a1357af7dcef515c3e4a5979f6373fc590d",
+        "slug": "off-duty-vneck-knit-vest",
+        "sourceOrientationCorrection": "EXIF rotation only; no scaling",
+        "transparentPixels": 555101,
+        "width": 1140
+      }
+    },
+    {
+      "id": "popcorn-vneck-half",
+      "code": "RM471",
+      "photos": [
+        {
+          "source": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/popcorn-vneck-half/source-rm471-yellow-d2f881b5d242.jpg",
+          "sourceColorVerified": true,
+          "sha256": "6cdb7cfc082148fdf0e726380650c2bcf4192fa5ea853340f7378b4dcc26a4bf",
+          "generatedOrReconstructedPixels": 0
+        }
+      ],
+      "verification": {
+        "colorProfile": "kCGColorSpaceSRGB",
+        "colorProfilePreserved": true,
+        "cropOffsetUprightOriginal": [
+          223,
+          72
+        ],
+        "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+        "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/all-products-detail-rollout-20261116/cutouts/popcorn-vneck-half/front.png",
+        "generatedOrReconstructedPixels": 0,
+        "hasAlpha": true,
+        "height": 631,
+        "opaquePixels": 221073,
+        "partialAlphaPixels": 3940,
+        "sha256": "6cdb7cfc082148fdf0e726380650c2bcf4192fa5ea853340f7378b4dcc26a4bf",
+        "slug": "popcorn-vneck-half",
+        "sourceOrientationCorrection": "EXIF rotation only; no scaling",
+        "transparentPixels": 142229,
+        "width": 582
+      }
+    },
+    {
+      "id": "recycled-round-sweater",
+      "code": "RM418",
+      "photos": [
+        {
+          "source": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/recycled-round-sweater/source-rm418-olive-59b0b4606f6c.jpg",
+          "sourceColorVerified": true,
+          "sha256": "dcfc4419582deddcd9db3f6b7aaf90cd6d2c1b30b0baa669d0d99bb55a985f03",
+          "generatedOrReconstructedPixels": 0
+        }
+      ],
+      "verification": {
+        "colorProfile": "kCGColorSpaceSRGB",
+        "colorProfilePreserved": true,
+        "cropOffsetUprightOriginal": [
+          112,
+          85
+        ],
+        "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+        "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/all-products-detail-rollout-20261116/cutouts/recycled-round-sweater/front.png",
+        "generatedOrReconstructedPixels": 0,
+        "hasAlpha": true,
+        "height": 884,
+        "opaquePixels": 411489,
+        "partialAlphaPixels": 5464,
+        "sha256": "dcfc4419582deddcd9db3f6b7aaf90cd6d2c1b30b0baa669d0d99bb55a985f03",
+        "slug": "recycled-round-sweater",
+        "sourceOrientationCorrection": "EXIF rotation only; no scaling",
+        "transparentPixels": 242511,
+        "width": 746
+      }
+    },
+    {
+      "id": "stripe-cable-half",
+      "code": "RM401",
+      "photos": [
+        {
+          "source": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/stripe-cable-half/source-rm401-sky-blue-4492a33d8b82.jpg",
+          "sourceColorVerified": true,
+          "sha256": "1db91e85cf5f67ece80be1e79a5a362cfa66fc58cb6cbfd166c4621742e77239",
+          "generatedOrReconstructedPixels": 0
+        }
+      ],
+      "verification": {
+        "colorProfile": "kCGColorSpaceSRGB",
+        "colorProfilePreserved": true,
+        "cropOffsetUprightOriginal": [
+          34,
+          121
+        ],
+        "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+        "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/all-products-detail-rollout-20261116/cutouts/stripe-cable-half/front.png",
+        "generatedOrReconstructedPixels": 0,
+        "hasAlpha": true,
+        "height": 799,
+        "opaquePixels": 444162,
+        "partialAlphaPixels": 4918,
+        "sha256": "1db91e85cf5f67ece80be1e79a5a362cfa66fc58cb6cbfd166c4621742e77239",
+        "slug": "stripe-cable-half",
+        "sourceOrientationCorrection": "EXIF rotation only; no scaling",
+        "transparentPixels": 288397,
+        "width": 923
+      }
+    },
+    {
+      "id": "vneck-knit-vest",
+      "code": "RM429",
+      "photos": [
+        {
+          "source": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/rm429/actual/option-01--7c447e029a96.jpg",
+          "sourceColorVerified": true,
+          "sha256": "a6731bdc62743438ff6f718f0508629f63c5155ec6b936d015cc1d8c07bcb349",
+          "generatedOrReconstructedPixels": 0
+        }
+      ],
+      "verification": {
+        "colorProfile": "kCGColorSpaceSRGB",
+        "colorProfilePreserved": true,
+        "cropOffsetUprightOriginal": [
+          183,
+          84
+        ],
+        "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+        "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/all-products-detail-rollout-20261116/cutouts/vneck-knit-vest/front.png",
+        "generatedOrReconstructedPixels": 0,
+        "hasAlpha": true,
+        "height": 692,
+        "opaquePixels": 269517,
+        "partialAlphaPixels": 4529,
+        "sha256": "a6731bdc62743438ff6f718f0508629f63c5155ec6b936d015cc1d8c07bcb349",
+        "slug": "vneck-knit-vest",
+        "sourceOrientationCorrection": "EXIF rotation only; no scaling",
+        "transparentPixels": 128006,
+        "width": 581
+      }
+    },
+    {
+      "id": "jo23-oversized-vneck-knit",
+      "code": "JO23",
+      "photos": [
+        {
+          "source": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/originals/000.jpg",
+          "sourceColorVerified": true,
+          "sha256": "d4ec8b0b78eb875c30b7b93e29c4e7c90374754f99c147a8f5ab63e0bc622e8d",
+          "generatedOrReconstructedPixels": 0
+        }
+      ],
+      "verification": {
+        "colorProfile": null,
+        "colorProfilePreserved": true,
+        "cropOffsetUprightOriginal": [
+          828,
+          754
+        ],
+        "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+        "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/all-products-detail-rollout-20261116/cutouts/jo23-oversized-vneck-knit/front.png",
+        "generatedOrReconstructedPixels": 0,
+        "hasAlpha": true,
+        "height": 1743,
+        "opaquePixels": 1268337,
+        "partialAlphaPixels": 28412,
+        "sha256": "d4ec8b0b78eb875c30b7b93e29c4e7c90374754f99c147a8f5ab63e0bc622e8d",
+        "slug": "jo23-oversized-vneck-knit",
+        "sourceOrientationCorrection": "EXIF rotation only; no scaling",
+        "transparentPixels": 655411,
+        "width": 1120
+      }
+    },
+    {
+      "id": "jo24-oversized-boatneck-knit",
+      "code": "JO24",
+      "photos": [
+        {
+          "source": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/originals/000.jpg",
+          "sourceColorVerified": true,
+          "sha256": "b42b1a20890f90855471ccaa7881d25db0d0f750ba0de646520c116d9a19756e",
+          "generatedOrReconstructedPixels": 0
+        }
+      ],
+      "verification": {
+        "colorProfile": null,
+        "colorProfilePreserved": true,
+        "cropOffsetUprightOriginal": [
+          878,
+          818
+        ],
+        "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+        "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/all-products-detail-rollout-20261116/cutouts/jo24-oversized-boatneck-knit/front.png",
+        "generatedOrReconstructedPixels": 0,
+        "hasAlpha": true,
+        "height": 1463,
+        "opaquePixels": 1257999,
+        "partialAlphaPixels": 16141,
+        "sha256": "b42b1a20890f90855471ccaa7881d25db0d0f750ba0de646520c116d9a19756e",
+        "slug": "jo24-oversized-boatneck-knit",
+        "sourceOrientationCorrection": "EXIF rotation only; no scaling",
+        "transparentPixels": 462441,
+        "width": 1187
+      }
+    },
+    {
+      "id": "jo31-raglan-roundneck-knit",
+      "code": "JO31",
+      "photos": [
+        {
+          "source": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/originals/000.jpg",
+          "sourceColorVerified": true,
+          "sha256": "150899200c2dea90aa900880d6ef5c19d607a4d5ca0ce402fb66b38a4b2f61cb",
+          "generatedOrReconstructedPixels": 0
+        }
+      ],
+      "verification": {
+        "colorProfile": null,
+        "colorProfilePreserved": true,
+        "cropOffsetUprightOriginal": [
+          894,
+          766
+        ],
+        "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+        "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/all-products-detail-rollout-20261116/cutouts/jo31-raglan-roundneck-knit/front.png",
+        "generatedOrReconstructedPixels": 0,
+        "hasAlpha": true,
+        "height": 1567,
+        "opaquePixels": 1322496,
+        "partialAlphaPixels": 16219,
+        "sha256": "150899200c2dea90aa900880d6ef5c19d607a4d5ca0ce402fb66b38a4b2f61cb",
+        "slug": "jo31-raglan-roundneck-knit",
+        "sourceOrientationCorrection": "EXIF rotation only; no scaling",
+        "transparentPixels": 527582,
+        "width": 1191
+      }
+    },
+    {
+      "id": "jo32-raglan-vneck-knit",
+      "code": "JO32",
+      "photos": [
+        {
+          "source": "/Users/dev/Documents/ChatGPT/걸스라미_rev/new_goods/JO32/0도.jpg",
+          "sourceColorVerified": false,
+          "sha256": "62dc68d8c96146659d88714fc9a2f4ddae8d24c2e51bd0bc84fede1d4966047b",
+          "generatedOrReconstructedPixels": 0
+        }
+      ],
+      "verification": {
+        "colorProfile": null,
+        "colorProfilePreserved": true,
+        "cropOffsetUprightOriginal": [
+          875,
+          802
+        ],
+        "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+        "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/all-products-detail-rollout-20261116/cutouts/jo32-raglan-vneck-knit/front.png",
+        "generatedOrReconstructedPixels": 0,
+        "hasAlpha": true,
+        "height": 1519,
+        "opaquePixels": 1275554,
+        "partialAlphaPixels": 22311,
+        "sha256": "62dc68d8c96146659d88714fc9a2f4ddae8d24c2e51bd0bc84fede1d4966047b",
+        "slug": "jo32-raglan-vneck-knit",
+        "sourceOrientationCorrection": "EXIF rotation only; no scaling",
+        "transparentPixels": 514302,
+        "width": 1193
+      }
+    },
+    {
+      "id": "rm542-cable-vneck-vest",
+      "code": "RM542",
+      "photos": [
+        {
+          "source": "/Users/dev/Documents/ChatGPT/걸스라미_rev/new_goods/RM542/0도.jpg",
+          "sourceColorVerified": false,
+          "sha256": "235f78cd73fb57474b684b1640d38a3bc4e99881784dd2d0eaf4c9f33680a502",
+          "generatedOrReconstructedPixels": 0
+        }
+      ],
+      "verification": {
+        "colorProfile": null,
+        "colorProfilePreserved": true,
+        "cropOffsetUprightOriginal": [
+          1039,
+          742
+        ],
+        "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+        "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/all-products-detail-rollout-20261116/cutouts/rm542-cable-vneck-vest/front.png",
+        "generatedOrReconstructedPixels": 0,
+        "hasAlpha": true,
+        "height": 1204,
+        "opaquePixels": 748255,
+        "partialAlphaPixels": 8428,
+        "sha256": "235f78cd73fb57474b684b1640d38a3bc4e99881784dd2d0eaf4c9f33680a502",
+        "slug": "rm542-cable-vneck-vest",
+        "sourceOrientationCorrection": "EXIF rotation only; no scaling",
+        "transparentPixels": 377485,
+        "width": 942
+      }
+    },
+    {
+      "id": "rm543-basic-vneck-knit",
+      "code": "RM543",
+      "photos": [
+        {
+          "source": "/Users/dev/Documents/ChatGPT/걸스라미_rev/new_goods/RM543/0도.jpg",
+          "sourceColorVerified": false,
+          "sha256": "8eba3514b00d9d4c47dff8e945c85422f49fba9d9268cf2d3028764278b2876c",
+          "generatedOrReconstructedPixels": 0
+        }
+      ],
+      "verification": {
+        "colorProfile": null,
+        "colorProfilePreserved": true,
+        "cropOffsetUprightOriginal": [
+          850,
+          750
+        ],
+        "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+        "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/all-products-detail-rollout-20261116/cutouts/rm543-basic-vneck-knit/front.png",
+        "generatedOrReconstructedPixels": 0,
+        "hasAlpha": true,
+        "height": 1635,
+        "opaquePixels": 1319225,
+        "partialAlphaPixels": 13480,
+        "sha256": "8eba3514b00d9d4c47dff8e945c85422f49fba9d9268cf2d3028764278b2876c",
+        "slug": "rm543-basic-vneck-knit",
+        "sourceOrientationCorrection": "EXIF rotation only; no scaling",
+        "transparentPixels": 719220,
+        "width": 1255
+      }
+    },
+    {
+      "id": "rm567-round-cap-sleeve-knit",
+      "code": "RM567",
+      "photos": [
+        {
+          "source": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/originals/000.jpg",
+          "sourceColorVerified": true,
+          "sha256": "82a2cda8dfb1802f2ea24750fc05ba18afd2643dac5bd3f4baaeef638175e5b0",
+          "generatedOrReconstructedPixels": 0
+        }
+      ],
+      "verification": {
+        "colorProfile": null,
+        "colorProfilePreserved": true,
+        "cropOffsetUprightOriginal": [
+          850,
+          726
+        ],
+        "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+        "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/all-products-detail-rollout-20261116/cutouts/rm567-round-cap-sleeve-knit/front.png",
+        "generatedOrReconstructedPixels": 0,
+        "hasAlpha": true,
+        "height": 1161,
+        "opaquePixels": 757977,
+        "partialAlphaPixels": 9098,
+        "sha256": "82a2cda8dfb1802f2ea24750fc05ba18afd2643dac5bd3f4baaeef638175e5b0",
+        "slug": "rm567-round-cap-sleeve-knit",
+        "sourceOrientationCorrection": "EXIF rotation only; no scaling",
+        "transparentPixels": 569236,
+        "width": 1151
+      }
+    },
+    {
+      "id": "rm576-ribbed-vneck-knit",
+      "code": "RM576",
+      "photos": [
+        {
+          "source": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/originals/000.jpg",
+          "sourceColorVerified": true,
+          "sha256": "dd5416fdf13555ce3eee1fb8d87a55e5649ae5c86cd776e37f3fdd2303ac79b5",
+          "generatedOrReconstructedPixels": 0
+        }
+      ],
+      "verification": {
+        "colorProfile": null,
+        "colorProfilePreserved": true,
+        "cropOffsetUprightOriginal": [
+          846,
+          766
+        ],
+        "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+        "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/all-products-detail-rollout-20261116/cutouts/rm576-ribbed-vneck-knit/front.png",
+        "generatedOrReconstructedPixels": 0,
+        "hasAlpha": true,
+        "height": 1511,
+        "opaquePixels": 1114614,
+        "partialAlphaPixels": 18364,
+        "sha256": "dd5416fdf13555ce3eee1fb8d87a55e5649ae5c86cd776e37f3fdd2303ac79b5",
+        "slug": "rm576-ribbed-vneck-knit",
+        "sourceOrientationCorrection": "EXIF rotation only; no scaling",
+        "transparentPixels": 585029,
+        "width": 1137
+      }
+    },
+    {
+      "id": "rm582-front-back-vneck-oversized-knit",
+      "code": "RM582",
+      "photos": [
+        {
+          "source": "/Users/dev/Documents/ChatGPT/걸스라미_rev/new_goods/RM582/0도.jpg",
+          "sourceColorVerified": false,
+          "sha256": "1ce8b4b84fe0743aa9ac7ce2a8bb97fcad3021d4e13d78017f15679b2e6a088f",
+          "generatedOrReconstructedPixels": 0
+        }
+      ],
+      "verification": {
+        "colorProfile": null,
+        "colorProfilePreserved": true,
+        "cropOffsetUprightOriginal": [
+          795,
+          810
+        ],
+        "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+        "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/all-products-detail-rollout-20261116/cutouts/rm582-front-back-vneck-oversized-knit/front.png",
+        "generatedOrReconstructedPixels": 0,
+        "hasAlpha": true,
+        "height": 1508,
+        "opaquePixels": 1196219,
+        "partialAlphaPixels": 18010,
+        "sha256": "1ce8b4b84fe0743aa9ac7ce2a8bb97fcad3021d4e13d78017f15679b2e6a088f",
+        "slug": "rm582-front-back-vneck-oversized-knit",
+        "sourceOrientationCorrection": "EXIF rotation only; no scaling",
+        "transparentPixels": 587831,
+        "width": 1195
+      }
+    },
+    {
+      "id": "jo27-round-puff-cardigan",
+      "code": "JO27",
+      "photos": [
+        {
+          "source": "assets/detail/jo27-round-puff-cardigan/registration-20261104/angle-000.jpg",
+          "sourceColorVerified": true,
+          "sha256": "7637c7b770136e40febf8aedd864d3d1fc01f727de6d01e25b1892763657d144",
+          "generatedOrReconstructedPixels": 0
+        },
+        {
+          "source": "assets/detail/jo27-round-puff-cardigan/registration-20261104/angle-000.jpg",
+          "sourceColorVerified": true,
+          "sha256": "3a213c19417c3c706b62ac05d35c4af79af3c12907b1eb3358a4e0968524e1c7",
+          "generatedOrReconstructedPixels": 0
+        },
+        {
+          "source": "assets/detail/jo27-round-puff-cardigan/registration-20261104/angle-000.jpg",
+          "sourceColorVerified": true,
+          "sha256": "6fd9d2f53b1f90b6ef036420113799826e1049b9ef501f29b45a0d6a81ffe5d1",
+          "generatedOrReconstructedPixels": 0
+        }
+      ],
+      "verification": [
+        {
+          "colorProfilePreserved": "DCI-P3 D65 Gamut with sRGB Transfer",
+          "cropOffsetUprightOriginal": [
+            703,
+            1224
+          ],
+          "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+          "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/jo27-lifestyle-detail-20261116/assets/product-front.png",
+          "generatedOrReconstructedPixels": 0,
+          "hasAlpha": true,
+          "height": 1836,
+          "opaquePixels": 2325516,
+          "partialAlphaPixels": 25191,
+          "sha256": "7637c7b770136e40febf8aedd864d3d1fc01f727de6d01e25b1892763657d144",
+          "sourceOrientationCorrection": "EXIF6 clockwise90° only; no scaling",
+          "transparentPixels": 585057,
+          "width": 1599
+        },
+        {
+          "colorProfilePreserved": "DCI-P3 D65 Gamut with sRGB Transfer",
+          "cropOffsetUprightOriginal": [
+            873,
+            1200
+          ],
+          "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+          "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/jo27-lifestyle-detail-20261116/assets/product-right.png",
+          "generatedOrReconstructedPixels": 0,
+          "hasAlpha": true,
+          "height": 2036,
+          "opaquePixels": 2100155,
+          "partialAlphaPixels": 24756,
+          "sha256": "3a213c19417c3c706b62ac05d35c4af79af3c12907b1eb3358a4e0968524e1c7",
+          "sourceOrientationCorrection": "EXIF6 clockwise90° only; no scaling",
+          "transparentPixels": 796749,
+          "width": 1435
+        },
+        {
+          "colorProfilePreserved": "DCI-P3 D65 Gamut with sRGB Transfer",
+          "cropOffsetUprightOriginal": [
+            733,
+            1186
+          ],
+          "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+          "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/jo27-lifestyle-detail-20261116/assets/product-left.png",
+          "generatedOrReconstructedPixels": 0,
+          "hasAlpha": true,
+          "height": 2152,
+          "opaquePixels": 1868257,
+          "partialAlphaPixels": 23621,
+          "sha256": "6fd9d2f53b1f90b6ef036420113799826e1049b9ef501f29b45a0d6a81ffe5d1",
+          "sourceOrientationCorrection": "EXIF6 clockwise90° only; no scaling",
+          "transparentPixels": 866986,
+          "width": 1282
+        }
+      ]
+    },
+    {
+      "id": "rm584-saddle-vneck-knit",
+      "code": "RM584",
+      "photos": [
+        {
+          "source": "assets/detail/rm584-saddle-vneck-knit/registration-20261104/angle-000.jpg",
+          "sourceColorVerified": true,
+          "sha256": "623743426cca7943d1654ee54bb2f7fbe76a3722ade8d3d43bbd944c4a20a679",
+          "generatedOrReconstructedPixels": 0
+        }
+      ],
+      "verification": {
+        "colorProfile": null,
+        "colorProfilePreserved": true,
+        "cropOffsetUprightOriginal": [
+          730,
+          1207
+        ],
+        "decodedPNGToSourceOpaqueRGBMismatchChannels": 0,
+        "file": "/Users/dev/Documents/ChatGPT/걸스라미_rev/all-products-detail-rollout-20261116/cutouts/rm584-saddle-vneck-knit/front.png",
+        "generatedOrReconstructedPixels": 0,
+        "hasAlpha": true,
+        "height": 1940,
+        "opaquePixels": 2071724,
+        "partialAlphaPixels": 21988,
+        "sha256": "623743426cca7943d1654ee54bb2f7fbe76a3722ade8d3d43bbd944c4a20a679",
+        "slug": "rm584-saddle-vneck-knit",
+        "sourceOrientationCorrection": "EXIF rotation only; no scaling",
+        "transparentPixels": 812408,
+        "width": 1498
+      }
+    }
+  ]
+}

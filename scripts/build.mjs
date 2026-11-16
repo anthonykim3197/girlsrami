@@ -47,7 +47,7 @@ const htmlEscape=value=>String(value??'').replace(/[&<>"']/g,char=>({
 }[char]));
 const xmlEscape=value=>htmlEscape(value);
 const productPath=product=>`product-${product.id}.html`;
-const realImageFor=product=>product.realImage||product.image;
+const realImageFor=product=>allDetails[product.id]?.productPhotos?.[0]?.fullSrc||product.realImage||product.image;
 const thumbnailFor=product=>allDetails[product.id].cardThumbnail||allDetails[product.id].thumbnail||realImageFor(product);
 const absoluteImage=path=>new URL(path,siteUrl).href;
 const leadFor=product=>allDetails[product.id].lead||product.name;

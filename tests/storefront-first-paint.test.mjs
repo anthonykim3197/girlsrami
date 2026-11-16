@@ -13,10 +13,16 @@ test('all sale pages ship the finished gallery, size guide, reviews and navigati
     assert.match(html,/<img id="pd-img" src="[^"]+"/,p.id);
     assert.ok(html.includes('aria-label="판매 색상"'),p.id);
     assert.ok(html.includes('id="size"'),p.id);
-    const sections=['id="styling"','id="colors"','id="fabric"','id="size"','id="pd-reviews"','id="related-grid"'];
+    const sections=['id="styling"','id="colors"','id="fabric"','id="size"','id="care"','id="pd-reviews"','id="related-grid"'];
     const positions=sections.map(section=>html.indexOf(section));
     assert.ok(positions.every((position,i)=>position>=0 && (!i || position>positions[i-1])),`${p.id}: detail section order`);
-    assert.match(html,/<details class="grsd-source-photos"><summary>촬영 원본 확인<\/summary>/,p.id);
+    const detail=context.window.GR_DETAIL[p.id];
+    assert.ok(html.includes('<h2>Product Detail</h2>'),p.id);
+    assert.ok(html.includes('<h2>Care &amp; Info</h2>') || html.includes('<h2>Care & Info</h2>'),p.id);
+    if(detail.productPhotos?.length){
+      for(const photo of detail.productPhotos) assert.ok(html.includes('data-full-image="'+(photo.fullSrc || photo.src)+'"'),p.id+' cutout zoom');
+      assert.doesNotMatch(html,/촬영 원본 확인|후면 참고 · AI 추정 연출/,p.id);
+    }
     assert.equal((html.match(/data-look="/g)||[]).length,4,`${p.id}: initial four styling choices`);
     assert.ok(html.includes('grsd-review-guide'),p.id);
     assert.ok(html.includes('<nav class="nav">'),p.id);
@@ -28,6 +34,6 @@ test('initial gallery has a selected outfit, selected mode and complete color-sp
  assert.ok(view.hero.includes('data-mode="model" aria-pressed="true"'));
  assert.ok(view.hero.includes('data-look="'));
  assert.ok(view.hero.includes('하늘 ·'));
- assert.ok(view.hero.includes('src="'+context.window.GR_DETAIL[p.id].thumbnail+'"'));
+ assert.ok(view.hero.includes('src="'+view.d.looks[0].images[view.state.color]+'"'));
  assert.equal(view.key,context.window.GRStandardDetail.markup(p,{...context.GR.storefront,card:context.GR.card}).key);
 });

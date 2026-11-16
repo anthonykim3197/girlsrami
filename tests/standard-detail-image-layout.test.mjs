@@ -40,3 +40,29 @@ test('source photos and palette arrangement survive normalization without mixing
   const invalid=context.window.GRStandardDetail.normalize({id:'fixture',name:'니트',colors:['크림','차콜']},{colorOrder:['크림','크림']});
   assert.deepEqual(Array.from(invalid.colorOrder),['크림','차콜']);
 });
+
+test('a listing thumbnail never replaces the full-face detail look',()=>{
+  const detail=context.window.GRStandardDetail.normalize({id:'fixture',name:'니트',colors:['크림']},{
+    thumbnail:'/eyes-cropped.png',thumbnailColor:'크림',looks:[{id:'daily',images:{크림:'/full-face.webp'}}]
+  });
+  assert.equal(detail.looks[0].images.크림,'/full-face.webp');
+});
+
+test('curated product cutouts replace every raw-photo gallery fallback and preserve zoom masters',()=>{
+  const detail=context.window.GRStandardDetail.normalize({id:'fixture',name:'니트',colors:['크림','차콜'],photoVerified:true,image:'/raw.jpg'}, {
+    originals:{크림:[{src:'/curtain.jpg',angle:0}],차콜:[{src:'/mannequin.jpg',angle:45}]},
+    productPhotos:[{src:'/clean.webp',fullSrc:'/clean.png',color:'크림',angle:0,width:1500,height:2100}]
+  });
+  assert.equal(detail.productPhotos[0].fullSrc,'/clean.png');
+  assert.equal(detail.originals.크림[0].src,'/clean.webp');
+  assert.equal(detail.originals.차콜,undefined);
+  assert.equal(detail.productPhotos[0].width,1500);
+});
+
+test('styling selection retains approved scene color and description',()=>{
+  const detail=context.window.GRStandardDetail.normalize({id:'fixture',name:'니트',colors:['크림','차콜']},{
+    looks:[{id:'cafe',label:'창가',description:'잠시 앉아 쉬어가는 오후.',stylingColor:'차콜',images:{크림:'/cream.webp',차콜:'/charcoal.webp'}}]
+  });
+  assert.equal(detail.looks[0].stylingColor,'차콜');
+  assert.equal(detail.looks[0].description,'잠시 앉아 쉬어가는 오후.');
+});

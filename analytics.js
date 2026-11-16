@@ -53,9 +53,9 @@
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',pageView,{once:true});else pageView();
   function click(event){
     if(event.defaultPrevented||(event.type==='auxclick'&&event.button!==1)||event.button>1)return;
-    const option=event.target.closest?.('[data-c],[data-gallery-color],[data-s]');
+    const option=event.target.closest?.('[data-c],[data-gallery-color],[data-palette-color],[data-s]');
     if(option&&!option.disabled&&productId()){
-      const size=option.dataset.s;emit(size?'size_select':'option_select',{product_id:productId(),...selected(),...(size?{size}:{color:option.dataset.c||option.dataset.galleryColor}),placement:'detail'});
+      const size=option.dataset.s;emit(size?'size_select':'option_select',{product_id:productId(),...selected(),...(size?{size}:{color:option.dataset.c||option.dataset.galleryColor||option.dataset.paletteColor}),placement:'detail'});
     }
     const anchor=event.target.closest?.('a[href]');if(!anchor||anchor.getAttribute('aria-disabled')==='true')return;
     let target;try{target=new URL(anchor.href)}catch{return}

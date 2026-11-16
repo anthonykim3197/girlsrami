@@ -416,14 +416,7 @@ for(const expected of NEW2_LAUNCH) {
       assert.equal(hash(original.bytes),expected.originals[index][1]);
       assert.ok(!paths.has(original.path));
     }
-    if(expected.code==='JO27'){
-      assert.equal(detail.supplementalMedia?.length,1);
-      const [rear]=detail.supplementalMedia;
-      assert.deepEqual([rear.angle,rear.mediaKind,rear.actualPhoto],[180,'generated-inferred',false]);
-      assert.match(rear.caption,/AI 추정 후면/);
-      assert.ok(!originals.some(photo=>photo.src===rear.src));
-      localImage(rear.src);
-    } else assert.equal(detail.supplementalMedia?.length ?? 0,0);
+    assert.equal(detail.supplementalMedia?.length ?? 0,0,'public detail excludes inferred rear imagery');
   });
 }
 

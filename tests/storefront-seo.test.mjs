@@ -54,10 +54,11 @@ test('only the verified sale catalog has indexable pages and offers',()=>{
     const json=JSON.parse(raw);
     assert.equal(json['@type'],'Product');
     const hero=new URL(details[product.id].cardThumbnail||details[product.id].thumbnail,'https://girlslami.com/').href;
-    assert.deepEqual(json.image,[...new Set([hero,product.realImage])]);
+    const productPhoto=new URL(details[product.id].productPhotos?.[0]?.fullSrc || product.realImage,'https://girlslami.com/').href;
+    assert.deepEqual(json.image,[...new Set([hero,productPhoto])]);
     assert.ok(html.includes(`<meta property="og:image" content="${hero}">`));
     assert.ok(html.includes(details[product.id].lead));
-    const source=details[product.id].thumbnail;
+    const source=details[product.id].looks[0]?.images[details[product.id].thumbnailColor] || details[product.id].thumbnail;
     const display=lookPreviews[source]?.display || source;
     assert.ok(html.includes(`id="pd-img" src="${display}"`),`${product.id} hero uses its approved photo or its optimized copy`);
     assert.equal(json.offers.price,product.price);

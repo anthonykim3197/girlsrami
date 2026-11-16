@@ -298,18 +298,20 @@ window.GR_DETAIL = {
     },
     "fabric": [
       {
-        "src": "assets/detail/alpaca-round-knit/v4/fabric-neck.webp",
-        "caption": "라운드넥과 몸판 조직",
-        "width": 1254,
-        "height": 1254,
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/alpaca-round-knit/product-cutouts-20261116/neck.webp",
+        "fullSrc": "assets/detail/alpaca-round-knit/product-cutouts-20261116/neck.png",
+        "width": 480,
+        "height": 342,
+        "caption": "넥라인 디테일",
+        "mediaKind": "photo"
       },
       {
-        "src": "assets/detail/alpaca-round-knit/v4/fabric-cuff.webp",
-        "caption": "소맷단과 밑단 립",
-        "width": 1254,
-        "height": 1254,
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/alpaca-round-knit/product-cutouts-20261116/knit.webp",
+        "fullSrc": "assets/detail/alpaca-round-knit/product-cutouts-20261116/knit.png",
+        "width": 300,
+        "height": 286,
+        "caption": "짜임 디테일",
+        "mediaKind": "photo"
       }
     ],
     "colorBoard": "assets/detail/alpaca-round-knit/v4/color-palette.webp",
@@ -405,7 +407,22 @@ window.GR_DETAIL = {
       "네온",
       "보라"
     ],
-    "cardThumbnail": "assets/detail/alpaca-round-knit/shop-20261016/street-thumbnail.webp"
+    "cardThumbnail": "assets/detail/alpaca-round-knit/shop-20261016/street-thumbnail.webp",
+    "productPhotos": [
+      {
+        "src": "assets/detail/alpaca-round-knit/product-cutouts-20261116/front.webp",
+        "fullSrc": "assets/detail/alpaca-round-knit/product-cutouts-20261116/front.png",
+        "color": "회색",
+        "colorVerified": true,
+        "angle": 0,
+        "width": 748,
+        "height": 920,
+        "caption": "회색 · 정면",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
+      }
+    ],
+    "supplementalMedia": []
   },
   "boucle-crop-cardigan": {
     "lead": "데님 위에 짧게 떨어지는 가디건. 단추를 잠그면 니트 톱처럼 입을 수 있어요.",
@@ -642,18 +659,20 @@ window.GR_DETAIL = {
     },
     "fabric": [
       {
-        "src": "assets/detail/boucle-crop-cardigan/v4/fabric-flatlay.webp",
-        "width": 1254,
-        "height": 1254,
-        "mediaKind": "studio-edit",
-        "caption": "연두 · 라운드넥과 크롭 실루엣"
+        "src": "assets/detail/boucle-crop-cardigan/product-cutouts-20261116/neck.webp",
+        "fullSrc": "assets/detail/boucle-crop-cardigan/product-cutouts-20261116/neck.png",
+        "width": 434,
+        "height": 351,
+        "caption": "넥라인 디테일",
+        "mediaKind": "photo"
       },
       {
-        "src": "assets/detail/boucle-crop-cardigan/v4/fabric-closeup.webp",
-        "width": 1254,
-        "height": 1254,
-        "mediaKind": "studio-edit",
-        "caption": "연두 · 단추와 부클 짜임"
+        "src": "assets/detail/boucle-crop-cardigan/product-cutouts-20261116/knit.webp",
+        "fullSrc": "assets/detail/boucle-crop-cardigan/product-cutouts-20261116/knit.png",
+        "width": 272,
+        "height": 294,
+        "caption": "짜임 디테일",
+        "mediaKind": "photo"
       }
     ],
     "colorBoard": "assets/detail/boucle-crop-cardigan/v4/color-palette.webp",
@@ -745,7 +764,22 @@ window.GR_DETAIL = {
       "소라",
       "곤색"
     ],
-    "cardThumbnail": "assets/detail/boucle-crop-cardigan/shop-20261016/street-thumbnail.webp"
+    "cardThumbnail": "assets/detail/boucle-crop-cardigan/shop-20261016/street-thumbnail.webp",
+    "productPhotos": [
+      {
+        "src": "assets/detail/boucle-crop-cardigan/product-cutouts-20261116/front.webp",
+        "fullSrc": "assets/detail/boucle-crop-cardigan/product-cutouts-20261116/front.png",
+        "color": "연두",
+        "colorVerified": true,
+        "angle": 0,
+        "width": 678,
+        "height": 946,
+        "caption": "연두 · 정면",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
+      }
+    ],
+    "supplementalMedia": []
   },
   "boucle-fisher-vneck-vest": {
     "lead": "티셔츠 위에도, 셔츠 위에도. 브이넥과 케이블 짜임이 심심한 조합을 채워줘요.",
@@ -952,58 +986,20 @@ window.GR_DETAIL = {
     },
     "fabric": [
       {
-        "src": "assets/detail/boucle-fisher-vneck-vest/v4/fabric-flatlay.webp",
-        "caption": "V넥과 부클 케이블",
-        "width": 1254,
-        "height": 1254,
-        "mediaKind": "studio-edit",
-        "originalSources": [
-          {
-            "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/boucle-fisher-vneck-vest/detail-1-bc3b3bf9fcb3.jpg",
-            "caption": "부클 피셔 케이블 브이넥 베스트 브이넥과 케이블 근접 실물 상세",
-            "width": 860,
-            "height": 860
-          },
-          {
-            "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/boucle-fisher-vneck-vest/detail-2-55f51a9ffbbe.jpg",
-            "caption": "부클 피셔 케이블 브이넥 베스트 마네킹 옆면 케이블 실물 상세",
-            "width": 860,
-            "height": 860
-          },
-          {
-            "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/boucle-fisher-vneck-vest/detail-3-12ef2d6dff3a.jpg",
-            "caption": "부클 피셔 케이블 브이넥 베스트 마네킹 뒷면 핏 실물 상세",
-            "width": 860,
-            "height": 860
-          }
-        ]
+        "src": "assets/detail/boucle-fisher-vneck-vest/product-cutouts-20261116/neck.webp",
+        "fullSrc": "assets/detail/boucle-fisher-vneck-vest/product-cutouts-20261116/neck.png",
+        "width": 416,
+        "height": 281,
+        "caption": "넥라인 디테일",
+        "mediaKind": "photo"
       },
       {
-        "src": "assets/detail/boucle-fisher-vneck-vest/v4/fabric-closeup.webp",
-        "caption": "잔잔한 부클 조직과 넥 마감",
-        "width": 1254,
-        "height": 1254,
-        "mediaKind": "studio-edit",
-        "originalSources": [
-          {
-            "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/boucle-fisher-vneck-vest/detail-1-bc3b3bf9fcb3.jpg",
-            "caption": "부클 피셔 케이블 브이넥 베스트 브이넥과 케이블 근접 실물 상세",
-            "width": 860,
-            "height": 860
-          },
-          {
-            "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/boucle-fisher-vneck-vest/detail-2-55f51a9ffbbe.jpg",
-            "caption": "부클 피셔 케이블 브이넥 베스트 마네킹 옆면 케이블 실물 상세",
-            "width": 860,
-            "height": 860
-          },
-          {
-            "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/boucle-fisher-vneck-vest/detail-3-12ef2d6dff3a.jpg",
-            "caption": "부클 피셔 케이블 브이넥 베스트 마네킹 뒷면 핏 실물 상세",
-            "width": 860,
-            "height": 860
-          }
-        ]
+        "src": "assets/detail/boucle-fisher-vneck-vest/product-cutouts-20261116/knit.webp",
+        "fullSrc": "assets/detail/boucle-fisher-vneck-vest/product-cutouts-20261116/knit.png",
+        "width": 260,
+        "height": 235,
+        "caption": "짜임 디테일",
+        "mediaKind": "photo"
       }
     ],
     "colorBoard": "assets/detail/boucle-fisher-vneck-vest/v4/color-palette.webp",
@@ -1083,7 +1079,22 @@ window.GR_DETAIL = {
       "소라",
       "연회색"
     ],
-    "cardThumbnail": "assets/detail/boucle-fisher-vneck-vest/shop-20261016/street-thumbnail.webp"
+    "cardThumbnail": "assets/detail/boucle-fisher-vneck-vest/shop-20261016/street-thumbnail.webp",
+    "productPhotos": [
+      {
+        "src": "assets/detail/boucle-fisher-vneck-vest/product-cutouts-20261116/front.webp",
+        "fullSrc": "assets/detail/boucle-fisher-vneck-vest/product-cutouts-20261116/front.png",
+        "color": "연회색",
+        "colorVerified": true,
+        "angle": 0,
+        "width": 648,
+        "height": 756,
+        "caption": "연회색 · 정면",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
+      }
+    ],
+    "supplementalMedia": []
   },
   "boucle-round-half-cardigan": {
     "lead": "라운드넥과 짧은 소매. 단추를 잠그고 데님과 가볍게 맞춰 입어요.",
@@ -1289,18 +1300,20 @@ window.GR_DETAIL = {
     },
     "fabric": [
       {
-        "src": "assets/detail/boucle-round-half-cardigan/v4/fabric-flatlay.webp",
-        "caption": "반소매와 라운드넥, 자연스럽게 놓은 전체 실루엣",
-        "width": 1254,
-        "height": 1254,
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/boucle-round-half-cardigan/product-cutouts-20261116/neck.webp",
+        "fullSrc": "assets/detail/boucle-round-half-cardigan/product-cutouts-20261116/neck.png",
+        "width": 466,
+        "height": 256,
+        "caption": "넥라인 디테일",
+        "mediaKind": "photo"
       },
       {
-        "src": "assets/detail/boucle-round-half-cardigan/v4/fabric-closeup.webp",
-        "caption": "라운드 네크라인과 톤온톤 버튼, 잔잔한 부클 조직",
-        "width": 1254,
-        "height": 1254,
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/boucle-round-half-cardigan/product-cutouts-20261116/knit.webp",
+        "fullSrc": "assets/detail/boucle-round-half-cardigan/product-cutouts-20261116/knit.png",
+        "width": 292,
+        "height": 215,
+        "caption": "짜임 디테일",
+        "mediaKind": "photo"
       }
     ],
     "colorBoard": "assets/detail/boucle-round-half-cardigan/v4/color-palette.webp",
@@ -1393,7 +1406,22 @@ window.GR_DETAIL = {
       "소라",
       "곤색"
     ],
-    "cardThumbnail": "assets/detail/boucle-round-half-cardigan/shop-20261016/street-thumbnail.webp"
+    "cardThumbnail": "assets/detail/boucle-round-half-cardigan/lifestyle-20261116/card-thumbnail.webp",
+    "productPhotos": [
+      {
+        "src": "assets/detail/boucle-round-half-cardigan/product-cutouts-20261116/front.webp",
+        "fullSrc": "assets/detail/boucle-round-half-cardigan/product-cutouts-20261116/front.png",
+        "color": "연두",
+        "colorVerified": true,
+        "angle": 0,
+        "width": 726,
+        "height": 689,
+        "caption": "연두 · 정면",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
+      }
+    ],
+    "supplementalMedia": []
   },
   "cable-vneck-knit": {
     "lead": "브이넥 아래로 이어지는 케이블. 평소 입던 데님에 클래식한 표정을 더해요.",
@@ -1759,18 +1787,20 @@ window.GR_DETAIL = {
     },
     "fabric": [
       {
-        "src": "assets/detail/cable-vneck-knit/v4/fabric-1.webp",
-        "width": 1254,
-        "height": 1254,
-        "mediaKind": "studio-edit",
-        "caption": "베이지 · V넥과 몸판 짜임"
+        "src": "assets/detail/cable-vneck-knit/product-cutouts-20261116/neck.webp",
+        "fullSrc": "assets/detail/cable-vneck-knit/product-cutouts-20261116/neck.png",
+        "width": 410,
+        "height": 296,
+        "caption": "넥라인 디테일",
+        "mediaKind": "photo"
       },
       {
-        "src": "assets/detail/cable-vneck-knit/v4/fabric-2.webp",
-        "width": 1254,
-        "height": 1254,
-        "mediaKind": "studio-edit",
-        "caption": "베이지 · 소매 끝과 밑단 짜임"
+        "src": "assets/detail/cable-vneck-knit/product-cutouts-20261116/knit.webp",
+        "fullSrc": "assets/detail/cable-vneck-knit/product-cutouts-20261116/knit.png",
+        "width": 256,
+        "height": 247,
+        "caption": "짜임 디테일",
+        "mediaKind": "photo"
       }
     ],
     "colorBoard": "assets/detail/cable-vneck-knit/v4/color-palette.webp",
@@ -1862,7 +1892,22 @@ window.GR_DETAIL = {
       "곤색",
       "검정"
     ],
-    "cardThumbnail": "assets/detail/cable-vneck-knit/shop-20261016/street-thumbnail.webp"
+    "cardThumbnail": "assets/detail/cable-vneck-knit/shop-20261016/street-thumbnail.webp",
+    "productPhotos": [
+      {
+        "src": "assets/detail/cable-vneck-knit/product-cutouts-20261116/front.webp",
+        "fullSrc": "assets/detail/cable-vneck-knit/product-cutouts-20261116/front.png",
+        "color": "베이지",
+        "colorVerified": true,
+        "angle": 0,
+        "width": 640,
+        "height": 795,
+        "caption": "베이지 · 정면",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
+      }
+    ],
+    "supplementalMedia": []
   },
   "fisherman-crop-bustier": {
     "lead": "흰 티 위에 짧게 한 겹. 케이블 뷔스티에로 레이어드 비율을 바꿔보세요.",
@@ -2043,58 +2088,20 @@ window.GR_DETAIL = {
     },
     "fabric": [
       {
-        "src": "assets/detail/fisherman-crop-bustier/v4/fabric-flatlay.webp",
-        "caption": "스퀘어 넥과 케이블 라인",
-        "width": 1254,
-        "height": 1254,
-        "mediaKind": "studio-edit",
-        "originalSources": [
-          {
-            "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/fisherman-crop-bustier/detail-1-3ac38651bed1.jpg",
-            "caption": "피셔맨 케이블 크롭 니트 뷔스티에 스퀘어 네크라인과 케이블 근접 실물 상세",
-            "width": 860,
-            "height": 860
-          },
-          {
-            "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/fisherman-crop-bustier/detail-2-d5a0e84d8f33.jpg",
-            "caption": "피셔맨 케이블 크롭 니트 뷔스티에 몸판 케이블 조직 근접 실물 상세",
-            "width": 860,
-            "height": 860
-          },
-          {
-            "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/fisherman-crop-bustier/detail-3-59e76ca05412.jpg",
-            "caption": "피셔맨 케이블 크롭 니트 뷔스티에 마네킹 옆면 핏 실물 상세",
-            "width": 860,
-            "height": 860
-          }
-        ]
+        "src": "assets/detail/fisherman-crop-bustier/product-cutouts-20261116/neck.webp",
+        "fullSrc": "assets/detail/fisherman-crop-bustier/product-cutouts-20261116/neck.png",
+        "width": 437,
+        "height": 309,
+        "caption": "넥라인 디테일",
+        "mediaKind": "photo"
       },
       {
-        "src": "assets/detail/fisherman-crop-bustier/v4/fabric-closeup.webp",
-        "caption": "입체 케이블과 잔잔한 니트 조직",
-        "width": 1254,
-        "height": 1254,
-        "mediaKind": "studio-edit",
-        "originalSources": [
-          {
-            "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/fisherman-crop-bustier/detail-1-3ac38651bed1.jpg",
-            "caption": "피셔맨 케이블 크롭 니트 뷔스티에 스퀘어 네크라인과 케이블 근접 실물 상세",
-            "width": 860,
-            "height": 860
-          },
-          {
-            "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/fisherman-crop-bustier/detail-2-d5a0e84d8f33.jpg",
-            "caption": "피셔맨 케이블 크롭 니트 뷔스티에 몸판 케이블 조직 근접 실물 상세",
-            "width": 860,
-            "height": 860
-          },
-          {
-            "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/catalog-refresh-20261006/fisherman-crop-bustier/detail-3-59e76ca05412.jpg",
-            "caption": "피셔맨 케이블 크롭 니트 뷔스티에 마네킹 옆면 핏 실물 상세",
-            "width": 860,
-            "height": 860
-          }
-        ]
+        "src": "assets/detail/fisherman-crop-bustier/product-cutouts-20261116/knit.webp",
+        "fullSrc": "assets/detail/fisherman-crop-bustier/product-cutouts-20261116/knit.png",
+        "width": 273,
+        "height": 259,
+        "caption": "짜임 디테일",
+        "mediaKind": "photo"
       }
     ],
     "colorBoard": "assets/detail/fisherman-crop-bustier/v4/color-palette.webp",
@@ -2172,7 +2179,22 @@ window.GR_DETAIL = {
       "소라",
       "검정"
     ],
-    "cardThumbnail": "assets/detail/fisherman-crop-bustier/shop-20261016/street-thumbnail.webp"
+    "cardThumbnail": "assets/detail/fisherman-crop-bustier/shop-20261016/street-thumbnail.webp",
+    "productPhotos": [
+      {
+        "src": "assets/detail/fisherman-crop-bustier/product-cutouts-20261116/front.webp",
+        "fullSrc": "assets/detail/fisherman-crop-bustier/product-cutouts-20261116/front.png",
+        "color": "베이지",
+        "colorVerified": true,
+        "angle": 0,
+        "width": 681,
+        "height": 831,
+        "caption": "베이지 · 정면",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
+      }
+    ],
+    "supplementalMedia": []
   },
   "honey-loop-crop-knit": {
     "lead": "작은 벌집 짜임과 넉넉한 몸판. 심플한 하의에 니트의 결을 더해요.",
@@ -2360,17 +2382,19 @@ window.GR_DETAIL = {
     },
     "fabric": [
       {
-        "src": "assets/detail/honey-loop-crop-knit/v4/fabric-flatlay.webp",
-        "caption": "스카이 · 허니루프 짜임과 라운드넥",
-        "width": 1254,
-        "height": 1254,
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/honey-loop-crop-knit/product-cutouts-20261116/neck.webp",
+        "fullSrc": "assets/detail/honey-loop-crop-knit/product-cutouts-20261116/neck.png",
+        "width": 942,
+        "height": 736,
+        "caption": "넥라인 디테일",
+        "mediaKind": "photo"
       },
       {
-        "src": "https://rlbffhmdonbzifiivbfl.supabase.co/storage/v1/object/public/catalog/editorial-20261003-v3/exports/honey-loop-crop-knit/real-macro-1-a59df53e.webp",
-        "caption": "스카이 · 실물 짜임",
-        "width": 1000,
-        "height": 1000,
+        "src": "assets/detail/honey-loop-crop-knit/product-cutouts-20261116/knit.webp",
+        "fullSrc": "assets/detail/honey-loop-crop-knit/product-cutouts-20261116/knit.png",
+        "width": 588,
+        "height": 617,
+        "caption": "짜임 디테일",
         "mediaKind": "photo"
       }
     ],
@@ -2434,7 +2458,22 @@ window.GR_DETAIL = {
       "차콜",
       "스카이"
     ],
-    "cardThumbnail": "assets/detail/honey-loop-crop-knit/shop-20261016/street-thumbnail.webp"
+    "cardThumbnail": "assets/detail/honey-loop-crop-knit/shop-20261016/street-thumbnail.webp",
+    "productPhotos": [
+      {
+        "src": "assets/detail/honey-loop-crop-knit/product-cutouts-20261116/front.webp",
+        "fullSrc": "assets/detail/honey-loop-crop-knit/product-cutouts-20261116/front.png",
+        "color": "스카이",
+        "colorVerified": true,
+        "angle": 0,
+        "width": 1000,
+        "height": 1351,
+        "caption": "스카이 · 정면",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
+      }
+    ],
+    "supplementalMedia": []
   },
   "off-duty-vneck-knit-vest": {
     "lead": "흰 티와 데님 위에 하나만 더해도, 평소 입던 조합이 조금 달라져요.",
@@ -2654,17 +2693,19 @@ window.GR_DETAIL = {
     },
     "fabric": [
       {
-        "src": "assets/detail/off-duty-vneck-knit-vest/v4/fabric-flatlay.webp",
-        "caption": "회색 · V넥과 크롭 실루엣",
-        "width": 1254,
-        "height": 1254,
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/off-duty-vneck-knit-vest/product-cutouts-20261116/neck.webp",
+        "fullSrc": "assets/detail/off-duty-vneck-knit-vest/product-cutouts-20261116/neck.png",
+        "width": 730,
+        "height": 476,
+        "caption": "넥라인 디테일",
+        "mediaKind": "photo"
       },
       {
-        "src": "/assets/detail/off-duty-vneck-knit-vest/fabric.webp",
-        "caption": "회색 · V넥과 몸판의 입체 짜임",
-        "width": 1000,
-        "height": 1000,
+        "src": "assets/detail/off-duty-vneck-knit-vest/product-cutouts-20261116/knit.webp",
+        "fullSrc": "assets/detail/off-duty-vneck-knit-vest/product-cutouts-20261116/knit.png",
+        "width": 456,
+        "height": 399,
+        "caption": "짜임 디테일",
         "mediaKind": "photo"
       }
     ],
@@ -2728,7 +2769,22 @@ window.GR_DETAIL = {
       "차콜",
       "회색"
     ],
-    "cardThumbnail": "assets/detail/off-duty-vneck-knit-vest/shop-20261016/street-thumbnail.webp"
+    "cardThumbnail": "assets/detail/off-duty-vneck-knit-vest/shop-20261016/street-thumbnail.webp",
+    "productPhotos": [
+      {
+        "src": "assets/detail/off-duty-vneck-knit-vest/product-cutouts-20261116/front.webp",
+        "fullSrc": "assets/detail/off-duty-vneck-knit-vest/product-cutouts-20261116/front.png",
+        "color": "회색",
+        "colorVerified": true,
+        "angle": 0,
+        "width": 1000,
+        "height": 1126,
+        "caption": "회색 · 정면",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
+      }
+    ],
+    "supplementalMedia": []
   },
   "popcorn-vneck-half": {
     "lead": "잔잔한 팝콘 짜임에 브이넥을 더했어요. 데님 하나로도 조합이 완성됩니다.",
@@ -2933,18 +2989,20 @@ window.GR_DETAIL = {
     },
     "fabric": [
       {
-        "src": "/assets/detail/popcorn-vneck-half/v4/fabric-1.webp",
-        "caption": "브이넥을 따라 이어지는 잔잔한 팝콘 조직",
-        "width": 1254,
-        "height": 1254,
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/popcorn-vneck-half/product-cutouts-20261116/neck.webp",
+        "fullSrc": "assets/detail/popcorn-vneck-half/product-cutouts-20261116/neck.png",
+        "width": 374,
+        "height": 234,
+        "caption": "넥라인 디테일",
+        "mediaKind": "photo"
       },
       {
-        "src": "/assets/detail/popcorn-vneck-half/v4/fabric-2.webp",
-        "caption": "몸판과 소매 끝까지 이어지는 입체적인 짜임",
-        "width": 1254,
-        "height": 1254,
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/popcorn-vneck-half/product-cutouts-20261116/knit.webp",
+        "fullSrc": "assets/detail/popcorn-vneck-half/product-cutouts-20261116/knit.png",
+        "width": 234,
+        "height": 197,
+        "caption": "짜임 디테일",
+        "mediaKind": "photo"
       }
     ],
     "colorBoard": "/assets/detail/popcorn-vneck-half/v4/color-palette.webp",
@@ -3026,7 +3084,22 @@ window.GR_DETAIL = {
       "베이지",
       "검정"
     ],
-    "cardThumbnail": "assets/detail/popcorn-vneck-half/shop-20261016/street-thumbnail.webp"
+    "cardThumbnail": "assets/detail/popcorn-vneck-half/shop-20261016/street-thumbnail.webp",
+    "productPhotos": [
+      {
+        "src": "assets/detail/popcorn-vneck-half/product-cutouts-20261116/front.webp",
+        "fullSrc": "assets/detail/popcorn-vneck-half/product-cutouts-20261116/front.png",
+        "color": "노랑",
+        "colorVerified": true,
+        "angle": 0,
+        "width": 582,
+        "height": 631,
+        "caption": "노랑 · 정면",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
+      }
+    ],
+    "supplementalMedia": []
   },
   "recycled-round-sweater": {
     "lead": "무늬 없이 담백한 라운드 니트. 데님이나 슬랙스에 편하게 돌려 입어요.",
@@ -3295,18 +3368,20 @@ window.GR_DETAIL = {
     },
     "fabric": [
       {
-        "src": "assets/detail/recycled-round-sweater/v4/fabric-neck.webp",
-        "caption": "라운드넥과 몸판 조직",
-        "width": 1254,
-        "height": 1254,
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/recycled-round-sweater/product-cutouts-20261116/neck.webp",
+        "fullSrc": "assets/detail/recycled-round-sweater/product-cutouts-20261116/neck.png",
+        "width": 478,
+        "height": 328,
+        "caption": "넥라인 디테일",
+        "mediaKind": "photo"
       },
       {
-        "src": "assets/detail/recycled-round-sweater/v4/fabric-cuff.webp",
-        "caption": "소맷단과 밑단 립",
-        "width": 1254,
-        "height": 1254,
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/recycled-round-sweater/product-cutouts-20261116/knit.webp",
+        "fullSrc": "assets/detail/recycled-round-sweater/product-cutouts-20261116/knit.png",
+        "width": 300,
+        "height": 275,
+        "caption": "짜임 디테일",
+        "mediaKind": "photo"
       }
     ],
     "colorBoard": "assets/detail/recycled-round-sweater/v4/color-palette.webp",
@@ -3400,7 +3475,22 @@ window.GR_DETAIL = {
       "그레이",
       "브라운"
     ],
-    "cardThumbnail": "assets/detail/recycled-round-sweater/shop-20261016/street-thumbnail.webp"
+    "cardThumbnail": "assets/detail/recycled-round-sweater/shop-20261016/street-thumbnail.webp",
+    "productPhotos": [
+      {
+        "src": "assets/detail/recycled-round-sweater/product-cutouts-20261116/front.webp",
+        "fullSrc": "assets/detail/recycled-round-sweater/product-cutouts-20261116/front.png",
+        "color": "올리브",
+        "colorVerified": true,
+        "angle": 0,
+        "width": 746,
+        "height": 884,
+        "caption": "올리브 · 정면",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
+      }
+    ],
+    "supplementalMedia": []
   },
   "stripe-cable-half": {
     "lead": "스트라이프와 케이블을 한 벌에. 단순한 팬츠에 맞춰도 밋밋하지 않아요.",
@@ -3587,18 +3677,20 @@ window.GR_DETAIL = {
     },
     "fabric": [
       {
-        "src": "assets/detail/stripe-cable-half/v4/fabric-neck.webp",
-        "width": 1254,
-        "height": 1254,
-        "mediaKind": "studio-edit",
-        "caption": "하늘 · 라운드넥과 케이블 짜임"
+        "src": "assets/detail/stripe-cable-half/product-cutouts-20261116/neck.webp",
+        "fullSrc": "assets/detail/stripe-cable-half/product-cutouts-20261116/neck.png",
+        "width": 591,
+        "height": 297,
+        "caption": "넥라인 디테일",
+        "mediaKind": "photo"
       },
       {
-        "src": "assets/detail/stripe-cable-half/v4/fabric-hem.webp",
-        "width": 1254,
-        "height": 1254,
-        "mediaKind": "studio-edit",
-        "caption": "하늘 · 소매와 밑단 마감"
+        "src": "assets/detail/stripe-cable-half/product-cutouts-20261116/knit.webp",
+        "fullSrc": "assets/detail/stripe-cable-half/product-cutouts-20261116/knit.png",
+        "width": 371,
+        "height": 249,
+        "caption": "짜임 디테일",
+        "mediaKind": "photo"
       }
     ],
     "colorBoard": "assets/detail/stripe-cable-half/v4/color-palette.webp",
@@ -3682,7 +3774,22 @@ window.GR_DETAIL = {
       "하늘",
       "연핑"
     ],
-    "cardThumbnail": "assets/detail/stripe-cable-half/shop-20261016/street-thumbnail.webp"
+    "cardThumbnail": "assets/detail/stripe-cable-half/shop-20261016/street-thumbnail.webp",
+    "productPhotos": [
+      {
+        "src": "assets/detail/stripe-cable-half/product-cutouts-20261116/front.webp",
+        "fullSrc": "assets/detail/stripe-cable-half/product-cutouts-20261116/front.png",
+        "color": "하늘",
+        "colorVerified": true,
+        "angle": 0,
+        "width": 923,
+        "height": 799,
+        "caption": "하늘 · 정면",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
+      }
+    ],
+    "supplementalMedia": []
   },
   "vneck-knit-vest": {
     "lead": "티셔츠에 한 겹, 셔츠에 한 겹. 넓은 립 밑단으로 레이어드를 정리해요.",
@@ -3954,18 +4061,20 @@ window.GR_DETAIL = {
     },
     "fabric": [
       {
-        "src": "assets/detail/vneck-knit-vest/v4/fabric-flatlay.webp",
-        "width": 1254,
-        "height": 1254,
-        "mediaKind": "studio-edit",
-        "caption": "그레이 · V넥과 여유 있는 실루엣"
+        "src": "assets/detail/vneck-knit-vest/product-cutouts-20261116/neck.webp",
+        "fullSrc": "assets/detail/vneck-knit-vest/product-cutouts-20261116/neck.png",
+        "width": 373,
+        "height": 257,
+        "caption": "넥라인 디테일",
+        "mediaKind": "photo"
       },
       {
-        "src": "assets/detail/vneck-knit-vest/v4/fabric-closeup.webp",
-        "width": 1254,
-        "height": 1254,
-        "mediaKind": "studio-edit",
-        "caption": "그레이 · 넥라인과 원단 짜임"
+        "src": "assets/detail/vneck-knit-vest/product-cutouts-20261116/knit.webp",
+        "fullSrc": "assets/detail/vneck-knit-vest/product-cutouts-20261116/knit.png",
+        "width": 233,
+        "height": 216,
+        "caption": "짜임 디테일",
+        "mediaKind": "photo"
       }
     ],
     "colorBoard": "assets/detail/vneck-knit-vest/v4/color-palette.webp",
@@ -4054,7 +4163,22 @@ window.GR_DETAIL = {
       "올리브",
       "곤색"
     ],
-    "cardThumbnail": "assets/detail/vneck-knit-vest/shop-20261016/street-thumbnail.webp"
+    "cardThumbnail": "assets/detail/vneck-knit-vest/shop-20261016/street-thumbnail.webp",
+    "productPhotos": [
+      {
+        "src": "assets/detail/vneck-knit-vest/product-cutouts-20261116/front.webp",
+        "fullSrc": "assets/detail/vneck-knit-vest/product-cutouts-20261116/front.png",
+        "color": "그레이프",
+        "colorVerified": true,
+        "angle": 0,
+        "width": 581,
+        "height": 692,
+        "caption": "그레이프 · 정면",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
+      }
+    ],
+    "supplementalMedia": []
   },
   "jo23-oversized-vneck-knit": {
     "lead": "티셔츠 위에는 편안하게, 셔츠 위에는 단정하게. 이너에 따라 분위기가 달라지는 여유로운 V넥 니트.",
@@ -4369,18 +4493,20 @@ window.GR_DETAIL = {
     },
     "fabric": [
       {
-        "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/fabric-1.webp",
-        "width": 1254,
-        "height": 1254,
-        "caption": "V넥과 여유 있는 드롭 숄더",
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/jo23-oversized-vneck-knit/product-cutouts-20261116/neck.webp",
+        "fullSrc": "assets/detail/jo23-oversized-vneck-knit/product-cutouts-20261116/neck.png",
+        "width": 718,
+        "height": 646,
+        "caption": "넥라인 디테일",
+        "mediaKind": "photo"
       },
       {
-        "src": "assets/detail/jo23-oversized-vneck-knit/launch-20261016/fabric-2.webp",
-        "width": 1254,
-        "height": 1254,
-        "caption": "고운 니트 조직과 골지 네크라인",
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/jo23-oversized-vneck-knit/product-cutouts-20261116/knit.webp",
+        "fullSrc": "assets/detail/jo23-oversized-vneck-knit/product-cutouts-20261116/knit.png",
+        "width": 448,
+        "height": 541,
+        "caption": "짜임 디테일",
+        "mediaKind": "photo"
       }
     ],
     "fabricOriginals": [
@@ -4514,7 +4640,22 @@ window.GR_DETAIL = {
     },
     "isNewDesign": true,
     "model360Label": "흰 티셔츠와 라이트 워시 데님",
-    "cardThumbnail": "assets/detail/jo23-oversized-vneck-knit/shop-20261016/street-thumbnail.webp"
+    "cardThumbnail": "assets/detail/jo23-oversized-vneck-knit/shop-20261016/street-thumbnail.webp",
+    "productPhotos": [
+      {
+        "src": "assets/detail/jo23-oversized-vneck-knit/product-cutouts-20261116/front.webp",
+        "fullSrc": "assets/detail/jo23-oversized-vneck-knit/product-cutouts-20261116/front.png",
+        "color": "그레이",
+        "colorVerified": true,
+        "angle": 0,
+        "width": 1000,
+        "height": 1556,
+        "caption": "그레이 · 정면",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
+      }
+    ],
+    "supplementalMedia": []
   },
   "jo24-oversized-boatneck-knit": {
     "lead": "넓게 열린 보트넥과 볼륨 소매가 한눈에 들어오는 니트. 밝은 데님에는 가볍게, 네이비 슬랙스에는 차분하게 이어 보세요.",
@@ -4826,18 +4967,20 @@ window.GR_DETAIL = {
     },
     "fabric": [
       {
-        "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/fabric-1.webp",
-        "width": 1254,
-        "height": 1254,
-        "caption": "보트넥과 여유 있는 드롭 숄더",
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/jo24-oversized-boatneck-knit/product-cutouts-20261116/neck.webp",
+        "fullSrc": "assets/detail/jo24-oversized-boatneck-knit/product-cutouts-20261116/neck.png",
+        "width": 761,
+        "height": 543,
+        "caption": "넥라인 디테일",
+        "mediaKind": "photo"
       },
       {
-        "src": "assets/detail/jo24-oversized-boatneck-knit/launch-20261016/fabric-2.webp",
-        "width": 1254,
-        "height": 1254,
-        "caption": "고운 평편 니트 조직과 멜란지 원사",
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/jo24-oversized-boatneck-knit/product-cutouts-20261116/knit.webp",
+        "fullSrc": "assets/detail/jo24-oversized-boatneck-knit/product-cutouts-20261116/knit.png",
+        "width": 475,
+        "height": 454,
+        "caption": "짜임 디테일",
+        "mediaKind": "photo"
       }
     ],
     "fabricOriginals": [
@@ -4971,7 +5114,22 @@ window.GR_DETAIL = {
     },
     "isNewDesign": true,
     "model360Label": "아이보리 와이드 팬츠",
-    "cardThumbnail": "assets/detail/jo24-oversized-boatneck-knit/shop-20261016/street-thumbnail.webp"
+    "cardThumbnail": "assets/detail/jo24-oversized-boatneck-knit/shop-20261016/street-thumbnail.webp",
+    "productPhotos": [
+      {
+        "src": "assets/detail/jo24-oversized-boatneck-knit/product-cutouts-20261116/front.webp",
+        "fullSrc": "assets/detail/jo24-oversized-boatneck-knit/product-cutouts-20261116/front.png",
+        "color": "보라",
+        "colorVerified": true,
+        "angle": 0,
+        "width": 1000,
+        "height": 1233,
+        "caption": "보라 · 정면",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
+      }
+    ],
+    "supplementalMedia": []
   },
   "jo31-raglan-roundneck-knit": {
     "lead": "라운드 티와 데님 위에 편하게 더하고, 슬랙스와는 차분하게 맞추는 래글런 니트. 긴 기장과 사선 소매선이 자연스럽게 이어집니다.",
@@ -5283,18 +5441,20 @@ window.GR_DETAIL = {
     },
     "fabric": [
       {
-        "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/fabric-1.webp",
-        "width": 1254,
-        "height": 1254,
-        "caption": "라글란 소매와 여유 있는 롱 실루엣",
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/jo31-raglan-roundneck-knit/product-cutouts-20261116/neck.webp",
+        "fullSrc": "assets/detail/jo31-raglan-roundneck-knit/product-cutouts-20261116/neck.png",
+        "width": 763,
+        "height": 581,
+        "caption": "넥라인 디테일",
+        "mediaKind": "photo"
       },
       {
-        "src": "assets/detail/jo31-raglan-roundneck-knit/launch-20261016/fabric-2.webp",
-        "width": 1254,
-        "height": 1254,
-        "caption": "고운 평편 니트 조직과 골지 라운드넥",
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/jo31-raglan-roundneck-knit/product-cutouts-20261116/knit.webp",
+        "fullSrc": "assets/detail/jo31-raglan-roundneck-knit/product-cutouts-20261116/knit.png",
+        "width": 477,
+        "height": 487,
+        "caption": "짜임 디테일",
+        "mediaKind": "photo"
       }
     ],
     "fabricOriginals": [
@@ -5424,7 +5584,22 @@ window.GR_DETAIL = {
     },
     "isNewDesign": true,
     "model360Label": "모델 착용 360°",
-    "cardThumbnail": "assets/detail/jo31-raglan-roundneck-knit/shop-20261016/street-thumbnail.webp"
+    "cardThumbnail": "assets/detail/jo31-raglan-roundneck-knit/shop-20261016/street-thumbnail.webp",
+    "productPhotos": [
+      {
+        "src": "assets/detail/jo31-raglan-roundneck-knit/product-cutouts-20261116/front.webp",
+        "fullSrc": "assets/detail/jo31-raglan-roundneck-knit/product-cutouts-20261116/front.png",
+        "color": "그레이",
+        "colorVerified": true,
+        "angle": 0,
+        "width": 1000,
+        "height": 1316,
+        "caption": "그레이 · 정면",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
+      }
+    ],
+    "supplementalMedia": []
   },
   "jo32-raglan-vneck-knit": {
     "lead": "얇은 목티가 살짝 보이게 입거나, 셔츠 깃을 꺼내 단정하게. 깊은 V넥 덕분에 이너를 바꾸는 재미가 있는 래글런 니트.",
@@ -5709,18 +5884,20 @@ window.GR_DETAIL = {
     "originals": {},
     "fabric": [
       {
-        "src": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/fabric-1.webp",
-        "width": 1024,
-        "height": 1536,
-        "caption": "깊은 V넥과 래글런 소매",
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/jo32-raglan-vneck-knit/product-cutouts-20261116/neck.webp",
+        "fullSrc": "assets/detail/jo32-raglan-vneck-knit/product-cutouts-20261116/neck.png",
+        "width": 765,
+        "height": 563,
+        "caption": "넥라인 디테일",
+        "mediaKind": "photo"
       },
       {
-        "src": "assets/detail/jo32-raglan-vneck-knit/launch-20261016/fabric-2.webp",
-        "width": 1536,
-        "height": 1024,
-        "caption": "진회색 멜란지 루프사와 골지 V넥",
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/jo32-raglan-vneck-knit/product-cutouts-20261116/knit.webp",
+        "fullSrc": "assets/detail/jo32-raglan-vneck-knit/product-cutouts-20261116/knit.png",
+        "width": 479,
+        "height": 472,
+        "caption": "짜임 디테일",
+        "mediaKind": "photo"
       }
     ],
     "fabricOriginals": [
@@ -5850,7 +6027,22 @@ window.GR_DETAIL = {
     },
     "isNewDesign": true,
     "model360Label": "얇은 목티와 라이트 데님",
-    "cardThumbnail": "assets/detail/jo32-raglan-vneck-knit/shop-20261016/street-thumbnail.webp"
+    "cardThumbnail": "assets/detail/jo32-raglan-vneck-knit/shop-20261016/street-thumbnail.webp",
+    "productPhotos": [
+      {
+        "src": "assets/detail/jo32-raglan-vneck-knit/product-cutouts-20261116/front.webp",
+        "fullSrc": "assets/detail/jo32-raglan-vneck-knit/product-cutouts-20261116/front.png",
+        "color": "제품 샘플",
+        "colorVerified": false,
+        "angle": 0,
+        "width": 1000,
+        "height": 1273,
+        "caption": "제품 정면",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
+      }
+    ],
+    "supplementalMedia": []
   },
   "rm542-cable-vneck-vest": {
     "lead": "흰 티와 데님 위에 한 겹 더하면 중앙 다이아 짜임이 코디의 중심이 되는 V넥 베스트. 셔츠와 슬랙스에도 자연스럽게 이어집니다.",
@@ -6136,18 +6328,20 @@ window.GR_DETAIL = {
     "originals": {},
     "fabric": [
       {
-        "src": "assets/detail/rm542-cable-vneck-vest/launch-20261016/fabric-1.webp",
-        "width": 1024,
-        "height": 1536,
-        "caption": "중앙 다이아 두 개와 측면 케이블",
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/rm542-cable-vneck-vest/product-cutouts-20261116/neck.webp",
+        "fullSrc": "assets/detail/rm542-cable-vneck-vest/product-cutouts-20261116/neck.png",
+        "width": 604,
+        "height": 446,
+        "caption": "넥라인 디테일",
+        "mediaKind": "photo"
       },
       {
-        "src": "assets/detail/rm542-cable-vneck-vest/launch-20261016/fabric-2.webp",
-        "width": 1024,
-        "height": 1536,
-        "caption": "다이아·케이블 짜임과 골지 마감",
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/rm542-cable-vneck-vest/product-cutouts-20261116/knit.webp",
+        "fullSrc": "assets/detail/rm542-cable-vneck-vest/product-cutouts-20261116/knit.png",
+        "width": 378,
+        "height": 374,
+        "caption": "짜임 디테일",
+        "mediaKind": "photo"
       }
     ],
     "fabricOriginals": [
@@ -6273,7 +6467,22 @@ window.GR_DETAIL = {
     },
     "isNewDesign": true,
     "model360Label": "데일리 데님 레이어",
-    "cardThumbnail": "assets/detail/rm542-cable-vneck-vest/shop-20261016/street-thumbnail.webp"
+    "cardThumbnail": "assets/detail/rm542-cable-vneck-vest/lifestyle-20261116/card-thumbnail.webp",
+    "productPhotos": [
+      {
+        "src": "assets/detail/rm542-cable-vneck-vest/product-cutouts-20261116/front.webp",
+        "fullSrc": "assets/detail/rm542-cable-vneck-vest/product-cutouts-20261116/front.png",
+        "color": "제품 샘플",
+        "colorVerified": false,
+        "angle": 0,
+        "width": 942,
+        "height": 1204,
+        "caption": "제품 정면",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
+      }
+    ],
+    "supplementalMedia": []
   },
   "rm543-basic-vneck-knit": {
     "lead": "흰 티와 데님에는 편안하게, 셔츠와 슬랙스에는 단정하게. 익숙한 하의에 바로 이어 입기 좋은 V넥 니트.",
@@ -6558,18 +6767,20 @@ window.GR_DETAIL = {
     "originals": {},
     "fabric": [
       {
-        "src": "assets/detail/rm543-basic-vneck-knit/launch-20261016/fabric-1.webp",
-        "width": 1024,
-        "height": 1536,
-        "caption": "V넥과 여유 있는 긴소매",
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/rm543-basic-vneck-knit/product-cutouts-20261116/neck.webp",
+        "fullSrc": "assets/detail/rm543-basic-vneck-knit/product-cutouts-20261116/neck.png",
+        "width": 805,
+        "height": 606,
+        "caption": "넥라인 디테일",
+        "mediaKind": "photo"
       },
       {
-        "src": "assets/detail/rm543-basic-vneck-knit/launch-20261016/fabric-2.webp",
-        "width": 1536,
-        "height": 1024,
-        "caption": "평편 니트 조직과 좁은 골지 V넥",
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/rm543-basic-vneck-knit/product-cutouts-20261116/knit.webp",
+        "fullSrc": "assets/detail/rm543-basic-vneck-knit/product-cutouts-20261116/knit.png",
+        "width": 503,
+        "height": 507,
+        "caption": "짜임 디테일",
+        "mediaKind": "photo"
       }
     ],
     "fabricOriginals": [
@@ -6699,7 +6910,22 @@ window.GR_DETAIL = {
     },
     "isNewDesign": true,
     "model360Label": "화이트 티와 데님",
-    "cardThumbnail": "assets/detail/rm543-basic-vneck-knit/shop-20261016/street-thumbnail.webp"
+    "cardThumbnail": "assets/detail/rm543-basic-vneck-knit/shop-20261016/street-thumbnail.webp",
+    "productPhotos": [
+      {
+        "src": "assets/detail/rm543-basic-vneck-knit/product-cutouts-20261116/front.webp",
+        "fullSrc": "assets/detail/rm543-basic-vneck-knit/product-cutouts-20261116/front.png",
+        "color": "제품 샘플",
+        "colorVerified": false,
+        "angle": 0,
+        "width": 1000,
+        "height": 1303,
+        "caption": "제품 정면",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
+      }
+    ],
+    "supplementalMedia": []
   },
   "rm567-round-cap-sleeve-knit": {
     "lead": "라운드넥과 캡소매가 간결한 인상을 만드는 짧은 니트. 데님부터 슬랙스, 미디스커트까지 하의가 잘 보이는 비율로 이어집니다.",
@@ -7011,18 +7237,20 @@ window.GR_DETAIL = {
     },
     "fabric": [
       {
-        "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/fabric-1.webp",
-        "width": 1024,
-        "height": 1536,
-        "caption": "라운드넥과 래글런 숏슬리브 전체 실루엣",
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/rm567-round-cap-sleeve-knit/product-cutouts-20261116/neck.webp",
+        "fullSrc": "assets/detail/rm567-round-cap-sleeve-knit/product-cutouts-20261116/neck.png",
+        "width": 737,
+        "height": 430,
+        "caption": "넥라인 디테일",
+        "mediaKind": "photo"
       },
       {
-        "src": "assets/detail/rm567-round-cap-sleeve-knit/launch-20261016/fabric-2.webp",
-        "width": 1024,
-        "height": 1536,
-        "caption": "고운 평편직 V 스티치와 네크라인 접사",
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/rm567-round-cap-sleeve-knit/product-cutouts-20261116/knit.webp",
+        "fullSrc": "assets/detail/rm567-round-cap-sleeve-knit/product-cutouts-20261116/knit.png",
+        "width": 461,
+        "height": 361,
+        "caption": "짜임 디테일",
+        "mediaKind": "photo"
       }
     ],
     "fabricOriginals": [
@@ -7156,7 +7384,22 @@ window.GR_DETAIL = {
     },
     "isNewDesign": true,
     "model360Label": "티셔츠처럼 가볍게 · 데님",
-    "cardThumbnail": "assets/detail/rm567-round-cap-sleeve-knit/shop-20261016/street-thumbnail.webp"
+    "cardThumbnail": "assets/detail/rm567-round-cap-sleeve-knit/shop-20261016/street-thumbnail.webp",
+    "productPhotos": [
+      {
+        "src": "assets/detail/rm567-round-cap-sleeve-knit/product-cutouts-20261116/front.webp",
+        "fullSrc": "assets/detail/rm567-round-cap-sleeve-knit/product-cutouts-20261116/front.png",
+        "color": "연핑크",
+        "colorVerified": true,
+        "angle": 0,
+        "width": 1000,
+        "height": 1009,
+        "caption": "연핑크 · 정면",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
+      }
+    ],
+    "supplementalMedia": []
   },
   "rm576-ribbed-vneck-knit": {
     "lead": "흰 티와 팬츠 위에 툭 더하면 하찌 짜임이 또렷하게 살아나는 V넥 니트. 슬랙스와 미디스커트에는 차분하게 이어집니다.",
@@ -7467,18 +7710,20 @@ window.GR_DETAIL = {
     },
     "fabric": [
       {
-        "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/fabric-1.webp",
-        "width": 1254,
-        "height": 1254,
-        "caption": "마네킹 없이 펼친 곤색 전체 실루엣과 미세 핫찌 조직",
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/rm576-ribbed-vneck-knit/product-cutouts-20261116/neck.webp",
+        "fullSrc": "assets/detail/rm576-ribbed-vneck-knit/product-cutouts-20261116/neck.png",
+        "width": 729,
+        "height": 560,
+        "caption": "넥라인 디테일",
+        "mediaKind": "photo"
       },
       {
-        "src": "assets/detail/rm576-ribbed-vneck-knit/launch-20261016/fabric-2.webp",
-        "width": 1254,
-        "height": 1254,
-        "caption": "V넥과 미세 균일 핫찌/턱 조직 접사",
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/rm576-ribbed-vneck-knit/product-cutouts-20261116/knit.webp",
+        "fullSrc": "assets/detail/rm576-ribbed-vneck-knit/product-cutouts-20261116/knit.png",
+        "width": 455,
+        "height": 469,
+        "caption": "짜임 디테일",
+        "mediaKind": "photo"
       }
     ],
     "fabricOriginals": [
@@ -7612,7 +7857,22 @@ window.GR_DETAIL = {
     },
     "isNewDesign": true,
     "model360Label": "0°/45°/90°/135° and 180°/225°/270°/315°; identical axis; no mirroring",
-    "cardThumbnail": "assets/detail/rm576-ribbed-vneck-knit/shop-20261016/street-thumbnail.webp"
+    "cardThumbnail": "assets/detail/rm576-ribbed-vneck-knit/lifestyle-20261116/card-thumbnail.webp",
+    "productPhotos": [
+      {
+        "src": "assets/detail/rm576-ribbed-vneck-knit/product-cutouts-20261116/front.webp",
+        "fullSrc": "assets/detail/rm576-ribbed-vneck-knit/product-cutouts-20261116/front.png",
+        "color": "곤색",
+        "colorVerified": true,
+        "angle": 0,
+        "width": 1000,
+        "height": 1329,
+        "caption": "곤색 · 정면",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
+      }
+    ],
+    "supplementalMedia": []
   },
   "rm582-front-back-vneck-oversized-knit": {
     "lead": "크루넥 이너가 앞뒤 V넥 사이로 보이는 오버핏 니트. 데님에는 편안하게, 블랙 슬랙스와 미디스커트에는 차분하게 이어 보세요.",
@@ -7888,18 +8148,20 @@ window.GR_DETAIL = {
     "originals": {},
     "fabric": [
       {
-        "src": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/fabric-1.webp",
-        "width": 1254,
-        "height": 1254,
-        "caption": "앞뒤로 깊게 내려오는 V넥과 여유로운 실루엣",
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/rm582-front-back-vneck-oversized-knit/product-cutouts-20261116/neck.webp",
+        "fullSrc": "assets/detail/rm582-front-back-vneck-oversized-knit/product-cutouts-20261116/neck.png",
+        "width": 765,
+        "height": 559,
+        "caption": "넥라인 디테일",
+        "mediaKind": "photo"
       },
       {
-        "src": "assets/detail/rm582-front-back-vneck-oversized-knit/launch-20261016/fabric-2.webp",
-        "width": 1254,
-        "height": 1254,
-        "caption": "가까이서 보는 니트의 짜임과 넥라인",
-        "mediaKind": "studio-edit"
+        "src": "assets/detail/rm582-front-back-vneck-oversized-knit/product-cutouts-20261116/knit.webp",
+        "fullSrc": "assets/detail/rm582-front-back-vneck-oversized-knit/product-cutouts-20261116/knit.png",
+        "width": 479,
+        "height": 468,
+        "caption": "짜임 디테일",
+        "mediaKind": "photo"
       }
     ],
     "fabricOriginals": [
@@ -8033,102 +8295,125 @@ window.GR_DETAIL = {
     },
     "isNewDesign": true,
     "model360Label": "화이트 티셔츠 · 차콜 데님",
-    "cardThumbnail": "assets/detail/rm582-front-back-vneck-oversized-knit/shop-20261016/street-thumbnail.webp"
+    "cardThumbnail": "assets/detail/rm582-front-back-vneck-oversized-knit/shop-20261016/street-thumbnail.webp",
+    "productPhotos": [
+      {
+        "src": "assets/detail/rm582-front-back-vneck-oversized-knit/product-cutouts-20261116/front.webp",
+        "fullSrc": "assets/detail/rm582-front-back-vneck-oversized-knit/product-cutouts-20261116/front.png",
+        "color": "제품 샘플",
+        "colorVerified": false,
+        "angle": 0,
+        "width": 1000,
+        "height": 1262,
+        "caption": "제품 정면",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
+      }
+    ],
+    "supplementalMedia": []
   },
   "jo27-round-puff-cardigan": {
-    "lead": "동그란 넥과 볼륨 소매로, 티셔츠 위에 걸쳐도 표정이 살아나는 가디건.",
-    "storyTitle": "단추를 여는 만큼, 달라지는 하루.",
+    "lead": "둥근 넥, 여유 있는 품, 소매 끝에 모이는 볼륨.",
+    "storyTitle": "담백한 라운드넥 아래, 풍성한 소매의 표정.",
     "storyParagraphs": [
-      "동그란 넥과 다섯 개의 단추, 손목으로 모이는 볼륨 소매가 눈에 들어와요. 흰 티 위에 열어 입어 데님과 매치하거나, 단추를 잠그고 긴 스커트에 이어 입어보세요. 세로로 이어지는 짜임이 담백한 조합에도 포인트가 돼요."
+      "다섯 개의 단추와 세로로 이어지는 짜임, 손목으로 모이는 퍼프 소매. 편안한 티셔츠부터 단정한 셔츠까지, 안에 입는 옷에 따라 다른 분위기로 이어져요."
     ],
     "points": [],
     "looks": [
       {
         "id": "A",
-        "label": "Denim Day",
+        "label": "빵집에 들르는 아침",
         "items": [
           "흰 티셔츠",
-          "라이트 블루 데님",
+          "블루 데님",
           "스니커즈"
         ],
+        "description": "흰 티셔츠 위에 가볍게 걸치고, 데님과 함께. 작은 외출에도 손이 가는 담백한 조합이에요.",
+        "stylingColor": "아이보리",
         "images": {
-          "아이보리": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/A.webp",
-          "오트밀": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/OATMEAL/A.webp",
-          "검정": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/BLACK/A.webp",
-          "브라운": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/BROWN/A.webp",
-          "연핑크": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/LIGHTPINK/A.webp",
-          "카키": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/KHAKI/A.webp",
-          "차콜": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/CHARCOAL/A.webp",
-          "곤색": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/NAVY/A.webp",
-          "보라": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/PURPLE/A.webp",
-          "연밤": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/LIGHTBROWN/A.webp",
-          "그레이": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/GRAY/A.webp"
+          "아이보리": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/IVORY/A.webp",
+          "오트밀": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/OATMEAL/A.webp",
+          "검정": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/BLACK/A.webp",
+          "브라운": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/BROWN/A.webp",
+          "연핑크": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/LIGHTPINK/A.webp",
+          "카키": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/KHAKI/A.webp",
+          "차콜": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/CHARCOAL/A.webp",
+          "곤색": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/NAVY/A.webp",
+          "보라": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/PURPLE/A.webp",
+          "연밤": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/LIGHTBROWN/A.webp",
+          "그레이": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/GRAY/A.webp"
         }
       },
       {
         "id": "B",
-        "label": "Shirt & Trousers",
+        "label": "창가에 잠시 앉아서",
         "items": [
           "아이보리 셔츠",
           "차콜 슬랙스",
           "검정 로퍼"
         ],
+        "description": "둥근 넥 위로 셔츠 칼라를 꺼내 보세요. 차콜 슬랙스를 더하면 여유 있는 차림에도 단정함이 남아요.",
+        "stylingColor": "카키",
         "images": {
-          "아이보리": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/B.webp",
-          "오트밀": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/OATMEAL/B.webp",
-          "검정": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/BLACK/B.webp",
-          "브라운": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/BROWN/B.webp",
-          "연핑크": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/LIGHTPINK/B.webp",
-          "카키": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/KHAKI/B.webp",
-          "차콜": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/CHARCOAL/B.webp",
-          "곤색": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/NAVY/B.webp",
-          "보라": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/PURPLE/B.webp",
-          "연밤": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/LIGHTBROWN/B.webp",
-          "그레이": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/GRAY/B.webp"
+          "아이보리": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/IVORY/B.webp",
+          "오트밀": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/OATMEAL/B.webp",
+          "검정": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/BLACK/B.webp",
+          "브라운": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/BROWN/B.webp",
+          "연핑크": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/LIGHTPINK/B.webp",
+          "카키": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/KHAKI/B.webp",
+          "차콜": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/CHARCOAL/B.webp",
+          "곤색": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/NAVY/B.webp",
+          "보라": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/PURPLE/B.webp",
+          "연밤": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/LIGHTBROWN/B.webp",
+          "그레이": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/GRAY/B.webp"
         }
       },
       {
         "id": "C",
-        "label": "Midi Skirt",
+        "label": "조금 느리게 걷는 날",
         "items": [
           "흰 티셔츠",
           "검정 미디스커트",
           "검정 로퍼"
         ],
+        "description": "연핑크와 검정 스커트로 가볍게 대비를 주세요. 넉넉한 소매와 차분한 스커트가 자연스럽게 어울려요.",
+        "stylingColor": "연핑크",
         "images": {
-          "아이보리": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/C.webp",
-          "오트밀": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/OATMEAL/C.webp",
-          "검정": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/BLACK/C.webp",
-          "브라운": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/BROWN/C.webp",
-          "연핑크": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/LIGHTPINK/C.webp",
-          "카키": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/KHAKI/C.webp",
-          "차콜": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/CHARCOAL/C.webp",
-          "곤색": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/NAVY/C.webp",
-          "보라": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/PURPLE/C.webp",
-          "연밤": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/LIGHTBROWN/C.webp",
-          "그레이": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/GRAY/C.webp"
+          "아이보리": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/IVORY/C.webp",
+          "오트밀": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/OATMEAL/C.webp",
+          "검정": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/BLACK/C.webp",
+          "브라운": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/BROWN/C.webp",
+          "연핑크": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/LIGHTPINK/C.webp",
+          "카키": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/KHAKI/C.webp",
+          "차콜": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/CHARCOAL/C.webp",
+          "곤색": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/NAVY/C.webp",
+          "보라": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/PURPLE/C.webp",
+          "연밤": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/LIGHTBROWN/C.webp",
+          "그레이": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/GRAY/C.webp"
         }
       },
       {
         "id": "D",
-        "label": "Soft Tones",
+        "label": "좋아하는 책 한 권",
         "items": [
           "검정 터틀넥",
-          "베이지 와이드 팬츠",
-          "짙은 플랫 슈즈"
+          "베이지 팬츠",
+          "짙은색 플랫슈즈"
         ],
+        "description": "짙은 터틀넥을 안에 입고 베이지 팬츠로 밝기를 더했어요. 앞을 열어 입으면 레이어드한 옷의 선이 드러나요.",
+        "stylingColor": "곤색",
         "images": {
-          "아이보리": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/D.webp",
-          "오트밀": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/OATMEAL/D.webp",
-          "검정": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/BLACK/D.webp",
-          "브라운": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/BROWN/D.webp",
-          "연핑크": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/LIGHTPINK/D.webp",
-          "카키": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/KHAKI/D.webp",
-          "차콜": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/CHARCOAL/D.webp",
-          "곤색": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/NAVY/D.webp",
-          "보라": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/PURPLE/D.webp",
-          "연밤": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/LIGHTBROWN/D.webp",
-          "그레이": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/GRAY/D.webp"
+          "아이보리": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/IVORY/D.webp",
+          "오트밀": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/OATMEAL/D.webp",
+          "검정": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/BLACK/D.webp",
+          "브라운": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/BROWN/D.webp",
+          "연핑크": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/LIGHTPINK/D.webp",
+          "카키": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/KHAKI/D.webp",
+          "차콜": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/CHARCOAL/D.webp",
+          "곤색": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/NAVY/D.webp",
+          "보라": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/PURPLE/D.webp",
+          "연밤": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/LIGHTBROWN/D.webp",
+          "그레이": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/GRAY/D.webp"
         }
       }
     ],
@@ -8152,20 +8437,20 @@ window.GR_DETAIL = {
     },
     "fabric": [
       {
-        "src": "assets/detail/jo27-round-puff-cardigan/registration-20261104/angle-000.jpg",
-        "angle": 0,
-        "width": 4000,
-        "height": 3000,
-        "mediaKind": "photo",
-        "caption": "실제 촬영 · 정면의 짜임과 마감"
+        "src": "assets/detail/jo27-round-puff-cardigan/product-cutouts-20261116/neck.webp",
+        "fullSrc": "assets/detail/jo27-round-puff-cardigan/product-cutouts-20261116/neck.webp",
+        "width": 1000,
+        "height": 850,
+        "caption": "넥라인 디테일",
+        "mediaKind": "photo"
       },
       {
-        "src": "assets/detail/jo27-round-puff-cardigan/registration-20261104/angle-045.jpg",
-        "angle": 45,
-        "width": 4000,
-        "height": 3000,
-        "mediaKind": "photo",
-        "caption": "실제 촬영 · 사선에서 확인하는 형태"
+        "src": "assets/detail/jo27-round-puff-cardigan/product-cutouts-20261116/knit.webp",
+        "fullSrc": "assets/detail/jo27-round-puff-cardigan/product-cutouts-20261116/knit.webp",
+        "width": 800,
+        "height": 650,
+        "caption": "짜임 디테일",
+        "mediaKind": "photo"
       }
     ],
     "fabricOriginals": [
@@ -8261,24 +8546,51 @@ window.GR_DETAIL = {
       "와인": "#713b48"
     },
     "isNewDesign": true,
-    "thumbnail": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/looks/A.webp",
-    "cardThumbnail": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated-poses-v2/card-thumbnail.webp",
+    "thumbnail": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/looks/IVORY/A.webp",
+    "cardThumbnail": "assets/detail/jo27-round-puff-cardigan/lifestyle-20261116/card-thumbnail.webp",
     "thumbnailColor": "아이보리",
     "colorBoard": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated/colorboard-v1.webp",
     "colorBoardSize": {
       "width": 1536,
       "height": 1024
     },
-    "supplementalMedia": [
+    "supplementalMedia": [],
+    "productPhotos": [
       {
-        "src": "assets/detail/jo27-round-puff-cardigan/registration-20261104/generated/back-inferred-v1.webp",
-        "angle": 180,
-        "mediaKind": "generated-inferred",
-        "actualPhoto": false,
-        "caption": "AI 추정 후면 · 실제 촬영 원본 아님",
-        "width": 1086,
-        "height": 1448,
-        "replaceWithActualPhotoWhenAvailable": true
+        "src": "assets/detail/jo27-round-puff-cardigan/product-cutouts-20261116/front.webp",
+        "fullSrc": "assets/detail/jo27-round-puff-cardigan/product-cutouts-20261116/front.png",
+        "color": "아이보리",
+        "colorVerified": true,
+        "angle": 0,
+        "width": 1000,
+        "height": 1148,
+        "caption": "아이보리 · 정면",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
+      },
+      {
+        "src": "assets/detail/jo27-round-puff-cardigan/product-cutouts-20261116/right.webp",
+        "fullSrc": "assets/detail/jo27-round-puff-cardigan/product-cutouts-20261116/right.png",
+        "color": "아이보리",
+        "colorVerified": true,
+        "angle": 45,
+        "width": 1000,
+        "height": 1419,
+        "caption": "아이보리 · 오른쪽 사선",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
+      },
+      {
+        "src": "assets/detail/jo27-round-puff-cardigan/product-cutouts-20261116/left.webp",
+        "fullSrc": "assets/detail/jo27-round-puff-cardigan/product-cutouts-20261116/left.png",
+        "color": "아이보리",
+        "colorVerified": true,
+        "angle": 315,
+        "width": 1000,
+        "height": 1679,
+        "caption": "아이보리 · 왼쪽 사선",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
       }
     ]
   },
@@ -8394,20 +8706,20 @@ window.GR_DETAIL = {
     },
     "fabric": [
       {
-        "src": "assets/detail/rm584-saddle-vneck-knit/registration-20261104/angle-000.jpg",
-        "angle": 0,
-        "width": 4000,
-        "height": 3000,
-        "mediaKind": "photo",
-        "caption": "실제 촬영 · 정면의 짜임과 마감"
+        "src": "assets/detail/rm584-saddle-vneck-knit/product-cutouts-20261116/neck.webp",
+        "fullSrc": "assets/detail/rm584-saddle-vneck-knit/product-cutouts-20261116/neck.png",
+        "width": 960,
+        "height": 718,
+        "caption": "넥라인 디테일",
+        "mediaKind": "photo"
       },
       {
-        "src": "assets/detail/rm584-saddle-vneck-knit/registration-20261104/angle-045.jpg",
-        "angle": 45,
-        "width": 4000,
-        "height": 3000,
-        "mediaKind": "photo",
-        "caption": "실제 촬영 · 사선에서 확인하는 형태"
+        "src": "assets/detail/rm584-saddle-vneck-knit/product-cutouts-20261116/knit.webp",
+        "fullSrc": "assets/detail/rm584-saddle-vneck-knit/product-cutouts-20261116/knit.png",
+        "width": 600,
+        "height": 602,
+        "caption": "짜임 디테일",
+        "mediaKind": "photo"
       }
     ],
     "fabricOriginals": [
@@ -8534,12 +8846,27 @@ window.GR_DETAIL = {
     },
     "isNewDesign": true,
     "thumbnail": "assets/detail/rm584-saddle-vneck-knit/registration-20261104/generated-poses-v2/looks/A.webp",
-    "cardThumbnail": "assets/detail/rm584-saddle-vneck-knit/registration-20261104/generated-poses-v2/card-thumbnail.webp",
+    "cardThumbnail": "assets/detail/rm584-saddle-vneck-knit/lifestyle-20261116/card-thumbnail.webp",
     "thumbnailColor": "와인",
     "colorBoard": "assets/detail/rm584-saddle-vneck-knit/registration-20261104/generated/colorboard-v1.webp",
     "colorBoardSize": {
       "width": 1254,
       "height": 1254
-    }
+    },
+    "productPhotos": [
+      {
+        "src": "assets/detail/rm584-saddle-vneck-knit/product-cutouts-20261116/front.webp",
+        "fullSrc": "assets/detail/rm584-saddle-vneck-knit/product-cutouts-20261116/front.png",
+        "color": "와인",
+        "colorVerified": true,
+        "angle": 0,
+        "width": 1000,
+        "height": 1295,
+        "caption": "와인 · 정면",
+        "mediaKind": "photo",
+        "sourceTreatment": "alpha-mask-only"
+      }
+    ],
+    "supplementalMedia": []
   }
 };

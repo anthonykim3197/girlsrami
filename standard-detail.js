@@ -332,7 +332,7 @@
           return;
         }
         try{
-          await load(data.src);
+          await load(data.src,'high');
           if(token!==zoomSerial||!box.open)return;
           img.src=data.src;
           if(img.decode)await img.decode();
